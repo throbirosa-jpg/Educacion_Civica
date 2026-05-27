@@ -26,6 +26,14 @@
     },
   };
 
+  /** Caja de la isla Grande de Tierra del Fuego (sin Malvinas ni Antártida). */
+  const CAJA_ISLA_TDF = {
+    minLon: -70,
+    maxLon: -64,
+    minLat: -56,
+    maxLat: -52.2,
+  };
+
   function esCaba(props) {
     return props.id === CABA_ID || /ciudad autónoma/i.test(props.nombre || '');
   }
@@ -48,42 +56,45 @@
     return { minLon, maxLon, minLat, maxLat };
   }
 
+  function poligonoDentroDeCaja(poly) {
+    const { minLon, maxLon, minLat, maxLat } = boundsPoligono(poly[0]);
+    return (
+      minLon >= CAJA_ISLA_TDF.minLon &&
+      maxLon <= CAJA_ISLA_TDF.maxLon &&
+      minLat >= CAJA_ISLA_TDF.minLat &&
+      maxLat <= CAJA_ISLA_TDF.maxLat
+    );
+  }
+
   /**
-   * Deja solo la isla de Tierra del Fuego: descarta Antártida y Malvinas/Atlántico Sur.
+   * Deja solo polígonos de la isla de Tierra del Fuego (costa sur).
+   * El MultiPolygon oficial incluye Antártida, Malvinas e islas del Atlántico (~1500 partes).
    */
   function recortarTierraDelFuego(feature) {
     if (!esTierraDelFuego(feature.properties)) return feature;
 
     const { geometry } = feature;
-    if (geometry.type !== 'MultiPolygon') return feature;
-
-    const candidatos = geometry.coordinates.filter((poly) => {
-      const { minLat, maxLat, minLon, maxLon } = boundsPoligono(poly[0]);
-      if (minLat < -58) return false;
-      if (maxLat > -51.5 && minLon > -63) return false;
-      return true;
-    });
-
-    let elegidos = candidatos;
-
-    if (elegidos.length === 0) {
-      elegidos = geometry.coordinates
-        .map((poly) => ({ poly, maxLat: boundsPoligono(poly[0]).maxLat }))
-        .filter((item) => item.maxLat > -60)
-        .sort((a, b) => b.maxLat - a.maxLat)
-        .slice(0, 1)
-        .map((item) => item.poly);
-    } else if (elegidos.length > 1) {
-      elegidos = [
-        elegidos.reduce((mejor, poly) => {
-          const maxLat = boundsPoligono(poly[0]).maxLat;
-          if (!mejor || maxLat > mejor.maxLat) return { poly, maxLat };
-          return mejor;
-        }, null).poly,
-      ];
+    if (geometry.type !== 'MultiPolygon') {
+      console.warn(
+        '[mapa-argentina] Tierra del Fuego: geometría inesperada',
+        geometry.type
+      );
+      return feature;
     }
 
-    if (elegidos.length === 0) return feature;
+    const totalAntes = geometry.coordinates.length;
+    const elegidos = geometry.coordinates.filter(poligonoDentroDeCaja);
+
+    console.log(
+      `[mapa-argentina] Tierra del Fuego: ${totalAntes} polígonos → ${elegidos.length} después del recorte (caja isla)`
+    );
+
+    if (elegidos.length === 0) {
+      console.warn(
+        '[mapa-argentina] Tierra del Fuego: ningún polígono en la caja isla; provincia omitida del dibujo.'
+      );
+      return null;
+    }
 
     if (elegidos.length === 1) {
       return {
@@ -101,7 +112,7 @@
   function prepararGeojson(geo) {
     return {
       ...geo,
-      features: geo.features.map(recortarTierraDelFuego),
+      features: geo.features.map(recortarTierraDelFuego).filter(Boolean),
     };
   }
 
@@ -132,7 +143,7 @@
     return Math.max(3.5, Math.min(width, height) * 0.018);
   }
 
-  function enlazarInteraccion(sel, tooltip, conClick, container, posicionarTooltip) {
+  function enlazarInteraccion(sel, tooltip, conClick, posicionarTooltip) {
     sel
       .style('cursor', conClick ? 'pointer' : 'default')
       .on('mouseenter', function (evento, d) {
@@ -192,6 +203,7 @@
 
     const capaProvincias = svg.append('g').attr('class', 'capa-provincias');
     const capaCaba = svg.append('g').attr('class', 'capa-caba');
+    let encuadreLogueado = false;
 
     function posicionarTooltip(evento) {
       if (!tooltip) return;
@@ -212,15 +224,19 @@
       svg.attr('viewBox', `0 0 ${width} ${height}`);
 
       const proyeccion = d3.geoMercator();
-      const coleccionEncuadre = {
-        type: 'FeatureCollection',
-        features: [...provincias, MARCO_CONTINENTAL],
-      };
 
+      // Solo el marco continental define zoom (no el extent del GeoJSON completo).
       proyeccion.fitExtent(
         [[padding, padding], [width - padding, height - padding]],
-        coleccionEncuadre
+        MARCO_CONTINENTAL
       );
+
+      if (!encuadreLogueado) {
+        console.log(
+          '[mapa-argentina] Encuadre: marco continental (lat -22 a -56, lon -74 a -53), no extent del GeoJSON'
+        );
+        encuadreLogueado = true;
+      }
 
       const generador = d3.geoPath().projection(proyeccion);
 
@@ -241,7 +257,7 @@
         .attr('d', generador)
         .attr('fill', FILL_CELESTE)
         .attr('data-prov', (d) => d.properties.nombre)
-        .call((sel) => enlazarInteraccion(sel, tooltip, conClick, container, posicionarTooltip));
+        .call((sel) => enlazarInteraccion(sel, tooltip, conClick, posicionarTooltip));
 
       if (caba) {
         const centro = d3.geoCentroid(caba);
@@ -266,7 +282,7 @@
           .attr('r', r)
           .attr('fill', FILL_SOL)
           .attr('data-prov', caba.properties.nombre)
-          .call((sel) => enlazarInteraccion(sel, tooltip, conClick, container, posicionarTooltip));
+          .call((sel) => enlazarInteraccion(sel, tooltip, conClick, posicionarTooltip));
       }
     }
 
