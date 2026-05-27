@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Tres Poderes — Política Argentina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --celeste: #74ACDF;
+    --celeste-dark: #5a8fc0;
+    --celeste-soft: #e8f2fb;
+    --sol: #F6B40E;
+    --sol-dark: #d99a00;
+    --sol-soft: #fdf3d8;
+    --crema: #FBF7F0;
+    --tinta: #1a1a2e;
+    --tinta-soft: #4a4a5e;
+    --linea: #d8d4cc;
+    --rojo-fed: #b8341b;
+    --rojo-soft: #f8e6e3;
+    --verde-hist: #1f4a3d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--crema);
+    color: var(--tinta);
+    line-height: 1.6;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--crema);
+    border-bottom: 1px solid var(--linea);
+    padding: 1rem 2rem;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--tinta);
+  }
+  .logo-dot {
+    width: 11px;
+    height: 11px;
+    background: var(--celeste);
+    border-radius: 50%;
+    position: relative;
+  }
+  .logo-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; height: 5px;
+    background: var(--sol);
+    border-radius: 50%;
+  }
+  .breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .breadcrumb span { color: var(--tinta); font-weight: 600; }
+
+  /* ========== TABS ========== */
+  .poder-tabs {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 0 2rem;
+    position: sticky;
+    top: 64px;
+    z-index: 90;
+  }
+  .poder-tabs-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+  }
+  .poder-tab {
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 280px;
+  }
+  .poder-tab-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: var(--tinta-soft);
+    font-weight: 500;
+  }
+  .poder-tab-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .poder-tab-sub {
+    font-size: 0.75rem;
+    color: var(--tinta-soft);
+    margin-top: 0.2rem;
+  }
+  .poder-tab:hover {
+    background: var(--crema);
+  }
+  .poder-tab.active.ejecutivo {
+    border-bottom-color: var(--celeste);
+    background: var(--celeste-soft);
+  }
+  .poder-tab.active.legislativo {
+    border-bottom-color: var(--sol);
+    background: var(--sol-soft);
+  }
+  .poder-tab.active.judicial {
+    border-bottom-color: var(--rojo-fed);
+    background: var(--rojo-soft);
+  }
+  .poder-tab.active .poder-tab-num {
+    color: var(--tinta);
+  }
+
+  /* ========== PANEL HEADER ========== */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .poder-header {
+    padding: 4rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .poder-header.ejec { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); }
+  .poder-header.legi { background: linear-gradient(180deg, var(--sol-soft) 0%, var(--crema) 100%); }
+  .poder-header.judi { background: linear-gradient(180deg, var(--rojo-soft) 0%, var(--crema) 100%); }
+  .poder-header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+  .poder-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .poder-eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+  }
+  .ejec .poder-eyebrow { color: var(--celeste-dark); }
+  .ejec .poder-eyebrow::before { background: var(--celeste-dark); }
+  .legi .poder-eyebrow { color: var(--sol-dark); }
+  .legi .poder-eyebrow::before { background: var(--sol-dark); }
+  .judi .poder-eyebrow { color: var(--rojo-fed); }
+  .judi .poder-eyebrow::before { background: var(--rojo-fed); }
+
+  .poder-header h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .poder-header h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .ejec h1 em { color: var(--celeste-dark); }
+  .legi h1 em { color: var(--sol-dark); }
+  .judi h1 em { color: var(--rojo-fed); }
+
+  .poder-funcion {
+    font-size: 1.15rem;
+    color: var(--tinta-soft);
+    max-width: 580px;
+  }
+  .poder-quick-data {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem;
+  }
+  .quick-data-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .quick-data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    font-size: 0.88rem;
+  }
+  .quick-data-row + .quick-data-row { border-top: 1px dashed var(--linea); }
+  .quick-data-label { color: var(--tinta-soft); }
+  .quick-data-value { font-weight: 600; font-family: 'Fraunces', serif; }
+
+  /* ========== SECTIONS ========== */
+  .section-block {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .section-block.dark {
+    max-width: none;
+    background: var(--tinta);
+    color: var(--crema);
+    margin: 0;
+    padding: 4rem 2rem;
+  }
+  .section-block.dark .section-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .dark .section-eyebrow { color: var(--sol); }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .section-title em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+  }
+  .section-desc {
+    color: var(--tinta-soft);
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  .dark .section-desc { color: rgba(251,247,240,0.65); }
+
+  /* ========== EJECUTIVO: AUTORIDADES ========== */
+  .autoridades-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .autoridad {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    position: relative;
+    border-top: 4px solid var(--celeste);
+  }
+  .autoridad.vice { border-top-color: var(--celeste-dark); }
+  .autoridad.jefe { border-top-color: var(--tinta); }
+  .autoridad-cargo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .autoridad-foto {
+    width: 70px;
+    height: 70px;
+    background: var(--celeste-soft);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    color: var(--celeste-dark);
+    font-weight: 600;
+  }
+  .autoridad-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+  }
+  .autoridad-detalle {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    margin-bottom: 1rem;
+  }
+  .autoridad-meta {
+    border-top: 1px dashed var(--linea);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+  }
+  .autoridad-meta-row { display: flex; justify-content: space-between; }
+  .autoridad-meta-row span:first-child { color: var(--tinta-soft); }
+
+  /* ========== GABINETE / ORGANIGRAMA ========== */
+  .gabinete-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--linea);
+    border: 1px solid var(--linea);
+  }
+  .ministerio {
+    background: white;
+    padding: 1.25rem;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .ministerio:hover { background: var(--celeste-soft); }
+  .ministerio-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .ministerio-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+  .ministerio-titular {
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+  }
+
+  /* ========== LEGISLATIVO: HEMICICLO ========== */
+  .camaras-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .camara {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2.5rem 2rem;
+    border-top: 4px solid var(--sol);
+  }
+  .camara-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--linea);
+  }
+  .camara-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .camara-bancas {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--sol-dark);
+    font-weight: 600;
+  }
+  .hemiciclo {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .hemiciclo svg { width: 100%; max-width: 320px; height: auto; }
+  .hemiciclo-dot { transition: opacity 0.2s; }
+  .hemiciclo-dot:hover { opacity: 0.6; }
+  .bloques-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+  .bloque-row {
+    display: grid;
+    grid-template-columns: 16px 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.88rem;
+  }
+  .bloque-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+  }
+  .bloque-bancas {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .renovacion-info {
+    background: var(--sol-soft);
+    border-left: 3px solid var(--sol);
+    padding: 1rem 1.25rem;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+  }
+  .renovacion-info strong { color: var(--tinta); font-family: 'Fraunces', serif; }
+
+  /* ========== JUDICIAL: ESTRUCTURA ========== */
+  .corte-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .corte-info {
+    background: white;
+    border: 1px solid var(--linea);
+    border-top: 4px solid var(--rojo-fed);
+    padding: 2rem;
+  }
+  .corte-presidente {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--linea);
+  }
+  .ministros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .ministro {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem;
+    position: relative;
+  }
+  .ministro-foto {
+    width: 50px;
+    height: 50px;
+    background: var(--rojo-soft);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    color: var(--rojo-fed);
+    font-weight: 600;
+  }
+  .ministro-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .ministro-cargo {
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    margin-bottom: 0.75rem;
+  }
+  .ministro-asuncion {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.05em;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--linea);
+  }
+  .estructura-judicial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .estructura-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem;
+    border-left: 3px solid var(--rojo-fed);
+  }
+  .estructura-card-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .estructura-card-desc {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    margin-bottom: 1rem;
+  }
+  .estructura-card-titular {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--tinta);
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--linea);
+    letter-spacing: 0.05em;
+  }
+
+  /* ========== CÓMO FUNCIONA ========== */
+  .funciona-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .funciona-step {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem;
+  }
+  .funciona-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: var(--sol);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .funciona-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .funciona-desc {
+    font-size: 0.88rem;
+    color: rgba(251,247,240,0.7);
+    line-height: 1.5;
+  }
+
+  /* ========== PRÓXIMOS HITOS ========== */
+  .hitos {
+    background: var(--crema);
+    border: 1px solid var(--linea);
+    padding: 0;
+  }
+  .hito-row {
+    display: grid;
+    grid-template-columns: 180px 1fr auto;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    border-bottom: 1px solid var(--linea);
+    transition: background 0.2s;
+  }
+  .hito-row:last-child { border-bottom: none; }
+  .hito-row:hover { background: white; }
+  .hito-fecha {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.1em;
+  }
+  .hito-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  .hito-desc {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+  }
+  .hito-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 100px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .hito-tag.ejec { background: var(--celeste-soft); color: var(--celeste-dark); }
+  .hito-tag.legi { background: var(--sol-soft); color: var(--sol-dark); }
+  .hito-tag.judi { background: var(--rojo-soft); color: var(--rojo-fed); }
+
+  /* ========== CTA HISTORIA ========== */
+  .cta-historia {
+    background: var(--verde-hist);
+    color: var(--crema);
+    margin: 4rem -2rem 0;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-historia::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(246,180,14,0.15), transparent 70%);
+    pointer-events: none;
+  }
+  .cta-historia-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+  }
+  .cta-historia h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .cta-historia h2 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--sol);
+  }
+  .cta-historia p {
+    color: rgba(251,247,240,0.75);
+    margin-bottom: 0;
+  }
+  .btn-premium {
+    background: var(--sol);
+    color: var(--tinta);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    justify-self: end;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--crema);
+    border-top: 1px solid var(--linea);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (max-width: 900px) {
+    .poder-header-inner { grid-template-columns: 1fr; }
+    .autoridades-grid { grid-template-columns: 1fr; }
+    .gabinete-grid { grid-template-columns: 1fr 1fr; }
+    .camaras-grid { grid-template-columns: 1fr; }
+    .corte-grid { grid-template-columns: 1fr; }
+    .ministros-grid { grid-template-columns: 1fr; }
+    .estructura-judicial { grid-template-columns: 1fr; }
+    .funciona-grid { grid-template-columns: 1fr; }
+    .hito-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .cta-historia-inner { grid-template-columns: 1fr; }
+    .btn-premium { justify-self: start; }
+    .poder-tab { padding: 1rem; }
+    .poder-tab-sub { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      Política Argentina
+    </a>
+    <div class="breadcrumb">Inicio · <span>Los tres poderes</span></div>
+  </div>
+</nav>
+
+<!-- TABS DE NAVEGACIÓN ENTRE PODERES -->
+<div class="poder-tabs">
+  <div class="poder-tabs-inner">
+    <div class="poder-tab ejecutivo active" data-panel="ejec">
+      <div class="poder-tab-num">01</div>
+      <div>
+        <div class="poder-tab-name">Ejecutivo</div>
+        <div class="poder-tab-sub">Presidencia y gabinete</div>
+      </div>
+    </div>
+    <div class="poder-tab legislativo" data-panel="legi">
+      <div class="poder-tab-num">02</div>
+      <div>
+        <div class="poder-tab-name">Legislativo</div>
+        <div class="poder-tab-sub">Diputados y Senado</div>
+      </div>
+    </div>
+    <div class="poder-tab judicial" data-panel="judi">
+      <div class="poder-tab-num">03</div>
+      <div>
+        <div class="poder-tab-name">Judicial</div>
+        <div class="poder-tab-sub">Corte Suprema y estructura</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================== -->
+<!-- PANEL 01: PODER EJECUTIVO              -->
+<!-- ====================================== -->
+<div class="panel active" id="panel-ejec">
+
+  <header class="poder-header ejec">
+    <div class="poder-header-inner">
+      <div>
+        <div class="poder-eyebrow">— Poder 01 de 03</div>
+        <h1>El Poder <em>Ejecutivo</em></h1>
+        <p class="poder-funcion">Ejerce la administración del país, conduce las relaciones exteriores y es comandante en jefe de las Fuerzas Armadas. Lo encabeza una persona electa por voto directo cada 4 años.</p>
+      </div>
+      <div class="poder-quick-data">
+        <div class="quick-data-title">Datos clave</div>
+        <div class="quick-data-row"><span class="quick-data-label">Mandato</span><span class="quick-data-value">4 años</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Reelección</span><span class="quick-data-value">1 consecutiva</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Edad mínima</span><span class="quick-data-value">30 años</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Período actual</span><span class="quick-data-value">2023 — 2027</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Quién es quién hoy</div>
+    <h2 class="section-title">Las <em>autoridades</em> actuales</h2>
+    <p class="section-desc">Foto al día de hoy. Los datos provienen de fuentes oficiales y se actualizan periódicamente.</p>
+
+    <div class="autoridades-grid">
+      <div class="autoridad">
+        <div class="autoridad-cargo">Presidencia de la Nación</div>
+        <div class="autoridad-foto">PR</div>
+        <div class="autoridad-nombre">[Nombre del Presidente]</div>
+        <div class="autoridad-detalle">Espacio político · Provincia de origen</div>
+        <div class="autoridad-meta">
+          <div class="autoridad-meta-row"><span>Asumió</span><span>10 dic. 2023</span></div>
+          <div class="autoridad-meta-row"><span>Mandato hasta</span><span>10 dic. 2027</span></div>
+          <div class="autoridad-meta-row"><span>Electo con</span><span>XX,X% de votos</span></div>
+        </div>
+      </div>
+      <div class="autoridad vice">
+        <div class="autoridad-cargo">Vicepresidencia</div>
+        <div class="autoridad-foto">VP</div>
+        <div class="autoridad-nombre">[Nombre del/la Vicepresidente]</div>
+        <div class="autoridad-detalle">Preside también el Senado de la Nación</div>
+        <div class="autoridad-meta">
+          <div class="autoridad-meta-row"><span>Asumió</span><span>10 dic. 2023</span></div>
+          <div class="autoridad-meta-row"><span>Mandato hasta</span><span>10 dic. 2027</span></div>
+          <div class="autoridad-meta-row"><span>Voto Senado</span><span>Solo desempate</span></div>
+        </div>
+      </div>
+      <div class="autoridad jefe">
+        <div class="autoridad-cargo">Jefatura de Gabinete</div>
+        <div class="autoridad-foto">JG</div>
+        <div class="autoridad-nombre">[Jefe/a de Gabinete]</div>
+        <div class="autoridad-detalle">Coordina ministerios</div>
+        <div class="autoridad-meta">
+          <div class="autoridad-meta-row"><span>Asumió</span><span>— / — / —</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" style="padding-top: 0;">
+    <div class="section-eyebrow">— Gabinete nacional</div>
+    <h2 class="section-title">Los <em>ministerios</em> y sus titulares</h2>
+    <p class="section-desc">La estructura del gabinete varía según cada gobierno. La cantidad de ministerios la define cada presidente por decreto.</p>
+
+    <div class="gabinete-grid">
+      <div class="ministerio">
+        <div class="ministerio-num">M01</div>
+        <div class="ministerio-nombre">Interior</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M02</div>
+        <div class="ministerio-nombre">Relaciones Exteriores</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M03</div>
+        <div class="ministerio-nombre">Economía</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M04</div>
+        <div class="ministerio-nombre">Defensa</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M05</div>
+        <div class="ministerio-nombre">Justicia</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M06</div>
+        <div class="ministerio-nombre">Seguridad</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M07</div>
+        <div class="ministerio-nombre">Capital Humano</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+      <div class="ministerio">
+        <div class="ministerio-num">M08</div>
+        <div class="ministerio-nombre">Salud</div>
+        <div class="ministerio-titular">[Titular]</div>
+      </div>
+    </div>
+    <p style="font-size: 0.78rem; color: var(--tinta-soft); margin-top: 1rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;">
+      Estructura ministerial a verificar contra Decreto del Poder Ejecutivo vigente.
+    </p>
+  </section>
+
+  <section class="section-block dark">
+    <div class="section-inner">
+      <div class="section-eyebrow">— Cómo funciona</div>
+      <h2 class="section-title" style="color: var(--crema);">¿Cómo se <em style="color:var(--sol);">elige</em> al Presidente?</h2>
+      <p class="section-desc">El sistema electoral argentino tiene reglas particulares que conviene conocer.</p>
+
+      <div class="funciona-grid">
+        <div class="funciona-step">
+          <div class="funciona-num">i.</div>
+          <div class="funciona-titulo">Voto directo</div>
+          <div class="funciona-desc">A diferencia de EE.UU., en Argentina la ciudadanía elige al Presidente directamente. No hay colegio electoral.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">ii.</div>
+          <div class="funciona-titulo">Fórmula presidencial</div>
+          <div class="funciona-desc">Se vota una fórmula completa: Presidente y Vicepresidente como un solo paquete, no por separado.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">iii.</div>
+          <div class="funciona-titulo">Ballotage si hace falta</div>
+          <div class="funciona-desc">Gana en primera vuelta quien obtenga 45% de los votos, o 40% con 10 puntos de diferencia. Si no, hay segunda vuelta.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Qué viene</div>
+    <h2 class="section-title">Próximos <em>hitos</em></h2>
+    <p class="section-desc">Eventos institucionales relevantes vinculados al Poder Ejecutivo.</p>
+
+    <div class="hitos">
+      <div class="hito-row">
+        <div class="hito-fecha">1 MAR. 2026</div>
+        <div>
+          <div class="hito-titulo">Apertura de sesiones ordinarias</div>
+          <div class="hito-desc">El Presidente abre el período legislativo ante la Asamblea Legislativa.</div>
+        </div>
+        <div class="hito-tag ejec">EJECUTIVO</div>
+      </div>
+      <div class="hito-row">
+        <div class="hito-fecha">2027</div>
+        <div>
+          <div class="hito-titulo">Elecciones presidenciales</div>
+          <div class="hito-desc">Se elige nueva fórmula presidencial para el período 2027–2031.</div>
+        </div>
+        <div class="hito-tag ejec">EJECUTIVO</div>
+      </div>
+      <div class="hito-row">
+        <div class="hito-fecha">10 DIC. 2027</div>
+        <div>
+          <div class="hito-titulo">Asunción presidencial</div>
+          <div class="hito-desc">Transmisión del mando en el Congreso de la Nación.</div>
+        </div>
+        <div class="hito-tag ejec">EJECUTIVO</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="cta-historia">
+      <div class="cta-historia-inner">
+        <div>
+          <h2>Mirá la historia de <em>todos los presidentes</em>, desde 1854.</h2>
+          <p>Accedé al archivo histórico premium con los 53 presidentes constitucionales y de facto, sus gabinetes, contexto y fuentes.</p>
+        </div>
+        <a href="#" class="btn-premium">Explorar archivo →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================== -->
+<!-- PANEL 02: PODER LEGISLATIVO            -->
+<!-- ====================================== -->
+<div class="panel" id="panel-legi">
+
+  <header class="poder-header legi">
+    <div class="poder-header-inner">
+      <div>
+        <div class="poder-eyebrow">— Poder 02 de 03</div>
+        <h1>El Poder <em>Legislativo</em></h1>
+        <p class="poder-funcion">Sanciona las leyes nacionales. Es bicameral: la Cámara de Diputados representa al pueblo y el Senado representa a las provincias. Se renueva parcialmente cada dos años.</p>
+      </div>
+      <div class="poder-quick-data">
+        <div class="quick-data-title">Datos clave</div>
+        <div class="quick-data-row"><span class="quick-data-label">Diputados</span><span class="quick-data-value">257</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Senadores</span><span class="quick-data-value">72</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Total bancas</span><span class="quick-data-value">329</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Renovación</span><span class="quick-data-value">Cada 2 años</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Composición actual</div>
+    <h2 class="section-title">Las <em>dos cámaras</em> del Congreso</h2>
+    <p class="section-desc">Diputados y Senado tienen reglas distintas de elección, mandato y representación. Esta es su composición a hoy.</p>
+
+    <div class="camaras-grid">
+      <!-- DIPUTADOS -->
+      <div class="camara">
+        <div class="camara-header">
+          <div>
+            <div class="camara-name">Cámara de Diputados</div>
+            <div style="font-size: 0.82rem; color: var(--tinta-soft); margin-top: 0.3rem;">Representa al pueblo · Mandato 4 años</div>
+          </div>
+          <div class="camara-bancas">257 BANCAS</div>
+        </div>
+
+        <div class="hemiciclo">
+          <svg viewBox="0 0 320 180">
+            <!-- Hemiciclo simplificado: representación visual de bancas -->
+            <g id="diputados-arc">
+              <!-- Generamos arcos de puntos -->
+            </g>
+          </svg>
+        </div>
+
+        <div class="bloques-list">
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #5a8fc0;"></div>
+            <span>Bloque mayoritario A</span>
+            <span class="bloque-bancas">— / 257</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #b8341b;"></div>
+            <span>Bloque mayoritario B</span>
+            <span class="bloque-bancas">— / 257</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #F6B40E;"></div>
+            <span>Bloque mediano C</span>
+            <span class="bloque-bancas">— / 257</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #2a5a4a;"></div>
+            <span>Bloque mediano D</span>
+            <span class="bloque-bancas">— / 257</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #a594c8;"></div>
+            <span>Otros bloques minoritarios</span>
+            <span class="bloque-bancas">— / 257</span>
+          </div>
+        </div>
+
+        <div class="renovacion-info">
+          <strong>Próxima renovación:</strong> en cada elección legislativa se renueva la mitad de la cámara (~128 bancas). Mandato: 4 años por diputado/a.
+        </div>
+      </div>
+
+      <!-- SENADO -->
+      <div class="camara">
+        <div class="camara-header">
+          <div>
+            <div class="camara-name">Senado de la Nación</div>
+            <div style="font-size: 0.82rem; color: var(--tinta-soft); margin-top: 0.3rem;">Representa a las provincias · Mandato 6 años</div>
+          </div>
+          <div class="camara-bancas">72 BANCAS</div>
+        </div>
+
+        <div class="hemiciclo">
+          <svg viewBox="0 0 320 180">
+            <g id="senado-arc"></g>
+          </svg>
+        </div>
+
+        <div class="bloques-list">
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #5a8fc0;"></div>
+            <span>Bloque mayoritario A</span>
+            <span class="bloque-bancas">— / 72</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #b8341b;"></div>
+            <span>Bloque mayoritario B</span>
+            <span class="bloque-bancas">— / 72</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #F6B40E;"></div>
+            <span>Bloque mediano C</span>
+            <span class="bloque-bancas">— / 72</span>
+          </div>
+          <div class="bloque-row">
+            <div class="bloque-color" style="background: #a594c8;"></div>
+            <span>Otros bloques</span>
+            <span class="bloque-bancas">— / 72</span>
+          </div>
+        </div>
+
+        <div class="renovacion-info">
+          <strong>Próxima renovación:</strong> cada 2 años se renueva un tercio de la cámara (24 bancas, correspondientes a 8 provincias). Mandato: 6 años por senador/a.
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 0.78rem; color: var(--tinta-soft); margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;">
+      Composición a verificar contra HCDN.gob.ar y Senado.gob.ar
+    </p>
+  </section>
+
+  <section class="section-block dark">
+    <div class="section-inner">
+      <div class="section-eyebrow">— Cómo funciona</div>
+      <h2 class="section-title" style="color: var(--crema);">El recorrido de <em style="color:var(--sol);">una ley</em></h2>
+      <p class="section-desc">Cómo un proyecto se convierte en ley en Argentina, paso a paso.</p>
+
+      <div class="funciona-grid">
+        <div class="funciona-step">
+          <div class="funciona-num">i.</div>
+          <div class="funciona-titulo">Presentación</div>
+          <div class="funciona-desc">Un legislador, el Poder Ejecutivo o la ciudadanía (iniciativa popular) presenta un proyecto de ley en alguna de las cámaras.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">ii.</div>
+          <div class="funciona-titulo">Discusión en comisiones</div>
+          <div class="funciona-desc">El proyecto pasa por comisiones temáticas que lo analizan y emiten dictamen. Luego va al recinto para votación.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">iii.</div>
+          <div class="funciona-titulo">Sanción y promulgación</div>
+          <div class="funciona-desc">Si ambas cámaras aprueban el texto, el Ejecutivo lo promulga (o lo veta). Publicado en el Boletín Oficial, se vuelve ley.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Qué viene</div>
+    <h2 class="section-title">Próximos <em>hitos</em></h2>
+    <p class="section-desc">Eventos relevantes del calendario legislativo.</p>
+
+    <div class="hitos">
+      <div class="hito-row">
+        <div class="hito-fecha">1 MAR. 2026</div>
+        <div>
+          <div class="hito-titulo">Apertura de sesiones ordinarias</div>
+          <div class="hito-desc">Inicio del período legislativo. Discurso presidencial ante la Asamblea.</div>
+        </div>
+        <div class="hito-tag legi">LEGISLATIVO</div>
+      </div>
+      <div class="hito-row">
+        <div class="hito-fecha">OCT. 2027</div>
+        <div>
+          <div class="hito-titulo">Elecciones legislativas</div>
+          <div class="hito-desc">Renovación de la mitad de Diputados y un tercio del Senado, junto con las presidenciales.</div>
+        </div>
+        <div class="hito-tag legi">LEGISLATIVO</div>
+      </div>
+      <div class="hito-row">
+        <div class="hito-fecha">30 NOV. 2026</div>
+        <div>
+          <div class="hito-titulo">Cierre de sesiones ordinarias</div>
+          <div class="hito-desc">Finalización del período legislativo regular. Pueden convocarse sesiones extraordinarias.</div>
+        </div>
+        <div class="hito-tag legi">LEGISLATIVO</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="cta-historia">
+      <div class="cta-historia-inner">
+        <div>
+          <h2>Cómo se <em>compuso el Congreso</em> en cada época.</h2>
+          <p>El archivo histórico premium incluye la composición de Diputados y Senado para cada período desde 1862, con bloques, leyes sancionadas y contexto.</p>
+        </div>
+        <a href="#" class="btn-premium">Explorar archivo →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================== -->
+<!-- PANEL 03: PODER JUDICIAL               -->
+<!-- ====================================== -->
+<div class="panel" id="panel-judi">
+
+  <header class="poder-header judi">
+    <div class="poder-header-inner">
+      <div>
+        <div class="poder-eyebrow">— Poder 03 de 03</div>
+        <h1>El Poder <em>Judicial</em></h1>
+        <p class="poder-funcion">Aplica e interpreta las leyes. Es el último intérprete de la Constitución. Su máxima autoridad es la Corte Suprema de Justicia de la Nación, cuyos jueces son vitalicios.</p>
+      </div>
+      <div class="poder-quick-data">
+        <div class="quick-data-title">Datos clave</div>
+        <div class="quick-data-row"><span class="quick-data-label">Mandato CSJN</span><span class="quick-data-value">Vitalicio</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Edad máxima</span><span class="quick-data-value">75 años *</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Nombramiento</span><span class="quick-data-value">Ejecutivo + Senado</span></div>
+        <div class="quick-data-row"><span class="quick-data-label">Mayoría Senado</span><span class="quick-data-value">2/3</span></div>
+      </div>
+    </div>
+    <p style="max-width: 1400px; margin: 1rem auto 0; font-size: 0.75rem; color: var(--tinta-soft); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;">
+      * Pasada esa edad, se requiere acuerdo del Senado renovado cada 5 años.
+    </p>
+  </header>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Quién es quién hoy</div>
+    <h2 class="section-title">La <em>Corte Suprema</em> de Justicia</h2>
+    <p class="section-desc">La cabeza del Poder Judicial. La Constitución no fija el número exacto de miembros; se ha modificado por ley a lo largo de la historia. Hoy, por Ley 26.183, tiene 5 miembros.</p>
+
+    <div class="corte-grid">
+      <div class="corte-info">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--tinta-soft); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">Presidencia de la Corte</div>
+        <div class="autoridad-foto" style="background: var(--rojo-soft); color: var(--rojo-fed);">CS</div>
+        <div class="autoridad-nombre">[Presidente/a de la Corte]</div>
+        <div class="autoridad-detalle">Elegido/a por sus pares</div>
+        <div class="corte-presidente">
+          <div class="autoridad-meta-row" style="font-size: 0.85rem; margin-bottom: 0.4rem;"><span style="color: var(--tinta-soft);">Mandato presidencia</span><span style="font-weight: 600;">3 años (renovable)</span></div>
+          <div class="autoridad-meta-row" style="font-size: 0.85rem;"><span style="color: var(--tinta-soft);">Como ministro/a</span><span style="font-weight: 600;">Vitalicio</span></div>
+        </div>
+      </div>
+
+      <div class="ministros-grid">
+        <div class="ministro">
+          <div class="ministro-foto">M1</div>
+          <div class="ministro-nombre">[Ministro/a 1]</div>
+          <div class="ministro-cargo">Ministro de la CSJN</div>
+          <div class="ministro-asuncion">Asunción: — / — / —</div>
+        </div>
+        <div class="ministro">
+          <div class="ministro-foto">M2</div>
+          <div class="ministro-nombre">[Ministro/a 2]</div>
+          <div class="ministro-cargo">Ministro de la CSJN</div>
+          <div class="ministro-asuncion">Asunción: — / — / —</div>
+        </div>
+        <div class="ministro">
+          <div class="ministro-foto">M3</div>
+          <div class="ministro-nombre">[Ministro/a 3]</div>
+          <div class="ministro-cargo">Ministro de la CSJN</div>
+          <div class="ministro-asuncion">Asunción: — / — / —</div>
+        </div>
+        <div class="ministro">
+          <div class="ministro-foto">M4</div>
+          <div class="ministro-nombre">[Ministro/a 4]</div>
+          <div class="ministro-cargo">Vacante o por designar</div>
+          <div class="ministro-asuncion">— / — / —</div>
+        </div>
+        <div class="ministro">
+          <div class="ministro-foto">M5</div>
+          <div class="ministro-nombre">[Ministro/a 5]</div>
+          <div class="ministro-cargo">Vacante o por designar</div>
+          <div class="ministro-asuncion">— / — / —</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 500; margin-top: 3rem; margin-bottom: 1.5rem;">Otros órganos del Poder Judicial</h3>
+
+    <div class="estructura-judicial">
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Procuración General</div>
+        <div class="estructura-card-desc">Cabeza del Ministerio Público Fiscal. Ejerce la acción penal pública y defiende la legalidad.</div>
+        <div class="estructura-card-titular">PROCURADOR/A: [NOMBRE]</div>
+      </div>
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Defensoría General</div>
+        <div class="estructura-card-desc">Cabeza del Ministerio Público de la Defensa. Garantiza el acceso a la justicia.</div>
+        <div class="estructura-card-titular">DEFENSOR/A: [NOMBRE]</div>
+      </div>
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Consejo de la Magistratura</div>
+        <div class="estructura-card-desc">Selecciona y sanciona a jueces inferiores. Mixto: jueces, legisladores, abogados, académicos.</div>
+        <div class="estructura-card-titular">20 MIEMBROS APROX.</div>
+      </div>
+    </div>
+    <p style="font-size: 0.78rem; color: var(--tinta-soft); margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;">
+      Datos a verificar contra CSJN.gov.ar, MPF.gob.ar y MPD.gov.ar
+    </p>
+  </section>
+
+  <section class="section-block dark">
+    <div class="section-inner">
+      <div class="section-eyebrow">— Cómo funciona</div>
+      <h2 class="section-title" style="color: var(--crema);">¿Cómo se <em style="color:var(--sol);">nombra</em> a un juez de la Corte?</h2>
+      <p class="section-desc">Es uno de los procesos institucionales más exigentes del país.</p>
+
+      <div class="funciona-grid">
+        <div class="funciona-step">
+          <div class="funciona-num">i.</div>
+          <div class="funciona-titulo">Propuesta del Ejecutivo</div>
+          <div class="funciona-desc">El Presidente propone una persona para integrar la Corte. La propuesta se hace pública para que la sociedad pueda objetar.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">ii.</div>
+          <div class="funciona-titulo">Audiencia pública</div>
+          <div class="funciona-desc">El candidato/a se presenta ante el Senado en audiencia pública. Se evalúan sus antecedentes profesionales y patrimoniales.</div>
+        </div>
+        <div class="funciona-step">
+          <div class="funciona-num">iii.</div>
+          <div class="funciona-titulo">Acuerdo del Senado</div>
+          <div class="funciona-desc">El Senado debe aprobar el nombramiento con una mayoría especial de dos tercios de los miembros presentes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Datos del Poder Judicial</div>
+    <h2 class="section-title">Más allá de la <em>Corte</em></h2>
+    <p class="section-desc">El Poder Judicial federal está organizado en distintas instancias y fueros.</p>
+
+    <div class="estructura-judicial">
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Cámaras de Apelaciones</div>
+        <div class="estructura-card-desc">Segunda instancia. Revisan las decisiones de jueces de primera instancia en distintos fueros (civil, comercial, penal, laboral, etc.).</div>
+        <div class="estructura-card-titular">DECENAS A NIVEL FEDERAL</div>
+      </div>
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Juzgados de Primera Instancia</div>
+        <div class="estructura-card-desc">Donde se inician la mayoría de las causas federales. Cada juzgado tiene su materia y jurisdicción territorial.</div>
+        <div class="estructura-card-titular">CIENTOS EN TODO EL PAÍS</div>
+      </div>
+      <div class="estructura-card">
+        <div class="estructura-card-titulo">Justicias provinciales</div>
+        <div class="estructura-card-desc">Cada provincia tiene su propio sistema judicial, con su Superior Tribunal. Funcionan en paralelo a la justicia federal.</div>
+        <div class="estructura-card-titular">24 SISTEMAS PROVINCIALES</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-eyebrow">— Qué viene</div>
+    <h2 class="section-title">Próximos <em>hitos</em></h2>
+
+    <div class="hitos">
+      <div class="hito-row">
+        <div class="hito-fecha">FEB. 2026</div>
+        <div>
+          <div class="hito-titulo">Apertura del año judicial</div>
+          <div class="hito-desc">Inicio formal de la actividad judicial. Discurso del Presidente de la Corte.</div>
+        </div>
+        <div class="hito-tag judi">JUDICIAL</div>
+      </div>
+      <div class="hito-row">
+        <div class="hito-fecha">— PERMANENTE</div>
+        <div>
+          <div class="hito-titulo">Eventuales vacantes en la Corte</div>
+          <div class="hito-desc">Las vacantes pueden surgir por renuncia, jubilación o fallecimiento, y requieren un nuevo proceso de nombramiento.</div>
+        </div>
+        <div class="hito-tag judi">JUDICIAL</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="cta-historia">
+      <div class="cta-historia-inner">
+        <div>
+          <h2>Conocé <em>todas las Cortes</em> de la historia argentina.</h2>
+          <p>El archivo histórico premium incluye la integración de la Corte Suprema desde 1863, los fallos clave y los procuradores generales.</p>
+        </div>
+        <a href="#" class="btn-premium">Explorar archivo →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  politicargentina.com.ar · Las tres pestañas v0.1 · Datos a verificar contra fuentes oficiales antes del lanzamiento
+</footer>
+
+<script>
+  // Toggle de pestañas entre poderes
+  const tabs = document.querySelectorAll('.poder-tab');
+  const panels = document.querySelectorAll('.panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-panel');
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Dibujar hemiciclos (representación visual aproximada)
+  function dibujarHemiciclo(svgId, bancas, colores) {
+    const svg = document.querySelector('#' + svgId);
+    if (!svg) return;
+    const cx = 160, cy = 165;
+    const filas = 6;
+    const totalPorFila = Math.ceil(bancas / filas);
+    let bancaIdx = 0;
+    let colorIdx = 0;
+    let acumulado = 0;
+    const distribucion = colores.map(c => Math.round(bancas * c.pct));
+
+    for (let f = 0; f < filas; f++) {
+      const radio = 50 + f * 18;
+      const enFila = Math.min(totalPorFila, bancas - bancaIdx);
+      for (let i = 0; i < enFila; i++) {
+        const angulo = Math.PI - (Math.PI * i / (enFila - 1));
+        const x = cx + radio * Math.cos(angulo);
+        const y = cy - radio * Math.sin(angulo);
+
+        // Determinar color
+        let acc = 0;
+        let color = colores[colores.length - 1].color;
+        for (let c = 0; c < distribucion.length; c++) {
+          acc += distribucion[c];
+          if (bancaIdx < acc) {
+            color = colores[c].color;
+            break;
+          }
+        }
+
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', x);
+        circle.setAttribute('cy', y);
+        circle.setAttribute('r', '4');
+        circle.setAttribute('fill', color);
+        circle.setAttribute('class', 'hemiciclo-dot');
+        svg.appendChild(circle);
+        bancaIdx++;
+      }
+    }
+  }
+
+  // Distribuciones de ejemplo (placeholders)
+  const coloresDip = [
+    { color: '#5a8fc0', pct: 0.30 },
+    { color: '#b8341b', pct: 0.28 },
+    { color: '#F6B40E', pct: 0.18 },
+    { color: '#2a5a4a', pct: 0.14 },
+    { color: '#a594c8', pct: 0.10 }
+  ];
+  const coloresSen = [
+    { color: '#5a8fc0', pct: 0.38 },
+    { color: '#b8341b', pct: 0.34 },
+    { color: '#F6B40E', pct: 0.18 },
+    { color: '#a594c8', pct: 0.10 }
+  ];
+
+  dibujarHemiciclo('diputados-arc', 257, coloresDip);
+  dibujarHemiciclo('senado-arc', 72, coloresSen);
+</script>
+
+</body>
+</html>
