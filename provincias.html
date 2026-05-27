@@ -676,6 +676,125 @@
     .prov-stats { grid-template-columns: 1fr 1fr; }
   }
   /* ============================================ */
+  /* CÁPSULA EDUCATIVA                            */
+  /* ============================================ */
+  .capsula-edu {
+    background: linear-gradient(135deg, var(--celeste-soft) 0%, var(--crema) 100%);
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+    margin: 0 0 3rem 0;
+  }
+  .capsula-edu-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+  }
+  .capsula-edu-header {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+  .capsula-edu-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--celeste-dark);
+    background: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--celeste);
+    margin-bottom: 1.5rem;
+  }
+  .capsula-edu-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--tinta);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+  .capsula-edu-title em {
+    font-style: italic;
+    color: var(--celeste-dark);
+    font-weight: 400;
+  }
+  .capsula-edu-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--tinta);
+    text-align: center;
+  }
+  .capsula-edu-intro strong {
+    color: var(--tinta);
+    font-weight: 600;
+  }
+  .capsula-edu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .capsula-edu-poder {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .capsula-edu-poder:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  }
+  .capsula-edu-poder-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--celeste-dark);
+  }
+  .capsula-edu-poder-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--tinta);
+    line-height: 1.2;
+  }
+  .capsula-edu-poder-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--tinta);
+  }
+  .capsula-edu-footer {
+    padding-top: 2rem;
+    border-top: 1px solid var(--linea);
+  }
+  .capsula-edu-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+  }
+  .capsula-edu-bullet {
+    display: flex;
+    gap: 0.7rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--tinta);
+  }
+  .capsula-edu-bullet span {
+    color: var(--celeste-dark);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  @media (max-width: 800px) {
+    .capsula-edu-grid { grid-template-columns: 1fr; }
+    .capsula-edu-bullets { grid-template-columns: 1fr; }
+    .capsula-edu-inner { padding: 2.5rem 1.5rem; }
+  }
+
+  /* ============================================ */
   /* FICHA DINÁMICA DE PROVINCIA                  */
   /* ============================================ */
   .ficha-loading, .ficha-error {
@@ -940,6 +1059,44 @@
     <div class="indice-eyebrow">— 24 jurisdicciones</div>
     <h1>Las <em>provincias</em> de Argentina, una por una.</h1>
     <p>Argentina es un país federal: 23 provincias y la Ciudad Autónoma de Buenos Aires. Cada una tiene su propia constitución, sus propios poderes y sus propias reglas. Explorá la diversidad institucional del país.</p>
+  </div>
+
+  <!-- CÁPSULA EDUCATIVA: ¿Qué es una provincia? -->
+  <div class="capsula-edu">
+    <div class="capsula-edu-inner">
+      <div class="capsula-edu-header">
+        <div class="capsula-edu-tag">Antes de empezar</div>
+        <h2 class="capsula-edu-title">Cada provincia es un <em>mini-Estado</em></h2>
+        <p class="capsula-edu-intro">El sistema argentino es <strong>federal</strong>: cada provincia conserva todo el poder que no delegó a la Nación. Eso significa que tiene Constitución propia, sus propios tres poderes, sus propias leyes y sus propios impuestos. Para entender una provincia hay que entender que funciona como un país en pequeño dentro del país.</p>
+      </div>
+
+      <div class="capsula-edu-grid">
+        <div class="capsula-edu-poder">
+          <div class="capsula-edu-poder-num">01</div>
+          <div class="capsula-edu-poder-titulo">Ejecutivo provincial</div>
+          <div class="capsula-edu-poder-desc">El <strong>Gobernador</strong> (en CABA, Jefe de Gobierno) encabeza la administración provincial. Se elige por voto directo. Tiene su propio gabinete con ministerios provinciales.</div>
+        </div>
+        <div class="capsula-edu-poder">
+          <div class="capsula-edu-poder-num">02</div>
+          <div class="capsula-edu-poder-titulo">Legislativo provincial</div>
+          <div class="capsula-edu-poder-desc">Cada provincia tiene <strong>su propia Legislatura</strong>. Algunas son unicamerales (una sola cámara), otras bicamerales (Diputados y Senado provincial). Sancionan leyes que rigen dentro de la provincia.</div>
+        </div>
+        <div class="capsula-edu-poder">
+          <div class="capsula-edu-poder-num">03</div>
+          <div class="capsula-edu-poder-titulo">Judicial provincial</div>
+          <div class="capsula-edu-poder-desc">Cada provincia tiene <strong>su propia Corte Suprema</strong> (o Superior Tribunal) con sus jueces, fiscales y defensores. Aplican el derecho provincial y la mayor parte del derecho común.</div>
+        </div>
+      </div>
+
+      <div class="capsula-edu-footer">
+        <div class="capsula-edu-bullets">
+          <div class="capsula-edu-bullet"><span>✓</span> Cada provincia sanciona su propia Constitución, dentro del marco de la Constitución Nacional.</div>
+          <div class="capsula-edu-bullet"><span>✓</span> Educación, salud, policía, transporte interno, impuestos locales: son competencias provinciales.</div>
+          <div class="capsula-edu-bullet"><span>✓</span> Las provincias delegaron al Estado Nacional: relaciones exteriores, defensa, moneda, aduana y los códigos de fondo (Civil, Penal, Comercial).</div>
+          <div class="capsula-edu-bullet"><span>✓</span> Dentro de cada provincia hay un tercer nivel: los <strong>municipios</strong>, con sus propias autoridades electas.</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="indice-container">
