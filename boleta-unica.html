@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Boleta Única de Papel — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.ok { background: var(--verde-soft); border-left-color: var(--verde-ok); }
+  .destacado.ok .destacado-titulo { color: var(--verde-ok); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 50px; line-height: 1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+
+  /* Boleta visual: simulación de la BUP */
+  .bup-visual {
+    background: white;
+    border: 2px solid var(--tinta);
+    padding: 0;
+    margin: 2rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    overflow: hidden;
+  }
+  .bup-header {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+  .bup-table { width: 100%; border-collapse: collapse; }
+  .bup-table th {
+    background: var(--celeste-soft);
+    padding: 0.8rem 0.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    border: 1px solid var(--linea);
+    text-align: center;
+  }
+  .bup-table td {
+    border: 1px solid var(--linea);
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    vertical-align: middle;
+  }
+  .bup-table td.categoria {
+    background: var(--crema-warm);
+    font-weight: 600;
+    text-align: left;
+    padding-left: 0.8rem;
+  }
+  .bup-casillero {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--tinta);
+    background: white;
+  }
+  .bup-casillero.marcado::before {
+    content: '✕';
+    color: var(--rojo-fed);
+    font-size: 1.4rem;
+    line-height: 22px;
+    font-weight: 900;
+    display: block;
+  }
+  .bup-leyenda {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .bup-table th, .bup-table td { padding: 0.4rem 0.3rem; font-size: 0.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#sistema-electoral">Elecciones</a> · <span>Boleta Única</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 03.03 · Sistema electoral</div>
+    <h1 class="page-title">La <em>Boleta Única</em> de Papel</h1>
+    <p class="page-intro">En 2025, Argentina cambió radicalmente cómo se vota: por primera vez en una elección nacional, todos los candidatos aparecen en una sola hoja de papel. Esta guía te cuenta qué es la Boleta Única, cómo se usa, por qué se cambió y qué diferencias tiene con el sistema anterior.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#que-es"><span class="toc-num">01</span> Qué es la BUP</a></li>
+      <li><a href="#como-funciona"><span class="toc-num">02</span> Cómo funciona</a></li>
+      <li><a href="#paso-a-paso"><span class="toc-num">03</span> Paso a paso del voto</a></li>
+      <li><a href="#antes-despues"><span class="toc-num">04</span> Antes y después</a></li>
+      <li><a href="#errores"><span class="toc-num">05</span> Errores y dudas</a></li>
+      <li><a href="#provincias"><span class="toc-num">06</span> Las versiones provinciales</a></li>
+      <li><a href="#historia"><span class="toc-num">07</span> Origen de la reforma</a></li>
+      <li><a href="#debate"><span class="toc-num">08</span> El debate</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="que-es">
+      <div class="seccion-eyebrow">— 01 / Qué es la BUP</div>
+      <h2>Una sola <em>hoja</em> con toda la oferta</h2>
+      <p>La <strong>Boleta Única de Papel (BUP)</strong> es un instrumento de votación que incluye en una sola hoja a todos los candidatos, categorías de cargos y partidos políticos que pueden ser elegidos en una elección. Reemplaza al viejo sistema argentino, donde cada partido imprimía sus propias boletas separadas y las distribuía en el cuarto oscuro.</p>
+
+      <p>Fue establecida por la <strong>Ley 27.781</strong>, sancionada el 1 de octubre de 2024 y promulgada el 18 de octubre del mismo año. Se reglamentó por el Decreto 1049/2024 y se aplicó por primera vez en las elecciones nacionales legislativas de octubre de 2025.</p>
+
+      <h3>Cómo está organizada</h3>
+      <p>La BUP tiene dos ejes que organizan la información:</p>
+      <ul>
+        <li><strong>Filas horizontales:</strong> cada fila representa una <em>categoría de cargo</em> (Diputados, Senadores, Presidente, etc.).</li>
+        <li><strong>Columnas verticales:</strong> cada columna representa un <em>partido o frente electoral</em>, con su nombre, símbolo y, en algunos casos, fotos de los candidatos principales.</li>
+      </ul>
+
+      <p>El cruce de cada fila y columna es un casillero. Vos marcás el casillero del partido elegido en cada categoría. Podés marcar partidos distintos en categorías distintas (lo que se llama "corte de boleta").</p>
+
+      <div class="bup-visual">
+        <div class="bup-header">BOLETA ÚNICA DE PAPEL · ELECCIÓN NACIONAL</div>
+        <table class="bup-table">
+          <thead>
+            <tr>
+              <th style="width:30%;">Categoría</th>
+              <th>Partido A</th>
+              <th>Partido B</th>
+              <th>Partido C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="categoria">Presidente y Vice</td>
+              <td><span class="bup-casillero"></span></td>
+              <td><span class="bup-casillero marcado"></span></td>
+              <td><span class="bup-casillero"></span></td>
+            </tr>
+            <tr>
+              <td class="categoria">Senadores Nacionales</td>
+              <td><span class="bup-casillero marcado"></span></td>
+              <td><span class="bup-casillero"></span></td>
+              <td><span class="bup-casillero"></span></td>
+            </tr>
+            <tr>
+              <td class="categoria">Diputados Nacionales</td>
+              <td><span class="bup-casillero"></span></td>
+              <td><span class="bup-casillero marcado"></span></td>
+              <td><span class="bup-casillero"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bup-leyenda">Ejemplo simplificado: el votante marca distintos partidos en cada categoría (corte de boleta).</p>
+
+      <div class="cita-legal">
+        Fundamento legal: Ley 27.781 (sancionada el 01/10/2024, promulgada el 18/10/2024). Reglamentada por Decreto 1049/2024. Aplicación efectiva desde octubre de 2025.
+      </div>
+    </section>
+
+    <section class="seccion" id="como-funciona">
+      <div class="seccion-eyebrow">— 02 / Cómo funciona</div>
+      <h2>Las <em>reglas</em> del nuevo sistema</h2>
+      <p>La BUP cambia profundamente la logística del voto, pero el principio sigue siendo el mismo: una persona, un voto, en secreto.</p>
+
+      <h3>Reglas básicas</h3>
+      <ul>
+        <li><strong>Solo es válida una marca por categoría.</strong> Si marcás dos partidos en la misma categoría, esa categoría queda anulada (no toda la boleta).</li>
+        <li><strong>Podés cortar boleta libremente.</strong> No hay opción de "votar lista completa" como antes existía con la boleta partidaria.</li>
+        <li><strong>El voto en blanco se expresa dejando una categoría sin marcar.</strong> Si no querés votar para Presidente pero sí para Diputados, dejás vacía la fila de Presidente y marcás la de Diputados.</li>
+        <li><strong>La marca debe ser clara.</strong> Una cruz, una tilde, una marca visible en el casillero correspondiente. Lo importante es que se entienda la intención del voto.</li>
+      </ul>
+
+      <h3>Diseño técnico</h3>
+      <p>La boleta tiene reglas específicas establecidas por el Decreto 1049/2024 y la Cámara Nacional Electoral:</p>
+      <ul>
+        <li>Frente con hasta <strong>cuatro tintas de color</strong>.</li>
+        <li>Dorso con máximo dos tintas, espacio para firma del presidente de mesa, identificación del tipo de elección y fecha.</li>
+        <li>Tamaño máximo y mínimo establecidos por el Poder Ejecutivo.</li>
+        <li>Las agrupaciones políticas presentan logos, fotografías y datos identificatorios al menos 60 días antes de la elección.</li>
+        <li>El orden de los partidos en la boleta es el mismo que se definió para las PASO (cuando las hubo).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Solo cargos nacionales</div>
+        <p>La BUP nacional <strong>solo se usa para cargos nacionales</strong> (Presidente, Diputados, Senadores, Parlasur). Para gobernador, legisladores provinciales, intendentes y concejales, cada provincia mantiene su propio sistema de votación. En provincias que ya tenían boleta única local (como Mendoza o Córdoba), se usan dos boletas separadas el día de la elección concurrente.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="paso-a-paso">
+      <div class="seccion-eyebrow">— 03 / Paso a paso del voto</div>
+      <h2>Cómo <em>se vota</em>, en orden</h2>
+      <p>El día de la elección, el procedimiento de votación con la BUP tiene pasos bien definidos:</p>
+
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">01</div>
+          <div class="timeline-text">
+            <strong>Te presentás en la mesa</strong>
+            <p>Llevás tu DNI. El presidente de mesa lo verifica contra el padrón y te entrega la Boleta Única de Papel y una lapicera.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">02</div>
+          <div class="timeline-text">
+            <strong>Ingresás al cuarto oscuro</strong>
+            <p>Solo. El cuarto oscuro garantiza el secreto del voto. Ya no necesitás "elegir entre muchas boletas": la única boleta válida te la dio el presidente de mesa.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">03</div>
+          <div class="timeline-text">
+            <strong>Marcás tu elección</strong>
+            <p>Con la lapicera, marcás un casillero por cada categoría que querés votar. Si querés cortar boleta, marcás partidos distintos en cada fila. Si querés votar en blanco en alguna categoría, dejás esa fila sin marcar.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">04</div>
+          <div class="timeline-text">
+            <strong>Plegás la boleta</strong>
+            <p>Seguís las líneas de plegado impresas en la boleta. Esto asegura que las marcas queden ocultas y el voto sea secreto.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">05</div>
+          <div class="timeline-text">
+            <strong>Salís del cuarto oscuro</strong>
+            <p>Volvés a la mesa con la boleta plegada. El presidente firma el dorso de la boleta. Ese paso es crucial: sin firma, la boleta no es válida.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">06</div>
+          <div class="timeline-text">
+            <strong>Depositás en la urna</strong>
+            <p>Vos mismo colocás la boleta plegada en la urna. El presidente te devuelve el DNI ya marcado con la constancia de votación.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="destacado ok">
+        <div class="destacado-titulo">Beneficios prácticos</div>
+        <ul>
+          <li>Nunca falta una boleta: todos los partidos están en la misma hoja.</li>
+          <li>Imposible "robar boletas" de un partido (era práctica de fraude del sistema anterior).</li>
+          <li>El cuarto oscuro queda más limpio y ordenado.</li>
+          <li>Más fácil de controlar el escrutinio para los fiscales partidarios.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="antes-despues">
+      <div class="seccion-eyebrow">— 04 / Antes y después</div>
+      <h2>Diferencias con el <em>sistema viejo</em></h2>
+      <p>El cambio de sistema fue más profundo de lo que parece. Comparemos punto por punto:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Aspecto</th><th>Sistema anterior (boletas partidarias)</th><th>BUP (vigente)</th></tr></thead>
+        <tbody>
+          <tr><td>Quién imprime</td><td>Cada partido imprime las suyas</td><td>El Estado imprime una única boleta oficial</td></tr>
+          <tr><td>Cantidad de boletas</td><td>Una por partido en el cuarto oscuro</td><td>Una sola, con todos los partidos</td></tr>
+          <tr><td>Distribución previa</td><td>Los partidos entregaban boletas en la calle</td><td>No hay entrega previa: solo en la mesa</td></tr>
+          <tr><td>Selección del votante</td><td>Tomar boleta del partido elegido</td><td>Marcar casillero en una boleta común</td></tr>
+          <tr><td>Sobre</td><td>Se introducía la boleta en un sobre</td><td>Sin sobre: se pliega la boleta y se mete</td></tr>
+          <tr><td>Voto en blanco</td><td>No introducir boleta o introducir solo sobre</td><td>Dejar la categoría sin marcar</td></tr>
+          <tr><td>Voto nulo</td><td>Boleta rota o irregular</td><td>Múltiples marcas en una categoría</td></tr>
+          <tr><td>"Robo" de boletas</td><td>Posible (faltante en cuarto oscuro)</td><td>Imposible (todo en una boleta oficial)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Costo y ambiente</h3>
+      <p>El sistema BUP también tiene impacto en estos dos aspectos:</p>
+      <ul>
+        <li><strong>Costo:</strong> los partidos ya no necesitan imprimir millones de boletas propias. El Estado imprime la cantidad necesaria para cada mesa. Reduce gastos partidarios y unifica costos.</li>
+        <li><strong>Ambiental:</strong> menos papel desperdiciado. Antes se imprimían boletas que terminaban en la basura por exceso o por boletas defectuosas. La Ley 27.781 también establece un orden jerárquico de gestión de residuos electorales: prevención, minimización, reutilización, reciclado.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="errores">
+      <div class="seccion-eyebrow">— 05 / Errores y dudas</div>
+      <h2>Qué pasa si te <em>equivocás</em></h2>
+
+      <h3>Si te equivocaste al marcar</h3>
+      <p>Si marcaste mal una categoría, podés pedirle al presidente de mesa una boleta nueva. La boleta mal marcada se anula formalmente y te dan una nueva. Es un derecho del votante; no tengas vergüenza de pedirla.</p>
+
+      <h3>Si marcás más de una opción en la misma categoría</h3>
+      <p>Esa categoría queda <strong>anulada</strong> (voto nulo en esa fila). Pero el resto de las categorías marcadas correctamente siguen siendo válidas. No se anula toda la boleta, solo la categoría con el error.</p>
+
+      <h3>Si tachás un candidato o agregás algo</h3>
+      <p>Las marcas extra, dibujos, frases o tachaduras anulan el voto en la categoría donde aparecen. Para que tu voto cuente, marcá solo el casillero correspondiente.</p>
+
+      <h3>Si no marcás ningún casillero en una categoría</h3>
+      <p>Eso es <strong>voto en blanco</strong> en esa categoría. Es una expresión política válida que se cuenta como tal en el escrutinio.</p>
+
+      <h3>Si te llevás la boleta sin votar</h3>
+      <p>Es un delito electoral. La boleta debe quedar en la urna. Llevársela puede constituir el delito de sustracción de boletas, sancionado por el Código Electoral.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Personas con discapacidad visual</div>
+        <p>La Ley 27.781 contempla una versión accesible de la BUP para personas con discapacidad visual. Las personas con cualquier discapacidad pueden ingresar al cuarto oscuro acompañadas por una persona de su elección que acredite identidad.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="provincias">
+      <div class="seccion-eyebrow">— 06 / Las versiones provinciales</div>
+      <h2>Provincias que ya tenían <em>boleta única</em></h2>
+      <p>Antes de la BUP nacional, varias provincias argentinas ya habían adoptado sus propios sistemas de boleta única. La BUP nacional se inspira en estas experiencias provinciales, particularmente en la de Mendoza.</p>
+
+      <h3>Provincias pioneras</h3>
+      <ul>
+        <li><strong>Santa Fe</strong> (desde 2011): primera provincia con boleta única para cargos provinciales. Sistema con boletas distintas por categoría.</li>
+        <li><strong>Córdoba</strong> (desde 2011): boleta única para cargos provinciales y municipales.</li>
+        <li><strong>Mendoza</strong> (desde 2025 a nivel provincial): tras debate parlamentario, adoptó un modelo unificado.</li>
+        <li><strong>CABA</strong> (Boleta Única Electrónica desde 2015): sistema mixto con votación electrónica que imprime la boleta.</li>
+      </ul>
+
+      <h3>El día de la elección concurrente</h3>
+      <p>Cuando una provincia vota en simultáneo con la elección nacional (lo que se llama "elección concurrente"), el votante recibe <strong>dos boletas distintas</strong>: la BUP nacional para cargos nacionales y la boleta provincial para cargos locales. Cada una se deposita en su urna respectiva.</p>
+    </section>
+
+    <section class="seccion" id="historia">
+      <div class="seccion-eyebrow">— 07 / Origen de la reforma</div>
+      <h2>Cómo se llegó a la <em>BUP</em></h2>
+      <p>La discusión sobre la boleta única en Argentina tiene más de 15 años. El sistema de boletas partidarias múltiples era criticado por varias razones, y existieron numerosos intentos de reforma antes del éxito de 2024.</p>
+
+      <h3>Antecedentes</h3>
+      <ul>
+        <li><strong>2009-2014:</strong> Distintos proyectos de boleta única se presentaron en el Congreso sin aprobarse.</li>
+        <li><strong>2011-2020:</strong> Provincias como Santa Fe, Córdoba y CABA implementaron sus propios sistemas, demostrando viabilidad.</li>
+        <li><strong>2022:</strong> Bloques de UCR, PRO y Coalición Cívica impulsaron proyectos conjuntos. Se aprobó en Diputados pero no en Senadores.</li>
+        <li><strong>2024:</strong> Bajo el gobierno de Javier Milei, se reactivó la discusión. La Ley 27.781 obtuvo aprobación en ambas cámaras y se promulgó.</li>
+      </ul>
+
+      <h3>El estreno de 2025</h3>
+      <p>Las elecciones legislativas nacionales del <strong>26 de octubre de 2025</strong> marcaron el debut de la BUP en cargos nacionales. Se renovó la mitad de Diputados y un tercio del Senado. Fue la primera vez que millones de argentinos votaron con este sistema. La experiencia fue mayoritariamente bien evaluada en términos de orden, transparencia y comprensión.</p>
+
+      <div class="cita-legal">
+        Cronología sintética: Ley sancionada 01/10/2024 → Promulgada por Decreto 1049/2024 el 18/10/2024 → Diseños aprobados por Acordada CNE 40/2025 (24/04/2025) → Aplicación efectiva el 26/10/2025.
+      </div>
+    </section>
+
+    <section class="seccion" id="debate">
+      <div class="seccion-eyebrow">— 08 / El debate</div>
+      <h2>Argumentos a <em>favor y en contra</em></h2>
+      <p>Como toda reforma institucional, la BUP generó debate. Es importante conocer los argumentos de ambos lados para tener una opinión informada.</p>
+
+      <h3>Argumentos a favor</h3>
+      <ul>
+        <li><strong>Transparencia:</strong> elimina el "robo de boletas", una práctica histórica de fraude en algunas regiones del país.</li>
+        <li><strong>Igualdad de condiciones:</strong> partidos chicos no necesitan logística masiva para imprimir y distribuir boletas. Todos aparecen en la misma boleta oficial.</li>
+        <li><strong>Costo:</strong> reduce gastos partidarios. El Estado imprime una sola vez por elección.</li>
+        <li><strong>Ambiental:</strong> menos papel desperdiciado.</li>
+        <li><strong>Claridad:</strong> el votante ve toda la oferta electoral de una vez, comparando opciones.</li>
+        <li><strong>Logística:</strong> el cuarto oscuro queda más ordenado y simple.</li>
+      </ul>
+
+      <h3>Argumentos críticos</h3>
+      <ul>
+        <li><strong>Costo de impresión:</strong> imprimir boletas con cuatro tintas y para cada distrito tiene un costo logístico que asume el Estado.</li>
+        <li><strong>Capacitación:</strong> requiere campañas de difusión para que el votante entienda el nuevo sistema.</li>
+        <li><strong>Diseño:</strong> en distritos con muchos partidos (como CABA o Buenos Aires), la boleta puede volverse extensa y compleja.</li>
+        <li><strong>Pérdida de visibilidad:</strong> los partidos chicos pueden quedar relegados al final de la boleta si su orden depende de criterios establecidos.</li>
+        <li><strong>Riesgo de error:</strong> el cambio de paradigma puede confundir a votantes acostumbrados al sistema anterior.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">El futuro</div>
+        <p>La BUP convive con los sistemas provinciales hasta que cada provincia decida adoptar el suyo. Algunas provincias están en proceso de adoptar también boleta única para sus elecciones locales. La Libertad Avanza, por ejemplo, anunció en diciembre de 2025 que impulsará una reforma para implementar BUP en cargos provinciales de Buenos Aires para 2027.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Ley 27.781</strong> (2024) — Crea la Boleta Única de Papel. <a href="https://www.argentina.gob.ar/normativa/nacional/ley-27781-405395" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Decreto 1049/2024</strong> — Reglamenta la BUP, establece formato y dimensiones.</li>
+        <li><strong>Acordada CNE 40/2025</strong> — Aprueba modelos base de boleta para las elecciones nacionales de 2025.</li>
+        <li><strong>Observatorio Electoral</strong> (Ministerio del Interior). <a href="https://www.argentina.gob.ar/interior/observatorioelectoral/boleta-unica-papel-bup" target="_blank" rel="noopener">Guía oficial sobre BUP</a></li>
+        <li><strong>Cámara Nacional Electoral</strong>. <a href="https://www.electoral.gob.ar" target="_blank" rel="noopener">electoral.gob.ar</a></li>
+        <li><strong>Boletín Oficial de la República Argentina</strong>. <a href="https://www.boletinoficial.gob.ar" target="_blank" rel="noopener">boletinoficial.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        La BUP se aplica a cargos nacionales desde octubre de 2025. Las provincias mantienen sus propios sistemas para cargos locales. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

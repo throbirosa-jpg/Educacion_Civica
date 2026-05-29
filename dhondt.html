@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Sistema D'Hondt — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+
+  /* Tabla de cálculo D'Hondt */
+  .dhondt-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+    background: white;
+  }
+  .dhondt-tabla th {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 0.7rem;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+  .dhondt-tabla td {
+    padding: 0.6rem;
+    text-align: center;
+    border: 1px solid var(--linea);
+  }
+  .dhondt-tabla .partido-col {
+    background: var(--celeste-soft);
+    font-weight: 600;
+    text-align: left;
+    padding-left: 0.9rem;
+  }
+  .dhondt-tabla .ganadora {
+    background: var(--sol-soft);
+    color: var(--rojo-fed);
+    font-weight: 700;
+  }
+  .dhondt-tabla .num-banca {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: var(--rojo-fed);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    line-height: 18px;
+    margin-left: 0.3rem;
+    font-weight: 700;
+  }
+
+  .formula-box { background: var(--tinta); color: var(--crema); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; line-height: 1.7; border-radius: 2px; }
+  .formula-box strong { color: var(--sol); }
+
+  .pasos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .paso-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.2rem;
+  }
+  .paso-card-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--celeste-dark);
+    margin-bottom: 0.5rem;
+  }
+  .paso-card-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .paso-card-desc {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    line-height: 1.5;
+  }
+
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .pasos-grid { grid-template-columns: 1fr; }
+    .dhondt-tabla { font-size: 0.7rem; }
+    .dhondt-tabla td, .dhondt-tabla th { padding: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#sistema-electoral">Elecciones</a> · <span>Sistema D'Hondt</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 03.04 · Sistema electoral</div>
+    <h1 class="page-title">El sistema <em>D'Hondt</em></h1>
+    <p class="page-intro">¿Cómo es posible que un partido saque el 30% de los votos y se quede con el 40% de las bancas? La respuesta está en una fórmula matemática del siglo XIX creada por un jurista belga. Esta guía explica el sistema D'Hondt con ejemplos concretos, su historia y por qué se elige este método sobre otros posibles.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#que-es"><span class="toc-num">01</span> Qué es y dónde se usa</a></li>
+      <li><a href="#por-que"><span class="toc-num">02</span> Por qué no es directo</a></li>
+      <li><a href="#como-funciona"><span class="toc-num">03</span> Cómo funciona</a></li>
+      <li><a href="#ejemplo"><span class="toc-num">04</span> Ejemplo paso a paso</a></li>
+      <li><a href="#argentina"><span class="toc-num">05</span> El caso argentino</a></li>
+      <li><a href="#senadores"><span class="toc-num">06</span> Por qué Senadores no</a></li>
+      <li><a href="#criticas"><span class="toc-num">07</span> Ventajas y críticas</a></li>
+      <li><a href="#mundo"><span class="toc-num">08</span> El sistema en el mundo</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="que-es">
+      <div class="seccion-eyebrow">— 01 / Qué es y dónde se usa</div>
+      <h2>Una <em>fórmula</em> matemática para repartir bancas</h2>
+      <p>El sistema D'Hondt es un <strong>método matemático de asignación proporcional</strong> que se usa para distribuir bancas legislativas a partir de los votos obtenidos por cada partido. Lo inventó el jurista y matemático belga <strong>Víctor D'Hondt en 1878</strong> con un objetivo muy concreto: lograr una representación proporcional, pero a la vez evitar la fragmentación excesiva del parlamento.</p>
+
+      <p>Hoy se usa en más de 40 países en el mundo, incluyendo Argentina, España, Israel, Países Bajos, Bélgica, Portugal, Brasil, Chile y Japón, entre muchos otros. En Argentina lo establece el <strong>artículo 161 del Código Electoral Nacional</strong> para la elección de Diputados nacionales, y la mayoría de las legislaturas provinciales y municipales también lo adoptaron.</p>
+
+      <h3>Para qué se usa en Argentina</h3>
+      <ul>
+        <li><strong>Diputados nacionales</strong> (Cámara Baja del Congreso de la Nación).</li>
+        <li><strong>Legislaturas provinciales</strong> (la mayoría las usa, con variantes propias).</li>
+        <li><strong>Concejos deliberantes municipales</strong> (en muchos municipios del país).</li>
+        <li><strong>Parlamentarios del Mercosur</strong> (los representantes argentinos al Parlasur).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Lo que NO usa D'Hondt en Argentina</div>
+        <p>Los <strong>senadores nacionales</strong> NO se eligen con D'Hondt. Su sistema es muy diferente: cada provincia elige 3 senadores, 2 para el partido más votado y 1 para el segundo. Lo explicamos más abajo.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="por-que">
+      <div class="seccion-eyebrow">— 02 / Por qué no es directo</div>
+      <h2>El problema de la <em>proporcionalidad</em></h2>
+      <p>Antes de explicar cómo funciona, vale la pena entender por qué se necesita un sistema como D'Hondt. La pregunta es simple: <strong>si un partido obtiene el 30% de los votos, ¿no le corresponderían exactamente el 30% de las bancas?</strong></p>
+
+      <p>La respuesta es que <strong>no se puede</strong>. Imaginá un distrito que reparte 5 bancas. Hay un partido que obtiene el 33% de los votos. ¿Cuántas bancas le corresponden? El 33% de 5 bancas es 1,65 bancas. Pero no se puede dar "1,65 bancas" a alguien: las bancas son personas, son enteras. Hay que dar 1 o 2 bancas, pero no 1,65.</p>
+
+      <p>Acá aparece el problema central de los sistemas electorales: <strong>convertir porcentajes en números enteros sin perder demasiada proporcionalidad</strong>. Hay distintos métodos para resolverlo:</p>
+
+      <ul>
+        <li><strong>Métodos de cocientes</strong> (Hare, Droop, etc.): se divide el total de votos por el número de bancas y se reparte por cuociente.</li>
+        <li><strong>Métodos de divisores</strong>: D'Hondt es el más conocido de esta familia. También están Sainte-Laguë (más proporcional) y otros.</li>
+        <li><strong>Métodos mayoritarios</strong>: el que gana se lleva todo (winner-takes-all), como en algunas elecciones estadounidenses.</li>
+      </ul>
+
+      <p>D'Hondt es <strong>uno de los métodos más usados del mundo</strong> porque equilibra dos objetivos: representa razonablemente a las minorías, pero también favorece a los partidos grandes, dando estabilidad al sistema político.</p>
+    </section>
+
+    <section class="seccion" id="como-funciona">
+      <div class="seccion-eyebrow">— 03 / Cómo funciona</div>
+      <h2>La <em>fórmula</em> explicada</h2>
+      <p>El sistema D'Hondt funciona en tres pasos:</p>
+
+      <div class="pasos-grid">
+        <div class="paso-card">
+          <div class="paso-card-num">PASO 1</div>
+          <div class="paso-card-titulo">Aplicar umbral</div>
+          <div class="paso-card-desc">Se descartan los partidos que no superan el umbral mínimo. En Argentina, para Diputados nacionales es el 3% del padrón del distrito.</div>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card-num">PASO 2</div>
+          <div class="paso-card-titulo">Dividir votos</div>
+          <div class="paso-card-desc">Los votos de cada partido se dividen sucesivamente por 1, 2, 3, 4… hasta el número de bancas a repartir.</div>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card-num">PASO 3</div>
+          <div class="paso-card-titulo">Ordenar y asignar</div>
+          <div class="paso-card-desc">Se ordenan todos los cocientes obtenidos de mayor a menor. Las bancas se asignan en ese orden hasta que se acaben.</div>
+        </div>
+        <div class="paso-card">
+          <div class="paso-card-num">RESULTADO</div>
+          <div class="paso-card-titulo">Bancas asignadas</div>
+          <div class="paso-card-desc">Cada partido se queda con tantas bancas como cocientes suyos quedaron entre los más altos.</div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <strong>La fórmula central:</strong><br>
+        Por cada partido <em>i</em>, calcular sus cocientes:<br>
+        Votos<sub>i</sub> ÷ 1 · Votos<sub>i</sub> ÷ 2 · Votos<sub>i</sub> ÷ 3 · ... · Votos<sub>i</sub> ÷ N<br>
+        (donde N = bancas a repartir)<br><br>
+        Después se ordenan <strong>todos</strong> los cocientes (de todos los partidos) y se asignan las N primeras bancas.
+      </div>
+    </section>
+
+    <section class="seccion" id="ejemplo">
+      <div class="seccion-eyebrow">— 04 / Ejemplo paso a paso</div>
+      <h2>D'Hondt con <em>números reales</em></h2>
+      <p>Veamos un ejemplo concreto. Supongamos un distrito que reparte <strong>5 bancas</strong> y donde hay <strong>4 partidos</strong> que superaron el umbral:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Partido</th><th>Votos obtenidos</th><th>Porcentaje</th></tr></thead>
+        <tbody>
+          <tr><td>Partido A</td><td>100.000</td><td>50%</td></tr>
+          <tr><td>Partido B</td><td>60.000</td><td>30%</td></tr>
+          <tr><td>Partido C</td><td>30.000</td><td>15%</td></tr>
+          <tr><td>Partido D</td><td>10.000</td><td>5%</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Paso 1: Aplicamos las divisiones</h3>
+      <p>Como hay 5 bancas a repartir, dividimos los votos de cada partido por 1, 2, 3, 4 y 5. Las bancas se asignan en orden de cocientes (las cinco celdas más grandes ganan una banca, marcadas en amarillo):</p>
+
+      <table class="dhondt-tabla">
+        <thead>
+          <tr>
+            <th>Partido</th>
+            <th>÷ 1</th>
+            <th>÷ 2</th>
+            <th>÷ 3</th>
+            <th>÷ 4</th>
+            <th>÷ 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="partido-col">A</td>
+            <td class="ganadora">100.000 <span class="num-banca">1</span></td>
+            <td class="ganadora">50.000 <span class="num-banca">3</span></td>
+            <td class="ganadora">33.333 <span class="num-banca">5</span></td>
+            <td>25.000</td>
+            <td>20.000</td>
+          </tr>
+          <tr>
+            <td class="partido-col">B</td>
+            <td class="ganadora">60.000 <span class="num-banca">2</span></td>
+            <td>30.000</td>
+            <td>20.000</td>
+            <td>15.000</td>
+            <td>12.000</td>
+          </tr>
+          <tr>
+            <td class="partido-col">C</td>
+            <td class="ganadora">30.000 <span class="num-banca">4</span></td>
+            <td>15.000</td>
+            <td>10.000</td>
+            <td>7.500</td>
+            <td>6.000</td>
+          </tr>
+          <tr>
+            <td class="partido-col">D</td>
+            <td>10.000</td>
+            <td>5.000</td>
+            <td>3.333</td>
+            <td>2.500</td>
+            <td>2.000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Paso 2: Ordenamos los cocientes</h3>
+      <p>Ahora ordenamos todos los cocientes de mayor a menor y asignamos las 5 bancas a los 5 más altos:</p>
+      <ul>
+        <li><strong>1° (100.000):</strong> banca para Partido A</li>
+        <li><strong>2° (60.000):</strong> banca para Partido B</li>
+        <li><strong>3° (50.000):</strong> banca para Partido A</li>
+        <li><strong>4° (30.000):</strong> banca para Partido C (empate con 30.000 de B÷2, pero al ya tener B una banca con 60.000, gana A; en empates reales se resuelve por sorteo o ordenar por votos totales)</li>
+        <li><strong>5° (33.333):</strong> banca para Partido A</li>
+      </ul>
+
+      <h3>Resultado final</h3>
+      <table class="tabla-datos">
+        <thead><tr><th>Partido</th><th>Votos</th><th>% votos</th><th>Bancas</th><th>% bancas</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>100.000</td><td>50%</td><td>3</td><td>60%</td></tr>
+          <tr><td>B</td><td>60.000</td><td>30%</td><td>1</td><td>20%</td></tr>
+          <tr><td>C</td><td>30.000</td><td>15%</td><td>1</td><td>20%</td></tr>
+          <tr><td>D</td><td>10.000</td><td>5%</td><td>0</td><td>0%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Lo que se ve en el ejemplo</div>
+        <p>El Partido A con el <strong>50% de los votos</strong> obtuvo el <strong>60% de las bancas</strong>. El Partido D con el <strong>5% de los votos</strong> obtuvo <strong>0 bancas</strong>. Esto muestra dos efectos del sistema D'Hondt: <strong>premia a los grandes</strong> (la mayoría se vuelve más mayoritaria) y <strong>castiga a los chicos</strong> (los partidos con bajo porcentaje pueden quedar sin representación). Por eso a veces lo critican como "no totalmente proporcional".</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="argentina">
+      <div class="seccion-eyebrow">— 05 / El caso argentino</div>
+      <h2>Cómo se aplica <em>en Argentina</em></h2>
+      <p>El sistema D'Hondt se aplica en Argentina para los Diputados nacionales, con algunas particularidades:</p>
+
+      <h3>Particularidades del sistema argentino</h3>
+      <ul>
+        <li><strong>Umbral del 3% del padrón:</strong> los partidos deben obtener al menos el 3% del padrón electoral del distrito para participar del reparto. No es 3% de los votos: es 3% del padrón completo (que incluye los que no fueron a votar).</li>
+        <li><strong>Distrito = provincia:</strong> cada provincia funciona como un distrito electoral independiente. No se suman votos a nivel nacional.</li>
+        <li><strong>Renovación parcial:</strong> cada provincia renueva la mitad de sus diputados cada 2 años.</li>
+        <li><strong>Bancas por provincia:</strong> el número de diputados por provincia depende de su población, con un mínimo de 5 por jurisdicción.</li>
+      </ul>
+
+      <h3>Cuántas bancas se reparten en cada provincia</h3>
+      <p>La cantidad de bancas en juego en cada elección depende de la provincia. Algunos ejemplos:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Provincia</th><th>Bancas totales</th><th>Renovación por elección</th></tr></thead>
+        <tbody>
+          <tr><td>Buenos Aires</td><td>70</td><td>35</td></tr>
+          <tr><td>CABA</td><td>25</td><td>12 o 13</td></tr>
+          <tr><td>Córdoba</td><td>18</td><td>9</td></tr>
+          <tr><td>Santa Fe</td><td>19</td><td>10 (o 9)</td></tr>
+          <tr><td>Mendoza</td><td>10</td><td>5</td></tr>
+          <tr><td>Tierra del Fuego</td><td>5</td><td>2 o 3</td></tr>
+        </tbody>
+      </table>
+
+      <p>Cuanto menor es el número de bancas a repartir en un distrito, menos proporcional es el sistema en la práctica. En provincias chicas (con 2 o 3 bancas a renovar), el sistema D'Hondt se asemeja más a una elección "winner-takes-most".</p>
+
+      <div class="cita-legal">
+        Fundamento legal: artículo 161 del Código Electoral Nacional (Ley 19.945 y modificatorias). Establece el sistema D'Hondt para la elección de Diputados nacionales.
+      </div>
+    </section>
+
+    <section class="seccion" id="senadores">
+      <div class="seccion-eyebrow">— 06 / Por qué Senadores no</div>
+      <h2>El <em>otro sistema</em>: senadores</h2>
+      <p>Como aclaramos al principio, los Senadores nacionales NO se eligen con D'Hondt. Tienen un sistema mucho más simple, establecido en el <strong>artículo 54 de la Constitución Nacional</strong> tras la reforma de 1994:</p>
+
+      <ul>
+        <li><strong>3 senadores por provincia y por CABA.</strong> Eso da 72 senadores en total (24 jurisdicciones × 3).</li>
+        <li><strong>Reparto fijo:</strong> 2 senadores para la lista más votada, 1 senador para la segunda más votada. No hay reparto proporcional D'Hondt.</li>
+        <li><strong>Mandato:</strong> 6 años. Se renueva un tercio del Senado (24 senadores) cada 2 años.</li>
+        <li><strong>Quién renueva cuándo:</strong> las provincias están agrupadas en tres tercios. En cada elección legislativa intermedia se renuevan los senadores de 8 provincias.</li>
+      </ul>
+
+      <h3>Por qué este sistema</h3>
+      <p>El diseño del Senado se basa en un principio federal distinto al de Diputados:</p>
+      <ul>
+        <li><strong>Diputados:</strong> representan al pueblo. Su número depende de la población de cada provincia. Por eso se usa D'Hondt: para reflejar proporcionalmente la voluntad popular.</li>
+        <li><strong>Senadores:</strong> representan a las provincias. Cada provincia tiene los mismos 3 senadores sin importar su tamaño (Tierra del Fuego tiene los mismos que Buenos Aires). El reparto 2-1 garantiza voz al oficialismo y a la primera minoría provincial.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Una curiosidad</div>
+        <p>Antes de la reforma constitucional de 1994, los Senadores nacionales NO se elegían por voto directo: los elegían las Legislaturas provinciales. La reforma del '94 instauró el voto directo y el reparto 2-1, que es lo que rige hoy.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="criticas">
+      <div class="seccion-eyebrow">— 07 / Ventajas y críticas</div>
+      <h2>Lo <em>bueno y lo malo</em> del sistema</h2>
+
+      <h3>Ventajas del D'Hondt</h3>
+      <ul>
+        <li><strong>Proporcionalidad razonable:</strong> aunque favorece a los grandes, refleja en buena medida los porcentajes de votos.</li>
+        <li><strong>Estabilidad política:</strong> al concentrar bancas en los partidos más votados, evita parlamentos extremadamente fragmentados.</li>
+        <li><strong>Simplicidad matemática:</strong> el método se calcula con divisiones simples y es verificable por cualquier persona.</li>
+        <li><strong>Transparencia:</strong> al ser un cálculo determinístico, no hay margen para discrecionalidad. Mismo input, mismo output.</li>
+        <li><strong>Consenso internacional:</strong> es uno de los métodos más usados, lo que facilita comparaciones y experiencia acumulada.</li>
+      </ul>
+
+      <h3>Críticas al D'Hondt</h3>
+      <ul>
+        <li><strong>Penaliza a los partidos chicos:</strong> el sesgo hacia los grandes hace que partidos con apoyo real (3-5%) puedan quedar sin representación.</li>
+        <li><strong>"Sobre-representación" de las mayorías:</strong> el primer partido suele obtener un porcentaje de bancas mayor que su porcentaje de votos.</li>
+        <li><strong>Umbrales adicionales:</strong> en Argentina, el 3% del padrón es alto y puede dejar fuera a partidos con votos reales pero baja participación.</li>
+        <li><strong>Distritos chicos = menos proporcionalidad:</strong> en provincias con pocas bancas a repartir, el sistema se vuelve mayoritario en la práctica.</li>
+        <li><strong>Alternativas más justas:</strong> el método Sainte-Laguë (que divide por números impares) es matemáticamente más proporcional, aunque genera más fragmentación.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Propuestas de reforma</div>
+        <p>Hay propuestas recurrentes para modificar el sistema D'Hondt en Argentina: aumentar la cantidad de bancas para mayor proporcionalidad, reducir el umbral para que entren más partidos, o cambiar al método Sainte-Laguë. Estas propuestas avanzan y retroceden según la coyuntura política.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="mundo">
+      <div class="seccion-eyebrow">— 08 / El sistema en el mundo</div>
+      <h2>D'Hondt <em>fuera</em> de Argentina</h2>
+      <p>El sistema fue inventado en Europa y se difundió globalmente. Hoy es uno de los métodos electorales más extendidos.</p>
+
+      <h3>Origen y difusión</h3>
+      <p>Víctor D'Hondt era un jurista belga de la Universidad de Gante. Publicó su sistema en 1878 en el contexto del debate europeo sobre cómo reformar las elecciones para hacer más representativos a los parlamentos. Bélgica fue el primer país en adoptarlo (1899), y desde entonces se expandió por Europa y América Latina.</p>
+
+      <h3>Países que lo usan</h3>
+      <p>Algunos ejemplos destacados:</p>
+      <ul>
+        <li><strong>España:</strong> Congreso de los Diputados, eligiendo provincias como distrito.</li>
+        <li><strong>Brasil:</strong> Cámara de Diputados, con cada estado como distrito.</li>
+        <li><strong>Países Bajos:</strong> Tweede Kamer (con todo el país como distrito único).</li>
+        <li><strong>Portugal, Bélgica, Israel, Japón, Polonia, Turquía, Hungría...</strong></li>
+      </ul>
+
+      <h3>Variantes del D'Hondt</h3>
+      <p>Algunos países combinan D'Hondt con otros sistemas:</p>
+      <ul>
+        <li><strong>Listas cerradas vs. abiertas:</strong> en Argentina la lista es cerrada y bloqueada (votás la lista en el orden que el partido presentó). En Brasil, por ejemplo, el votante puede elegir el orden de los candidatos dentro de la lista.</li>
+        <li><strong>Doble vuelta legislativa:</strong> algunos países combinan D'Hondt con balotaje legislativo (no es el caso de Argentina).</li>
+        <li><strong>Listas mixtas (sistemas mixtos):</strong> Alemania y Nueva Zelanda combinan voto por distrito uninominal (winner-takes-all) con voto proporcional para una segunda lista nacional.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Calculadoras D'Hondt online</div>
+        <p>Si querés simular tus propios escenarios electorales con el sistema D'Hondt, existen varias herramientas online. Una buena opción es la calculadora pública de <a href="https://bancas.juanronco.com.ar" target="_blank" rel="noopener" style="color: var(--celeste-dark);">bancas.juanronco.com.ar</a>, que permite simular resultados por distrito argentino. Es una herramienta útil para educadores, periodistas y curiosos.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y referencias</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículos 45, 46, 54, 161 (elección de Diputados y Senadores).</li>
+        <li><strong>Ley 19.945</strong> — Código Electoral Nacional, artículo 161 (sistema D'Hondt).</li>
+        <li><strong>Reforma Constitucional de 1994</strong> — Estableció el sistema actual del Senado (2 para mayoría, 1 para primera minoría).</li>
+        <li><strong>Cámara Nacional Electoral</strong>. <a href="https://www.electoral.gob.ar" target="_blank" rel="noopener">electoral.gob.ar</a></li>
+        <li><strong>Honorable Cámara de Diputados</strong>. <a href="https://www.hcdn.gob.ar" target="_blank" rel="noopener">hcdn.gob.ar</a></li>
+        <li><strong>Honorable Senado de la Nación</strong>. <a href="https://www.senado.gob.ar" target="_blank" rel="noopener">senado.gob.ar</a></li>
+        <li><strong>Chequeado · Explicador D'Hondt</strong>. <a href="https://chequeado.com" target="_blank" rel="noopener">chequeado.com</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        El ejemplo numérico de esta página es ilustrativo. Para simulaciones reales con escenarios electorales argentinos, ver las calculadoras D'Hondt referenciadas. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

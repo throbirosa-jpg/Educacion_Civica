@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PASO, generales y balotaje — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 40px; line-height: 1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+  .formula-box { background: var(--tinta); color: var(--crema); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; line-height: 1.7; border-radius: 2px; }
+  .formula-box strong { color: var(--sol); }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#sistema-electoral">Elecciones</a> · <span>PASO, generales y balotaje</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 03.02 · Sistema electoral</div>
+    <h1 class="page-title">PASO, generales y <em>balotaje</em></h1>
+    <p class="page-intro">El camino para llegar a la Presidencia (y al Congreso) tiene escalones bien definidos. Cada uno cumple una función específica y tiene sus propias reglas. Esta guía recorre paso a paso cómo se elige al Presidente argentino, qué son las PASO, cómo funcionan las elecciones generales y por qué a veces hay segunda vuelta.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#camino"><span class="toc-num">01</span> El camino completo</a></li>
+      <li><a href="#paso"><span class="toc-num">02</span> Las PASO en detalle</a></li>
+      <li><a href="#generales"><span class="toc-num">03</span> Las elecciones generales</a></li>
+      <li><a href="#balotaje"><span class="toc-num">04</span> El balotaje argentino</a></li>
+      <li><a href="#fechas"><span class="toc-num">05</span> Fechas y plazos</a></li>
+      <li><a href="#historia"><span class="toc-num">06</span> Historia de los balotajes</a></li>
+      <li><a href="#provincias"><span class="toc-num">07</span> Variaciones provinciales</a></li>
+      <li><a href="#preguntas"><span class="toc-num">08</span> Preguntas frecuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="camino">
+      <div class="seccion-eyebrow">— 01 / El camino completo</div>
+      <h2>De <em>candidato</em> a Presidente</h2>
+      <p>El sistema electoral argentino tiene un recorrido estructurado con hasta tres instancias de votación para una elección presidencial. No todas las elecciones pasan por las tres: depende de los resultados.</p>
+
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">01</div>
+          <div class="timeline-text">
+            <strong>PASO (Primarias)</strong>
+            <p>Domingo de agosto del año electoral. Definen quiénes son los candidatos finales de cada espacio y qué partidos pasan a las generales.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">02</div>
+          <div class="timeline-text">
+            <strong>Elecciones generales</strong>
+            <p>Domingo de octubre. Ahí votás directamente por presidente, diputados y senadores. Si alguien gana con margen suficiente, termina acá.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">03</div>
+          <div class="timeline-text">
+            <strong>Balotaje (segunda vuelta)</strong>
+            <p>Cuarto domingo después de las generales. Solo si nadie ganó con el umbral requerido. Se enfrentan las dos fórmulas más votadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Importante</div>
+        <p>El balotaje solo aplica para la elección de <strong>Presidente y Vicepresidente</strong>. Los diputados y senadores se eligen exclusivamente en la elección general, sin segunda vuelta. Tampoco hay balotaje para gobernadores a nivel nacional, aunque algunas provincias lo aplican en sus elecciones locales.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="paso">
+      <div class="seccion-eyebrow">— 02 / Las PASO en detalle</div>
+      <h2>Primarias <em>Abiertas, Simultáneas y Obligatorias</em></h2>
+      <p>Las PASO son uno de los grandes inventos electorales argentinos. Fueron creadas por la <strong>Ley 26.571 de Democratización de la Representación Política</strong> sancionada en diciembre de 2009 y aplicadas por primera vez en 2011. El sistema, tal como existe en Argentina, no tiene equivalente exacto en otros países del mundo.</p>
+
+      <h3>Las cuatro letras, una por una</h3>
+      <p>El nombre PASO no es casualidad: cada palabra define un atributo distinto del sistema.</p>
+      <ul>
+        <li><strong>Primarias:</strong> son elecciones internas de los partidos para definir sus candidatos finales. No deciden quién gobierna, sino quién compite.</li>
+        <li><strong>Abiertas:</strong> participa todo el padrón electoral, no solo los afiliados. Vos podés votar en la interna de cualquier partido (uno solo).</li>
+        <li><strong>Simultáneas:</strong> todos los partidos hacen sus primarias el mismo día, en una sola jornada electoral nacional.</li>
+        <li><strong>Obligatorias:</strong> para los partidos (deben participar incluso si presentan lista única) y para los electores (con las mismas reglas y multas que la elección general).</li>
+      </ul>
+
+      <h3>Para qué sirven</h3>
+      <p>Las PASO cumplen tres funciones simultáneas:</p>
+      <ul>
+        <li><strong>Función 1: Filtrar partidos.</strong> Solo pasan a las generales los partidos que obtienen al menos <strong>1,5% de los votos válidos</strong> en su distrito para cada categoría. Esto reduce la fragmentación electoral.</li>
+        <li><strong>Función 2: Definir candidatos.</strong> Si un partido tiene una sola lista interna, esa es la candidata. Si tiene dos o más listas internas (caso menos frecuente), gana la lista que obtenga más votos.</li>
+        <li><strong>Función 3: Gran encuesta nacional.</strong> Como vota toda la ciudadanía, las PASO funcionan como una "foto" del electorado dos meses antes de la elección general. Es un termómetro político con valor predictivo.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Suspensión de las PASO 2025</div>
+        <p>En febrero de 2025, el Congreso aprobó la suspensión de las PASO para las elecciones legislativas de ese año. La medida fue impulsada por el Poder Ejecutivo y promulgada por el Decreto 171/2025. El argumento oficial: ahorrar costos operativos. Las PASO siguen formando parte del Código Electoral; podrían reactivarse o reformarse en el futuro.</p>
+      </div>
+
+      <h3>Una breve historia</h3>
+      <p>Argentina ya había experimentado con primarias antes: en 2002, la Ley 25.611 estableció primarias abiertas obligatorias, pero se aplicaron de forma limitada y se derogaron en 2006. Las PASO actuales nacieron con la Ley 26.571 en 2009 y debutaron en las elecciones presidenciales de 2011.</p>
+      <p>Desde entonces, se realizaron PASO en las elecciones presidenciales de <strong>2011, 2015, 2019 y 2023</strong>, y en las legislativas intermedias de <strong>2013, 2017 y 2021</strong>. Para 2025 fueron suspendidas.</p>
+
+      <div class="cita-legal">
+        Fundamento legal: Ley 26.571 (sancionada el 02/12/2009). Modificada por leyes posteriores. Texto vigente disponible en electoral.gob.ar.
+      </div>
+    </section>
+
+    <section class="seccion" id="generales">
+      <div class="seccion-eyebrow">— 03 / Las elecciones generales</div>
+      <h2>La <em>elección definitiva</em></h2>
+      <p>Las elecciones generales son la instancia central del sistema electoral argentino. Es ahí donde se eligen efectivamente los cargos en disputa. En el caso del Presidente, si nadie alcanza el umbral, recién se va a balotaje.</p>
+
+      <h3>Qué se vota en las generales</h3>
+      <p>En una elección general presidencial, en una sola boleta votás por:</p>
+      <ul>
+        <li><strong>Presidente y Vicepresidente</strong> (fórmula, no se votan por separado).</li>
+        <li><strong>Diputados nacionales</strong> (la mitad de los 257 se renueva cada 2 años).</li>
+        <li><strong>Senadores nacionales</strong> (un tercio de los 72, solo en provincias que renuevan ese año).</li>
+        <li><strong>Parlamentarios del Mercosur</strong> (representantes argentinos al Parlasur).</li>
+      </ul>
+
+      <h3>Sistema de votación</h3>
+      <p>Desde 2025, las elecciones nacionales usan la <strong>Boleta Única de Papel</strong>. Marcás con una lapicera la opción elegida en cada categoría. Podés votar partidos distintos para distintas categorías (el famoso "corte de boleta").</p>
+
+      <h3>Cómo se eligen los diputados y senadores</h3>
+      <p>El sistema cambia según la cámara:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Cámara</th><th>Sistema</th></tr></thead>
+        <tbody>
+          <tr><td>Senadores</td><td>3 por provincia: 2 para la lista más votada, 1 para la segunda. Mandato: 6 años.</td></tr>
+          <tr><td>Diputados</td><td>Sistema D'Hondt (proporcional). Mandato: 4 años. Cada provincia elige según su población.</td></tr>
+        </tbody>
+      </table>
+
+      <p>El sistema D'Hondt para Diputados lo explicamos en detalle <a href="dhondt.html" style="color: var(--celeste-dark);">en esta otra página</a>.</p>
+    </section>
+
+    <section class="seccion" id="balotaje">
+      <div class="seccion-eyebrow">— 04 / El balotaje</div>
+      <h2>La <em>segunda vuelta</em> argentina</h2>
+      <p>El balotaje, también llamado "segunda vuelta electoral", es un mecanismo para asegurar que el Presidente electo cuente con un respaldo claro y mayoritario del electorado. Fue incorporado a la Constitución por la <strong>reforma de 1994</strong> y reemplazó al viejo sistema del Colegio Electoral.</p>
+
+      <h3>La regla argentina (umbral reducido)</h3>
+      <p>A diferencia de la mayoría de los países (que exigen mayoría absoluta, es decir +50% para ganar en primera vuelta), Argentina tiene un sistema con <strong>umbral reducido</strong>. Se gana en primera vuelta si la fórmula más votada cumple alguna de estas dos condiciones:</p>
+
+      <div class="formula-box">
+        <strong>Condición A:</strong> Más del 45% de los votos afirmativos.<br>
+        <strong>O · Condición B:</strong> Más del 40% de los votos afirmativos<br>
+        <strong>+</strong> al menos 10 puntos porcentuales de diferencia sobre el segundo.
+      </div>
+
+      <p>Si ninguna fórmula cumple alguna de estas condiciones, hay balotaje entre las dos más votadas.</p>
+
+      <h3>Detalles técnicos clave</h3>
+      <ul>
+        <li><strong>Votos afirmativos:</strong> son los votos a favor de las fórmulas. Los <strong>votos en blanco no cuentan</strong> para el cálculo del porcentaje. Tampoco los nulos. Esto es importante: el porcentaje se calcula sobre los votos válidos a fórmulas.</li>
+        <li><strong>Plazo del balotaje:</strong> debe realizarse dentro de los <strong>30 días posteriores</strong> a la primera vuelta, según la Constitución.</li>
+        <li><strong>Sin desistimientos formales:</strong> aunque uno de los candidatos haya "bajado su candidatura" (como Menem en 2003), legalmente debía celebrarse igual. En 2003 el balotaje no se realizó porque Menem desistió antes de la jornada electoral.</li>
+        <li><strong>Mismo electorado:</strong> el padrón es el mismo que para la primera vuelta. La obligatoriedad y las multas también.</li>
+      </ul>
+
+      <h3>De dónde viene el sistema argentino</h3>
+      <p>Hasta la reforma de 1994, Argentina elegía al Presidente por <strong>Colegio Electoral</strong> (similar al de Estados Unidos). Cada provincia elegía electores, y esos electores elegían al Presidente. La reforma de 1994 eliminó el Colegio Electoral y estableció:</p>
+      <ul>
+        <li>Voto directo del Presidente y Vice (una sola fórmula).</li>
+        <li>Argentina pasa a ser un único "distrito" para esta elección (no se cuentan votos por provincia, sino el total nacional).</li>
+        <li>Mandato de 4 años con posibilidad de una reelección consecutiva (antes era 6 años sin reelección).</li>
+        <li>Sistema de balotaje con umbral reducido.</li>
+      </ul>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Curiosidad histórica</div>
+        <p>Argentina ya tuvo un sistema de segunda vuelta en 1972, impuesto por la dictadura. Se aplicó en marzo de 1973: Juan Domingo Perón ganó con poco más del 45% y, ante la inminente derrota del segundo (Ricardo Balbín), no se llegó a celebrar la segunda vuelta. El sistema fue eliminado después y recién regresó con la reforma constitucional democrática de 1994.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="fechas">
+      <div class="seccion-eyebrow">— 05 / Fechas y plazos</div>
+      <h2>El <em>calendario</em> electoral en detalle</h2>
+      <p>El año electoral argentino tiene fechas relativamente fijas, establecidas por ley. Conocerlas ayuda a entender el ritmo de la política.</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Instancia</th><th>Fecha establecida</th></tr></thead>
+        <tbody>
+          <tr><td>Convocatoria a PASO</td><td>Mínimo 90 días antes</td></tr>
+          <tr><td>PASO</td><td>Segundo domingo de agosto del año electoral</td></tr>
+          <tr><td>Inscripción de candidaturas</td><td>50 días antes de las PASO</td></tr>
+          <tr><td>Elecciones generales</td><td>Cuarto domingo de octubre del año electoral</td></tr>
+          <tr><td>Eventual balotaje</td><td>Dentro de los 30 días post-generales</td></tr>
+          <tr><td>Asunción presidencial</td><td>10 de diciembre del año electoral</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Veda electoral</h3>
+      <p>Desde 48 horas antes de cada elección y hasta el cierre de las urnas:</p>
+      <ul>
+        <li>Está prohibida la propaganda política.</li>
+        <li>No se pueden difundir encuestas ni proyecciones.</li>
+        <li>No se puede vender alcohol en lugares públicos.</li>
+        <li>No se puede portar armas (excepto fuerzas de seguridad en función).</li>
+        <li>No se pueden hacer espectáculos públicos masivos.</li>
+      </ul>
+
+      <h3>Tiempos del año electoral</h3>
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">JUN</div>
+          <div class="timeline-text">
+            <strong>Inscripción de candidatos</strong>
+            <p>Los partidos presentan sus listas internas para las PASO ante la Justicia Electoral.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">AGO</div>
+          <div class="timeline-text">
+            <strong>PASO</strong>
+            <p>Se vota. Se filtran partidos (umbral 1,5%) y se definen candidatos.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">OCT</div>
+          <div class="timeline-text">
+            <strong>Elecciones generales</strong>
+            <p>Voto definitivo. Se eligen Presidente, Diputados y Senadores. Si nadie alcanza el umbral, hay balotaje.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">NOV</div>
+          <div class="timeline-text">
+            <strong>Balotaje (si corresponde)</strong>
+            <p>Segunda vuelta entre las dos fórmulas más votadas. Define al Presidente.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">DIC</div>
+          <div class="timeline-text">
+            <strong>Asunción</strong>
+            <p>El 10 de diciembre asume el Presidente electo (y los nuevos legisladores).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="historia">
+      <div class="seccion-eyebrow">— 06 / Los balotajes argentinos</div>
+      <h2>Cuándo hubo (y cuándo no hubo) <em>segunda vuelta</em></h2>
+      <p>Desde la reforma de 1994, en las elecciones presidenciales bajo la Constitución vigente <strong>tres veces se debió ir a balotaje</strong>, y en una ocasión adicional el balotaje fue evitado por desistimiento de uno de los candidatos.</p>
+
+      <h3>Caso 1: 2003 — El balotaje que no fue</h3>
+      <p>En la primera vuelta, Carlos Menem (24,45%) quedó primero y Néstor Kirchner (22,25%) segundo. Por umbral reducido, correspondía balotaje. Sin embargo, Menem <strong>desistió antes de la segunda vuelta</strong>, anticipándose a una derrota muy probable según las encuestas. Kirchner asumió como Presidente sin necesidad de balotaje.</p>
+
+      <h3>Caso 2: 2015 — Primer balotaje efectivo</h3>
+      <p>En octubre, Daniel Scioli (37,08%) quedó primero, Mauricio Macri (34,15%) segundo. Por umbral reducido, ninguno alcanzaba para ganar en primera vuelta. En el balotaje del 22 de noviembre, <strong>Macri obtuvo el 51,34%</strong> contra el 48,66% de Scioli y se convirtió en Presidente.</p>
+
+      <h3>Caso 3: 2023 — Segundo balotaje efectivo</h3>
+      <p>Sergio Massa quedó primero (36,68%) en octubre, Javier Milei segundo (29,98%). Ninguno alcanzó el umbral. En el balotaje del 19 de noviembre, <strong>Milei ganó con el 55,69%</strong> contra el 44,31% de Massa.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Datos del balotaje argentino</div>
+        <ul>
+          <li>Balotajes celebrados: <strong>2</strong> (2015, 2023).</li>
+          <li>Balotajes evitados por desistimiento: <strong>1</strong> (2003).</li>
+          <li>Reversiones (gana en balotaje quien quedó segundo en primera vuelta): <strong>2 de 2</strong> (2015 y 2023).</li>
+          <li>Elecciones decididas en primera vuelta: <strong>1995, 1999, 2007, 2011, 2019</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="provincias">
+      <div class="seccion-eyebrow">— 07 / Variaciones provinciales</div>
+      <h2>Sistemas <em>distintos</em> en cada provincia</h2>
+      <p>Cada provincia argentina tiene su propio sistema para elegir gobernador, vicegobernador y legisladores provinciales. Algunas adoptaron sistemas similares al nacional, otras tienen reglas propias muy distintas. Esto es parte del federalismo: las provincias deciden por sí mismas cómo eligen a sus autoridades.</p>
+
+      <h3>Provincias con balotaje provincial</h3>
+      <p>Algunas provincias adoptaron el sistema de segunda vuelta para gobernador:</p>
+      <ul>
+        <li><strong>Ciudad Autónoma de Buenos Aires:</strong> balotaje si ningún candidato supera el 50%.</li>
+        <li><strong>Chaco, Corrientes y Tierra del Fuego:</strong> sistemas similares con umbrales propios.</li>
+      </ul>
+
+      <h3>Provincias con sistema de Ley de Lemas</h3>
+      <p>Algunas provincias mantienen o mantuvieron el sistema de "Ley de Lemas" o "doble voto simultáneo". En este sistema, cada partido puede presentar varios candidatos ("sublemas") y los votos se suman al "lema" general. Es un sistema controvertido porque puede consagrar ganador a un candidato que no fue el más votado individualmente.</p>
+      <ul>
+        <li><strong>Salta y San Juan:</strong> aún utilizan el sistema de lemas.</li>
+        <li><strong>Santa Fe:</strong> lo derogó en 2005 y adoptó primarias.</li>
+      </ul>
+
+      <h3>Provincias con elecciones desdobladas</h3>
+      <p>Muchas provincias eligen separar su elección provincial del calendario nacional. Esto les permite "despegar" los temas locales de los nacionales y centrar el debate provincial. Las decisiones de desdoblar o no son políticas y las toma cada gobierno provincial.</p>
+    </section>
+
+    <section class="seccion" id="preguntas">
+      <div class="seccion-eyebrow">— 08 / Preguntas frecuentes</div>
+      <h2>Dudas <em>habituales</em></h2>
+
+      <h3>¿Puedo votar en las PASO de un partido y en las generales de otro?</h3>
+      <p><strong>Sí.</strong> Las PASO son independientes de las generales. No estás "obligado" a votar en octubre por el mismo partido al que votaste en agosto.</p>
+
+      <h3>¿Si voto en blanco en el balotaje, mi voto cuenta para alguien?</h3>
+      <p><strong>No.</strong> El voto en blanco no se asigna a ninguno de los candidatos. Solo cuentan los votos afirmativos. Sirve como expresión política pero no inclina la balanza hacia ninguno de los dos.</p>
+
+      <h3>¿Es lo mismo "voto en blanco" que "voto nulo"?</h3>
+      <p><strong>No.</strong> El voto en blanco es una expresión consciente: no marcaste ninguna opción. El voto nulo es un error o una marca inválida (por ejemplo, marcar dos opciones en una misma categoría con la BUP).</p>
+
+      <h3>¿Las multas por no votar también aplican al balotaje?</h3>
+      <p><strong>Sí.</strong> Las multas por no votar aplican a cualquier elección obligatoria, incluido el balotaje. La justificación se tramita igual: dentro de los 60 días posteriores en infractores.padron.gob.ar.</p>
+
+      <h3>¿Quién convoca al balotaje?</h3>
+      <p>La <strong>Justicia Electoral Nacional</strong>, una vez confirmados los resultados oficiales de la primera vuelta. La convocatoria es automática si se cumplen las condiciones constitucionales para ir a segunda vuelta.</p>
+
+      <h3>¿Qué pasa si los dos candidatos del balotaje empatan?</h3>
+      <p>Es un escenario teóricamente posible pero estadísticamente casi imposible (empate exacto en millones de votos). La Constitución no prevé un mecanismo específico para esto; en ese caso, el Congreso debería intervenir.</p>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículos 94 a 98 (sobre elección presidencial y balotaje).</li>
+        <li><strong>Ley 19.945</strong> — Código Electoral Nacional.</li>
+        <li><strong>Ley 26.571</strong> (2009) — Democratización de la Representación Política (crea las PASO). <a href="https://www.argentina.gob.ar/interior/observatorioelectoral/normativa-electoral/normativa-electoral-nacional/ley-de" target="_blank" rel="noopener">Texto completo</a></li>
+        <li><strong>Reforma Constitucional de 1994</strong> — Incorporó el balotaje al sistema argentino.</li>
+        <li><strong>Cámara Nacional Electoral</strong>. <a href="https://www.electoral.gob.ar" target="_blank" rel="noopener">electoral.gob.ar</a></li>
+        <li><strong>Observatorio Electoral del Ministerio del Interior</strong>. <a href="https://www.argentina.gob.ar/interior/observatorioelectoral" target="_blank" rel="noopener">argentina.gob.ar/interior/observatorioelectoral</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Las PASO están suspendidas para las elecciones legislativas de 2025. La normativa puede ser modificada por leyes posteriores. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
