@@ -2,7 +2,8 @@
   "_meta": {
     "fuente": "Sitios oficiales provinciales, INDEC Censo 2022, Cámara Nacional Electoral, Wikipedia con citas verificadas",
     "actualizado": "2026-05",
-    "nota": "Datos estructurales (sistemas electorales, cantidades de bancas, etc.) son estables. Las composiciones legislativas por partido pueden tener variaciones por pases de bloques. Para consulta oficial, ver enlaces al pie de cada ficha."
+    "nota": "Datos estructurales (sistemas electorales, cantidades de bancas, etc.) son estables. Las composiciones legislativas por partido pueden tener variaciones por pases de bloques. Para consulta oficial, ver enlaces al pie de cada ficha.",
+    "cantidad_jurisdicciones": 24
   },
   "provincias": {
     "buenos-aires": {
@@ -65,9 +66,18 @@
         "Su territorio incluye al conurbano bonaerense, área urbana más densa de Argentina."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de la Provincia", "url": "https://www.gba.gob.ar" },
-        { "nombre": "Honorable Senado bonaerense", "url": "https://www.senado-ba.gov.ar" },
-        { "nombre": "Honorable Cámara de Diputados", "url": "https://www.hcdiputados-ba.gov.ar" }
+        {
+          "nombre": "Gobierno de la Provincia",
+          "url": "https://www.gba.gob.ar"
+        },
+        {
+          "nombre": "Honorable Senado bonaerense",
+          "url": "https://www.senado-ba.gov.ar"
+        },
+        {
+          "nombre": "Honorable Cámara de Diputados",
+          "url": "https://www.hcdiputados-ba.gov.ar"
+        }
       ]
     },
     "caba": {
@@ -131,8 +141,14 @@
         "Concentra la sede de los tres poderes del Estado Nacional."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de la Ciudad", "url": "https://www.buenosaires.gob.ar" },
-        { "nombre": "Legislatura porteña", "url": "https://www.legislatura.gob.ar" }
+        {
+          "nombre": "Gobierno de la Ciudad",
+          "url": "https://www.buenosaires.gob.ar"
+        },
+        {
+          "nombre": "Legislatura porteña",
+          "url": "https://www.legislatura.gob.ar"
+        }
       ]
     },
     "cordoba": {
@@ -194,8 +210,14 @@
         "Es uno de los principales polos industriales del país."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Córdoba", "url": "https://www.cba.gov.ar" },
-        { "nombre": "Legislatura provincial", "url": "https://legislaturacba.gob.ar" }
+        {
+          "nombre": "Gobierno de Córdoba",
+          "url": "https://www.cba.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://legislaturacba.gob.ar"
+        }
       ]
     },
     "mendoza": {
@@ -258,8 +280,14 @@
         "Tiene legislación propia sobre uso del agua, recurso crítico por su geografía árida."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Mendoza", "url": "https://www.mendoza.gov.ar" },
-        { "nombre": "Legislatura provincial", "url": "https://www.legislaturamendoza.gov.ar" }
+        {
+          "nombre": "Gobierno de Mendoza",
+          "url": "https://www.mendoza.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturamendoza.gov.ar"
+        }
       ]
     },
     "santa-fe": {
@@ -322,8 +350,14 @@
         "Tradicionalmente es laboratorio político: probó PASO, eliminación de listas sábana, y reformas en sistemas de elección."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Santa Fe", "url": "https://www.santafe.gov.ar" },
-        { "nombre": "Legislatura provincial", "url": "https://www.legislaturasantafe.gob.ar" }
+        {
+          "nombre": "Gobierno de Santa Fe",
+          "url": "https://www.santafe.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturasantafe.gob.ar"
+        }
       ]
     },
     "tucuman": {
@@ -385,8 +419,14 @@
         "Principal productor mundial de limón industrializado."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Tucumán", "url": "https://www.tucuman.gob.ar" },
-        { "nombre": "Legislatura provincial", "url": "https://www.legislaturadetucuman.gob.ar" }
+        {
+          "nombre": "Gobierno de Tucumán",
+          "url": "https://www.tucuman.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturadetucuman.gob.ar"
+        }
       ]
     },
     "salta": {
@@ -449,8 +489,14 @@
         "Conserva una identidad cultural fuertemente tradicional y católica."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Salta", "url": "https://www.salta.gob.ar" },
-        { "nombre": "Cámara de Diputados", "url": "https://www.diputadosalta.gob.ar" }
+        {
+          "nombre": "Gobierno de Salta",
+          "url": "https://www.salta.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.diputadosalta.gob.ar"
+        }
       ]
     },
     "tierra-del-fuego": {
@@ -515,8 +561,1122 @@
         "Su Constitución provincial es de 1991, una de las más recientes."
       ],
       "fuentes_oficiales": [
-        { "nombre": "Gobierno de Tierra del Fuego", "url": "https://www.tierradelfuego.gob.ar" },
-        { "nombre": "Legislatura provincial", "url": "https://www.legislaturatdf.gov.ar" }
+        {
+          "nombre": "Gobierno de Tierra del Fuego",
+          "url": "https://www.tierradelfuego.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturatdf.gov.ar"
+        }
+      ]
+    },
+    "catamarca": {
+      "id": "catamarca",
+      "nombre": "Catamarca",
+      "capital": "San Fernando del Valle de Catamarca",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 102602,
+      "poblacion_2022": "429.562",
+      "densidad": "4 hab/km²",
+      "ranking_poblacion": "19° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 16
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Sin límite de reelecciones (caso atípico)",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Frente de Todos / peronismo catamarqueño",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 41,
+        "camara_senadores": 16,
+        "total_bancas": 57,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del Frente de Todos / peronismo provincial. Oposiciones: La Libertad Avanza, Juntos por el Cambio."
+      },
+      "judicial": {
+        "tribunal_superior": "Corte de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Minería (litio en el 'triángulo del litio')",
+          "Olivicultura y vitivinicultura",
+          "Industria textil y servicios"
+        ],
+        "aporte_pbi_nacional": "≈ 0,5% del PBI nacional"
+      },
+      "particularidades": [
+        "Es una de las provincias con mayor potencial minero del país (litio, oro, cobre).",
+        "Tiene un sistema constitucional que permite reelecciones indefinidas del gobernador.",
+        "Su capital es la única en Argentina con nombre de cinco palabras.",
+        "Cuna de la Virgen del Valle, una de las principales devociones marianas del país."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Catamarca",
+          "url": "https://www.catamarca.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.diputadoscatamarca.gob.ar"
+        }
+      ]
+    },
+    "chaco": {
+      "id": "chaco",
+      "nombre": "Chaco",
+      "capital": "Resistencia",
+      "region": "NEA",
+      "color": "#6B8E4E",
+      "superficie_km2": 99633,
+      "poblacion_2022": "1.142.963",
+      "densidad": "11 hab/km²",
+      "ranking_poblacion": "12° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 25
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (con balotaje si nadie supera 45%)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Unión Cívica Radical",
+        "partido_color": "#b8341b",
+        "frente_actual": "Juntos por el Cambio Chaco (UCR + PRO + aliados)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 32,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del oficialismo (Juntos por el Cambio Chaco). Principal oposición: Frente Chaqueño / peronismo, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 7,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Producción algodonera (líder histórico nacional)",
+          "Ganadería y agricultura (soja, girasol)",
+          "Industria forestal (quebracho)"
+        ],
+        "aporte_pbi_nacional": "≈ 1,2% del PBI nacional"
+      },
+      "particularidades": [
+        "Su capital Resistencia es conocida como 'Ciudad de las Esculturas' (más de 600 esculturas en espacios públicos).",
+        "Tiene la mayor población indígena del país en términos relativos (qom, wichí, mocoví).",
+        "Reconoce tres lenguas oficiales junto al castellano: qom, wichí y moqoit.",
+        "Era el principal productor mundial de tanino a inicios del siglo XX."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno del Chaco",
+          "url": "https://chaco.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://chaco.gov.ar/legislatura"
+        }
+      ]
+    },
+    "chubut": {
+      "id": "chubut",
+      "nombre": "Chubut",
+      "capital": "Rawson",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 224686,
+      "poblacion_2022": "618.994",
+      "densidad": "3 hab/km²",
+      "ranking_poblacion": "17° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 15
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Propuesta Republicana (PRO)",
+        "partido_color": "#F6B40E",
+        "frente_actual": "Despierta Chubut (PRO + aliados), integrante de Provincias Unidas",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura del Chubut",
+        "total_bancas": 27,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Bloques principales: Despierta Chubut (oficialismo), peronismo / Frente de Todos, La Libertad Avanza, partidos provinciales."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Hidrocarburos (cuenca del Golfo San Jorge, una de las principales del país)",
+          "Pesca y producción de aluminio (Puerto Madryn)",
+          "Lana (rebaño ovino patagónico)"
+        ],
+        "aporte_pbi_nacional": "≈ 1,8% del PBI nacional"
+      },
+      "particularidades": [
+        "Es el segundo mayor productor de petróleo del país después de Neuquén.",
+        "Aloja una de las mayores colonias galesas fuera de Gales (en el valle del río Chubut).",
+        "Puerto Madryn es la sede de Aluar, principal productora de aluminio de Argentina.",
+        "Tiene la Península Valdés, Patrimonio Natural de la Humanidad (UNESCO)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno del Chubut",
+          "url": "https://www.chubut.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://legischubut.gov.ar"
+        }
+      ]
+    },
+    "corrientes": {
+      "id": "corrientes",
+      "nombre": "Corrientes",
+      "capital": "Corrientes",
+      "region": "NEA",
+      "color": "#6B8E4E",
+      "superficie_km2": 88199,
+      "poblacion_2022": "1.197.553",
+      "densidad": "14 hab/km²",
+      "ranking_poblacion": "10° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 25
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Unión Cívica Radical",
+        "partido_color": "#b8341b",
+        "frente_actual": "Vamos Corrientes / ECO + Cambiemos (UCR + PRO + aliados)",
+        "periodo_actual": "2025–2029",
+        "proxima_eleccion": "2029 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 30,
+        "camara_senadores": 15,
+        "total_bancas": 45,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del oficialismo radical-PRO. Oposiciones: Frente Renovador / peronismo, La Libertad Avanza, partidos provinciales."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 7,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Arroz (principal productor nacional)",
+          "Ganadería bovina y forestación",
+          "Yerba mate y citrus"
+        ],
+        "aporte_pbi_nacional": "≈ 1,1% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la única provincia donde el guaraní es lengua oficial junto al castellano (Ley 5.598/2004).",
+        "Sus elecciones provinciales siempre van desdobladas del calendario nacional.",
+        "Es el principal productor de arroz del país.",
+        "Cuenta con los Esteros del Iberá, uno de los humedales más grandes del mundo."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Corrientes",
+          "url": "https://www.corrientes.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.hcdcorrientes.gov.ar"
+        }
+      ]
+    },
+    "entre-rios": {
+      "id": "entre-rios",
+      "nombre": "Entre Ríos",
+      "capital": "Paraná",
+      "region": "Centro",
+      "color": "#74ACDF",
+      "superficie_km2": 78781,
+      "poblacion_2022": "1.385.961",
+      "densidad": "18 hab/km²",
+      "ranking_poblacion": "9° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 17
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (con PASO provinciales)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Propuesta Republicana (PRO)",
+        "partido_color": "#F6B40E",
+        "frente_actual": "Juntos por Entre Ríos (PRO + UCR + aliados)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 34,
+        "camara_senadores": 17,
+        "total_bancas": 51,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Mayoría de Juntos por Entre Ríos (oficialismo). Principal oposición: Más para Entre Ríos / peronismo, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 9,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo del Senado",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 9,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Agroindustria (soja, trigo, arroz, citrus)",
+          "Avicultura (principal productor nacional)",
+          "Turismo termal y servicios"
+        ],
+        "aporte_pbi_nacional": "≈ 2,5% del PBI nacional"
+      },
+      "particularidades": [
+        "Su nombre se debe a estar 'entre' los ríos Paraná y Uruguay.",
+        "Es el principal productor avícola del país (carne de pollo y huevos).",
+        "Tiene fronteras fluviales con dos países: Uruguay (Río Uruguay) y la provincia de Buenos Aires (Paraná).",
+        "Cuna del general Justo José de Urquiza, primer presidente constitucional argentino (1854-1860)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Entre Ríos",
+          "url": "https://www.entrerios.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.hcder.gov.ar"
+        }
+      ]
+    },
+    "formosa": {
+      "id": "formosa",
+      "nombre": "Formosa",
+      "capital": "Formosa",
+      "region": "NEA",
+      "color": "#6B8E4E",
+      "superficie_km2": 72066,
+      "poblacion_2022": "606.041",
+      "densidad": "8 hab/km²",
+      "ranking_poblacion": "18° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 9
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Sin límite de reelecciones (única provincia junto con Santa Cruz y Catamarca)",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Frente de la Victoria / peronismo formoseño",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 30,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría amplia del peronismo. Oposiciones: Juntos por el Cambio, La Libertad Avanza, partidos provinciales."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Ganadería y agricultura (algodón, arroz, banana)",
+          "Industria forestal",
+          "Sector público (principal empleador)"
+        ],
+        "aporte_pbi_nacional": "≈ 0,5% del PBI nacional"
+      },
+      "particularidades": [
+        "Su Constitución provincial habilita reelecciones indefinidas del gobernador.",
+        "Tiene frontera con Paraguay y es paso clave del Corredor Bioceánico.",
+        "Provincializada en 1955 (antes era Territorio Nacional).",
+        "Cuenta con importante población indígena (qom, wichí, pilagá)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Formosa",
+          "url": "https://www.formosa.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://legislaturaformosa.gob.ar"
+        }
+      ]
+    },
+    "jujuy": {
+      "id": "jujuy",
+      "nombre": "Jujuy",
+      "capital": "San Salvador de Jujuy",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 53219,
+      "poblacion_2022": "797.955",
+      "densidad": "15 hab/km²",
+      "ranking_poblacion": "16° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 16
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Unión Cívica Radical",
+        "partido_color": "#b8341b",
+        "frente_actual": "Frente Cambia Jujuy (UCR + PRO + aliados), integrante de Provincias Unidas",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de Jujuy",
+        "total_bancas": 48,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del oficialismo (Cambia Jujuy). Principal oposición: Frente de Todos / peronismo, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 9,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 6,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Minería (litio y otros minerales del NOA)",
+          "Agricultura (caña de azúcar, tabaco, citrus)",
+          "Turismo cultural (Quebrada de Humahuaca, Patrimonio UNESCO)"
+        ],
+        "aporte_pbi_nacional": "≈ 0,9% del PBI nacional"
+      },
+      "particularidades": [
+        "La Quebrada de Humahuaca es Patrimonio de la Humanidad por la UNESCO desde 2003.",
+        "Sancionó una reforma constitucional provincial en 2023.",
+        "Es uno de los principales productores de litio del país.",
+        "Frontera con Bolivia y Chile (paso de Jama)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Jujuy",
+          "url": "https://www.jujuy.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturajujuy.gov.ar"
+        }
+      ]
+    },
+    "la-pampa": {
+      "id": "la-pampa",
+      "nombre": "La Pampa",
+      "capital": "Santa Rosa",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 143440,
+      "poblacion_2022": "366.022",
+      "densidad": "3 hab/km²",
+      "ranking_poblacion": "20° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 22
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Frente Justicialista pampeano",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 30,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Mayoría del peronismo provincial. Oposición: Juntos por el Cambio, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo de la Cámara de Diputados",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Ganadería (vacuna principalmente)",
+          "Agricultura (girasol, trigo, soja)",
+          "Hidrocarburos (cuenca neuquina extendida)"
+        ],
+        "aporte_pbi_nacional": "≈ 0,6% del PBI nacional"
+      },
+      "particularidades": [
+        "Provincializada en 1951, junto con Chaco.",
+        "Es geográficamente parte de la región pampeana pero administrativamente integra la región patagónica.",
+        "Tiene la menor cantidad de habitantes por km² de las provincias del centro.",
+        "Cuna de los pueblos ranquel y mapuche del centro argentino."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de La Pampa",
+          "url": "https://www.lapampa.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.legislatura.lapampa.gob.ar"
+        }
+      ]
+    },
+    "la-rioja": {
+      "id": "la-rioja",
+      "nombre": "La Rioja",
+      "capital": "La Rioja",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 89680,
+      "poblacion_2022": "393.531",
+      "densidad": "4 hab/km²",
+      "ranking_poblacion": "21° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 18
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Frente de Todos / peronismo riojano",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 36,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del peronismo. Oposiciones: Juntos por el Cambio, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Tribunal Superior de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo de la Cámara de Diputados",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Olivicultura (principal productor nacional de aceite de oliva)",
+          "Minería (oro, cobre)",
+          "Vitivinicultura (zonas altas)"
+        ],
+        "aporte_pbi_nacional": "≈ 0,4% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la cuna de Facundo Quiroga, caudillo emblemático del siglo XIX.",
+        "Cuenta con el Parque Provincial Talampaya, Patrimonio de la Humanidad.",
+        "Principal productora de aceite de oliva del país.",
+        "Tiene un régimen de promoción industrial vigente desde 1979."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de La Rioja",
+          "url": "https://www.larioja.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.larioja.gob.ar/legislatura"
+        }
+      ]
+    },
+    "misiones": {
+      "id": "misiones",
+      "nombre": "Misiones",
+      "capital": "Posadas",
+      "region": "NEA",
+      "color": "#6B8E4E",
+      "superficie_km2": 29801,
+      "poblacion_2022": "1.280.960",
+      "densidad": "43 hab/km²",
+      "ranking_poblacion": "11° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 17
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Frente Renovador de la Concordia Social (FR)",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Frente Renovador de la Concordia (partido provincial peronista)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Representantes",
+        "total_bancas": 40,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría del Frente Renovador (oficialismo). Oposiciones: Juntos por el Cambio, La Libertad Avanza, partidos minoritarios."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 9,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 7,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Yerba mate (principal productor mundial)",
+          "Té y tabaco",
+          "Turismo (Cataratas del Iguazú, Patrimonio UNESCO)"
+        ],
+        "aporte_pbi_nacional": "≈ 1,3% del PBI nacional"
+      },
+      "particularidades": [
+        "Las Cataratas del Iguazú son Patrimonio Natural de la Humanidad y Una de las 7 Maravillas Naturales del Mundo.",
+        "Es el principal productor mundial de yerba mate (la planta es nativa del NEA).",
+        "Tiene fronteras con Brasil y Paraguay (triple frontera).",
+        "El Frente Renovador es un partido netamente provincial nacido en 2003."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Misiones",
+          "url": "https://www.misiones.gob.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.diputadosmisiones.gov.ar"
+        }
+      ]
+    },
+    "neuquen": {
+      "id": "neuquen",
+      "nombre": "Neuquén",
+      "capital": "Neuquén",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 94078,
+      "poblacion_2022": "726.590",
+      "densidad": "8 hab/km²",
+      "ranking_poblacion": "15° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 16
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Movimiento Popular Neuquino (MPN) / Comunidad",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Comunidad (escisión del MPN, partido provincial)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura del Neuquén",
+        "total_bancas": 35,
+        "renovacion": "Total cada 4 años",
+        "composicion_nota": "Bloques principales: Comunidad (oficialismo), Movimiento Popular Neuquino, Frente de Todos, La Libertad Avanza, Juntos por el Cambio."
+      },
+      "judicial": {
+        "tribunal_superior": "Tribunal Superior de Justicia",
+        "miembros": 5,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Hidrocarburos (Vaca Muerta, principal yacimiento no convencional)",
+          "Hidroelectricidad",
+          "Turismo (Bariloche-Patagonia norte, Villa La Angostura, San Martín de los Andes)"
+        ],
+        "aporte_pbi_nacional": "≈ 3% del PBI nacional"
+      },
+      "particularidades": [
+        "Aloja Vaca Muerta, segunda reserva mundial de shale gas y cuarta de shale oil.",
+        "Fue gobernada por el MPN durante 60 años consecutivos (1962-2023), récord nacional de hegemonía partidaria.",
+        "Es la principal productora de hidrocarburos del país en el siglo XXI.",
+        "Su capital fue planificada con criterios urbanísticos modernos a inicios del siglo XX."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno del Neuquén",
+          "url": "https://www.neuquen.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://www.legislaturaneuquen.gob.ar"
+        }
+      ]
+    },
+    "rio-negro": {
+      "id": "rio-negro",
+      "nombre": "Río Negro",
+      "capital": "Viedma",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 203013,
+      "poblacion_2022": "747.610",
+      "densidad": "4 hab/km²",
+      "ranking_poblacion": "14° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 13
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Juntos Somos Río Negro (JSRN)",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Juntos Somos Río Negro (partido provincial)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de Río Negro",
+        "total_bancas": 46,
+        "renovacion": "Total cada 4 años",
+        "composicion_nota": "Mayoría de Juntos Somos Río Negro (oficialismo). Oposiciones: Frente de Todos / peronismo, La Libertad Avanza, Juntos por el Cambio."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Fruticultura (manzanas y peras, principal productor nacional)",
+          "Hidrocarburos (parte de la cuenca neuquina)",
+          "Turismo (Bariloche, El Bolsón, Costa Atlántica)"
+        ],
+        "aporte_pbi_nacional": "≈ 1,7% del PBI nacional"
+      },
+      "particularidades": [
+        "Capital simbólicamente trasladada a Viedma en 1986 por proyecto del presidente Alfonsín (luego no se concretó).",
+        "Es el principal productor de manzanas y peras del país.",
+        "Cuenta con el principal centro turístico patagónico: San Carlos de Bariloche.",
+        "Atraviesa el país de cordillera a mar (es la única provincia patagónica con esa característica)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Río Negro",
+          "url": "https://www.rionegro.gov.ar"
+        },
+        {
+          "nombre": "Legislatura provincial",
+          "url": "https://web.legisrn.gov.ar"
+        }
+      ]
+    },
+    "san-juan": {
+      "id": "san-juan",
+      "nombre": "San Juan",
+      "capital": "San Juan",
+      "region": "Cuyo",
+      "color": "#A47551",
+      "superficie_km2": 89651,
+      "poblacion_2022": "818.234",
+      "densidad": "9 hab/km²",
+      "ranking_poblacion": "13° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 19
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (con sistema de Ley de Lemas)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Producción y Trabajo (PyT)",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Producción y Trabajo (partido provincial vinculado a Cambia San Juan / PRO + UCR)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 36,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Bloques principales: Producción y Trabajo (oficialismo), Frente de Todos / peronismo, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Corte de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio (con reválida)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 6,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Minería (oro, plata, cobre - proyectos Veladero, Pascua-Lama)",
+          "Vitivinicultura (2° productor nacional)",
+          "Olivicultura y agroindustria"
+        ],
+        "aporte_pbi_nacional": "≈ 1,1% del PBI nacional"
+      },
+      "particularidades": [
+        "Cuna de Domingo Faustino Sarmiento, principal ideólogo educativo del siglo XIX argentino.",
+        "Mantiene el sistema de Ley de Lemas para elecciones provinciales.",
+        "Es el segundo productor de vino del país después de Mendoza.",
+        "Tiene el Parque Provincial Ischigualasto (Valle de la Luna), Patrimonio UNESCO."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de San Juan",
+          "url": "https://www.sanjuan.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.legislaturasanjuan.gob.ar"
+        }
+      ]
+    },
+    "san-luis": {
+      "id": "san-luis",
+      "nombre": "San Luis",
+      "capital": "San Luis",
+      "region": "Cuyo",
+      "color": "#A47551",
+      "superficie_km2": 76748,
+      "poblacion_2022": "508.328",
+      "densidad": "7 hab/km²",
+      "ranking_poblacion": "18° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 9
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Avanzar San Luis (ASL)",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Avanzar San Luis (partido provincial cercano al PRO)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 43,
+        "camara_senadores": 9,
+        "total_bancas": 52,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría de Avanzar San Luis (oficialismo). Oposiciones: Frente de Todos / peronismo, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 7,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Industria (régimen de promoción industrial vigente desde 1982)",
+          "Ganadería y agricultura",
+          "Turismo serrano (Sierras de los Comechingones)"
+        ],
+        "aporte_pbi_nacional": "≈ 1% del PBI nacional"
+      },
+      "particularidades": [
+        "Sancionó en 2024 el fin del régimen de los Rodríguez Saá tras más de 40 años en el poder.",
+        "Tiene un régimen de promoción industrial que la transformó económicamente desde los '80.",
+        "Fue de las primeras provincias del país con conectividad gratuita por wifi público.",
+        "Cuenta con un sistema educativo provincial con currícula propia (Plan Maestro)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de San Luis",
+          "url": "https://www.sanluis.gov.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.diputadossanluis.gov.ar"
+        }
+      ]
+    },
+    "santa-cruz": {
+      "id": "santa-cruz",
+      "nombre": "Santa Cruz",
+      "capital": "Río Gallegos",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 243943,
+      "poblacion_2022": "330.345",
+      "densidad": "1 hab/km²",
+      "ranking_poblacion": "23° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 7
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Sin límite de reelecciones",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Por Santa Cruz (SER)",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "SER Santa Cruz (partido provincial, integrante de Provincias Unidas)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 24,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Bloques principales: SER (oficialismo), Frente de Todos / peronismo, La Libertad Avanza, Juntos por el Cambio."
+      },
+      "judicial": {
+        "tribunal_superior": "Tribunal Superior de Justicia",
+        "miembros": 5,
+        "designacion": "Consejo de la Magistratura + Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Hidrocarburos (cuenca austral)",
+          "Minería (oro y plata, complejos Cerro Vanguardia y otros)",
+          "Pesca y lana"
+        ],
+        "aporte_pbi_nacional": "≈ 1,2% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la segunda provincia más extensa del país, después de Buenos Aires.",
+        "Tiene la menor densidad poblacional del país (1 hab/km²).",
+        "Cuenta con el Glaciar Perito Moreno y el Parque Nacional Los Glaciares (Patrimonio UNESCO).",
+        "Tiene el cerro más alto fuera del Himalaya (el Fitz Roy / Chaltén)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Santa Cruz",
+          "url": "https://www.santacruz.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.diputadossantacruz.gob.ar"
+        }
+      ]
+    },
+    "santiago-del-estero": {
+      "id": "santiago-del-estero",
+      "nombre": "Santiago del Estero",
+      "capital": "Santiago del Estero",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 136351,
+      "poblacion_2022": "978.313",
+      "densidad": "7 hab/km²",
+      "ranking_poblacion": "14° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 27
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Frente Cívico por Santiago",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Frente Cívico por Santiago (partido provincial peronista)",
+        "periodo_actual": "2025–2029",
+        "proxima_eleccion": "2029 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Cámara de Diputados",
+        "total_bancas": 40,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Mayoría amplia del Frente Cívico (oficialismo). Oposiciones: Juntos por el Cambio, La Libertad Avanza."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 7,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Agricultura (soja, algodón, maíz)",
+          "Ganadería caprina y vacuna",
+          "Industria forestal y artesanías"
+        ],
+        "aporte_pbi_nacional": "≈ 0,8% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la ciudad más antigua del país de fundación continua (1553).",
+        "Sus elecciones siempre se desdoblan del calendario nacional.",
+        "Tiene la 'Madre de Ciudades': título histórico por su antigüedad.",
+        "Conserva fuerte tradición folklórica (cuna de la chacarera)."
+      ],
+      "fuentes_oficiales": [
+        {
+          "nombre": "Gobierno de Santiago del Estero",
+          "url": "https://www.sde.gob.ar"
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "url": "https://www.cdsdesantiago.gob.ar"
+        }
       ]
     }
   }
