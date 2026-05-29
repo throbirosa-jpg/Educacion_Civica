@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Presupuesto Nacional — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 70px; line-height: 1.1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#estado-ciudadano">El Estado y vos</a> · <span>El Presupuesto Nacional</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 05.03 · El Estado y vos</div>
+    <h1 class="page-title">El <em>Presupuesto Nacional</em></h1>
+    <p class="page-intro">Es la "ley de leyes": la norma anual que define cuánto plata puede gastar el Estado, en qué la va a gastar y de dónde la va a sacar. Sin presupuesto aprobado no hay gobierno funcionando. Esta guía recorre qué es, cómo se elabora, cómo se aprueba y por qué el debate presupuestario es uno de los momentos más importantes del año político.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#que-es"><span class="toc-num">01</span> Qué es el presupuesto</a></li>
+      <li><a href="#por-que"><span class="toc-num">02</span> Por qué es importante</a></li>
+      <li><a href="#partes"><span class="toc-num">03</span> Las dos partes</a></li>
+      <li><a href="#ciclo"><span class="toc-num">04</span> El ciclo presupuestario</a></li>
+      <li><a href="#aprobacion"><span class="toc-num">05</span> Cómo se aprueba</a></li>
+      <li><a href="#prorroga"><span class="toc-num">06</span> Si no se aprueba</a></li>
+      <li><a href="#estructura"><span class="toc-num">07</span> Cómo se estructura</a></li>
+      <li><a href="#control"><span class="toc-num">08</span> Control y transparencia</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="que-es">
+      <div class="seccion-eyebrow">— 01 / Concepto</div>
+      <h2>Qué es el <em>presupuesto nacional</em></h2>
+      <p>El Presupuesto General de la Administración Nacional, conocido simplemente como "Presupuesto Nacional" o "ley de presupuesto", es la <strong>ley anual que autoriza al Poder Ejecutivo a gastar determinada cantidad de dinero en determinadas finalidades, y estima de dónde van a salir esos recursos</strong>.</p>
+
+      <p>Es lo que en política se llama "la ley de leyes" porque cualquier política pública (educativa, sanitaria, de infraestructura, de seguridad social) necesita dinero para ejecutarse, y ese dinero solo puede gastarse si el presupuesto lo autoriza.</p>
+
+      <div class="cita-articulo">
+        Corresponde al Congreso: Fijar anualmente, conforme a las pautas establecidas en el tercer párrafo del inciso 2 de este artículo, el presupuesto general de gastos y cálculo de recursos de la administración nacional, en base al programa general de gobierno y al plan de inversiones públicas y aprobar o desechar la cuenta de inversión.
+        <div class="cita-articulo-ref">— Artículo 75 inciso 8 de la Constitución Nacional</div>
+      </div>
+
+      <h3>Las preguntas que responde el presupuesto</h3>
+      <ul>
+        <li><strong>¿Cuánto gasta el Estado?</strong> El monto total de gastos autorizados.</li>
+        <li><strong>¿En qué lo gasta?</strong> Detalle por jurisdicciones (ministerios) y por finalidades (salud, educación, seguridad, etc.).</li>
+        <li><strong>¿De dónde sale la plata?</strong> Estimación de los ingresos (impuestos, endeudamiento, etc.).</li>
+        <li><strong>¿Cuál es el resultado?</strong> Si los gastos superan los ingresos, hay déficit. Si es al revés, superávit.</li>
+        <li><strong>¿Cuánta deuda se va a tomar?</strong> Autorización para emitir bonos o tomar créditos.</li>
+      </ul>
+
+      <h3>Marco normativo</h3>
+      <p>El régimen presupuestario argentino está regulado principalmente por:</p>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículos 75 inciso 8 y 99 inciso 10.</li>
+        <li><strong>Ley 24.156 de Administración Financiera</strong> (1992): regula todo el sistema presupuestario nacional.</li>
+        <li><strong>Decretos reglamentarios</strong> que precisan procedimientos y formatos.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="por-que">
+      <div class="seccion-eyebrow">— 02 / Importancia</div>
+      <h2>Por qué es <em>tan importante</em></h2>
+      <p>El presupuesto no es solo un detalle técnico-contable: es uno de los actos políticos más significativos del año. Te explicamos por qué.</p>
+
+      <h3>El presupuesto es política</h3>
+      <p>Definir cuánto se gasta en cada área refleja las prioridades reales del gobierno. Si se dice que "la educación es prioridad" pero el presupuesto no aumenta lo educativo, la prioridad declarativa choca con la prioridad real. Por eso, leer un presupuesto es leer el plan real del gobierno.</p>
+
+      <h3>El presupuesto define la economía</h3>
+      <ul>
+        <li>Cuánto va a gastar el Estado determina su impacto en la economía.</li>
+        <li>Cuánto se endeuda afecta la sostenibilidad fiscal.</li>
+        <li>Las proyecciones (inflación, crecimiento del PBI, tipo de cambio) dan señales a empresas y mercados.</li>
+      </ul>
+
+      <h3>El presupuesto es el principal instrumento de control</h3>
+      <p>El Congreso autoriza al Poder Ejecutivo a gastar. Si gasta sin autorización o más de lo autorizado, hay responsabilidad política y legal. Es un mecanismo central de la división de poderes y de control republicano.</p>
+
+      <h3>El presupuesto afecta tu vida</h3>
+      <p>Aunque no parezca, el presupuesto define cosas concretas:</p>
+      <ul>
+        <li>Cuánto cobran los jubilados.</li>
+        <li>Cuánta plata reciben las universidades públicas.</li>
+        <li>Qué obras de infraestructura se construyen.</li>
+        <li>Cuántos vacunas se compran.</li>
+        <li>Cuánto gana cada empleado público.</li>
+        <li>Qué subsidios reciben sectores específicos.</li>
+        <li>Cuánto se invierte en defensa, seguridad o ciencia.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Una metáfora útil</div>
+        <p>Pensá en el presupuesto familiar: cuánto entra, cuánto sale, qué prioridades tenés. El presupuesto nacional funciona igual pero con miles de actividades, decenas de millones de personas y billones de pesos. Pero la lógica es la misma: ingresos, gastos, decisiones de prioridad.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="partes">
+      <div class="seccion-eyebrow">— 03 / Partes</div>
+      <h2>Las <em>dos partes</em> del presupuesto</h2>
+      <p>Todo presupuesto tiene dos componentes que se equilibran o no:</p>
+
+      <h3>Cálculo de recursos (ingresos)</h3>
+      <p>Es la estimación de cuánto va a recaudar el Estado durante el año. Incluye:</p>
+      <ul>
+        <li><strong>Recursos tributarios:</strong> impuestos nacionales (IVA, Ganancias, Bienes Personales, etc.).</li>
+        <li><strong>Recursos de seguridad social:</strong> aportes y contribuciones de empleados y empleadores.</li>
+        <li><strong>Recursos no tributarios:</strong> tasas, regalías, rentas de la propiedad.</li>
+        <li><strong>Endeudamiento:</strong> emisión de bonos, créditos internacionales.</li>
+        <li><strong>Otros:</strong> donaciones, transferencias, ingresos varios.</li>
+      </ul>
+
+      <h3>Presupuesto de gastos (egresos)</h3>
+      <p>Es la autorización para gastar. Se ordena por clasificaciones:</p>
+      <ul>
+        <li><strong>Por jurisdicción:</strong> qué se gasta en cada ministerio u organismo.</li>
+        <li><strong>Por finalidad y función:</strong> agrupado por áreas (educación, salud, defensa, etc.).</li>
+        <li><strong>Por objeto del gasto:</strong> personal, bienes de consumo, servicios, transferencias, inversiones, deuda.</li>
+        <li><strong>Por programa:</strong> agrupaciones operativas con objetivos concretos.</li>
+      </ul>
+
+      <h3>El resultado</h3>
+      <p>Comparando ingresos y gastos, surge el <strong>resultado fiscal</strong>:</p>
+      <ul>
+        <li><strong>Superávit fiscal:</strong> los ingresos superan a los gastos. Es señal de finanzas sanas.</li>
+        <li><strong>Déficit fiscal:</strong> los gastos superan a los ingresos. Hay que financiar la diferencia con endeudamiento, emisión monetaria u otras fuentes.</li>
+        <li><strong>Equilibrio fiscal:</strong> ingresos y gastos son iguales o muy parecidos.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Resultado primario vs. financiero</div>
+        <p>Hay dos formas de medir el resultado: <strong>primario</strong> (sin contar los intereses de la deuda) y <strong>financiero</strong> (contando todo, incluidos los intereses). Por ejemplo, Argentina puede tener superávit primario pero déficit financiero si los intereses de la deuda son muy altos. Es importante saber cuál de los dos números se está mirando en un debate.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="ciclo">
+      <div class="seccion-eyebrow">— 04 / Ciclo</div>
+      <h2>El <em>ciclo</em> presupuestario</h2>
+      <p>La vida de un presupuesto tiene varias etapas que se extienden a lo largo de dos años calendario.</p>
+
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">MAR-AGO</div>
+          <div class="timeline-text">
+            <strong>1. Elaboración</strong>
+            <p>El Ministerio de Economía coordina con todos los organismos del Estado la elaboración del proyecto. Cada ministerio propone sus necesidades, se debaten ajustes, se proyectan los ingresos.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">15-SEP</div>
+          <div class="timeline-text">
+            <strong>2. Presentación al Congreso</strong>
+            <p>El Poder Ejecutivo está obligado a presentar el proyecto de ley de presupuesto al Congreso antes del 15 de septiembre del año anterior al que se va a ejecutar.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">OCT-NOV</div>
+          <div class="timeline-text">
+            <strong>3. Tratamiento legislativo</strong>
+            <p>El proyecto se gira a la Comisión de Presupuesto y Hacienda de Diputados. Se debate, se modifica, se aprueba. Pasa al Senado. El Senado puede aprobarlo, modificarlo o rechazarlo.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">DIC</div>
+          <div class="timeline-text">
+            <strong>4. Sanción</strong>
+            <p>Aprobado por ambas cámaras, se promulga como ley. Idealmente antes de fin de año para que rija desde el 1 de enero del año siguiente.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">ENE-DIC</div>
+          <div class="timeline-text">
+            <strong>5. Ejecución</strong>
+            <p>El Poder Ejecutivo ejecuta el gasto durante todo el año, según lo autorizado. Los organismos disponen de las partidas asignadas.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">SIG</div>
+          <div class="timeline-text">
+            <strong>6. Cuenta de inversión</strong>
+            <p>Al año siguiente, el Ejecutivo presenta la "cuenta de inversión": rendición detallada de qué se gastó realmente y cómo. El Congreso la aprueba o rechaza.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cita-legal">
+        El cronograma legal está establecido en los artículos 24 y 26 de la Ley 24.156. El 15 de septiembre es la fecha límite constitucional de presentación al Congreso.
+      </div>
+    </section>
+
+    <section class="seccion" id="aprobacion">
+      <div class="seccion-eyebrow">— 05 / Aprobación</div>
+      <h2>Cómo se <em>aprueba</em></h2>
+      <p>El presupuesto se aprueba como cualquier ley, pero con características especiales por su importancia. El proceso pasa por las dos cámaras del Congreso con derechos de iniciativa específicos.</p>
+
+      <h3>Diputados primero</h3>
+      <p>Por mandato constitucional, los proyectos de ley sobre <strong>contribuciones y reclutamiento de tropas</strong> tienen origen en la Cámara de Diputados. Por extensión y por costumbre, el proyecto de presupuesto entra siempre primero por Diputados, donde se trata inicialmente en la Comisión de Presupuesto y Hacienda.</p>
+
+      <h3>El rol del Senado</h3>
+      <p>Una vez aprobado por Diputados, el proyecto pasa al Senado, que puede:</p>
+      <ul>
+        <li>Aprobarlo tal cual (queda sancionado).</li>
+        <li>Modificarlo (en cuyo caso vuelve a Diputados para que acepte o rechace los cambios).</li>
+        <li>Rechazarlo (caso muy infrecuente).</li>
+      </ul>
+
+      <h3>Iniciativa del Ejecutivo</h3>
+      <p>El proyecto de presupuesto solo puede presentarlo el Poder Ejecutivo. El Congreso no puede iniciar un presupuesto: solo aprobarlo, modificarlo o rechazarlo. Sin embargo, las modificaciones legislativas pueden ser muy importantes.</p>
+
+      <h3>Mayoría requerida</h3>
+      <p>Se aprueba por mayoría simple de los presentes (no requiere mayorías especiales). Esto da cierta flexibilidad pero también puede generar problemas si el oficialismo no tiene mayoría legislativa.</p>
+
+      <h3>Veto presidencial</h3>
+      <p>Aunque el presupuesto sea aprobado por el Congreso, el Presidente puede vetarlo total o parcialmente. Si el veto es total, el presupuesto vuelve al Congreso, que puede insistir con 2/3 de cada cámara. Si el veto es parcial, las partes vetadas no se aplican (salvo insistencia del Congreso por la misma vía).</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Negociación política intensa</div>
+        <p>El debate del presupuesto es uno de los momentos políticos más intensos del año. Los legisladores negocian partidas para sus provincias o áreas de interés. Los gobernadores presionan por más fondos. La oposición busca cuestionar o modificar. Es un test permanente sobre la capacidad de gobernabilidad del Ejecutivo.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="prorroga">
+      <div class="seccion-eyebrow">— 06 / Prórroga</div>
+      <h2>Si <em>no se aprueba</em>: la prórroga</h2>
+      <p>Argentina tuvo varios años en los que el Congreso no aprobó un presupuesto a tiempo. La Constitución y las leyes prevén un mecanismo de continuidad: la prórroga automática del presupuesto anterior.</p>
+
+      <h3>Cómo funciona la prórroga</h3>
+      <p>Si el Congreso no sanciona la ley de presupuesto antes del 1 de enero, el Poder Ejecutivo puede prorrogar por decreto el presupuesto del año anterior, con ajustes que se le permitan por ley. Esto se hace para evitar que el Estado se quede sin marco legal para gastar.</p>
+
+      <h3>Las críticas a la prórroga</h3>
+      <p>Aunque el mecanismo evita una crisis institucional, tiene varios problemas:</p>
+      <ul>
+        <li><strong>El Ejecutivo gana discrecionalidad:</strong> al manejar las prórrogas, decide qué actualizar y qué no. El Congreso pierde poder de control.</li>
+        <li><strong>No refleja la realidad:</strong> usar el presupuesto del año pasado en contextos inflacionarios o de cambios económicos significa que las partidas pierden sentido.</li>
+        <li><strong>Falta de debate público:</strong> el presupuesto es una oportunidad de discutir prioridades. Sin él, esa discusión no ocurre.</li>
+        <li><strong>Reasignaciones constantes:</strong> el Ejecutivo termina haciendo modificaciones por decreto durante el año, dificultando la previsibilidad.</li>
+      </ul>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">El caso reciente</div>
+        <p>Argentina vivió varios años de funcionamiento sin presupuesto aprobado a tiempo. En 2024, por ejemplo, se ejecutó con presupuesto prorrogado y reasignaciones por decreto. Esta situación, lejos de ser una excepción, se ha vuelto relativamente frecuente en las últimas décadas, lo que genera debates sobre la salud institucional del país.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="estructura">
+      <div class="seccion-eyebrow">— 07 / Estructura</div>
+      <h2>Cómo se <em>estructura</em></h2>
+      <p>Una ley de presupuesto típica tiene varias partes. Entender cómo se organiza ayuda a leerla y analizarla.</p>
+
+      <h3>El articulado</h3>
+      <p>La parte normativa: artículos que autorizan los montos totales, fijan las pautas, establecen condiciones especiales. Generalmente son 100-150 artículos.</p>
+
+      <h3>Las planillas anexas</h3>
+      <p>La parte cuantitativa: tablas con los montos detallados por:</p>
+      <ul>
+        <li>Jurisdicción (Presidencia, ministerios, organismos descentralizados, etc.).</li>
+        <li>Programa y subprograma (qué hace cada parte del Estado).</li>
+        <li>Objeto del gasto (en qué se gasta: salarios, bienes, servicios, etc.).</li>
+        <li>Función (qué finalidad cumple).</li>
+      </ul>
+
+      <h3>Las clasificaciones</h3>
+      <p>El presupuesto se clasifica de varias formas en simultáneo:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Clasificación</th><th>Qué muestra</th></tr></thead>
+        <tbody>
+          <tr><td>Institucional</td><td>Qué organismo gasta cuánto</td></tr>
+          <tr><td>Por finalidad y función</td><td>En qué áreas se invierte (salud, educación, etc.)</td></tr>
+          <tr><td>Por objeto</td><td>En qué se gasta (sueldos, materiales, deuda, etc.)</td></tr>
+          <tr><td>Económica</td><td>Si es gasto corriente o de capital, si es transferencia, etc.</td></tr>
+          <tr><td>Por fuente de financiamiento</td><td>De dónde sale la plata para cada gasto</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Anexos y mensaje</h3>
+      <p>El proyecto suele incluir un mensaje del Poder Ejecutivo donde se explica el contexto económico, las pautas usadas para las proyecciones (inflación, PBI, tipo de cambio), y los principales lineamientos políticos.</p>
+    </section>
+
+    <section class="seccion" id="control">
+      <div class="seccion-eyebrow">— 08 / Control</div>
+      <h2>Control y <em>transparencia</em></h2>
+      <p>El presupuesto no termina cuando se aprueba: durante todo el año se controla su ejecución. La transparencia presupuestaria es un derecho ciudadano fundamental.</p>
+
+      <h3>Los organismos de control</h3>
+      <ul>
+        <li><strong>Auditoría General de la Nación (AGN):</strong> organismo del Congreso, controla la ejecución del presupuesto y emite informes públicos. Es presidida por la primera minoría de Diputados.</li>
+        <li><strong>Sindicatura General de la Nación (SIGEN):</strong> control interno del Ejecutivo. Audita la administración nacional.</li>
+        <li><strong>Comisiones de Presupuesto del Congreso:</strong> seguimiento permanente de la ejecución.</li>
+        <li><strong>Tribunal de Cuentas (en algunas provincias):</strong> control externo provincial.</li>
+      </ul>
+
+      <h3>Información pública disponible</h3>
+      <p>Por la Ley 27.275 de Acceso a la Información Pública y otras normas, el presupuesto y su ejecución son información pública. Cualquier ciudadano puede:</p>
+      <ul>
+        <li>Consultar el texto completo de la ley de presupuesto vigente.</li>
+        <li>Acceder al portal de Presupuesto Abierto.</li>
+        <li>Ver la ejecución mensual y trimestral del gasto.</li>
+        <li>Consultar contrataciones específicas en COMPR.AR y el Boletín Oficial.</li>
+        <li>Pedir información específica usando la Ley de Acceso a la Información (Ley 27.275). Para más detalles ver nuestra <a href="acceso-informacion.html" style="color: var(--celeste-dark);">página dedicada</a>.</li>
+      </ul>
+
+      <h3>La cuenta de inversión</h3>
+      <p>Al final del ejercicio, el Poder Ejecutivo presenta la "cuenta de inversión": el balance real de lo que se gastó comparado con lo presupuestado. El Congreso aprueba o desecha esa cuenta. Es el cierre formal del ciclo presupuestario.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Recursos para ciudadanos</div>
+        <p>Si querés seguir el presupuesto en tiempo real, hay varios sitios oficiales útiles: <strong>presupuestoabierto.gob.ar</strong> (datos abiertos del presupuesto), <strong>argentina.gob.ar/economia</strong> (Ministerio de Economía), <strong>agn.gob.ar</strong> (Auditoría General). También hay ONGs especializadas (como CIPPEC, Fundar, ASAP) que producen análisis accesibles.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, arts. 75 inc. 8 y 99 inc. 10.</li>
+        <li><strong>Ley 24.156</strong> (1992) — Administración Financiera y Sistemas de Control del Sector Público Nacional.</li>
+        <li><strong>Oficina Nacional de Presupuesto (ONP)</strong>. <a href="https://www.argentina.gob.ar/economia/sechacienda/onp" target="_blank" rel="noopener">argentina.gob.ar/economia/sechacienda/onp</a></li>
+        <li><strong>Presupuesto Abierto</strong>. <a href="https://www.presupuestoabierto.gob.ar" target="_blank" rel="noopener">presupuestoabierto.gob.ar</a></li>
+        <li><strong>Auditoría General de la Nación</strong>. <a href="https://www.agn.gob.ar" target="_blank" rel="noopener">agn.gob.ar</a></li>
+        <li><strong>Honorable Cámara de Diputados</strong>. <a href="https://www.hcdn.gob.ar" target="_blank" rel="noopener">hcdn.gob.ar</a></li>
+        <li><strong>Honorable Senado de la Nación</strong>. <a href="https://www.senado.gob.ar" target="_blank" rel="noopener">senado.gob.ar</a></li>
+        <li><strong>Boletín Oficial</strong>. <a href="https://www.boletinoficial.gob.ar" target="_blank" rel="noopener">boletinoficial.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Para conocer los datos específicos de cada presupuesto vigente o ejecutado, consultar los portales oficiales. Esta página explica el régimen institucional, no los números de cada año. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

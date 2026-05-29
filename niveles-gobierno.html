@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los tres niveles de gobierno — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.9rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .nivel-card { background: white; border: 1px solid var(--linea); padding: 2rem; margin: 1.5rem 0; }
+  .nivel-card.nacion { border-top: 4px solid var(--celeste-dark); }
+  .nivel-card.provincial { border-top: 4px solid var(--sol-dark); }
+  .nivel-card.municipal { border-top: 4px solid var(--verde-ok); }
+  .nivel-header { display: flex; gap: 1rem; align-items: baseline; margin-bottom: 1rem; }
+  .nivel-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--tinta-soft); }
+  .nivel-titulo { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--tinta); }
+  .nivel-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; padding: 0.2rem 0.6rem; background: var(--celeste-soft); color: var(--celeste-dark); text-transform: uppercase; }
+  .nivel-card.provincial .nivel-tag { background: var(--sol-soft); color: var(--sol-dark); }
+  .nivel-card.municipal .nivel-tag { background: var(--verde-soft); color: var(--verde-ok); }
+  .nivel-card h4 { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#estado-ciudadano">El Estado y vos</a> · <span>Los tres niveles</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 05.04 · El Estado y vos</div>
+    <h1 class="page-title">Los <em>tres niveles</em> de gobierno</h1>
+    <p class="page-intro">Cuando hay un bache en tu calle, ¿quién es responsable? ¿Y si tu hijo no consigue vacante en la escuela pública? ¿Y si no llega la jubilación a tu mamá? Argentina tiene tres niveles de gobierno superpuestos: Nación, provincia y municipio. Cada uno tiene sus competencias, sus recursos y sus límites. Esta guía aclara quién hace qué.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#federalismo"><span class="toc-num">01</span> El federalismo argentino</a></li>
+      <li><a href="#niveles"><span class="toc-num">02</span> Los tres niveles</a></li>
+      <li><a href="#nacion"><span class="toc-num">03</span> El Estado nacional</a></li>
+      <li><a href="#provincia"><span class="toc-num">04</span> Los Estados provinciales</a></li>
+      <li><a href="#municipio"><span class="toc-num">05</span> Los municipios</a></li>
+      <li><a href="#competencias"><span class="toc-num">06</span> Quién hace qué</a></li>
+      <li><a href="#conflictos"><span class="toc-num">07</span> Conflictos típicos</a></li>
+      <li><a href="#ciudadano"><span class="toc-num">08</span> Vos como ciudadano</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="federalismo">
+      <div class="seccion-eyebrow">— 01 / Federalismo</div>
+      <h2>El <em>federalismo</em> argentino</h2>
+      <p>Argentina es una <strong>república federal</strong> desde la Constitución de 1853. Eso significa que el poder se reparte verticalmente entre distintos niveles de gobierno, todos con autonomía y competencias propias. No es un sistema "unitario" donde todo se decide desde la capital, ni un sistema "confederal" donde las partes pueden separarse a voluntad. Es algo intermedio: <strong>provincias autónomas asociadas voluntariamente bajo una Constitución común</strong>.</p>
+
+      <div class="cita-articulo">
+        La Nación Argentina adopta para su gobierno la forma representativa republicana federal, según la establece la presente Constitución.
+        <div class="cita-articulo-ref">— Artículo 1 de la Constitución Nacional</div>
+      </div>
+
+      <h3>Las provincias preexisten a la Nación</h3>
+      <p>Algo importante de entender: las provincias argentinas <strong>no fueron creadas por la Nación</strong>. Fue al revés: las provincias preexistentes (las que se habían formado antes, en muchos casos desde el período colonial) se unieron bajo la Constitución de 1853 para formar el Estado nacional. Por eso la Constitución habla de "facultades delegadas": las provincias delegaron ciertas competencias al gobierno federal y se quedaron con todas las demás.</p>
+
+      <div class="cita-articulo">
+        Las provincias conservan todo el poder no delegado por esta Constitución al Gobierno federal, y el que expresamente se hayan reservado por pactos especiales al tiempo de su incorporación.
+        <div class="cita-articulo-ref">— Artículo 121 de la Constitución Nacional</div>
+      </div>
+
+      <h3>El nivel municipal</h3>
+      <p>La Constitución original no hablaba de municipios. La reforma de 1994 incorporó explícitamente la autonomía municipal:</p>
+
+      <div class="cita-articulo">
+        Cada provincia dicta su propia constitución, conforme a lo dispuesto por el artículo 5° asegurando la autonomía municipal y reglando su alcance y contenido en el orden institucional, político, administrativo, económico y financiero.
+        <div class="cita-articulo-ref">— Artículo 123 de la Constitución Nacional</div>
+      </div>
+
+      <p>Es decir: cada provincia define cómo se organizan sus propios municipios, pero está obligada a garantizarles autonomía. El resultado es un sistema con muchas variaciones provinciales.</p>
+    </section>
+
+    <section class="seccion" id="niveles">
+      <div class="seccion-eyebrow">— 02 / Niveles</div>
+      <h2>Los <em>tres</em> niveles de gobierno</h2>
+      <p>El Estado argentino se organiza en tres niveles superpuestos pero distintos. Cada uno tiene autoridades electas, competencias propias e ingresos propios.</p>
+
+      <div class="nivel-card nacion">
+        <div class="nivel-header">
+          <span class="nivel-num">NIVEL 01</span>
+          <span class="nivel-tag">Nacional</span>
+        </div>
+        <h3 class="nivel-titulo">Gobierno Nacional (Federal)</h3>
+        <p>Es el Estado central, el que representa al país hacia el exterior. Su capital es la Ciudad Autónoma de Buenos Aires, donde funcionan los tres poderes nacionales: Ejecutivo (Presidente), Legislativo (Congreso) y Judicial (Corte Suprema).</p>
+        <h4>Sus principales competencias</h4>
+        <ul>
+          <li>Relaciones exteriores y representación internacional.</li>
+          <li>Defensa nacional y Fuerzas Armadas.</li>
+          <li>Moneda, política monetaria y emisión.</li>
+          <li>Comercio internacional y aduana.</li>
+          <li>Código Penal, Civil, Comercial y Procesal (los códigos de fondo).</li>
+          <li>Sistema previsional (jubilaciones y pensiones).</li>
+          <li>Salud pública nacional (hospitales nacionales).</li>
+          <li>Justicia federal (causas federales).</li>
+          <li>Política tributaria nacional.</li>
+        </ul>
+      </div>
+
+      <div class="nivel-card provincial">
+        <div class="nivel-header">
+          <span class="nivel-num">NIVEL 02</span>
+          <span class="nivel-tag">Provincial</span>
+        </div>
+        <h3 class="nivel-titulo">Gobiernos Provinciales</h3>
+        <p>Cada una de las 23 provincias + la Ciudad Autónoma de Buenos Aires tiene su propio gobierno autónomo con tres poderes propios: Ejecutivo (Gobernador), Legislativo (Legislatura provincial) y Judicial (Corte/Tribunal Superior provincial). Profundizamos sobre esto en nuestra <a href="provincias.html" style="color: var(--celeste-dark);">página dedicada a las provincias</a>.</p>
+        <h4>Sus principales competencias</h4>
+        <ul>
+          <li>Educación primaria, secundaria y terciaria (no universitaria).</li>
+          <li>Salud pública provincial (la mayoría de los hospitales).</li>
+          <li>Seguridad provincial (policías provinciales).</li>
+          <li>Justicia ordinaria (jueces que aplican el derecho común).</li>
+          <li>Registro civil y administración de personería jurídica.</li>
+          <li>Régimen municipal y organización local.</li>
+          <li>Uso del agua, minería, recursos naturales en su territorio.</li>
+          <li>Transporte y obras públicas dentro de la provincia.</li>
+          <li>Política tributaria provincial.</li>
+        </ul>
+      </div>
+
+      <div class="nivel-card municipal">
+        <div class="nivel-header">
+          <span class="nivel-num">NIVEL 03</span>
+          <span class="nivel-tag">Municipal</span>
+        </div>
+        <h3 class="nivel-titulo">Gobiernos Municipales</h3>
+        <p>Hay más de <strong>2.300 municipios</strong> en Argentina, con distintos grados de autonomía según la provincia donde se ubican. La mayoría tiene un Intendente electo y un Concejo Deliberante también electo. Es el nivel de gobierno más cercano al ciudadano.</p>
+        <h4>Sus principales competencias</h4>
+        <ul>
+          <li>Servicios urbanos básicos: alumbrado, barrido, limpieza, recolección de residuos.</li>
+          <li>Mantenimiento de calles y obras viales locales.</li>
+          <li>Plazas, parques, espacios verdes.</li>
+          <li>Tránsito y transporte público local.</li>
+          <li>Habilitaciones comerciales y de obras.</li>
+          <li>Salas de primeros auxilios y centros de salud locales.</li>
+          <li>Servicios sociales y de promoción comunitaria.</li>
+          <li>Cementerios, defensa civil, bromatología, defensa del consumidor local.</li>
+          <li>Tasas y contribuciones municipales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="nacion">
+      <div class="seccion-eyebrow">— 03 / Nación</div>
+      <h2>El <em>Estado nacional</em> en detalle</h2>
+      <p>El gobierno federal es responsable de los temas que las provincias delegaron en él. Como todo está en la Constitución, su lista de competencias es la "lista cerrada": solo puede hacer lo que la Constitución le permite. Las provincias, en cambio, pueden hacer todo lo que no delegaron expresamente.</p>
+
+      <h3>Sus tres poderes</h3>
+      <p>El gobierno federal tiene los tres poderes clásicos del Estado moderno. Profundizamos sobre ellos en <a href="poderes.html" style="color: var(--celeste-dark);">nuestra página dedicada a los poderes del Estado</a>:</p>
+      <ul>
+        <li><strong>Poder Ejecutivo:</strong> encabezado por el Presidente de la Nación, electo por voto directo cada 4 años, con la posibilidad de una reelección consecutiva.</li>
+        <li><strong>Poder Legislativo:</strong> el Congreso Nacional, bicameral, formado por la Cámara de Diputados (257 miembros) y el Senado (72 miembros, 3 por jurisdicción).</li>
+        <li><strong>Poder Judicial:</strong> encabezado por la Corte Suprema de Justicia de la Nación, con cámaras y juzgados federales en todo el país.</li>
+      </ul>
+
+      <h3>Sus principales organismos</h3>
+      <p>Más allá de los tres poderes, el Estado nacional cuenta con organismos clave:</p>
+      <ul>
+        <li><strong>ANSES:</strong> administra el sistema previsional (jubilaciones y pensiones).</li>
+        <li><strong>AFIP:</strong> recauda los impuestos nacionales.</li>
+        <li><strong>BCRA:</strong> Banco Central, regula la política monetaria y supervisa el sistema financiero.</li>
+        <li><strong>INDEC:</strong> produce las estadísticas oficiales.</li>
+        <li><strong>Ministerio Público:</strong> Fiscalía y Defensoría nacionales.</li>
+        <li><strong>Auditoría General y Sindicatura General:</strong> organismos de control.</li>
+        <li><strong>Empresas del Estado:</strong> AySA, ENARSA, Aerolíneas Argentinas, etc.</li>
+      </ul>
+
+      <h3>Qué hace por vos directamente</h3>
+      <ul>
+        <li>Te paga la jubilación o pensión (ANSES).</li>
+        <li>Cobra los impuestos nacionales (AFIP).</li>
+        <li>Te emite el DNI (RENAPER, depende del Ministerio del Interior).</li>
+        <li>Te emite el pasaporte (RENAPER).</li>
+        <li>Te otorga programas sociales nacionales (AUH, AUE, Progresar, etc.).</li>
+        <li>Te brinda cobertura médica si sos jubilado (PAMI).</li>
+        <li>Mantiene rutas y autopistas nacionales.</li>
+        <li>Defensa nacional, seguridad federal, justicia federal.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="provincia">
+      <div class="seccion-eyebrow">— 04 / Provincia</div>
+      <h2>Los <em>Estados provinciales</em></h2>
+      <p>Cada provincia es un "mini-Estado" con sus propios tres poderes, su Constitución y sus leyes. Para entender este nivel en profundidad, recomendamos visitar nuestra <a href="provincias.html" style="color: var(--celeste-dark);">página sobre provincias argentinas</a>, donde podés explorar las 24 jurisdicciones una por una.</p>
+
+      <h3>Sus tres poderes</h3>
+      <ul>
+        <li><strong>Ejecutivo:</strong> Gobernador (en CABA, Jefe de Gobierno) electo por voto directo cada 4 años. Encabeza el gabinete provincial con sus propios ministerios.</li>
+        <li><strong>Legislativo:</strong> en algunas provincias es bicameral (Diputados y Senadores provinciales), en otras es unicameral. Sanciona leyes provinciales.</li>
+        <li><strong>Judicial:</strong> cada provincia tiene su Corte Suprema o Superior Tribunal provincial, con sus propios jueces, fiscales y defensores.</li>
+      </ul>
+
+      <h3>Sus principales organismos</h3>
+      <ul>
+        <li><strong>Organismo recaudador provincial:</strong> ARBA en Buenos Aires, AGIP en CABA, DGR en otras provincias.</li>
+        <li><strong>Policía provincial:</strong> fuerza de seguridad propia de cada provincia.</li>
+        <li><strong>Dirección de escuelas:</strong> administra el sistema educativo provincial.</li>
+        <li><strong>Hospital público provincial:</strong> red de salud provincial.</li>
+        <li><strong>IPLyC o ente regulador del juego:</strong> regula los juegos de azar provinciales.</li>
+        <li><strong>Banco provincial:</strong> en provincias que tienen banco propio (Banco Provincia, Banco Ciudad, etc.).</li>
+      </ul>
+
+      <h3>Qué hace por vos directamente</h3>
+      <ul>
+        <li>Educa a tus hijos (escuelas primarias y secundarias son responsabilidad provincial).</li>
+        <li>Te atiende en hospitales provinciales.</li>
+        <li>La policía provincial te brinda seguridad.</li>
+        <li>Los jueces provinciales resuelven la mayoría de tus conflictos judiciales (separaciones, herencias, propiedad, delitos comunes).</li>
+        <li>Cobra impuestos provinciales (Ingresos Brutos, Inmobiliario, Automotor, Sellos).</li>
+        <li>Te emite la licencia de conducir (en muchas provincias).</li>
+        <li>Regula uso del agua, minería local, transporte interno.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">CABA, un caso especial</div>
+        <p>La Ciudad Autónoma de Buenos Aires tiene autonomía constitucional desde 1994 (Art. 129), pero con régimen mixto: es a la vez una jurisdicción autónoma (con su Constitución, su Legislatura, su Jefe de Gobierno) y la Capital Federal de la Argentina. Su autonomía no es exactamente igual a la de las provincias en todos los aspectos. Por ejemplo, históricamente la seguridad estuvo a cargo de la Policía Federal, aunque desde 2017 la Ciudad creó su propia Policía de la Ciudad.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="municipio">
+      <div class="seccion-eyebrow">— 05 / Municipio</div>
+      <h2>Los <em>municipios</em></h2>
+      <p>Los municipios son el nivel más cercano al ciudadano. Cuando hay un bache, una luz que no anda, un árbol caído, la basura que no recogen: el municipio es el responsable. Pero también hay grandes variaciones en cómo se organiza cada uno.</p>
+
+      <h3>Tres modelos de organización municipal</h3>
+      <p>La Constitución de 1994 obligó a las provincias a garantizar autonomía municipal, pero cada provincia interpreta y aplica eso de manera diferente:</p>
+      <ul>
+        <li><strong>Autonomía plena:</strong> los municipios dictan su propia "carta orgánica" (constitución municipal). Es el caso de Catamarca, Córdoba, Chaco, Chubut, La Rioja, Río Negro, Salta, San Juan, San Luis, Tierra del Fuego, entre otras.</li>
+        <li><strong>Autonomía limitada:</strong> los municipios se rigen por una ley provincial común sin poder dictar carta orgánica. Es el caso de Buenos Aires y algunas otras provincias.</li>
+        <li><strong>Régimen mixto:</strong> algunos municipios con autonomía plena (los más grandes) y otros sin ella.</li>
+      </ul>
+
+      <h3>Estructura típica de un municipio</h3>
+      <p>Aunque las formas varían, la mayoría de los municipios argentinos tienen:</p>
+      <ul>
+        <li><strong>Intendente</strong> (a veces llamado "Jefe Comunal" o "Presidente Municipal"): jefe del Ejecutivo municipal, electo por voto directo cada 4 años.</li>
+        <li><strong>Concejo Deliberante:</strong> órgano legislativo municipal, con concejales electos. El número varía según el tamaño del municipio.</li>
+        <li><strong>Tribunal de Faltas:</strong> tribunal municipal que resuelve infracciones (no es un juzgado de fondo).</li>
+        <li><strong>Secretarías y direcciones:</strong> que corresponden a las áreas operativas (obras públicas, hacienda, salud, cultura, etc.).</li>
+      </ul>
+
+      <h3>Qué hace por vos directamente</h3>
+      <ul>
+        <li>Recoge la basura de tu casa.</li>
+        <li>Mantiene las calles, baches y semáforos del barrio.</li>
+        <li>Cuida las plazas y espacios verdes.</li>
+        <li>Brinda alumbrado público.</li>
+        <li>Te habilita comercios y obras.</li>
+        <li>Controla el tránsito local.</li>
+        <li>Te atiende en salas de primeros auxilios y centros comunitarios.</li>
+        <li>Te cobra tasas (ABL, Seguridad e Higiene).</li>
+        <li>Brinda programas culturales, deportivos y sociales locales.</li>
+        <li>En municipios grandes: transporte público local, defensa civil, bromatología.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="competencias">
+      <div class="seccion-eyebrow">— 06 / Competencias</div>
+      <h2>Quién hace <em>qué</em>: una guía práctica</h2>
+      <p>Una de las cosas más útiles para entender el Estado argentino es saber a quién recurrir según el problema. Algunas competencias son claras, otras se superponen. Te dejamos una tabla práctica:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Tema</th><th>Responsable principal</th></tr></thead>
+        <tbody>
+          <tr><td>Jubilación / pensión</td><td>Nación (ANSES)</td></tr>
+          <tr><td>DNI / Pasaporte</td><td>Nación (RENAPER)</td></tr>
+          <tr><td>Defensa nacional</td><td>Nación</td></tr>
+          <tr><td>Aduana</td><td>Nación</td></tr>
+          <tr><td>Universidades públicas</td><td>Nación</td></tr>
+          <tr><td>Hospitales nacionales</td><td>Nación</td></tr>
+          <tr><td>Asignación Universal por Hijo (AUH)</td><td>Nación (ANSES)</td></tr>
+          <tr><td>Inflación / moneda</td><td>Nación (BCRA)</td></tr>
+          <tr><td>Comercio exterior</td><td>Nación</td></tr>
+          <tr><td>Escuelas primarias y secundarias</td><td>Provincia</td></tr>
+          <tr><td>Hospitales públicos (la mayoría)</td><td>Provincia</td></tr>
+          <tr><td>Policía / seguridad pública (la mayoría)</td><td>Provincia</td></tr>
+          <tr><td>Jueces que llevan tu divorcio o herencia</td><td>Provincia</td></tr>
+          <tr><td>Licencia de conducir</td><td>Provincia o municipio (varía)</td></tr>
+          <tr><td>Patente del auto</td><td>Provincia</td></tr>
+          <tr><td>Inmobiliario</td><td>Provincia</td></tr>
+          <tr><td>Recolección de basura</td><td>Municipio</td></tr>
+          <tr><td>Baches y mantenimiento de calles</td><td>Municipio</td></tr>
+          <tr><td>Alumbrado público</td><td>Municipio</td></tr>
+          <tr><td>Habilitación comercial</td><td>Municipio</td></tr>
+          <tr><td>Plazas y parques</td><td>Municipio</td></tr>
+          <tr><td>Tránsito y semáforos</td><td>Municipio</td></tr>
+          <tr><td>ABL</td><td>Municipio</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="seccion" id="conflictos">
+      <div class="seccion-eyebrow">— 07 / Conflictos</div>
+      <h2>Los <em>conflictos</em> típicos</h2>
+      <p>La división de competencias entre niveles parece clara en el papel, pero en la práctica hay muchos conflictos. Te contamos los más típicos para que los identifiques cuando los veas en las noticias.</p>
+
+      <h3>Conflictos por dinero</h3>
+      <p>El más común: ¿cuánto le toca a cada nivel de la recaudación tributaria? Es el conflicto eterno de la <strong>coparticipación federal</strong>. Profundizamos sobre esto en <a href="coparticipacion.html" style="color: var(--celeste-dark);">nuestra página dedicada</a>.</p>
+      <ul>
+        <li>Nación quiere quedarse con más recursos para sus propias políticas.</li>
+        <li>Provincias quieren más fondos automáticos y menos discrecionalidad nacional.</li>
+        <li>Municipios reclaman más coparticipación provincial.</li>
+      </ul>
+
+      <h3>Conflictos por servicios "compartidos"</h3>
+      <p>Hay servicios donde varios niveles intervienen y nadie sabe bien quién es responsable. Por ejemplo:</p>
+      <ul>
+        <li><strong>Salud:</strong> hospitales nacionales, provinciales y municipales. ¿Quién banca qué?</li>
+        <li><strong>Seguridad:</strong> Policía Federal, Gendarmería, policías provinciales, Policía Municipal en algunas ciudades.</li>
+        <li><strong>Justicia:</strong> federal vs. ordinaria. Cuándo le compete a uno y cuándo al otro.</li>
+        <li><strong>Transporte:</strong> subte y colectivos urbanos a CABA, trenes a Nación, otros transportes a provincias.</li>
+      </ul>
+
+      <h3>Conflictos por superposición</h3>
+      <p>A veces dos niveles regulan lo mismo en sentidos diferentes:</p>
+      <ul>
+        <li><strong>Tributos:</strong> tasas municipales que se parecen a impuestos provinciales.</li>
+        <li><strong>Medio ambiente:</strong> ley nacional, leyes provinciales, ordenanzas municipales. ¿Cuál se aplica?</li>
+        <li><strong>Defensa del consumidor:</strong> normativa nacional + organismos provinciales y municipales.</li>
+      </ul>
+
+      <h3>Conflictos por "vacíos"</h3>
+      <p>A veces nadie se hace cargo: cuando ocurre algo, los tres niveles se "tiran la pelota" y el ciudadano queda en el medio. Casos típicos: inundaciones, basurales irregulares, asentamientos urbanos sin servicios.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Cómo se resuelven</div>
+        <p>Estos conflictos se resuelven de varias maneras: por leyes (que delimitan competencias), por convenios entre niveles, por jurisprudencia (cuando la justicia define quién es responsable), o por la lucha política directa (negociaciones, pactos fiscales, presiones). El sistema federal argentino está siempre en construcción.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="ciudadano">
+      <div class="seccion-eyebrow">— 08 / Vos como ciudadano</div>
+      <h2>Vos como <em>ciudadano</em>: cómo moverte</h2>
+      <p>Conocer los tres niveles te permite ser un ciudadano más eficaz. Acá algunos consejos prácticos.</p>
+
+      <h3>Identificá a quién reclamar</h3>
+      <p>Antes de hacer un reclamo, identificá el nivel responsable usando la tabla de la sección 06. Si reclamás al lugar equivocado, te van a "tirar la pelota". Si reclamás al lugar correcto, tu probabilidad de éxito aumenta.</p>
+
+      <h3>Conocé a tus representantes</h3>
+      <p>En los tres niveles tenés representantes electos:</p>
+      <ul>
+        <li><strong>Nacional:</strong> Presidente y los diputados/senadores nacionales de tu provincia.</li>
+        <li><strong>Provincial:</strong> Gobernador y los legisladores provinciales de tu sección o departamento.</li>
+        <li><strong>Municipal:</strong> Intendente y los concejales de tu municipio.</li>
+      </ul>
+      <p>Si los conocés y sabés contactarlos, podés presentarles tus preocupaciones.</p>
+
+      <h3>Usá las herramientas a tu disposición</h3>
+      <ul>
+        <li><strong>Reclamos formales:</strong> ante el organismo competente del nivel correspondiente.</li>
+        <li><strong>Defensorías del Pueblo:</strong> existen a nivel nacional, provincial y en muchos municipios.</li>
+        <li><strong>Acceso a la información:</strong> podés pedir información a cualquier nivel (ver nuestra <a href="acceso-informacion.html" style="color: var(--celeste-dark);">guía sobre acceso a la información pública</a>).</li>
+        <li><strong>Audiencias públicas:</strong> mecanismo de participación previsto para ciertas decisiones.</li>
+        <li><strong>Acciones judiciales:</strong> amparo si tu derecho es vulnerado (ver nuestra <a href="amparo.html" style="color: var(--celeste-dark);">página sobre el amparo</a>).</li>
+        <li><strong>Voto consciente:</strong> en cada elección elegís representantes de algún nivel. Saber qué hace cada uno te permite elegir con criterio.</li>
+      </ul>
+
+      <h3>Participá en lo local</h3>
+      <p>El nivel municipal es el más accesible y donde tu participación puede tener más impacto directo. Muchos municipios tienen presupuestos participativos, audiencias públicas, espacios de consulta vecinal. Es donde "se hace política" más cerca del territorio.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Conclusión</div>
+        <p>El sistema argentino es federal, complejo y a veces frustrante. Pero también es el resultado de más de 170 años de organización republicana y democrática. Conocerlo te empodera como ciudadano: te permite identificar responsabilidades, exigir cumplimientos, votar mejor y participar de manera más efectiva en la vida pública. La democracia funciona mejor cuando los ciudadanos entienden cómo funciona el Estado.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, arts. 1, 5, 121, 122, 123, 124 (régimen federal).</li>
+        <li><strong>Ley 23.548</strong> (1988) — Coparticipación Federal de Impuestos.</li>
+        <li><strong>Ministerio del Interior</strong>. <a href="https://www.argentina.gob.ar/interior" target="_blank" rel="noopener">argentina.gob.ar/interior</a></li>
+        <li><strong>Federación Argentina de Municipios</strong>. <a href="https://www.famargentina.org.ar" target="_blank" rel="noopener">famargentina.org.ar</a></li>
+        <li><strong>Sistema Argentino de Información Jurídica (SAIJ)</strong>. <a href="https://www.saij.gob.ar" target="_blank" rel="noopener">saij.gob.ar</a></li>
+        <li><strong>Defensoría del Pueblo de la Nación</strong>. <a href="https://www.dpn.gob.ar" target="_blank" rel="noopener">dpn.gob.ar</a></li>
+        <li>Constituciones de las 23 provincias y de CABA (cada una en su sitio oficial).</li>
+        <li>Cartas orgánicas de los municipios autónomos.</li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        El régimen federal argentino tiene particularidades en cada provincia. Esta página resume el sistema general. Para detalles específicos de cada jurisdicción, consultar la constitución provincial correspondiente. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

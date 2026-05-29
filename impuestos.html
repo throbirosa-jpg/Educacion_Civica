@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para qué sirven los impuestos — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.ok { background: var(--verde-soft); border-left-color: var(--verde-ok); }
+  .destacado.ok .destacado-titulo { color: var(--verde-ok); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .impuesto-card { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1rem 0; }
+  .impuesto-card-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dotted var(--linea); padding-bottom: 0.8rem; margin-bottom: 0.8rem; }
+  .impuesto-card-nombre { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 500; }
+  .impuesto-card-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--celeste-dark); text-transform: uppercase; }
+  .impuesto-card-desc { font-size: 0.92rem; line-height: 1.6; color: var(--tinta); }
+  .pie-chart-fake { background: linear-gradient(90deg, var(--celeste-dark) 0% 50%, var(--sol-dark) 50% 75%, var(--rojo-fed) 75% 90%, var(--verde-ok) 90% 100%); height: 40px; margin: 1.5rem 0 0.5rem; border-radius: 4px; }
+  .pie-chart-legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; }
+  .pie-chart-legend > div { display: flex; align-items: center; gap: 0.4rem; }
+  .pie-chart-legend span { width: 12px; height: 12px; display: inline-block; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#estado-ciudadano">El Estado y vos</a> · <span>Impuestos</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 05.01 · El Estado y vos</div>
+    <h1 class="page-title">Para qué sirven <em>los impuestos</em></h1>
+    <p class="page-intro">Pagás impuestos todos los días, incluso sin darte cuenta. Cuando comprás una gaseosa, cuando cargás nafta, cuando recibís el sueldo, cuando pagás el ABL. Esta guía explica qué son los impuestos, qué tipos hay en Argentina, quién los cobra y a dónde va ese dinero. Sin tecnicismos contables, pero con todo lo que necesitás saber para entender el sistema tributario argentino.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#concepto"><span class="toc-num">01</span> Qué es un impuesto</a></li>
+      <li><a href="#tipos"><span class="toc-num">02</span> Tipos de impuestos</a></li>
+      <li><a href="#nacionales"><span class="toc-num">03</span> Impuestos nacionales</a></li>
+      <li><a href="#provinciales"><span class="toc-num">04</span> Impuestos provinciales</a></li>
+      <li><a href="#municipales"><span class="toc-num">05</span> Tasas municipales</a></li>
+      <li><a href="#donde-va"><span class="toc-num">06</span> A dónde va la plata</a></li>
+      <li><a href="#presion"><span class="toc-num">07</span> La presión tributaria</a></li>
+      <li><a href="#derechos"><span class="toc-num">08</span> Tus derechos como contribuyente</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="concepto">
+      <div class="seccion-eyebrow">— 01 / Qué es</div>
+      <h2>Qué es un <em>impuesto</em></h2>
+      <p>Un impuesto es una <strong>contribución obligatoria</strong> que las personas y las empresas le hacen al Estado, sin recibir nada específico a cambio en ese momento. Lo que recibimos es el funcionamiento del Estado en general: la seguridad, la justicia, la educación pública, los hospitales, las rutas, los subsidios, el sistema previsional, los empleados estatales, etc.</p>
+
+      <p>Es importante distinguir el impuesto de otras dos figuras parecidas que también pagamos:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Figura</th><th>Característica</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>Impuesto</td><td>Obligatorio, sin contraprestación directa</td><td>IVA, Ganancias, Inmobiliario</td></tr>
+          <tr><td>Tasa</td><td>Obligatorio, por un servicio específico</td><td>ABL (alumbrado, barrido, limpieza)</td></tr>
+          <tr><td>Contribución</td><td>Obligatorio, por una mejora puntual</td><td>Asfaltado, cloacas, gas</td></tr>
+        </tbody>
+      </table>
+
+      <h3>El principio constitucional</h3>
+      <p>El sistema tributario argentino se funda en cuatro principios establecidos en la Constitución:</p>
+      <ul>
+        <li><strong>Legalidad</strong> (Art. 17): no hay impuesto sin ley. Solo el Congreso puede crearlos.</li>
+        <li><strong>Igualdad</strong> (Art. 16): los impuestos deben ser iguales para todos en igualdad de condiciones.</li>
+        <li><strong>Equidad</strong> (Art. 4): los impuestos deben ser proporcionales a la capacidad económica de cada uno.</li>
+        <li><strong>No confiscatoriedad</strong> (Art. 17): el impuesto no puede ser tan alto que destruya el patrimonio del contribuyente.</li>
+      </ul>
+
+      <div class="cita-articulo">
+        El Gobierno federal provee a los gastos de la Nación con los fondos del Tesoro nacional formado del producto de derechos de importación y exportación, del de la venta o locación de tierras de propiedad nacional, de la renta de Correos, de las demás contribuciones que equitativa y proporcionalmente a la población imponga el Congreso General, y de los empréstitos y operaciones de crédito que decrete el mismo Congreso para urgencias de la Nación, o para empresas de utilidad nacional.
+        <div class="cita-articulo-ref">— Artículo 4 de la Constitución Nacional</div>
+      </div>
+    </section>
+
+    <section class="seccion" id="tipos">
+      <div class="seccion-eyebrow">— 02 / Tipos</div>
+      <h2>Los <em>tipos</em> de impuestos</h2>
+      <p>Los impuestos pueden clasificarse según distintos criterios. Estas son las clasificaciones más importantes para entender el sistema argentino.</p>
+
+      <h3>Según quién los cobra</h3>
+      <ul>
+        <li><strong>Nacionales:</strong> los cobra la AFIP (Administración Federal de Ingresos Públicos) para el Estado nacional. Ejemplos: IVA, Ganancias, Bienes Personales.</li>
+        <li><strong>Provinciales:</strong> los cobra el organismo recaudador provincial. Ejemplos: Ingresos Brutos, Sellos, Inmobiliario rural y urbano, Automotor.</li>
+        <li><strong>Municipales:</strong> generalmente son <em>tasas</em>, no impuestos en sentido estricto. Ejemplos: ABL, tasa de seguridad e higiene, tasa por inscripción de vehículos.</li>
+      </ul>
+
+      <h3>Según cómo se trasladan</h3>
+      <ul>
+        <li><strong>Directos:</strong> los paga directamente quien tiene la obligación, sin posibilidad de trasladarlo. Ejemplo: Ganancias, Bienes Personales.</li>
+        <li><strong>Indirectos:</strong> los paga formalmente una persona pero se trasladan al consumidor final. Ejemplo: IVA. Te lo cobra el comerciante pero quien efectivamente lo paga sos vos al consumir.</li>
+      </ul>
+
+      <h3>Según cuándo se cobran</h3>
+      <ul>
+        <li><strong>Sobre los ingresos:</strong> cuando ganás. Ejemplo: Ganancias, Monotributo.</li>
+        <li><strong>Sobre el patrimonio:</strong> cuando tenés algo. Ejemplo: Bienes Personales, Inmobiliario.</li>
+        <li><strong>Sobre el consumo:</strong> cuando gastás. Ejemplo: IVA, Internos.</li>
+        <li><strong>Sobre transacciones:</strong> cuando hacés operaciones. Ejemplo: Débitos y Créditos Bancarios ("impuesto al cheque"), Sellos.</li>
+      </ul>
+
+      <h3>Según la progresividad</h3>
+      <ul>
+        <li><strong>Progresivos:</strong> la tasa aumenta a medida que aumenta la base imponible. Quien gana más, paga proporcionalmente más. Ejemplo: Ganancias.</li>
+        <li><strong>Regresivos:</strong> la tasa es fija o disminuye con el aumento de la base. Quien gana menos paga proporcionalmente más en relación a su ingreso. Ejemplo: IVA.</li>
+        <li><strong>Proporcionales:</strong> la tasa es fija. Ejemplo: Bienes Personales.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="nacionales">
+      <div class="seccion-eyebrow">— 03 / Nacionales</div>
+      <h2>Los <em>impuestos nacionales</em></h2>
+      <p>Los impuestos nacionales son los más importantes en términos de recaudación. Concentran cerca del 80% del total recaudado en el país. Los administra la <strong>AFIP</strong> y son los que se distribuyen luego por coparticipación.</p>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">IVA · Impuesto al Valor Agregado</div>
+          <div class="impuesto-card-tipo">Indirecto · Sobre consumo</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Lo paga el consumidor final cuando compra. La alícuota general es del 21%, con tasas reducidas (10,5%) y aumentadas (27%) para casos específicos. Es el impuesto que más recauda Argentina. Está incluido en el precio: cuando comprás algo a $1.000, $173,55 son IVA.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Ganancias</div>
+          <div class="impuesto-card-tipo">Directo · Progresivo</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Grava las rentas (ganancias) de personas humanas y de empresas. Para personas, tiene escala progresiva: las primeras ganancias no pagan, y las tasas suben en escalones a medida que aumenta el ingreso. Las empresas pagan una tasa proporcional.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Bienes Personales</div>
+          <div class="impuesto-card-tipo">Directo · Sobre patrimonio</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Grava el patrimonio total que tenés al 31 de diciembre de cada año (inmuebles, vehículos, plazos fijos, cuentas bancarias, acciones, etc.). Existe un mínimo no imponible: por debajo de ese monto no pagás.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Monotributo</div>
+          <div class="impuesto-card-tipo">Régimen simplificado</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Régimen que unifica impuestos y aportes para pequeños contribuyentes (autónomos, profesionales independientes, comerciantes chicos). Una sola cuota mensual reemplaza Ganancias, IVA, aportes jubilatorios y obra social.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Débitos y Créditos Bancarios</div>
+          <div class="impuesto-card-tipo">Sobre transacciones</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Conocido como "impuesto al cheque". Grava cada movimiento (débito o crédito) en cuentas bancarias. La alícuota general es del 0,6% sobre cada operación. Es uno de los impuestos más criticados por su efecto distorsivo.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Combustibles</div>
+          <div class="impuesto-card-tipo">Específico</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Impuesto sobre los combustibles líquidos. Está incluido en el precio de venta de naftas y gasoil. Cada litro de nafta lleva impuestos específicos más IVA.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Aranceles aduaneros</div>
+          <div class="impuesto-card-tipo">Comercio exterior</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Derechos de importación (cuando entran productos al país) y derechos de exportación o "retenciones" (cuando salen). Estos impuestos NO son coparticipables: la totalidad va al Tesoro Nacional.
+        </div>
+      </div>
+
+      <h3>El gran ausente: aportes y contribuciones</h3>
+      <p>Los aportes jubilatorios y de obra social que descuentan del sueldo (y las contribuciones que pagan los empleadores) no son técnicamente impuestos, sino <strong>aportes al sistema de seguridad social</strong>. Tampoco son coparticipables. Van al sistema previsional y de salud.</p>
+    </section>
+
+    <section class="seccion" id="provinciales">
+      <div class="seccion-eyebrow">— 04 / Provinciales</div>
+      <h2>Los <em>impuestos provinciales</em></h2>
+      <p>Cada provincia tiene su propio sistema tributario provincial. Aunque hay diferencias entre jurisdicciones, los grandes impuestos provinciales se repiten en todas:</p>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Ingresos Brutos</div>
+          <div class="impuesto-card-tipo">Indirecto · Sobre actividad</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Es el principal impuesto de las provincias, aproximadamente el 75% de la recaudación provincial. Grava la facturación de las empresas según su actividad. Las alícuotas varían por actividad y por provincia. Como se aplica en cada etapa de la cadena, genera el efecto "cascada" que lo hace muy distorsivo y criticado.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Inmobiliario</div>
+          <div class="impuesto-card-tipo">Sobre patrimonio</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Grava la propiedad de inmuebles. Cada provincia tiene su propio régimen: inmobiliario urbano y rural, con valuaciones fiscales específicas. Lo paga el dueño del inmueble. En CABA se llama "ABL" pero técnicamente es una mezcla de tasa municipal e impuesto.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Patente Automotor</div>
+          <div class="impuesto-card-tipo">Sobre patrimonio</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Grava la propiedad de vehículos. Lo cobra la provincia (o CABA), basándose en la marca, modelo, año y valor del vehículo. Hay descuentos por pago anticipado y recargos por mora.
+        </div>
+      </div>
+
+      <div class="impuesto-card">
+        <div class="impuesto-card-header">
+          <div class="impuesto-card-nombre">Sellos</div>
+          <div class="impuesto-card-tipo">Sobre actos</div>
+        </div>
+        <div class="impuesto-card-desc">
+          Grava la celebración de contratos y otros actos jurídicos (compraventa, locación, hipoteca, etc.). Las alícuotas varían según el tipo de acto y la provincia. Algunos contratos están exentos.
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="municipales">
+      <div class="seccion-eyebrow">— 05 / Municipales</div>
+      <h2>Las <em>tasas</em> municipales</h2>
+      <p>Los municipios argentinos, a diferencia de los estados de Estados Unidos, <strong>no pueden crear impuestos en sentido técnico</strong>. Pueden establecer tasas y contribuciones por servicios efectivamente prestados. Esto se debe a que las facultades tributarias están repartidas constitucionalmente entre Nación y provincias, no entre municipios.</p>
+
+      <h3>Tasas más comunes</h3>
+      <ul>
+        <li><strong>ABL (Alumbrado, Barrido y Limpieza):</strong> en CABA y otros municipios, financia el alumbrado público, recolección de residuos y limpieza urbana.</li>
+        <li><strong>Tasa de Seguridad e Higiene:</strong> aplicada a comercios e industrias por la actividad económica en el municipio.</li>
+        <li><strong>Tasa de inscripción y patentamiento:</strong> al registrar vehículos.</li>
+        <li><strong>Tasa por habilitación comercial:</strong> al abrir un comercio.</li>
+        <li><strong>Tasa por inspección bromatológica:</strong> en locales que manejan alimentos.</li>
+      </ul>
+
+      <h3>Contribuciones por mejoras</h3>
+      <p>Cuando el municipio hace una obra que valoriza propiedades (asfaltado, cloacas, agua corriente, gas), puede cobrar a los vecinos beneficiados una "contribución por mejoras". El monto debe guardar proporción con el beneficio recibido.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Tasa vs. Impuesto: ¿por qué importa?</div>
+        <p>La diferencia técnica entre tasa e impuesto no es solo semántica: tiene consecuencias jurídicas importantes. Las tasas requieren un <strong>servicio efectivamente prestado</strong>. Si un municipio cobra "ABL" pero no presta los servicios de alumbrado, barrido o limpieza, el contribuyente puede impugnar el cobro. Hay numerosos fallos judiciales que invalidan tasas cuando no hay servicio detrás.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="donde-va">
+      <div class="seccion-eyebrow">— 06 / A dónde va</div>
+      <h2>A dónde <em>va</em> tu plata</h2>
+      <p>Esta es una pregunta legítima que se hace cualquier contribuyente. Aunque la composición exacta del gasto público cambia año a año (es lo que define la <a href="presupuesto-nacional.html" style="color: var(--celeste-dark);">Ley de Presupuesto Nacional</a>), las grandes categorías son siempre las mismas.</p>
+
+      <h3>El gasto público nacional en grandes rubros</h3>
+      <p>De forma aproximada (puede variar según el año):</p>
+
+      <div class="pie-chart-fake"></div>
+      <div class="pie-chart-legend">
+        <div><span style="background:var(--celeste-dark);"></span> Sistema previsional (~45%)</div>
+        <div><span style="background:var(--sol-dark);"></span> Transferencias a provincias (~22%)</div>
+        <div><span style="background:var(--rojo-fed);"></span> Servicios sociales (~15%)</div>
+        <div><span style="background:var(--verde-ok);"></span> Funcionamiento del Estado (~10%)</div>
+      </div>
+
+      <h3>Las grandes categorías de gasto</h3>
+      <ul>
+        <li><strong>Sistema previsional:</strong> el rubro más grande del gasto. Jubilaciones, pensiones, asignaciones, AUH.</li>
+        <li><strong>Transferencias a provincias:</strong> coparticipación federal automática y transferencias discrecionales.</li>
+        <li><strong>Servicios sociales:</strong> salud pública, educación nacional, ciencia y tecnología, cultura.</li>
+        <li><strong>Funcionamiento del Estado:</strong> salarios de empleados públicos, funcionamiento de los ministerios, fuerzas de seguridad, defensa.</li>
+        <li><strong>Servicios económicos:</strong> subsidios a tarifas (energía, transporte), promoción industrial.</li>
+        <li><strong>Servicios de deuda:</strong> intereses y vencimientos de la deuda pública.</li>
+        <li><strong>Gastos de capital:</strong> obra pública, equipamiento, infraestructura.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Importante: composición variable</div>
+        <p>La proporción que toma cada rubro del gasto varía mucho según las decisiones políticas y el contexto económico. Por ejemplo, en años de alta inflación los servicios de deuda pueden crecer mucho. En años con grandes obras públicas, los gastos de capital aumentan. Los números aproximados arriba son referenciales y pueden no reflejar el ejercicio actual.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="presion">
+      <div class="seccion-eyebrow">— 07 / Presión tributaria</div>
+      <h2>La <em>presión tributaria</em></h2>
+      <p>Se llama "presión tributaria" a la relación entre lo que recauda el Estado en impuestos y el tamaño total de la economía (Producto Bruto Interno o PBI). Es la métrica más usada para comparar sistemas tributarios entre países.</p>
+
+      <h3>El caso argentino</h3>
+      <p>Argentina tiene tradicionalmente una <strong>presión tributaria alta</strong> comparada con otros países de la región. Considerando todos los niveles de gobierno (nacional, provincial y municipal), la presión tributaria argentina ronda históricamente el 30-35% del PBI. Esto la ubica entre los países latinoamericanos con mayor carga tributaria, similar a varios países europeos pero con menor calidad de servicios públicos.</p>
+
+      <h3>Quién paga qué</h3>
+      <p>Una característica del sistema argentino es la <strong>alta proporción de impuestos indirectos</strong> (IVA, Ingresos Brutos), que son regresivos: pesan más sobre los sectores de menores ingresos en proporción a lo que ganan.</p>
+
+      <ul>
+        <li><strong>IVA:</strong> aproximadamente el 30% de la recaudación nacional.</li>
+        <li><strong>Aportes y contribuciones:</strong> aproximadamente el 25%.</li>
+        <li><strong>Ganancias:</strong> aproximadamente el 18%.</li>
+        <li><strong>Retenciones a exportaciones:</strong> variable, depende de los precios internacionales.</li>
+        <li><strong>Resto:</strong> Bienes Personales, Internos, Débitos y Créditos, etc.</li>
+      </ul>
+
+      <h3>El problema del "doble impuesto"</h3>
+      <p>Un fenómeno típico argentino es que muchas actividades sufren imposición múltiple: IVA + Ingresos Brutos + Tasas municipales. Esto genera lo que los economistas llaman "imposición en cascada", donde el impuesto se aplica sobre el impuesto, encareciendo el precio final.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">El debate del federalismo fiscal</div>
+        <p>La distribución de potestades tributarias entre Nación, provincias y municipios es uno de los grandes debates del federalismo argentino. La <a href="coparticipacion.html" style="color: var(--celeste-dark);">coparticipación federal</a> es el mecanismo que intenta resolver este balance, pero el sistema vigente desde 1988 está en permanente discusión.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="derechos">
+      <div class="seccion-eyebrow">— 08 / Tus derechos</div>
+      <h2>Tus <em>derechos</em> como contribuyente</h2>
+      <p>Aunque los impuestos son obligatorios, los contribuyentes tienen derechos que el Estado debe respetar. La AFIP, la administración tributaria federal, está obligada a cumplir un Estatuto del Contribuyente.</p>
+
+      <h3>Derechos principales</h3>
+      <ul>
+        <li><strong>Información:</strong> a recibir información clara sobre tus obligaciones tributarias, alícuotas vigentes, vencimientos.</li>
+        <li><strong>Confidencialidad:</strong> tus datos fiscales son confidenciales (secreto fiscal del Art. 101 de la Ley 11.683).</li>
+        <li><strong>Trato digno:</strong> el personal de AFIP debe atenderte con respeto y profesionalismo.</li>
+        <li><strong>Debido proceso:</strong> ante cualquier sanción o ajuste, tenés derecho a ser oído, presentar pruebas y apelar.</li>
+        <li><strong>Asesoramiento gratuito:</strong> la AFIP debe ofrecer canales de consulta gratuitos.</li>
+        <li><strong>Devoluciones:</strong> si pagaste de más, tenés derecho a recuperarlo con intereses.</li>
+        <li><strong>Defensoría del Contribuyente:</strong> existe un órgano específico para atender quejas y reclamos.</li>
+      </ul>
+
+      <h3>Cuándo podés impugnar un impuesto</h3>
+      <ul>
+        <li>Si lo cobra un organismo sin facultades tributarias (por ejemplo, un municipio queriendo cobrar un impuesto en lugar de una tasa).</li>
+        <li>Si no respeta los principios constitucionales (legalidad, igualdad, no confiscatoriedad).</li>
+        <li>Si la tasa no tiene un servicio efectivo detrás.</li>
+        <li>Si se aplica retroactivamente sin sustento legal.</li>
+        <li>Si la base de cálculo está mal determinada.</li>
+      </ul>
+
+      <h3>Vías de reclamo</h3>
+      <ul>
+        <li><strong>Recursos administrativos:</strong> en la propia AFIP o en el organismo recaudador provincial.</li>
+        <li><strong>Tribunal Fiscal de la Nación:</strong> tribunal especializado para impuestos nacionales.</li>
+        <li><strong>Justicia federal/provincial:</strong> ante tribunales ordinarios.</li>
+        <li><strong>Recurso extraordinario:</strong> ante la Corte Suprema, si hay cuestión federal.</li>
+        <li><strong>Defensoría del Contribuyente:</strong> reclamos administrativos gratuitos.</li>
+      </ul>
+
+      <div class="destacado ok">
+        <div class="destacado-titulo">Para profundizar</div>
+        <p>Si querés entender cómo se reparte la recaudación entre la Nación y las provincias, mirá nuestra guía sobre <a href="coparticipacion.html" style="color: var(--celeste-dark);">coparticipación federal</a>. Para ver cómo se asignan estos fondos cada año, mirá <a href="presupuesto-nacional.html" style="color: var(--celeste-dark);">El Presupuesto Nacional</a>.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículos 4, 16, 17, 75 incs. 1 y 2. <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 11.683</strong> — Ley de Procedimiento Tributario.</li>
+        <li><strong>Ley 23.349</strong> — Ley del Impuesto al Valor Agregado.</li>
+        <li><strong>Ley 20.628</strong> (texto ordenado) — Impuesto a las Ganancias.</li>
+        <li><strong>Ley 26.565</strong> — Régimen Simplificado para Pequeños Contribuyentes (Monotributo).</li>
+        <li><strong>Administración Federal de Ingresos Públicos (AFIP)</strong>. <a href="https://www.afip.gob.ar" target="_blank" rel="noopener">afip.gob.ar</a></li>
+        <li><strong>Ministerio de Economía</strong>. <a href="https://www.argentina.gob.ar/economia" target="_blank" rel="noopener">argentina.gob.ar/economia</a></li>
+        <li><strong>Tribunal Fiscal de la Nación</strong>. <a href="https://www.argentina.gob.ar/tribunalfiscal" target="_blank" rel="noopener">argentina.gob.ar/tribunalfiscal</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Las alícuotas, mínimos no imponibles y regímenes pueden variar por reformas legales. Para datos vigentes consultá la AFIP. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

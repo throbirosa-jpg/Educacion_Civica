@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Coparticipación Federal — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.ok { background: var(--verde-soft); border-left-color: var(--verde-ok); }
+  .destacado.ok .destacado-titulo { color: var(--verde-ok); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .bar-distribucion { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .bar-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+  .bar-label { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; min-width: 100px; text-align: right; color: var(--tinta-soft); }
+  .bar-track { flex: 1; height: 24px; background: var(--linea-soft); position: relative; border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 0.5rem; color: white; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 600; }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 90px; line-height: 1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#estado-ciudadano">El Estado y vos</a> · <span>Coparticipación</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 05.02 · El Estado y vos</div>
+    <h1 class="page-title">La <em>coparticipación</em> federal</h1>
+    <p class="page-intro">Es uno de los temas más complejos del federalismo argentino, y también uno de los más conflictivos. Cuando la Nación recauda un impuesto, ¿cuánto se queda y cuánto manda a las provincias? ¿Y cómo se reparte entre ellas? La coparticipación federal es la respuesta a esa pregunta. Esta guía explica cómo funciona, cómo evolucionó y por qué genera tantas disputas.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#concepto"><span class="toc-num">01</span> Qué es</a></li>
+      <li><a href="#historia"><span class="toc-num">02</span> Historia</a></li>
+      <li><a href="#ley-23548"><span class="toc-num">03</span> La Ley 23.548</a></li>
+      <li><a href="#primaria"><span class="toc-num">04</span> Distribución primaria</a></li>
+      <li><a href="#secundaria"><span class="toc-num">05</span> Distribución secundaria</a></li>
+      <li><a href="#impuestos-cop"><span class="toc-num">06</span> Qué se coparticipa</a></li>
+      <li><a href="#mandato-94"><span class="toc-num">07</span> El mandato del '94</a></li>
+      <li><a href="#disputas"><span class="toc-num">08</span> Las disputas actuales</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="concepto">
+      <div class="seccion-eyebrow">— 01 / Qué es</div>
+      <h2>Qué es la <em>coparticipación</em></h2>
+      <p>La coparticipación federal es un <strong>sistema de distribución de impuestos</strong> entre la Nación y las provincias. Funciona así: la AFIP recauda los impuestos nacionales y, en lugar de quedarse con todo, automáticamente envía una parte a las provincias. Cada provincia recibe un porcentaje predeterminado.</p>
+
+      <p>Es un mecanismo central del federalismo argentino. Sin coparticipación, las provincias serían financieramente débiles y dependientes de la voluntad del gobierno nacional. Con ella, tienen recursos garantizados y predecibles, lo que les da autonomía.</p>
+
+      <h3>Por qué existe</h3>
+      <p>El federalismo argentino tiene una particularidad: <strong>los impuestos más importantes (IVA, Ganancias) los cobra la Nación, no las provincias</strong>. Pero las provincias necesitan plata para funcionar (escuelas, hospitales, policía, salarios públicos). La coparticipación resuelve esa asimetría: la Nación es la "recaudadora" y las provincias "reciben su parte" del total.</p>
+
+      <p>En otras federaciones (como Estados Unidos o Alemania) cada estado/provincia recauda directamente la mayoría de sus impuestos. En Argentina, la concentración recaudatoria a nivel nacional hace que la coparticipación sea imprescindible.</p>
+
+      <h3>Las dos distribuciones</h3>
+      <p>Hay dos pasos en el sistema:</p>
+      <ul>
+        <li><strong>Distribución primaria:</strong> ¿qué porcentaje se queda la Nación y qué porcentaje va al conjunto de las provincias?</li>
+        <li><strong>Distribución secundaria:</strong> de lo que va a las provincias, ¿cómo se reparte entre las 24 jurisdicciones?</li>
+      </ul>
+
+      <p>Estos dos pasos están definidos por la Ley 23.548 de 1988, que veremos en detalle más adelante.</p>
+    </section>
+
+    <section class="seccion" id="historia">
+      <div class="seccion-eyebrow">— 02 / Historia</div>
+      <h2>Una <em>historia</em> de 90 años</h2>
+      <p>El sistema de coparticipación argentino tiene casi un siglo de existencia. Surgió como respuesta a la creciente concentración recaudatoria del Estado nacional desde los años 30.</p>
+
+      <h3>Hitos históricos</h3>
+      <table class="tabla-datos">
+        <thead><tr><th>Año</th><th>Hito</th></tr></thead>
+        <tbody>
+          <tr><td>1935</td><td>Primer sistema de coparticipación: la Nación se queda con la mayoría</td></tr>
+          <tr><td>1973</td><td>Ley 20.221: nuevo régimen, más equitativo</td></tr>
+          <tr><td>1984</td><td>Vence el régimen de 1973, queda vacío legal</td></tr>
+          <tr><td>1988</td><td>Ley 23.548: el régimen vigente hasta hoy</td></tr>
+          <tr><td>1994</td><td>Reforma constitucional: ordena sancionar nuevo régimen antes de 1996</td></tr>
+          <tr><td>2002</td><td>Ley 25.570: pequeños ajustes a la distribución</td></tr>
+          <tr><td>2015-2018</td><td>Fallos de la Corte sobre detracciones</td></tr>
+          <tr><td>2020</td><td>Conflicto entre Nación y CABA: traspaso de Policía</td></tr>
+          <tr><td>Hoy</td><td>Régimen "transitorio" que sigue vigente 38 años después</td></tr>
+        </tbody>
+      </table>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">El régimen "transitorio" que dura 38 años</div>
+        <p>La Ley 23.548 de 1988 se llamó oficialmente <strong>"Régimen Transitorio de Distribución entre la Nación y las Provincias"</strong>. La idea era que durara unos años, hasta encontrar un acuerdo mejor. Sin embargo, el "régimen transitorio" sigue vigente casi 4 décadas después, sin que el Congreso haya podido sancionar el régimen definitivo que la reforma de 1994 ordenó establecer.</p>
+      </div>
+
+      <h3>Por qué nunca se sancionó la nueva ley</h3>
+      <p>La reforma constitucional de 1994 estableció en una cláusula transitoria (la sexta) que el Congreso debía sancionar una nueva ley de coparticipación <strong>antes del fin de 1996</strong>. Hasta hoy esa ley no se ha aprobado. Las razones son fundamentalmente políticas:</p>
+      <ul>
+        <li>Cualquier nuevo régimen requiere acuerdo entre 24 gobiernos provinciales con intereses muy distintos.</li>
+        <li>Las provincias chicas defienden el statu quo que las favorece relativamente.</li>
+        <li>Las provincias grandes (Buenos Aires) cuestionan su porcentaje insuficiente.</li>
+        <li>La Nación generalmente prefiere mantener flexibilidad para transferencias discrecionales.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="ley-23548">
+      <div class="seccion-eyebrow">— 03 / La ley</div>
+      <h2>La <em>Ley 23.548</em></h2>
+      <p>Sancionada el 7 de enero de 1988 y publicada en el Boletín Oficial el 26 de enero del mismo año, la Ley 23.548 es el corazón del sistema de coparticipación argentino. Estableció el "Régimen Transitorio de Distribución entre la Nación y las Provincias" que sigue rigiendo hoy.</p>
+
+      <h3>Qué dice la ley</h3>
+      <p>La ley tiene 23 artículos. Los más importantes son:</p>
+      <ul>
+        <li><strong>Artículo 1:</strong> establece el régimen transitorio a partir del 1° de enero de 1988.</li>
+        <li><strong>Artículo 2:</strong> define la "masa de fondos coparticipables" (todos los impuestos nacionales, con excepciones).</li>
+        <li><strong>Artículo 3:</strong> establece la distribución primaria (Nación vs. provincias).</li>
+        <li><strong>Artículo 4:</strong> establece los coeficientes de distribución secundaria entre las provincias.</li>
+        <li><strong>Artículos 5 a 12:</strong> condiciones que las provincias deben cumplir para adherir al régimen.</li>
+        <li><strong>Artículo 14:</strong> Comisión Federal de Impuestos, el organismo de control.</li>
+      </ul>
+
+      <div class="cita-legal">
+        Establécese a partir del 1 de enero de 1988, el Régimen Transitorio de Distribución de Recursos Fiscales entre la Nación y las provincias, conforme a las previsiones de la presente Ley. — Art. 1 de la Ley 23.548
+      </div>
+
+      <h3>La Comisión Federal de Impuestos</h3>
+      <p>La ley creó la <strong>Comisión Federal de Impuestos (CFI)</strong>, un organismo intergubernamental compuesto por representantes de la Nación y las provincias. Su función principal es controlar el cumplimiento del régimen y resolver controversias entre las jurisdicciones. Sus decisiones son vinculantes.</p>
+    </section>
+
+    <section class="seccion" id="primaria">
+      <div class="seccion-eyebrow">— 04 / Primaria</div>
+      <h2>La distribución <em>primaria</em></h2>
+      <p>La distribución primaria responde a la pregunta: ¿qué porcentaje de la recaudación va a la Nación y qué porcentaje al conjunto de las provincias?</p>
+
+      <h3>Lo que establece la ley</h3>
+      <p>Según el artículo 3 de la Ley 23.548, la masa coparticipable se distribuye así:</p>
+
+      <div class="bar-distribucion">
+        <div class="bar-row">
+          <div class="bar-label">Nación</div>
+          <div class="bar-track"><div class="bar-fill" style="width: 42.34%; background: var(--rojo-fed);">42,34%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Provincias</div>
+          <div class="bar-track"><div class="bar-fill" style="width: 54.66%; background: var(--celeste-dark);">54,66%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Recupero relativo</div>
+          <div class="bar-track"><div class="bar-fill" style="width: 2%; background: var(--sol-dark); padding-right: 0.2rem;">2%</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">ATN</div>
+          <div class="bar-track"><div class="bar-fill" style="width: 1%; background: var(--verde-ok); padding-right: 0.2rem;">1%</div></div>
+        </div>
+      </div>
+
+      <h3>Detalle por inciso</h3>
+      <ul>
+        <li><strong>42,34% a la Nación:</strong> al Tesoro Nacional, en forma automática.</li>
+        <li><strong>54,66% a las provincias:</strong> al conjunto de las 23 provincias y CABA, según coeficientes específicos del Art. 4.</li>
+        <li><strong>2% para el "recupero relativo":</strong> distribución especial para las provincias de Buenos Aires, Chubut, Neuquén y Santa Cruz, en reconocimiento de su mayor aporte.</li>
+        <li><strong>1% al Fondo de Aportes del Tesoro Nacional (ATN):</strong> fondo que la Nación distribuye discrecionalmente entre provincias para situaciones de emergencia.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">¿Cuánto reciben efectivamente las provincias?</div>
+        <p>Sumando los porcentajes, las provincias reciben en conjunto el <strong>57,66%</strong> de la masa coparticipable (54,66% + 2% del recupero + 1% del ATN distribuido por la Nación). Es decir, las provincias y CABA reciben aproximadamente el 57% del total que se coparticipa, y la Nación se queda con el 42%.</p>
+      </div>
+
+      <h3>Otros estudios y aclaraciones</h3>
+      <p>Algunos estudios académicos calculan distribuciones primarias diferentes según incluyan o no detracciones, descuentos por servicios transferidos y otros mecanismos. Esto agrega complejidad real al sistema.</p>
+    </section>
+
+    <section class="seccion" id="secundaria">
+      <div class="seccion-eyebrow">— 05 / Secundaria</div>
+      <h2>La distribución <em>secundaria</em></h2>
+      <p>Una vez determinado cuánto va al conjunto de las provincias, hay que repartirlo entre las 24 jurisdicciones. Esto es la distribución secundaria, definida en el artículo 4 de la Ley 23.548.</p>
+
+      <h3>Los coeficientes fijos</h3>
+      <p>A diferencia de sistemas más sofisticados que actualizan periódicamente los porcentajes según población o necesidad, Argentina utiliza <strong>coeficientes fijos</strong> establecidos en la ley de 1988. Estos porcentajes no se han modificado en 38 años.</p>
+
+      <h3>Algunos ejemplos de coeficientes</h3>
+      <p>De cada $100 que se reparten entre las provincias, le tocan aproximadamente:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Provincia</th><th>% aproximado (Ley 23.548)</th></tr></thead>
+        <tbody>
+          <tr><td>Buenos Aires</td><td>21,72%</td></tr>
+          <tr><td>Santa Fe</td><td>9,28%</td></tr>
+          <tr><td>Córdoba</td><td>9,22%</td></tr>
+          <tr><td>Entre Ríos</td><td>4,86%</td></tr>
+          <tr><td>Mendoza</td><td>4,27%</td></tr>
+          <tr><td>Chaco</td><td>4,98%</td></tr>
+          <tr><td>Tucumán</td><td>4,80%</td></tr>
+          <tr><td>Santiago del Estero</td><td>4,15%</td></tr>
+          <tr><td>San Juan</td><td>3,55%</td></tr>
+          <tr><td>Salta</td><td>3,98%</td></tr>
+          <tr><td>San Luis</td><td>2,26%</td></tr>
+          <tr><td>Otras provincias y CABA</td><td>El resto, hasta sumar 100%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">El desequilibrio Buenos Aires</div>
+        <p>El caso más estudiado es el de la provincia de Buenos Aires. Aporta aproximadamente el 40% de la masa coparticipable (por su población y actividad económica) pero recibe alrededor del 22%. Es decir, "subsidia" a las provincias más chicas. Por eso muchos gobernadores bonaerenses han reclamado un cambio en los coeficientes, sin éxito hasta ahora.</p>
+      </div>
+
+      <h3>Lo que NO está en la ley</h3>
+      <p>La ley fija coeficientes pero no explica claramente cómo se determinaron. La Ley 20.221 de 1973 (anterior) sí definía criterios objetivos (población, brecha de desarrollo, densidad). Los coeficientes de la 23.548 son producto de una negociación política de 1987-1988 que congeló porcentajes pero no quedó un fundamento metodológico detrás. Es uno de los puntos más criticados del régimen actual.</p>
+    </section>
+
+    <section class="seccion" id="impuestos-cop">
+      <div class="seccion-eyebrow">— 06 / Qué se coparticipa</div>
+      <h2>Qué impuestos se <em>coparticipan</em></h2>
+      <p>La regla general es que <strong>todos los impuestos nacionales se coparticipan</strong>. Pero hay excepciones importantes que cambian mucho la masa real que llega a las provincias.</p>
+
+      <h3>Impuestos coparticipables</h3>
+      <p>Los principales son:</p>
+      <ul>
+        <li><strong>IVA</strong></li>
+        <li><strong>Ganancias</strong></li>
+        <li><strong>Bienes Personales</strong></li>
+        <li><strong>Internos</strong></li>
+        <li><strong>Monotributo</strong> (parte del componente impositivo)</li>
+        <li><strong>Combustibles</strong> (parte)</li>
+      </ul>
+
+      <h3>Impuestos NO coparticipables</h3>
+      <p>Estos quedan íntegramente para la Nación o tienen otros destinos:</p>
+      <ul>
+        <li><strong>Aranceles aduaneros (importación y exportación):</strong> son derechos previstos en el Art. 4 de la CN. NO se coparticipan; van íntegramente a la Nación.</li>
+        <li><strong>Retenciones a las exportaciones:</strong> técnicamente son derechos de exportación, NO coparticipables.</li>
+        <li><strong>Aportes y contribuciones a la seguridad social:</strong> van al sistema previsional.</li>
+        <li><strong>Impuestos con asignación específica:</strong> tienen destino fijado por ley (ej: parte del IVA va al financiamiento de programas específicos).</li>
+        <li><strong>Débitos y Créditos Bancarios:</strong> tiene reparto especial: parte va a ANSeS, parte se coparticipa.</li>
+      </ul>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Las retenciones, un tema sensible</div>
+        <p>Las retenciones a las exportaciones (especialmente las de soja, históricamente las más altas) son uno de los impuestos más recaudatorios del país en momentos de altos precios internacionales. Como NO se coparticipan, generan tensiones con las provincias agrícolas, que producen lo gravado pero no reciben la parte correspondiente. En 2009 se creó el "Fondo Federal Solidario" para coparticipar el 30% de las retenciones a la soja, pero fue derogado posteriormente.</p>
+      </div>
+
+      <h3>La "torta" en porcentajes</h3>
+      <p>Una de las distorsiones del sistema actual es que la Nación, al concentrar impuestos no coparticipables (especialmente retenciones), ha aumentado su participación efectiva en la recaudación total. Lo que técnicamente es "57% para provincias" del total recaudado por AFIP, en la práctica es muchísimo menos.</p>
+    </section>
+
+    <section class="seccion" id="mandato-94">
+      <div class="seccion-eyebrow">— 07 / El mandato del '94</div>
+      <h2>El <em>mandato</em> incumplido</h2>
+      <p>La reforma constitucional de 1994 introdujo cambios importantes en el sistema de coparticipación. El artículo 75 inciso 2 (junto con la cláusula transitoria sexta) elevó la coparticipación a rango constitucional y definió cómo debía ser el nuevo régimen.</p>
+
+      <h3>Lo que la Constitución de 1994 estableció</h3>
+      <p>El nuevo régimen de coparticipación, según la Constitución, debe:</p>
+      <ul>
+        <li><strong>Ser una "ley convenio":</strong> con la Cámara de Senadores como cámara de origen.</li>
+        <li><strong>Tener mayoría calificada:</strong> aprobación con la mayoría absoluta de la totalidad de los miembros de cada cámara.</li>
+        <li><strong>Ser aprobada por las provincias:</strong> cada provincia debe ratificarla individualmente para adherir.</li>
+        <li><strong>No alterar competencias en perjuicio de las provincias.</strong></li>
+        <li><strong>Garantizar la "automaticidad" de las transferencias.</strong></li>
+        <li><strong>Basarse en criterios objetivos:</strong> población, equidad, solidaridad, desarrollo equilibrado.</li>
+        <li><strong>Establecer un órgano fiscal federal de control.</strong></li>
+      </ul>
+
+      <div class="cita-articulo">
+        Una ley convenio, sobre la base de acuerdos entre la Nación y las provincias, instituirá regímenes de coparticipación de estas contribuciones, garantizando la automaticidad en la remisión de los fondos. La distribución entre la Nación, las provincias y la ciudad de Buenos Aires y entre éstas, se efectuará en relación directa a las competencias, servicios y funciones de cada una de ellas contemplando criterios objetivos de reparto; será equitativa, solidaria y dará prioridad al logro de un grado equivalente de desarrollo, calidad de vida e igualdad de oportunidades en todo el territorio nacional.
+        <div class="cita-articulo-ref">— Artículo 75, inciso 2 de la Constitución Nacional</div>
+      </div>
+
+      <h3>El plazo y su incumplimiento</h3>
+      <p>La cláusula transitoria sexta de la Constitución ordenaba al Congreso sancionar el nuevo régimen <strong>antes de la finalización del año 1996</strong>. Pasaron casi tres décadas y la ley nunca se sancionó. El régimen "transitorio" de 1988 sigue rigiendo en violación al mandato constitucional.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">¿Inconstitucionalidad por omisión?</div>
+        <p>Existe debate doctrinario sobre si el incumplimiento del Congreso configura una "inconstitucionalidad por omisión". La Corte Suprema, sin declarar inconstitucional el régimen vigente, ha dictado fallos sobre detracciones específicas: en 2015 ordenó devolver fondos detraídos por la Nación a las provincias de Santa Fe, Córdoba y San Luis. Estos fallos demuestran que el sistema actual tiene problemas legales serios.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="disputas">
+      <div class="seccion-eyebrow">— 08 / Disputas</div>
+      <h2>Las <em>disputas</em> actuales</h2>
+      <p>La coparticipación es uno de los temas más conflictivos del federalismo argentino. Las tensiones se mantienen activas y a veces se intensifican según el momento político.</p>
+
+      <h3>Tensiones recurrentes</h3>
+      <ul>
+        <li><strong>Provincias chicas vs. grandes:</strong> los coeficientes favorecen relativamente a provincias chicas en términos per cápita. Las grandes piden reformas.</li>
+        <li><strong>Nación vs. provincias:</strong> los gobiernos nacionales tienden a aumentar transferencias discrecionales (no automáticas) para tener mayor influencia política.</li>
+        <li><strong>CABA y los recursos transferidos:</strong> el conflicto entre el gobierno de CABA y la Nación por el traspaso de la Policía Federal generó modificaciones en los coeficientes que actualmente se litigan.</li>
+        <li><strong>Detracciones y fondos específicos:</strong> la Nación a veces detrae montos de la masa coparticipable para destinarlos a fondos específicos, lo que reduce la transferencia automática.</li>
+      </ul>
+
+      <h3>El caso Santa Fe, Córdoba y San Luis (2015)</h3>
+      <p>La Corte Suprema falló a favor de estas tres provincias, ordenando a la Nación devolver los porcentajes detraídos de su coparticipación durante años. Fue un fallo histórico que mostró los límites del manejo discrecional de la Nación sobre los fondos coparticipables.</p>
+
+      <h3>El conflicto CABA (2020)</h3>
+      <p>Mediante el Decreto 735/2020, el Gobierno nacional redujo el porcentaje de coparticipación de CABA. La Ciudad recurrió a la Corte Suprema, que dictó una medida cautelar a favor de CABA. El conflicto sigue en disputa, con cambios sucesivos según las administraciones.</p>
+
+      <h3>Propuestas de reforma</h3>
+      <p>A lo largo de los años se presentaron numerosos proyectos para una nueva ley de coparticipación. Las principales líneas de reforma incluyen:</p>
+      <ul>
+        <li><strong>Criterios objetivos:</strong> usar parámetros como población, NBI, brecha de desarrollo, en lugar de coeficientes fijos.</li>
+        <li><strong>Distribución más progresiva:</strong> dar más a provincias con mayores necesidades sociales.</li>
+        <li><strong>Coparticipar las retenciones</strong> u otros impuestos hoy excluidos.</li>
+        <li><strong>Mayor automaticidad y menor discrecionalidad nacional.</strong></li>
+        <li><strong>Devolución de potestades tributarias a las provincias</strong> para reducir la dependencia de la coparticipación.</li>
+      </ul>
+
+      <div class="destacado ok">
+        <div class="destacado-titulo">Para profundizar</div>
+        <p>La coparticipación se entiende mejor cuando se la relaciona con los <a href="impuestos.html" style="color: var(--celeste-dark);">impuestos</a> que se recaudan y con el <a href="presupuesto-nacional.html" style="color: var(--celeste-dark);">Presupuesto Nacional</a> que asigna los gastos. Para entender los <a href="niveles-gobierno.html" style="color: var(--celeste-dark);">tres niveles de gobierno</a> involucrados, mirá nuestra guía dedicada.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículo 75 inciso 2 y cláusula transitoria sexta. <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 23.548</strong> (1988) — Régimen Transitorio de Distribución entre Nación y Provincias. <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/21108/norma.htm" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Ley 25.570</strong> (2002) — Modificación al esquema de distribución.</li>
+        <li><strong>Comisión Federal de Impuestos (CFI)</strong>. <a href="https://www.cfi.gov.ar" target="_blank" rel="noopener">cfi.gov.ar</a></li>
+        <li><strong>Ministerio de Economía</strong>. <a href="https://www.argentina.gob.ar/economia" target="_blank" rel="noopener">argentina.gob.ar/economia</a></li>
+        <li><strong>Honorable Cámara de Diputados — Información Parlamentaria</strong>. <a href="https://www.hcdn.gob.ar" target="_blank" rel="noopener">hcdn.gob.ar</a></li>
+        <li><strong>Fallos Santa Fe, Córdoba, San Luis (2015)</strong> — Corte Suprema de Justicia de la Nación.</li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Los porcentajes que figuran en esta página corresponden a los coeficientes establecidos en la Ley 23.548. La aplicación efectiva puede variar por detracciones, fondos específicos y otros mecanismos. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
