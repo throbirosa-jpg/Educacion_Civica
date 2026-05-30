@@ -716,6 +716,9 @@
     transition: all 0.2s;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: var(--tinta);
+    display: block;
   }
   .prov-chip::before {
     content: '';
@@ -723,10 +726,15 @@
     left: 0; top: 0; bottom: 0;
     width: 3px;
     background: var(--celeste);
+    transition: width 0.2s ease;
   }
   .prov-chip:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px -10px rgba(26, 26, 46, 0.15);
+    border-color: var(--celeste);
+  }
+  .prov-chip:hover::before {
+    width: 5px;
   }
   .prov-chip.caba::before { background: var(--sol); }
   .prov-chip.ba::before { background: var(--celeste-dark); }
@@ -997,30 +1005,30 @@
       </div>
     </div>
     <div class="provincias-grid">
-      <div class="prov-chip caba">CABA</div>
-      <div class="prov-chip ba">Buenos Aires</div>
-      <div class="prov-chip">Catamarca</div>
-      <div class="prov-chip">Chaco</div>
-      <div class="prov-chip">Chubut</div>
-      <div class="prov-chip cba">Córdoba</div>
-      <div class="prov-chip">Corrientes</div>
-      <div class="prov-chip">Entre Ríos</div>
-      <div class="prov-chip">Formosa</div>
-      <div class="prov-chip">Jujuy</div>
-      <div class="prov-chip">La Pampa</div>
-      <div class="prov-chip">La Rioja</div>
-      <div class="prov-chip">Mendoza</div>
-      <div class="prov-chip">Misiones</div>
-      <div class="prov-chip">Neuquén</div>
-      <div class="prov-chip">Río Negro</div>
-      <div class="prov-chip">Salta</div>
-      <div class="prov-chip">San Juan</div>
-      <div class="prov-chip">San Luis</div>
-      <div class="prov-chip">Santa Cruz</div>
-      <div class="prov-chip">Santa Fe</div>
-      <div class="prov-chip">Santiago del Estero</div>
-      <div class="prov-chip">Tierra del Fuego</div>
-      <div class="prov-chip">Tucumán</div>
+      <a href="provincias.html?id=caba" class="prov-chip caba">CABA</a>
+      <a href="provincias.html?id=buenos-aires" class="prov-chip ba">Buenos Aires</a>
+      <a href="provincias.html?id=catamarca" class="prov-chip">Catamarca</a>
+      <a href="provincias.html?id=chaco" class="prov-chip">Chaco</a>
+      <a href="provincias.html?id=chubut" class="prov-chip">Chubut</a>
+      <a href="provincias.html?id=cordoba" class="prov-chip cba">Córdoba</a>
+      <a href="provincias.html?id=corrientes" class="prov-chip">Corrientes</a>
+      <a href="provincias.html?id=entre-rios" class="prov-chip">Entre Ríos</a>
+      <a href="provincias.html?id=formosa" class="prov-chip">Formosa</a>
+      <a href="provincias.html?id=jujuy" class="prov-chip">Jujuy</a>
+      <a href="provincias.html?id=la-pampa" class="prov-chip">La Pampa</a>
+      <a href="provincias.html?id=la-rioja" class="prov-chip">La Rioja</a>
+      <a href="provincias.html?id=mendoza" class="prov-chip">Mendoza</a>
+      <a href="provincias.html?id=misiones" class="prov-chip">Misiones</a>
+      <a href="provincias.html?id=neuquen" class="prov-chip">Neuquén</a>
+      <a href="provincias.html?id=rio-negro" class="prov-chip">Río Negro</a>
+      <a href="provincias.html?id=salta" class="prov-chip">Salta</a>
+      <a href="provincias.html?id=san-juan" class="prov-chip">San Juan</a>
+      <a href="provincias.html?id=san-luis" class="prov-chip">San Luis</a>
+      <a href="provincias.html?id=santa-cruz" class="prov-chip">Santa Cruz</a>
+      <a href="provincias.html?id=santa-fe" class="prov-chip">Santa Fe</a>
+      <a href="provincias.html?id=santiago-del-estero" class="prov-chip">Santiago del Estero</a>
+      <a href="provincias.html?id=tierra-del-fuego" class="prov-chip">Tierra del Fuego</a>
+      <a href="provincias.html?id=tucuman" class="prov-chip">Tucumán</a>
     </div>
   </div>
 </section>

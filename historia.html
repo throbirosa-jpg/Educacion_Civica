@@ -3,992 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historia Institucional — Educación Cívica</title>
+<title>Historia institucional — Educación Cívica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --celeste: #74ACDF;
-    --celeste-dark: #5a8fc0;
-    --celeste-soft: #e8f2fb;
-    --sol: #F6B40E;
-    --sol-dark: #d99a00;
-    --crema: #FBF7F0;
-    --tinta: #1a1a2e;
-    --tinta-soft: #4a4a5e;
-    --linea: #d8d4cc;
-    --rojo-fed: #b8341b;
-    --verde-hist: #1f4a3d;
-    --verde-hist-soft: #2d6553;
-    --papel: #f4ede0;
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter Tight', sans-serif;
-    background: var(--papel);
-    color: var(--tinta);
-    line-height: 1.6;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
 
-  /* ========== NAV ========== */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--verde-hist);
-    color: var(--crema);
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .nav-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 800;
-    font-size: 1.3rem;
-    letter-spacing: -0.02em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--crema);
-    text-decoration: none;
-  }
-  .logo-dot {
-    width: 11px;
-    height: 11px;
-    background: var(--sol);
-    border-radius: 50%;
-  }
-  .nav-context {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    color: rgba(251,247,240,0.6);
-    text-transform: uppercase;
-  }
-  .nav-user {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.85rem;
-  }
-  .premium-tag {
-    background: var(--sol);
-    color: var(--tinta);
-    padding: 0.25rem 0.6rem;
-    border-radius: 100px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-  }
+  /* Banner premium */
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
 
-  /* ========== HEADER ========== */
-  .archive-header {
-    background: var(--verde-hist);
-    color: var(--crema);
-    padding: 4rem 2rem 5rem;
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 5rem 2rem 4rem;
+    border-bottom: 1px solid var(--linea);
     position: relative;
     overflow: hidden;
   }
-  .archive-header::before {
+  .page-header::before {
     content: '';
     position: absolute;
-    top: -100px; right: -100px;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(246,180,14,0.12), transparent 70%);
-    pointer-events: none;
+    top: 0;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--premium) 0%, transparent 70%);
+    opacity: 0.08;
+    border-radius: 50%;
   }
-  .header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-    align-items: end;
-    position: relative;
+  .page-header-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.5rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.2rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  /* Contenedor principal */
+  .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+  /* Sección de explicación */
+  .intro-section { margin-bottom: 4rem; }
+  .intro-section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--tinta);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
-  .header-eyebrow {
+  .intro-section h2 em { font-style: italic; color: var(--premium-dark); }
+  .intro-section p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--tinta);
+    margin-bottom: 1rem;
+    max-width: 720px;
+  }
+  .intro-section p strong { font-weight: 600; }
+
+  /* Caja informativa de "qué encontrarás" */
+  .qué-encontraras {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 4px solid var(--premium);
+    padding: 2rem 2.2rem;
+    margin: 2.5rem 0;
+  }
+  .qué-encontraras h3 {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
-    color: var(--sol);
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    color: var(--premium-dark);
     margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
   }
-  .header-eyebrow::before {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background: var(--sol);
+  .qué-encontraras ul {
+    list-style: none;
+    padding: 0;
   }
-  .archive-header h1 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.5rem;
-  }
-  .archive-header h1 em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    color: var(--sol);
-    font-weight: 400;
-  }
-  .archive-header p {
-    font-size: 1.1rem;
-    color: rgba(251,247,240,0.8);
-    max-width: 600px;
-  }
-  .header-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .h-stat-box {
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 1.25rem;
-    background: rgba(0,0,0,0.15);
-  }
-  .h-stat-num {
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    color: var(--sol);
-    line-height: 1;
-    font-weight: 500;
-  }
-  .h-stat-label {
-    font-size: 0.8rem;
-    color: rgba(251,247,240,0.6);
-    margin-top: 0.5rem;
-  }
-
-  /* ========== CONTROLS ========== */
-  .controls {
-    background: var(--crema);
-    border-bottom: 1px solid var(--linea);
-    padding: 1.5rem 2rem;
-    position: sticky;
-    top: 64px;
-    z-index: 90;
-  }
-  .controls-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .view-tabs {
-    display: flex;
-    gap: 0.5rem;
-    background: white;
-    padding: 0.3rem;
-    border: 1px solid var(--linea);
-    border-radius: 100px;
-  }
-  .view-tab {
-    padding: 0.5rem 1.2rem;
-    border-radius: 100px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--tinta-soft);
-    transition: all 0.2s;
-  }
-  .view-tab.active {
-    background: var(--verde-hist);
-    color: var(--crema);
-  }
-  .search-bar {
-    flex: 1;
-    max-width: 400px;
+  .qué-encontraras li {
+    padding: 0.6rem 0 0.6rem 1.8rem;
     position: relative;
-  }
-  .search-bar input {
-    width: 100%;
-    padding: 0.7rem 1rem 0.7rem 2.5rem;
-    border: 1px solid var(--linea);
-    background: white;
-    border-radius: 100px;
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
     color: var(--tinta);
+    border-bottom: 1px dotted var(--linea);
   }
-  .search-bar input:focus {
-    outline: none;
-    border-color: var(--verde-hist);
-  }
-  .search-bar::before {
-    content: '⌕';
+  .qué-encontraras li:last-child { border-bottom: none; }
+  .qué-encontraras li::before {
+    content: '→';
     position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--tinta-soft);
-    font-size: 1rem;
-  }
-  .filter-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background: white;
-    border: 1px solid var(--linea);
-    padding: 0.5rem 0.9rem;
-    border-radius: 100px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.05em;
+    left: 0;
+    color: var(--premium);
+    font-weight: 600;
   }
 
-  /* ========== ERAS BAR ========== */
-  .eras-bar {
-    background: var(--papel);
-    padding: 2rem 2rem 0;
-  }
-  .eras-bar-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  .eras-bar-title {
+  /* Sección de contenido disponible */
+  .contenido-disponible-titulo {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--tinta-soft);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: 1rem;
-  }
-  .eras-strip {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    background: var(--linea);
-    border: 1px solid var(--linea);
-  }
-  .era-block {
-    background: white;
-    padding: 1rem 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    position: relative;
-  }
-  .era-block:hover { background: var(--celeste-soft); }
-  .era-block.current {
-    background: var(--verde-hist);
-    color: var(--crema);
-  }
-  .era-block-year {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
     color: var(--tinta-soft);
-    letter-spacing: 0.08em;
-    margin-bottom: 0.4rem;
-  }
-  .era-block.current .era-block-year { color: var(--sol); }
-  .era-block-name {
-    font-family: 'Fraunces', serif;
-    font-size: 0.92rem;
-    font-weight: 500;
-    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--linea);
   }
 
-  /* ========== TIMELINE ========== */
-  .timeline-section {
-    padding: 4rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  .era-intro {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid var(--verde-hist);
+  /* Grid de páginas premium */
+  .premium-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    align-items: end;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
-  .era-intro-left .era-period {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    color: var(--verde-hist);
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5rem;
-  }
-  .era-intro-left h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: -0.025em;
-  }
-  .era-intro-left h2 em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    color: var(--verde-hist);
-  }
-  .era-intro-right {
-    font-size: 1.05rem;
-    color: var(--tinta-soft);
-    max-width: 600px;
+  @media (min-width: 700px) {
+    .premium-grid { grid-template-columns: 1fr 1fr; }
   }
 
-  /* ========== PRESIDENCY CARDS ========== */
-  .timeline-track {
-    position: relative;
-  }
-  .timeline-track::before {
-    content: '';
-    position: absolute;
-    left: 50px;
-    top: 20px;
-    bottom: 20px;
-    width: 2px;
-    background: var(--verde-hist);
-    opacity: 0.2;
-  }
-  .presidency {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
-  }
-  .pres-marker {
-    text-align: left;
-    padding-top: 1.5rem;
-    position: relative;
-  }
-  .pres-marker::after {
-    content: '';
-    position: absolute;
-    left: 44px;
-    top: 28px;
-    width: 14px;
-    height: 14px;
-    background: var(--sol);
-    border: 3px solid var(--papel);
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px var(--verde-hist);
-    z-index: 2;
-  }
-  .pres-year {
-    font-family: 'Fraunces', serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--verde-hist);
-    line-height: 1;
-  }
-  .pres-duration {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--tinta-soft);
-    margin-top: 0.4rem;
-    letter-spacing: 0.05em;
-  }
-  .pres-card {
+  .premium-card {
     background: white;
     border: 1px solid var(--linea);
     padding: 2rem;
-    position: relative;
-    transition: box-shadow 0.3s;
-  }
-  .pres-card:hover {
-    box-shadow: 0 20px 50px -25px rgba(26, 26, 46, 0.2);
-  }
-  .pres-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed var(--linea);
-  }
-  .pres-name {
-    font-family: 'Fraunces', serif;
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 0.3rem;
-  }
-  .pres-party {
-    font-size: 0.85rem;
-    color: var(--tinta-soft);
-  }
-  .pres-tag {
-    background: var(--celeste-soft);
-    color: var(--celeste-dark);
-    padding: 0.3rem 0.7rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    border-radius: 2px;
-  }
-  .pres-tag.constitucional { background: #e6f4ee; color: #1f6b4a; }
-  .pres-tag.facto { background: #f8e6e3; color: #b8341b; }
-  .pres-tag.interino { background: #fdf3e0; color: #a0750c; }
-
-  .pres-poderes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  .pres-poder {
-    border-left: 3px solid var(--celeste);
-    padding-left: 1rem;
-  }
-  .pres-poder.legi { border-color: var(--sol); }
-  .pres-poder.jud { border-color: var(--rojo-fed); }
-  .pres-poder-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--tinta-soft);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  .pres-poder-content {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-  .pres-poder-content strong {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.2rem;
-  }
-  .pres-poder-content .muted {
-    color: var(--tinta-soft);
-    font-size: 0.78rem;
-  }
-
-  .pres-context {
-    background: var(--papel);
-    padding: 1rem 1.25rem;
-    border-left: 3px solid var(--verde-hist);
-    margin-top: 1rem;
-    font-size: 0.88rem;
-    color: var(--tinta-soft);
-    line-height: 1.5;
-  }
-  .pres-context strong {
-    color: var(--tinta);
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-  }
-  .pres-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.25rem;
-    padding-top: 1rem;
-    border-top: 1px dashed var(--linea);
-    font-size: 0.82rem;
-    flex-wrap: wrap;
-  }
-  .pres-action {
-    color: var(--verde-hist);
     text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .pres-action::after {
-    content: '→';
-    transition: transform 0.2s;
-  }
-  .pres-action:hover::after { transform: translateX(3px); }
-  .pres-sources {
-    margin-left: auto;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--tinta-soft);
-  }
-
-  /* ========== PAYWALL ========== */
-  .paywall {
-    position: relative;
-    margin-top: 2rem;
-  }
-  .paywall-blur {
-    filter: blur(4px);
-    opacity: 0.5;
-    pointer-events: none;
-  }
-  .paywall-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 0%, var(--papel) 50%);
+    color: inherit;
+    transition: all 0.3s ease;
     display: flex;
-    align-items: end;
-    justify-content: center;
-    padding: 4rem 2rem 2rem;
+    flex-direction: column;
+    min-height: 280px;
+    position: relative;
   }
-  .paywall-card {
-    background: white;
-    border: 2px solid var(--verde-hist);
-    padding: 2.5rem;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 30px 60px -20px rgba(26, 26, 46, 0.25);
+  .premium-card.disponible:hover {
+    border-color: var(--premium);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(107, 79, 140, 0.12);
   }
-  .paywall-card .premium-tag {
-    margin-bottom: 1rem;
-    display: inline-block;
+  .premium-card.proximamente {
+    background: var(--crema-warm);
+    border-style: dashed;
+    cursor: default;
   }
-  .paywall-card h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+  .premium-card.proximamente:hover {
+    transform: none;
   }
-  .paywall-card p {
-    color: var(--tinta-soft);
-    margin-bottom: 2rem;
-  }
-  .paywall-plans {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .plan-mini {
-    border: 1px solid var(--linea);
-    padding: 1rem 0.5rem;
-    text-align: center;
-  }
-  .plan-mini.featured { border-color: var(--verde-hist); border-width: 2px; }
-  .plan-name {
+  .premium-card-num {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--tinta-soft);
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+    color: var(--premium-dark);
+    margin-bottom: 0.8rem;
   }
-  .plan-price {
+  .premium-card.proximamente .premium-card-num {
+    color: var(--tinta-soft);
+  }
+  .premium-card-titulo {
     font-family: 'Fraunces', serif;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
+    color: var(--tinta);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
   }
-  .plan-period {
-    font-size: 0.7rem;
+  .premium-card-titulo em { font-style: italic; color: var(--premium-dark); }
+  .premium-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--tinta-soft);
+    margin-bottom: 1.2rem;
+    flex: 1;
+  }
+  .premium-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .premium-card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.6rem;
+    background: var(--premium-soft);
+    color: var(--premium-dark);
+    text-transform: uppercase;
+  }
+  .premium-card-tag.estado-pronto {
+    background: var(--sol-soft);
+    color: var(--sol-dark);
+  }
+  .premium-card-tag.estado-disponible {
+    background: var(--verde-soft);
+    color: var(--verde-ok);
+  }
+  .premium-card-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    color: var(--premium-dark);
+    font-weight: 600;
+    margin-top: auto;
+  }
+  .premium-card.proximamente .premium-card-link {
     color: var(--tinta-soft);
   }
-  .btn-suscribir {
-    background: var(--verde-hist);
-    color: var(--crema);
-    padding: 1rem 2.5rem;
-    border-radius: 100px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-  }
 
-  /* ========== FOOTER ========== */
-  footer {
+  /* Caja de modelo premium */
+  .modelo-premium {
     background: var(--tinta);
     color: var(--crema);
-    padding: 3rem 2rem 2rem;
-    text-align: center;
-    font-size: 0.85rem;
+    padding: 3rem;
+    margin: 4rem 0 2rem;
   }
-  footer p { color: rgba(251,247,240,0.6); }
+  .modelo-premium-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sol);
+    margin-bottom: 1rem;
+  }
+  .modelo-premium h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .modelo-premium h3 em { color: var(--sol); font-style: italic; }
+  .modelo-premium p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    opacity: 0.92;
+    max-width: 720px;
+  }
+  .modelo-premium p strong { color: var(--sol); font-weight: 600; }
 
-  @media (max-width: 900px) {
-    .header-inner { grid-template-columns: 1fr; }
-    .era-intro { grid-template-columns: 1fr; }
-    .eras-strip { grid-template-columns: repeat(3, 1fr); }
-    .presidency { grid-template-columns: 1fr; }
-    .pres-poderes { grid-template-columns: 1fr; }
-    .timeline-track::before { display: none; }
-    .pres-marker::after { display: none; }
-    .paywall-plans { grid-template-columns: 1fr; }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+
+  @media (max-width: 700px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .modelo-premium { padding: 2rem; }
+    .premium-card { min-height: auto; }
   }
 </style>
 </head>
 <body>
 
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-dot"></span>
-      Educación Cívica
-    </a>
-    <div class="nav-context">Archivo histórico · 1853–2026</div>
-    <div class="nav-user">
-      <span class="premium-tag">★ PREMIUM</span>
-      <span>Hola, [usuario]</span>
-    </div>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Historia institucional</span></div>
   </div>
 </nav>
 
-<header class="archive-header">
-  <div class="header-inner">
-    <div>
-      <div class="header-eyebrow">Archivo navegable</div>
-      <h1>173 años de <em>historia institucional</em></h1>
-      <p>Desde la sanción de la Constitución Nacional en 1853 hasta hoy. Todos los presidentes, congresos, cortes y elecciones, documentados y citados.</p>
-    </div>
-    <div class="header-stats">
-      <div class="h-stat-box">
-        <div class="h-stat-num">53</div>
-        <div class="h-stat-label">Presidentes registrados</div>
-      </div>
-      <div class="h-stat-box">
-        <div class="h-stat-num">7</div>
-        <div class="h-stat-label">Reformas constitucionales</div>
-      </div>
-      <div class="h-stat-box">
-        <div class="h-stat-num">100+</div>
-        <div class="h-stat-label">Elecciones nacionales</div>
-      </div>
-      <div class="h-stat-box">
-        <div class="h-stat-num">1.200+</div>
-        <div class="h-stat-label">Fuentes citadas</div>
-      </div>
-    </div>
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 07 · Sección premium</div>
+    <h1 class="page-title">Historia <em>institucional</em></h1>
+    <p class="page-intro">La Argentina de hoy es producto de <strong>170 años de historia constitucional</strong>: reformas, instituciones que evolucionaron, leyes que cambiaron el rumbo del país. Esta sección recorre esa historia con profundidad, sin nombres propios, con citas a fuentes oficiales y bibliografía académica. Es la mirada de largo plazo que ayuda a entender por qué Argentina es como es.</p>
   </div>
 </header>
 
-<div class="controls">
-  <div class="controls-inner">
-    <div class="view-tabs">
-      <div class="view-tab active">Cronológico</div>
-      <div class="view-tab">Por presidente</div>
-      <div class="view-tab">Por era</div>
-      <div class="view-tab">Elecciones</div>
+<div class="container">
+
+  <section class="intro-section">
+    <h2>Por qué <em>importa</em> la historia institucional</h2>
+    <p>Cuando se debate sobre el balotaje, la coparticipación federal, la autonomía de CABA o los derechos laborales, no se está hablando de inventos recientes: cada uno de esos temas tiene una larga historia constitucional. Conocer esa historia <strong>cambia cualquier debate del presente</strong>: lo enriquece, lo contextualiza, lo vuelve más profundo.</p>
+    <p>Esta sección está pensada para quien quiere ir más allá de la coyuntura. Para docentes que necesitan material riguroso. Para estudiantes que preparan exámenes. Para periodistas que buscan profundidad histórica. Para ciudadanos que quieren entender de dónde vienen las instituciones que rigen su vida.</p>
+
+    <div class="qué-encontraras">
+      <h3>— Qué vas a encontrar acá</h3>
+      <ul>
+        <li>Cada una de las siete reformas constitucionales argentinas, analizadas en su contexto histórico y con su vigencia actual.</li>
+        <li>Líneas de tiempo institucionales que conectan hitos políticos, jurídicos y sociales.</li>
+        <li>La evolución de cada institución a lo largo de las décadas: Congreso, Corte Suprema, Presidencia, federalismo.</li>
+        <li>Documentos históricos clave, comentados y contextualizados.</li>
+        <li>Bibliografía académica para profundizar (Bidart Campos, Sabsay, Gelli, entre otros).</li>
+        <li>Sin nombres propios, sin grieta, sin agendas: solo instituciones, normas y procesos.</li>
+      </ul>
     </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Buscar presidente, ley, fallo, año...">
+  </section>
+
+  <section>
+    <div class="contenido-disponible-titulo">— Contenido disponible</div>
+
+    <div class="premium-grid">
+
+      <a href="reformas-constitucionales.html" class="premium-card disponible">
+        <div class="premium-card-num">07.01</div>
+        <h3 class="premium-card-titulo">Las siete <em>reformas</em> constitucionales</h3>
+        <p class="premium-card-desc">Desde la Constitución de 1853 hasta la reforma de 1994. Cada modificación con su contexto histórico, sus debates y su vigencia actual. Incluye la reforma derogada de 1949 y el Estatuto de 1972.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-disponible">Disponible</span>
+          <span class="premium-card-tag">9 secciones</span>
+          <span class="premium-card-tag">Bibliografía académica</span>
+        </div>
+        <span class="premium-card-link">Leer la entrega completa →</span>
+      </a>
+
+      <div class="premium-card proximamente">
+        <div class="premium-card-num">07.02</div>
+        <h3 class="premium-card-titulo">Línea histórica <em>institucional</em></h3>
+        <p class="premium-card-desc">Cronología visual navegable desde 1853 a hoy. Hitos políticos, normativos e institucionales. Gobiernos democráticos vs. gobiernos de facto. Leyes clave de cada época.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-pronto">Próximamente</span>
+        </div>
+        <span class="premium-card-link">En desarrollo</span>
+      </div>
+
+      <div class="premium-card proximamente">
+        <div class="premium-card-num">07.03</div>
+        <h3 class="premium-card-titulo">El <em>Congreso</em> argentino a lo largo del tiempo</h3>
+        <p class="premium-card-desc">Composición histórica de Diputados y Senadores. Sistemas electorales que rigieron en cada época. Sesiones extraordinarias célebres. Cómo cambió el rol del Congreso.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-pronto">Próximamente</span>
+        </div>
+        <span class="premium-card-link">En desarrollo</span>
+      </div>
+
+      <div class="premium-card proximamente">
+        <div class="premium-card-num">07.04</div>
+        <h3 class="premium-card-titulo">La <em>Corte Suprema</em> y los fallos que cambiaron el país</h3>
+        <p class="premium-card-desc">Composición histórica de la Corte. Casos emblemáticos: Siri, Kot, Halabi, Verbitsky, y otros fallos que marcaron jurisprudencia. Cómo evolucionó el control de constitucionalidad.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-pronto">Próximamente</span>
+        </div>
+        <span class="premium-card-link">En desarrollo</span>
+      </div>
+
+      <div class="premium-card proximamente">
+        <div class="premium-card-num">07.05</div>
+        <h3 class="premium-card-titulo">El <em>federalismo</em> argentino en perspectiva histórica</h3>
+        <p class="premium-card-desc">De las provincias preexistentes a la Nación. La organización federal a lo largo del tiempo. Pactos preexistentes, coparticipación, autonomía municipal. Disputas históricas Nación-provincias.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-pronto">Próximamente</span>
+        </div>
+        <span class="premium-card-link">En desarrollo</span>
+      </div>
+
+      <div class="premium-card proximamente">
+        <div class="premium-card-num">07.06</div>
+        <h3 class="premium-card-titulo">Documentos <em>fundacionales</em> comentados</h3>
+        <p class="premium-card-desc">El Pacto Federal de 1831. El Acuerdo de San Nicolás. El Pacto de San José de Flores. La Ley Sáenz Peña. La Ley de Coparticipación original. Cada uno con contexto y vigencia.</p>
+        <div class="premium-card-tags">
+          <span class="premium-card-tag estado-pronto">Próximamente</span>
+        </div>
+        <span class="premium-card-link">En desarrollo</span>
+      </div>
+
     </div>
-    <div class="filter-chip">↓ EXPORTAR DATOS</div>
-  </div>
+  </section>
+
+  <section class="modelo-premium">
+    <div class="modelo-premium-eyebrow">— Sobre el modelo premium</div>
+    <h3>Por qué este contenido es <em>diferente</em></h3>
+    <p>El contenido educativo básico del sitio es y será siempre <strong>gratuito y abierto</strong>: los poderes del Estado, las provincias, el sistema electoral, los derechos fundamentales. Esa es la base que toda persona en Argentina debería tener al alcance.</p>
+    <p>Esta sección de Historia es diferente: requiere un trabajo de investigación, análisis histórico y bibliografía especializada que va más allá del contenido cívico básico. Es el tipo de material que normalmente se encuentra solo en libros académicos o cursos universitarios.</p>
+    <p>Durante el período de prueba, <strong>todo el contenido premium es gratuito</strong>. Cuando el modelo de suscripción se active, los lectores actuales tendrán acceso preferencial. Mientras tanto, podés explorar todo, compartirlo y darnos feedback sobre qué temas te gustaría ver desarrollados.</p>
+  </section>
+
 </div>
-
-<div class="eras-bar">
-  <div class="eras-bar-inner">
-    <div class="eras-bar-title">Navegá por era histórica</div>
-    <div class="eras-strip">
-      <div class="era-block current">
-        <div class="era-block-year">1853 — 1880</div>
-        <div class="era-block-name">Organización Nacional</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1880 — 1916</div>
-        <div class="era-block-name">República Conservadora</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1916 — 1930</div>
-        <div class="era-block-name">Radicalismo</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1930 — 1943</div>
-        <div class="era-block-name">Década Infame</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1943 — 1983</div>
-        <div class="era-block-name">Inestabilidad</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1983 — 1994</div>
-        <div class="era-block-name">Retorno democrático</div>
-      </div>
-      <div class="era-block">
-        <div class="era-block-year">1994 — 2026</div>
-        <div class="era-block-name">Era contemporánea</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="timeline-section">
-  <div class="era-intro">
-    <div class="era-intro-left">
-      <div class="era-period">— ERA 01 · 1853 – 1880</div>
-      <h2>La <em>Organización Nacional</em></h2>
-    </div>
-    <div class="era-intro-right">
-      El período en el que Argentina deja atrás las guerras civiles y se consolida como nación moderna. Se sanciona la Constitución, se federaliza Buenos Aires, y comienzan las primeras presidencias constitucionales bajo un sistema de sufragio masculino restringido.
-    </div>
-  </div>
-
-  <div class="timeline-track">
-
-    <!-- Urquiza -->
-    <div class="presidency">
-      <div class="pres-marker">
-        <div class="pres-year">1854</div>
-        <div class="pres-duration">— 6 AÑOS</div>
-      </div>
-      <div class="pres-card">
-        <div class="pres-header">
-          <div>
-            <div class="pres-name">Justo José de Urquiza</div>
-            <div class="pres-party">Partido Federal · Confederación Argentina</div>
-          </div>
-          <div class="pres-tag constitucional">CONSTITUCIONAL</div>
-        </div>
-
-        <div class="pres-poderes">
-          <div class="pres-poder">
-            <div class="pres-poder-label">Ejecutivo</div>
-            <div class="pres-poder-content">
-              <strong>Presidente</strong>
-              Justo José de Urquiza
-              <div class="muted">Vice: Salvador María del Carril</div>
-            </div>
-          </div>
-          <div class="pres-poder legi">
-            <div class="pres-poder-label">Legislativo</div>
-            <div class="pres-poder-content">
-              <strong>Congreso de Paraná</strong>
-              Senado y Diputados
-              <div class="muted">Capital: Paraná (Buenos Aires fuera)</div>
-            </div>
-          </div>
-          <div class="pres-poder jud">
-            <div class="pres-poder-label">Judicial</div>
-            <div class="pres-poder-content">
-              <strong>Corte Suprema</strong>
-              Aún sin instalar
-              <div class="muted">Se instalará en 1863</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pres-context">
-          <strong>Contexto histórico.</strong> Primera presidencia bajo la Constitución de 1853. Buenos Aires se mantiene separada como Estado autónomo hasta 1860. La capital provisional es Paraná. Es el inicio de la organización institucional del país.
-        </div>
-
-        <div class="pres-actions">
-          <a href="#" class="pres-action">Ver gabinete completo</a>
-          <a href="#" class="pres-action">Leyes sancionadas</a>
-          <a href="#" class="pres-action">Elección 1853</a>
-          <span class="pres-sources">7 fuentes citadas</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Derqui -->
-    <div class="presidency">
-      <div class="pres-marker">
-        <div class="pres-year">1860</div>
-        <div class="pres-duration">— 1 AÑO</div>
-      </div>
-      <div class="pres-card">
-        <div class="pres-header">
-          <div>
-            <div class="pres-name">Santiago Derqui</div>
-            <div class="pres-party">Partido Federal · Confederación Argentina</div>
-          </div>
-          <div class="pres-tag constitucional">CONSTITUCIONAL</div>
-        </div>
-
-        <div class="pres-poderes">
-          <div class="pres-poder">
-            <div class="pres-poder-label">Ejecutivo</div>
-            <div class="pres-poder-content">
-              <strong>Presidente</strong>
-              Santiago Derqui
-              <div class="muted">Vice: Juan Esteban Pedernera</div>
-            </div>
-          </div>
-          <div class="pres-poder legi">
-            <div class="pres-poder-label">Legislativo</div>
-            <div class="pres-poder-content">
-              <strong>Congreso Nacional</strong>
-              Reforma constitucional 1860
-              <div class="muted">Buenos Aires se reincorpora</div>
-            </div>
-          </div>
-          <div class="pres-poder jud">
-            <div class="pres-poder-label">Judicial</div>
-            <div class="pres-poder-content">
-              <strong>Corte Suprema</strong>
-              Aún sin instalar
-              <div class="muted">Pendiente desde 1853</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pres-context">
-          <strong>Reforma de 1860.</strong> Se modifica la Constitución para incorporar a Buenos Aires. Derqui renuncia tras la batalla de Pavón. Buenos Aires bajo Mitre toma el control nacional.
-        </div>
-
-        <div class="pres-actions">
-          <a href="#" class="pres-action">Ver gabinete completo</a>
-          <a href="#" class="pres-action">Reforma constitucional</a>
-          <span class="pres-sources">5 fuentes citadas</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mitre -->
-    <div class="presidency">
-      <div class="pres-marker">
-        <div class="pres-year">1862</div>
-        <div class="pres-duration">— 6 AÑOS</div>
-      </div>
-      <div class="pres-card">
-        <div class="pres-header">
-          <div>
-            <div class="pres-name">Bartolomé Mitre</div>
-            <div class="pres-party">Partido Liberal</div>
-          </div>
-          <div class="pres-tag constitucional">CONSTITUCIONAL</div>
-        </div>
-
-        <div class="pres-poderes">
-          <div class="pres-poder">
-            <div class="pres-poder-label">Ejecutivo</div>
-            <div class="pres-poder-content">
-              <strong>Presidente</strong>
-              Bartolomé Mitre
-              <div class="muted">Vice: Marcos Paz</div>
-            </div>
-          </div>
-          <div class="pres-poder legi">
-            <div class="pres-poder-label">Legislativo</div>
-            <div class="pres-poder-content">
-              <strong>Congreso Nacional</strong>
-              Bicameral consolidado
-              <div class="muted">Sede: Buenos Aires</div>
-            </div>
-          </div>
-          <div class="pres-poder jud">
-            <div class="pres-poder-label">Judicial</div>
-            <div class="pres-poder-content">
-              <strong>Corte Suprema</strong>
-              Instalada en 1863
-              <div class="muted">Primer presidente: Francisco de las Carreras</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pres-context">
-          <strong>Instalación de la Corte Suprema.</strong> Por primera vez los tres poderes funcionan según el diseño constitucional. Guerra de la Triple Alianza (1865-1870). Comienza el modelo de país agroexportador.
-        </div>
-
-        <div class="pres-actions">
-          <a href="#" class="pres-action">Ver gabinete completo</a>
-          <a href="#" class="pres-action">Leyes sancionadas</a>
-          <a href="#" class="pres-action">Primera Corte Suprema</a>
-          <span class="pres-sources">12 fuentes citadas</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sarmiento (with paywall preview) -->
-    <div class="paywall">
-      <div class="paywall-blur">
-        <div class="presidency">
-          <div class="pres-marker">
-            <div class="pres-year">1868</div>
-            <div class="pres-duration">— 6 AÑOS</div>
-          </div>
-          <div class="pres-card">
-            <div class="pres-header">
-              <div>
-                <div class="pres-name">Domingo F. Sarmiento</div>
-                <div class="pres-party">Partido Liberal</div>
-              </div>
-              <div class="pres-tag constitucional">CONSTITUCIONAL</div>
-            </div>
-            <div class="pres-poderes">
-              <div class="pres-poder">
-                <div class="pres-poder-label">Ejecutivo</div>
-                <div class="pres-poder-content">
-                  <strong>Presidente</strong>
-                  Domingo F. Sarmiento
-                  <div class="muted">Vice: Adolfo Alsina</div>
-                </div>
-              </div>
-              <div class="pres-poder legi">
-                <div class="pres-poder-label">Legislativo</div>
-                <div class="pres-poder-content">
-                  <strong>Congreso Nacional</strong>
-                  Mayoría liberal
-                </div>
-              </div>
-              <div class="pres-poder jud">
-                <div class="pres-poder-label">Judicial</div>
-                <div class="pres-poder-content">
-                  <strong>Corte Suprema</strong>
-                  Continúa formación 1863
-                </div>
-              </div>
-            </div>
-            <div class="pres-context">
-              <strong>Modernización educativa.</strong> Ley de educación común. Censo Nacional 1869...
-            </div>
-          </div>
-        </div>
-
-        <div class="presidency">
-          <div class="pres-marker">
-            <div class="pres-year">1874</div>
-            <div class="pres-duration">— 6 AÑOS</div>
-          </div>
-          <div class="pres-card">
-            <div class="pres-header">
-              <div>
-                <div class="pres-name">Nicolás Avellaneda</div>
-                <div class="pres-party">PAN</div>
-              </div>
-              <div class="pres-tag constitucional">CONSTITUCIONAL</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="paywall-overlay">
-        <div class="paywall-card">
-          <div class="premium-tag">★ ACCESO PREMIUM</div>
-          <h3>Seguí explorando 173 años de historia</h3>
-          <p>Accedé al archivo completo: 53 presidentes, todas las cortes, congresos y elecciones, con fuentes citadas y datos exportables.</p>
-          <div class="paywall-plans">
-            <div class="plan-mini">
-              <div class="plan-name">Individual</div>
-              <div class="plan-price">$9.000</div>
-              <div class="plan-period">por mes</div>
-            </div>
-            <div class="plan-mini featured">
-              <div class="plan-name">Educativo</div>
-              <div class="plan-price">a consultar</div>
-              <div class="plan-period">por aula / mes</div>
-            </div>
-            <div class="plan-mini">
-              <div class="plan-name">Profesional</div>
-              <div class="plan-price">$49.000</div>
-              <div class="plan-period">con API · por mes</div>
-            </div>
-          </div>
-          <a href="#" class="btn-suscribir">Suscribirse →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <footer>
-  <p>educacioncivica.com.ar · Archivo histórico v0.1 · Los datos provienen de fuentes públicas. Precios indicativos.</p>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.4 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
 </footer>
 
 </body>
