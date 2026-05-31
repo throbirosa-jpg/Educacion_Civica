@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El federalismo argentino en perspectiva histórica · 07.05 — Educación Cívica</title>
+<meta name="description" content="Doscientos años de federalismo argentino: de los pactos preexistentes de 1820 a la coparticipación del siglo XXI. Las luchas entre unitarios y federales, los pactos interprovinciales, la Constitución de 1853, la federalización de Buenos Aires y el federalismo actual.">
+<link rel="canonical" href="https://educacioncivica.com.ar/historia-federalismo.html">
+
+<meta property="og:title" content="El federalismo argentino en perspectiva histórica · 07.05">
+<meta property="og:description" content="Dos siglos de federalismo argentino: de los pactos preexistentes a la coparticipación actual.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/historia-federalismo.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El federalismo argentino en perspectiva histórica · 07.05">
+<meta name="twitter:description" content="Dos siglos de historia federal argentina.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.85rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); margin: 1.5rem 0 0.6rem; line-height: 1.3; }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+
+  .ficha-pacto { background: white; border: 1px solid var(--linea); border-left: 5px solid var(--premium); padding: 1.8rem 2rem; margin: 2rem 0 1.5rem; }
+  .ficha-pacto-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: var(--premium-soft); padding: 0.4rem 0.8rem; display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+  .ficha-pacto h4 { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--tinta); margin-bottom: 1.2rem; font-weight: 500; }
+  .ficha-pacto dl { display: grid; grid-template-columns: 150px 1fr; gap: 0.55rem 1.2rem; font-size: 0.92rem; }
+  .ficha-pacto dt { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.05em; padding-top: 0.15rem; }
+  .ficha-pacto dd { color: var(--tinta); line-height: 1.55; }
+  .ficha-pacto dd strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .ficha-pacto dl { grid-template-columns: 1fr; gap: 0.3rem; }
+    .ficha-pacto dt { margin-top: 0.8rem; }
+  }
+
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+
+  .articulo-cn { background: var(--celeste-soft); border-left: 4px solid var(--celeste-dark); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .articulo-cn-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600; }
+  .articulo-cn p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+  .articulo-cn p em { font-style: italic; color: var(--celeste-dark); }
+
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .tabla-comparativa td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--premium-dark); font-weight: 600; white-space: nowrap; }
+
+  .linea-tiempo { background: var(--tinta); color: var(--crema); padding: 2.5rem; margin: 2rem 0; }
+  .linea-tiempo h3 { color: var(--sol); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.5rem; font-weight: 500; }
+  .linea-tiempo ol { list-style: none; margin: 0; padding: 0; counter-reset: hito; }
+  .linea-tiempo li { padding: 1rem 0; border-bottom: 1px solid rgba(251,247,240,0.15); counter-increment: hito; display: grid; grid-template-columns: 90px 1fr; gap: 1.2rem; align-items: baseline; }
+  .linea-tiempo li:last-child { border-bottom: none; }
+  .linea-tiempo-fecha { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: var(--sol); font-weight: 600; letter-spacing: 0.05em; }
+  .linea-tiempo-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; line-height: 1.5; }
+  .linea-tiempo-titulo strong { color: var(--sol); }
+
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="historia.html">Historia</a> · <span>Federalismo argentino</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 07.05 · Historia institucional</div>
+    <h1 class="page-title">El <em>federalismo</em> argentino en perspectiva histórica</h1>
+    <p class="page-intro">La Argentina nació como un conjunto de provincias soberanas, no como un Estado nacional preexistente. El <strong>federalismo no es una organización adoptada</strong>: es el resultado histórico de dos siglos de pactos, batallas, constituciones y disputas. Este capítulo recorre la construcción del federalismo argentino desde los pactos preexistentes de 1820 hasta el complejo régimen actual de coparticipación, autonomía municipal y relaciones Nación-provincias.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">24</div>
+        <div class="page-stat-label">Jurisdicciones autónomas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">200+</div>
+        <div class="page-stat-label">Años de pactos federales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1853</div>
+        <div class="page-stat-label">Constitución federal</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1994</div>
+        <div class="page-stat-label">Última reforma federal</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#intro">1. Qué es el federalismo</a></li>
+      <li><a href="#origenes">2. Los orígenes (1810-1820)</a></li>
+      <li><a href="#pactos">3. Los pactos preexistentes</a></li>
+      <li><a href="#1853">4. La Constitución de 1853</a></li>
+      <li><a href="#1860">5. Reforma de 1860 e integración</a></li>
+      <li><a href="#federalizacion">6. La federalización de 1880</a></li>
+      <li><a href="#siglo-xx">7. El federalismo en el siglo XX</a></li>
+      <li><a href="#reforma-94">8. La reforma de 1994</a></li>
+      <li><a href="#sistema-actual">9. El federalismo actual</a></li>
+      <li><a href="#tensiones">10. Tensiones contemporáneas</a></li>
+      <li><a href="#linea-tiempo">11. Línea de tiempo</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="intro"><span class="seccion-num">— Sección 1</span>Qué es el <em>federalismo</em></h2>
+    <p>El federalismo es una forma de organización del Estado en la que <strong>dos niveles de gobierno coexisten sobre el mismo territorio</strong>: un gobierno central (federal o nacional) y gobiernos subnacionales (provincias, estados, cantones). Cada nivel tiene <strong>competencias propias</strong> establecidas en una constitución, y ninguno deriva sus facultades del otro: ambos son originarios.</p>
+
+    <p>El federalismo se distingue de otras formas de organización:</p>
+
+    <ul>
+      <li><strong>Estado unitario</strong>: existe un único centro de poder político. Las divisiones territoriales (departamentos, regiones) son meras unidades administrativas creadas por el gobierno central. Ejemplos: Francia, Chile, Uruguay.</li>
+      <li><strong>Confederación</strong>: alianza de Estados soberanos que conservan plenamente su soberanía. La autoridad central tiene poderes muy limitados y depende del consentimiento permanente de los Estados miembros. Suele ser una etapa transitoria.</li>
+      <li><strong>Federación</strong>: los Estados miembros (provincias) ceden parte de su soberanía a un Estado central, pero conservan autonomía en otras materias. Hay dos niveles de gobierno con competencias diferenciadas.</li>
+    </ul>
+
+    <p>La Argentina es una <strong>federación</strong> conforme al Art. 1° de su Constitución Nacional:</p>
+
+    <div class="articulo-cn">
+      <div class="articulo-cn-tag">— Art. 1° Constitución Nacional</div>
+      <p><em>La Nación Argentina adopta para su gobierno la forma representativa republicana federal, según la establece la presente Constitución.</em></p>
+    </div>
+
+    <p>Pero la palabra "adopta" tiene una historia. Antes de la Constitución de 1853, había un conjunto de provincias preexistentes que ya tenían soberanía propia. La Argentina no es una federación porque un Estado preexistente decidió descentralizarse: es una federación porque <strong>provincias soberanas decidieron unirse</strong> cediendo algunas de sus facultades. Esta diferencia es crucial para entender el federalismo argentino.</p>
+
+    <h2 id="origenes"><span class="seccion-num">— Sección 2</span>Los <em>orígenes</em>: 1810-1820</h2>
+    <p>El federalismo argentino no nació de una decisión de organización institucional: nació de la <strong>fragmentación política</strong> que siguió a la Revolución de Mayo de 1810. El antiguo Virreinato del Río de la Plata se descompuso en territorios que reclamaban autonomía propia.</p>
+
+    <h3>De la Revolución de Mayo a la crisis del año 20</h3>
+    <p>Entre 1810 y 1820, las Provincias Unidas del Río de la Plata atravesaron una década de inestabilidad institucional:</p>
+
+    <ul>
+      <li><strong>1810-1813</strong>: gobiernos centrales sucesivos (Junta, Triunviratos, Asamblea del Año XIII) con creciente conflicto entre el centralismo porteño y las provincias del interior y el Litoral.</li>
+      <li><strong>1813-1815</strong>: liderazgo de <strong>José Gervasio Artigas</strong> y la <strong>Liga Federal</strong>, que agrupaba a las provincias del Litoral (Entre Ríos, Corrientes, Santa Fe, Misiones, Banda Oriental). Artigas defendía la organización federal frente al directorialismo porteño.</li>
+      <li><strong>1816</strong>: Congreso de Tucumán, Declaración de Independencia (9 de julio).</li>
+      <li><strong>1819</strong>: Constitución de carácter unitario y centralista, rechazada por las provincias del Litoral.</li>
+      <li><strong>1820</strong>: la <strong>batalla de Cepeda</strong> (1° de febrero de 1820) marca el fin del Directorio. Los caudillos federales del Litoral (Francisco Ramírez de Entre Ríos y Estanislao López de Santa Fe) derrotan al gobierno central. Comienza la "anarquía del año 20".</li>
+    </ul>
+
+    <h3>El surgimiento de las provincias</h3>
+    <p>Tras la disolución del gobierno central en 1820, las antiguas <strong>gobernaciones-intendencias</strong> de la época virreinal se constituyeron en <strong>provincias autónomas</strong>. Cada una asumió su soberanía interna y comenzó a darse sus propias instituciones. Hacia 1820 existían trece provincias en lo que hoy es territorio argentino, cada una con su propio gobernador, su legislatura provincial y, en algunos casos, su constitución provincial.</p>
+
+    <p>Este es un dato fundamental para entender el federalismo argentino: <strong>las provincias preexistieron a la Nación</strong>. No es la Nación la que creó a las provincias, sino las provincias las que crearon la Nación al unirse mediante pactos. Por eso el Art. 121 de la Constitución actual establece:</p>
+
+    <div class="articulo-cn">
+      <div class="articulo-cn-tag">— Art. 121 Constitución Nacional</div>
+      <p><em>Las provincias conservan todo el poder no delegado por esta Constitución al Gobierno federal, y el que expresamente se hayan reservado por pactos especiales al tiempo de su incorporación.</em></p>
+    </div>
+
+    <p>El poder de las provincias es <strong>residual y originario</strong>: todo lo que no fue expresamente delegado al gobierno federal corresponde a las provincias. La regla opuesta a la del gobierno federal, cuyas competencias son <strong>delegadas y limitadas</strong>: solo tiene las facultades que la Constitución le otorga expresamente.</p>
+
+    <h2 id="pactos"><span class="seccion-num">— Sección 3</span>Los <em>pactos preexistentes</em></h2>
+    <p>Entre 1820 y 1853 las provincias firmaron una serie de pactos interprovinciales que fueron preparando, lentamente, la organización federal. Son los llamados <strong>"pactos preexistentes"</strong>, mencionados en el Preámbulo de la Constitución Nacional. La Convención Constituyente de 1853 se reunió, según sus propias palabras, "en cumplimiento de pactos preexistentes". Los principales:</p>
+
+    <h3>Tratado del Pilar (1820)</h3>
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Pacto preexistente</div>
+      <h4>Tratado del Pilar</h4>
+      <dl>
+        <dt>Fecha</dt>
+        <dd><strong>23 de febrero de 1820</strong></dd>
+        <dt>Provincias firmantes</dt>
+        <dd>Buenos Aires, Santa Fe, Entre Ríos</dd>
+        <dt>Contexto</dt>
+        <dd>Posterior a la batalla de Cepeda. Disolución del gobierno central.</dd>
+        <dt>Contenido</dt>
+        <dd>Reconocimiento mutuo de la autonomía provincial. Compromiso de convocar a un congreso general para organizar el país bajo forma federal.</dd>
+        <dt>Importancia</dt>
+        <dd>Primer pacto interprovincial post-Directorio. Inaugura el sistema de tratados entre provincias soberanas.</dd>
+      </dl>
+    </div>
+
+    <h3>Tratado del Cuadrilátero (1822)</h3>
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Pacto preexistente</div>
+      <h4>Tratado del Cuadrilátero</h4>
+      <dl>
+        <dt>Fecha</dt>
+        <dd><strong>25 de enero de 1822</strong></dd>
+        <dt>Provincias firmantes</dt>
+        <dd>Buenos Aires, Santa Fe, Entre Ríos, Corrientes</dd>
+        <dt>Contenido</dt>
+        <dd>Paz, amistad, alianza defensiva. Reconocimiento mutuo de autonomías. Libertad de navegación de los ríos.</dd>
+        <dt>Importancia</dt>
+        <dd>Consolida el régimen confederal del Litoral. Estabilidad regional sin gobierno central.</dd>
+      </dl>
+    </div>
+
+    <h3>Pacto Federal (1831)</h3>
+    <p>El pacto interprovincial más importante del período fue el <strong>Pacto Federal de 1831</strong>. Por su trascendencia histórica, merece un análisis más profundo.</p>
+
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Pacto preexistente · El más importante</div>
+      <h4>Pacto Federal</h4>
+      <dl>
+        <dt>Fecha</dt>
+        <dd><strong>4 de enero de 1831</strong></dd>
+        <dt>Provincias firmantes</dt>
+        <dd>Inicialmente Buenos Aires, Santa Fe y Entre Ríos. Luego se adhirieron Corrientes y el resto de las provincias (excepto las del Interior agrupadas en la Liga Unitaria liderada por Paz)</dd>
+        <dt>Contexto</dt>
+        <dd>Lucha entre las Ligas Federal y Unitaria. Tras la derrota del general Paz y de la Liga Unitaria, todas las provincias terminaron adhiriéndose al Pacto.</dd>
+        <dt>Forma de gobierno</dt>
+        <dd>Confederación de provincias soberanas. Cada provincia conservaba su autonomía total.</dd>
+        <dt>Órgano central</dt>
+        <dd>Comisión Representativa de los Gobiernos de las Provincias Litorales (que se disolvió pronto)</dd>
+        <dt>Política exterior</dt>
+        <dd>Delegada en el gobernador de Buenos Aires (Juan Manuel de Rosas, desde 1835).</dd>
+        <dt>Vigencia</dt>
+        <dd>Hasta 1853 (sanción de la Constitución Nacional). Es el régimen jurídico previo a la organización constitucional.</dd>
+      </dl>
+    </div>
+
+    <h3>El sistema confederal de 1831-1852</h3>
+    <p>Entre 1831 y 1852, la Argentina funcionó como una <strong>confederación débil</strong>:</p>
+    <ul>
+      <li>Cada provincia conservaba su soberanía interna casi en su totalidad.</li>
+      <li>No había gobierno central propiamente dicho.</li>
+      <li>La política exterior estaba delegada en el gobernador de Buenos Aires.</li>
+      <li>La aduana de Buenos Aires (única importante) recaudaba para esa provincia, generando una desigualdad estructural.</li>
+      <li>El comercio internacional pasaba todo por el puerto de Buenos Aires.</li>
+    </ul>
+
+    <p>El sistema funcionaba sobre la base de la fuerza política de <strong>Juan Manuel de Rosas</strong>, gobernador de Buenos Aires con interrupciones desde 1829 hasta su caída en 1852. Rosas ejerció lo que algunos historiadores llaman una "presidencia tácita" sobre el resto de las provincias, aunque formalmente nunca hubo un cargo nacional.</p>
+
+    <h3>Acuerdo de San Nicolás (1852)</h3>
+    <p>Tras la batalla de Caseros (3 de febrero de 1852), donde el general Justo José de Urquiza derrotó a Rosas, las provincias firmaron el <strong>Acuerdo de San Nicolás</strong>:</p>
+
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Pacto preexistente · Inmediato a 1853</div>
+      <h4>Acuerdo de San Nicolás de los Arroyos</h4>
+      <dl>
+        <dt>Fecha</dt>
+        <dd><strong>31 de mayo de 1852</strong></dd>
+        <dt>Provincias firmantes</dt>
+        <dd>Las trece provincias preexistentes (Buenos Aires firmó pero luego rechazó el acuerdo).</dd>
+        <dt>Contenido</dt>
+        <dd>Convocatoria a un Congreso General Constituyente en Santa Fe. Designación de Urquiza como Director Provisorio de la Confederación. Reglas para la organización constitucional.</dd>
+        <dt>Conflicto inmediato</dt>
+        <dd>Buenos Aires, liderada por sectores unitarios (Mitre, Alsina), rechazó el acuerdo y se separó del resto de las provincias. <strong>Revolución del 11 de septiembre de 1852</strong>.</dd>
+        <dt>Consecuencia</dt>
+        <dd>Argentina dividida en dos: la Confederación Argentina (12 provincias bajo Urquiza, capital Paraná) y el Estado de Buenos Aires (separado).</dd>
+      </dl>
+    </div>
+
+    <h2 id="1853"><span class="seccion-num">— Sección 4</span>La <em>Constitución</em> de 1853</h2>
+    <p>El 1° de mayo de 1853, el Congreso General Constituyente reunido en Santa Fe sancionó la Constitución Nacional. Buenos Aires no participó. La Constitución organizó al país bajo forma federal, con base en el modelo norteamericano de 1787 pero con adaptaciones argentinas profundas.</p>
+
+    <h3>Las características federales originales</h3>
+    <p>La Constitución de 1853 estableció:</p>
+    <ul>
+      <li><strong>Forma de gobierno representativa, republicana y federal</strong> (Art. 1°).</li>
+      <li><strong>Autonomía provincial</strong>: cada provincia dicta su propia constitución (Art. 5°), elige sus autoridades sin intervención federal, mantiene sus poderes no delegados.</li>
+      <li><strong>Poderes delegados a la Nación</strong>: relaciones exteriores, comercio internacional e interprovincial, aduanas, moneda, defensa, ciudadanía.</li>
+      <li><strong>Poderes reservados a las provincias</strong>: todo el resto.</li>
+      <li><strong>Poderes concurrentes</strong>: tributación (en sus modalidades), bienestar general, etc.</li>
+      <li><strong>Capital Federal en Buenos Aires</strong> (Art. 3° original).</li>
+    </ul>
+
+    <h3>El reconocimiento de los pactos preexistentes</h3>
+    <p>El Preámbulo de la Constitución es explícito en reconocer el origen federativo:</p>
+
+    <div class="cita-articulo">
+      Nos, los representantes del pueblo de la Nación Argentina, reunidos en Congreso General Constituyente por voluntad y elección de las provincias que la componen, en cumplimiento de pactos preexistentes...
+      <div class="cita-articulo-ref">— Preámbulo de la Constitución Nacional de 1853</div>
+    </div>
+
+    <p>Este texto, conservado intacto desde 1853 hasta hoy, contiene una afirmación jurídica fundamental: <strong>la Constitución no es un acto fundacional sino el cumplimiento de obligaciones previas</strong> contraídas por las provincias en los pactos preexistentes. La Nación no preexistió a las provincias: fue creada por ellas.</p>
+
+    <h3>La oposición de Buenos Aires</h3>
+    <p>Buenos Aires no participó del Congreso Constituyente. Tras la Revolución del 11 de septiembre de 1852, había rechazado el Acuerdo de San Nicolás y se había separado del resto del país. En 1854 sancionó su propia <strong>Constitución del Estado de Buenos Aires</strong>, como Estado independiente. Argentina estuvo, durante casi una década, dividida en dos países separados:</p>
+
+    <ul>
+      <li><strong>Confederación Argentina</strong> (1852-1862): trece provincias bajo la Constitución de 1853, con Urquiza como presidente, capital provisional en Paraná.</li>
+      <li><strong>Estado de Buenos Aires</strong> (1852-1859): con su propia constitución, su propio gobierno y su propia política exterior.</li>
+    </ul>
+
+    <h2 id="1860"><span class="seccion-num">— Sección 5</span>1860: la <em>reincorporación</em> de Buenos Aires</h2>
+    <p>La separación de Buenos Aires y la Confederación generó conflictos militares y diplomáticos que duraron casi una década. La reincorporación se concretó en dos etapas: el Pacto de San José de Flores (1859) y el Convenio Complementario (1860), seguidos de la batalla de Pavón (1861).</p>
+
+    <h3>Pacto de San José de Flores (1859)</h3>
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Pacto fundamental</div>
+      <h4>Pacto de San José de Flores (Pacto de Unión Nacional)</h4>
+      <dl>
+        <dt>Fecha</dt>
+        <dd><strong>11 de noviembre de 1859</strong></dd>
+        <dt>Firmantes</dt>
+        <dd>Estado de Buenos Aires y Confederación Argentina</dd>
+        <dt>Mediador</dt>
+        <dd>República del Paraguay (Francisco Solano López)</dd>
+        <dt>Contexto</dt>
+        <dd>Posterior a la <strong>batalla de Cepeda</strong> del 23 de octubre de 1859, donde las tropas confederales de Urquiza derrotaron a las porteñas de Mitre.</dd>
+        <dt>Cláusula central</dt>
+        <dd><strong>Buenos Aires se declaraba parte integrante de la Confederación Argentina</strong>. Aceptaba jurar la Constitución de 1853 pero con derecho a proponer reformas.</dd>
+        <dt>Cláusula económica</dt>
+        <dd>Aduanas de Buenos Aires pasaban a la Confederación, con compensaciones financieras durante cinco años.</dd>
+        <dt>Cláusula territorial</dt>
+        <dd>Buenos Aires no podía ser dividida sin consentimiento de su legislatura (derogando implícitamente el Art. 3° original de la Constitución de 1853 que la declaraba capital federal sin más).</dd>
+      </dl>
+    </div>
+
+    <h3>La reforma constitucional de 1860</h3>
+    <p>Como resultado del Pacto, en 1860 se realizó una <strong>reforma constitucional</strong> que incorporó las propuestas de Buenos Aires al texto original. Las modificaciones principales:</p>
+
+    <ul>
+      <li>Modificación del régimen de capital federal (la cesión de la ciudad debía hacerse con acuerdo de la legislatura provincial).</li>
+      <li>Limitación de las intervenciones federales.</li>
+      <li>Incorporación de garantías a la prensa.</li>
+      <li>Régimen de derechos de exportación temporal.</li>
+      <li>Modificaciones en el régimen impositivo.</li>
+      <li>Ajustes en el régimen de comercio interprovincial.</li>
+    </ul>
+
+    <p>Para profundizar en las distintas reformas constitucionales, ver nuestro capítulo <a href="reformas-constitucionales.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.01 sobre las siete reformas constitucionales argentinas</a>.</p>
+
+    <h3>La Batalla de Pavón y la reorganización (1861-1862)</h3>
+    <p>La unidad nacional no fue inmediata. El 17 de septiembre de 1861, las tropas porteñas de Bartolomé Mitre derrotaron a las confederales de Urquiza en la <strong>Batalla de Pavón</strong>. Urquiza se retiró a Entre Ríos. Mitre se convirtió en el árbitro político del país.</p>
+
+    <p>En 1862, Mitre fue elegido <strong>primer presidente constitucional de la Argentina unificada</strong>. La capital se trasladó a Buenos Aires (que actuó como capital provisional durante casi dos décadas, sin estar federalizada). El sistema federal comenzó a funcionar plenamente.</p>
+
+    <h2 id="federalizacion"><span class="seccion-num">— Sección 6</span>1880: la <em>federalización</em> de Buenos Aires</h2>
+    <p>Durante casi dos décadas (1862-1880), Buenos Aires actuó como capital nacional sin estar formalmente federalizada. La ciudad era a la vez capital de la provincia de Buenos Aires y capital de la Nación. El presidente y el gobernador convivían en la misma ciudad, generando tensiones permanentes. El gobierno nacional era, en términos del propio Avellaneda, "huésped" de la provincia.</p>
+
+    <h3>El conflicto de 1880</h3>
+    <p>En las elecciones presidenciales de 1880 se enfrentaron <strong>Julio Argentino Roca</strong> (Partido Autonomista Nacional, apoyado por todas las provincias del interior) y <strong>Carlos Tejedor</strong> (gobernador de Buenos Aires, apoyado solo por Corrientes). Roca ganó. Tejedor se rebeló militarmente.</p>
+
+    <p>La <strong>Revolución de Tejedor</strong> de 1880 fue la última guerra civil del siglo XIX argentino. El gobernador porteño movilizó milicias provinciales y se opuso militarmente al gobierno federal de Avellaneda. Hubo combates en Puente Alsina, Barracas y otros puntos del actual Gran Buenos Aires. La derrota de las milicias porteñas selló el destino de la ciudad.</p>
+
+    <h3>La Ley 1029 de Federalización</h3>
+    <div class="ficha-pacto">
+      <div class="ficha-pacto-tag">★ Norma fundamental</div>
+      <h4>Ley 1029 de Federalización de Buenos Aires</h4>
+      <dl>
+        <dt>Sanción</dt>
+        <dd><strong>21 de septiembre de 1880</strong></dd>
+        <dt>Promulgación</dt>
+        <dd>6 de diciembre de 1880 (por el nuevo presidente Roca)</dd>
+        <dt>Cesión por la provincia</dt>
+        <dd>Ley provincial de noviembre de 1880, mediante la cual la Legislatura de Buenos Aires cedió el municipio de la ciudad al gobierno federal</dd>
+        <dt>Contenido</dt>
+        <dd>La ciudad de Buenos Aires se declaraba <strong>capital permanente de la República</strong> y pasaba a jurisdicción federal. Pierde toda autonomía: se convertía en un territorio federal administrado directamente por el gobierno nacional.</dd>
+        <dt>Régimen</dt>
+        <dd>Intendencia designada por el Presidente de la Nación, con acuerdo del Senado.</dd>
+        <dt>Sede de los poderes</dt>
+        <dd>Provisoriamente sesionaron en Belgrano. Luego se trasladaron a la nueva capital federal.</dd>
+        <dt>Nueva capital provincial</dt>
+        <dd>La provincia de Buenos Aires fundó <strong>La Plata</strong> (1882) como nueva capital provincial.</dd>
+      </dl>
+    </div>
+
+    <h3>Las consecuencias del federalismo argentino</h3>
+    <p>La federalización de 1880 tuvo consecuencias estructurales que persisten hasta hoy:</p>
+
+    <ul>
+      <li><strong>Consolidación del Estado nacional</strong>: el gobierno federal dejó de ser "huésped" y se instaló en su propio territorio.</li>
+      <li><strong>Crecimiento centralizado</strong>: durante el siglo XX, la población y la economía se concentraron crecientemente en el área metropolitana de Buenos Aires. La capital federal acumuló recursos a expensas del interior.</li>
+      <li><strong>"Argentina y su capital"</strong>: la dicotomía entre Buenos Aires y "el interior" se cristalizó como categoría política y cultural.</li>
+      <li><strong>Pérdida de autonomía porteña</strong>: la ciudad de Buenos Aires no tuvo gobierno propio elegido por sus habitantes hasta 1996. Durante 116 años fue administrada por funcionarios designados por el presidente.</li>
+    </ul>
+
+    <h2 id="siglo-xx"><span class="seccion-num">— Sección 7</span>El <em>federalismo</em> en el siglo XX</h2>
+    <p>El siglo XX argentino fue de progresiva <strong>centralización del poder</strong> en el gobierno nacional, pese a la organización formalmente federal. Varios factores contribuyeron a esto.</p>
+
+    <h3>Las nuevas provincias</h3>
+    <p>Durante la mayor parte del siglo XIX y la primera mitad del XX, Argentina tuvo 14 provincias. Algunas zonas del país eran <strong>"Territorios Nacionales"</strong>: administrados directamente por el gobierno federal mediante gobernadores designados, sin autonomía política. Eran el resultado de la conquista de la Patagonia y el Chaco a fines del siglo XIX.</p>
+
+    <p>La provincialización fue tardía:</p>
+    <ul>
+      <li><strong>1951</strong>: Chaco y La Pampa, las dos primeras provincias creadas en el siglo XX (durante la primera presidencia de Perón).</li>
+      <li><strong>1953</strong>: Misiones.</li>
+      <li><strong>1955</strong>: Formosa, Neuquén, Río Negro, Chubut, Santa Cruz.</li>
+      <li><strong>1990</strong>: Tierra del Fuego, Antártida e Islas del Atlántico Sur (último territorio en provincializarse, por Ley 23.775).</li>
+    </ul>
+
+    <p>Hoy la Argentina tiene 23 provincias más la Ciudad Autónoma de Buenos Aires (autonomía reconocida en 1994).</p>
+
+    <h3>La centralización fiscal</h3>
+    <p>El régimen tributario argentino fue evolucionando hacia una concentración cada vez mayor en el gobierno nacional:</p>
+    <ul>
+      <li>Durante el siglo XIX, las provincias mantenían facultades impositivas amplias.</li>
+      <li>En las primeras décadas del siglo XX, se crearon los grandes impuestos nacionales (Impuesto a los Réditos en 1932, IVA en 1973).</li>
+      <li>Para evitar la doble imposición, se establecieron <strong>regímenes de coparticipación</strong>: la Nación recauda, las provincias reciben una porción.</li>
+      <li>El régimen actual es la <strong>Ley 23.548 de 1988</strong>, formalmente "transitoria" pero vigente desde hace casi cuatro décadas.</li>
+    </ul>
+
+    <p>Para profundizar en este tema, ver nuestra <a href="coparticipacion.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">página sobre coparticipación</a> y el capítulo <a href="historia-debates-parlamentarios.html#coparticipacion" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.07 sobre el debate parlamentario de la coparticipación</a>.</p>
+
+    <h3>Las intervenciones federales</h3>
+    <p>Otro mecanismo de centralización fue el uso extensivo de las <strong>intervenciones federales</strong> a las provincias. El Art. 6° de la Constitución prevé que el gobierno federal puede intervenir una provincia "para garantir la forma republicana de gobierno" o ante invasiones extranjeras. La práctica del siglo XX usó esta facultad de modo amplio:</p>
+
+    <ul>
+      <li>Entre 1862 y 1930, hubo decenas de intervenciones, pero generalmente vinculadas a crisis institucionales locales.</li>
+      <li>A partir de 1930 y especialmente durante los gobiernos militares, las intervenciones se usaron como mecanismo de control político sobre los gobiernos provinciales.</li>
+      <li>Después de 1983, las intervenciones siguieron usándose ocasionalmente. La reforma de 1994 las limitó procesalmente al exigir que las decreten exclusivamente el Congreso o, en su receso, el Ejecutivo con aprobación posterior (Art. 75 inc. 31 y Art. 99 inc. 20).</li>
+    </ul>
+
+    <h2 id="reforma-94"><span class="seccion-num">— Sección 8</span>La <em>reforma constitucional</em> de 1994</h2>
+    <p>La reforma constitucional de 1994 introdujo cambios importantes al régimen federal argentino. Si bien la reforma fue impulsada principalmente para habilitar la reelección presidencial inmediata, el "Núcleo de Coincidencias Básicas" y los temas habilitados para libre debate incluyeron varias modificaciones que fortalecieron (al menos formalmente) el federalismo.</p>
+
+    <h3>Las principales innovaciones federales</h3>
+    <p>La reforma de 1994 incorporó al régimen federal:</p>
+
+    <h4>1. Autonomía municipal (Art. 123)</h4>
+    <p>El nuevo Art. 123 estableció que cada provincia debe asegurar la <strong>autonomía municipal</strong> en su constitución, "reglando su alcance y contenido en el orden institucional, político, administrativo, económico y financiero". Antes de 1994, los municipios eran considerados "autárquicos" (con capacidad de auto-administración) pero no autónomos. Después de 1994, se reconoció su autonomía constitucional.</p>
+
+    <div class="articulo-cn">
+      <div class="articulo-cn-tag">— Art. 123 Constitución Nacional</div>
+      <p><em>Cada provincia dicta su propia constitución, conforme a lo dispuesto por el Artículo 5° asegurando la autonomía municipal y reglando su alcance y contenido en el orden institucional, político, administrativo, económico y financiero.</em></p>
+    </div>
+
+    <p>Sin embargo, el alcance concreto de la autonomía municipal varía según cada provincia. Algunas (como Córdoba) la implementaron plenamente. Otras (como la provincia de Buenos Aires) mantienen un régimen municipal más restringido.</p>
+
+    <h4>2. Recursos naturales (Art. 124)</h4>
+    <p>El Art. 124 estableció:</p>
+    <div class="articulo-cn">
+      <div class="articulo-cn-tag">— Art. 124 Constitución Nacional (último párrafo)</div>
+      <p><em>Corresponde a las provincias el dominio originario de los recursos naturales existentes en su territorio.</em></p>
+    </div>
+
+    <p>Este artículo fue una conquista histórica de las provincias productoras de hidrocarburos y otros recursos. Establece que el petróleo, el gas, los minerales, el agua y demás recursos naturales <strong>pertenecen a la provincia</strong> en cuyo territorio se encuentran, no a la Nación.</p>
+
+    <h4>3. Régimen de la Ciudad de Buenos Aires (Art. 129)</h4>
+    <p>La reforma reconoció a la Ciudad de Buenos Aires un régimen de gobierno autónomo, con facultades propias de legislación y jurisdicción. Por primera vez desde 1880, los porteños podían elegir su propio jefe de gobierno. La primera elección directa fue en 1996.</p>
+
+    <p>Para profundizar en este tema, ver nuestro capítulo <a href="caba-en-profundidad.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">09 sobre CABA en profundidad</a>.</p>
+
+    <h4>4. Convenios internacionales provinciales (Art. 124)</h4>
+    <p>El nuevo Art. 124 también facultó a las provincias a celebrar <strong>convenios internacionales</strong> directamente, siempre que no contradijeran la política exterior nacional ni afectaran las facultades delegadas. Esto les permitió relaciones internacionales propias en materia económica, cultural, ambiental, etc.</p>
+
+    <h4>5. Tercer senador por la primera minoría (Art. 54)</h4>
+    <p>La reforma estableció que cada provincia y la Ciudad Autónoma de Buenos Aires tendrían <strong>tres senadores</strong>: dos por la mayoría y uno por la primera minoría. Esto reforzó la representación de las minorías políticas provinciales en el Senado, órgano por excelencia del federalismo argentino.</p>
+
+    <h4>6. Coparticipación federal con jerarquía constitucional (Art. 75 inc. 2°)</h4>
+    <p>La reforma incorporó el régimen de coparticipación al texto constitucional. El Art. 75 inc. 2° establece:</p>
+    <ul>
+      <li>Las contribuciones indirectas son concurrentes (las pueden establecer Nación y provincias).</li>
+      <li>Las contribuciones directas son de provincia, salvo que la Nación las imponga temporalmente y siempre que la defensa, seguridad común y el bien general del Estado lo exijan.</li>
+      <li>Las contribuciones que se establezcan de modo coparticipable se distribuirán entre Nación, provincias y CABA conforme a una <strong>ley convenio</strong>.</li>
+      <li>La ley convenio debe asegurar la automaticidad en la remisión de fondos.</li>
+      <li>Debe ser sancionada por el Senado como cámara de origen y luego por Diputados, ambas con mayoría absoluta de la totalidad de sus miembros.</li>
+      <li>La <strong>Cláusula Transitoria Sexta</strong> dispuso que el nuevo régimen debía sancionarse <strong>antes del 31 de diciembre de 1996</strong>.</li>
+    </ul>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— 30 años de incumplimiento constitucional</div>
+      <p>El plazo de la Cláusula Transitoria Sexta para sancionar la nueva ley convenio de coparticipación venció el 31 de diciembre de 1996. Han pasado <strong>casi 30 años</strong> y la nueva ley nunca se sancionó. Sigue rigiendo la Ley 23.548 de 1988, "régimen transitorio". Es uno de los <strong>incumplimientos constitucionales sostenidos más graves</strong> de la historia argentina reciente: una norma constitucional con plazo expreso, sistemáticamente desconocida por el Congreso durante tres décadas.</p>
+    </div>
+
+    <h2 id="sistema-actual"><span class="seccion-num">— Sección 9</span>El <em>federalismo</em> actual: cómo funciona hoy</h2>
+    <p>El sistema federal argentino contemporáneo es resultado de dos siglos de historia. Sus rasgos centrales:</p>
+
+    <h3>Los cuatro niveles de gobierno</h3>
+    <p>El federalismo argentino tiene <strong>cuatro niveles</strong> de gobierno con competencias diferenciadas:</p>
+
+    <ol>
+      <li><strong>Gobierno federal</strong>: facultades delegadas por la Constitución (Art. 75 y concordantes).</li>
+      <li><strong>Provincias</strong> (23): facultades reservadas (Art. 121) y concurrentes con la Nación.</li>
+      <li><strong>Ciudad Autónoma de Buenos Aires</strong>: régimen especial (Art. 129) con autonomía propia pero más limitada que las provincias.</li>
+      <li><strong>Municipios</strong>: autonomía reconocida en cada constitución provincial (Art. 123).</li>
+    </ol>
+
+    <p>Para profundizar sobre el régimen provincial, ver nuestra página <a href="provincias.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">sobre las 24 provincias argentinas</a>.</p>
+
+    <h3>Tipos de competencias</h3>
+    <p>La doctrina constitucional argentina distingue cinco tipos de competencias entre la Nación y las provincias:</p>
+
+    <ul>
+      <li><strong>Competencias delegadas exclusivas de la Nación</strong>: aduanas (Art. 9°), moneda (Art. 75 inc. 11), relaciones exteriores (Art. 99 inc. 11), defensa, código de comercio.</li>
+      <li><strong>Competencias reservadas exclusivas de las provincias</strong>: dictar su propia constitución, elegir sus autoridades, organizar sus poderes locales, administrar justicia provincial.</li>
+      <li><strong>Competencias concurrentes</strong>: ambas las ejercen sin exclusión. Salud, educación, medio ambiente, contribuciones indirectas, promoción del bienestar.</li>
+      <li><strong>Competencias compartidas</strong>: requieren el concurso de ambos órdenes. Coparticipación (Art. 75 inc. 2°), establecimientos de utilidad nacional (Art. 75 inc. 30).</li>
+      <li><strong>Competencias prohibidas</strong>: para uno u otro nivel. Las provincias no pueden firmar tratados parciales de carácter político, ni acuñar moneda (Art. 126).</li>
+    </ul>
+
+    <h3>El federalismo fiscal</h3>
+    <p>El aspecto más complejo del federalismo argentino es el <strong>federalismo fiscal</strong>: cómo se distribuyen los recursos tributarios entre los distintos niveles de gobierno. El sistema actual combina:</p>
+    <ul>
+      <li><strong>Impuestos exclusivos de la Nación</strong>: aduaneros, comercio internacional.</li>
+      <li><strong>Impuestos coparticipables</strong>: IVA, ganancias, internos. Distribuidos por la Ley 23.548.</li>
+      <li><strong>Impuestos provinciales</strong>: ingresos brutos, sellos, inmobiliario, automotor.</li>
+      <li><strong>Tasas municipales</strong>: contribuciones por servicios urbanos.</li>
+      <li><strong>Transferencias discrecionales</strong>: aportes del Tesoro Nacional (ATN, 1% del régimen), obras públicas, fondos de emergencia.</li>
+    </ul>
+
+    <p>Para profundizar sobre el sistema fiscal argentino, ver nuestra página <a href="impuestos.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">sobre impuestos</a> y la de <a href="coparticipacion.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">coparticipación</a>.</p>
+
+    <h2 id="tensiones"><span class="seccion-num">— Sección 10</span>Tensiones <em>contemporáneas</em></h2>
+    <p>Pese a la organización formalmente federal, el sistema argentino presenta tensiones estructurales persistentes que afectan el funcionamiento real del federalismo.</p>
+
+    <h3>La centralización fáctica</h3>
+    <p>Aunque la Constitución consagra la autonomía provincial, en la práctica el gobierno nacional tiene una influencia desproporcionada sobre las provincias. Los principales mecanismos:</p>
+
+    <ul>
+      <li><strong>Distribución desigual de recursos coparticipables</strong>: la coparticipación primaria deja al gobierno nacional con el 42% de los recursos, mientras las provincias tienen el 54%, pero las funciones más costosas (salud, educación, seguridad) están transferidas a las provincias.</li>
+      <li><strong>Transferencias discrecionales</strong>: los Aportes del Tesoro Nacional, las obras públicas y otros recursos discrecionales se asignan según criterios del Ejecutivo nacional, lo que genera dependencia política de los gobernadores.</li>
+      <li><strong>Decretos de Necesidad y Urgencia</strong>: el uso intensivo de DNU para regular materias de interés provincial.</li>
+      <li><strong>Endeudamiento provincial</strong>: muchas provincias dependen del aval nacional para acceder a crédito.</li>
+    </ul>
+
+    <h3>Las asimetrías entre provincias</h3>
+    <p>El sistema federal argentino tiene <strong>asimetrías extremas</strong> entre sus miembros:</p>
+    <ul>
+      <li>La provincia de Buenos Aires concentra el 38% de la población nacional pero recibe menos del 23% de la coparticipación.</li>
+      <li>Las provincias patagónicas tienen densidades poblacionales bajísimas pero amplios territorios y recursos.</li>
+      <li>Las provincias del NOA y NEA tienen los menores índices de desarrollo humano y mayor dependencia fiscal.</li>
+      <li>CABA tiene el mayor PBI per cápita pero limitaciones en su régimen jurídico-institucional.</li>
+    </ul>
+
+    <p>El sistema de coparticipación, con sus coeficientes específicos, refleja en parte estos desequilibrios. Pero también los profundiza: las provincias con menor capacidad de generar recursos propios dependen más de las transferencias nacionales y, por tanto, son políticamente más vulnerables al gobierno federal.</p>
+
+    <h3>El régimen pendiente de CABA</h3>
+    <p>La autonomía de la Ciudad de Buenos Aires reconocida en 1994 sigue siendo de implementación parcial. Varios temas centrales no se transfirieron completamente:</p>
+    <ul>
+      <li>La Justicia ordinaria (penal, civil, comercial, laboral) sigue siendo nacional, no porteña.</li>
+      <li>La Policía Federal (que actuaba en CABA hasta 2017) fue parcialmente transferida con la creación de la Policía de la Ciudad.</li>
+      <li>Los conflictos por coparticipación entre CABA y Nación (especialmente desde 2020) son recurrentes.</li>
+    </ul>
+
+    <p>Para profundizar en este tema, ver nuestro capítulo <a href="caba-pendientes.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">09.05 sobre las cuestiones pendientes de la autonomía porteña</a>.</p>
+
+    <h3>El incumplimiento de la coparticipación constitucional</h3>
+    <p>Como ya señalamos, el plazo constitucional para sancionar la nueva ley de coparticipación venció el 31 de diciembre de 1996. <strong>Casi 30 años después</strong>, sigue sin sancionarse. Mientras tanto, el sistema funciona con normas "transitorias" sucesivamente modificadas por pactos y acuerdos parciales.</p>
+
+    <p>Este incumplimiento constitucional sostenido tiene consecuencias prácticas: la imposibilidad política de acordar un nuevo régimen refleja la profundidad de las diferencias entre las provincias y entre estas y la Nación. Es uno de los problemas estructurales no resueltos del federalismo argentino contemporáneo.</p>
+
+    <h2 id="linea-tiempo"><span class="seccion-num">— Sección 11</span>Línea de <em>tiempo</em> del federalismo argentino</h2>
+    <p>Resumen cronológico de los principales hitos del federalismo argentino desde 1820 hasta la actualidad.</p>
+
+    <div class="linea-tiempo">
+      <h3>— Hitos del federalismo argentino</h3>
+      <ol>
+        <li>
+          <span class="linea-tiempo-fecha">1820</span>
+          <div class="linea-tiempo-titulo">Disolución del gobierno central tras Cepeda. Las antiguas intendencias se constituyen en provincias autónomas. <strong>Tratado del Pilar</strong> (23 de febrero).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1822</span>
+          <div class="linea-tiempo-titulo">Tratado del Cuadrilátero (25 de enero). Confederación informal del Litoral.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1831</span>
+          <div class="linea-tiempo-titulo"><strong>Pacto Federal</strong> (4 de enero). Confederación de provincias soberanas. Vigente hasta 1853.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1852</span>
+          <div class="linea-tiempo-titulo">Batalla de Caseros (3 de febrero). Acuerdo de San Nicolás (31 de mayo). Revolución porteña del 11 de septiembre.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1853</span>
+          <div class="linea-tiempo-titulo"><strong>Constitución Nacional</strong> (1° de mayo). Forma federal. Sin Buenos Aires.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1859</span>
+          <div class="linea-tiempo-titulo">Batalla de Cepeda (23 de octubre). <strong>Pacto de San José de Flores</strong> (11 de noviembre).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1860</span>
+          <div class="linea-tiempo-titulo">Reforma constitucional. Buenos Aires se incorpora plenamente a la Nación.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1861</span>
+          <div class="linea-tiempo-titulo">Batalla de Pavón (17 de septiembre). Mitre se impone como árbitro nacional.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1862</span>
+          <div class="linea-tiempo-titulo">Mitre asume como primer presidente constitucional de la Argentina unificada.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1880</span>
+          <div class="linea-tiempo-titulo">Revolución de Tejedor. <strong>Ley 1029 de Federalización de Buenos Aires</strong> (21 de septiembre). Roca asume la presidencia.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1882</span>
+          <div class="linea-tiempo-titulo">Fundación de La Plata como nueva capital de la provincia de Buenos Aires.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1951-1955</span>
+          <div class="linea-tiempo-titulo">Provincialización de Chaco, La Pampa, Misiones, Formosa, Neuquén, Río Negro, Chubut y Santa Cruz.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1988</span>
+          <div class="linea-tiempo-titulo"><strong>Ley 23.548 de Coparticipación</strong> (7 de enero). "Régimen transitorio" aún vigente.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1990</span>
+          <div class="linea-tiempo-titulo">Provincialización de Tierra del Fuego, Antártida e Islas del Atlántico Sur (Ley 23.775).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1994</span>
+          <div class="linea-tiempo-titulo"><strong>Reforma constitucional</strong>. Autonomía municipal (Art. 123). Recursos naturales provinciales (Art. 124). Autonomía de CABA (Art. 129). Coparticipación constitucional (Art. 75 inc. 2°).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1996</span>
+          <div class="linea-tiempo-titulo">Primera elección directa del Jefe de Gobierno de la Ciudad de Buenos Aires. Vencimiento del plazo para nueva ley de coparticipación (incumplido).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">2026</span>
+          <div class="linea-tiempo-titulo">Sigue vigente la Ley 23.548 (régimen "transitorio" de 1988). 30 años de incumplimiento del mandato constitucional de 1996.</div>
+        </li>
+      </ol>
+    </div>
+
+    <h2 id="sintesis"><span class="seccion-num">— Síntesis</span>Tabla <em>comparativa</em> de los pactos preexistentes</h2>
+    <p>Esta tabla sintetiza los principales pactos interprovinciales que precedieron a la Constitución Nacional de 1853.</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Pacto</th>
+          <th>Provincias firmantes</th>
+          <th>Contenido principal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1820</td>
+          <td>Tratado del Pilar</td>
+          <td>Buenos Aires, Santa Fe, Entre Ríos</td>
+          <td>Reconocimiento mutuo de autonomías. Compromiso de congreso general.</td>
+        </tr>
+        <tr>
+          <td>1822</td>
+          <td>Tratado del Cuadrilátero</td>
+          <td>Buenos Aires, Santa Fe, Entre Ríos, Corrientes</td>
+          <td>Paz, alianza defensiva, libre navegación.</td>
+        </tr>
+        <tr>
+          <td>1831</td>
+          <td>Pacto Federal</td>
+          <td>Todas las provincias (progresivamente)</td>
+          <td>Confederación. Política exterior delegada en Buenos Aires.</td>
+        </tr>
+        <tr>
+          <td>1852</td>
+          <td>Acuerdo de San Nicolás</td>
+          <td>13 provincias (BA luego se opone)</td>
+          <td>Convocatoria al Congreso Constituyente. Urquiza Director Provisorio.</td>
+        </tr>
+        <tr>
+          <td>1859</td>
+          <td>Pacto de San José de Flores</td>
+          <td>Buenos Aires + Confederación</td>
+          <td>Reincorporación de Buenos Aires. Reforma constitucional pendiente.</td>
+        </tr>
+        <tr>
+          <td>1860</td>
+          <td>Convenio Complementario</td>
+          <td>Buenos Aires + Confederación</td>
+          <td>Detalles de la incorporación. Régimen de aduanas. Indivisibilidad provincial.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">El federalismo argentino no es un dato fijo sino un proceso histórico abierto. Cada generación lo redefine: en 1820, las provincias soberanas inventaron los pactos. En 1853, esos pactos se cristalizaron en la Constitución. En 1880, la federalización resolvió la cuestión capital. En 1994, se reconoció la autonomía municipal y la de CABA. Hoy seguimos discutiendo qué tipo de federalismo queremos: si uno más centralizado o más descentralizado, si más igualitario o más asimétrico, si más cooperativo o más competitivo. La discusión continúa.</p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Próximos contenidos en desarrollo</div>
+      <p>Este capítulo es un primer envío sobre el federalismo argentino en perspectiva histórica. Otros temas que se podrán sumar en próximas entregas: <strong>las intervenciones federales</strong> a lo largo del tiempo; <strong>la regionalización</strong> (NOA, Cuyo, Patagonia, etc.) prevista en el Art. 124; <strong>los recursos naturales y el conflicto petrolero</strong>; <strong>la justicia federal y provincial</strong>; <strong>el rol histórico del Senado</strong> como cámara federal. Si tenés sugerencias sobre qué tema desarrollar, escribinos.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Nación Argentina, texto vigente desde la reforma de 1994 (Arts. 1°, 5°, 6°, 121-129).</li>
+        <li>Constitución de la Nación Argentina de 1853, texto original.</li>
+        <li>Tratado del Pilar (23 de febrero de 1820).</li>
+        <li>Tratado del Cuadrilátero (25 de enero de 1822).</li>
+        <li>Pacto Federal (4 de enero de 1831).</li>
+        <li>Acuerdo de San Nicolás de los Arroyos (31 de mayo de 1852).</li>
+        <li>Pacto de San José de Flores (11 de noviembre de 1859).</li>
+        <li>Convenio Complementario del 6 de junio de 1860.</li>
+        <li>Ley 1029 de Federalización de Buenos Aires (21 de septiembre de 1880).</li>
+        <li>Ley 23.548 de Coparticipación Federal de Recursos Fiscales (7 de enero de 1988).</li>
+        <li>Ley 23.775 de Provincialización de Tierra del Fuego (1990).</li>
+        <li>Ley 24.309 de Declaración de Necesidad de la Reforma Constitucional (29 de diciembre de 1993).</li>
+        <li>Chiaramonte, José Carlos. <em>El federalismo argentino en la primera mitad del siglo XIX</em>. CISEA.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino</em>. Ediar.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino</em>. Eudeba.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada y concordada</em>. La Ley.</li>
+        <li>Gargarella, Roberto. <em>La sala de máquinas de la Constitución</em>. Katz.</li>
+        <li>Frías, Pedro J. <em>Introducción al Derecho Público Provincial</em>. Depalma.</li>
+        <li>Romero, Luis Alberto. <em>Breve historia contemporánea de la Argentina</em>. FCE.</li>
+        <li>Halperin Donghi, Tulio. <em>Una nación para el desierto argentino</em>. CEAL.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="historia.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Volver al índice</div>
+        <div class="nav-cap-titulo">Historia institucional</div>
+      </a>
+      <a href="provincias.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Capítulo relacionado · 02</div>
+        <div class="nav-cap-titulo">Las provincias argentinas</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
