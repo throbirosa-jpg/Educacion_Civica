@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Sistemas presidenciales aplicados · 08.02 — Educación Cívica</title>
+<meta name="description" content="Los seis sistemas con los que Argentina eligió presidente desde 1854: Colegio Electoral, elección directa con reelección de 1949, vuelta a 1853, doble vuelta del 50% de 1972, reforma de 1994 con balotaje condicional. Análisis técnico de cada modelo.">
+<link rel="canonical" href="https://educacioncivica.com.ar/elecciones-sistemas-presidenciales.html">
+
+<meta property="og:title" content="Sistemas presidenciales aplicados · 08.02">
+<meta property="og:description" content="Los seis sistemas con los que Argentina eligió presidente desde 1854. Análisis técnico.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/elecciones-sistemas-presidenciales.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sistemas presidenciales aplicados · 08.02">
+<meta name="twitter:description" content="Cómo Argentina eligió a sus presidentes a lo largo de 170 años.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); margin: 1.5rem 0 0.6rem; line-height: 1.3; }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+
+  .sistema-card {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 5px solid var(--premium);
+    padding: 1.8rem 2rem;
+    margin: 2rem 0 1.5rem;
+  }
+  .sistema-numero {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    background: var(--premium-soft);
+    padding: 0.4rem 0.9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .sistema-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+  }
+  .sistema-card dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.92rem;
+    margin: 1rem 0;
+  }
+  .sistema-card dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 0.15rem;
+  }
+  .sistema-card dd {
+    color: var(--tinta);
+    line-height: 1.55;
+  }
+  .sistema-card dd strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .sistema-card dl { grid-template-columns: 1fr; gap: 0.3rem; }
+    .sistema-card dt { margin-top: 0.6rem; }
+  }
+
+  .formula-box {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 1.5rem 1.8rem;
+    margin: 1.2rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .formula-box strong { color: var(--sol); font-weight: 600; }
+  .formula-box em { color: var(--sol-soft); font-style: normal; }
+
+  .escenario-box {
+    background: var(--crema-warm);
+    border: 1px solid var(--linea);
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .escenario-box-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .escenario-box strong { color: var(--premium-dark); }
+
+  .pros-contras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  @media (max-width: 600px) { .pros-contras { grid-template-columns: 1fr; } }
+  .pros-contras-box {
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--linea);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .pros-contras-box.pros {
+    background: var(--verde-soft);
+    border-color: var(--verde);
+  }
+  .pros-contras-box.contras {
+    background: var(--rojo-soft);
+    border-color: var(--rojo-fed);
+  }
+  .pros-contras-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .pros .pros-contras-titulo { color: var(--verde); }
+  .contras .pros-contras-titulo { color: var(--rojo-fed); }
+  .pros-contras-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .pros-contras-box li { font-size: 0.88rem; margin-bottom: 0.3rem; }
+
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .tabla-comparativa td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--premium-dark); font-weight: 600; white-space: nowrap; }
+
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Sistemas presidenciales</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 08.02 · Sistema electoral</div>
+    <h1 class="page-title">Sistemas <em>presidenciales</em> aplicados</h1>
+    <p class="page-intro">Argentina eligió presidente bajo <strong>seis sistemas distintos</strong> a lo largo de su historia constitucional. El Colegio Electoral original de 1853, la elección directa con reelección de 1949, la vuelta al Colegio Electoral de 1956, el balotaje del 50% del Estatuto Fundamental de 1972, una nueva vuelta al Colegio Electoral entre 1983 y 1989, y el sistema actual de 1994 con su característico balotaje condicional del 45% o 40%+10. Este capítulo analiza <strong>cada sistema en detalle</strong>: cómo funcionaba, qué buscaba lograr, qué efectos produjo, y por qué fue reemplazado.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">6</div>
+        <div class="page-stat-label">Sistemas distintos aplicados</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">141</div>
+        <div class="page-stat-label">Años de Colegio Electoral</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">31</div>
+        <div class="page-stat-label">Años elección directa (1994-)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">45%</div>
+        <div class="page-stat-label">Umbral actual primera vuelta</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#intro">Seis sistemas en 170 años</a></li>
+      <li><a href="#sistema-1">1. Colegio Electoral original (1853-1949)</a></li>
+      <li><a href="#sistema-2">2. Directa con reelección (1949-1955)</a></li>
+      <li><a href="#sistema-3">3. Vuelta al Colegio (1956-1972)</a></li>
+      <li><a href="#sistema-4">4. Doble vuelta del 50% (1972-1976)</a></li>
+      <li><a href="#sistema-5">5. Última vuelta al Colegio (1983-1994)</a></li>
+      <li><a href="#sistema-6">6. Sistema actual (desde 1994)</a></li>
+      <li><a href="#balotaje-argentino">El balotaje argentino en detalle</a></li>
+      <li><a href="#comparacion-internacional">Comparación internacional</a></li>
+      <li><a href="#sintesis">Síntesis comparativa</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="intro"><span class="seccion-num">— Introducción</span>Seis sistemas <em>en 170 años</em></h2>
+    <p>El sistema con el que Argentina elige a su presidente ha sido modificado <strong>cinco veces</strong> desde la sanción de la Constitución de 1853. La inestabilidad institucional del siglo XX es la causa principal: cada vez que cambió el régimen político, cambió también el sistema electoral. Las dictaduras militares de 1955, 1966 y 1976 modificaron las reglas. Los gobiernos democráticos posteriores las volvieron a modificar. Solo desde 1994 hay un sistema estable, que ya cumple 31 años de vigencia y se aplicó en ocho elecciones presidenciales consecutivas.</p>
+
+    <h3>Los seis sistemas, de un vistazo</h3>
+    <p>Esta es la línea de evolución completa:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Período</th>
+          <th>Sistema</th>
+          <th>Mandato</th>
+          <th>Norma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1853-1949</td>
+          <td>Colegio Electoral indirecto</td>
+          <td>6 años, sin reelección consecutiva</td>
+          <td>Constitución 1853</td>
+        </tr>
+        <tr>
+          <td>1949-1955</td>
+          <td>Elección directa con reelección</td>
+          <td>6 años, reelección consecutiva</td>
+          <td>Constitución 1949</td>
+        </tr>
+        <tr>
+          <td>1956-1972</td>
+          <td>Vuelta al Colegio Electoral</td>
+          <td>6 años, sin reelección consecutiva</td>
+          <td>Proclama 1956 (vuelta a 1853)</td>
+        </tr>
+        <tr>
+          <td>1972-1976</td>
+          <td>Elección directa con doble vuelta del 50%</td>
+          <td>4 años (proyectada)</td>
+          <td>Estatuto Fundamental (Lanusse)</td>
+        </tr>
+        <tr>
+          <td>1983-1994</td>
+          <td>Última vuelta al Colegio Electoral</td>
+          <td>6 años, sin reelección consecutiva</td>
+          <td>Constitución 1853-1860</td>
+        </tr>
+        <tr>
+          <td>1994-presente</td>
+          <td>Elección directa con balotaje condicional</td>
+          <td>4 años, una reelección consecutiva</td>
+          <td>Reforma constitucional 1994</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Dato institucional</div>
+      <p>Durante <strong>141 años</strong> (1853-1994 con interrupciones), Argentina eligió a sus presidentes a través de un Colegio Electoral indirecto, similar al sistema norteamericano. Solo desde 1995 hay elección directa estable. Es uno de los cambios institucionales más profundos de la reforma constitucional de 1994.</p>
+    </div>
+
+    <div class="sistema-card" id="sistema-1">
+      <div class="sistema-numero">— Sistema 1 · 1853-1949 (con interrupciones)</div>
+      <h3>El <em>Colegio Electoral</em> original</h3>
+      <p>El sistema diseñado por los constituyentes de 1853 era similar al modelo norteamericano: <strong>sufragio indirecto</strong>. Los ciudadanos no votaban directamente al presidente: votaban a <em>electores</em> que se reunían en cada provincia y elegían al presidente y vicepresidente por separado.</p>
+
+      <dl>
+        <dt>Cantidad de electores</dt>
+        <dd>El <strong>doble</strong> del número de legisladores nacionales de cada provincia (diputados + senadores).</dd>
+        <dt>Ámbito de reunión</dt>
+        <dd>Los colegios electorales se reunían <strong>por separado</strong> en cada capital provincial y en la Capital Federal. Nunca llegaban a constituirse como cuerpo único.</dd>
+        <dt>Mayoría requerida</dt>
+        <dd>Mayoría absoluta del Colegio Electoral. Si nadie la alcanzaba, decidía el Congreso Nacional.</dd>
+        <dt>Mandato presidencial</dt>
+        <dd>6 años, sin reelección consecutiva (Art. 71 del texto original).</dd>
+        <dt>Tipo de electores</dt>
+        <dd>Listas completas en cada distrito. La fórmula ganadora se llevaba todos los electores de esa provincia (sistema de "winner takes all" similar al norteamericano).</dd>
+      </dl>
+
+      <h4>Procedimiento práctico</h4>
+      <p>El procedimiento tenía tres fases:</p>
+      <ol>
+        <li><strong>Elección popular de electores</strong>: el día de la elección, los ciudadanos votaban listas de electores en cada provincia, no a candidatos presidenciales directos.</li>
+        <li><strong>Reunión del Colegio Electoral</strong>: los electores ganadores se reunían en sus respectivas provincias semanas o meses después, y emitían sus votos por presidente y vicepresidente.</li>
+        <li><strong>Aprobación por la Asamblea Legislativa</strong>: las actas de cada colegio provincial se comunicaban al Congreso, que las aprobaba formalmente. Si ningún candidato alcanzaba la mayoría absoluta, decidía el Congreso entre los más votados.</li>
+      </ol>
+
+      <p>Este sistema se aplicó en <strong>todas las elecciones presidenciales entre 1854 y 1946</strong>. Para detalles de cada elección, ver el <a href="elecciones-cronologia.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">capítulo 08.04 sobre cronología electoral</a>.</p>
+
+      <div class="pros-contras">
+        <div class="pros-contras-box pros">
+          <div class="pros-contras-titulo">A favor</div>
+          <ul>
+            <li>Sobrerrepresenta a provincias chicas (federalismo)</li>
+            <li>Limita el poder del Ejecutivo nacional</li>
+            <li>Continuidad con tradiciones republicanas</li>
+            <li>Filtra el "voto pasional" del momento</li>
+          </ul>
+        </div>
+        <div class="pros-contras-box contras">
+          <div class="pros-contras-titulo">En contra</div>
+          <ul>
+            <li>Distorsiona la voluntad popular</li>
+            <li>Permite "winner takes all" en cada provincia</li>
+            <li>Facilita acuerdos políticos opacos</li>
+            <li>Sistema indirecto poco transparente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-2">
+      <div class="sistema-numero">— Sistema 2 · 1949-1955</div>
+      <h3>Elección <em>directa</em> con reelección (Constitución de 1949)</h3>
+      <p>La reforma constitucional de 1949, impulsada por el primer gobierno de Juan Domingo Perón, modificó sustancialmente el régimen de elección presidencial. Por primera vez se estableció la <strong>elección directa</strong> del presidente y vicepresidente por voto popular.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd><strong>Sufragio directo, universal, secreto y obligatorio</strong>.</dd>
+        <dt>Mayoría requerida</dt>
+        <dd>Simple pluralidad (mayoría relativa). El candidato más votado ganaba.</dd>
+        <dt>Mandato</dt>
+        <dd>6 años, <strong>con reelección consecutiva ilimitada</strong>.</dd>
+        <dt>Sufragio</dt>
+        <dd>Incluyó por primera vez el <strong>voto femenino</strong> (Ley 13.010 de 1947).</dd>
+        <dt>Territorios nacionales</dt>
+        <dd>Por primera vez los habitantes de los territorios nacionales pudieron votar para autoridades nacionales.</dd>
+      </dl>
+
+      <p>La reforma también modificaba aspectos sustantivos del régimen: ampliaba el rol del Estado en la economía, incorporaba derechos sociales, modificaba el régimen de la propiedad. Pero el cambio del sistema electoral presidencial era uno de sus núcleos políticos: <strong>la reelección consecutiva ilimitada permitía a Perón postularse indefinidamente</strong>.</p>
+
+      <h4>Aplicación práctica</h4>
+      <p>Este sistema se aplicó <strong>una sola vez</strong>: en las elecciones del 11 de noviembre de 1951, donde Perón resultó reelecto con el 63,51% de los votos sobre Ricardo Balbín de la UCR (31,8%). Es el porcentaje más alto obtenido por un presidente en la historia electoral argentina.</p>
+
+      <p>Tres días después de asumir su segundo mandato, el régimen comenzaría a debilitarse: la muerte de Eva Perón el 26 de julio de 1952, el conflicto con la Iglesia desde 1954, los bombardeos a Plaza de Mayo del 16 de junio de 1955, y finalmente la "Revolución Libertadora" del 16 de septiembre de 1955 terminaron con el régimen.</p>
+
+      <div class="dato-destacado">
+        <div class="dato-destacado-titulo">— Derogación por proclama</div>
+        <p>La reforma constitucional de 1949 fue derogada por una proclama del gobierno militar de la "Revolución Libertadora" el <strong>27 de abril de 1956</strong>. La Convención Constituyente de 1957 ratificó esta derogación y restableció la Constitución de 1853-1860, incorporando solamente el Art. 14 bis sobre derechos sociales. La validez jurídica de esta derogación por proclama militar sigue siendo discutida en sectores del derecho constitucional.</p>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-3">
+      <div class="sistema-numero">— Sistema 3 · 1956-1972</div>
+      <h3>La vuelta al <em>Colegio Electoral</em> (1956-1972)</h3>
+      <p>Tras la derogación de la Constitución de 1949 por proclama militar de la Revolución Libertadora (27 de abril de 1956), Argentina volvió a regirse por la Constitución original de 1853-1860. Esto significó la <strong>restauración del Colegio Electoral</strong> para elegir presidente.</p>
+
+      <p>Bajo este sistema se realizaron las elecciones de:</p>
+      <ul>
+        <li><strong>1958</strong>: Arturo Frondizi (UCRI), con el peronismo proscripto. Participación del 90% del padrón (la más alta de la historia).</li>
+        <li><strong>1963</strong>: Arturo Umberto Illia (UCRP), con el peronismo, el frondicismo y el comunismo proscriptos. Illia obtuvo solo el 31,9% de los votos válidos.</li>
+      </ul>
+
+      <p>El sistema funcionaba con los mismos mecanismos que el original de 1853: electores designados por distrito, reunión separada de los colegios provinciales, mandato de 6 años sin reelección consecutiva. Las dos elecciones de este período fueron <strong>severamente restringidas</strong> por las proscripciones políticas, lo que afectó su legitimidad.</p>
+
+      <p>El sistema fue suspendido nuevamente por el golpe del 28 de junio de 1966 ("Revolución Argentina" del general Onganía), que clausuró el Congreso y disolvió los partidos políticos por 7 años.</p>
+    </div>
+
+    <div class="sistema-card" id="sistema-4">
+      <div class="sistema-numero">— Sistema 4 · 1972-1976</div>
+      <h3>Elección directa con <em>doble vuelta del 50%</em></h3>
+      <p>En 1972, el gobierno militar del general Alejandro Agustín Lanusse dictó el <strong>Estatuto Fundamental</strong>, una reforma transitoria de la Constitución que cambió radicalmente el sistema electoral presidencial. El objetivo de Lanusse era diseñar reglas para el "Gran Acuerdo Nacional" (GAN), una transición que permitiera elecciones libres pero excluyendo a Perón (que estaba exiliado en España).</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Sufragio universal, directo y obligatorio. <strong>Doble vuelta electoral</strong> (primer balotaje en la historia argentina).</dd>
+        <dt>Umbral primera vuelta</dt>
+        <dd><strong>Más del 50% de los votos válidos</strong>. Si nadie alcanzaba ese umbral, se realizaba segunda vuelta entre los dos más votados.</dd>
+        <dt>Mandato</dt>
+        <dd>4 años (proyectado, nunca completado).</dd>
+        <dt>Cláusula de residencia</dt>
+        <dd>El Estatuto exigía residencia continua en el país durante los meses previos al acto eleccionario. <strong>Esta cláusula proscribía a Perón</strong>, que estaba en España.</dd>
+      </dl>
+
+      <h4>Aplicación práctica</h4>
+      <p>El sistema se aplicó en dos elecciones consecutivas en 1973:</p>
+      <ul>
+        <li><strong>11 de marzo de 1973</strong>: Héctor J. Cámpora (FREJULI) obtuvo 49,56% en primera vuelta. Por escasos puntos no alcanzó el 50%, pero el segundo (Balbín) declinó participar en una eventual segunda vuelta, por lo que Cámpora fue proclamado presidente. Asumió el 25 de mayo de 1973. Cuarenta y nueve días después renunció para permitir nuevas elecciones con Perón habilitado.</li>
+        <li><strong>23 de septiembre de 1973</strong>: Juan Domingo Perón obtuvo el 61,85%, evitando la segunda vuelta. Asumió el 12 de octubre de 1973.</li>
+      </ul>
+
+      <p>El sistema se interrumpió con el golpe del <strong>24 de marzo de 1976</strong>, que derrocó al gobierno de María Estela Martínez de Perón. La dictadura militar suspendió todo el orden constitucional hasta 1983.</p>
+
+      <div class="dato-destacado">
+        <div class="dato-destacado-titulo">— Caducidad automática</div>
+        <p>El Estatuto Fundamental de 1972 contenía una cláusula de caducidad automática: si no era convalidado por una Convención Constituyente democrática antes de mayo de 1981, perdería vigencia. Como esa Convención nunca se convocó, las reformas <strong>caducaron automáticamente en 1981</strong>, restableciéndose la Constitución de 1853-1860 con las reformas de 1860, 1866 y 1898 (las reformas peronistas de 1949 ya estaban derogadas, las del Estatuto de 1972 caducaban, las del Onganiato nunca tuvieron rango constitucional).</p>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-5">
+      <div class="sistema-numero">— Sistema 5 · 1983-1994</div>
+      <h3>Última vuelta al <em>Colegio Electoral</em></h3>
+      <p>El retorno democrático del 10 de diciembre de 1983 se hizo bajo la Constitución de 1853-1860, ya que las reformas de 1949 estaban derogadas y las de 1972 habían caducado. Esto significó la <strong>tercera y última vez</strong> que Argentina eligió presidente bajo el sistema del Colegio Electoral indirecto.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Sufragio universal indirecto. Colegio Electoral por distrito.</dd>
+        <dt>Cantidad de electores</dt>
+        <dd>Doble del número de legisladores nacionales de cada provincia.</dd>
+        <dt>Mandato</dt>
+        <dd>6 años, sin reelección consecutiva (Art. 77 CN original).</dd>
+        <dt>Asunción</dt>
+        <dd>12 de octubre (fecha histórica), modificada a 10 de diciembre desde 1989.</dd>
+      </dl>
+
+      <p>Bajo este sistema se realizaron las elecciones de:</p>
+      <ul>
+        <li><strong>30 de octubre de 1983</strong>: Raúl Alfonsín (UCR) obtuvo 51,75% de los votos y 317 electores. Fue la primera derrota nacional del peronismo desde su creación.</li>
+        <li><strong>14 de mayo de 1989</strong>: Carlos Menem (PJ) obtuvo 47,51% y 312 electores. Por la crisis hiperinflacionaria, asumió anticipadamente el 8 de julio de 1989.</li>
+      </ul>
+
+      <p>Las dos elecciones funcionaron sin necesidad de que el Colegio Electoral fuera a definir realmente la elección: en ambos casos, el ganador del voto popular tenía amplísima mayoría en electores. La <strong>distorsión</strong> que el sistema puede producir (que un candidato gane el voto popular pero pierda el Colegio, como ocurrió en EEUU en 2000 y 2016) <strong>nunca se materializó en Argentina</strong>.</p>
+
+      <p>Este sistema fue reemplazado por la reforma constitucional de 1994, parte del "Núcleo de Coincidencias Básicas" del Pacto de Olivos entre Carlos Menem y Raúl Alfonsín.</p>
+    </div>
+
+    <div class="sistema-card" id="sistema-6">
+      <div class="sistema-numero">— Sistema 6 · 1994-presente</div>
+      <h3>El sistema <em>actual</em>: elección directa con balotaje condicional</h3>
+      <p>La reforma constitucional de 1994 estableció el sistema electoral presidencial que sigue vigente hoy, sin modificaciones. Es el más estable de la historia argentina: ya cumplió <strong>31 años</strong> y se aplicó en <strong>ocho elecciones</strong> presidenciales consecutivas (1995, 1999, 2003, 2007, 2011, 2015, 2019, 2023).</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd><strong>Sufragio directo, universal, secreto y obligatorio</strong>. Eliminación del Colegio Electoral.</dd>
+        <dt>Mandato</dt>
+        <dd><strong>4 años</strong>, con <strong>una sola reelección consecutiva posible</strong> (Art. 90 CN).</dd>
+        <dt>Forma de votación</dt>
+        <dd>Fórmula conjunta presidente-vicepresidente, voto único.</dd>
+        <dt>Balotaje</dt>
+        <dd>Condicional, con dos umbrales que se detallan en la próxima sección.</dd>
+        <dt>Edad de voto</dt>
+        <dd>16 años (optativo) desde la Ley 26.774 de 2012.</dd>
+        <dt>Voto en el exterior</dt>
+        <dd>Habilitado para ciudadanos argentinos residentes en el exterior, en consulados argentinos en el mundo.</dd>
+        <dt>Religión del candidato</dt>
+        <dd>La reforma de 1994 <strong>eliminó la exigencia</strong> de que el presidente fuera católico (que estaba en el texto original de 1853).</dd>
+        <dt>Asunción</dt>
+        <dd>10 de diciembre (fecha simbólica del retorno democrático de 1983).</dd>
+      </dl>
+
+      <p>Este sistema es estudiado en detalle en la sección siguiente.</p>
+    </div>
+
+    <h2 id="balotaje-argentino"><span class="seccion-num">— Análisis profundo</span>El <em>balotaje argentino</em> en detalle</h2>
+    <p>El sistema actual establece una fórmula con <strong>dos umbrales alternativos</strong> para evitar el balotaje en primera vuelta. Es uno de los esquemas más particulares del mundo. La fórmula completa, en el Art. 97 y 98 de la Constitución reformada:</p>
+
+    <div class="formula-box">
+      Gana en primera vuelta si:<br>
+      <strong>+ 45% de los votos afirmativos</strong><br>
+      <em>O</em><br>
+      <strong>+ 40% y diferencia > 10 puntos</strong><br>
+      con la fórmula segunda
+    </div>
+
+    <p>Lo importante de esta fórmula está en sus detalles técnicos:</p>
+
+    <h3>"Votos afirmativos", no "votos totales"</h3>
+    <p>Los porcentajes se calculan sobre <strong>votos afirmativos</strong> (válidos), excluyendo votos en blanco, nulos y recurridos. Esta distinción es clave: con muchos votos en blanco, los porcentajes relativos se distorsionan.</p>
+
+    <h3>Las cuatro situaciones posibles</h3>
+    <p>La fórmula produce cuatro escenarios distintos:</p>
+
+    <div class="escenario-box">
+      <span class="escenario-box-tag">— Escenario A · Gana en primera vuelta por umbral del 45%</span>
+      Si la fórmula más votada supera el 45% de los votos afirmativos, gana en primera vuelta <strong>sin importar la diferencia con el segundo</strong>. Hipotéticamente, una fórmula podría ganar con 45,01% aunque la segunda tuviera 44,99%.<br><br>
+      <strong>Ejemplo histórico</strong>: 1995 Menem (49,94%), 2011 Cristina Kirchner (54,11%), 2019 Alberto Fernández (48,24%).
+    </div>
+
+    <div class="escenario-box">
+      <span class="escenario-box-tag">— Escenario B · Gana en primera vuelta por umbral del 40%+10</span>
+      Si la fórmula más votada está entre el 40% y el 45%, gana en primera vuelta <strong>solo si</strong> la diferencia con el segundo es mayor a 10 puntos porcentuales.<br><br>
+      <strong>Ejemplo histórico</strong>: 2007 Cristina Kirchner (45,28% vs Carrió 23,04%, diferencia de 22 puntos). Técnicamente Cristina superó el 45% pero también cumplía el umbral del 40%+10.
+    </div>
+
+    <div class="escenario-box">
+      <span class="escenario-box-tag">— Escenario C · Va a balotaje (no cumple ningún umbral)</span>
+      Si la fórmula más votada queda entre el 40% y el 45%, y la diferencia con el segundo es menor a 10 puntos, se va a balotaje. Esta es la zona de "mayoría amenguada que no alcanza".<br><br>
+      <strong>Ejemplo histórico</strong>: 2015, Daniel Scioli obtuvo 37,08% y Macri 34,15%. Aunque Scioli ganó la primera vuelta, ni alcanzaba el 45% ni superaba al segundo por más de 10 puntos. Se fue a balotaje.
+    </div>
+
+    <div class="escenario-box">
+      <span class="escenario-box-tag">— Escenario D · Va a balotaje (menos del 40%)</span>
+      Si la fórmula más votada queda debajo del 40%, hay balotaje automático, <strong>cualquiera sea la diferencia</strong> con el segundo. Hipotéticamente, podría haber balotaje incluso entre alguien con 39% y otra con 1%.<br><br>
+      <strong>Ejemplo histórico</strong>: 2023, Sergio Massa obtuvo 36,78% y Javier Milei 29,99%. Massa ganó la primera vuelta pero no llegaba al 40%. Balotaje obligatorio.
+    </div>
+
+    <h3>Por qué Argentina eligió un sistema "intermedio"</h3>
+    <p>El umbral del 45% (o 40%+10) es una <strong>posición intermedia</strong> entre dos extremos:</p>
+    <ul>
+      <li><strong>Mayoría absoluta (50%+1)</strong>: el sistema "puro" del balotaje francés. Lo aplican Brasil, Chile, Colombia, El Salvador, Guatemala, Perú, República Dominicana y Uruguay. Garantiza máxima legitimidad pero produce más balotajes.</li>
+      <li><strong>Mayoría relativa simple</strong>: gana el más votado, sin importar el porcentaje. Lo aplican México, Honduras, Nicaragua, Panamá, Paraguay y Venezuela. Evita balotajes pero permite triunfos con porcentajes muy bajos.</li>
+      <li><strong>Umbral del 45% argentino</strong>: equilibrio. Evita balotajes innecesarios cuando hay un ganador con amplio respaldo (más del 45%), pero los exige cuando el resultado es competitivo o no concluyente.</li>
+    </ul>
+
+    <h3>El "milagro Cristina" de 2007</h3>
+    <p>La aplicación práctica del sistema produjo un caso emblemático en 2007: Cristina Fernández de Kirchner obtuvo el 45,28% de los votos. Hipotéticamente, si la elección hubiera sido bajo un sistema de mayoría absoluta (50%+1), habría ido a balotaje contra Elisa Carrió. Pero al estar levemente por encima del 45%, se evitó la segunda vuelta. Es lo que algunos analistas llaman la <strong>"mayoría amenguada"</strong>: una elección ganada sin alcanzar la mayoría absoluta pero con respaldo suficiente para legitimar la primera vuelta.</p>
+
+    <h2 id="comparacion-internacional"><span class="seccion-num">— Comparación</span>El sistema argentino <em>en el mundo</em></h2>
+    <p>De los <strong>18 países latinoamericanos</strong>, <strong>12 contemplan el balotaje</strong> en sus constituciones, con diversas modalidades. Argentina pertenece a un grupo minoritario con umbral reducido del 45%.</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>País</th>
+          <th>Sistema</th>
+          <th>Umbral primera vuelta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Brasil</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Chile</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Colombia</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>El Salvador</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Guatemala</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Perú</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Rep. Dominicana</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Uruguay</td><td>Mayoría absoluta</td><td>50% + 1</td></tr>
+        <tr><td>Bolivia</td><td>Umbral reducido</td><td>50% + 1, o 40% con diferencia > 10</td></tr>
+        <tr><td>Ecuador</td><td>Umbral reducido</td><td>50% + 1, o 40% con diferencia > 10</td></tr>
+        <tr><td>Argentina</td><td>Umbral reducido</td><td><strong>45%, o 40% con diferencia > 10</strong></td></tr>
+        <tr><td>Costa Rica</td><td>Umbral muy bajo</td><td>40%</td></tr>
+        <tr><td>México</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+        <tr><td>Paraguay</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+        <tr><td>Honduras</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+        <tr><td>Nicaragua</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+        <tr><td>Panamá</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+        <tr><td>Venezuela</td><td>Sin balotaje</td><td>Mayoría relativa simple</td></tr>
+      </tbody>
+    </table>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Particularidad argentina</div>
+      <p>Argentina es <strong>el único país del mundo con un umbral del 45% más diferencia</strong>. Bolivia y Ecuador tienen umbrales similares pero exigen 50%+1 como alternativa al 40%+10. Costa Rica tiene el umbral más bajo (40% sin condicionalidad). Argentina ocupa una posición única en el mapa electoral latinoamericano.</p>
+    </div>
+
+    <h3>Frecuencia del balotaje en Argentina</h3>
+    <p>De las <strong>ocho elecciones</strong> realizadas bajo el sistema actual (1995-2023), solo <strong>dos se definieron en balotaje</strong>:</p>
+    <ul>
+      <li><strong>1995</strong>: Menem ganó en primera vuelta (49,94%).</li>
+      <li><strong>1999</strong>: De la Rúa ganó en primera vuelta (48,37%).</li>
+      <li><strong>2003</strong>: técnicamente debió haber balotaje (Menem 24,45% vs Kirchner 22,25%), pero Menem se bajó antes de la segunda vuelta.</li>
+      <li><strong>2007</strong>: Cristina Kirchner ganó en primera vuelta (45,28%).</li>
+      <li><strong>2011</strong>: Cristina Kirchner ganó en primera vuelta (54,11%).</li>
+      <li><strong>2015</strong>: <strong>BALOTAJE</strong>. Macri ganó la segunda vuelta (51,35% vs Scioli 48,66%).</li>
+      <li><strong>2019</strong>: Alberto Fernández ganó en primera vuelta (48,24%).</li>
+      <li><strong>2023</strong>: <strong>BALOTAJE</strong>. La Libertad Avanza ganó la segunda vuelta (55,65% vs Unión por la Patria 44,35%).</li>
+    </ul>
+
+    <p>Es decir: el balotaje argentino se aplicó realmente <strong>solo 2 veces en 8 elecciones</strong> (25%). El sistema cumple su objetivo de evitar segundas vueltas innecesarias cuando hay un ganador con respaldo claro.</p>
+
+    <h2 id="sintesis"><span class="seccion-num">— Síntesis</span>Los seis sistemas <em>comparados</em></h2>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Sistema</th>
+          <th>Característica clave</th>
+          <th>Aplicaciones</th>
+          <th>Reemplazado por</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Colegio 1853</td>
+          <td>Sufragio indirecto, 6 años, sin reelección</td>
+          <td>15 elecciones (1854-1946)</td>
+          <td>Reforma 1949 (Perón)</td>
+        </tr>
+        <tr>
+          <td>2. Directa 1949</td>
+          <td>Sufragio directo, 6 años, reelección ilimitada</td>
+          <td>1 elección (1951)</td>
+          <td>Proclama militar 1956</td>
+        </tr>
+        <tr>
+          <td>3. Colegio 1956</td>
+          <td>Vuelta a 1853, con proscripciones</td>
+          <td>2 elecciones (1958, 1963)</td>
+          <td>Estatuto Fundamental 1972</td>
+        </tr>
+        <tr>
+          <td>4. Directa 1972</td>
+          <td>Doble vuelta del 50%, 4 años</td>
+          <td>2 elecciones (1973)</td>
+          <td>Caducidad automática 1981</td>
+        </tr>
+        <tr>
+          <td>5. Colegio 1983</td>
+          <td>Vuelta a 1853, sin proscripciones</td>
+          <td>2 elecciones (1983, 1989)</td>
+          <td>Reforma constitucional 1994</td>
+        </tr>
+        <tr>
+          <td><strong>6. Actual 1994</strong></td>
+          <td><strong>Directa, 4 años, reelección 1×, balotaje 45/40+10</strong></td>
+          <td><strong>8 elecciones (1995-2023)</strong></td>
+          <td><strong>Vigente</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">La estabilidad del sistema electoral presidencial actual (1994-presente) es notable: cumple 31 años, fue aplicado en 8 elecciones consecutivas y nunca fue modificado, ni siquiera tras cambios de signo político del gobierno. Es <strong>una de las pocas reglas del juego político argentino que han logrado verdadera continuidad institucional</strong>. La discusión política intensa de los últimos años se ha concentrado en otras dimensiones del sistema electoral (PASO, boleta única, paridad), pero el balotaje argentino con sus dos umbrales sigue siendo el mecanismo central por el cual se decide la conducción del Poder Ejecutivo nacional.</p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Próximos contenidos en desarrollo</div>
+      <p>Este capítulo es parte de la sección Elecciones. Otros temas que se sumarán: <strong>08.03 Sistemas legislativos a lo largo del tiempo</strong> (cómo se eligieron diputados y senadores desde 1854); <strong>08.05 Innovaciones electorales del siglo XXI</strong> (PASO, BUP, paridad, voto joven); también un hub que organice toda la sección. Si tenés sugerencias, escribinos.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Nación Argentina (1853, con reformas posteriores).</li>
+        <li>Constitución de la Nación Argentina de 1949.</li>
+        <li>Estatuto Fundamental para la reforma de la Constitución Nacional (1972).</li>
+        <li>Constitución de la Nación Argentina reformada (1994). Ley 24.430.</li>
+        <li>Arts. 90, 94-98 CN - Régimen actual de elección presidencial.</li>
+        <li>Ley 26.774 - Voto a los 16 años (2012).</li>
+        <li>International IDEA. <em>El Balotaje en América Latina: Modalidades y tendencias</em>.</li>
+        <li>Nohlen, Dieter. <em>Elections in the Americas: A Data Handbook, Volume II: South America</em>. Oxford University Press, 2005.</li>
+        <li>Abal Medina, Juan. <em>Análisis crítico del sistema electoral argentino</em>.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino</em>. Eudeba.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino</em>. Ediar.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada y concordada</em>. La Ley.</li>
+        <li>Botana, Natalio. <em>El orden conservador</em>. Edhasa.</li>
+        <li>Romero, Luis Alberto. <em>Breve historia contemporánea de la Argentina</em>. FCE.</li>
+        <li>Ministerio del Interior. Dirección Nacional Electoral. <em>Resultados electorales históricos</em>.</li>
+        <li>Cámara Nacional Electoral. <em>Jurisprudencia y resultados oficiales</em>.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="elecciones-calendario.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Capítulo 08.01</div>
+        <div class="nav-cap-titulo">Calendario electoral</div>
+      </a>
+      <a href="elecciones-cronologia.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Capítulo 08.04 →</div>
+        <div class="nav-cap-titulo">Cronología electoral completa</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
