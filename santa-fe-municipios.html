@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Santa Fe · Régimen municipal (10.03.03) — Educación Cívica</title>
+<meta name="description" content="El régimen municipal santafesino: de las leyes 2756/1939 y 2439/1935 (vigentes durante más de 80 años) a la autonomía municipal plena reconocida por la reforma constitucional de 2025 y a la nueva Ley Orgánica de Municipios sancionada en abril de 2026. Los 365 gobiernos locales hoy son todos municipios.">
+<link rel="canonical" href="https://educacioncivica.com.ar/santa-fe-municipios.html">
+
+<meta property="og:title" content="Santa Fe · Régimen municipal">
+<meta property="og:description" content="365 gobiernos locales · autonomía plena desde 2025 · nueva Ley Orgánica de abril 2026.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/santa-fe-municipios.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.03.03</strong> de la sección Santa Fe en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="santa-fe-en-profundidad.html">Santa Fe</a> ·
+      <span>Régimen municipal</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.03.03 · Estudio provincial</div>
+    <h1 class="page-title">Régimen <em>municipal</em></h1>
+    <div class="page-subtitulo">— De 1939 a 2026 · La gran transformación local</div>
+    <p class="page-intro">El régimen municipal santafesino atravesó una <strong>transformación radical en menos de un año</strong>. Durante <strong>más de 80 años</strong> rigieron en simultáneo la <strong>Ley Orgánica de Municipalidades 2756 (de 1939)</strong> y la <strong>Ley Orgánica de Comunas 2439 (de 1935)</strong>, distinguiendo entre municipios y comunas. La <strong>reforma constitucional de septiembre de 2025</strong> incorporó por primera vez la <strong>autonomía municipal plena</strong> al texto provincial, alineando a Santa Fe con el Artículo 123 de la Constitución Nacional 31 años después. En <strong>abril de 2026</strong>, la Legislatura sancionó la nueva <strong>Ley Orgánica de Municipios</strong> que reemplazó las leyes de 1935 y 1939: <strong>desaparece la distinción entre municipios y comunas</strong>, y los <strong>365 gobiernos locales</strong> de la provincia se denominan, todos, "municipios". Este capítulo recorre la transformación.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">365</div>
+        <div class="page-stat-label">Gobiernos locales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">87</div>
+        <div class="page-stat-label">Años con leyes 2756 y 2439</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2025</div>
+        <div class="page-stat-label">Autonomía municipal plena</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">10.000</div>
+        <div class="page-stat-label">Habitantes mín. para Carta Orgánica</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#regimen-anterior">01 · El régimen anterior a 2025</a></li>
+      <li><a href="#ley-2756">02 · La Ley 2756 de 1939</a></li>
+      <li><a href="#ley-2439">03 · La Ley 2439 de Comunas</a></li>
+      <li><a href="#municipios-comunas">04 · Municipios y comunas pre-2025</a></li>
+      <li><a href="#reforma-2025">05 · La reforma de 2025 y la autonomía</a></li>
+      <li><a href="#nueva-ley">06 · La nueva Ley Orgánica de 2026</a></li>
+      <li><a href="#categorias-actuales">07 · Las nuevas categorías</a></li>
+      <li><a href="#cartas-organicas">08 · Las Cartas Orgánicas</a></li>
+      <li><a href="#rosario-santafe">09 · Rosario y Santa Fe Capital</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="regimen-anterior">
+      <div class="seccion-num">01 · El régimen anterior a 2025</div>
+      <h2>Ochenta y siete años de <em>continuidad</em> normativa</h2>
+
+      <p>Hasta el año 2026, el régimen municipal santafesino se rigió por una combinación normativa que sobrevivió a múltiples cambios políticos del siglo XX: la <strong>Ley Orgánica de Municipalidades 2756, sancionada en 1939</strong>, y la <strong>Ley Orgánica de Comunas 2439, sancionada en 1935</strong>. Las dos normas convivían: la primera regulaba a los municipios (asentamientos urbanos con cierta entidad poblacional), la segunda a las comunas (núcleos más pequeños). Ambas habían sido modificadas decenas de veces a lo largo de las décadas, pero sus principios estructurales se mantenían.</p>
+
+      <p>Esta continuidad normativa fue posible porque la <strong>Constitución provincial de 1962</strong> había dejado en suspenso la cuestión de la autonomía municipal. A diferencia de Córdoba —que en 1987 reconoció la autonomía municipal plena— Santa Fe nunca terminó de incorporar este principio. Aun después de la Reforma Constitucional Nacional de 1994 que mandó a todas las provincias asegurar "<em>la autonomía municipal y reglar su alcance y contenido en el orden institucional, político, administrativo, económico y financiero</em>" (Artículo 123 CN), Santa Fe se mantuvo durante <strong>31 años</strong> sin adecuar su régimen.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La autonomía municipal pendiente</div>
+        <p>Santa Fe fue, durante el período 1994-2025, una de las <strong>provincias argentinas en mora</strong> respecto del mandato del Artículo 123 CN. Su régimen municipal se basaba en la <strong>autarquía</strong> (capacidad de administrarse) más que en la <strong>autonomía</strong> (capacidad de darse normas básicas propias). Los municipios santafesinos no podían dictar Cartas Orgánicas, no organizaban autónomamente sus instituciones locales, y dependían de la Legislatura provincial para muchas decisiones estructurales. Esta situación fue una de las críticas más sostenidas al texto de 1962 y uno de los argumentos centrales para la reforma de 2025.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-2756">
+      <div class="seccion-num">02 · La Ley 2756 de 1939</div>
+      <h2>La <em>Ley Orgánica</em> de Municipalidades</h2>
+
+      <p>La <strong>Ley 2756 de 1939</strong> reguló el funcionamiento de los municipios santafesinos durante 87 años. Era una norma técnica que organizaba el gobierno local con un sistema relativamente simple: cada municipio tenía un <strong>Intendente</strong> (Departamento Ejecutivo) y un <strong>Concejo Municipal</strong> (órgano deliberativo), ambos electos por el cuerpo electoral local.</p>
+
+      <h3>Categorización de los municipios</h3>
+
+      <p>La Ley 2756 distinguía dos categorías de municipios:</p>
+
+      <ul>
+        <li><strong>Municipios de Primera Categoría</strong>: las ciudades con más de <strong>200.000 habitantes</strong>. Esta categoría incluía históricamente a Rosario y Santa Fe Capital.</li>
+        <li><strong>Municipios de Segunda Categoría</strong>: las ciudades con entre <strong>10.000 y 200.000 habitantes</strong>. Tenían menor cantidad de concejales y atribuciones más acotadas.</li>
+      </ul>
+
+      <p>Los Concejos Municipales tenían distintos números de miembros según la categoría y la población del municipio. Por ejemplo, las ciudades intermedias (entre 10.000 y 20.000 habitantes) tenían concejos de <strong>6 miembros</strong>, mientras que las grandes podían tener decenas.</p>
+
+      <h3>Particularidades de la Ley 2756</h3>
+
+      <p>Algunos rasgos distintivos del régimen anterior a 2026:</p>
+
+      <ul>
+        <li><strong>Voto de extranjeros</strong> en elecciones municipales: la Ley 2756 (Art. 82) habilitaba el voto de extranjeros con residencia y ciertas condiciones (profesión liberal, contribuyentes, casados con argentina o padres de hijos argentinos). Una particularidad histórica del régimen santafesino.</li>
+        <li><strong>Elecciones municipales cada dos años</strong>: en la mayoría de los municipios, las elecciones se celebraban con frecuencia bianual para renovaciones parciales del Concejo.</li>
+        <li><strong>Régimen electoral local</strong>: con elementos específicos para la elección de Concejales por sistema D'Hondt o variantes locales.</li>
+        <li><strong>Intervenciones provinciales</strong>: la ley regulaba los casos de intervención del Ejecutivo provincial sobre los municipios en situación de crisis institucional.</li>
+        <li><strong>Tribunales de cuentas</strong> y mecanismos de control de gestión municipal.</li>
+      </ul>
+
+      <div class="cita">
+        "Los actos administrativos que el representante provincial produjese durante su desempeño como comisionado interventor, serán válidos si se ajustan a la Constitución Provincial, a la Ley Orgánica Municipal y a las ordenanzas municipales que no fueren incompatibles con las mismas. La violación de esta disposición importa mal desempeño de la función pública y quien ejercitase acto en contrario, responderá personalmente por los mismos."
+        <span class="cita-fuente">— Ley 2756 de 1939, Artículo 79 (sobre intervenciones municipales).</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-2439">
+      <div class="seccion-num">03 · La Ley 2439 de Comunas</div>
+      <h2>El régimen <em>comunal</em> · 1935-2026</h2>
+
+      <p>La <strong>Ley 2439 de 1935</strong> reguló durante 91 años el funcionamiento de las <strong>comunas</strong> santafesinas: los núcleos poblacionales menores a los que la Ley 2756 exigía para ser considerados municipios. La distinción era fundamental: en Santa Fe se llamaba "comuna" a los asentamientos urbanos de menor tamaño, con autonomía limitada y estructura institucional simplificada.</p>
+
+      <h3>Estructura de las comunas</h3>
+
+      <p>Las comunas santafesinas se gobernaban a través de una <strong>Comisión Comunal</strong>: un cuerpo colegiado de tres o cinco miembros (según la población) que ejercía simultáneamente las funciones ejecutivas y legislativas. Los miembros se llamaban <strong>"comuneros"</strong>, y entre ellos uno actuaba como <strong>Presidente Comunal</strong>. La estructura era más simple que la de los municipios y reflejaba la menor escala administrativa.</p>
+
+      <h3>Las diferencias con el régimen cordobés</h3>
+
+      <p>El concepto santafesino de "comuna" difería marcadamente del cordobés:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Santa Fe (régimen anterior)</th>
+              <th>Córdoba</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Umbral poblacional</strong></td>
+              <td>Variable (locales pequeños)</td>
+              <td>Menos de 2.000 habitantes</td>
+            </tr>
+            <tr>
+              <td><strong>Órgano de gobierno</strong></td>
+              <td>Comisión Comunal (3-5 miembros)</td>
+              <td>Comisión Comunal</td>
+            </tr>
+            <tr>
+              <td><strong>Autonomía</strong></td>
+              <td>Limitada (autarquía)</td>
+              <td>Sí (no plena)</td>
+            </tr>
+            <tr>
+              <td><strong>Carta Orgánica</strong></td>
+              <td>No autorizada</td>
+              <td>No autorizada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="seccion" id="municipios-comunas">
+      <div class="seccion-num">04 · Municipios y comunas pre-2025</div>
+      <h2>La <em>geografía local</em> santafesina</h2>
+
+      <p>Antes de la reforma de 2025 y la nueva Ley Orgánica de 2026, Santa Fe tenía aproximadamente <strong>365 gobiernos locales</strong> repartidos así:</p>
+
+      <ul>
+        <li>Una decena de <strong>Municipios de Primera Categoría</strong> (más de 200.000 habitantes): Rosario, Santa Fe Capital, y eventualmente algunas ciudades intermedias que superaron ese umbral con el crecimiento poblacional.</li>
+        <li>Aproximadamente <strong>50 Municipios de Segunda Categoría</strong> (entre 10.000 y 200.000 habitantes): incluyendo ciudades como Rafaela, Venado Tuerto, Reconquista, San Lorenzo, Villa Constitución, Casilda, Cañada de Gómez, Esperanza, y muchas otras.</li>
+        <li>Aproximadamente <strong>300 Comunas</strong>: localidades pequeñas y medianas del interior provincial, gobernadas por Comisiones Comunales.</li>
+      </ul>
+
+      <h3>Críticas al sistema</h3>
+
+      <p>El sistema dual municipios/comunas recibía varias críticas:</p>
+
+      <ul>
+        <li><strong>Asimetría institucional</strong>: las comunas tenían menor capacidad institucional pero enfrentaban demandas similares a las de los municipios pequeños.</li>
+        <li><strong>Diferencias en coparticipación</strong>: el régimen tributario y de transferencias provinciales distinguía categorías que no siempre se ajustaban a las realidades locales.</li>
+        <li><strong>Falta de autonomía</strong>: ni municipios ni comunas podían darse sus propias cartas orgánicas, a diferencia del régimen cordobés desde 1987.</li>
+        <li><strong>Elecciones bianuales</strong>: en muchos municipios se celebraban elecciones cada dos años para renovaciones parciales, multiplicando los gastos electorales.</li>
+      </ul>
+
+      <p>Estos déficits del régimen serían precisamente los argumentos centrales para la transformación impulsada por la reforma de 2025 y la nueva Ley Orgánica de 2026.</p>
+    </div>
+
+    <div class="seccion" id="reforma-2025">
+      <div class="seccion-num">05 · La reforma de 2025 y la autonomía plena</div>
+      <h2>La <em>incorporación tardía</em> del Art. 123 CN</h2>
+
+      <p>La reforma constitucional sancionada el <strong>10 de septiembre de 2025</strong> incorporó por primera vez al texto santafesino el principio de <strong>autonomía municipal plena</strong>. Treinta y un años después del mandato del Artículo 123 de la Constitución Nacional, Santa Fe se alineó con la doctrina constitucional argentina mayoritaria.</p>
+
+      <h3>Lo que estableció la nueva Constitución</h3>
+
+      <p>La nueva Constitución santafesina reconoce la autonomía municipal en sus cinco dimensiones:</p>
+
+      <ul>
+        <li><strong>Autonomía institucional</strong>: capacidad de los municipios de dictarse sus propias cartas orgánicas (para localidades con más de 10.000 habitantes).</li>
+        <li><strong>Autonomía política</strong>: elección directa de las autoridades locales y autodeterminación política.</li>
+        <li><strong>Autonomía administrativa</strong>: organización propia de la administración municipal.</li>
+        <li><strong>Autonomía económica</strong>: gestión propia de los recursos locales.</li>
+        <li><strong>Autonomía financiera</strong>: capacidad para crear tasas y contribuciones, organizar el presupuesto.</li>
+      </ul>
+
+      <h3>Los contenidos mínimos de las Cartas Orgánicas</h3>
+
+      <p>La nueva Constitución santafesina detalla en su texto los <strong>contenidos mínimos</strong> que debe contemplar cualquier Carta Orgánica Municipal:</p>
+
+      <ol>
+        <li><strong>Estructura institucional local</strong>: intendente, Concejo Municipal y un órgano de control externo.</li>
+        <li><strong>Procedimiento, órgano y mayorías agravadas</strong> para habilitar reformas a la propia Carta Orgánica.</li>
+        <li><strong>Organización de la Administración Pública local</strong> con deberes, atribuciones y competencias para la gestión de los intereses locales.</li>
+        <li><strong>Mecanismos de democracia directa</strong> y participación ciudadana.</li>
+        <li><strong>Integración de regiones, áreas metropolitanas, asociación intermunicipal y supramunicipal</strong>; y articulación de competencias con la Provincia.</li>
+        <li>Cualquier disposición referida a "la mejor organización del gobierno local y de la comunidad en el marco del ordenamiento jurídico".</li>
+      </ol>
+
+      <div class="cita">
+        "Los que superen los diez mil habitantes podrán dictar su propia carta orgánica municipal elaborada por una Convención Municipal, convocada al efecto por una ordenanza dictada por el Concejo Municipal, que debe contemplar: a) estructura institucional local conformada por un intendente, un Concejo Municipal y un órgano de control externo; b) procedimiento, órgano y mayorías agravadas para habilitar reformas a la Carta Orgánica; c) organización de la Administración Pública local..."
+        <span class="cita-fuente">— Constitución de la Provincia de Santa Fe (2025), capítulo de Régimen Municipal. Citado en ESEIAP, "Se sancionó la nueva constitución de la Provincia de Santa Fe", 2025.</span>
+      </div>
+
+      <h3>Áreas metropolitanas y regiones</h3>
+
+      <p>La nueva Constitución también incorpora una innovación poco habitual en el constitucionalismo argentino: el reconocimiento expreso de <strong>"áreas metropolitanas"</strong> y <strong>"regiones"</strong> como figuras institucionales con base constitucional. Esto habilita la creación de organismos supramunicipales para la gestión de problemas comunes en zonas geográficamente vinculadas (como el Gran Rosario o el Gran Santa Fe), una herramienta institucional moderna que reconoce la realidad urbana de las grandes aglomeraciones provinciales.</p>
+    </div>
+
+    <div class="seccion" id="nueva-ley">
+      <div class="seccion-num">06 · La nueva Ley Orgánica de 2026</div>
+      <h2>La <em>derogación</em> de las leyes 2756 y 2439</h2>
+
+      <p>La reforma constitucional de 2025 mandaba sancionar una nueva Ley Orgánica de Municipios que reglamentara el principio de autonomía municipal plena. El gobierno provincial envió el proyecto en diciembre de 2025, y la nueva ley fue sancionada por la Legislatura el <strong>9 de abril de 2026</strong>, tras su aprobación primero en el Senado (por unanimidad, 18 votos) y luego en Diputados (con 30 votos a favor y 17 en contra del bloque oficialista Unidos junto con aliados).</p>
+
+      <h3>La derogación histórica</h3>
+
+      <p>La nueva ley derogó simultáneamente:</p>
+
+      <ul>
+        <li>La <strong>Ley Orgánica de Municipalidades 2756/1939</strong> (87 años de vigencia).</li>
+        <li>La <strong>Ley Orgánica de Comunas 2439/1935</strong> (91 años de vigencia).</li>
+      </ul>
+
+      <p>Es una de las derogaciones más significativas de la historia legislativa santafesina: dos normas que habían sobrevivido al peronismo, la Revolución Libertadora, los gobiernos militares de los 60 y 70, el retorno de la democracia, y todas las reformas constitucionales nacionales del último siglo. Ahora son reemplazadas por una sola norma marco.</p>
+
+      <h3>La gran innovación: desaparece la comuna</h3>
+
+      <p>El cambio conceptual más profundo de la nueva ley es la <strong>desaparición de la distinción entre municipios y comunas</strong>. Desde la sanción de la nueva ley:</p>
+
+      <div class="cita">
+        "Todos los núcleos de población que constituyen una comunidad con vida propia se denominarán municipios y se gobiernan por sí mismos con arreglo al ordenamiento jurídico."
+        <span class="cita-fuente">— Nueva Ley Orgánica de Municipios de Santa Fe (2026). Citado en El Litoral, "Nueva Ley Orgánica de Municipios", diciembre de 2025.</span>
+      </div>
+
+      <p>El término "comuna", que había sido parte del vocabulario institucional santafesino durante casi un siglo, queda sin uso. Las antiguas comunas pasan a denominarse "municipios" y se rigen por el nuevo régimen general. Es un cambio nominal pero también conceptual: refleja la voluntad de tratar a todos los gobiernos locales como entidades institucionalmente equivalentes, con autonomía constitucional reconocida.</p>
+    </div>
+
+    <div class="seccion" id="categorias-actuales">
+      <div class="seccion-num">07 · Las nuevas categorías</div>
+      <h2>Un <em>régimen único</em> con dos modalidades</h2>
+
+      <p>La nueva Ley Orgánica de Municipios (2026) organiza los 365 gobiernos locales santafesinos en un régimen único, pero con dos modalidades de organización según la población:</p>
+
+      <h3>Comisiones Municipales · hasta 10.000 habitantes</h3>
+
+      <p>Los municipios con población hasta 10.000 habitantes se gobiernan a través de una <strong>Comisión Municipal</strong> (heredera funcional de las antiguas Comisiones Comunales). Es un cuerpo colegiado que combina funciones ejecutivas y deliberativas, con un Presidente Municipal a la cabeza. La estructura es simplificada para adecuarse a la menor escala de estos gobiernos locales.</p>
+
+      <h3>Concejos Municipales · más de 10.000 habitantes</h3>
+
+      <p>Los municipios con más de 10.000 habitantes se gobiernan a través del sistema clásico <strong>Intendente + Concejo Municipal</strong>. La nueva ley ajustó la composición de los concejos: en las <strong>ciudades de entre 10.000 y 20.000 habitantes</strong>, los concejos se reducen de <strong>6 a 5 miembros</strong>, una de las medidas de "reducción del costo de la política" anunciadas por el gobierno provincial al momento de la sanción.</p>
+
+      <h3>Calendario electoral renovado</h3>
+
+      <p>La nueva ley también modificó el calendario electoral municipal. Históricamente, en la mayoría de los municipios y comunas santafesinas las elecciones se celebraban cada dos años (para renovaciones parciales). Con la nueva ley, en <strong>más del 92% de las localidades</strong> se pasa a un calendario de <strong>elecciones cada cuatro años</strong>. Solo las ciudades con más de 20.000 habitantes mantienen elecciones intermedias bianuales para la renovación parcial de sus concejos.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El argumento de la "reducción de costos"</div>
+        <p>El presidente del Senado, Felipe Michlig (UCR), justificó la sanción de la nueva ley señalando que "en más del 92% de las localidades santafesinas se pasará de elecciones cada dos años a comicios cada cuatro". Esta reducción de la frecuencia electoral —junto con la reducción del número de concejales en ciudades intermedias— forma parte del paquete de medidas de "<strong>reducción del costo de la política</strong>" que el oficialismo provincial promueve desde la reforma constitucional. Es un eje narrativo similar al que se utilizó en Córdoba con la unicameralización de 2001.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="cartas-organicas">
+      <div class="seccion-num">08 · Las Cartas Orgánicas</div>
+      <h2>El <em>nuevo territorio constitucional</em> local</h2>
+
+      <p>El cambio más estructural de la reforma 2025 + nueva Ley Orgánica 2026 es la habilitación constitucional para que los municipios santafesinos puedan dictar sus propias <strong>Cartas Orgánicas Municipales</strong>. Hasta entonces, todos los gobiernos locales se regían exclusivamente por las leyes provinciales generales. Desde ahora, los municipios de más de 10.000 habitantes pueden organizar autónomamente sus instituciones locales.</p>
+
+      <h3>Procedimiento de sanción de Carta Orgánica</h3>
+
+      <p>El proceso de sanción de una Carta Orgánica Municipal santafesina sigue varios pasos:</p>
+
+      <ol>
+        <li>El <strong>Concejo Municipal</strong> sanciona una ordenanza convocando a una <strong>Convención Municipal Constituyente</strong>.</li>
+        <li>El cuerpo electoral local elige a los <strong>Convencionales Constituyentes Municipales</strong> en una elección específica.</li>
+        <li>La Convención sesiona durante un plazo acotado para discutir y redactar el texto.</li>
+        <li>La Carta Orgánica es sancionada por la Convención.</li>
+        <li>El texto se promulga y entra en vigor, derogando para ese municipio las disposiciones de la Ley Orgánica General que sean incompatibles.</li>
+      </ol>
+
+      <h3>Las Cartas Orgánicas anteriores (no provinciales)</h3>
+
+      <p>Vale aclarar que antes de la reforma 2025, varias ciudades santafesinas habían adoptado <strong>"reglamentos orgánicos"</strong> o documentos internos que cumplían funciones análogas a las de cartas orgánicas, pero sin rango constitucional provincial. Estos reglamentos tenían valor estatutario interno pero no podían apartarse de la Ley 2756. La nueva habilitación constitucional cambia este escenario: ahora las Cartas Orgánicas Municipales tienen rango superior a las leyes generales provinciales en las materias de competencia local.</p>
+
+      <h3>Hacia un constitucionalismo local santafesino</h3>
+
+      <p>El nuevo régimen abre la puerta a un <strong>constitucionalismo local santafesino</strong>, similar al que existe en Córdoba desde 1995 (cuando la Ciudad de Córdoba sancionó su Carta Orgánica). Es previsible que las grandes ciudades santafesinas (Rosario, Santa Fe Capital, Rafaela, Venado Tuerto, Reconquista, San Lorenzo) inicien procesos de sanción de Cartas Orgánicas en los próximos años, generando un mapa institucional local más complejo y autónomo.</p>
+    </div>
+
+    <div class="seccion" id="rosario-santafe">
+      <div class="seccion-num">09 · Rosario y Santa Fe Capital</div>
+      <h2>Las <em>dos grandes ciudades</em></h2>
+
+      <p>Santa Fe es una provincia con una particularidad demográfica notable: tiene <strong>dos grandes centros urbanos</strong> en lugar de una capital dominante. <strong>Rosario</strong> es el principal centro económico y demográfico (la tercera ciudad más poblada de Argentina con aproximadamente 1.300.000 habitantes), mientras que <strong>Santa Fe Capital</strong> es la sede del gobierno provincial y un centro político, educativo y cultural relevante (aproximadamente 410.000 habitantes).</p>
+
+      <h3>Rosario</h3>
+
+      <p>La ciudad de Rosario es históricamente un <strong>polo industrial y comercial</strong> de Argentina, sede del Mercado de Granos (vinculado al complejo agroexportador del puerto de Rosario y Timbúes-General Lagos sobre el río Paraná). Su economía concentra una porción significativa del PBI santafesino y nacional. Institucionalmente, Rosario ha sido bastión histórico de gobiernos socialistas (PS) durante las décadas de 1990, 2000 y 2010, y ha desarrollado políticas urbanas innovadoras (presupuesto participativo, planificación urbana, gestión cultural).</p>
+
+      <p>Con la nueva Constitución de 2025, Rosario está habilitada a sancionar su Carta Orgánica. Es previsible que el proceso constituyente municipal sea uno de los más importantes de los próximos años en Argentina, similar en escala al proceso que vivió la Ciudad de Córdoba en 1995.</p>
+
+      <h3>Santa Fe Capital</h3>
+
+      <p>La ciudad de Santa Fe Capital es la sede de los tres poderes del gobierno provincial: la Casa de Gobierno (Ejecutivo), el Palacio Legislativo (Cámaras de Diputados y Senadores) y los Tribunales Provinciales. Es también la sede de la Universidad Nacional del Litoral (UNL), una de las universidades más importantes del país. Su perfil institucional es marcadamente público-administrativo y educativo.</p>
+
+      <p>Históricamente, Santa Fe Capital tuvo gobiernos de distintos signos políticos: peronistas, radicales, socialistas, partidos vecinales. La nueva habilitación constitucional para dictar Carta Orgánica le permitirá organizar autónomamente su régimen institucional, en simetría con Rosario y otras ciudades grandes.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Las dos grandes ciudades santafesinas</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Rosario</div>
+            <div class="ficha-valor">~1.300.000 habitantes</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Posición nacional Rosario</div>
+            <div class="ficha-valor">3ra ciudad de Argentina</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Santa Fe Capital</div>
+            <div class="ficha-valor">~410.000 habitantes</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sede de poderes</div>
+            <div class="ficha-valor">Santa Fe Capital</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Centro económico</div>
+            <div class="ficha-valor">Rosario (puerto + agroindustria)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Carta Orgánica</div>
+            <div class="ficha-valor">Ambas pueden dictarla desde 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Santa Fe</strong> (2025) · Capítulo de Régimen Municipal. Texto vigente desde el 12 de septiembre de 2025.</li>
+        <li><strong>Nueva Ley Orgánica de Municipios de Santa Fe</strong> (2026) · Sancionada el 9 de abril de 2026. Reemplaza las leyes 2756/1939 y 2439/1935.</li>
+        <li><strong>Ley Provincial 2756</strong> · Ley Orgánica de Municipalidades de Santa Fe (1939, derogada 2026). Texto histórico disponible en santafe.gov.ar.</li>
+        <li><strong>Ley Provincial 2439</strong> · Ley Orgánica de Comunas (1935, derogada 2026).</li>
+        <li><strong>Constitución Nacional</strong> · Artículo 123 (autonomía municipal, texto reformado 1994). Mandato a las provincias.</li>
+        <li><strong>Mensaje del Poder Ejecutivo</strong> a la Legislatura sobre la nueva Ley Orgánica de Municipios. Diciembre de 2025.</li>
+        <li><strong>ESEIAP</strong> · Espacio de Estudios Interdisciplinarios sobre Asuntos Públicos. "Se sancionó la nueva constitución de la Provincia de Santa Fe" (2025).</li>
+        <li><strong>Comercio y Justicia / Mirador Provincial</strong> · Cobertura del debate parlamentario de la nueva Ley Orgánica de Municipios (2025-2026).</li>
+        <li><strong>El Litoral · Santa Fe</strong> · "Nueva Ley Orgánica de Municipios", diciembre de 2025. Análisis institucional.</li>
+        <li><strong>Leguas Noticias</strong> · "Santa Fe aprobó la nueva Ley Orgánica de Municipios", abril de 2026.</li>
+        <li><strong>Diputados de Santa Fe</strong> · Documentación parlamentaria sobre el proceso legislativo de la nueva ley municipal.</li>
+        <li><strong>Sitio oficial del Gobierno de Santa Fe</strong> (santafe.gov.ar): documentación institucional sobre municipios y comunas.</li>
+      </ul>
+    </div>
+
+    <a href="santa-fe-electoral.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.03.04</div>
+        <h3>Sistema <em>electoral</em></h3>
+        <p>Santa Fe fue la <strong>primera provincia argentina en aplicar Boleta Única</strong> (Ley 13.156, primera aplicación en mayo de 2011). Análisis del recorrido electoral: la Ley de Lemas 1990-2004, las PASO santafesinas, el modelo de BU por columnas partidarias (vs. el cordobés de bloques), y el camino al sistema D'Hondt puro de 2027.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

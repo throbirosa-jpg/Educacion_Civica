@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Santa Fe · Historia constitucional (10.03.01) — Educación Cívica</title>
+<meta name="description" content="La historia constitucional de la Provincia de Santa Fe: las constituciones de 1856, 1872, 1900, 1907, 1921 (no promulgada), 1949, 1962 (la 'Constitución de la gobernabilidad' con cláusula 28-22) y la nueva Constitución de 2025 sancionada tras 63 años. Las 161 disposiciones de la reforma, sus principales cambios y los cuatro intentos previos fallidos.">
+<link rel="canonical" href="https://educacioncivica.com.ar/santa-fe-historia.html">
+
+<meta property="og:title" content="Santa Fe · Historia constitucional">
+<meta property="og:description" content="Cuna constitucional argentina: ocho constituciones desde 1856 hasta la nueva sancionada en septiembre de 2025.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/santa-fe-historia.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.03.01</strong> de la sección Santa Fe en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="santa-fe-en-profundidad.html">Santa Fe</a> ·
+      <span>Historia constitucional</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.03.01 · Estudio provincial</div>
+    <h1 class="page-title">Historia <em>constitucional</em> de Santa Fe</h1>
+    <div class="page-subtitulo">— Ocho constituciones · 169 años · una reforma reciente</div>
+    <p class="page-intro">Santa Fe tiene una <strong>tradición constitucional rica y compleja</strong>: ocho textos constitucionales sancionados desde 1856 hasta la <strong>nueva Constitución de septiembre de 2025</strong>, que reemplazó a la histórica <em>"Constitución de la gobernabilidad"</em> de 1962. La reforma de 2025 fue, además, el cuarto intento exitoso tras cuatro intentos previos fallidos (Reutemann, Obeid, Binner, Lifschitz), y representó el cambio constitucional más profundo del federalismo argentino desde la reforma nacional de 1994. Este capítulo recorre las constituciones santafesinas, los rasgos institucionales del texto de 1962 (cláusula mayoritaria 28-22, prohibición de reelección del gobernador) y los <strong>161 artículos del nuevo texto de 2025</strong> que abrieron una nueva arquitectura institucional.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">8</div>
+        <div class="page-stat-label">Constituciones santafesinas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1856</div>
+        <div class="page-stat-label">Primera Constitución provincial</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">63</div>
+        <div class="page-stat-label">Años de vigencia · texto de 1962</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2025</div>
+        <div class="page-stat-label">Sanción de la nueva Constitución</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#cuna">01 · Cuna constitucional</a></li>
+      <li><a href="#constitucion-1856">02 · Constitución de 1856</a></li>
+      <li><a href="#constitucion-1872">03 · La reforma de 1872</a></li>
+      <li><a href="#reformas-tempranas">04 · Reformas 1900-1921</a></li>
+      <li><a href="#peronismo-1949">05 · La constitución peronista</a></li>
+      <li><a href="#constitucion-1962">06 · Constitución de 1962</a></li>
+      <li><a href="#intentos-fallidos">07 · Cuatro intentos fallidos</a></li>
+      <li><a href="#reforma-2025">08 · La gran reforma 2025</a></li>
+      <li><a href="#cambios-clave">09 · Los cambios clave</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="cuna">
+      <div class="seccion-num">01 · La cuna constitucional</div>
+      <h2>Antes de las constituciones <em>provinciales</em></h2>
+
+      <p>Para entender la historia constitucional santafesina conviene partir de un dato singular: <strong>Santa Fe fue el escenario donde se firmó la Constitución Nacional</strong> de 1853. El Congreso Constituyente sesionó en el restaurado Cabildo de Santa Fe entre noviembre de 1852 y mayo de 1853, y el 1° de mayo de 1853 aprobó el texto constitucional argentino. La elección de Santa Fe como sede no fue casual: respondía a la continuidad del <strong>Pacto Federal de 1831</strong>, firmado por Buenos Aires, Entre Ríos y Santa Fe el 4 de enero de ese año, que había establecido una Comisión Representativa con sede en Santa Fe.</p>
+
+      <p>Esta doble condición —cuna del Pacto Federal y sede de la Constitución Nacional— marcó profundamente la identidad institucional santafesina. Los diputados santafesinos al Congreso Constituyente de 1853 fueron <strong>Manuel Leiva</strong> (vicepresidente del Congreso) y <strong>Juan Manuel Seguí</strong>. La provincia fue durante el siglo XIX un actor central del federalismo argentino, en parte por su posición geográfica entre Buenos Aires y el interior, y en parte por su tradición política propia, heredera de Estanislao López y la generación federalista del litoral.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué Santa Fe</div>
+        <p>El Pacto Federal del 4 de enero de 1831, firmado por Buenos Aires, Entre Ríos y Santa Fe (y al que adhirieron progresivamente otras provincias), estableció una <strong>Comisión Representativa de los gobiernos del Litoral</strong> con sede en Santa Fe. El Acuerdo de San Nicolás de 1852 retomó esta tradición y convocó al Congreso Constituyente "en los términos del Pacto Federal de 1831". Por eso Santa Fe es la <strong>cuna del federalismo argentino moderno</strong>, no solo en lo simbólico sino en lo institucional.</p>
+      </div>
+
+      <p>Tras la sanción de la Constitución Nacional, Santa Fe inició su propio proceso constituyente provincial, conforme al mandato del Artículo 5 de la Constitución Nacional que obligaba a cada provincia a darse su propia constitución dentro del marco federal.</p>
+    </div>
+
+    <div class="seccion" id="constitucion-1856">
+      <div class="seccion-num">02 · La Constitución de 1856</div>
+      <h2>La <em>primera Constitución</em> provincial</h2>
+
+      <p>La primera Constitución provincial santafesina fue sancionada el <strong>27 de septiembre de 1856</strong>, en plena fase de organización nacional bajo la Confederación Argentina (Buenos Aires aún estaba separada del resto del país tras los sucesos de septiembre de 1852). El gobernador era Domingo Crespo, y el texto reflejó la filosofía liberal-republicana dominante en la generación del 53.</p>
+
+      <p>El texto de 1856 estableció:</p>
+
+      <ul>
+        <li>El <strong>sistema representativo, republicano y federal</strong>, en sintonía con el Artículo 5 de la Constitución Nacional.</li>
+        <li>Un <strong>Poder Legislativo unicameral</strong> (Sala de Representantes), composición que sería modificada en 1872.</li>
+        <li>Un <strong>Poder Ejecutivo unipersonal</strong>, ejercido por el Gobernador.</li>
+        <li>Un <strong>Poder Judicial</strong> organizado por la Legislatura.</li>
+        <li>Garantías individuales y derechos políticos clásicos del liberalismo decimonónico.</li>
+      </ul>
+
+      <p>La Constitución de 1856 tendría vigencia hasta la importante reforma de 1872, que reorganizaría sustantivamente las instituciones provinciales.</p>
+    </div>
+
+    <div class="seccion" id="constitucion-1872">
+      <div class="seccion-num">03 · La reforma de 1872</div>
+      <h2>El nacimiento del <em>bicameralismo</em> santafesino</h2>
+
+      <p>El <strong>23 de marzo de 1872</strong>, durante la gobernación de Simón de Iriondo, se sancionó una nueva Constitución provincial que introdujo cambios estructurales determinantes para el régimen institucional santafesino. Las innovaciones más importantes fueron:</p>
+
+      <ul>
+        <li><strong>Creación del cargo de Vicegobernador</strong>, con la función de presidir el Senado y reemplazar al Gobernador en sus ausencias.</li>
+        <li><strong>División del Poder Legislativo en dos cámaras</strong>: una de Diputados (electos en proporción a la población) y otra de Senadores (dos por departamento).</li>
+        <li><strong>Reorganización del régimen municipal</strong>: las autoridades municipales se compondrían de dos consejos, uno ejecutor (intendencia) y otro deliberante.</li>
+        <li><strong>Robustecimiento de las garantías individuales</strong> y de los derechos políticos.</li>
+      </ul>
+
+      <p>La estructura institucional definida en 1872 —Ejecutivo con Vicegobernador presidiendo el Senado, Legislatura bicameral, régimen municipal con dos órganos— sería el esqueleto institucional que pervivió, con modificaciones, hasta la reforma de 2025. Es decir, la arquitectura básica santafesina cumplió <strong>más de 150 años</strong>.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La duración de la arquitectura de 1872</div>
+        <p>Aunque las reformas posteriores (1900, 1907, 1949, 1962, 2025) modificaron muchos aspectos sustantivos, el esqueleto institucional bicameral establecido en 1872 se mantuvo intacto: Cámara de Diputados + Cámara de Senadores (con un senador o dos por departamento, dependiendo de la versión). Ni siquiera la reforma de 2025 modificó esta estructura, a pesar de las propuestas opositoras de unicameralización (en línea con Córdoba).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="reformas-tempranas">
+      <div class="seccion-num">04 · Reformas 1900-1921</div>
+      <h2>Las <em>reformas tempranas</em> del siglo XX</h2>
+
+      <p>Entre 1900 y 1921, Santa Fe vivió un período de reformas constitucionales relativamente frecuentes, característico de la fase de consolidación institucional argentina:</p>
+
+      <h3>La reforma de 1900</h3>
+
+      <p>La reforma de 1900 introdujo modificaciones importantes pero acotadas al sistema institucional provincial. Mantuvo la estructura básica de 1872 y modernizó aspectos del régimen electoral y del Poder Judicial.</p>
+
+      <h3>La reforma de 1907</h3>
+
+      <p>La reforma de 1907 profundizó las modernizaciones, particularmente en el ámbito de los derechos civiles y políticos, y reorganizó algunos aspectos del régimen municipal.</p>
+
+      <h3>La Constitución de 1921: la que no fue</h3>
+
+      <p>El caso más singular es el de la <strong>Constitución de 1921</strong>, sancionada por una Convención Constituyente provincial pero <strong>nunca promulgada</strong>. El Presidente de la Nación, Hipólito Yrigoyen, decretó la intervención federal a Santa Fe argumentando irregularidades en el proceso constituyente, y la nueva Constitución quedó sin efecto jurídico. La provincia retomó el texto de 1907 como norma constitucional vigente.</p>
+
+      <p>El episodio de 1921 marcó un precedente: las reformas constitucionales provinciales requerían no solo el cumplimiento procedimental, sino también la concordancia con el orden político nacional. Esta tensión se volvería a manifestar en intentos reformistas posteriores.</p>
+    </div>
+
+    <div class="seccion" id="peronismo-1949">
+      <div class="seccion-num">05 · La constitución peronista</div>
+      <h2>La <em>reforma de 1949</em> y su derogación</h2>
+
+      <p>En 1949, en sintonía con la Reforma Constitucional Nacional del peronismo, Santa Fe encaró su propia reforma provincial. La <strong>quinta disposición transitoria</strong> de la Constitución Nacional reformada habilitaba a las provincias a reformar sus textos en un plazo de tres meses.</p>
+
+      <p>El proceso santafesino tuvo una particularidad: tras una intervención federal en el verano de 1949 y elecciones posteriores que consagraron al peronismo provincial, se reunió a la Legislatura provincial en función constituyente. La Convención —liderada por el justicialismo— llevó adelante las reformas a pesar de la oposición del radicalismo provincial, principal oposición política de la época. El nuevo texto estableció:</p>
+
+      <ul>
+        <li>El <strong>voto directo</strong> para el cargo de Gobernador (antes era indirecto vía electores).</li>
+        <li>Una duración del mandato de <strong>seis años</strong> (no cuatro como antes).</li>
+        <li>La <strong>no reelección inmediata</strong> del cargo de Gobernador.</li>
+        <li>Incorporación de los <strong>derechos sociales</strong> del constitucionalismo peronista: derechos del trabajador, de la familia, de la ancianidad.</li>
+        <li>Mecanismos de <strong>función social de la propiedad</strong>.</li>
+      </ul>
+
+      <p>La Constitución provincial de 1949 tuvo vigencia hasta 1956, cuando el gobierno de la Revolución Libertadora derogó por decreto todas las constituciones reformadas durante el peronismo. Santa Fe volvió a regirse por el texto previo (la Constitución de 1907 con sus modificaciones), que estaría vigente hasta la nueva reforma de 1962.</p>
+    </div>
+
+    <div class="seccion" id="constitucion-1962">
+      <div class="seccion-num">06 · La Constitución de 1962</div>
+      <h2>"La Constitución de la <em>gobernabilidad</em>"</h2>
+
+      <p>El 14 de abril de 1962, en pleno contexto de inestabilidad institucional argentina (el gobierno de Arturo Frondizi había sido depuesto el 29 de marzo de 1962), la Convención Constituyente santafesina sancionó una nueva Constitución provincial. La doctrina constitucional posterior la conoce como <strong>"la Constitución de la gobernabilidad"</strong> por dos razones principales: el contexto político en el que se sancionó y la <strong>cláusula mayoritaria</strong> que estableció en la composición de la Cámara de Diputados.</p>
+
+      <h3>El contexto político de 1962</h3>
+
+      <p>La reforma de 1962 se desarrolló en un contexto político particularmente difícil. El presidente Frondizi había sido derrocado el 29 de marzo de 1962, y la provincia de Santa Fe fue intervenida federalmente el 24 de abril. Pero un decreto posterior estableció que la intervención no afectaba la elección de convencionales constituyentes, que ya estaba en marcha. Por eso la Constitución reformada pudo sancionarse, con el rol fundamental del diario <em>El Litoral</em> en la difusión del texto para asegurar legitimidad social.</p>
+
+      <h3>La cláusula 28-22</h3>
+
+      <p>El rasgo más distintivo de la Constitución de 1962 fue la <strong>cláusula mayoritaria</strong> para la composición de la Cámara de Diputados, establecida en el Artículo 32 del texto. La cláusula establecía:</p>
+
+      <div class="cita">
+        "La Cámara de Diputados se compone de cincuenta miembros elegidos directamente por el pueblo, formando al efecto la Provincia un solo distrito, correspondiendo veintiocho diputados al partido que obtenga mayor número de votos y veintidós a los demás partidos, en proporción de los sufragios que hubieren logrado."
+        <span class="cita-fuente">— Constitución de la Provincia de Santa Fe (1962), Artículo 32. Vigente hasta la reforma de 2025.</span>
+      </div>
+
+      <p>El mecanismo era inédito en el constitucionalismo argentino: el partido más votado obtenía automáticamente <strong>28 de las 50 bancas</strong> (el 56%), aunque su porcentaje de votos fuera menor. Las restantes 22 bancas se distribuían proporcionalmente entre las demás fuerzas según los sufragios obtenidos. El objetivo era garantizar <strong>mayorías parlamentarias estables</strong> que favorecieran la gobernabilidad del Ejecutivo, frente a los escenarios de fragmentación legislativa que caracterizaban a la política argentina de los años 50.</p>
+
+      <p>La cláusula 28-22 generaba paradojas notables: un partido que obtenía el 33-35% de los votos podía quedarse con el 56% de las bancas, mientras que otro con el 28% podía obtener apenas el 18% de las bancas. En contextos de polarización entre dos grandes fuerzas, el efecto era moderado; en contextos de fragmentación con varias fuerzas mediano-bajas, la asimetría se acentuaba.</p>
+
+      <h3>Otros rasgos de la Constitución de 1962</h3>
+
+      <p>Más allá de la cláusula mayoritaria, la Constitución de 1962 estableció:</p>
+
+      <ul>
+        <li><strong>Bicameralismo</strong>: Cámara de Diputados (50 miembros) + Cámara de Senadores (uno por departamento, a la fecha 19 senadores).</li>
+        <li><strong>Prohibición de reelección del Gobernador</strong>: cuatro años de mandato sin posibilidad de reelección inmediata.</li>
+        <li><strong>Reelegibilidad ilimitada de Diputados y Senadores</strong> (sin tope de mandatos consecutivos).</li>
+        <li><strong>Régimen municipal acotado</strong>: distinción entre Municipios (>10.000 habitantes) y Comunas (<10.000), sin autonomía constitucional plena, sin posibilidad de cartas orgánicas.</li>
+        <li><strong>Período de sesiones ordinarias</strong>: del 1° de mayo al 31 de octubre (uno de los más cortos del país, sólo 6 meses).</li>
+        <li><strong>Catálogo de derechos sociales</strong>: incorporación de derechos del trabajo, salud, seguridad social, familia, racional explotación de la tierra, desarrollo rural.</li>
+        <li><strong>Derecho de amparo</strong>: garantía judicial expresa, anticipando la Constitución Nacional reformada en 1994.</li>
+      </ul>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Constitución de 1962</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción</div>
+            <div class="ficha-valor">14 de abril de 1962</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Vigencia</div>
+            <div class="ficha-valor"><strong>63 años</strong> (1962-2025)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Cláusula central</div>
+            <div class="ficha-valor"><strong>Mayoritaria 28-22</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Reelección Gobernador</div>
+            <div class="ficha-valor">No habilitada</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Régimen municipal</div>
+            <div class="ficha-valor">Sin autonomía plena</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Reemplazada por</div>
+            <div class="ficha-valor">Constitución de 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="intentos-fallidos">
+      <div class="seccion-num">07 · Cuatro intentos fallidos</div>
+      <h2>Décadas de <em>reformas frustradas</em></h2>
+
+      <p>Entre 1983 (restauración democrática) y 2025 (sanción de la nueva Constitución), Santa Fe vivió <strong>cuatro grandes intentos de reforma constitucional</strong>, todos ellos fallidos. Esta secuencia de frustraciones es uno de los rasgos más singulares del federalismo argentino post-democrático: Santa Fe se convirtió en una de las provincias más resistentes al cambio constitucional, a pesar de que prácticamente todas las demás provincias grandes reformaron sus textos durante este período.</p>
+
+      <h3>Los cuatro intentos</h3>
+
+      <p>Los cuatro intentos previos a 2025 estuvieron asociados a distintos gobernadores y a distintos espacios políticos, lo que sugiere que la resistencia a la reforma no era patrimonio de un signo partidario:</p>
+
+      <ul>
+        <li><strong>Carlos Reutemann</strong> (gobernador 1991-1995 y 1999-2003): impulsó intentos reformistas que no prosperaron por falta de consensos.</li>
+        <li><strong>Jorge Obeid</strong> (gobernador 1995-1999 y 2003-2007): también promovió iniciativas de reforma que no obtuvieron las mayorías necesarias.</li>
+        <li><strong>Hermes Binner</strong> (gobernador 2007-2011): el primer gobernador socialista de una provincia argentina, intentó la reforma como parte de la modernización institucional impulsada por el Frente Progresista Cívico y Social.</li>
+        <li><strong>Miguel Lifschitz</strong> (gobernador 2015-2019): continuó la línea reformista del socialismo santafesino, también sin éxito.</li>
+      </ul>
+
+      <p>Las razones de los fracasos fueron variadas: falta de mayorías parlamentarias para la Ley de Necesidad de la Reforma, oposición de sectores políticos beneficiados por el texto vigente (especialmente la cláusula 28-22), resistencias del Senado provincial (que veía amenazada su composición y su capacidad de reelección ilimitada), y la complejidad de construir consensos en una provincia con identidades políticas regionales fuertes y diferenciadas (Rosario vs Santa Fe Capital vs el interior).</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La singularidad santafesina</div>
+        <p>Entre las cuatro provincias más grandes del país, Santa Fe fue <strong>la última en lograr una reforma constitucional democrática</strong>. Buenos Aires reformó su Constitución en 1994 (en simultáneo con la Reforma Nacional), Córdoba en 1987 y 2001, Mendoza en 1916 (con modificaciones puntuales posteriores), y Santa Fe recién en 2025 - 63 años después de la reforma de 1962. Esta lentitud reformista tiene varias explicaciones: las propias trabas constitucionales (mayorías agravadas, procesos complejos), la cláusula 28-22 (que ningún partido en mayoría quería resignar), y los equilibrios políticos provinciales construidos durante seis décadas alrededor de la "Constitución de la gobernabilidad".</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="reforma-2025">
+      <div class="seccion-num">08 · La gran reforma 2025</div>
+      <h2>El <em>quinto intento</em> exitoso</h2>
+
+      <p>El gobernador <strong>Maximiliano Pullaro</strong> (en ejercicio desde diciembre de 2023) logró lo que sus cuatro antecesores no habían podido: sancionar una nueva Constitución provincial. La <strong>Ley de Necesidad de la Reforma</strong> fue sancionada en diciembre de 2024, con apoyo mayoritario en la Legislatura, y la Convención Reformadora sesionó entre julio y septiembre de 2025.</p>
+
+      <h3>La Convención Reformadora</h3>
+
+      <p>La Convención Reformadora estuvo integrada por <strong>69 convencionales</strong> elegidos por el cuerpo electoral santafesino. Su presidente fue <strong>Felipe Michlig</strong>, dirigente del oficialismo provincial. La Convención sesionó durante <strong>dos meses</strong>, organizada en <strong>cinco comisiones temáticas</strong>, y recibió más de 700 propuestas ciudadanas a través de los mecanismos de participación previstos en el reglamento.</p>
+
+      <p>El proceso fue notable por su <strong>carácter dialógico</strong>. A diferencia de otras reformas constitucionales argentinas (donde las mayorías oficialistas imponen el texto), la reforma santafesina buscó incorporar perspectivas de distintos sectores. La aprobación del texto final tuvo:</p>
+
+      <ul>
+        <li><strong>52 votos a favor</strong> (mayoría amplia que incluyó a varios sectores opositores).</li>
+        <li><strong>17 votos en contra</strong> (principalmente de La Libertad Avanza y Somos Vida y Familia).</li>
+        <li><strong>59 firmas</strong> en el texto sancionado (incluyendo 7 de los que votaron en contra, en señal de respaldo institucional al proceso).</li>
+      </ul>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Reforma constitucional 2025</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Ley de Necesidad</div>
+            <div class="ficha-valor">Sancionada diciembre 2024</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Convencionales</div>
+            <div class="ficha-valor"><strong>69 miembros</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Presidente Convención</div>
+            <div class="ficha-valor">Felipe Michlig</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Duración deliberaciones</div>
+            <div class="ficha-valor">Dos meses (julio-septiembre)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción del texto</div>
+            <div class="ficha-valor"><strong>10 de septiembre de 2025</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Publicación BO</div>
+            <div class="ficha-valor">11 de septiembre de 2025</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Votos a favor / en contra</div>
+            <div class="ficha-valor">52 a favor · 17 en contra</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Estructura del texto</div>
+            <div class="ficha-valor">161 artículos · 27 transitorias</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>La jura del texto</h3>
+
+      <p>El <strong>12 de septiembre de 2025</strong>, se realizó la ceremonia de jura de la nueva Constitución. Los convencionales, las autoridades de los tres poderes provinciales y el Gobernador Pullaro juraron el texto. En particular, Pullaro juró dos veces: primero como convencional reformador y luego, en la explanada de la Legislatura, como Gobernador de la Provincia. También juraron la Vicegobernadora Gisela Scaglia, la Presidenta de la Cámara de Diputados Clara García y los miembros de la Corte Suprema. La ceremonia se replicó en distintas localidades durante los 30 días siguientes, con promesas de lealtad por parte de estudiantes y docentes de toda la provincia.</p>
+    </div>
+
+    <div class="seccion" id="cambios-clave">
+      <div class="seccion-num">09 · Los cambios clave</div>
+      <h2>Lo que <em>cambia</em> con la reforma</h2>
+
+      <p>La reforma de 2025 introdujo cambios estructurales en varios ejes simultáneamente. El nuevo texto tiene <strong>161 artículos</strong> (frente a unos 116 del texto de 1962), de los cuales <strong>42 fueron modificados</strong> y <strong>46 son completamente nuevos</strong>. Se sumaron 27 cláusulas transitorias para administrar la implementación de los cambios.</p>
+
+      <h3>Cambios en el régimen político-electoral</h3>
+
+      <ul>
+        <li><strong>Reelección del Gobernador habilitada</strong>: por primera vez desde 1962, el Gobernador puede reelegirse por un mandato consecutivo. Una cláusula transitoria explícitamente <strong>habilita al actual Gobernador Pullaro</strong> a competir en las elecciones de 2027 (aprobada con el 67% de los votos de los convencionales).</li>
+        <li><strong>Limitación de reelecciones para otros cargos</strong>: por primera vez se limitan las reelecciones de diputados, senadores, intendentes y concejales a un solo mandato consecutivo (antes era ilimitada para Senadores y otros cargos).</li>
+        <li><strong>Fin de la cláusula 28-22</strong>: la Cámara de Diputados pasa a un sistema <strong>proporcional puro</strong> sin garantías de mayoría automática para el partido más votado.</li>
+        <li><strong>Voto a los 16 años en elecciones locales</strong>: incorporación del voto joven con rango constitucional para comicios municipales (a nivel provincial ya estaba habilitado antes).</li>
+        <li><strong>"Ficha limpia"</strong>: ninguna persona condenada por delitos dolosos puede ser candidata a cargos electivos.</li>
+        <li><strong>Revocatoria de mandatos</strong>: incorporación del mecanismo de revocatoria popular para cargos electivos.</li>
+        <li><strong>Eliminación de fueros parlamentarios</strong> en su versión más amplia.</li>
+      </ul>
+
+      <h3>Cambios en el funcionamiento legislativo</h3>
+
+      <ul>
+        <li><strong>Período de sesiones ordinarias ampliado</strong>: del <strong>15 de febrero al 30 de noviembre</strong>, en lugar del 1° de mayo al 31 de octubre. El período se amplía de 6 a más de 9 meses, uno de los más extensos del país.</li>
+        <li><strong>Iniciativa popular, referéndum, revocatoria de mandato</strong> ampliados constitucionalmente.</li>
+      </ul>
+
+      <h3>Cambios en el régimen municipal</h3>
+
+      <ul>
+        <li><strong>Autonomía municipal plena</strong>: reconocimiento explícito de las cinco dimensiones (institucional, política, administrativa, económica y financiera), en sintonía con el Artículo 123 CN y con el modelo cordobés.</li>
+        <li><strong>Cartas orgánicas</strong> habilitadas para localidades de más de 10.000 habitantes.</li>
+        <li><strong>Desaparece la figura de Comuna</strong>: todos los núcleos de población se denominarán "Municipios" en lo sucesivo. La nueva Ley Orgánica de Municipios (en discusión legislativa) confirmará la fusión.</li>
+        <li><strong>Plazos para la sanción de leyes orgánicas clave</strong>: la Legislatura tiene plazos concretos (típicamente 2 años) para sancionar la Ley de Coparticipación Municipal y la nueva Ley Orgánica de Municipios.</li>
+      </ul>
+
+      <h3>Cambios en el Poder Judicial</h3>
+
+      <ul>
+        <li><strong>Constitucionalización del Ministerio Público de la Acusación (MPA)</strong> y del <strong>Servicio Público Provincial de Defensa Penal (SPPDP)</strong> como órganos extra-poder.</li>
+        <li><strong>Consejo Asesor para la selección de jueces</strong>: nuevo organismo independiente para la designación de magistrados.</li>
+        <li><strong>Edad límite de 75 años</strong> para los miembros de la Corte Suprema de Justicia provincial.</li>
+        <li><strong>Reformas al sistema de procesos judiciales</strong> para adecuarlo a las nuevas garantías constitucionales.</li>
+      </ul>
+
+      <h3>Cambios en derechos y garantías</h3>
+
+      <ul>
+        <li><strong>Derechos digitales</strong>: reconocimiento constitucional de derechos vinculados a las nuevas tecnologías, identidad digital, protección de datos.</li>
+        <li><strong>Laicidad del Estado</strong>: separación constitucional de la organización del Estado de cualquier credo religioso (no se establece religión oficial).</li>
+        <li><strong>Medidas de acción positiva</strong> contra desigualdades estructurales.</li>
+        <li><strong>Seguridad pública como derecho constitucional</strong>: una innovación notable, que constitucionaliza el derecho de los habitantes a la seguridad pública.</li>
+        <li><strong>Derechos de las víctimas de delitos</strong> con rango constitucional.</li>
+        <li><strong>Ampliación del derecho a voto de los extranjeros</strong>: extensión de las condiciones para que extranjeros residentes voten en elecciones provinciales y municipales.</li>
+        <li><strong>Reglas de ética pública</strong>: declaraciones patrimoniales obligatorias, límites a inmunidades, transparencia en la gestión.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La implementación pendiente</div>
+        <p>El nuevo texto constitucional <strong>ya está en vigencia</strong> desde su publicación en el Boletín Oficial el 11 de septiembre de 2025. Pero la implementación efectiva de buena parte de los cambios está sujeta a la <strong>sanción de leyes reglamentarias</strong>. La Convención estableció plazos concretos para varias de estas leyes clave, incluyendo la nueva Ley Orgánica de Municipios (que ya tiene un proyecto en discusión legislativa), la Ley de Coparticipación Municipal, y las normas que adecúen el Poder Judicial al nuevo régimen institucional. Los próximos años serán decisivos para verificar si las reformas constitucionales se traducen en políticas concretas.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Nueva Constitución de la Provincia de Santa Fe</strong> (2025). Sancionada el 10 de septiembre de 2025, publicada en el Boletín Oficial el 11 de septiembre de 2025. Disponible en santafe.gob.ar.</li>
+        <li><strong>Constitución de la Provincia de Santa Fe</strong> (1962). Texto vigente hasta el 11 de septiembre de 2025. Disponible en congreso.gob.ar/constituciones.</li>
+        <li><strong>Convención Reformadora de Santa Fe</strong>. Sitio oficial: santafe.gob.ar/ms/reforma-constitucion. Documentos, dictámenes, versiones taquigráficas.</li>
+        <li><strong>Pacto Federal del 4 de enero de 1831</strong>. Firmado por Buenos Aires, Entre Ríos y Santa Fe. Antecedente del Congreso Constituyente de 1853.</li>
+        <li><strong>Constitución Nacional de 1853</strong>. Sancionada el 1° de mayo de 1853 en el Cabildo de Santa Fe. Diputados santafesinos: Manuel Leiva (vicepresidente del Congreso) y Juan Manuel Seguí.</li>
+        <li><strong>Constitución Nacional</strong>. Artículo 5 (sistema representativo de las provincias), Artículo 123 (autonomía municipal).</li>
+        <li><strong>Ley Provincial de Necesidad de la Reforma Constitucional</strong> (diciembre 2024). Texto que habilitó la Convención Reformadora 2025.</li>
+        <li><strong>El Litoral</strong> (Santa Fe). Cobertura periodística histórica del proceso constituyente, desde 1962 hasta 2025.</li>
+        <li><strong>Infobae · "Cuáles son los principales cambios que se impulsaron para la nueva Constitución de Santa Fe"</strong> (9 de septiembre de 2025).</li>
+        <li><strong>Pausa Santa Fe · "Reforma de la Constitución: una nueva arquitectura de reparto del poder"</strong> (diciembre 2025).</li>
+        <li><strong>Espacio de Estudios Interdisciplinarios sobre Asuntos Públicos (ESEIAP)</strong>. Análisis institucional de la reforma 2025.</li>
+        <li><strong>Política de Santa Fe · "Así es el texto de la nueva Constitución de Santa Fe"</strong> (septiembre 2025).</li>
+        <li><strong>Cabildo Histórico de Santa Fe</strong>. Sede del Congreso Constituyente de 1853.</li>
+        <li><strong>Historia de Santa Fe</strong>. Documentos compilados sobre el período 1853-1912. atesantafe.com.ar.</li>
+      </ul>
+    </div>
+
+    <a href="santa-fe-poderes.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.03.02</div>
+        <h3>Los tres <em>poderes</em> provinciales</h3>
+        <p>El régimen institucional vigente tras la reforma de 2025: el Gobernador con una reelección habilitada, la Legislatura bicameral con 50 Diputados (proporcional puro, sin la cláusula 28-22) y 19 Senadores departamentales, la Corte Suprema con edad límite de 75 años. Los nuevos órganos extra-poder.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

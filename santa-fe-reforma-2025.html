@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Santa Fe · Reforma Constitucional 2025 (10.03.05) — Educación Cívica</title>
+<meta name="description" content="La reforma constitucional santafesina de 2025: la primera en 63 años. Sancionada el 10 de septiembre de 2025 con 52 votos a favor y 17 en contra, jurada el 12 de septiembre. 161 artículos y 27 cláusulas transitorias. Análisis completo del proceso, los actores y los cambios introducidos.">
+<link rel="canonical" href="https://educacioncivica.com.ar/santa-fe-reforma-2025.html">
+
+<meta property="og:title" content="Santa Fe · Reforma Constitucional 2025">
+<meta property="og:description" content="Análisis de la primera reforma constitucional santafesina en 63 años: proceso, actores, cambios y debates.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/santa-fe-reforma-2025.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.03.05</strong> de la sección Santa Fe en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="santa-fe-en-profundidad.html">Santa Fe</a> ·
+      <span>Reforma 2025</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.03.05 · Estudio provincial</div>
+    <h1 class="page-title">Reforma Constitucional <em>2025</em></h1>
+    <div class="page-subtitulo">— Primera reforma en 63 años · Sancionada 10 sept · Jurada 12 sept</div>
+    <p class="page-intro">El 10 de septiembre de 2025, la Convención Reformadora de Santa Fe sancionó —con <strong>52 votos a favor y 17 en contra</strong>— el texto definitivo de la nueva Constitución provincial. Dos días después, el 12 de septiembre, las autoridades de los tres poderes juraron el nuevo texto. Era la <strong>primera reforma constitucional santafesina en 63 años</strong>, después del fracaso de los <strong>cuatro intentos anteriores</strong> (1991, 1994, 2001, 2008) y de seis décadas de vigencia ininterrumpida del texto de 1962, el <strong>período más largo</strong> de vigencia de una Carta Magna provincial en toda la historia institucional santafesina. El nuevo texto está compuesto por un preámbulo, <strong>161 artículos</strong> (42 reformados + 46 nuevos, sobre los 88 totales del texto original) y <strong>27 cláusulas transitorias</strong>. Este capítulo cierra el estudio santafesino con el análisis completo del proceso, los actores, los cambios introducidos y las críticas planteadas.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">63</div>
+        <div class="page-stat-label">Años con Constitución 1962</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">52-17</div>
+        <div class="page-stat-label">Votación sanción (10 sept 2025)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">161</div>
+        <div class="page-stat-label">Artículos texto definitivo</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">19</div>
+        <div class="page-stat-label">Leyes complementarias necesarias</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#sesenta-y-tres-anos">01 · Sesenta y tres años con la 1962</a></li>
+      <li><a href="#ley-14384">02 · La Ley 14.384 de necesidad</a></li>
+      <li><a href="#eleccion-convencionales">03 · Elección de convencionales</a></li>
+      <li><a href="#convencion">04 · La Convención Reformadora</a></li>
+      <li><a href="#sancion">05 · La sanción del nuevo texto</a></li>
+      <li><a href="#innovaciones">06 · Las grandes innovaciones</a></li>
+      <li><a href="#lifschitz">07 · Lifschitz, presidente honorario</a></li>
+      <li><a href="#criticas">08 · Críticas y debates</a></li>
+      <li><a href="#lo-que-viene">09 · Lo que viene</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="sesenta-y-tres-anos">
+      <div class="seccion-num">01 · Sesenta y tres años con la 1962</div>
+      <h2>La Constitución <em>más longeva</em> de Santa Fe</h2>
+
+      <p>Cuando la Convención Reformadora sancionó el nuevo texto el 10 de septiembre de 2025, la Constitución de Santa Fe de 1962 acumulaba <strong>63 años y 149 días</strong> de vigencia ininterrumpida. Era el período más largo de vigencia de cualquier Carta Magna provincial en la historia institucional santafesina, superando con creces a sus predecesoras: la Constitución de 1856 (vigente formalmente 41 años, hasta 1900, aunque con reformas parciales en el medio), la de 1900 (vigente 21 años), la de 1921 (vigente 28 años) y la peronista de 1949 (vigente apenas 7 años, derogada en 1956).</p>
+
+      <p>Esta longevidad no es accidental. Refleja una característica histórica de la política santafesina: la <strong>extrema dificultad para construir consensos reformistas</strong> en una provincia donde las fuerzas políticas están equilibradas y donde el sistema electoral —con su cláusula de gobernabilidad 28-22— ha tendido a producir gobiernos divididos entre Ejecutivo y Cámara de Diputados con frecuencia.</p>
+
+      <h3>Los cuatro intentos fallidos</h3>
+
+      <p>El capítulo de historia constitucional (10.03.01) documentó los <strong>cuatro intentos previos</strong> de reforma constitucional que fracasaron:</p>
+
+      <ul>
+        <li><strong>1991</strong> · Ley de necesidad sancionada bajo el gobierno de Víctor Reviglio. La elección de convencionales se realizó pero la Convención no pudo sesionar por impugnaciones judiciales.</li>
+        <li><strong>1994</strong> · Intento bajo el gobierno de Jorge Obeid (PJ). No logró las mayorías legislativas necesarias.</li>
+        <li><strong>2001</strong> · Intento bajo el segundo gobierno de Carlos Reutemann (PJ). Avanzó hasta una propuesta de texto pero no se concretó la convocatoria.</li>
+        <li><strong>2008</strong> · Intento bajo el gobierno de Hermes Binner (PS-Frente Progresista). La ley se sancionó pero el oficialismo no logró acuerdo amplio para concretar la reforma.</li>
+      </ul>
+
+      <p>Otros intentos parciales se produjeron durante los gobiernos posteriores (Bonfatti, Lifschitz, Perotti), siempre con el mismo resultado: la imposibilidad de articular las mayorías legislativas requeridas para sancionar la <strong>ley de necesidad de reforma</strong>. La fórmula constitucional santafesina exige dos tercios de los miembros de cada Cámara para declarar la necesidad, lo que en un sistema con cláusula 28-22 (que produce gobiernos divididos con frecuencia) se vuelve un cerrojo casi infranqueable.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué Pullaro sí pudo?</div>
+        <p>El gobierno de Maximiliano Pullaro (Unidos para Cambiar Santa Fe, asumido en diciembre de 2023) logró articular una mayoría política excepcional para sancionar la ley de necesidad de reforma en diciembre de 2024. Tres factores explican el éxito: <strong>(1)</strong> un oficialismo provincial cohesionado con mayoría en Diputados (cláusula 28-22 todavía vigente) y bloque robusto en Senadores; <strong>(2)</strong> apoyo de bloques aliados (Frente de la Esperanza, parte del PJ provincial); <strong>(3)</strong> un consenso social amplio sobre la <strong>necesidad de modernizar</strong> un texto de 1962 que había quedado desfasado respecto de la realidad institucional argentina (especialmente después de la reforma de la CN de 1994).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-14384">
+      <div class="seccion-num">02 · La Ley 14.384 de Necesidad</div>
+      <h2>El <em>marco habilitante</em> de la reforma</h2>
+
+      <p>El <strong>6 de diciembre de 2024</strong>, la Legislatura provincial sancionó la <strong>Ley 14.384 de Declaración de la Necesidad de Reforma Constitucional</strong>. Esta ley es el marco habilitante del proceso reformista posterior. Sin esta ley, la Convención Reformadora no podría haber sido convocada ni habría tenido la competencia para reformar el texto.</p>
+
+      <h3>Qué habilitó la ley</h3>
+
+      <p>La Ley 14.384 estableció con precisión jurídica el alcance de la reforma. Sus principios clave:</p>
+
+      <ul>
+        <li><strong>42 artículos habilitados para reforma</strong> (sobre los 116 del texto original de 1962): identificados nominalmente en el articulado de la ley.</li>
+        <li><strong>Habilitación para incorporar nuevos artículos</strong>: la Convención podía agregar artículos en las materias habilitadas.</li>
+        <li><strong>Habilitación para incorporar cláusulas transitorias</strong>: para la implementación de las reformas, siempre que no desnaturalicen el sentido de las modificaciones.</li>
+        <li><strong>Eliminación de la confesionalidad</strong>: la ley habilitó la modificación del artículo que establecía la confesionalidad del Estado, reafirmando la separación entre el orden civil y los órdenes religiosos.</li>
+        <li><strong>Incorporación de instrumentos internacionales</strong>: similar al Artículo 75 inciso 22 de la Constitución Nacional reformada en 1994.</li>
+        <li><strong>Nulidad absoluta</strong> de las modificaciones que excedan la competencia establecida en el artículo 2 de la ley.</li>
+      </ul>
+
+      <h3>El régimen de elección de convencionales</h3>
+
+      <p>La Ley 14.384 estableció un sistema electoral mixto para la elección de los convencionales:</p>
+
+      <ul>
+        <li><strong>50 convencionales</strong> elegidos por sistema de <strong>representación proporcional</strong>, constituyendo la provincia como un distrito único.</li>
+        <li><strong>19 convencionales</strong> elegidos por <strong>circunscripción uninominal</strong> (uno por cada uno de los 19 departamentos), con sus respectivos suplentes.</li>
+        <li><strong>Total: 69 convencionales</strong> (no incluye suplentes).</li>
+        <li><strong>Paridad de género</strong> obligatoria en todas las listas.</li>
+        <li><strong>Boleta Única</strong>: se utilizó el sistema de BU santafesina (Ley 13.156), distinguiéndose claramente las dos categorías de convencionales.</li>
+        <li><strong>Elección simultánea con las PASO santafesinas</strong>: la elección de convencionales se realizó conjuntamente con las elecciones primarias provinciales del 13 de abril de 2025.</li>
+      </ul>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Ley 14.384</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Fecha de sanción</div>
+            <div class="ficha-valor"><strong>6 de diciembre de 2024</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Artículos habilitados</div>
+            <div class="ficha-valor">42 de los 116 originales</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Convencionales</div>
+            <div class="ficha-valor">69 (50 proporcionales + 19 departamentales)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Mayoría requerida</div>
+            <div class="ficha-valor">Dos tercios de cada Cámara</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Fecha de elección</div>
+            <div class="ficha-valor">13 de abril de 2025 (con PASO)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Plazo Convención</div>
+            <div class="ficha-valor">90 días (luego prorrogados)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="eleccion-convencionales">
+      <div class="seccion-num">03 · La elección de convencionales</div>
+      <h2>El <em>13 de abril de 2025</em></h2>
+
+      <p>El <strong>13 de abril de 2025</strong>, los santafesinos votaron simultáneamente en dos categorías electorales: las PASO provinciales (para precandidatos a cargos provinciales que se elegirían en 2025) y la elección de los 69 Convencionales Constituyentes. La doble convocatoria fue diseñada deliberadamente para <strong>aumentar la participación</strong> y para asociar la elección de convencionales con un acto electoral más conocido por la ciudadanía.</p>
+
+      <h3>Los bloques electos</h3>
+
+      <p>Los resultados de la elección produjeron la siguiente composición aproximada en la Convención (los datos pueden variar según las fuentes en cuanto a divisiones internas, pero los bloques principales son los siguientes):</p>
+
+      <ul>
+        <li><strong>Unidos para Cambiar Santa Fe</strong> (oficialismo): coalición de la UCR, el PRO, el PS y otros partidos provinciales. Logró aproximadamente 33-35 convencionales, sin alcanzar la mayoría absoluta pero siendo la primera fuerza.</li>
+        <li><strong>Justicialismo (PJ)</strong>: alrededor de 12 convencionales, divididos internamente entre sectores afines al gobierno provincial y sectores opositores.</li>
+        <li><strong>La Libertad Avanza</strong>: aproximadamente 13-14 convencionales, en línea con su crecimiento electoral nacional.</li>
+        <li><strong>Frente de la Esperanza</strong>: 3 convencionales (la lista incluyó a Alejandra "Locomotora" Oliveras, que falleció en el período previo al inicio de las sesiones).</li>
+        <li><strong>Somos Vida</strong> (espacio confesional opuesto a derechos sexuales y reproductivos): convencionales de minoría.</li>
+        <li><strong>Activemos</strong>: 2 convencionales.</li>
+        <li>Otros bloques minoritarios completaron el cuerpo.</li>
+      </ul>
+
+      <h3>El caso Alejandra Oliveras</h3>
+
+      <p>La elección de convencionales tuvo un episodio doloroso: <strong>Alejandra "Locomotora" Oliveras</strong>, la histórica boxeadora santafesina, había sido electa por el Frente "Fe" (luego Frente de la Esperanza) y debía asumir su banca el día de la jura de la Convención. <strong>Sufrió un problema de salud grave el día en que iba a jurar</strong> y falleció días después. Su nombre aparece formalmente en la nómina inicial de convencionales en el preámbulo de la ley sancionada como reconocimiento histórico, aunque no participó efectivamente en las sesiones de la Convención.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La elección como termómetro político</div>
+        <p>La elección de convencionales del 13 de abril de 2025 funcionó también como un termómetro político para los comicios provinciales y nacionales posteriores. Confirmó que el oficialismo provincial (Unidos para Cambiar Santa Fe) mantenía una mayoría electoral robusta, pero también que <strong>La Libertad Avanza</strong> había avanzado significativamente en territorio santafesino respecto de elecciones previas. La distribución de bancas anticipó algunos de los alineamientos que se verían en las votaciones posteriores en la Convención.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="convencion">
+      <div class="seccion-num">04 · La Convención Reformadora</div>
+      <h2>Tres meses de <em>trabajo intenso</em></h2>
+
+      <p>La Convención Reformadora se constituyó el <strong>12 de junio de 2025</strong> en la Legislatura provincial. Sesionó durante aproximadamente <strong>tres meses</strong>, hasta la sanción del texto definitivo el 10 de septiembre de 2025. El trabajo se distribuyó en <strong>siete comisiones</strong>: cinco comisiones temáticas que elaboraron dictámenes sobre las distintas materias habilitadas, una Comisión Redactora que compatibilizó los dictámenes en un texto único, y una Comisión de Reglamento y Peticiones que gestionó los procedimientos.</p>
+
+      <h3>Las autoridades</h3>
+
+      <p>La Convención eligió sus autoridades el día de su constitución:</p>
+
+      <ul>
+        <li><strong>Presidente</strong>: Felipe Michlig (UCR, Unidos para Cambiar Santa Fe). Senador provincial y presidente del Senado en ejercicio.</li>
+        <li><strong>Presidente de la Comisión Redactora</strong>: Joaquín Blanco (PS, Unidos para Cambiar Santa Fe).</li>
+        <li><strong>Vicepresidencias y presidencias de comisiones</strong>: distribuidas entre los distintos bloques, incluyendo al peronismo y a Frente de la Esperanza.</li>
+      </ul>
+
+      <h3>Las cinco comisiones temáticas</h3>
+
+      <p>Las cinco comisiones temáticas se ocuparon de los siguientes ejes:</p>
+
+      <ol>
+        <li><strong>Declaraciones, Derechos y Garantías</strong>: incorporación de nuevos derechos (ambiente, género, infancia, adultos mayores, pueblos originarios, derechos digitales), eliminación de la confesionalidad del Estado, jerarquía constitucional de los tratados internacionales de derechos humanos.</li>
+        <li><strong>Régimen Político y Estructura del Poder</strong>: Poder Ejecutivo (reelección), Poder Legislativo (eliminación cláusula 28-22, sistema D'Hondt puro, sesiones ordinarias ampliadas), inmunidades parlamentarias.</li>
+        <li><strong>Régimen Municipal</strong>: autonomía municipal plena, cartas orgánicas, áreas metropolitanas y regiones, coparticipación municipal.</li>
+        <li><strong>Poder Judicial y Organismos Autónomos</strong>: jerarquía constitucional del MPA y del SPPDP, Tribunal de Cuentas, Defensoría del Pueblo, fiscales y defensores.</li>
+        <li><strong>Reforma Constitucional Posterior</strong>: procedimiento para futuras reformas (manteniendo la exigencia de dos tercios de cada Cámara para la ley de necesidad).</li>
+      </ol>
+
+      <h3>El calendario de votación</h3>
+
+      <p>La Convención organizó las votaciones por bloques temáticos en un calendario denso de las últimas dos semanas antes de la sanción definitiva:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Bloque temático</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>27 ago 2025</strong></td>
+              <td>Poder Legislativo y Ejecutivo (con cláusula de reelección)</td>
+            </tr>
+            <tr>
+              <td><strong>29 ago 2025</strong></td>
+              <td>Régimen institucional y funcionamiento del Estado</td>
+            </tr>
+            <tr>
+              <td><strong>1 sept 2025</strong></td>
+              <td>Régimen Municipal</td>
+            </tr>
+            <tr>
+              <td><strong>3 sept 2025</strong></td>
+              <td>Poder Judicial y organismos autónomos</td>
+            </tr>
+            <tr>
+              <td><strong>5 sept 2025</strong></td>
+              <td>Declaraciones, Derechos y Garantías</td>
+            </tr>
+            <tr>
+              <td><strong>10 sept 2025</strong></td>
+              <td><strong>Sanción del texto definitivo en pleno</strong></td>
+            </tr>
+            <tr>
+              <td><strong>12 sept 2025</strong></td>
+              <td>Jura del nuevo texto en la Legislatura</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="seccion" id="sancion">
+      <div class="seccion-num">05 · La sanción del nuevo texto</div>
+      <h2>52 a 17, <em>el 10 de septiembre</em></h2>
+
+      <p>El <strong>10 de septiembre de 2025</strong>, la Convención Reformadora aprobó en pleno el texto definitivo de la nueva Constitución. La votación fue <strong>52 votos a favor y 17 en contra</strong>, superando largamente los dos tercios requeridos para la sanción.</p>
+
+      <h3>La composición de los votos</h3>
+
+      <p>Los 52 votos a favor incluyeron:</p>
+
+      <ul>
+        <li>Los 33-35 convencionales de <strong>Unidos para Cambiar Santa Fe</strong>.</li>
+        <li><strong>7 de los 12 convencionales peronistas</strong>: Rubén Pirola, Armando Traferri, Alcides Calvo, Osvaldo Sosa, Alejandra Rodenas, Jaquelina Balangione y Patricia Boni. Fue el bloque más dividido internamente.</li>
+        <li>Los 2 convencionales de <strong>Activemos</strong>.</li>
+        <li>Los 3 convencionales del <strong>Frente de la Esperanza</strong> (sin contar a Oliveras, fallecida).</li>
+      </ul>
+
+      <p>Los 17 votos en contra correspondieron a:</p>
+
+      <ul>
+        <li><strong>La Libertad Avanza</strong>: los 13-14 convencionales del bloque libertario votaron en bloque contra la reforma.</li>
+        <li><strong>Somos Vida</strong>: el bloque confesional votó en contra (por la incorporación de derechos sexuales y reproductivos en el nuevo texto).</li>
+        <li>Convencionales peronistas disidentes (los 5 restantes que no votaron con los 7 oficialistas internos del PJ).</li>
+      </ul>
+
+      <h3>El texto sancionado</h3>
+
+      <p>El texto definitivo que se sancionó está compuesto por:</p>
+
+      <ul>
+        <li><strong>Un nuevo preámbulo</strong> que reformula los fundamentos de la Carta Magna.</li>
+        <li><strong>161 artículos</strong> (resultado de 42 reformados + 46 nuevos incorporados sobre los 88 totales del texto original; los artículos no habilitados para reforma conservan su numeración).</li>
+        <li><strong>27 cláusulas transitorias</strong> para la implementación gradual de las reformas.</li>
+        <li><strong>La nómina completa de los 69 convencionales</strong> (incluyendo el nombre de Alejandra Oliveras como homenaje póstumo).</li>
+        <li><strong>La firma de los 52 convencionales que votaron a favor</strong> al pie del texto. Los 17 que votaron en contra no firman el texto oficial, según la tradición constitucional argentina.</li>
+      </ul>
+
+      <h3>La jura del 12 de septiembre</h3>
+
+      <p>Dos días después, el <strong>viernes 12 de septiembre de 2025</strong> a las 17:00 horas, se realizó en la Legislatura provincial el acto solemne de jura del nuevo texto. Participaron las máximas autoridades de los tres poderes del Estado provincial, los convencionales constituyentes y las autoridades nacionales presentes. El acto incluyó la entrega a cada convencional de un ejemplar del libro con el nuevo texto y el juramento colectivo de fidelidad y respeto a la nueva Constitución.</p>
+
+      <p>Desde ese momento, la nueva Constitución de Santa Fe entró en vigencia formal. Sin embargo, la implementación efectiva de muchos de sus cambios depende de la sanción de <strong>al menos 19 leyes complementarias</strong> que la Legislatura provincial debe dictar progresivamente.</p>
+    </div>
+
+    <div class="seccion" id="innovaciones">
+      <div class="seccion-num">06 · Las grandes innovaciones</div>
+      <h2>Lo que <em>cambió</em> en el texto</h2>
+
+      <p>El nuevo texto introduce cambios sustanciales en prácticamente todos los grandes ejes institucionales. Veamos los más relevantes.</p>
+
+      <h3>Poder Ejecutivo</h3>
+
+      <ul>
+        <li><strong>Reelección habilitada</strong>: el gobernador y vicegobernador pueden ahora ser <strong>reelectos por un solo período consecutivo</strong>. La Constitución de 1962 prohibía la reelección inmediata. Era una de las pocas provincias argentinas que mantenía esa prohibición (junto con Mendoza, que la conserva).</li>
+        <li><strong>Cláusula transitoria de habilitación</strong>: una cláusula transitoria establece que el mandato 2023-2027 del actual gobernador y vicegobernadora <strong>no se cuenta como primer mandato</strong> a los efectos de la reelección. Esto habilita al actual mandatario a postularse en 2027 si lo decide.</li>
+        <li><strong>Requisitos</strong>: 30 años de edad mínima, 5 años de residencia inmediata y efectiva en la provincia, ciudadanía argentina.</li>
+        <li><strong>Mandato</strong>: 4 años (igual que antes).</li>
+        <li><strong>Prohibición de indultos</strong> en delitos de lesa humanidad, corrupción y violencia de género.</li>
+        <li><strong>Ministros con responsabilidad política</strong> frente a la Legislatura (pueden ser interpelados y se les puede aprobar moción de censura, según las modalidades a definir por ley).</li>
+      </ul>
+
+      <h3>Poder Legislativo</h3>
+
+      <ul>
+        <li><strong>Eliminación de la cláusula 28-22</strong>: la mayoría automática que asignaba 28 bancas a la lista más votada en Diputados queda <strong>eliminada</strong>. Las 50 bancas se distribuirán por <strong>sistema proporcional D'Hondt puro</strong>.</li>
+        <li><strong>Aplicación gradual</strong>: la nueva fórmula entra en vigencia para la elección de Diputados de 2027.</li>
+        <li><strong>Representación territorial obligatoria</strong>: las listas de diputados deberán incorporar al menos un candidato por cada uno de los <strong>19 departamentos</strong> provinciales.</li>
+        <li><strong>Reelección legislativa limitada</strong>: diputados y senadores podrán ser reelectos por <strong>una sola vez consecutiva</strong> (antes la reelección era indefinida).</li>
+        <li><strong>Ampliación del período ordinario</strong> de sesiones: ahora del <strong>15 de febrero al 30 de noviembre</strong> (antes era del 1 de mayo al 31 de octubre).</li>
+        <li><strong>Eliminación de la inmunidad de proceso judicial</strong> de los legisladores. Se mantiene la <strong>inmunidad de opinión</strong> (no pueden ser procesados por sus expresiones en el recinto), pero ya no rige la inmunidad de arresto y proceso por delitos comunes.</li>
+        <li><strong>Refuerzo del control al Ejecutivo</strong> mediante informes periódicos obligatorios y otras herramientas.</li>
+        <li>Diputados: 50 miembros, edad mínima 22 años, residencia mínima 2 años.</li>
+        <li>Senadores: 19 senadores (uno por departamento), edad mínima 25 años.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué es histórica la eliminación de la cláusula 28-22?</div>
+        <p>La <strong>cláusula 28-22</strong> había sido el rasgo más distintivo del sistema legislativo santafesino desde 1962. Garantizaba que la lista más votada en Diputados obtuviera al menos 28 bancas (mayoría absoluta de 50), incluso si su porcentaje no alcanzaba al 50% de los votos. La eliminación de esa cláusula y su reemplazo por D'Hondt puro <strong>cambia profundamente la dinámica política provincial</strong>: ahora las mayorías legislativas deberán construirse a través de coaliciones reales, no como subproducto matemático del sistema electoral. Los partidos que tradicionalmente ganaban con el 35-40% de los votos y obtenían el 56% de las bancas, ahora obtendrán solo el porcentaje que efectivamente lograron.</p>
+      </div>
+
+      <h3>Régimen Municipal (Capítulo 10.03.03)</h3>
+
+      <ul>
+        <li><strong>Autonomía municipal plena</strong>: 5 dimensiones (institucional, política, administrativa, económica, financiera).</li>
+        <li>Municipios con más de 10.000 habitantes pueden dictar <strong>Cartas Orgánicas</strong>.</li>
+        <li>Categorías nuevas: Comisiones Municipales hasta 10.000 hab; Concejos Municipales en localidades mayores.</li>
+        <li><strong>Áreas metropolitanas y regiones</strong> incorporadas a rango constitucional (es la primera vez que se reconocen formalmente).</li>
+        <li>Sistema de coparticipación con remisión automática de fondos a los municipios.</li>
+      </ul>
+
+      <h3>Poder Judicial y organismos autónomos</h3>
+
+      <ul>
+        <li><strong>Ministerio Público de la Acusación (MPA)</strong> a rango constitucional (antes era ley especial).</li>
+        <li><strong>Servicio Público Provincial de Defensa Penal (SPPDP)</strong> a rango constitucional.</li>
+        <li><strong>Defensoría del Pueblo</strong> con jerarquía constitucional.</li>
+        <li>Tribunal de Cuentas con autonomía reforzada.</li>
+        <li>Jueces y fiscales con requisitos de idoneidad reforzados.</li>
+      </ul>
+
+      <h3>Derechos y participación</h3>
+
+      <ul>
+        <li><strong>Eliminación de la confesionalidad del Estado</strong>: separación clara entre orden civil y orden religioso, con reconocimiento de la colaboración entre ambos órdenes con todos los cultos.</li>
+        <li>Incorporación de <strong>instrumentos internacionales de derechos humanos</strong> con jerarquía constitucional (similar al Art. 75 inc. 22 CN).</li>
+        <li><strong>Voto a los 16 años</strong> en elecciones locales (siguiendo el modelo nacional).</li>
+        <li><strong>Iniciativa popular</strong> como mecanismo formal de participación ciudadana.</li>
+        <li><strong>Seguridad pública</strong> como derecho constitucional (nuevo).</li>
+        <li><strong>Ficha limpia</strong>: requisitos de antecedentes para candidatos a cargos electivos (las modalidades específicas las define la ley complementaria).</li>
+        <li>Derechos ambientales, de género, de pueblos originarios, de adultos mayores, de la niñez y adolescencia, derechos digitales.</li>
+      </ul>
+
+      <h3>Reforma del calendario electoral</h3>
+
+      <ul>
+        <li><strong>Unificación de elecciones provinciales</strong> a partir de 2035.</li>
+        <li>Hasta 2035: se mantienen las elecciones intermedias bianuales solo en ciudades de más de 20.000 habitantes.</li>
+        <li>El nuevo calendario apunta a simplificar el ciclo electoral y reducir costos.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="lifschitz">
+      <div class="seccion-num">07 · Lifschitz, presidente honorario</div>
+      <h2>Un <em>homenaje póstumo</em></h2>
+
+      <p>La Convención Reformadora designó a <strong>Miguel Lifschitz como Presidente Honorario póstumo</strong> de la Reforma. Era una decisión cargada de simbolismo. Lifschitz, ex gobernador socialista (2015-2019) y exintendente de Rosario, había sido durante años uno de los principales impulsores de la reforma constitucional santafesina. Durante su mandato como gobernador y luego como diputado provincial, había sancionado y promovido reiteradamente proyectos de necesidad de reforma que no llegaron a concretarse.</p>
+
+      <p>Lifschitz falleció el <strong>9 de mayo de 2021 a los 65 años</strong>, durante la pandemia de COVID-19. No alcanzó a ver el éxito de la reforma que había impulsado durante prácticamente toda su carrera política. La Convención decidió designarlo Presidente Honorario póstumo como reconocimiento a esa labor.</p>
+
+      <div class="cita">
+        "Esta reforma es también de Miguel Lifschitz. Durante años trabajó para que Santa Fe pudiera actualizar su Constitución. No alcanzó a verlo, pero su huella está en el texto que hoy sancionamos."
+        <span class="cita-fuente">— Síntesis de los discursos pronunciados durante las sesiones de la Convención al designar a Lifschitz como Presidente Honorario póstumo. Septiembre de 2025.</span>
+      </div>
+
+      <h3>El consenso transversal del homenaje</h3>
+
+      <p>El homenaje a Lifschitz tuvo un valor político adicional: <strong>fue aprobado con consenso transversal</strong>, incluyendo a convencionales de espacios políticos que no compartían su identidad partidaria (socialista del Frente Progresista). El reconocimiento póstumo funcionó como un gesto de pluralismo institucional, marcando que la reforma constitucional santafesina <strong>no era propiedad de una facción</strong> sino el resultado de un trabajo acumulado durante décadas que atravesaba a varios sectores políticos.</p>
+    </div>
+
+    <div class="seccion" id="criticas">
+      <div class="seccion-num">08 · Críticas y debates</div>
+      <h2>Las <em>17 voces</em> en contra</h2>
+
+      <p>La sanción del nuevo texto no fue unánime. Los <strong>17 convencionales que votaron en contra</strong> formularon críticas que es importante registrar para tener una visión completa del proceso. No todas las críticas eran iguales: provinieron de espacios muy diversos.</p>
+
+      <h3>Críticas desde La Libertad Avanza</h3>
+
+      <p>El bloque libertario rechazó la reforma por considerar que <strong>amplía el aparato estatal</strong> sin compensaciones fiscales. Sus principales objeciones:</p>
+
+      <ul>
+        <li>La incorporación de nuevos derechos sociales a rango constitucional implica obligaciones de gasto público que no están financiadas.</li>
+        <li>El refuerzo del control parlamentario al Ejecutivo (informes obligatorios, responsabilidad ministerial) genera ineficiencia administrativa.</li>
+        <li>La autonomía municipal plena, sin mecanismos claros de coparticipación reforzada, genera "municipalismo asimétrico".</li>
+        <li>La cláusula transitoria de habilitación de reelección fue señalada como un "traje a medida" para el oficialismo provincial.</li>
+      </ul>
+
+      <h3>Críticas desde Somos Vida</h3>
+
+      <p>El bloque confesional rechazó la reforma principalmente por la <strong>eliminación de la confesionalidad del Estado</strong> y por la incorporación de derechos sexuales y reproductivos al nuevo texto. Su objeción fue ideológica más que técnica.</p>
+
+      <h3>Críticas desde el peronismo opositor</h3>
+
+      <p>Los 5 convencionales peronistas que votaron en contra (sobre los 12 totales del bloque) cuestionaron principalmente:</p>
+
+      <ul>
+        <li>La <strong>cláusula transitoria de habilitación de reelección</strong>: considerada como una concesión política inadecuada en una reforma constitucional.</li>
+        <li>La <strong>falta de recursos garantizados</strong> para implementar la autonomía municipal plena: el texto reconoce el principio pero no asegura financiamiento.</li>
+        <li>El <strong>procedimiento expedito</strong> de votación: las votaciones por bloques temáticos en menos de dos semanas se consideraron insuficientes para el debate de fondo.</li>
+        <li>La <strong>limitación de la reelección legislativa</strong>: con la reforma, diputados y senadores pierden la posibilidad de reelección indefinida, lo cual implica una rotación forzosa.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La cláusula reeleccionista, votada 45 a 22</div>
+        <p>La <strong>cláusula transitoria que habilita la reelección del actual gobernador</strong> fue votada el 28 de agosto de 2025 con <strong>45 votos a favor y 22 en contra</strong>. Aunque alcanzó los dos tercios requeridos, fue la votación más ajustada del proceso. El oficialismo contó con el apoyo asegurado de los 33 convencionales de Unidos, los 3 del Frente de la Esperanza y los 7 senadores peronistas firmantes del dictamen de mayoría. Es la cláusula que mayor controversia generó en el debate público posterior.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="lo-que-viene">
+      <div class="seccion-num">09 · Lo que viene</div>
+      <h2>Las <em>19 leyes</em> complementarias</h2>
+
+      <p>La nueva Constitución entró en vigencia formal el 12 de septiembre de 2025, pero su <strong>implementación efectiva</strong> requiere la sanción de al menos <strong>19 leyes complementarias</strong> por parte de la Legislatura provincial. Algunas de ellas tienen plazos máximos definidos por las propias cláusulas transitorias.</p>
+
+      <h3>La Ley Orgánica de Municipios (sancionada abril 2026)</h3>
+
+      <p>La cláusula transitoria estableció que la Legislatura debía sancionar una <strong>nueva Ley Orgánica de Municipios</strong> dentro del plazo de <strong>un año</strong> contado desde la entrada en vigencia de la Constitución. El plazo vencía en septiembre de 2026, pero el cumplimiento se anticipó: la nueva Ley Orgánica de Municipios fue <strong>aprobada por unanimidad en el Senado el 18 de marzo de 2026</strong> y sancionada por Diputados el <strong>9 de abril de 2026 (30 a favor / 17 en contra)</strong>. Esta ley:</p>
+
+      <ul>
+        <li>Deroga la <strong>Ley 2756/1939 de Municipalidades</strong> (87 años de vigencia) y la <strong>Ley 2439/1935 de Comunas</strong> (91 años de vigencia).</li>
+        <li>Tiene 8 títulos y 65 artículos.</li>
+        <li>Unifica el régimen: ahora <strong>todos los gobiernos locales son Municipios</strong> (la distinción municipio/comuna desaparece).</li>
+        <li>Categoriza: Comisiones Municipales en localidades hasta 10.000 habitantes; Concejos Municipales en localidades mayores.</li>
+        <li>El <strong>92% de las 365 localidades santafesinas</strong> tendrá elecciones cada 4 años (antes muchas eran bianuales).</li>
+      </ul>
+
+      <h3>La nueva ley electoral provincial (pendiente)</h3>
+
+      <p>La eliminación de la cláusula 28-22 y el reemplazo por D'Hondt puro requiere modificar la <strong>ley electoral provincial</strong> para definir aspectos operativos: umbrales electorales (qué porcentaje mínimo de votos requiere un partido para acceder a bancas), procedimientos de cómputo D'Hondt, sistema de listas (cerradas o desbloqueadas), implementación del criterio de representación departamental obligatoria en las listas. Esta ley está actualmente en debate y se prevé su sanción antes de las elecciones de 2027.</p>
+
+      <h3>La discusión sobre PASO santafesinas</h3>
+
+      <p>Uno de los debates pendientes es si las <strong>PASO santafesinas</strong> (vigentes desde 2004) se mantienen o se modifican. Algunos convencionales propusieron eliminarlas, otros mantenerlas. La reforma constitucional no las eliminó explícitamente, pero el debate continúa en la legislación complementaria. La decisión final dependerá de la nueva ley electoral.</p>
+
+      <h3>La implementación del MPA y SPPDP constitucional</h3>
+
+      <p>El Ministerio Público de la Acusación y el Servicio Público Provincial de Defensa Penal ya existían como instituciones (creadas por leyes especiales). La reforma les da jerarquía constitucional, lo que implica:</p>
+
+      <ul>
+        <li>Definición constitucional de su autonomía funcional y financiera.</li>
+        <li>Procedimientos reforzados para la designación y remoción de fiscales y defensores.</li>
+        <li>Garantías de inamovilidad.</li>
+        <li>Posibles ajustes legales para alinear las leyes vigentes con el nuevo rango constitucional.</li>
+      </ul>
+
+      <h3>Las leyes de derechos</h3>
+
+      <p>La incorporación de nuevos derechos constitucionales (ambiente, género, infancia, adultos mayores, pueblos originarios, derechos digitales, seguridad como derecho) requiere <strong>leyes operativas</strong> que definan los mecanismos concretos de garantía. Sin esas leyes, los nuevos derechos quedan en estado declarativo. Su sanción se irá produciendo progresivamente.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una reforma viva</div>
+        <p>La reforma constitucional santafesina de 2025 es una <strong>reforma viva</strong>: su texto está aprobado y en vigencia, pero su implementación efectiva se extenderá durante los próximos años a medida que la Legislatura sancione las leyes complementarias necesarias. El éxito final de la reforma dependerá no solo del texto en sí, sino de cómo se traduzca en políticas públicas concretas durante los próximos mandatos. Las elecciones de <strong>2027 serán el primer gran test</strong>: por primera vez en 63 años, los santafesinos votarán bajo un sistema electoral sin cláusula 28-22, con D'Hondt puro, y con el actual gobernador habilitado a postularse a la reelección.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley Provincial 14.384</strong> · Declaración de la Necesidad de Reforma Constitucional. Sancionada el 6 de diciembre de 2024. Texto en Boletín Oficial de la Provincia de Santa Fe (santafe.gob.ar/boletinoficial).</li>
+        <li><strong>Texto sancionado de la Constitución de Santa Fe</strong> · Aprobada por la Convención Reformadora el 10 de septiembre de 2025, jurada el 12 de septiembre de 2025. Publicada en el Boletín Oficial.</li>
+        <li><strong>Constitución de Santa Fe de 1962</strong> · Texto anterior, vigente hasta el 12 de septiembre de 2025.</li>
+        <li><strong>Sitio oficial de la Reforma Constitucional</strong> · santafe.gob.ar/ms/reforma-constitucion.</li>
+        <li><strong>Cobertura periodística del proceso</strong>: Rosario3, El Litoral, Mirador Provincial, Pausa, Infobae, ON24, Radio UNR, La Capital. Mayo a septiembre de 2025.</li>
+        <li><strong>"Preámbulo, 161 artículos y 27 cláusulas transitorias: el texto oficial de la nueva Constitución de Santa Fe"</strong> · Rosario3 (12 de septiembre de 2025).</li>
+        <li><strong>"Se aprobó por amplia mayoría la nueva Constitución de Santa Fe"</strong> · El Litoral (11 de septiembre de 2025).</li>
+        <li><strong>"Santa Fe aprobó por amplia mayoría la nueva Constitución que habilita la reelección de Maximiliano Pullaro en 2027"</strong> · Infobae (10 de septiembre de 2025).</li>
+        <li><strong>"Reforma de la Constitución: una nueva arquitectura de reparto del poder después de seis décadas"</strong> · Pausa (diciembre de 2025).</li>
+        <li><strong>"La reforma en Santa Fe otorga y delimita reelecciones con una cláusula transitoria"</strong> · El Litoral (29 de agosto de 2025).</li>
+        <li><strong>"Se sancionó la nueva constitución de la Provincia de Santa Fe"</strong> · ESEIAP - Espacio de Estudios Interdisciplinarios sobre Asuntos Públicos (12 de septiembre de 2025).</li>
+        <li><strong>Ley Orgánica de Municipios de Santa Fe (2026)</strong> · Sancionada el 9 de abril de 2026 (30 a 17 en Diputados, 18 unánime en Senadores). Deroga las leyes 2756/1939 y 2439/1935.</li>
+        <li><strong>Convención Reformadora de la Constitución de Santa Fe</strong> · Actas y dictámenes de las sesiones de junio a septiembre de 2025.</li>
+        <li><strong>Constitución Nacional Argentina</strong> · Artículo 75 inciso 22 (instrumentos internacionales con jerarquía constitucional). Modelo aplicado al texto santafesino.</li>
+      </ul>
+    </div>
+
+    <a href="santa-fe-en-profundidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al hub provincial</div>
+        <h3>Santa Fe en <em>profundidad</em></h3>
+        <p>Has completado los cinco capítulos del estudio santafesino. Volvé al hub para repasar la sección, navegar entre capítulos o explorar las otras provincias en profundidad (Buenos Aires, Córdoba, Mendoza, CABA).</p>
+      </div>
+      <div class="proximo-cap-arrow">VOLVER AL HUB →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

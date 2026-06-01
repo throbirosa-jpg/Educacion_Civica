@@ -334,4 +334,36 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Capítulo 10.03: Provincia de Santa Fe (5 caps) -->
+  <url>
+    <loc>https://educacioncivica.com.ar/santa-fe-historia.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/santa-fe-poderes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/santa-fe-municipios.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/santa-fe-electoral.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/santa-fe-reforma-2025.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

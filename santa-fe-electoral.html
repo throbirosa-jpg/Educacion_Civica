@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Santa Fe · Sistema electoral (10.03.04) — Educación Cívica</title>
+<meta name="description" content="Santa Fe fue pionera nacional en boleta única: la Ley 13.156 de 2011 estableció el primer sistema provincial argentino de boleta única, aplicado por primera vez en mayo de 2011. Recorrido por la Ley de Lemas (1990-2004), las PASO santafesinas, el modelo de columnas partidarias y el camino al D'Hondt puro de 2027.">
+<link rel="canonical" href="https://educacioncivica.com.ar/santa-fe-electoral.html">
+
+<meta property="og:title" content="Santa Fe · Sistema electoral">
+<meta property="og:description" content="La primera provincia argentina en aplicar Boleta Única: del lema al D'Hondt puro de 2027.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/santa-fe-electoral.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.03.04</strong> de la sección Santa Fe en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="santa-fe-en-profundidad.html">Santa Fe</a> ·
+      <span>Sistema electoral</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.03.04 · Estudio provincial</div>
+    <h1 class="page-title">Sistema <em>electoral</em></h1>
+    <div class="page-subtitulo">— La primera Boleta Única argentina · 1990-2027</div>
+    <p class="page-intro">Santa Fe fue la <strong>primera provincia argentina en aplicar Boleta Única de papel</strong>: la <strong>Ley 13.156 sancionada en diciembre de 2010</strong> y aplicada por primera vez en las elecciones primarias del <strong>22 de mayo de 2011</strong>, antes que la BUS cordobesa de agosto de ese mismo año. Este capítulo recorre la historia electoral santafesina: la singular <strong>Ley de Lemas</strong> (10.524, vigente entre 1990 y 2004) que permitió al peronismo gobernar 21 años aun cuando sus candidatos no eran los más votados; las <strong>PASO santafesinas</strong> (Ley 12.367 de 2004); el <strong>modelo de boleta única por columnas partidarias</strong> (distinto al cordobés); y el cambio histórico de la reforma 2025 que pasa del sistema de mayoría 28-22 al <strong>D'Hondt proporcional puro desde 2027</strong>.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2011</div>
+        <div class="page-stat-label">Primera BU argentina aplicada</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">21</div>
+        <div class="page-stat-label">Años PJ en gobierno con Ley de Lemas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2004</div>
+        <div class="page-stat-label">Derogación Ley de Lemas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2027</div>
+        <div class="page-stat-label">Primer D'Hondt puro</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#contexto">01 · La tradición electoral santafesina</a></li>
+      <li><a href="#ley-lemas">02 · La Ley de Lemas (1990)</a></li>
+      <li><a href="#efectos-lemas">03 · Los efectos de la Ley de Lemas</a></li>
+      <li><a href="#derogacion-2004">04 · La derogación de 2004</a></li>
+      <li><a href="#paso-santafesinas">05 · Las PASO santafesinas</a></li>
+      <li><a href="#bu-2011">06 · La Boleta Única de 2011</a></li>
+      <li><a href="#modelo-columnas">07 · El modelo de columnas partidarias</a></li>
+      <li><a href="#santa-fe-vs-cordoba">08 · Santa Fe vs Córdoba: dos modelos</a></li>
+      <li><a href="#reforma-2025">09 · El cambio de la reforma 2025</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="contexto">
+      <div class="seccion-num">01 · La tradición electoral santafesina</div>
+      <h2>Una <em>provincia laboratorio</em> en materia electoral</h2>
+
+      <p>Santa Fe tiene una tradición de <strong>innovación electoral</strong> que la distingue en el panorama argentino. Junto con Córdoba, ha sido pionera en varias reformas electorales que después se proyectaron al ámbito nacional. Sin embargo, su trayectoria es paradójica: por un lado fue innovadora con la Boleta Única (primera del país en 2011), pero por otro lado mantuvo durante 14 años (1990-2004) la <strong>Ley de Lemas</strong>, uno de los sistemas electorales más criticados por la doctrina constitucional argentina.</p>
+
+      <p>Esta dualidad refleja un rasgo más profundo de la política santafesina: la convivencia de tradiciones políticas muy distintas en una provincia que es a la vez muy peronista (en el norte y centro) y muy socialista/progresista (en Rosario), con un radicalismo histórico fuerte (en el centro provincial) y, más recientemente, con experiencias de coaliciones interpartidarias (el Frente Progresista entre 2007 y 2019, Unidos para Cambiar Santa Fe desde 2023).</p>
+
+      <p>Las reformas electorales santafesinas se inscriben en esta tensión política plural: cada partido o coalición gobernante introdujo sistemas favorables a sus equilibrios internos, y solo en momentos de consenso transversal pudo avanzar la reforma estructural.</p>
+    </div>
+
+    <div class="seccion" id="ley-lemas">
+      <div class="seccion-num">02 · La Ley de Lemas (1990)</div>
+      <h2>El <em>doble voto simultáneo</em> a la santafesina</h2>
+
+      <p>La <strong>Ley Provincial 10.524, sancionada en 1990</strong>, estableció en Santa Fe el sistema electoral del <strong>"doble voto simultáneo"</strong>, popularmente conocido como <strong>"Ley de Lemas"</strong>. Era una innovación inspirada en el sistema uruguayo (donde funciona desde principios del siglo XX) que combinaba la elección general con la interna partidaria en un solo acto electoral.</p>
+
+      <h3>Cómo funcionaba</h3>
+
+      <p>El sistema operaba así:</p>
+
+      <ul>
+        <li>Cada partido político (llamado "<strong>lema</strong>") podía presentar varios candidatos para un mismo cargo, encolumnados bajo "<strong>sublemas</strong>" diferentes.</li>
+        <li>El elector votaba por un <strong>sublema</strong> específico (es decir, por uno de los candidatos del partido).</li>
+        <li>Para definir al ganador, primero se <strong>sumaban todos los votos de los sublemas de un mismo lema</strong>, asignándose al lema con más votos totales.</li>
+        <li>Luego, dentro del lema ganador, se proclamaba como electo al <strong>sublema con más votos dentro de ese lema</strong>.</li>
+      </ul>
+
+      <h3>Adopción nacional limitada</h3>
+
+      <p>La Ley de Lemas tuvo cierta difusión en el ámbito provincial argentino durante los años 90: la usaron también provincias como Formosa, San Luis, Misiones, Santa Cruz, Tucumán y Salta. Pero ninguna provincia grande la sostuvo durante tantos años como Santa Fe (14 años, 1990-2004). En el ámbito nacional, el sistema fue rechazado mayoritariamente por la doctrina constitucionalista.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La crítica doctrinaria</div>
+        <p>La principal crítica al sistema de lemas era que <strong>permitía la elección de candidatos que no eran los más votados individualmente</strong>. Como los votos de todos los sublemas se sumaban al lema (partido), el candidato que terminaba ganando podía ser uno con relativamente pocos votos propios pero perteneciente al lema más votado en su conjunto. Esto generaba una <strong>distorsión entre voluntad ciudadana y representación electoral</strong> que muchos especialistas consideraban contraria a los principios democráticos básicos.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="efectos-lemas">
+      <div class="seccion-num">03 · Los efectos de la Ley de Lemas</div>
+      <h2>El <em>peronismo</em> 1991-2007</h2>
+
+      <p>El efecto más conocido de la Ley de Lemas fue permitir al <strong>Partido Justicialista santafesino sostenerse en el gobierno durante 21 años consecutivos</strong>, entre 1991 y 2007. En tres de las últimas cuatro elecciones gubernamentales bajo el régimen de lemas (1995, 1999, 2003), el candidato individualmente más votado <strong>no era del peronismo</strong> sino de la oposición; pero el peronismo sumaba más votos como lema y se quedaba con la gobernación.</p>
+
+      <h3>La paradoja electoral</h3>
+
+      <p>Las cifras son contundentes: durante el período 1991-2007, el peronismo santafesino ganó 4 de las 5 elecciones gubernamentales. Pero en al menos tres de ellas, el candidato peronista que asumió la gobernación había obtenido <strong>menos votos individuales que el candidato más votado de la oposición</strong> (mayoritariamente del radicalismo y, después, del socialismo). El sistema funcionaba como un mecanismo de "<strong>protección institucional</strong>" del partido más estructurado en el territorio, aún cuando sus candidatos no eran los preferidos por el electorado individualmente.</p>
+
+      <p>Esta paradoja generó un creciente reclamo de reforma electoral. La derogación de la Ley de Lemas se convirtió en una bandera transversal que cruzaba líneas partidarias: la sostenían sectores del radicalismo, del socialismo, de partidos vecinales, e incluso de sectores internos del peronismo que se consideraban perjudicados por la dinámica interna de los sublemas.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Ley de Lemas en Santa Fe</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Ley</div>
+            <div class="ficha-valor">Ley Provincial 10.524</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción</div>
+            <div class="ficha-valor">1990</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Primera aplicación</div>
+            <div class="ficha-valor">Elecciones de 1991</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Vigencia</div>
+            <div class="ficha-valor"><strong>14 años</strong> (1990-2004)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Efecto principal</div>
+            <div class="ficha-valor">PJ gobernó 21 años (1991-2007)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Derogación</div>
+            <div class="ficha-valor">Ley 12.367 (2004)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="derogacion-2004">
+      <div class="seccion-num">04 · La derogación de 2004</div>
+      <h2>La <em>derogación</em> definitiva</h2>
+
+      <p>La derogación de la Ley de Lemas se produjo el <strong>último día de sesiones ordinarias de 2004</strong> en la Legislatura santafesina. El proceso parlamentario fue accidentado: la Cámara de Senadores no obtuvo los dos tercios necesarios para insistir con su proyecto (que no derogaba plenamente la ley de lemas, sino que la mantenía para algunos cargos). El proyecto que finalmente prevaleció derogaba lisa y llanamente la Ley 10.524, en sintonía con lo que había votado dos veces unánimemente la Cámara de Diputados.</p>
+
+      <h3>El consenso bipartidario</h3>
+
+      <p>La derogación de la Ley de Lemas había sido un <strong>compromiso público de campaña</strong> asumido el año anterior por los dos principales candidatos a gobernador en las elecciones de 2003: el <strong>socialista Hermes Binner</strong> (que perdió esas elecciones pero las ganaría en 2007) y el <strong>justicialista Jorge Obeid</strong> (que las ganó). También respaldaron la derogación los radicales y otros bloques. Este consenso transversal fue clave para que la reforma se concretara.</p>
+
+      <h3>La nueva Ley 12.367</h3>
+
+      <p>La <strong>Ley Provincial 12.367, sancionada en 2004</strong>, reemplazó el sistema de lemas por uno de <strong>elecciones primarias abiertas, simultáneas y obligatorias</strong> (PASO santafesinas). Era una innovación: las PASO santafesinas se sancionaron <strong>cinco años antes que las PASO nacionales</strong> (Ley 26.571 de 2009). Otra vez Santa Fe se anticipó a una reforma electoral que después se proyectaría al ámbito nacional.</p>
+
+      <p>El sistema de PASO obligatorias se aplicó por primera vez en las elecciones provinciales de 2007, simultáneamente con la primera elección bajo el nuevo régimen sin lemas. Esa elección de 2007 cambió el mapa político santafesino: el socialista <strong>Hermes Binner</strong> ganó la gobernación, terminando con 21 años consecutivos de gobierno peronista en la provincia.</p>
+    </div>
+
+    <div class="seccion" id="paso-santafesinas">
+      <div class="seccion-num">05 · Las PASO santafesinas</div>
+      <h2>Cinco años antes que <em>la Nación</em></h2>
+
+      <p>Las <strong>Elecciones Primarias, Abiertas, Simultáneas y Obligatorias santafesinas</strong> son un caso institucional notable: precedieron en cinco años a las PASO nacionales. La Ley 12.367 de 2004 reglamentó el nuevo sistema y se aplicó por primera vez en 2007.</p>
+
+      <h3>Cómo funcionan</h3>
+
+      <p>El sistema de PASO santafesinas:</p>
+
+      <ul>
+        <li>Se celebra una elección primaria <strong>antes de la elección general</strong>, en la que <strong>todos los electores</strong> (no solo los afiliados a partidos) pueden participar.</li>
+        <li>Los partidos políticos definen sus candidatos a cargos electivos mediante esta primaria abierta.</li>
+        <li>La participación en las PASO es <strong>obligatoria</strong> (con régimen de sanciones similar al del voto en elecciones generales).</li>
+        <li>Solo los candidatos que ganan las PASO de su partido pueden presentarse en las elecciones generales.</li>
+      </ul>
+
+      <p>El sistema desplazó a las antiguas internas cerradas (en las que solo los afiliados al partido votaban) y abrió el proceso a toda la ciudadanía. Era una respuesta a la crítica del sistema de lemas: en lugar de presentar varios sublemas en la general, los partidos definirían a un único candidato en la primaria abierta.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Otra innovación nacional</div>
+        <p>Las PASO santafesinas fueron observadas con interés por especialistas y dirigentes políticos de todo el país. En 2009, cinco años después de la sanción santafesina, el Congreso Nacional sancionó la <strong>Ley 26.571 de PASO nacionales</strong> que se aplicaría por primera vez en las elecciones de 2011. La similitud entre ambos sistemas no es casual: el modelo nacional adoptó muchos elementos del santafesino, con adaptaciones para la escala federal. Santa Fe había sido nuevamente laboratorio institucional electoral.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="bu-2011">
+      <div class="seccion-num">06 · La Boleta Única de 2011</div>
+      <h2>La <em>primera</em> aplicada en Argentina</h2>
+
+      <p>Tras un proceso legislativo que culminó en diciembre de 2010, el gobernador Hermes Binner promulgó la <strong>Ley 13.156 el 7 de enero de 2011</strong>. La nueva norma estableció el <strong>Sistema de Boleta Única y Unificación del Padrón Electoral</strong> para todas las elecciones provinciales, municipales y comunales santafesinas. El Decreto Reglamentario 86/2011 detalló los aspectos operativos.</p>
+
+      <h3>El estreno: PASO de mayo 2011</h3>
+
+      <p>La primera aplicación efectiva fue en las <strong>elecciones primarias abiertas, simultáneas y obligatorias</strong> del <strong>22 de mayo de 2011</strong>. Aquellas PASO santafesinas fueron la <strong>primera elección argentina aplicada con sistema de Boleta Única</strong>, anticipándose en tres meses a la primera aplicación cordobesa (BUS, 7 de agosto de 2011).</p>
+
+      <h3>Quiénes la impulsaron</h3>
+
+      <p>La sanción de la Boleta Única santafesina fue parte del programa del gobierno socialista de Hermes Binner (2007-2011), que se había comprometido durante la campaña con una reforma electoral integral. El proceso parlamentario contó con apoyos de varios bloques, aunque hubo críticas desde el peronismo (que veía en la BU una pérdida de eficacia de su estructura territorial tradicional, dependiente de la entrega masiva de boletas partidarias en el día de la elección).</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Boleta Única de Santa Fe</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Ley</div>
+            <div class="ficha-valor">Ley Provincial 13.156</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción</div>
+            <div class="ficha-valor">Diciembre de 2010</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Promulgación</div>
+            <div class="ficha-valor">7 de enero de 2011</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Primera aplicación</div>
+            <div class="ficha-valor"><strong>PASO del 22 de mayo de 2011</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Modelo</div>
+            <div class="ficha-valor">Columnas partidarias</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Particularidad</div>
+            <div class="ficha-valor">Primera BU aplicada del país</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="modelo-columnas">
+      <div class="seccion-num">07 · El modelo de columnas partidarias</div>
+      <h2>El <em>diseño</em> de la BU santafesina</h2>
+
+      <p>El modelo santafesino organiza la boleta única en <strong>columnas partidarias</strong>: una columna por cada partido o alianza electoral, y dentro de cada columna se listan los candidatos a las distintas categorías de cargos. El elector navega primero la oferta partidaria y luego define las categorías dentro de cada partido. Es un modelo distinto al cordobés (que organiza la boleta en bloques por categorías).</p>
+
+      <h3>Características operativas</h3>
+
+      <p>Características distintivas del modelo santafesino:</p>
+
+      <ul>
+        <li><strong>Una boleta por categoría de cargo</strong>: a diferencia del modelo cordobés que integra todas las categorías en una sola boleta, en Santa Fe se imprime una boleta por cada categoría electiva (gobernador, diputados provinciales, senador departamental, intendente, concejales).</li>
+        <li><strong>Identificación visual del candidato</strong>: a quien encabeza la lista se le identifica con su foto a color, nombre y apellido. En las categorías legislativas se agregan los dos siguientes candidatos.</li>
+        <li><strong>Boxes de votación</strong>: el sistema permite que varios electores voten simultáneamente en un mismo aula (en boxes diferentes), agilizando los tiempos de votación.</li>
+        <li><strong>Bolígrafo con tinta indeleble</strong>: el elector marca con un bolígrafo (no con un casillero pre-impreso). Esto permite votar más rápido pero requiere otro tipo de capacitación.</li>
+        <li><strong>Plegado de las boletas</strong>: las boletas se entregan con casilleros en blanco y deben plegarse después del voto.</li>
+      </ul>
+
+      <div class="cita">
+        "Los procesos electorales de autoridades electivas provinciales, municipales y comunales de la Provincia se deben realizar por medio de la utilización de la Boleta Única, de acuerdo a las normas que se establecen por la presente. La Boleta Única debe integrarse con las siguientes características en su diseño y contenido: se debe confeccionar una Boleta Única para cada categoría de cargo electivo..."
+        <span class="cita-fuente">— Ley Provincial 13.156, Artículos 1 y 2.</span>
+      </div>
+
+      <h3>El financiamiento de campañas</h3>
+
+      <p>Posteriormente a la Ley 13.156, Santa Fe sancionó la <strong>Ley 13.461 sobre Espacios de Publicidad Electoral en Medios de Comunicación Audiovisual</strong> (con Decretos Reglamentarios 644/2015 y 464/2019), que reguló el financiamiento público de las campañas electorales. Es uno de los regímenes más completos en su tipo a nivel provincial.</p>
+    </div>
+
+    <div class="seccion" id="santa-fe-vs-cordoba">
+      <div class="seccion-num">08 · Santa Fe vs Córdoba: dos modelos</div>
+      <h2>Dos <em>arquitecturas</em> de boleta única</h2>
+
+      <p>Las experiencias santafesina (2011) y cordobesa (2011) son los dos modelos argentinos más importantes de boleta única provincial. Cada uno tiene una arquitectura diferente que refleja decisiones distintas sobre cómo guiar el voto del ciudadano:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Santa Fe</th>
+              <th>Córdoba</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ley</strong></td>
+              <td>13.156 (2011)</td>
+              <td>9.571 (2008, BUS 2011)</td>
+            </tr>
+            <tr>
+              <td><strong>Primera aplicación</strong></td>
+              <td><strong>22 de mayo de 2011</strong> (PASO)</td>
+              <td>7 de agosto de 2011</td>
+            </tr>
+            <tr>
+              <td><strong>Modelo</strong></td>
+              <td>Columnas partidarias</td>
+              <td>Bloques por categorías</td>
+            </tr>
+            <tr>
+              <td><strong>Boletas por elección</strong></td>
+              <td>Una por categoría</td>
+              <td>Una integral con categorías</td>
+            </tr>
+            <tr>
+              <td><strong>Cómo marca el elector</strong></td>
+              <td>Tilda con bolígrafo</td>
+              <td>Marca con bolígrafo</td>
+            </tr>
+            <tr>
+              <td><strong>Voto cruzado favorecido</strong></td>
+              <td>Menos directo (cambia boleta)</td>
+              <td>Más directo (marca categorías)</td>
+            </tr>
+            <tr>
+              <td><strong>Foco visual</strong></td>
+              <td>Partido</td>
+              <td>Categoría</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Efectos políticos diferenciados</h3>
+
+      <p>Los dos modelos tienen efectos diferentes sobre el comportamiento del elector:</p>
+
+      <ul>
+        <li><strong>Santa Fe (columnas)</strong>: favorece el voto por partido. El elector primero elige el partido y luego confirma las categorías. Tiende a reforzar la identidad partidaria del voto.</li>
+        <li><strong>Córdoba (bloques)</strong>: favorece el voto por categoría. El elector ve claramente cada cargo y puede votar diferentes partidos en cada uno. Facilita el voto cruzado.</li>
+      </ul>
+
+      <p>Ambos modelos resuelven el problema de fondo de la boleta partidaria múltiple (impresión privada, vulnerabilidad al robo de boletas, dificultad para partidos pequeños). Pero las elecciones de qué modelo adoptar dependen de qué efectos se prioricen.</p>
+    </div>
+
+    <div class="seccion" id="reforma-2025">
+      <div class="seccion-num">09 · El cambio de la reforma 2025</div>
+      <h2>Del <em>28-22</em> al D'Hondt puro</h2>
+
+      <p>La reforma constitucional de 2025 introdujo el cambio más profundo en el sistema electoral santafesino en seis décadas. La <strong>cláusula de gobernabilidad 28-22</strong> en la Cámara de Diputados, vigente desde 1962, fue <strong>eliminada</strong>. Desde las elecciones de 2027, las 50 bancas se distribuirán <strong>de manera proporcional a través del sistema D'Hondt</strong> entre todas las fuerzas políticas que superen el <strong>umbral o piso electoral</strong> fijado por ley.</p>
+
+      <h3>Por qué se eliminó la cláusula 28-22</h3>
+
+      <p>La cláusula 28-22 había sido pensada originalmente para garantizar gobernabilidad: el partido ganador en la categoría Diputados se aseguraba mayoría automática (28 bancas sobre 50). Pero en las últimas dos décadas, el sistema había generado <strong>paradojas inversas a su propósito original</strong>. Hubo casos en que la mayoría automática terminó en manos de la oposición al gobernador, generando legislaturas con bloqueos institucionales.</p>
+
+      <h3>Las paradojas documentadas</h3>
+
+      <p>Dos casos concretos ilustran las paradojas del sistema:</p>
+
+      <ul>
+        <li><strong>Elecciones de 2011</strong>: El Frente Progresista se impuso por estrecho margen para la gobernación con Antonio Bonfatti. Pero el justicialismo (encabezado por María Eugenia Bielsa) ganó la categoría Diputados, también por estrecho margen. La constitución le otorgó al peronismo 28 bancas (excediendo lo que hubiese arrojado una distribución proporcional) y, además, esa mayoría automática terminó en manos de la oposición al nuevo gobernador.</li>
+        <li><strong>Elecciones de 2019</strong>: El peronista Omar Perotti ganó la gobernación. Pero el Frente Progresista (con la boleta encabezada por Miguel Lifschitz) fue la fuerza más votada para Diputados. Una vez más, la mayoría automática en Diputados quedó en manos de la oposición al gobernador.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El nuevo sistema desde 2027</div>
+        <p>A partir de las elecciones de 2027, las 50 bancas de diputados se distribuirán <strong>de manera proporcional y estrictamente correlativa</strong> a la cantidad de votos obtenida por cada lista. Esto elimina la doble distorsión del sistema anterior: ya no habrá mayorías automáticas ni paradojas de oposición con mayoría legislativa. El nuevo régimen permite que <strong>"el que gana gobierne, pero deberá hacerlo en el marco de un Legislativo proporcional"</strong>, como señalaron los promotores de la reforma. Además, las listas deben incluir al menos un candidato por cada uno de los 19 departamentos provinciales y respetar la paridad de género.</p>
+      </div>
+
+      <h3>Otras innovaciones de la reforma electoral 2025</h3>
+
+      <p>Más allá de la eliminación del 28-22, la reforma de 2025 incorporó otras innovaciones electorales que se desarrollarán plenamente en el <strong>capítulo 10.03.05</strong>:</p>
+
+      <ul>
+        <li><strong>Reelección por un único mandato consecutivo</strong> para gobernador y vice (antes prohibida).</li>
+        <li><strong>Límite a la reelección de legisladores</strong>: tanto diputados como senadores podrán ser reelegidos una sola vez, terminando con los "senadores eternos" del Senado.</li>
+        <li><strong>Ficha limpia</strong>: candidatos con condena penal firme no pueden postularse.</li>
+        <li><strong>Eliminación de fueros</strong> o ajuste de las inmunidades parlamentarias.</li>
+        <li><strong>Voto a los 16 años</strong> en elecciones locales (provincial ya estaba habilitado).</li>
+        <li><strong>Unificación de elecciones provinciales</strong> a partir de 2035, reduciendo la frecuencia y los costos electorales.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley Provincial 13.156</strong> · Sistema de Boleta Única y Unificación del Padrón Electoral. Promulgada el 7 de enero de 2011. Decreto Reglamentario 86/2011.</li>
+        <li><strong>Ley Provincial 12.367</strong> · Sistema de PASO santafesinas (2004). Reemplazó a la Ley de Lemas.</li>
+        <li><strong>Ley Provincial 10.524</strong> · Ley de Lemas / Doble Voto Simultáneo (1990, derogada 2004).</li>
+        <li><strong>Ley Provincial 13.461</strong> · Espacios de Publicidad Electoral en Medios de Comunicación Audiovisual. Decretos Reglamentarios 644/2015 y 464/2019.</li>
+        <li><strong>Ley Provincial 13.337</strong> · Modifica los artículos 2°, 4°, 5° y 6° de la Ley Nº 12.367.</li>
+        <li><strong>Constitución de la Provincia de Santa Fe</strong> (2025) · Capítulo sobre el Poder Legislativo (artículos 67 a 70 sobre Cámara de Diputados con sistema proporcional D'Hondt).</li>
+        <li><strong>Ley Nacional 26.571</strong> · PASO nacionales (2009). Inspirada en el modelo santafesino.</li>
+        <li><strong>Tribunal Electoral de la Provincia de Santa Fe</strong> · santafe.gov.ar/tribunalelectoral. Normativa actualizada.</li>
+        <li><strong>"La Legislatura de Santa Fe derogó la polémica ley de lemas"</strong> · La Nación, cobertura de la derogación de 2004.</li>
+        <li><strong>"Se terminan hoy las mayorías 'automáticas' en la Cámara de Diputados de Santa Fe"</strong> · El Litoral, 27 de agosto de 2025. Análisis del cambio constitucional.</li>
+        <li><strong>"Boleta única: cómo funcionan los modelos de Santa Fe y Córdoba"</strong> · LetraP. Análisis comparado de los dos modelos provinciales.</li>
+        <li><strong>"Apuntes para una Reforma: Elecciones simultáneas, boleta única y federalismo electoral. El caso Santa Fe"</strong> · Argentina Elections, 2015.</li>
+        <li><strong>Blando, Oscar M. (coord.)</strong> · "Democracia y Boleta Única en Santa Fe. Implementación y evaluación institucional. Reseña normativa". Santa Fe, 2015. Con textos de Lorudes Lodi y Luciana Araya.</li>
+        <li><strong>Sitio oficial del Gobierno de Santa Fe</strong> (santafe.gov.ar) · Información electoral, padrones, normativa.</li>
+      </ul>
+    </div>
+
+    <a href="santa-fe-reforma-2025.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.03.05</div>
+        <h3>La reforma <em>constitucional 2025</em></h3>
+        <p>Análisis completo de la reforma sancionada el 10 de septiembre de 2025: las 88 modificaciones (42 artículos reformados + 46 nuevos), las grandes innovaciones (reelección, autonomía municipal plena, ficha limpia, MPA y MPD constitucionales), los 27 cláusulas transitorias y el rol simbólico de Miguel Lifschitz como Presidente Honorario.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

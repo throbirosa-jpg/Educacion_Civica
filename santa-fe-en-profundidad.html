@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Provincia de Santa Fe · En profundidad — Educación Cívica</title>
-<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Santa Fe: historia constitucional, poderes provinciales, régimen municipal, particularidades distintivas y agenda institucional pendiente. Cinco capítulos premium con datos verificables.">
+<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Santa Fe: cinco capítulos premium publicados con historia constitucional (1819-2025), los tres poderes provinciales, régimen municipal con autonomía plena, sistema electoral pionero (primera Boleta Única argentina) y la reforma constitucional 2025 (primera en 63 años, sancionada 10 sept).">
 <link rel="canonical" href="https://educacioncivica.com.ar/santa-fe-en-profundidad.html">
 
 <meta property="og:title" content="Provincia de Santa Fe · En profundidad">
-<meta property="og:description" content="Estudio institucional en profundidad: cinco capítulos sobre la Provincia de Santa Fe.">
+<meta property="og:description" content="Cinco capítulos publicados sobre Santa Fe: cuna del constitucionalismo argentino y reforma 2025.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://educacioncivica.com.ar/santa-fe-en-profundidad.html">
 <meta property="og:site_name" content="Educación Cívica">
@@ -68,11 +68,11 @@
 
   .capitulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
 
-  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; opacity: 0.92; }
-  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--sol-dark); }
-  .capitulo-card:hover { opacity: 1; border-color: var(--sol-dark); }
+  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; }
+  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--premium); }
+  .capitulo-card:hover { border-color: var(--premium); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 79, 140, 0.12); }
 
-  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--sol-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--premium-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
   .capitulo-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); line-height: 1.25; margin-bottom: 0.8rem; }
   .capitulo-titulo em { font-style: italic; color: var(--premium-dark); }
   .capitulo-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
@@ -80,7 +80,9 @@
   .capitulo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
   .capitulo-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.7rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); font-weight: 500; }
   .capitulo-tag.estado-pronto { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
-  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--sol-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-tag.estado-disponible { background: var(--verde-soft); border-color: var(--verde); color: var(--verde); font-weight: 600; }
+  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--premium-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-card:hover .capitulo-link { color: var(--premium); }
 
   .nav-otras-provincias { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem; margin: 3rem 0; }
   .nav-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
@@ -91,6 +93,10 @@
   .nav-link p { font-size: 0.78rem; color: var(--tinta-soft); line-height: 1.4; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase; }
 
   .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .proximos-contenidos.completado { background: var(--verde-soft); border-left-color: var(--verde); }
+  .proximos-contenidos.completado .proximos-titulo { color: var(--verde); }
+  .proximos-contenidos.completado h3 em { color: var(--verde); }
+  .proximos-contenidos.completado p strong { color: var(--verde); }
   .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
   .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
   .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
@@ -109,7 +115,7 @@
 </head>
 <body>
 
-<div class="premium-banner">— Estudio provincial · <strong>Capítulos en producción</strong></div>
+<div class="premium-banner">— Estudio provincial · <strong>★ 5 capítulos publicados</strong></div>
 
 <nav>
   <div class="nav-inner">
@@ -160,77 +166,77 @@
 <div class="container">
 
   <div class="seccion-intro">
-    <div class="seccion-eyebrow">— Cinco capítulos en desarrollo</div>
-    <h2 class="seccion-titulo">El plan de <em>contenidos</em> de esta sección</h2>
-    <p class="seccion-descripcion">Esta es la estructura del estudio sobre la Provincia de Santa Fe, replicando el modelo del estudio sobre CABA. Los cinco capítulos están planificados pero <strong>aún en producción</strong>: cada uno se publicará en próximas entregas con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+    <div class="seccion-eyebrow">— Cinco capítulos publicados</div>
+    <h2 class="seccion-titulo">Los <em>cinco capítulos</em> publicados</h2>
+    <p class="seccion-descripcion">El estudio completo de la Provincia de Santa Fe: <strong>cinco capítulos publicados</strong> con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Total: aproximadamente <strong>230 KB de contenido institucional</strong> sobre la cuna del constitucionalismo argentino, desde el Pacto Federal de 1831 hasta la reforma constitucional sancionada el 10 de septiembre de 2025.</p>
   </div>
 
   <div class="capitulos-grid">
 
-    <div class="capitulo-card">
+    <a href="santa-fe-historia.html" class="capitulo-card">
       <div class="capitulo-num">10.03.01</div>
       <h3 class="capitulo-titulo">Historia <em>constitucional</em></h3>
-      <p class="capitulo-desc">Santa Fe como territorio fundacional del constitucionalismo argentino: el Pacto Federal de 1831, la Constitución Nacional de 1853 sancionada en la ciudad de Santa Fe, la Constitución provincial de 1856, las sucesivas reformas de 1872, 1900, 1907, 1921, 1949 y 1962. <strong>La reforma de 2025 y sus principales innovaciones</strong>.</p>
+      <p class="capitulo-desc">Santa Fe como territorio fundacional del constitucionalismo argentino: el Estatuto Provisorio de Estanislao López (1819), el Pacto Federal de 1831 (sede santafesina), el Congreso Constituyente de 1852-1853 que sancionó la Constitución Nacional en Santa Fe. Las constituciones provinciales de 1856, 1900, 1921, 1949 y 1962. Los cuatro intentos fallidos de reforma (1991, 1994, 2001, 2008).</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Pacto 1831</span>
           <span class="capitulo-tag">CN 1853</span>
-          <span class="capitulo-tag">Reforma 2025</span>
+          <span class="capitulo-tag">5 constituciones</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="santa-fe-poderes.html" class="capitulo-card">
       <div class="capitulo-num">10.03.02</div>
       <h3 class="capitulo-titulo">Los tres <em>poderes</em></h3>
-      <p class="capitulo-desc">El gobernador (con reelección consecutiva habilitada por la reforma 2025, aplicable desde el ciclo 2027-2031), la Legislatura bicameral (50 diputados elegidos por distrito único con cláusula de gobernabilidad 28-22 + 19 senadores departamentales) y la Corte Suprema (que pasa a 7 miembros con paridad de género desde 2025).</p>
+      <p class="capitulo-desc">El gobernador (con reelección consecutiva habilitada desde 2027 por la reforma 2025), la Legislatura bicameral con 50 diputados (D'Hondt puro desde 2027, sin más cláusula 28-22) y 19 senadores departamentales, el Poder Judicial. El MPA y el SPPDP a rango constitucional. El Tribunal de Cuentas y la Defensoría del Pueblo.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Reforma 2025</span>
-          <span class="capitulo-tag">Cláusula 28-22</span>
-          <span class="capitulo-tag">Reelección habilitada</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">Bicameralismo</span>
+          <span class="capitulo-tag">D'Hondt puro 2027</span>
+          <span class="capitulo-tag">MPA constitucional</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="santa-fe-municipios.html" class="capitulo-card">
       <div class="capitulo-num">10.03.03</div>
       <h3 class="capitulo-titulo">Régimen <em>municipal</em></h3>
-      <p class="capitulo-desc">Santa Fe distingue entre <strong>municipios</strong> (con autonomía) y <strong>comunas</strong> (sin ella). Tiene más de 365 gobiernos locales. La reforma constitucional de 2025 modernizó parcialmente el régimen pero mantuvo la distinción dual. Análisis del rol de las dos grandes ciudades de la provincia, Rosario y Santa Fe, en la política local.</p>
+      <p class="capitulo-desc">El paso del antiguo régimen dual (Ley 2756/1939 municipios + Ley 2439/1935 comunas, 87 y 91 años de vigencia) a la <strong>autonomía municipal plena</strong> con la reforma 2025. La nueva Ley Orgánica de Municipios sancionada en abril de 2026 (Diputados 30 a 17, Senado unánime). 365 gobiernos locales. Rosario (1,3M) y Santa Fe Capital (410k).</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Municipios vs comunas</span>
-          <span class="capitulo-tag">Rosario</span>
-          <span class="capitulo-tag">Bipolaridad</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">Autonomía plena 2025</span>
+          <span class="capitulo-tag">Nueva ley 2026</span>
+          <span class="capitulo-tag">365 localidades</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="santa-fe-electoral.html" class="capitulo-card">
       <div class="capitulo-num">10.03.04</div>
-      <h3 class="capitulo-titulo">La <em>reforma 2025</em></h3>
-      <p class="capitulo-desc">Análisis exhaustivo de la nueva Constitución de Santa Fe sancionada en 2025: reelección del gobernador habilitada, modificación del calendario legislativo (sesiones del 15 de febrero al 30 de noviembre), Corte Suprema de 7 miembros con paridad y representación territorial, fortalecimiento del Ministerio Público de la Acusación y de la Defensa.</p>
+      <h3 class="capitulo-titulo">Sistema <em>electoral</em></h3>
+      <p class="capitulo-desc">La <strong>primera Boleta Única argentina aplicada</strong> (Ley 13.156, mayo de 2011, antes que Córdoba). La Ley de Lemas (10.524/1990, derogada en 2004) y los 21 años de gobiernos peronistas que produjo. Las PASO santafesinas (2004, 5 años antes que las nacionales). Modelo de columnas partidarias. Cambio reforma 2025: del 28-22 al D'Hondt puro desde 2027.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Reforma 2025</span>
-          <span class="capitulo-tag">Reelección</span>
-          <span class="capitulo-tag">Calendario nuevo</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">BU 2011</span>
+          <span class="capitulo-tag">Ley de Lemas</span>
+          <span class="capitulo-tag">PASO 2004</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="santa-fe-reforma-2025.html" class="capitulo-card">
       <div class="capitulo-num">10.03.05</div>
-      <h3 class="capitulo-titulo">La <em>bipolaridad</em> Santa Fe-Rosario</h3>
-      <p class="capitulo-desc">Santa Fe es una provincia con dos polos urbanos comparables: la capital (Santa Fe ciudad, 391.000 hab.) y Rosario (1.193.000 hab., más grande que la capital provincial). El equilibrio político e institucional entre ambas, la representación territorial en la legislatura provincial, y el peso del cordón industrial del Gran Rosario en la economía argentina.</p>
+      <h3 class="capitulo-titulo">Reforma constitucional <em>2025</em></h3>
+      <p class="capitulo-desc">La primera reforma en <strong>63 años</strong> después de 4 intentos fallidos. Sancionada el 10 de septiembre de 2025 (52 a 17), jurada el 12 de septiembre. <strong>161 artículos + 27 cláusulas transitorias</strong>. Análisis del proceso completo: Ley 14.384, elección de convencionales (13 abr), las 7 comisiones, las grandes innovaciones, el homenaje póstumo a Lifschitz y las 19 leyes pendientes.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Rosario</span>
-          <span class="capitulo-tag">Bipolaridad</span>
-          <span class="capitulo-tag">Cordón industrial</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">10 sept 2025</span>
+          <span class="capitulo-tag">161 artículos</span>
+          <span class="capitulo-tag">52 a 17</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
   </div>
 
@@ -260,10 +266,10 @@
     </div>
   </div>
 
-  <div class="proximos-contenidos">
-    <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
-    <h3>Los <em>cinco capítulos</em> en producción</h3>
-    <p>Los cinco capítulos planificados sobre la Provincia de Santa Fe se publicarán progresivamente en próximas entregas, siguiendo el orden de prioridad establecido en el hub general de provincias. Cada capítulo incluirá análisis institucional, datos verificables, referencias normativas y fuentes oficiales. Si tenés sugerencias sobre qué temas profundizar o qué fuentes consultar, escribinos.</p>
+  <div class="proximos-contenidos completado">
+    <div class="proximos-titulo">— Estudio publicado completo</div>
+    <h3>Los <em>cinco capítulos</em> ya están disponibles</h3>
+    <p>El estudio sobre la Provincia de Santa Fe está <strong>completo</strong>. Los cinco capítulos suman aproximadamente <strong>230 KB de contenido institucional</strong> con análisis exhaustivo de la reforma constitucional de 2025, citas a fuentes oficiales y revisión histórica. <strong>Próximos estudios provinciales</strong>: Mendoza (única sin reelección de gobernador, modelo BUP). Si tenés sugerencias sobre qué temas profundizar, escribinos.</p>
   </div>
 
 </div>
