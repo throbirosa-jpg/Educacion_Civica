@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Sistemas legislativos a lo largo del tiempo · 08.03 — Educación Cívica</title>
+<meta name="description" content="Cómo Argentina eligió diputados y senadores desde 1854: lista completa, distritos uninominales (1902), lista incompleta (Sáenz Peña 1912), proporcional D'Hondt (desde 1962). Senado: por legislaturas provinciales hasta 2001, directo con tercer senador desde entonces.">
+<link rel="canonical" href="https://educacioncivica.com.ar/elecciones-sistemas-legislativos.html">
+
+<meta property="og:title" content="Sistemas legislativos a lo largo del tiempo · 08.03">
+<meta property="og:description" content="Cómo Argentina eligió a sus legisladores desde 1854. Análisis técnico de cinco sistemas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/elecciones-sistemas-legislativos.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sistemas legislativos a lo largo del tiempo · 08.03">
+<meta name="twitter:description" content="Los sistemas legislativos argentinos a lo largo de la historia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); margin: 1.5rem 0 0.6rem; line-height: 1.3; }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+
+  .sistema-card {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 5px solid var(--premium);
+    padding: 1.8rem 2rem;
+    margin: 2rem 0 1.5rem;
+  }
+  .sistema-numero {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    background: var(--premium-soft);
+    padding: 0.4rem 0.9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .sistema-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+  }
+  .sistema-card dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.92rem;
+    margin: 1rem 0;
+  }
+  .sistema-card dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 0.15rem;
+  }
+  .sistema-card dd {
+    color: var(--tinta);
+    line-height: 1.55;
+  }
+  .sistema-card dd strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .sistema-card dl { grid-template-columns: 1fr; gap: 0.3rem; }
+    .sistema-card dt { margin-top: 0.6rem; }
+  }
+
+  .formula-box {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 1.5rem 1.8rem;
+    margin: 1.2rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .formula-box strong { color: var(--sol); font-weight: 600; }
+  .formula-box em { color: var(--sol-soft); font-style: normal; }
+
+  .ejemplo-box {
+    background: var(--crema-warm);
+    border: 1px solid var(--linea);
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .ejemplo-box-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .ejemplo-box strong { color: var(--premium-dark); }
+
+  .pros-contras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  @media (max-width: 600px) { .pros-contras { grid-template-columns: 1fr; } }
+  .pros-contras-box {
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--linea);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .pros-contras-box.pros {
+    background: var(--verde-soft);
+    border-color: var(--verde);
+  }
+  .pros-contras-box.contras {
+    background: var(--rojo-soft);
+    border-color: var(--rojo-fed);
+  }
+  .pros-contras-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .pros .pros-contras-titulo { color: var(--verde); }
+  .contras .pros-contras-titulo { color: var(--rojo-fed); }
+  .pros-contras-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .pros-contras-box li { font-size: 0.88rem; margin-bottom: 0.3rem; }
+
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .tabla-comparativa td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--premium-dark); font-weight: 600; white-space: nowrap; }
+
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Sistemas legislativos</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 08.03 · Sistema electoral</div>
+    <h1 class="page-title">Sistemas <em>legislativos</em> a lo largo del tiempo</h1>
+    <p class="page-intro">¿Cómo se eligieron los diputados y senadores argentinos en los últimos 170 años? <strong>Cinco sistemas distintos</strong> definieron la composición de la Cámara de Diputados a lo largo del tiempo, desde la lista completa de 1853 hasta el actual sistema proporcional D'Hondt. <strong>El Senado tuvo solo dos sistemas</strong>: elección indirecta por las legislaturas provinciales (1853-2001) y elección directa con tercer senador por minoría (desde 2001). Este capítulo analiza <strong>cada sistema en detalle</strong>: cómo funcionaba, qué efectos producía y por qué fue reemplazado.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">5</div>
+        <div class="page-stat-label">Sistemas para Diputados</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2</div>
+        <div class="page-stat-label">Sistemas para Senado</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">64</div>
+        <div class="page-stat-label">Años con D'Hondt en Diputados</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">3%</div>
+        <div class="page-stat-label">Piso del padrón en D'Hondt</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#intro">Dos cámaras, dos historias</a></li>
+      <li><a href="#diputados">La Cámara de Diputados</a></li>
+      <li><a href="#sistema-1">1. Lista completa (1853-1902)</a></li>
+      <li><a href="#sistema-2">2. Distritos uninominales (1904)</a></li>
+      <li><a href="#sistema-3">3. Vuelta a lista completa (1905-1912)</a></li>
+      <li><a href="#sistema-4">4. Lista incompleta · Sáenz Peña (1912-1962)</a></li>
+      <li><a href="#sistema-5">5. Proporcional D'Hondt (1962-presente)</a></li>
+      <li><a href="#senado">El Senado nacional</a></li>
+      <li><a href="#senado-historico">Sistema histórico (1853-2001)</a></li>
+      <li><a href="#senado-actual">Sistema actual (desde 2001)</a></li>
+      <li><a href="#sintesis">Síntesis comparativa</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="intro"><span class="seccion-num">— Introducción</span>Dos cámaras, <em>dos historias</em></h2>
+    <p>El Congreso argentino es <strong>bicameral</strong>: Cámara de Diputados (representa al pueblo) y Senado (representa a las provincias). Cada una se eligió con sistemas distintos, y cada sistema cambió a lo largo del tiempo según los valores políticos dominantes en cada época.</p>
+
+    <h3>Las dos lógicas representativas</h3>
+    <p>La distinción entre Diputados y Senado responde al modelo federal: la Cámara baja representa a la <strong>población</strong> (cuantos más habitantes una provincia, más diputados aporta), mientras la Cámara alta representa a las <strong>provincias</strong> en igualdad (3 senadores por jurisdicción, sin importar la población). Esta dualidad obliga al consenso entre dos lógicas: la de las mayorías demográficas y la de los equilibrios federales.</p>
+
+    <p>Históricamente, los sistemas de elección de cada cámara reflejaron distintas tensiones políticas:</p>
+    <ul>
+      <li><strong>Diputados</strong>: cambió cinco veces porque la fórmula de representación popular siempre estuvo en disputa (¿representar a corrientes de opinión o a territorios? ¿darle todo al ganador o repartir proporcionalmente?).</li>
+      <li><strong>Senado</strong>: cambió solo una vez, en 1994, porque la cuestión era más institucional que electoral (¿lo eligen las legislaturas provinciales o el pueblo directamente?).</li>
+    </ul>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Diferencia conceptual</div>
+      <p>La Cámara de Diputados refleja una concepción <strong>democrática</strong> de la representación (un ciudadano, un voto, ponderado por población). El Senado refleja una concepción <strong>federal</strong> de la representación (cada provincia tiene igual peso institucional, sin importar su tamaño). Esa tensión está al corazón del diseño bicameral argentino.</p>
+    </div>
+
+    <h2 id="diputados"><span class="seccion-num">— Parte 1</span>La Cámara de <em>Diputados</em></h2>
+    <p>Los <strong>257 diputados nacionales</strong> que componen la Cámara baja han sido elegidos a lo largo de la historia con cinco sistemas técnicos distintos. Cada uno respondía a una concepción diferente de qué debían representar los diputados: territorios, mayorías, corrientes de opinión, o partidos políticos.</p>
+
+    <div class="sistema-card" id="sistema-1">
+      <div class="sistema-numero">— Sistema 1 · 1853-1902</div>
+      <h3>Lista <em>completa</em></h3>
+      <p>El sistema diseñado por la Constitución de 1853 era el de <strong>lista completa</strong>, también llamado "lista plena" o "el que gana se lleva todo". Cada provincia constituía un único distrito electoral, y los electores votaban una lista cerrada con tantos nombres como bancas se renovaban en ese distrito.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Plurinominal de mayoría. Lista cerrada.</dd>
+        <dt>Distrito</dt>
+        <dd>Una provincia = un distrito electoral.</dd>
+        <dt>Mecanismo</dt>
+        <dd>El partido más votado se llevaba <strong>todas las bancas</strong> en disputa de ese distrito.</dd>
+        <dt>Sufragio</dt>
+        <dd>Voto cantado (oral o por boleta visible).</dd>
+        <dt>Padrón</dt>
+        <dd>Inscripción manual antes de cada elección.</dd>
+      </dl>
+
+      <h4>Cómo funcionaba en la práctica</h4>
+      <p>Supongamos que la provincia X renovaba 6 bancas. Cada elector votaba una lista con 6 nombres. El partido que obtenía la mayoría simple en esa provincia se llevaba <strong>los 6 escaños</strong>, sin importar si ganaba por mucho o por poco. La minoría no obtenía representación.</p>
+
+      <p>Combinado con el régimen de voto cantado y el fraude oligárquico, este sistema convertía al PAN y partidos aliados en <strong>monopolios provinciales</strong>: cada elección reforzaba la hegemonía del partido oficialista en cada distrito.</p>
+
+      <div class="pros-contras">
+        <div class="pros-contras-box pros">
+          <div class="pros-contras-titulo">A favor</div>
+          <ul>
+            <li>Mecanismo simple, fácil de aplicar</li>
+            <li>Mayorías claras, gobiernos estables</li>
+            <li>Adapta el modelo norteamericano</li>
+          </ul>
+        </div>
+        <div class="pros-contras-box contras">
+          <div class="pros-contras-titulo">En contra</div>
+          <ul>
+            <li>Excluye totalmente a la minoría</li>
+            <li>Facilita el fraude masivo</li>
+            <li>Concentración política excesiva</li>
+            <li>No representa la pluralidad social</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-2">
+      <div class="sistema-numero">— Sistema 2 · 1904 (una sola elección)</div>
+      <h3>Distritos <em>uninominales</em> · La reforma de Joaquín V. González</h3>
+      <p>La <strong>Ley 4.161</strong>, sancionada el 29 de diciembre de 1902 e impulsada por Joaquín V. González (ministro del Interior del segundo gobierno de Roca), introdujo el primer intento serio de reformar el sistema electoral argentino antes de la Ley Sáenz Peña.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Uninominal por circunscripción. <strong>120 circunscripciones</strong> en todo el país.</dd>
+        <dt>Distrito</dt>
+        <dd>Cada provincia se dividía en tantas circunscripciones como diputados le correspondieran (1 diputado cada 33.000 habitantes).</dd>
+        <dt>Mecanismo</dt>
+        <dd>En cada circunscripción, el candidato más votado ganaba <strong>esa única banca</strong>.</dd>
+        <dt>Sufragio</dt>
+        <dd>Voto seguía siendo cantado (el secreto fue rechazado por el Senado, principalmente por Carlos Pellegrini).</dd>
+        <dt>Otra novedad</dt>
+        <dd>Padrón cívico permanente (eliminó la inscripción previa a cada elección).</dd>
+      </dl>
+
+      <h4>El hito de Alfredo Palacios en La Boca</h4>
+      <p>El sistema se aplicó <strong>una sola vez</strong>, en las elecciones de 1904. Su resultado más memorable: <strong>Alfredo Palacios fue electo diputado por el barrio porteño de La Boca</strong>, convirtiéndose en el <strong>primer diputado socialista de América Latina</strong>. En esa circunscripción específica vivían muchos trabajadores socialistas, y bajo el sistema de circunscripciones uninominales, esa concentración local se tradujo en un escaño.</p>
+
+      <p>Este resultado, paradójicamente, fue la causa principal del rechazo del sistema. Las élites del PAN se alarmaron: la pluralidad social que el sistema permitía representar amenazaba el monopolio político conservador. La Ley 4.161 fue derogada apenas un año después, en 1905, y se volvió a la lista completa.</p>
+
+      <div class="dato-destacado">
+        <div class="dato-destacado-titulo">— El argumento conceptual</div>
+        <p>Joaquín V. González argumentaba que el uninominal acercaría a representantes y representados: cada barrio o región tendría su diputado conocido y rendiría cuentas directamente. Roque Sáenz Peña, años después, criticaría este enfoque: para él, los diputados debían representar <strong>"corrientes de opinión"</strong>, no territorios. Esta tensión sigue presente en los debates electorales argentinos: ¿representamos territorios o ideas?</p>
+      </div>
+
+      <div class="pros-contras">
+        <div class="pros-contras-box pros">
+          <div class="pros-contras-titulo">A favor</div>
+          <ul>
+            <li>Cercanía territorial entre electores y diputado</li>
+            <li>Permite representación local (barrios, comunidades)</li>
+            <li>Más rendición de cuentas</li>
+            <li>Reduce el peso de los aparatos partidarios</li>
+          </ul>
+        </div>
+        <div class="pros-contras-box contras">
+          <div class="pros-contras-titulo">En contra</div>
+          <ul>
+            <li>Sigue siendo sistema de mayoría (no representa minorías)</li>
+            <li>Costo administrativo más alto</li>
+            <li>Dificulta partidos nacionales chicos</li>
+            <li>Posibles distorsiones en el trazado de circunscripciones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-3">
+      <div class="sistema-numero">— Sistema 3 · 1905-1912</div>
+      <h3>Vuelta a la <em>lista completa</em></h3>
+      <p>En 1905, tras la alarma generada por el triunfo socialista de 1904 y otros resultados imprevisibles, las élites del PAN derogaron la Ley 4.161 y restablecieron el sistema de lista completa. Las elecciones de 1906 a 1910 volvieron a celebrarse bajo el modelo tradicional: "el que gana se lleva todo" en cada provincia.</p>
+
+      <p>Sin embargo, el debate sobre la reforma electoral siguió abierto. La asunción de Roque Sáenz Peña en 1910 marcó el momento decisivo. Sáenz Peña, hijo de un expresidente y exministro él mismo, había estudiado a fondo los sistemas electorales europeos y sostenía que el voto cantado y la lista completa eran incompatibles con una democracia real. En su mensaje al Congreso de 1911, impulsó el proyecto de reforma que daría origen a la <strong>Ley 8.871</strong>.</p>
+
+      <p>Para profundizar sobre la <strong>Ley Sáenz Peña de 1912</strong> y su contexto histórico, ver el capítulo <a href="historia-documentos-fundacionales.html#saenz-pena" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.06 sobre documentos fundacionales</a>.</p>
+    </div>
+
+    <div class="sistema-card" id="sistema-4">
+      <div class="sistema-numero">— Sistema 4 · 1912-1962 (con interrupciones)</div>
+      <h3>Lista <em>incompleta</em> · El sistema Sáenz Peña</h3>
+      <p>La <strong>Ley 8.871</strong>, sancionada el 10 de febrero de 1912, introdujo el sistema de <strong>"lista incompleta"</strong>, una forma simple de proporcionalidad bipartidista. Junto con el voto secreto y obligatorio, fue la base de la democracia electoral argentina durante medio siglo.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Lista incompleta o "dos tercios - un tercio".</dd>
+        <dt>Distrito</dt>
+        <dd>Provincia (vuelta al esquema de 1853).</dd>
+        <dt>Mecanismo</dt>
+        <dd>Las bancas del distrito se repartían así: <strong>2/3 al partido más votado</strong>, <strong>1/3 a la primera minoría</strong>.</dd>
+        <dt>Voto</dt>
+        <dd>Secreto y obligatorio (por primera vez en Argentina).</dd>
+        <dt>Padrón</dt>
+        <dd>Permanente, basado en el servicio militar obligatorio (Ley 4.031 de 1901).</dd>
+      </dl>
+
+      <h4>Por qué fue revolucionario</h4>
+      <p>El sistema Sáenz Peña representó tres revoluciones simultáneas:</p>
+      <ol>
+        <li><strong>Voto secreto</strong>: eliminó la presión de patrones, caudillos y funcionarios sobre el votante.</li>
+        <li><strong>Voto obligatorio</strong>: impidió que los pobres y trabajadores fueran sistemáticamente excluidos de las urnas.</li>
+        <li><strong>Lista incompleta</strong>: garantizó representación a la primera minoría, terminando con el monopolio del PAN.</li>
+      </ol>
+
+      <p>La aplicación fue inmediata: en 1912 (legislativas), 1913 (legislativas) y 1916 (presidenciales) cambió el escenario político. La Unión Cívica Radical, hasta entonces abstencionista, ingresó al sistema y ganó la presidencia en 1916.</p>
+
+      <h4>El paréntesis peronista (1951-1955)</h4>
+      <p>En 1951, el primer peronismo modificó el sistema con la <strong>Ley 14.032</strong>, impulsada por Ramón Subiza (Secretario de Asuntos Políticos): vuelta a las <strong>circunscripciones uninominales</strong>, el sistema de Joaquín V. González de 1902. La modificación, sin embargo, tuvo aplicación limitada: solo se utilizó parcialmente antes del golpe de 1955.</p>
+
+      <div class="pros-contras">
+        <div class="pros-contras-box pros">
+          <div class="pros-contras-titulo">A favor</div>
+          <ul>
+            <li>Termina con el monopolio del oficialismo</li>
+            <li>Garantiza voz a la primera minoría</li>
+            <li>Simple de aplicar</li>
+            <li>Compatible con voto secreto y obligatorio</li>
+          </ul>
+        </div>
+        <div class="pros-contras-box contras">
+          <div class="pros-contras-titulo">En contra</div>
+          <ul>
+            <li>Bipartidista por diseño (excluye terceras fuerzas)</li>
+            <li>Sobrerrepresenta a la mayoría (2/3 con apenas más del 50%)</li>
+            <li>Limita la pluralidad ideológica</li>
+            <li>No es genuinamente proporcional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="sistema-5">
+      <div class="sistema-numero">— Sistema 5 · 1962-presente</div>
+      <h3>Sistema <em>proporcional D'Hondt</em></h3>
+      <p>El gobierno militar autodenominado "Revolución Libertadora" (1955-1958) dictó el <strong>Decreto-Ley 4.034/57</strong>, que estableció por primera vez un sistema de representación proporcional para la Cámara de Diputados, usando el <strong>método D'Hondt</strong>. El sistema se aplicó por primera vez en 1962 y rige hasta hoy, sin modificaciones sustanciales en sus mecanismos básicos.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Representación proporcional con método D'Hondt.</dd>
+        <dt>Distrito</dt>
+        <dd>Cada provincia (24 distritos electorales).</dd>
+        <dt>Lista</dt>
+        <dd>Cerrada y bloqueada (el elector no puede modificar el orden).</dd>
+        <dt>Bancas distribuidas</dt>
+        <dd>La mitad del total que corresponde a la provincia, cada 2 años (renovación por mitades).</dd>
+        <dt>Piso electoral</dt>
+        <dd><strong>3% del padrón electoral del distrito</strong>. Las fuerzas que no lo superan quedan excluidas del reparto.</dd>
+        <dt>Norma actual</dt>
+        <dd>Código Electoral Nacional (Ley 19.945, con modificatorias posteriores).</dd>
+      </dl>
+
+      <h4>Cómo funciona el método D'Hondt</h4>
+      <p>El método D'Hondt es un algoritmo de reparto proporcional. Cada lista que supera el piso del 3% del padrón se divide sucesivamente por <strong>1, 2, 3, 4...</strong> generando una serie de cocientes. Las bancas se asignan a los cocientes más altos, en orden descendente.</p>
+
+      <div class="ejemplo-box">
+        <span class="ejemplo-box-tag">— Ejemplo simplificado</span>
+        <strong>Provincia con 5 bancas a renovar</strong> y los siguientes resultados:<br>
+        Partido A: 400 votos · Partido B: 300 votos · Partido C: 200 votos · Partido D: 100 votos<br><br>
+        <strong>Cocientes (dividir por 1, 2, 3, 4, 5):</strong><br>
+        A: 400, 200, 133, 100, 80<br>
+        B: 300, 150, 100, 75, 60<br>
+        C: 200, 100, 67, 50, 40<br>
+        D: 100, 50, 33, 25, 20<br><br>
+        <strong>Los 5 cocientes más altos</strong> reciben banca:<br>
+        400 (A), 300 (B), 200 (A), 200 (C), 150 (B)<br><br>
+        <strong>Resultado final</strong>: Partido A = 2 bancas, Partido B = 2 bancas, Partido C = 1 banca, Partido D = 0 bancas.
+      </div>
+
+      <p>Para una explicación más detallada con casos reales, ver la página específica del <a href="dhondt.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">método D'Hondt</a>.</p>
+
+      <h4>Las distorsiones del sistema actual</h4>
+      <p>Aunque el método D'Hondt es proporcional, su aplicación en Argentina produce algunas distorsiones:</p>
+      <ul>
+        <li><strong>Pequeño sesgo a las mayorías</strong>: D'Hondt favorece levemente a los partidos más grandes en distritos pequeños.</li>
+        <li><strong>Renovación por mitades</strong>: en distritos chicos (5 diputados), se renuevan solo 2 o 3 bancas cada vez, lo que limita la proporcionalidad real.</li>
+        <li><strong>Distribución no proporcional a la población</strong>: la cantidad de bancas por provincia fue fijada por el Decreto-Ley 22.847/83 según el censo de 1980 y nunca se actualizó. Buenos Aires, Córdoba, Santa Fe y Mendoza están subrepresentadas en términos demográficos.</li>
+        <li><strong>Piso del 3% del padrón</strong>: excluye fuerzas más chicas, sobre todo en distritos pequeños donde el porcentaje absoluto requerido es mayor.</li>
+      </ul>
+
+      <p>Para más detalles sobre la distribución actual de las 257 bancas por jurisdicción, ver el capítulo <a href="elecciones-calendario.html#diputados" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">08.01 sobre el calendario electoral</a>.</p>
+
+      <div class="pros-contras">
+        <div class="pros-contras-box pros">
+          <div class="pros-contras-titulo">A favor</div>
+          <ul>
+            <li>Representación pluralista (más fuerzas)</li>
+            <li>Mayor correspondencia voto/banca</li>
+            <li>Estable: 64 años de aplicación continua</li>
+            <li>Compatible con regímenes democráticos diversos</li>
+          </ul>
+        </div>
+        <div class="pros-contras-box contras">
+          <div class="pros-contras-titulo">En contra</div>
+          <ul>
+            <li>Las "listas sábana" frenan el voto a personas</li>
+            <li>Aparatos partidarios controlan las nominaciones</li>
+            <li>Distrito chico = baja proporcionalidad real</li>
+            <li>Piso del 3% del padrón excluye minorías</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="senado"><span class="seccion-num">— Parte 2</span>El <em>Senado</em> Nacional</h2>
+    <p>Mientras la Cámara de Diputados cambió su sistema electoral cinco veces, el Senado tuvo solamente <strong>dos sistemas</strong> a lo largo de su historia. El cambio se produjo con la reforma constitucional de 1994.</p>
+
+    <div class="sistema-card" id="senado-historico">
+      <div class="sistema-numero">— Sistema histórico · 1853-2001</div>
+      <h3>Elección por las <em>legislaturas provinciales</em></h3>
+      <p>La Constitución de 1853 estableció un sistema <strong>indirecto</strong> para la elección de senadores nacionales. Los senadores no eran votados por los ciudadanos directamente, sino por <strong>las legislaturas provinciales</strong>. Esto reflejaba la idea original del Senado como cuerpo representativo de los gobiernos provinciales.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Elección indirecta por las legislaturas provinciales.</dd>
+        <dt>Senadores por provincia</dt>
+        <dd>2 senadores por cada provincia + 2 por la Capital Federal.</dd>
+        <dt>Mandato</dt>
+        <dd><strong>9 años</strong>, reelegibles indefinidamente.</dd>
+        <dt>Renovación</dt>
+        <dd>Por tercios <strong>cada 3 años</strong> (a diferencia del actual sistema de tercios cada 2 años).</dd>
+        <dt>Capital Federal</dt>
+        <dd>Sus senadores se elegían "en la forma prescripta para la elección del presidente" (es decir, por colegio electoral indirecto).</dd>
+      </dl>
+
+      <h4>La lógica del sistema indirecto</h4>
+      <p>El sistema indirecto respondía a varias razones:</p>
+      <ul>
+        <li><strong>Federalismo</strong>: si el Senado representa a las provincias, era lógico que las legislaturas (representantes de las provincias) eligieran a los senadores.</li>
+        <li><strong>Filtro institucional</strong>: las legislaturas servían como filtro entre el voto popular y la designación de altos cargos.</li>
+        <li><strong>Tradición americana</strong>: el modelo era similar al de Estados Unidos antes de la enmienda 17 (1913), que también pasó del sistema indirecto al directo.</li>
+      </ul>
+
+      <h4>El Estatuto Fundamental de 1972</h4>
+      <p>El gobierno militar de Lanusse, mediante el <strong>Estatuto Fundamental del 24 de agosto de 1972</strong>, reformó transitoriamente el régimen del Senado: reducción del mandato a 4 años y reelección indefinida. Esta reforma se aplicó en las elecciones de 1973 (con elección directa por primera vez para algunos cargos), pero caducó automáticamente en 1981 sin convalidación democrática.</p>
+
+      <div class="dato-destacado">
+        <div class="dato-destacado-titulo">— Una rareza institucional</div>
+        <p>El sistema de elección por las legislaturas tenía consecuencias políticas particulares: los partidos podían "negociar" senadores como parte de acuerdos provinciales más amplios. En algunas provincias, hubo casos de senadores designados sin haber recibido un solo voto popular directo. Esta opacidad fue uno de los argumentos centrales para la reforma de 1994.</p>
+      </div>
+    </div>
+
+    <div class="sistema-card" id="senado-actual">
+      <div class="sistema-numero">— Sistema actual · Desde 2001</div>
+      <h3>Elección <em>directa</em> con tercer senador por minoría</h3>
+      <p>La reforma constitucional de 1994 modificó sustancialmente el régimen del Senado en cuatro aspectos clave. La transición no fue inmediata: la <strong>Disposición Transitoria Cuarta</strong> de la Constitución reformada estableció que el sistema anterior se mantendría hasta las elecciones de <strong>2001</strong>, año del primer voto directo de senadores nacionales.</p>
+
+      <dl>
+        <dt>Sistema</dt>
+        <dd>Elección directa por voto popular.</dd>
+        <dt>Senadores por jurisdicción</dt>
+        <dd><strong>3</strong> (en lugar de 2): 2 senadores al partido más votado, 1 al segundo.</dd>
+        <dt>Mandato</dt>
+        <dd><strong>6 años</strong> (en lugar de 9), reelegibles indefinidamente.</dd>
+        <dt>Renovación</dt>
+        <dd>Por tercios <strong>cada 2 años</strong> (en lugar de 3).</dd>
+        <dt>CABA</dt>
+        <dd>Se le reconocen 3 senadores propios (en lugar de los 2 senadores históricos de la Capital).</dd>
+        <dt>Norma</dt>
+        <dd>Art. 54 CN reformado. Ley 24.444 reguló los detalles del nuevo sistema.</dd>
+      </dl>
+
+      <h4>El "tercer senador por la minoría"</h4>
+      <p>La novedad más importante del nuevo sistema fue la <strong>incorporación del tercer senador por la primera minoría</strong>. Es el equivalente al sistema de "lista incompleta" de la Ley Sáenz Peña, adaptado al Senado: el ganador no se lleva todo, sino que la oposición tiene representación garantizada en cada distrito.</p>
+
+      <p>El mecanismo es simple: en cada provincia, el partido más votado obtiene <strong>2 senadores</strong> y el segundo partido obtiene <strong>1 senador</strong>. No hay tercer lugar: solo los dos primeros partidos acceden al Senado por ese distrito.</p>
+
+      <h4>Las tres clases del Senado</h4>
+      <p>La reforma de 1994 estableció también la división de las 24 jurisdicciones en <strong>tres grupos o clases</strong> que se renuevan rotativamente cada 6 años. Para ver el detalle de qué provincias integran cada grupo, ver el capítulo <a href="elecciones-calendario.html#grupos-senado" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">08.01 sobre el calendario electoral</a>.</p>
+
+      <h4>Una transición compleja: 1995-2001</h4>
+      <p>Entre la reforma de 1994 y la primera elección directa de 2001, el Senado vivió una situación curiosa: <strong>los nuevos senadores incorporados en 1995 fueron designados por las legislaturas provinciales con las nuevas reglas constitucionales</strong>, pero todavía sin voto directo del pueblo. Recién en 2001 (con la elección del 14 de octubre) se completó la transición: <strong>todos los senadores comenzaron a ser electos por voto popular directo</strong>.</p>
+
+      <div class="dato-destacado">
+        <div class="dato-destacado-titulo">— Un dato curioso</div>
+        <p>Hasta 2001, era posible que un ciudadano argentino nunca hubiera votado directamente por un senador nacional. Si su provincia no había realizado elecciones especiales tras 1994, los senadores se elegían exclusivamente por la legislatura provincial. Hoy, votar senadores es una práctica habitual cada 2 años (8 provincias por turno).</p>
+      </div>
+    </div>
+
+    <h2 id="sintesis"><span class="seccion-num">— Síntesis</span>Los <em>sistemas</em> comparados</h2>
+
+    <h3>Cámara de Diputados · Cinco sistemas en 170 años</h3>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Sistema</th>
+          <th>Período</th>
+          <th>Característica clave</th>
+          <th>Norma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lista completa</td>
+          <td>1853-1902</td>
+          <td>El ganador se lleva todas las bancas del distrito</td>
+          <td>Constitución 1853</td>
+        </tr>
+        <tr>
+          <td>Distritos uninominales</td>
+          <td>1904</td>
+          <td>120 circunscripciones, una banca cada una</td>
+          <td>Ley 4.161</td>
+        </tr>
+        <tr>
+          <td>Lista completa (vuelta)</td>
+          <td>1905-1912</td>
+          <td>Restablecimiento del sistema original</td>
+          <td>Derogación de Ley 4.161</td>
+        </tr>
+        <tr>
+          <td>Lista incompleta</td>
+          <td>1912-1962</td>
+          <td>2/3 al ganador, 1/3 a la minoría</td>
+          <td>Ley Sáenz Peña (8.871)</td>
+        </tr>
+        <tr>
+          <td><strong>Proporcional D'Hondt</strong></td>
+          <td><strong>1962-presente</strong></td>
+          <td><strong>Reparto proporcional con piso del 3%</strong></td>
+          <td><strong>Código Electoral (19.945)</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Senado · Dos sistemas en 170 años</h3>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Sistema</th>
+          <th>Período</th>
+          <th>Característica clave</th>
+          <th>Norma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Indirecto</td>
+          <td>1853-2001</td>
+          <td>Elegidos por legislaturas provinciales, 2 por provincia, mandato 9 años</td>
+          <td>Constitución 1853</td>
+        </tr>
+        <tr>
+          <td><strong>Directo con tercer senador</strong></td>
+          <td><strong>Desde 2001</strong></td>
+          <td><strong>Voto popular, 3 por jurisdicción (2 mayoría + 1 minoría), mandato 6 años</strong></td>
+          <td><strong>Reforma constitucional 1994 / Ley 24.444</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">Los sistemas electorales legislativos argentinos cuentan una historia política específica: la lenta extensión del derecho a la representación. De la lista completa que monopolizaba todo a la lista incompleta que reconoció a la minoría, y luego al proporcional D'Hondt que pluralizó la oferta política. Del Senado elegido por las legislaturas al Senado elegido directamente por el pueblo. Cada cambio amplió la base democrática del Congreso. <strong>Hoy, todo argentino mayor de 16 años puede votar directamente tanto diputados como senadores nacionales. Pero eso es un logro reciente: data apenas de 2001.</strong></p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Próximos contenidos en desarrollo</div>
+      <p>Este capítulo es parte de la sección Elecciones. El próximo será <strong>08.05 Innovaciones electorales del siglo XXI</strong> (PASO, BUP, paridad, voto joven), y finalmente un hub que organizará toda la sección. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Nación Argentina (1853, con reformas posteriores).</li>
+        <li>Constitución de la Nación Argentina reformada (1994). Ley 24.430.</li>
+        <li>Ley 4.161 (1902) - Ley electoral Joaquín V. González.</li>
+        <li>Ley 8.871 (1912) - "Ley Sáenz Peña".</li>
+        <li>Ley 14.032 (1951) - Reforma electoral peronista (vuelta a uninominales).</li>
+        <li>Decreto-Ley 4.034/57 - Establecimiento del sistema proporcional D'Hondt.</li>
+        <li>Código Electoral Nacional (Ley 19.945) y modificatorias.</li>
+        <li>Ley 24.444 - Reforma al régimen de elección de senadores (1995).</li>
+        <li>Decreto-Ley 22.847/83 - Distribución de bancas de Diputados Nacionales.</li>
+        <li>Disposición Transitoria Cuarta de la Constitución reformada (1994-2001).</li>
+        <li>Nohlen, Dieter. <em>Sistemas electorales y partidos políticos</em>. FCE.</li>
+        <li>Abal Medina, Juan. <em>Análisis crítico del sistema electoral argentino</em>.</li>
+        <li>Botana, Natalio. <em>El orden conservador. La política argentina entre 1880 y 1916</em>. Edhasa.</li>
+        <li>Ternavasio, Marcela. <em>La revolución del voto</em>. Siglo XXI.</li>
+        <li>Cantón, Darío. <em>Elecciones y partidos políticos en la Argentina. Historia, interpretación y balance</em>. Siglo XXI.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino</em>. Eudeba.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada y concordada</em>. La Ley.</li>
+        <li>Honorable Cámara de Diputados de la Nación. <em>Composición histórica</em>.</li>
+        <li>Honorable Senado de la Nación. <em>Composición y normativa interna</em>.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="elecciones-sistemas-presidenciales.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Capítulo 08.02</div>
+        <div class="nav-cap-titulo">Sistemas presidenciales aplicados</div>
+      </a>
+      <a href="elecciones-cronologia.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Capítulo 08.04 →</div>
+        <div class="nav-cap-titulo">Cronología electoral completa</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
