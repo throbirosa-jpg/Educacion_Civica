@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Provincia de Córdoba · En profundidad — Educación Cívica</title>
+<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Córdoba: historia constitucional, poderes provinciales, régimen municipal, particularidades distintivas y agenda institucional pendiente. Cinco capítulos premium con datos verificables.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-en-profundidad.html">
+
+<meta property="og:title" content="Provincia de Córdoba · En profundidad">
+<meta property="og:description" content="Estudio institucional en profundidad: cinco capítulos sobre la Provincia de Córdoba.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-en-profundidad.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 1100px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; max-width: 800px; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-datos { background: white; border: 1px solid var(--linea); padding: 2rem; margin: 2.5rem auto 0; max-width: 1100px; }
+  .page-datos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
+  .page-datos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+  .page-dato { }
+  .page-dato-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .page-dato-valor { font-family: 'Fraunces', serif; font-weight: 500; color: var(--tinta); font-size: 1.1rem; line-height: 1.3; }
+  .page-dato-valor em { color: var(--premium-dark); font-style: italic; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+  .seccion-intro { max-width: 800px; margin-bottom: 3rem; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 0.8rem; }
+  .seccion-titulo { font-family: 'Fraunces', serif; font-weight: 400; font-size: 2rem; color: var(--tinta); line-height: 1.2; margin-bottom: 1.2rem; }
+  .seccion-titulo em { font-style: italic; color: var(--premium-dark); }
+  .seccion-descripcion { font-size: 1.05rem; line-height: 1.75; color: var(--tinta); }
+  .seccion-descripcion strong { color: var(--premium-dark); font-weight: 600; }
+
+  .capitulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
+
+  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; opacity: 0.92; }
+  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--sol-dark); }
+  .capitulo-card:hover { opacity: 1; border-color: var(--sol-dark); }
+
+  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--sol-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); line-height: 1.25; margin-bottom: 0.8rem; }
+  .capitulo-titulo em { font-style: italic; color: var(--premium-dark); }
+  .capitulo-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
+  .capitulo-desc strong { color: var(--premium-dark); }
+  .capitulo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+  .capitulo-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.7rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); font-weight: 500; }
+  .capitulo-tag.estado-pronto { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
+  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--sol-dark); font-weight: 600; margin-top: auto; }
+
+  .nav-otras-provincias { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem; margin: 3rem 0; }
+  .nav-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
+  .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+  .nav-link { background: white; border: 1px solid var(--linea); padding: 1.1rem 1.3rem; text-decoration: none; color: var(--tinta); transition: all 0.2s; display: block; }
+  .nav-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-link h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 0.2rem; color: var(--tinta); font-weight: 500; }
+  .nav-link p { font-size: 0.78rem; color: var(--tinta-soft); line-height: 1.4; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
+  .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
+  .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
+  .proximos-contenidos p { font-size: 0.98rem; line-height: 1.7; color: var(--tinta); margin: 0; }
+  .proximos-contenidos p strong { color: var(--premium-dark); }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio provincial · <strong>Capítulos en producción</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="provincias-en-profundidad.html">Provincias en profundidad</a> · <span>Provincia de Córdoba</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02 · Estudio provincial</div>
+    <h1 class="page-title">Provincia de <em>Córdoba</em></h1>
+    <div class="page-subtitulo">— La docta · La unicameral pionera</div>
+    <p class="page-intro"><strong>La segunda provincia más poblada del país</strong> y la única jurisdicción grande con <strong>legislatura unicameral</strong>. Cuna de la Reforma Universitaria de 1918, del federalismo argentino del siglo XIX y de varias innovaciones institucionales del siglo XXI: <strong>autonomía municipal plena</strong> (reforma de 1987), <strong>primera ley provincial de paridad de género</strong> (Ley 8.901 del año 2000) y <strong>boleta única provincial</strong> (en uso desde 2011). El modelo cordobés inspiró buena parte de las innovaciones electorales nacionales.</p>
+  </div>
+
+  <div class="page-datos">
+    <div class="page-datos-titulo">— Datos institucionales clave</div>
+    <div class="page-datos-grid">
+      <div class="page-dato">
+        <div class="page-dato-label">Habitantes</div>
+        <div class="page-dato-valor">3.840.905 (Censo 2022)</div>
+      </div>
+      <div class="page-dato">
+        <div class="page-dato-label">Capital</div>
+        <div class="page-dato-valor">Córdoba (fundada 1573)</div>
+      </div>
+      <div class="page-dato">
+        <div class="page-dato-label">División territorial</div>
+        <div class="page-dato-valor">26 departamentos · 427 municipios</div>
+      </div>
+      <div class="page-dato">
+        <div class="page-dato-label">Sistema legislativo</div>
+        <div class="page-dato-valor">Unicameral (70 miembros desde 2001)</div>
+      </div>
+      <div class="page-dato">
+        <div class="page-dato-label">Mandato gobernador</div>
+        <div class="page-dato-valor">4 años · 1 reelección consecutiva</div>
+      </div>
+      <div class="page-dato">
+        <div class="page-dato-label">Diputados nacionales</div>
+        <div class="page-dato-valor">18</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="seccion-intro">
+    <div class="seccion-eyebrow">— Cinco capítulos en desarrollo</div>
+    <h2 class="seccion-titulo">El plan de <em>contenidos</em> de esta sección</h2>
+    <p class="seccion-descripcion">Esta es la estructura del estudio sobre la Provincia de Córdoba, replicando el modelo del estudio sobre CABA. Los cinco capítulos están planificados pero <strong>aún en producción</strong>: cada uno se publicará en próximas entregas con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+  </div>
+
+  <div class="capitulos-grid">
+
+    <div class="capitulo-card">
+      <div class="capitulo-num">10.02.01</div>
+      <h3 class="capitulo-titulo">Historia <em>institucional</em></h3>
+      <p class="capitulo-desc">Córdoba en el ciclo del federalismo argentino: la Liga del Norte y los enfrentamientos con Buenos Aires del siglo XIX. La Reforma Universitaria de 1918 y su proyección continental. Las reformas constitucionales provinciales de 1923, 1949, 1987 (la gran modernización) y 2001 (la unicameralización).</p>
+      <div class="capitulo-tags">
+          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag">Reforma 1918</span>
+          <span class="capitulo-tag">Federalismo cordobés</span>
+          <span class="capitulo-tag">Reformas constitucionales</span>
+      </div>
+      <span class="capitulo-link">En producción · Próxima entrega</span>
+    </div>
+
+    <div class="capitulo-card">
+      <div class="capitulo-num">10.02.02</div>
+      <h3 class="capitulo-titulo">Los tres <em>poderes</em></h3>
+      <p class="capitulo-desc">El gobernador (con una reelección consecutiva), la Legislatura unicameral de 70 miembros (26 departamentales + 44 por distrito único) y el Tribunal Superior de Justicia. Sistema electoral mixto único en el país: combina representación territorial departamental con representación proporcional provincial.</p>
+      <div class="capitulo-tags">
+          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag">Unicameralismo</span>
+          <span class="capitulo-tag">Sistema mixto</span>
+          <span class="capitulo-tag">Reforma 2001</span>
+      </div>
+      <span class="capitulo-link">En producción · Próxima entrega</span>
+    </div>
+
+    <div class="capitulo-card">
+      <div class="capitulo-num">10.02.03</div>
+      <h3 class="capitulo-titulo">Autonomía municipal <em>plena</em></h3>
+      <p class="capitulo-desc">Córdoba fue pionera en reconocer la autonomía municipal plena en su reforma constitucional de 1987 (siete años antes que la Constitución Nacional). Los municipios cordobeses pueden dictar sus propias cartas orgánicas. Hoy existen más de 250 municipios y 170 comunas con distintos niveles de autonomía.</p>
+      <div class="capitulo-tags">
+          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag">Autonomía municipal</span>
+          <span class="capitulo-tag">Cartas orgánicas</span>
+          <span class="capitulo-tag">Reforma 1987</span>
+      </div>
+      <span class="capitulo-link">En producción · Próxima entrega</span>
+    </div>
+
+    <div class="capitulo-card">
+      <div class="capitulo-num">10.02.04</div>
+      <h3 class="capitulo-titulo">Pionera <em>electoral</em></h3>
+      <p class="capitulo-desc">Tres innovaciones electorales argentinas nacieron en Córdoba: la <strong>Ley de Paridad 8.901 del año 2000</strong> (primera del país), la <strong>boleta única provincial</strong> en uso desde 2011, y el modelo institucional que inspiró la BUP nacional de 2024. Análisis de cada innovación y de sus efectos sobre el sistema político cordobés.</p>
+      <div class="capitulo-tags">
+          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag">Paridad 2000</span>
+          <span class="capitulo-tag">BUP cordobés</span>
+          <span class="capitulo-tag">Modelo nacional</span>
+      </div>
+      <span class="capitulo-link">En producción · Próxima entrega</span>
+    </div>
+
+    <div class="capitulo-card">
+      <div class="capitulo-num">10.02.05</div>
+      <h3 class="capitulo-titulo">Tensiones con la <em>Nación</em></h3>
+      <p class="capitulo-desc">Córdoba ha sido históricamente una provincia con una identidad política propia, no alineada con los aparatos nacionales. Análisis de la coparticipación de Córdoba (aporta más de lo que recibe), de los conflictos por la caja jubilatoria provincial no transferida, y de la doctrina cordobesa de la "no subordinación" política a Buenos Aires.</p>
+      <div class="capitulo-tags">
+          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag">Caja jubilatoria</span>
+          <span class="capitulo-tag">Coparticipación</span>
+          <span class="capitulo-tag">Autonomía política</span>
+      </div>
+      <span class="capitulo-link">En producción · Próxima entrega</span>
+    </div>
+
+  </div>
+
+  <div class="nav-otras-provincias">
+    <div class="nav-titulo">— Las otras provincias en profundidad</div>
+    <div class="nav-grid">
+      <a href="buenos-aires-en-profundidad.html" class="nav-link">
+        <h4>Buenos Aires</h4>
+        <p>La provincia mayor</p>
+      </a>
+      <a href="santa-fe-en-profundidad.html" class="nav-link">
+        <h4>Santa Fe</h4>
+        <p>Cuna constitucional</p>
+      </a>
+      <a href="mendoza-en-profundidad.html" class="nav-link">
+        <h4>Mendoza</h4>
+        <p>La cuyana · Modelo BUP</p>
+      </a>
+      <a href="caba-en-profundidad.html" class="nav-link">
+        <h4>CABA</h4>
+        <p>Estudio publicado</p>
+      </a>
+      <a href="provincias-en-profundidad.html" class="nav-link">
+        <h4>← Volver al hub general</h4>
+        <p>Las 4 provincias</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="proximos-contenidos">
+    <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
+    <h3>Los <em>cinco capítulos</em> en producción</h3>
+    <p>Los cinco capítulos planificados sobre la Provincia de Córdoba se publicarán progresivamente en próximas entregas, siguiendo el orden de prioridad establecido en el hub general de provincias. Cada capítulo incluirá análisis institucional, datos verificables, referencias normativas y fuentes oficiales. Si tenés sugerencias sobre qué temas profundizar o qué fuentes consultar, escribinos.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
