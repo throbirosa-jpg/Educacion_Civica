@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Provincia de Buenos Aires · En profundidad — Educación Cívica</title>
-<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Buenos Aires: historia constitucional, poderes provinciales, régimen municipal, particularidades distintivas y agenda institucional pendiente. Cinco capítulos premium con datos verificables.">
+<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Buenos Aires: historia constitucional desde 1820, los tres poderes provinciales, los 135 municipios sin autonomía plena, el AMBA y la subrepresentación fiscal-política. Cinco capítulos premium completos con datos verificables.">
 <link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-en-profundidad.html">
 
 <meta property="og:title" content="Provincia de Buenos Aires · En profundidad">
@@ -52,7 +52,7 @@
   .page-datos { background: white; border: 1px solid var(--linea); padding: 2rem; margin: 2.5rem auto 0; max-width: 1100px; }
   .page-datos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
   .page-datos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
-  .page-dato { }
+  .page-dato {}
   .page-dato-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
   .page-dato-valor { font-family: 'Fraunces', serif; font-weight: 500; color: var(--tinta); font-size: 1.1rem; line-height: 1.3; }
   .page-dato-valor em { color: var(--premium-dark); font-style: italic; }
@@ -68,19 +68,27 @@
 
   .capitulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
 
-  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; opacity: 0.92; }
-  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--sol-dark); }
-  .capitulo-card:hover { opacity: 1; border-color: var(--sol-dark); }
+  .capitulo-card { background: white; border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; }
+  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--premium); }
+  .capitulo-card:hover { border-color: var(--premium); box-shadow: 0 10px 30px rgba(107, 79, 140, 0.15); transform: translateY(-3px); }
 
-  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--sol-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-bonus { background: var(--crema-warm); }
+  .capitulo-bonus::before { background: var(--sol-dark); }
+  .capitulo-bonus:hover { border-color: var(--sol-dark); }
+
+  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--premium); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-bonus .capitulo-num { color: var(--sol-dark); }
   .capitulo-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); line-height: 1.25; margin-bottom: 0.8rem; }
   .capitulo-titulo em { font-style: italic; color: var(--premium-dark); }
   .capitulo-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
   .capitulo-desc strong { color: var(--premium-dark); }
   .capitulo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
   .capitulo-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.7rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); font-weight: 500; }
-  .capitulo-tag.estado-pronto { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
-  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--sol-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-bonus .capitulo-tag { background: var(--crema); }
+  .capitulo-tag.estado-disponible { background: var(--verde-soft); border-color: var(--verde); color: var(--verde); font-weight: 600; }
+  .capitulo-tag.estado-bonus { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
+  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--premium-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-bonus .capitulo-link { color: var(--sol-dark); }
 
   .nav-otras-provincias { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem; margin: 3rem 0; }
   .nav-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
@@ -90,12 +98,12 @@
   .nav-link h4 { font-family: 'Fraunces', serif; font-size: 1rem; margin-bottom: 0.2rem; color: var(--tinta); font-weight: 500; }
   .nav-link p { font-size: 0.78rem; color: var(--tinta-soft); line-height: 1.4; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase; }
 
-  .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
-  .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
-  .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
-  .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
-  .proximos-contenidos p { font-size: 0.98rem; line-height: 1.7; color: var(--tinta); margin: 0; }
-  .proximos-contenidos p strong { color: var(--premium-dark); }
+  .completado { background: var(--verde-soft); border-left: 4px solid var(--verde); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .completado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--verde); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
+  .completado h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
+  .completado h3 em { font-style: italic; color: var(--verde); }
+  .completado p { font-size: 0.98rem; line-height: 1.7; color: var(--tinta); margin: 0; }
+  .completado p strong { color: var(--verde); }
 
   footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
   .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
@@ -109,12 +117,12 @@
 </head>
 <body>
 
-<div class="premium-banner">— Estudio provincial · <strong>Capítulos en producción</strong></div>
+<div class="premium-banner">— Estudio provincial · <strong>5 capítulos publicados + 1 bonus</strong></div>
 
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
-    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="provincias-en-profundidad.html">Provincias en profundidad</a> · <span>Provincia de Buenos Aires</span></div>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="provincias-en-profundidad.html">Provincias en profundidad</a> · <span>Buenos Aires</span></div>
   </div>
 </nav>
 
@@ -123,7 +131,7 @@
     <div class="page-eyebrow">Capítulo 10.01 · Estudio provincial</div>
     <h1 class="page-title">Provincia de <em>Buenos Aires</em></h1>
     <div class="page-subtitulo">— La provincia mayor de la República</div>
-    <p class="page-intro">La <strong>provincia más grande</strong> de la República Argentina por población —concentra el 38% del padrón nacional— y la más compleja institucionalmente. Su régimen municipal es único: <strong>135 partidos sin autonomía plena</strong>, pese al mandato del Art. 123 CN reformado en 1994. Su capital, La Plata, fue fundada exprofeso en 1882 tras la federalización de la ciudad porteña. Su legislatura es bicameral con 92 diputados y 46 senadores. Y el AMBA, su mayor desafío territorial, es una de las áreas urbanas más grandes del mundo.</p>
+    <p class="page-intro">La <strong>provincia más grande</strong> de la República Argentina por población —concentra el 38% del padrón nacional— y la más compleja institucionalmente. Su régimen municipal es único: <strong>135 partidos sin autonomía plena</strong>, pese al mandato del Art. 123 CN reformado en 1994. Su capital, La Plata, fue fundada exprofeso en 1882 tras la federalización de la ciudad porteña. Su legislatura es bicameral con 92 diputados y 46 senadores. Y el AMBA, su mayor desafío territorial, es una de las áreas urbanas más grandes del mundo. Este estudio cubre, en cinco capítulos sustantivos, su historia institucional, sus tres poderes, su régimen municipal, la cuestión del AMBA y la subrepresentación fiscal-política bonaerense.</p>
   </div>
 
   <div class="page-datos">
@@ -151,7 +159,7 @@
       </div>
       <div class="page-dato">
         <div class="page-dato-label">Diputados nacionales</div>
-        <div class="page-dato-valor">70 (la mayor delegación del país)</div>
+        <div class="page-dato-valor"><em>70 (la mayor delegación del país)</em></div>
       </div>
     </div>
   </div>
@@ -160,78 +168,97 @@
 <div class="container">
 
   <div class="seccion-intro">
-    <div class="seccion-eyebrow">— Cinco capítulos en desarrollo</div>
-    <h2 class="seccion-titulo">El plan de <em>contenidos</em> de esta sección</h2>
-    <p class="seccion-descripcion">Esta es la estructura del estudio sobre la Provincia de Buenos Aires, replicando el modelo del estudio sobre CABA. Los cinco capítulos están planificados pero <strong>aún en producción</strong>: cada uno se publicará en próximas entregas con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+    <div class="seccion-eyebrow">— Cinco capítulos completos + un bonus</div>
+    <h2 class="seccion-titulo">El estudio sobre la <em>Provincia de Buenos Aires</em></h2>
+    <p class="seccion-descripcion">El estudio replica el modelo del estudio sobre CABA: cinco capítulos sustantivos sobre los aspectos centrales de la institucionalidad bonaerense, más un capítulo bonus dedicado a las ocho secciones electorales. Todos los capítulos están <strong>disponibles para lectura</strong> e incluyen citas a fuentes oficiales (Constitución provincial, leyes, fallos), datos verificables y análisis institucional. Es el estudio premium más extenso del sitio: aproximadamente <strong>270 KB de contenido sustantivo</strong>.</p>
   </div>
 
   <div class="capitulos-grid">
 
-    <div class="capitulo-card">
+    <a href="buenos-aires-historia.html" class="capitulo-card">
       <div class="capitulo-num">10.01.01</div>
       <h3 class="capitulo-titulo">Historia <em>institucional</em></h3>
-      <p class="capitulo-desc">De la entidad política autónoma de 1820 a la provincia moderna. La federalización porteña de 1880, la fundación de La Plata como capital exprofeso, las reformas constitucionales de 1873, 1889, 1934 y 1994. La compleja relación con el gobierno nacional durante los siglos XIX y XX.</p>
+      <p class="capitulo-desc">De la entidad política autónoma de 1820 a la provincia moderna. La federalización porteña de 1880, la fundación de La Plata como capital exprofeso en 1882, las reformas constitucionales de 1873, 1889, 1934 y 1994. La compleja relación con el gobierno nacional durante los siglos XIX y XX.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Reformas constitucionales</span>
-          <span class="capitulo-tag">1820-2026</span>
-          <span class="capitulo-tag">Federalización 1880</span>
+        <span class="capitulo-tag estado-disponible">Disponible</span>
+        <span class="capitulo-tag">1820-2026</span>
+        <span class="capitulo-tag">Federalización 1880</span>
+        <span class="capitulo-tag">Reformas constitucionales</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="buenos-aires-poderes.html" class="capitulo-card">
       <div class="capitulo-num">10.01.02</div>
       <h3 class="capitulo-titulo">Los tres <em>poderes</em></h3>
-      <p class="capitulo-desc">El gobernador (con una reelección consecutiva), la Legislatura bicameral (92 diputados en 8 secciones + 46 senadores en las mismas secciones) y la Suprema Corte de Justicia. Los ministros, el Tribunal de Cuentas, la Fiscalía de Estado y el Defensor del Pueblo.</p>
+      <p class="capitulo-desc">El gobernador (con una reelección consecutiva, sin balotaje provincial), la Legislatura bicameral (92 diputados + 46 senadores) y la Suprema Corte de Justicia de 7 jueces con presidencia rotativa. Los ministros, el Tribunal de Cuentas, la Fiscalía de Estado, el Defensor del Pueblo y la Junta Electoral.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Poderes provinciales</span>
-          <span class="capitulo-tag">Bicameralismo</span>
-          <span class="capitulo-tag">Suprema Corte</span>
+        <span class="capitulo-tag estado-disponible">Disponible</span>
+        <span class="capitulo-tag">Poderes provinciales</span>
+        <span class="capitulo-tag">Bicameralismo</span>
+        <span class="capitulo-tag">Suprema Corte</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="buenos-aires-municipios.html" class="capitulo-card">
       <div class="capitulo-num">10.01.03</div>
       <h3 class="capitulo-titulo">Los 135 <em>municipios</em></h3>
-      <p class="capitulo-desc">El régimen de partidos-municipios y el sistema de ejidos colindantes (toda la provincia está dividida en municipios sin territorios "fuera"). Por qué Buenos Aires no reconoce la autonomía municipal plena que sí exige el Art. 123 CN. El rol histórico de los intendentes en la política bonaerense.</p>
+      <p class="capitulo-desc">El régimen de partidos-municipios y el sistema de ejidos colindantes (toda la provincia está dividida en municipios sin territorios "fuera"). Por qué Buenos Aires no reconoce la autonomía municipal plena que sí exige el Art. 123 CN reformado en 1994. Del DL 6.769/58 a los litigios pendientes sobre la reelección de intendentes.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Régimen municipal</span>
-          <span class="capitulo-tag">135 partidos</span>
-          <span class="capitulo-tag">Autonomía limitada</span>
+        <span class="capitulo-tag estado-disponible">Disponible</span>
+        <span class="capitulo-tag">Régimen municipal</span>
+        <span class="capitulo-tag">135 partidos</span>
+        <span class="capitulo-tag">Autonomía limitada</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="buenos-aires-amba.html" class="capitulo-card">
       <div class="capitulo-num">10.01.04</div>
       <h3 class="capitulo-titulo">El <em>AMBA</em> y el conurbano</h3>
-      <p class="capitulo-desc">El Área Metropolitana de Buenos Aires: 40 partidos del conurbano más CABA. Una de las megalópolis más grandes del mundo. Los desafíos de gobernabilidad transversal: transporte, seguridad, servicios, salud. El AMBA no es una jurisdicción institucional pero domina la agenda política provincial y nacional.</p>
+      <p class="capitulo-desc">El Área Metropolitana de Buenos Aires: CABA más 39 partidos del conurbano. 16,4 millones de habitantes según el Censo 2022. Una de las megalópolis más grandes del mundo. Los desafíos de gobernabilidad transversal: transporte, seguridad, AySA, ACUMAR, CEAMSE. Las cuatro definiciones que conviven (GBA, AMBA, Conurbano, RMBA).</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">AMBA</span>
-          <span class="capitulo-tag">Conurbano</span>
-          <span class="capitulo-tag">Megalópolis</span>
+        <span class="capitulo-tag estado-disponible">Disponible</span>
+        <span class="capitulo-tag">AMBA</span>
+        <span class="capitulo-tag">Conurbano</span>
+        <span class="capitulo-tag">Megalópolis</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="buenos-aires-coparticipacion.html" class="capitulo-card">
       <div class="capitulo-num">10.01.05</div>
       <h3 class="capitulo-titulo">Subrepresentación <em>fiscal</em> y política</h3>
-      <p class="capitulo-desc">La gran paradoja bonaerense: aporta el 36% del PBI nacional pero recibe apenas el 22% de la coparticipación primaria. Cómo está subrepresentada en Diputados nacionales por la distribución congelada de 1983 (70 bancas, debería tener más por su población). Los reclamos históricos por una reforma de la ley de coparticipación.</p>
+      <p class="capitulo-desc">La gran paradoja bonaerense: aporta el 35-40% del PBI nacional pero recibe apenas el 19,93% de la coparticipación pura (22,5% con transferencias automáticas). El Fondo del Conurbano congelado en $650 millones desde 1996. La distribución congelada de diputados desde 1983. Los reclamos ante la Corte Suprema y las salidas posibles.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Coparticipación</span>
-          <span class="capitulo-tag">Subrepresentación</span>
-          <span class="capitulo-tag">Asimetría fiscal</span>
+        <span class="capitulo-tag estado-disponible">Disponible</span>
+        <span class="capitulo-tag">Coparticipación</span>
+        <span class="capitulo-tag">Subrepresentación</span>
+        <span class="capitulo-tag">Asimetría fiscal</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
+    <a href="buenos-aires-secciones-electorales.html" class="capitulo-card capitulo-bonus">
+      <div class="capitulo-num">10.01.06 · BONUS</div>
+      <h3 class="capitulo-titulo">Las 8 <em>secciones</em> electorales</h3>
+      <p class="capitulo-desc">Capítulo bonus dedicado al sistema electoral bonaerense. La Ley 5.109 y la conformación de las 8 secciones electorales para elegir 92 diputados y 46 senadores provinciales. Cada sección tiene su mapa político propio: la 1ª (norte del Conurbano), la 3ª (sur del Conurbano), las secciones del interior, la Capital. Balance político de cada sección.</p>
+      <div class="capitulo-tags">
+        <span class="capitulo-tag estado-bonus">Bonus</span>
+        <span class="capitulo-tag">Ley 5.109</span>
+        <span class="capitulo-tag">8 secciones</span>
+        <span class="capitulo-tag">Sistema electoral</span>
+      </div>
+      <span class="capitulo-link">Leer capítulo bonus →</span>
+    </a>
+
+  </div>
+
+  <div class="completado">
+    <div class="completado-titulo">— Estudio completo</div>
+    <h3>El estudio sobre Buenos Aires <em>está terminado</em></h3>
+    <p>Los <strong>cinco capítulos sustantivos</strong> del estudio sobre la Provincia de Buenos Aires están publicados, más un <strong>capítulo bonus</strong> sobre las ocho secciones electorales. En total son aproximadamente <strong>270 KB de contenido</strong> con análisis institucional, citas a la Constitución provincial, las leyes orgánicas, los fallos de la Suprema Corte y las fuentes oficiales (INDEC, Comisión Federal de Impuestos, Ministerio del Interior). Las próximas entregas serán los estudios sobre Córdoba, Santa Fe y Mendoza.</p>
   </div>
 
   <div class="nav-otras-provincias">
@@ -258,12 +285,6 @@
         <p>Las 4 provincias</p>
       </a>
     </div>
-  </div>
-
-  <div class="proximos-contenidos">
-    <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
-    <h3>Los <em>cinco capítulos</em> en producción</h3>
-    <p>Los cinco capítulos planificados sobre la Provincia de Buenos Aires se publicarán progresivamente en próximas entregas, siguiendo el orden de prioridad establecido en el hub general de provincias. Cada capítulo incluirá análisis institucional, datos verificables, referencias normativas y fuentes oficiales. Si tenés sugerencias sobre qué temas profundizar o qué fuentes consultar, escribinos.</p>
   </div>
 
 </div>

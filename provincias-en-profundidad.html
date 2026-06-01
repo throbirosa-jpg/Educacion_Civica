@@ -65,13 +65,17 @@
   @media (max-width: 800px) { .provincias-grid { grid-template-columns: 1fr; } }
 
   .provincia-card { background: white; border: 1px solid var(--linea); padding: 2.2rem 2rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; overflow: hidden; }
-  .provincia-card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--sol-dark); }
+  .provincia-card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--premium); }
   .provincia-card:hover { border-color: var(--premium); box-shadow: 0 10px 30px rgba(107, 79, 140, 0.15); transform: translateY(-3px); }
   .provincia-card.proximamente { background: var(--crema-warm); }
+  .provincia-card.proximamente::before { background: var(--sol-dark); }
+  .provincia-card.proximamente:hover { border-color: var(--sol-dark); }
 
   .prov-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
-  .prov-num { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol-dark); font-weight: 600; letter-spacing: 0.05em; }
-  .prov-estado { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.6rem; font-weight: 600; white-space: nowrap; background: var(--sol-soft); border: 1px solid var(--sol-dark); color: var(--sol-dark); }
+  .prov-num { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--premium); font-weight: 600; letter-spacing: 0.05em; }
+  .provincia-card.proximamente .prov-num { color: var(--sol-dark); }
+  .prov-estado { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.6rem; font-weight: 600; white-space: nowrap; background: var(--verde-soft); border: 1px solid var(--verde); color: var(--verde); }
+  .provincia-card.proximamente .prov-estado { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); }
 
   .prov-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.65rem; color: var(--tinta); line-height: 1.2; margin-bottom: 0.5rem; }
   .prov-titulo em { font-style: italic; color: var(--premium-dark); }
@@ -154,21 +158,21 @@
 <div class="container">
 
   <div class="seccion-intro">
-    <div class="seccion-eyebrow">— Una nueva línea de contenido</div>
-    <h2 class="seccion-titulo">Cuatro estudios provinciales <em>en desarrollo</em></h2>
-    <p class="seccion-descripcion">Cada provincia argentina tiene su propia constitución, su propio régimen electoral, su propia organización municipal y su propia historia institucional. Las cuatro más grandes —Buenos Aires, Córdoba, Santa Fe y Mendoza— concentran la mayoría de la población y de la economía del país, y sus particularidades institucionales merecen un análisis detallado. <strong>Esta sección replica el modelo del estudio sobre CABA</strong>: para cada provincia, un hub propio con cinco capítulos sobre historia, poderes provinciales, régimen municipal, particularidades distintivas y agenda pendiente.</p>
+    <div class="seccion-eyebrow">— Buenos Aires publicado · 3 estudios en desarrollo</div>
+    <h2 class="seccion-titulo">Cuatro estudios provinciales <em>en marcha</em></h2>
+    <p class="seccion-descripcion">Cada provincia argentina tiene su propia constitución, su propio régimen electoral, su propia organización municipal y su propia historia institucional. Las cuatro más grandes —Buenos Aires, Córdoba, Santa Fe y Mendoza— concentran la mayoría de la población y de la economía del país, y sus particularidades institucionales merecen un análisis detallado. <strong>El estudio sobre Buenos Aires ya está completo</strong> con cinco capítulos sustantivos más uno bonus. Los estudios de Córdoba, Santa Fe y Mendoza están en desarrollo con sus respectivos hubs ya disponibles.</p>
   </div>
 
   <div class="provincias-grid">
 
-    <a href="buenos-aires-en-profundidad.html" class="provincia-card proximamente">
+    <a href="buenos-aires-en-profundidad.html" class="provincia-card">
       <div class="prov-header">
         <div class="prov-num">10.01</div>
-        <span class="prov-estado">Estructura disponible</span>
+        <span class="prov-estado">★ 5 capítulos publicados</span>
       </div>
       <h3 class="prov-titulo">Provincia de <em>Buenos Aires</em></h3>
       <div class="prov-subtitulo">— La provincia mayor · 17,5M habitantes</div>
-      <p class="prov-desc">El caso más complejo del federalismo argentino. <strong>17,5 millones de habitantes</strong> en 135 partidos sin autonomía municipal plena. Su capital (La Plata) fue fundada en 1882. Tiene legislatura bicameral con 92 diputados y 46 senadores, y el AMBA, una de las áreas urbanas más grandes del mundo. Está subrepresentada tanto en Diputados nacionales como en coparticipación.</p>
+      <p class="prov-desc">El caso más complejo del federalismo argentino. <strong>17,5 millones de habitantes</strong> en 135 partidos sin autonomía municipal plena. Su capital (La Plata) fue fundada en 1882. Tiene legislatura bicameral con 92 diputados y 46 senadores, y el AMBA, una de las áreas urbanas más grandes del mundo. Está subrepresentada tanto en Diputados nacionales como en coparticipación. <strong>Estudio premium completo de ~270 KB</strong>.</p>
       <div class="prov-datos">
         <div class="prov-dato">
           <div class="prov-dato-label">Sistema legislativo</div>
@@ -187,7 +191,7 @@
           <div class="prov-dato-valor"><em>Limitada</em></div>
         </div>
       </div>
-      <span class="prov-link">Ver hub provincial →</span>
+      <span class="prov-link">Ver estudio completo →</span>
     </a>
 
     <a href="cordoba-en-profundidad.html" class="provincia-card proximamente">
@@ -291,7 +295,7 @@
   <div class="proximos-contenidos">
     <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
     <h3>El plan de <em>publicación gradual</em></h3>
-    <p>Los cuatro estudios provinciales se publicarán en orden de prioridad: <strong>Buenos Aires</strong> arranca primero por su complejidad y magnitud, seguida por <strong>Córdoba</strong> (la unicameral pionera), <strong>Santa Fe</strong> (la cuna constitucional con reforma 2025) y <strong>Mendoza</strong> (el modelo BUP). Cada estudio replica la estructura del estudio sobre CABA: <strong>cinco capítulos premium</strong> con historia, poderes provinciales, régimen municipal, particularidades constitucionales y agenda pendiente. Si tenés sugerencias sobre qué profundizar en cada provincia, escribinos.</p>
+    <p>El estudio sobre <strong>Buenos Aires está completo</strong> (5 capítulos sustantivos + 1 capítulo bonus sobre secciones electorales). Las próximas entregas serán: <strong>Córdoba</strong> (la unicameral pionera), <strong>Santa Fe</strong> (la cuna constitucional con reforma 2025) y <strong>Mendoza</strong> (el modelo BUP). Cada estudio replica la estructura del estudio sobre CABA y sobre Buenos Aires: cinco capítulos premium con historia, poderes provinciales, régimen municipal, particularidades constitucionales y agenda pendiente. Si tenés sugerencias sobre qué profundizar en cada provincia, escribinos.</p>
   </div>
 
 </div>

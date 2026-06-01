@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Buenos Aires · El AMBA y el conurbano bonaerense (10.01.04) — Educación Cívica</title>
+<meta name="description" content="El Área Metropolitana de Buenos Aires (AMBA): CABA más 40 partidos bonaerenses, 16.4 millones de habitantes según el Censo 2022. Una de las megalópolis más grandes del mundo, cuatro definiciones que conviven (AMBA, RMBA, GBA, Conurbano), los desafíos de gobernabilidad transversal, los servicios cruzados.">
+<link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-amba.html">
+
+<meta property="og:title" content="Buenos Aires · El AMBA y el conurbano bonaerense">
+<meta property="og:description" content="La megalópolis que cruza dos jurisdicciones y concentra el 40% de la población argentina.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/buenos-aires-amba.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.01.04</strong> de la sección Buenos Aires en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="buenos-aires-en-profundidad.html">Buenos Aires</a> ·
+      <span>AMBA y conurbano</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.01.04 · Estudio provincial</div>
+    <h1 class="page-title">El <em>AMBA</em> y el conurbano bonaerense</h1>
+    <div class="page-subtitulo">— Una megalópolis que cruza dos jurisdicciones</div>
+    <p class="page-intro">El <strong>Área Metropolitana de Buenos Aires (AMBA)</strong> es la Ciudad Autónoma de Buenos Aires (CABA) más una franja de partidos bonaerenses que conforman una mancha urbana continua. Según el Censo 2022, agrupa <strong>16.4 millones de habitantes</strong>, casi el 40% de la población argentina, en apenas el 0,4% del territorio nacional. Es una de las metrópolis más grandes del mundo, y plantea un desafío institucional único: cómo gobernar una unidad funcional que está dividida entre dos jurisdicciones políticas distintas (CABA y PBA) y al menos 39 municipios bonaerenses.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">16,4M</div>
+        <div class="page-stat-label">Habitantes (Censo 2022)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">39+1</div>
+        <div class="page-stat-label">Partidos PBA + CABA</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">40%</div>
+        <div class="page-stat-label">De la población argentina</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">13.267</div>
+        <div class="page-stat-label">km² de superficie</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— Contenido</div>
+    <ul>
+      <li><a href="#definicion">¿Qué es el AMBA?</a></li>
+      <li><a href="#cuatro-definiciones">Las cuatro definiciones</a></li>
+      <li><a href="#cifras">Las cifras del AMBA</a></li>
+      <li><a href="#desafio">El desafío institucional</a></li>
+      <li><a href="#zonas">Las tres zonas del Conurbano</a></li>
+      <li><a href="#servicios">Servicios cruzados</a></li>
+      <li><a href="#desigualdad">Desigualdad metropolitana</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <div class="contenido">
+
+    <section class="seccion" id="definicion">
+      <div class="seccion-num">— Sección 1 · La definición</div>
+      <h2>¿Qué es el <em>AMBA</em>?</h2>
+
+      <p>El Área Metropolitana de Buenos Aires (AMBA) es <strong>una unidad funcional, no una unidad política</strong>. No está reconocida como tal por ninguna constitución (ni nacional ni provincial). No tiene autoridades propias. No tiene presupuesto unificado. No es una jurisdicción. Y sin embargo, opera como una unidad real: 16 millones de personas viven, trabajan, se trasladan, consumen servicios públicos y privados, y construyen su cotidianidad dentro de sus fronteras imprecisas.</p>
+
+      <p>El gobierno nacional, mediante el Ministerio del Interior y la Jefatura de Gabinete, dio en distintos momentos una <strong>definición operativa</strong> del AMBA: la Ciudad Autónoma de Buenos Aires más un conjunto de partidos bonaerenses cercanos cuya población y superficie integran total o parcialmente el área metropolitana. La cantidad de partidos varía según la definición: 24 en la versión más restrictiva (los del Gran Buenos Aires histórico), 39 en la del INDEC, hasta 40 en versiones más amplias.</p>
+
+      <p>El AMBA es, esencialmente, <strong>el aglomerado urbano de Buenos Aires</strong>: una mancha urbana continua que se extiende desde el Río de la Plata hacia el oeste y el sur, atravesando partidos bonaerenses sin solución de continuidad. La frontera del AMBA <strong>no respeta delimitaciones político-administrativas</strong> y se mueve con el tiempo, conforme la mancha urbana se extiende o se densifica.</p>
+    </section>
+
+    <section class="seccion" id="cuatro-definiciones">
+      <div class="seccion-num">— Sección 2 · La complejidad terminológica</div>
+      <h2>Las <em>cuatro definiciones</em> conviven</h2>
+
+      <p>Una particularidad importante: hay <strong>cuatro términos distintos</strong> que se usan para referirse a aspectos del aglomerado urbano de Buenos Aires, y conviven sin reemplazarse. Cada uno tiene una definición técnica propia y cubre un universo geográfico ligeramente diferente.</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Término</th>
+              <th>Definición técnica</th>
+              <th>Cobertura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gran Buenos Aires (GBA)</strong></td>
+              <td>Definición administrativa del INDEC. Capital Federal más 24 partidos del conurbano.</td>
+              <td>CABA + 24 partidos</td>
+            </tr>
+            <tr>
+              <td><strong>Conurbano Bonaerense</strong></td>
+              <td>Los partidos bonaerenses que rodean a CABA, sin incluirla. Término coloquial; el INDEC dejó de usarlo oficialmente.</td>
+              <td>24 partidos (sin CABA)</td>
+            </tr>
+            <tr>
+              <td><strong>AMBA</strong></td>
+              <td>Área Metropolitana de Buenos Aires. Definición funcional: la mancha urbana continua. CABA más 39 o 40 partidos según versión.</td>
+              <td>CABA + 39/40 partidos</td>
+            </tr>
+            <tr>
+              <td><strong>RMBA</strong></td>
+              <td>Región Metropolitana de Buenos Aires. Es la más amplia: agrega a CABA y los 40 partidos del AMBA otros territorios con vínculos metropolitanos menos estrechos.</td>
+              <td>CABA + hasta 40 partidos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>El término <strong>"Conurbano"</strong> tiene una historia política: durante mucho tiempo fue utilizado por el INDEC en sus publicaciones, pero <em>fue desestimado oficialmente</em> en 2003 a favor de "Gran Buenos Aires" en sentido administrativo. Sin embargo, sigue siendo el término más utilizado en el lenguaje político cotidiano y en el periodismo: "los intendentes del Conurbano", "el voto del Conurbano", "el cordón industrial del Conurbano" son expresiones que se siguen usando.</p>
+
+      <p><strong>El término "Gran Buenos Aires"</strong> fue usado oficialmente por primera vez en 1948, cuando el gobernador de la provincia, Domingo Mercante, firmó un decreto que delimitaba un área que cubría 14 municipios alrededor de la Capital. Desde entonces, la definición se fue ampliando conforme la mancha urbana crecía.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una distinción clave</div>
+        <p>En el uso habitual, no siempre queda claro si los términos incluyen o excluyen a CABA. Hay que estar atentos al contexto: <strong>"Conurbano"</strong> generalmente excluye a CABA; <strong>"AMBA"</strong> y <strong>"Gran Buenos Aires"</strong> generalmente la incluyen. Y "Partidos del Gran Buenos Aires" se refiere específicamente a los 24 partidos sin CABA. Esta polisemia genera confusiones recurrentes en debates de política pública.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="cifras">
+      <div class="seccion-num">— Sección 3 · La magnitud</div>
+      <h2>Las <em>cifras</em> del AMBA según el Censo 2022</h2>
+
+      <p>El Censo Nacional de 2022 (cuyos datos definitivos fueron publicados por el INDEC en 2024) brinda la fotografía más precisa disponible de la población metropolitana. Las cifras son <strong>contundentes</strong>:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Cifras del AMBA según Censo 2022</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Población AMBA total</div>
+            <div class="ficha-valor"><strong>16.366.641 habitantes</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Habitantes de CABA</div>
+            <div class="ficha-valor">3.095.454</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Habitantes de 39 partidos PBA</div>
+            <div class="ficha-valor">13.271.187</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Densidad AMBA total</div>
+            <div class="ficha-valor">1.233,6 hab/km²</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Densidad CABA</div>
+            <div class="ficha-valor">15.161,3 hab/km²</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Densidad conurbano</div>
+            <div class="ficha-valor">1.016,1 hab/km²</div>
+          </div>
+        </div>
+      </div>
+
+      <p>El crecimiento intercensal (2010-2022) fue de <strong>19,9% para el conjunto del AMBA</strong>: 7,1% en CABA y 23,3% en los partidos del conurbano. Esto refleja una tendencia de décadas: <strong>CABA estable y el conurbano en expansión</strong>. La capital federal mantiene su población más o menos constante (con altas y bajas marginales), mientras la población se va asentando en los partidos circundantes.</p>
+
+      <p>La <strong>diferencia de densidades</strong> es elocuente: CABA tiene 15.000 habitantes por km², una de las densidades más altas del mundo (comparable a Tokio, Hong Kong o Manhattan). El conurbano bonaerense tiene 1.000 habitantes por km², propio de un aglomerado urbano de baja densidad con muchos sectores periurbanos y rurales en sus bordes. La densidad varía enormemente: el partido de San Fernando tiene 172 hab/km² (con extensas zonas insulares del delta), mientras la Comuna 3 de CABA (Balvanera-San Cristóbal) tiene 30.662 hab/km² (la más densa del país).</p>
+
+      <h3>El AMBA en el contexto mundial</h3>
+
+      <p>El AMBA es, sin duda alguna, <strong>la segunda mayor metrópolis de Sudamérica</strong> después de São Paulo. En el contexto mundial, se ubica entre las <strong>25-30 áreas metropolitanas más grandes del mundo</strong>, según los criterios que se usen. Es comparable a Estambul, El Cairo, Lagos, Daca, Buenos Aires o Karachi en términos de población urbana continua. Y es el <em>centro económico, político, cultural, mediático y educativo</em> de Argentina por concentración demográfica abrumadora.</p>
+    </section>
+
+    <section class="seccion" id="desafio">
+      <div class="seccion-num">— Sección 4 · El desafío institucional</div>
+      <h2>El <em>desafío institucional</em> del AMBA</h2>
+
+      <p>El gran problema del AMBA es que <strong>es una unidad funcional pero no una unidad política</strong>. Su gobernabilidad está fragmentada entre:</p>
+
+      <ul>
+        <li><strong>El Gobierno Nacional</strong>, responsable de servicios federales como los trenes suburbanos, las rutas nacionales que cruzan el área, y políticas federales con impacto metropolitano.</li>
+        <li><strong>El Gobierno de la Ciudad Autónoma de Buenos Aires</strong>, responsable de su jurisdicción de 200 km².</li>
+        <li><strong>El Gobierno de la Provincia de Buenos Aires</strong>, responsable de las áreas y servicios provinciales en los 39 partidos del AMBA bonaerense.</li>
+        <li><strong>Los 39 gobiernos municipales bonaerenses</strong>, cada uno con su intendente y Concejo Deliberante, responsables de los servicios locales en su partido.</li>
+        <li><strong>Diversos organismos interjurisdiccionales</strong>: AySA (agua y cloacas), AYESA (energía), CEAMSE (gestión de residuos), ACUMAR (cuenca Matanza-Riachuelo), y otros.</li>
+      </ul>
+
+      <p>El resultado es una <strong>"sopa de gobernabilidad"</strong>: ningún actor tiene autoridad sobre la totalidad del AMBA, y los problemas urbanos (transporte, residuos, agua, contaminación, criminalidad, viviendas precarias) son inherentemente transversales y requieren coordinación entre múltiples actores.</p>
+
+      <div class="cita">
+        "La continuidad urbana de ambas jurisdicciones [CABA y PBA] conforma la metrópolis aquí denominada Área Metropolitana de Buenos Aires (AMBA) y 'Aglomerado del Gran Buenos Aires' por el Instituto Nacional de Estadística y Censos."
+        <span class="cita-fuente">— Observatorio del AMBA, observatorioamba.org</span>
+      </div>
+
+      <h3>Los intentos institucionales</h3>
+
+      <p>Históricamente, hubo varios intentos de crear estructuras de coordinación metropolitana:</p>
+
+      <ul>
+        <li><strong>COCAMBA</strong> (Comisión Coordinadora del Área Metropolitana de Buenos Aires), creada en distintos momentos con distintos formatos institucionales.</li>
+        <li><strong>ACUMAR</strong> (Autoridad de Cuenca Matanza-Riachuelo), creada por ley nacional en 2006, con jurisdicción sobre la cuenca que atraviesa CABA y 14 partidos bonaerenses.</li>
+        <li><strong>AySA</strong> (Aguas y Saneamientos Argentinos), empresa estatal nacional que provee agua potable y cloacas en CABA y 26 partidos del conurbano.</li>
+        <li><strong>CEAMSE</strong> (Coordinación Ecológica Área Metropolitana Sociedad del Estado), creada en 1977, gestiona los residuos del AMBA.</li>
+      </ul>
+
+      <p>Estos organismos resuelven problemas específicos (cuenca, agua, residuos) pero no son una <strong>autoridad metropolitana general</strong>. Argentina no tiene, a diferencia de otros países, una figura institucional comparable a las "áreas metropolitanas" de España, los <em>Greater London Authority</em> del Reino Unido, o las regiones metropolitanas de Brasil. El AMBA se gobierna por <strong>coordinación voluntaria</strong> entre los distintos niveles, con todos los problemas que eso implica.</p>
+    </section>
+
+    <section class="seccion" id="zonas">
+      <div class="seccion-num">— Sección 5 · Las tres zonas</div>
+      <h2>Las <em>tres zonas</em> del Conurbano bonaerense</h2>
+
+      <p>El Conurbano bonaerense, aunque administrativamente está dividido en partidos, también suele agruparse en <strong>tres grandes zonas geográficas</strong> que reflejan diferencias socioeconómicas e históricas. Esta agrupación, aunque no es oficial, es ampliamente utilizada por los análisis políticos, periodísticos y académicos.</p>
+
+      <h3>Zona Norte</h3>
+
+      <p>La zona norte del Conurbano se extiende desde la Avenida General Paz hacia el norte y noroeste. Incluye los partidos de <strong>Vicente López, San Isidro, San Fernando, Tigre, San Martín, Tres de Febrero, Hurlingham, Ituzaingó, San Miguel, José C. Paz y Malvinas Argentinas</strong>. Es la zona con mayor poder adquisitivo del Conurbano, especialmente en su primer cordón (Vicente López, San Isidro). Concentra emprendimientos inmobiliarios premium, centros comerciales y barrios cerrados (countries y barrios privados).</p>
+
+      <h3>Zona Oeste</h3>
+
+      <p>La zona oeste se extiende hacia el oeste de CABA, siguiendo los ejes históricos del ferrocarril Sarmiento. Incluye <strong>La Matanza, Morón, Moreno, Merlo, Marcos Paz, General Las Heras</strong>. La Matanza, por su tamaño desproporcionado (1.84 millones de habitantes), es prácticamente una región en sí misma dentro de esta zona. Es una zona de fuerte impronta industrial histórica y barrios populares.</p>
+
+      <h3>Zona Sur</h3>
+
+      <p>La zona sur incluye los partidos de <strong>Avellaneda, Lanús, Lomas de Zamora, Quilmes, Berazategui, Florencio Varela, Almirante Brown, Esteban Echeverría, Ezeiza, Presidente Perón</strong>. Es históricamente la zona más industrial del Conurbano (el cordón sur de Buenos Aires fue cuna del movimiento obrero argentino). Concentra grandes barrios populares y zonas con altos índices de pobreza, junto con áreas de clase media-baja consolidadas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Dato relevante: el primer y segundo cordón</div>
+        <p>Una distinción transversal a las zonas es la que separa el <strong>primer cordón</strong> (los partidos lindantes con CABA) del <strong>segundo cordón</strong> (los partidos más alejados). El primer cordón —Avellaneda, Lanús, Lomas de Zamora, La Matanza este, Morón, Tres de Febrero, San Martín, Vicente López, San Isidro— tiene urbanización consolidada de décadas, infraestructura completa y mejor acceso a servicios. El segundo cordón —Quilmes, Berazategui, Florencio Varela, Esteban Echeverría, Ezeiza, Moreno, Merlo, La Matanza oeste, Hurlingham, Ituzaingó, Tigre, San Fernando, Malvinas Argentinas, José C. Paz, San Miguel— tiene mayores déficits de servicios y mayor crecimiento poblacional reciente.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="servicios">
+      <div class="seccion-num">— Sección 6 · La realidad cotidiana</div>
+      <h2>Los <em>servicios cruzados</em>: la vida real del AMBA</h2>
+
+      <p>Más allá de las divisiones administrativas, el AMBA <strong>funciona como una unidad</strong> en términos de servicios cotidianos para sus habitantes. La gente cruza las jurisdicciones todos los días sin pensarlo. Algunos ejemplos concretos:</p>
+
+      <h3>Transporte público</h3>
+
+      <p>La red ferroviaria suburbana (ex-líneas Mitre, Sarmiento, Roca, San Martín, Belgrano Norte, Belgrano Sur, Urquiza) <strong>conecta CABA con los partidos del conurbano</strong> en todas las direcciones. Las terminales están en CABA (Retiro, Constitución, Once, Plaza Lacroze) y los servicios penetran profundamente en el territorio bonaerense. Los colectivos urbanos (especialmente las líneas suburbanas) cruzan jurisdicciones permanentemente: una línea de colectivo típicamente comienza en CABA y termina en el conurbano profundo. La autoridad regulatoria es la <strong>CNRT</strong> (Comisión Nacional de Regulación del Transporte) a nivel federal.</p>
+
+      <h3>Agua potable y cloacas</h3>
+
+      <p>AySA (Aguas y Saneamientos Argentinos), empresa nacional, provee agua potable y cloacas en CABA y <strong>26 partidos del conurbano</strong> (los más cercanos a la planta de Berazategui y la planta Tigre). Otros partidos más alejados son atendidos por ABSA (Aguas Bonaerenses), de capital provincial. La frontera entre AySA y ABSA es una línea que no respeta las divisiones políticas locales.</p>
+
+      <h3>Energía eléctrica y gas</h3>
+
+      <p>La distribución eléctrica en el AMBA está repartida entre Edenor (norte y oeste del AMBA, incluyendo parte de CABA) y Edesur (sur de CABA y zona sur del conurbano). Ambas son privadas, con concesiones reguladas por el ENRE (Ente Nacional Regulador de la Electricidad). El gas natural lo distribuyen Metrogas (CABA + algunos partidos), Naturgy BAN y Camuzzi Gas Pampeana, con concesiones por jurisdicción y zona geográfica.</p>
+
+      <h3>Seguridad</h3>
+
+      <p>La seguridad pública es un caso paradigmático de la complejidad institucional del AMBA. <strong>En CABA</strong>, hay tres fuerzas federales (Federal, Naval, Gendarmería) que operan en distintos territorios, más la Policía de la Ciudad. <strong>En los partidos bonaerenses</strong>, opera la Policía Bonaerense (provincial). La cooperación entre fuerzas, especialmente para delitos que cruzan jurisdicciones, es un desafío permanente.</p>
+
+      <h3>Salud</h3>
+
+      <p>El sistema de salud es transversal de hecho: pacientes del conurbano se atienden en hospitales públicos de CABA y viceversa. <strong>Los grandes hospitales públicos nacionales</strong> (Garrahan, Posadas, Cetrángolo, Sommer) atienden población de toda el AMBA. Los hospitales municipales bonaerenses atienden a residentes de CABA cuando es necesario. La <strong>obra social PAMI</strong>, nacional, opera en toda el AMBA sin distinciones.</p>
+    </section>
+
+    <section class="seccion" id="desigualdad">
+      <div class="seccion-num">— Sección 7 · La cara oscura</div>
+      <h2>La <em>desigualdad</em> metropolitana</h2>
+
+      <p>El AMBA es también una unidad funcional <strong>en su desigualdad</strong>. Las diferencias socioeconómicas entre CABA y el conurbano son profundas, y dentro de cada uno también hay heterogeneidad importante. Estos datos son centrales para entender la dinámica institucional metropolitana:</p>
+
+      <ul>
+        <li><strong>Pobreza</strong>: CABA tiene índices de pobreza estructuralmente más bajos que el conurbano. Los partidos del segundo cordón tienen índices de pobreza muy superiores al promedio nacional.</li>
+        <li><strong>Acceso a servicios básicos</strong>: el 100% de los hogares de CABA tiene agua corriente y cloacas. En el conurbano, especialmente en el segundo cordón, los déficits de cloacas son significativos (en algunos partidos, más del 30% de los hogares sin cloacas).</li>
+        <li><strong>Vivienda precaria</strong>: el AMBA tiene aproximadamente 1.500 asentamientos informales (villas y barrios populares), concentrados sobre todo en partidos del conurbano y en algunos sectores de CABA.</li>
+        <li><strong>Educación</strong>: CABA tiene mejores indicadores educativos promedio que el conurbano, aunque también con heterogeneidad interna importante.</li>
+        <li><strong>Salud</strong>: la mortalidad infantil, esperanza de vida y otros indicadores muestran brechas importantes entre CABA y los partidos del conurbano profundo.</li>
+      </ul>
+
+      <p>Estas brechas constituyen <strong>uno de los principales desafíos políticos del país</strong>. Las políticas públicas con impacto en el AMBA —desde las urbanizaciones de villas hasta los programas alimentarios, desde la red de salud hasta la educación— deben coordinarse entre múltiples actores y enfrentar realidades muy distintas en CABA y en los partidos bonaerenses.</p>
+
+      <h3>El "Conurbano Profundo"</h3>
+
+      <p>El término <strong>"Conurbano Profundo"</strong> se usa en el periodismo y la academia para referirse a los partidos del segundo y tercer cordón con mayores indicadores de pobreza y déficits estructurales: <strong>La Matanza (especialmente el oeste), Florencio Varela, Almirante Brown, Esteban Echeverría, Ezeiza, Quilmes oeste, Lomas de Zamora oeste, Moreno, Merlo, José C. Paz, Malvinas Argentinas</strong>. Es la zona donde se concentran los mayores desafíos sociales del país, donde se libran las disputas electorales más reñidas, y donde los intendentes —con sus aparatos territoriales— tienen mayor peso político específico.</p>
+    </section>
+
+    <section class="seccion" id="fuentes">
+      <div class="seccion-num">— Sección 8 · Fuentes</div>
+      <h2>Fuentes y <em>referencias</em></h2>
+
+      <p>Este capítulo se basa en las siguientes fuentes oficiales:</p>
+
+      <ul>
+        <li><strong>Censo Nacional de Población, Hogares y Viviendas 2022</strong>, INDEC. Datos definitivos publicados en 2024.</li>
+        <li><strong>Observatorio del Conurbano Bonaerense</strong>, Instituto del Conurbano, Universidad Nacional de General Sarmiento (UNGS). Disponible en https://observatorioconurbano.ungs.edu.ar/</li>
+        <li><strong>Observatorio AMBA</strong>, https://observatorioamba.org/</li>
+        <li><strong>INDEC · Qué es el Gran Buenos Aires</strong>, folleto técnico del INDEC, https://www.indec.gob.ar/dbindec/folleto_gba.pdf</li>
+        <li><strong>FLACSO Argentina · Área Metropolitana de Buenos Aires (AMBA)</strong>, ficha técnica.</li>
+        <li>Datos del <strong>Ministerio del Interior</strong> y de la <strong>Jefatura de Gabinete</strong> sobre delimitación operativa del AMBA.</li>
+        <li>Datos de las empresas y organismos: <strong>AySA</strong>, <strong>ACUMAR</strong>, <strong>CEAMSE</strong>, <strong>ENRE</strong>, <strong>CNRT</strong>.</li>
+      </ul>
+
+      <p>Los datos institucionales y demográficos fueron verificados a mayo de 2026 mediante consulta directa de fuentes oficiales y normativa vigente.</p>
+    </section>
+
+    <a href="buenos-aires-coparticipacion.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo</div>
+        <h3>10.01.05 · La <em>subrepresentación</em> fiscal y política</h3>
+        <p>La gran paradoja bonaerense: aporta el 35-40% del PBI nacional y recibe apenas el 22% de la coparticipación. Concentra el 38% de la población argentina pero tiene una proporción menor de diputados nacionales. El Fondo del Conurbano con su tope congelado. Los argumentos del federalismo fiscal.</p>
+      </div>
+      <span class="proximo-cap-arrow">Leer →</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Capítulo 10.01.04 · Buenos Aires en profundidad · Datos verificados a mayo 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

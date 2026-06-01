@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Buenos Aires · Los 135 municipios sin autonomía (10.01.03) — Educación Cívica</title>
+<meta name="description" content="Los 135 partidos-municipios de la Provincia de Buenos Aires y su régimen único sin autonomía plena: por qué la PBA no reconoce el Art. 123 CN de 1994, el sistema de ejidos colindantes, el Decreto-Ley 6.769/58, el rol histórico de los intendentes en la política bonaerense.">
+<link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-municipios.html">
+
+<meta property="og:title" content="Buenos Aires · Los 135 municipios sin autonomía">
+<meta property="og:description" content="El régimen municipal único de la PBA: partidos en lugar de departamentos, sin facultad de dictar cartas orgánicas, sistema de ejidos colindantes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/buenos-aires-municipios.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .alerta { background: var(--rojo-soft); border-left: 4px solid var(--rojo-fed); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .alerta-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rojo-fed); margin-bottom: 0.6rem; font-weight: 600; }
+  .alerta p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .alerta p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .comparativa { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .comparativa-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .comparativa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  @media (max-width: 700px) { .comparativa-grid { grid-template-columns: 1fr; } }
+  .comparativa-col h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--tinta); }
+  .comparativa-col h4 em { font-style: italic; color: var(--premium-dark); }
+  .comparativa-col p { font-size: 0.9rem; line-height: 1.55; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.01.03</strong> de la sección Buenos Aires en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="buenos-aires-en-profundidad.html">Buenos Aires</a> ·
+      <span>Los 135 municipios</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.01.03 · Estudio provincial</div>
+    <h1 class="page-title">Los <em>135 municipios</em> y la falta de autonomía</h1>
+    <div class="page-subtitulo">— El régimen único de partidos-municipios bonaerense</div>
+    <p class="page-intro">La Provincia de Buenos Aires se divide territorialmente en <strong>135 partidos</strong>, que son simultáneamente sus municipios. No tiene departamentos como el resto de las provincias argentinas. Y su régimen municipal es único en otro sentido más profundo: <strong>los municipios bonaerenses no tienen autonomía plena</strong> —no pueden dictar sus propias cartas orgánicas— a pesar de que la Constitución Nacional reformada en 1994 lo exige expresamente. Este capítulo explica el sistema, sus raíces históricas, y la tensión constitucional que arrastra Buenos Aires desde 1994.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">135</div>
+        <div class="page-stat-label">Partidos-municipios</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">0</div>
+        <div class="page-stat-label">Cartas orgánicas vigentes</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">32</div>
+        <div class="page-stat-label">Años incumpliendo el Art. 123 CN</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1.84M</div>
+        <div class="page-stat-label">Habitantes · La Matanza (mayor)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— Contenido</div>
+    <ul>
+      <li><a href="#partidos">Por qué partidos</a></li>
+      <li><a href="#ejidos">Los ejidos colindantes</a></li>
+      <li><a href="#estructura">Estructura del municipio</a></li>
+      <li><a href="#autonomia">Autonomía: el problema</a></li>
+      <li><a href="#comparacion">Comparación con otras provincias</a></li>
+      <li><a href="#decreto-ley">El Decreto-Ley 6.769/58</a></li>
+      <li><a href="#intendentes">El rol histórico de los intendentes</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <div class="contenido">
+
+    <section class="seccion" id="partidos">
+      <div class="seccion-num">— Sección 1 · La denominación</div>
+      <h2>Por qué se llaman <em>partidos</em> y no departamentos</h2>
+
+      <p>La Provincia de Buenos Aires es la única jurisdicción argentina que <strong>divide su territorio en "partidos"</strong> en lugar de "departamentos" como el resto del país. Cada partido es simultáneamente una división administrativa y un municipio: tiene un intendente, un Concejo Deliberante, y un territorio que coincide con el del partido. Es una particularidad histórica que se mantiene desde el siglo XIX.</p>
+
+      <p>El término "partido" tiene origen en los antiguos <strong>"partidos de campaña"</strong>, las divisiones territoriales rurales que utilizaba Buenos Aires durante el período colonial y la primera mitad del siglo XIX. Cuando se sancionó la primera constitución bonaerense en 1854, esta denominación territorial ya estaba consolidada y se conservó. Las sucesivas reformas constitucionales (1873, 1889, 1934, 1994) mantuvieron la denominación, aunque modernizaron sustancialmente el régimen municipal.</p>
+
+      <p>El Art. 190 de la Constitución provincial vigente dice textualmente:</p>
+
+      <div class="cita">
+        "El territorio de la Provincia se dividirá en distritos para su administración interior que estará a cargo de municipalidades, cuyos miembros durarán dos años en sus funciones, renovándose en la forma establecida para los diputados, y serán nombrados pública y directamente, el último domingo de noviembre."
+        <span class="cita-fuente">— Art. 190, Constitución de la Provincia de Buenos Aires (texto vigente, reforma 1994)</span>
+      </div>
+
+      <p>Es importante notar que la propia Constitución provincial usa la palabra <em>"distritos"</em>, mientras que en la práctica institucional siempre se los llama <em>"partidos"</em>. La doble denominación —partido como territorio histórico, distrito en el lenguaje constitucional— convive sin generar problemas: en el uso cotidiano siempre se habla de "partidos de la provincia de Buenos Aires".</p>
+    </section>
+
+    <section class="seccion" id="ejidos">
+      <div class="seccion-num">— Sección 2 · La cobertura territorial</div>
+      <h2>El sistema de <em>ejidos colindantes</em></h2>
+
+      <p>Una característica fundamental del régimen territorial bonaerense es el llamado <strong>sistema de ejidos colindantes</strong>: <em>toda la superficie de la provincia está dividida en partidos, sin territorios "fuera"</em>. No hay zonas rurales que no formen parte de ningún partido. No hay territorios "no organizados". Cada centímetro cuadrado de la provincia pertenece a algún municipio.</p>
+
+      <p>Esto contrasta con el sistema de otras provincias argentinas, donde los municipios cubren solo los centros urbanos y existen <strong>zonas rurales fuera de la jurisdicción municipal</strong>, administradas directamente por el gobierno provincial. En Mendoza, por ejemplo, los municipios cubren el oasis productivo pero hay vastas extensiones del territorio provincial sin estructura municipal local. En Córdoba, los más de 250 municipios y 170 comunas dejan espacios rurales sin gobierno local. En Buenos Aires no: todo el territorio tiene gobierno municipal.</p>
+
+      <p>Este sistema implica que cada habitante de la provincia, <strong>independientemente de si vive en una gran ciudad, en un pueblo o en el medio del campo, pertenece administrativamente a un partido</strong>. El intendente del partido es su autoridad municipal, sin importar dónde esté físicamente dentro del territorio del partido.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Dato relevante: la inmensa variabilidad de tamaños</div>
+        <p>El sistema de ejidos colindantes implica que los 135 partidos bonaerenses tienen <strong>tamaños y poblaciones radicalmente distintos</strong>. <strong>La Matanza</strong>, el partido más poblado, tiene <strong>1.837.774 habitantes</strong> (Censo 2022) —más que muchas provincias enteras—. En el extremo opuesto, <strong>Tordillo</strong>, en la zona atlántica, tiene apenas 1.745 habitantes en un territorio rural muy extenso. Esa enorme variabilidad poblacional (más de 1.000 veces de diferencia) plantea desafíos institucionales únicos: una misma estructura municipal debe servir a contextos demográficos completamente distintos.</p>
+      </div>
+
+      <h3>La cantidad: 135, no es un número fijo</h3>
+
+      <p>La cantidad de partidos bonaerenses no es constante a lo largo del tiempo: <strong>nuevos partidos se crean por ley provincial</strong>, generalmente por subdivisión de partidos más grandes en respuesta a presiones poblacionales o administrativas. El proceso de creación de partidos en Buenos Aires es más dinámico que en otras provincias argentinas: entre 1990 y 2009 se crearon seis partidos nuevos.</p>
+
+      <p>El último partido en ser declarado por ley provincial fue <strong>Lezama</strong>, el 22 de diciembre de 2009, escindido del partido de Chascomús. Antes, en 1994 se habían creado los partidos de <strong>Hurlingham, Ituzaingó, José C. Paz, Malvinas Argentinas y Florencio Varela</strong> (este último ya existía pero modificó sus límites en esa fecha). Y en 1995 se separaron <strong>Bahía Blanca y Coronel Rosales</strong>. Cada creación requiere una ley específica de la Legislatura provincial.</p>
+    </section>
+
+    <section class="seccion" id="estructura">
+      <div class="seccion-num">— Sección 3 · La estructura interna</div>
+      <h2>La estructura del <em>municipio</em> bonaerense</h2>
+
+      <p>Cada partido-municipio bonaerense tiene una estructura institucional bicéfala: un <strong>departamento ejecutivo</strong> (el Intendente) y un <strong>departamento deliberativo</strong> (el Concejo Deliberante). Esta estructura está establecida por la Constitución provincial (Art. 191) y desarrollada por el Decreto-Ley 6.769/58 conocido como <em>Ley Orgánica de las Municipalidades</em>.</p>
+
+      <h3>El <em>Intendente</em></h3>
+
+      <p>El Intendente es el titular del departamento ejecutivo municipal. Es elegido <strong>directamente por el pueblo del partido</strong>, por simple pluralidad de votos. Su mandato es de <strong>cuatro años</strong>, con una sola posibilidad de reelección consecutiva (esta limitación fue introducida en 2016 por la Ley 14.836 de "no reelección indefinida", aunque su aplicación efectiva quedó pospuesta y fue objeto de litigios).</p>
+
+      <p>Las atribuciones del Intendente incluyen administrar el municipio, ejecutar las ordenanzas del Concejo Deliberante, nombrar y remover empleados municipales, representar al municipio en sus relaciones institucionales, y ejercer el poder de policía municipal en las materias de competencia local (tránsito, habilitaciones comerciales, salubridad, ornato urbano).</p>
+
+      <h3>El <em>Concejo Deliberante</em></h3>
+
+      <p>El Concejo Deliberante es el departamento deliberativo del municipio, equivalente local al Congreso. Sus miembros se llaman <strong>concejales</strong>. La cantidad de concejales <strong>varía según la población del partido</strong>, establecida por la propia ley provincial: parte de 6 concejales para los partidos más pequeños hasta los 24 concejales para los más grandes (con La Matanza siendo el caso límite).</p>
+
+      <p>Los concejales son elegidos por sistema proporcional D'Hondt en el partido como distrito único, con un piso del 5%. Su mandato es de <strong>cuatro años</strong> con renovación por mitades cada dos años. Pueden ser reelegidos. La presidencia del Concejo Deliberante se rota anualmente entre sus miembros.</p>
+
+      <p>El Concejo Deliberante sanciona <strong>ordenanzas</strong> (normas locales con fuerza de ley dentro del partido), aprueba el presupuesto municipal, controla la gestión del Intendente, y puede aprobar declaraciones, resoluciones y comunicaciones. Es el órgano de representación política del partido.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · El municipio bonaerense</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Cantidad de partidos</div>
+            <div class="ficha-valor"><strong>135 (a 2026)</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Autoridad ejecutiva</div>
+            <div class="ficha-valor">Intendente · 4 años · 1 reelección</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Autoridad deliberativa</div>
+            <div class="ficha-valor">Concejo Deliberante (6-24 miembros)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sistema electoral concejales</div>
+            <div class="ficha-valor">D'Hondt · Piso 5%</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Marco legal principal</div>
+            <div class="ficha-valor">Decreto-Ley 6.769/58</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Cobertura territorial</div>
+            <div class="ficha-valor">100% (ejidos colindantes)</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Recursos municipales</h3>
+
+      <p>Los municipios bonaerenses se financian principalmente con cuatro fuentes: <strong>tasas municipales</strong> (servicios públicos como alumbrado, barrido y limpieza; habilitaciones comerciales; cementerio), <strong>coparticipación provincial</strong> (la provincia distribuye entre los municipios una parte de sus recursos, mediante la Ley 10.559 y sus modificatorias), <strong>fondos específicos del gobierno provincial</strong>, y <strong>aportes nacionales</strong> directos o vía la provincia para programas específicos.</p>
+
+      <p>La estructura recaudatoria bonaerense es <strong>fuertemente dependiente de la provincia</strong>: los municipios no pueden cobrar impuestos (sólo tasas, que jurídicamente requieren contraprestación específica). Esto los hace muy dependientes de los giros de la administración provincial, especialmente en los partidos con menor capacidad de generar tasas propias.</p>
+    </section>
+
+    <section class="seccion" id="autonomia">
+      <div class="seccion-num">— Sección 4 · El problema constitucional</div>
+      <h2>La <em>autonomía municipal</em>: el problema constitucional pendiente</h2>
+
+      <p>Aquí está el <strong>gran problema constitucional</strong> del régimen municipal bonaerense. La Constitución Nacional, en su reforma de 1994, estableció con claridad en el Art. 123 que las provincias deben "asegurar la autonomía municipal y reglar su alcance y contenido en el orden institucional, político, administrativo, económico y financiero". Este mandato es <strong>obligatorio para todas las provincias argentinas</strong> y entró en vigencia inmediatamente con la reforma.</p>
+
+      <p>La Provincia de Buenos Aires <strong>no cumplió ese mandato</strong>. Su Constitución provincial, reformada en septiembre de 1994 (apenas un mes después de la reforma nacional), no reconoció la autonomía municipal plena ni habilitó a los municipios a dictar sus propias cartas orgánicas. Y desde entonces, ya por más de tres décadas, la situación se mantiene inalterada.</p>
+
+      <div class="alerta">
+        <div class="alerta-titulo">— Una tensión constitucional pendiente</div>
+        <p>El Art. 191 inc. 5 de la Constitución provincial bonaerense establece que "el ciudadano a cargo del departamento ejecutivo durará cuatro años en sus funciones", sin habilitar a los municipios a definir su propia estructura. <strong>La Legislatura provincial define las atribuciones y responsabilidades de cada departamento municipal</strong>, en abierta contradicción con el principio de autonomía institucional. Para los constitucionalistas, esto configura una <strong>tensión constitucional permanente entre la PBA y la Constitución Nacional</strong>.</p>
+      </div>
+
+      <p>La falta de autonomía municipal en Buenos Aires tiene <strong>consecuencias concretas</strong>:</p>
+
+      <ul>
+        <li>Los municipios bonaerenses <strong>no pueden dictarse cartas orgánicas</strong>, a diferencia de los municipios cordobeses, mendocinos, santafesinos, etc.</li>
+        <li>Su estructura institucional está <strong>definida desde arriba</strong> por la Legislatura provincial mediante el Decreto-Ley 6.769/58, sin posibilidad de adaptarla a sus particularidades.</li>
+        <li>El número de concejales, el régimen electoral municipal, el procedimiento de licitaciones, los regímenes de personal, las facultades del intendente, los modos de funcionamiento del Concejo, todo está estandarizado por la norma provincial.</li>
+        <li>Las únicas variaciones admitidas son las que el propio Decreto-Ley provee (por ejemplo, escalas de concejales según población), pero no hay margen para innovación institucional local.</li>
+      </ul>
+
+      <h3>¿Por qué no se reformó?</h3>
+
+      <p>La pregunta es válida: si la Constitución Nacional lo exige hace 32 años, ¿por qué la PBA no reformó su constitución provincial para reconocer la autonomía municipal? Las razones son <strong>políticas e institucionales</strong>:</p>
+
+      <ul>
+        <li><strong>Costo político de la reforma constitucional</strong>: cualquier reforma de la constitución provincial requiere convocar una Convención Constituyente. Es un proceso largo, costoso y políticamente delicado. Los gobiernos provinciales sucesivos no han querido asumir ese costo cuando el sistema actual les funciona bien.</li>
+        <li><strong>Control político sobre los intendentes</strong>: la falta de autonomía municipal le da al gobierno provincial herramientas para coordinar (o presionar) a los intendentes, especialmente los del propio signo político.</li>
+        <li><strong>Resistencia de los propios intendentes</strong>: paradójicamente, algunos intendentes prefieren el régimen actual porque les garantiza un marco institucional predecible y porque la autonomía municipal vendría acompañada de mayor exposición y responsabilidades.</li>
+        <li><strong>Inercia constitucional</strong>: el sistema está enraizado, funciona desde hace décadas, y los costos de cambiarlo son percibidos como mayores que los beneficios.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="comparacion">
+      <div class="seccion-num">— Sección 5 · Comparación</div>
+      <h2>Comparación con <em>otras provincias</em></h2>
+
+      <p>La singularidad de la PBA en materia de régimen municipal se ve con claridad al compararla con las otras tres provincias grandes argentinas. Mientras Buenos Aires conserva un régimen sin autonomía plena, las demás provincias evolucionaron en dirección opuesta.</p>
+
+      <div class="comparativa">
+        <div class="comparativa-titulo">— Régimen municipal comparado</div>
+        <div class="comparativa-grid">
+          <div class="comparativa-col">
+            <h4>Buenos Aires</h4>
+            <p>Régimen sin autonomía plena. <strong>0 cartas orgánicas</strong> vigentes. Estructura definida por la Legislatura provincial vía Decreto-Ley 6.769/58. Sistema de ejidos colindantes.</p>
+          </div>
+          <div class="comparativa-col">
+            <h4>Córdoba</h4>
+            <p><em>Pionera</em> en autonomía municipal desde 1987 (siete años antes que la CN). Más de <strong>250 cartas orgánicas</strong> entre municipios y comunas. Régimen mixto con zonas rurales fuera del ejido.</p>
+          </div>
+          <div class="comparativa-col">
+            <h4>Santa Fe</h4>
+            <p>Autonomía municipal reconocida desde la reforma de 2025. Distingue <strong>municipios</strong> (con cartas) de <strong>comunas</strong> (sin cartas). Más de 365 gobiernos locales en total.</p>
+          </div>
+          <div class="comparativa-col">
+            <h4>Mendoza</h4>
+            <p>Régimen mixto. Los municipios no tienen autonomía plena en el sentido de poder dictarse cartas orgánicas (con excepciones recientes). 18 departamentos.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>Argentina como un todo tiene aproximadamente <strong>2.300 gobiernos locales</strong> distribuidos entre municipios, comunas, juntas vecinales y otras formas. La gran mayoría tiene algún grado de autonomía. Buenos Aires se mantiene como la excepción más significativa. Con 135 partidos-municipios sin autonomía plena, concentra <strong>casi el 6% de los gobiernos locales del país sin autonomía</strong>, en una jurisdicción que aporta el 36% del PBI nacional.</p>
+    </section>
+
+    <section class="seccion" id="decreto-ley">
+      <div class="seccion-num">— Sección 6 · El marco legal</div>
+      <h2>El <em>Decreto-Ley 6.769/58</em>: la norma que organiza todo</h2>
+
+      <p>La <strong>Ley Orgánica de las Municipalidades</strong> de la Provincia de Buenos Aires es, formalmente, el Decreto-Ley 6.769 del año 1958, dictado por un gobierno de facto y luego ratificado por la legislatura democrática. Pese a su origen de facto, es la norma <strong>vigente y aplicable</strong> al régimen municipal bonaerense, con numerosas modificaciones a lo largo de las décadas.</p>
+
+      <p>El Decreto-Ley 6.769/58 regula <strong>todos los aspectos del funcionamiento de un municipio bonaerense</strong>: la cantidad de concejales según la población, el procedimiento de elección del intendente y concejales, las atribuciones del Concejo Deliberante, las atribuciones del Intendente, el régimen de personal municipal, el régimen de contrataciones y licitaciones, el procedimiento administrativo municipal, el régimen presupuestario y contable.</p>
+
+      <p>Esta normativa es <strong>uniforme para los 135 partidos</strong>: no hay diferencias institucionales entre, por ejemplo, La Matanza (1.8 millones de habitantes) y Tordillo (1.745 habitantes). Ambos siguen el mismo Decreto-Ley, con las únicas variaciones de cantidad de concejales según la escala poblacional prevista. Esta uniformidad ha sido criticada por la doctrina constitucional: contextos institucionales tan distintos exigen marcos legales adaptables, no uniformes.</p>
+
+      <h3>El Tribunal de Cuentas y los HCD</h3>
+
+      <p>El control externo de los municipios bonaerenses lo ejerce el <strong>Tribunal de Cuentas de la Provincia</strong>, órgano constitucional provincial. Es una característica distintiva: en otras provincias, cada municipio con autonomía plena tiene su propio Tribunal de Cuentas o sistema de control. En PBA, todos los municipios son controlados por el Tribunal provincial. Esto da uniformidad pero limita la capacidad de control local.</p>
+
+      <p>Internamente, los HCD (Honorables Concejos Deliberantes) tienen sus propias <strong>Comisiones de Hacienda</strong> que controlan el presupuesto municipal, pero su capacidad de control efectivo está limitada por la concentración de poder informativo en el Intendente.</p>
+    </section>
+
+    <section class="seccion" id="intendentes">
+      <div class="seccion-num">— Sección 7 · El rol político</div>
+      <h2>El rol histórico de los <em>intendentes</em> en la política bonaerense</h2>
+
+      <p>A pesar de no tener autonomía institucional plena, los intendentes bonaerenses tienen un <strong>peso político inmenso</strong> en la dinámica provincial y nacional. Sus partidos son verdaderos territorios políticos: muchos administran poblaciones equivalentes a provincias enteras. <strong>La Matanza solo tiene más habitantes que 18 de las 23 provincias argentinas</strong>. Lomas de Zamora, Quilmes, Almirante Brown, Florencio Varela, Lanús, Tres de Febrero, Tigre o General San Martín superan los 300.000 habitantes cada uno.</p>
+
+      <p>Esta concentración demográfica convierte a los intendentes del Conurbano en <strong>actores clave del juego político</strong>:</p>
+
+      <ul>
+        <li>Manejan presupuestos millonarios (los grandes intendentes administran más recursos que muchos ministros provinciales).</li>
+        <li>Controlan el aparato territorial: punteros, comedores, programas sociales, obras públicas locales, contrataciones de personal.</li>
+        <li>Son los principales movilizadores electorales: la maquinaria peronista o radical en el Conurbano se construye desde los municipios.</li>
+        <li>Influyen en la designación de candidatos legislativos provinciales y nacionales.</li>
+        <li>Son frecuentemente candidatos para cargos mayores: muchos intendentes pasan a ser diputados nacionales, senadores, ministros o incluso candidatos a gobernador.</li>
+      </ul>
+
+      <h3>Los intendentes como "barones del Conurbano"</h3>
+
+      <p>La expresión <strong>"barones del Conurbano"</strong> se acuñó periodísticamente en los años 90 y 2000 para describir el rol político de los grandes intendentes del Conurbano. Refiere al fenómeno de jefes municipales con bases territoriales sólidas, capacidad de articulación con los gobernadores y presidentes, y peso decisivo en las elecciones nacionales (donde los votos del Conurbano son determinantes a nivel nacional). La expresión, originalmente periodística, ya se incorporó al lenguaje académico que estudia la política bonaerense.</p>
+
+      <p>La paradoja final del régimen municipal bonaerense es que <strong>los intendentes tienen poco poder formal pero mucho poder real</strong>. Sin autonomía constitucional, sin cartas orgánicas, con estructuras institucionales uniformes definidas por la provincia. Pero con presupuestos enormes, territorios poblacionalmente equivalentes a provincias, y capacidad política para influir en las elecciones nacionales. Es una tensión propia del federalismo argentino, y particularmente del federalismo bonaerense.</p>
+    </section>
+
+    <section class="seccion" id="fuentes">
+      <div class="seccion-num">— Sección 8 · Fuentes</div>
+      <h2>Fuentes y <em>referencias</em></h2>
+
+      <p>Este capítulo se basa en las siguientes fuentes oficiales:</p>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Buenos Aires</strong>, especialmente Arts. 190-201 sobre régimen municipal. Texto vigente con reforma de 1994.</li>
+        <li><strong>Decreto-Ley 6.769/58 · Ley Orgánica de las Municipalidades</strong> de la Provincia de Buenos Aires, con sus modificatorias acumuladas.</li>
+        <li><strong>Ley 10.559 · Régimen de Coparticipación Municipal</strong>, que regula la distribución de recursos provinciales a los municipios.</li>
+        <li><strong>Ley 14.836 · No reelección indefinida</strong> (2016), referida a la limitación de mandatos de intendentes y concejales.</li>
+        <li><strong>Sitio del Gobierno Federal · Municipios de Buenos Aires</strong>, en https://www.argentina.gob.ar/buenosaires/municipios</li>
+        <li><strong>Censo Nacional 2022</strong>, INDEC, para los datos poblacionales de los 135 partidos.</li>
+        <li>Para el Art. 123 CN (autonomía municipal nacional): <strong>Constitución Nacional</strong>, texto con reforma de 1994.</li>
+      </ul>
+
+      <p>Los datos institucionales fueron verificados a mayo de 2026 mediante consulta directa de fuentes oficiales y normativa vigente.</p>
+    </section>
+
+    <a href="buenos-aires-amba.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo</div>
+        <h3>10.01.04 · El <em>AMBA</em> y el conurbano bonaerense</h3>
+        <p>Los 40 partidos del conurbano más CABA conforman una de las megalópolis más grandes del mundo. 16.4 millones de habitantes que cruzan dos jurisdicciones políticas distintas. Análisis de la gobernabilidad metropolitana, los servicios cruzados, y los desafíos institucionales del AMBA.</p>
+      </div>
+      <span class="proximo-cap-arrow">Leer →</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Capítulo 10.01.03 · Buenos Aires en profundidad · Datos verificados a mayo 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

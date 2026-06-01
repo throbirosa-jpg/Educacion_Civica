@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Las 8 secciones electorales bonaerenses · 10.03 — Educación Cívica</title>
+<meta name="description" content="Las 8 secciones electorales de la provincia de Buenos Aires (Ley 5.109): cómo se reparten los 135 municipios, qué bancas elige cada una, el sistema rotativo de renovación, la Primera y Tercera Sección como llaves del poder político bonaerense.">
+<link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-secciones-electorales.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465; --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0; --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A; --rojo-fed: #B8341B; --rojo-soft: #F2D5CE; --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661; --verde: #4A7C59; --verde-soft: #D5E5D6; --linea: #DDD7CB; --linea-soft: #ECE6DA; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+  .seccion-card { background: white; border: 1px solid var(--linea); border-left: 5px solid var(--premium); padding: 1.8rem 2rem; margin: 1.5rem 0; }
+  .seccion-card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; gap: 1rem; flex-wrap: wrap; }
+  .seccion-card-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; background: var(--premium-soft); padding: 0.4rem 0.9rem; font-weight: 600; }
+  .seccion-card-renueva { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; }
+  .seccion-card h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.25rem; color: var(--tinta); margin-bottom: 0.6rem; line-height: 1.3; }
+  .seccion-card h3 em { font-style: italic; color: var(--premium-dark); }
+  .seccion-card .stats-row { display: flex; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; padding: 0.8rem 1rem; background: var(--crema); border: 1px solid var(--linea); }
+  .seccion-card .stat-item { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--tinta); }
+  .seccion-card .stat-item strong { color: var(--premium-dark); }
+  .seccion-card .municipios-list { font-size: 0.88rem; line-height: 1.7; color: var(--tinta); margin: 0.5rem 0; }
+  .seccion-card .municipios-list strong { color: var(--premium-dark); }
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Buenos Aires en profundidad · Capítulo 10.03</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="buenos-aires-en-profundidad.html">Buenos Aires</a> · <span>Secciones electorales</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.03 · Provincia de Buenos Aires</div>
+    <h1 class="page-title">Las 8 <em>secciones electorales</em></h1>
+    <p class="page-intro">Buenos Aires es la única provincia argentina con un sistema de <strong>secciones electorales</strong>: ocho circunscripciones territoriales (Ley 5.109) que agrupan a los 135 municipios y reparten las bancas de la Legislatura provincial. La provincia no se divide en departamentos como otras; tampoco vota en distrito único como CABA. Su sistema es propio: cada sección elige rotativamente diputados o senadores provinciales, con cantidades de bancas según la población de la sección. <strong>Quien controla las secciones más grandes (Primera y Tercera), controla la Legislatura bonaerense</strong>.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">8</div>
+        <div class="page-stat-label">Secciones electorales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">135</div>
+        <div class="page-stat-label">Municipios agrupados</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">5.109</div>
+        <div class="page-stat-label">Ley provincial vigente</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">14M+</div>
+        <div class="page-stat-label">Electores habilitados</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#intro">El sistema único de Buenos Aires</a></li>
+      <li><a href="#ley-5109">La Ley 5.109</a></li>
+      <li><a href="#como-funciona">Cómo funciona el sistema</a></li>
+      <li><a href="#primera">1ª Sección · Norte del Conurbano</a></li>
+      <li><a href="#segunda">2ª Sección · Norte bonaerense</a></li>
+      <li><a href="#tercera">3ª Sección · Sur del Conurbano</a></li>
+      <li><a href="#cuarta">4ª Sección · Centro-Norte</a></li>
+      <li><a href="#quinta">5ª Sección · Atlántica</a></li>
+      <li><a href="#sexta">6ª Sección · Sur bonaerense</a></li>
+      <li><a href="#septima">7ª Sección · Centro</a></li>
+      <li><a href="#octava">8ª Sección · La Plata</a></li>
+      <li><a href="#balance">Balance político</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="intro"><span class="seccion-num">— Introducción</span>El sistema <em>único</em> de Buenos Aires</h2>
+    <p>Buenos Aires es la única jurisdicción argentina que organiza sus elecciones provinciales por <strong>secciones electorales</strong>. El resto de las provincias usa distintas modalidades: distrito único (CABA), departamentos (Córdoba, Santa Fe, Mendoza), departamentos agrupados en circunscripciones (otras), o sistemas mixtos. Buenos Aires no se divide en departamentos: tiene 135 municipios agrupados en 8 secciones.</p>
+
+    <p>Esta particularidad responde a una decisión histórica: ante la enorme dispersión geográfica y demográfica de la provincia (desde el centro urbano del Conurbano hasta los partidos rurales del sur), <strong>el legislador entendió que un sistema de circunscripciones territoriales era más representativo</strong> que el voto a nivel provincial único o que la elección por municipio.</p>
+
+    <h2 id="ley-5109"><span class="seccion-num">— Sección 1</span>La <em>Ley 5.109</em></h2>
+    <p>El sistema de secciones electorales está regulado por la <strong>Ley provincial 5.109</strong>, sancionada en 1946 y modificada en sucesivas ocasiones. Esta ley establece:</p>
+
+    <ul>
+      <li>La división del territorio provincial en 8 secciones electorales.</li>
+      <li>La asignación de cada municipio a una sección específica.</li>
+      <li>La cantidad de diputados y senadores que elige cada sección, en proporción a su población.</li>
+      <li>El sistema de renovación rotativa (qué sección elige qué Cámara en cada elección).</li>
+    </ul>
+
+    <p>La asignación de cantidad de bancas se actualiza cada cierto tiempo según los datos censales. La distribución vigente al 2026 surge de las modificaciones más recientes en el marco de la <strong>reforma electoral provincial</strong>.</p>
+
+    <h2 id="como-funciona"><span class="seccion-num">— Sección 2</span>Cómo <em>funciona</em> el sistema</h2>
+    <p>El sistema tiene tres características distintivas:</p>
+
+    <h3>1. Renovación rotativa por mitades</h3>
+    <p>Las 8 secciones se dividen en dos grupos. Cada grupo elige una Cámara distinta en cada elección, y al siguiente turno se invierten los roles:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Año electoral</th>
+          <th>Secciones que eligen Diputados</th>
+          <th>Secciones que eligen Senadores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Año A (ej. 2023, 2027)</td>
+          <td>2ª, 3ª, 6ª, 8ª</td>
+          <td>1ª, 4ª, 5ª, 7ª</td>
+        </tr>
+        <tr>
+          <td>Año B (ej. 2025, 2029)</td>
+          <td>1ª, 4ª, 5ª, 7ª</td>
+          <td>2ª, 3ª, 6ª, 8ª</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Cada vecino de una sección, por tanto, vota diputados provinciales una elección y senadores la siguiente.</p>
+
+    <h3>2. Reparto proporcional según población</h3>
+    <p>Cada sección elige una cantidad de bancas proporcional a su población. La Primera (norte del Conurbano) y la Tercera (sur del Conurbano) son las más grandes, y por tanto las que más bancas eligen. La Séptima (centro provincial) y la Octava (La Plata) son las más chicas.</p>
+
+    <h3>3. Distrito único por sección</h3>
+    <p>Dentro de cada sección, las bancas se reparten por sistema D'Hondt, similar al de Diputados nacionales, pero con un piso del 3% del padrón seccional.</p>
+
+    <h2 id="primera"><span class="seccion-num">— Las 8 secciones</span>Primera Sección · <em>Norte del Conurbano</em></h2>
+
+    <div class="seccion-card" id="primera">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 1</span>
+        <span class="seccion-card-renueva">Renueva senadores en 2025, diputados en 2027</span>
+      </div>
+      <h3>1ª Sección · Norte del <em>Conurbano</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>24</strong> municipios</div>
+        <div class="stat-item"><strong>5.1M+</strong> electores</div>
+        <div class="stat-item"><strong>15</strong> diputados</div>
+        <div class="stat-item"><strong>8</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Campana, Escobar, General Las Heras, General Rodríguez, General San Martín, Hurlingham, Ituzaingó, José C. Paz, Luján, Malvinas Argentinas, Marcos Paz, Mercedes, Merlo, Moreno, Morón, Navarro, Pilar, San Fernando, San Isidro, San Miguel, Suipacha, Tigre, Tres de Febrero, Vicente López.</p>
+      <p>Es la sección más poblada de la provincia. Incluye los partidos del norte del Conurbano, donde se concentran tanto zonas residenciales de altos ingresos (San Isidro, Vicente López) como áreas populares densamente pobladas (Moreno, José C. Paz, Malvinas Argentinas). Es <strong>una de las dos secciones decisivas</strong> de la política bonaerense.</p>
+    </div>
+
+    <h2 id="segunda"><span class="seccion-num">— 2ª Sección</span>Norte <em>bonaerense</em></h2>
+
+    <div class="seccion-card" id="segunda">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 2</span>
+        <span class="seccion-card-renueva">Renueva diputados en 2025, senadores en 2027</span>
+      </div>
+      <h3>2ª Sección · Norte <em>bonaerense</em> (zona pampeana)</h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>15</strong> municipios</div>
+        <div class="stat-item"><strong>620K+</strong> electores</div>
+        <div class="stat-item"><strong>11</strong> diputados</div>
+        <div class="stat-item"><strong>5</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Arrecifes, Baradero, Capitán Sarmiento, Carmen de Areco, Colón, Exaltación de la Cruz, Pergamino, Ramallo, Rojas, Salto, San Andrés de Giles, San Antonio de Areco, San Nicolás, San Pedro, Zárate.</p>
+      <p>Agrupa partidos del norte bonaerense en la zona pampeana, con perfil agropecuario y agroindustrial. San Nicolás y Zárate son sus centros urbanos más importantes, ambos con desarrollo industrial significativo (siderurgia y química).</p>
+    </div>
+
+    <h2 id="tercera"><span class="seccion-num">— 3ª Sección</span>Sur del <em>Conurbano</em></h2>
+
+    <div class="seccion-card" id="tercera">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 3</span>
+        <span class="seccion-card-renueva">Renueva diputados en 2025, senadores en 2027</span>
+      </div>
+      <h3>3ª Sección · Sur del <em>Conurbano</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>19</strong> municipios</div>
+        <div class="stat-item"><strong>4.6M+</strong> electores</div>
+        <div class="stat-item"><strong>18</strong> diputados</div>
+        <div class="stat-item"><strong>9</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Almirante Brown, Avellaneda, Berazategui, Berisso, Brandsen, Cañuelas, Ensenada, Esteban Echeverría, Ezeiza, Florencio Varela, La Matanza, Lanús, Lobos, Lomas de Zamora, Magdalena, Presidente Perón, Punta Indio, Quilmes, San Vicente.</p>
+      <p>La Tercera es la <strong>otra sección decisiva</strong> de la política bonaerense. Incluye al partido más poblado de Argentina (<strong>La Matanza</strong>, con más de 1,7 millones de habitantes) y al resto del sur del Conurbano (Lomas de Zamora, Quilmes, Lanús, Avellaneda, Florencio Varela). Es históricamente un bastión del peronismo.</p>
+    </div>
+
+    <h2 id="cuarta"><span class="seccion-num">— 4ª Sección</span>Centro <em>norte</em></h2>
+
+    <div class="seccion-card" id="cuarta">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 4</span>
+        <span class="seccion-card-renueva">Renueva senadores en 2025, diputados en 2027</span>
+      </div>
+      <h3>4ª Sección · Centro-<em>norte</em> bonaerense</h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>19</strong> municipios</div>
+        <div class="stat-item"><strong>500K+</strong> electores</div>
+        <div class="stat-item"><strong>7</strong> diputados</div>
+        <div class="stat-item"><strong>7</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Alberti, Bragado, Carlos Casares, Carlos Tejedor, Chacabuco, Chivilcoy, Florentino Ameghino, General Arenales, General Pinto, General Viamonte, General Villegas, Hipólito Yrigoyen, Junín, Leandro N. Alem, Lincoln, Nueve de Julio, Pehuajó, Rivadavia, Trenque Lauquen.</p>
+      <p>Cuarta sección. Predominio agropecuario, con centros urbanos pequeños distribuidos en el centro-norte de la provincia. Junín es el principal núcleo urbano.</p>
+    </div>
+
+    <h2 id="quinta"><span class="seccion-num">— 5ª Sección</span><em>Atlántica</em></h2>
+
+    <div class="seccion-card" id="quinta">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 5</span>
+        <span class="seccion-card-renueva">Renueva senadores en 2025, diputados en 2027</span>
+      </div>
+      <h3>5ª Sección · <em>Atlántica</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>27</strong> municipios</div>
+        <div class="stat-item"><strong>1.2M+</strong> electores</div>
+        <div class="stat-item"><strong>11</strong> diputados</div>
+        <div class="stat-item"><strong>5</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Ayacucho, Balcarce, Castelli, Chascomús, Dolores, General Alvarado, General Belgrano, General Guido, General Lavalle, General Madariaga, General Paz, La Costa, Las Flores, Lezama, Lobería, Maipú, Mar Chiquita, <strong>Mar del Plata-Gral. Pueyrredón</strong>, Monte, Necochea, Pila, Pinamar, Rauch, San Cayetano, Tandil, Tordillo, Villa Gesell.</p>
+      <p>La Quinta sección abarca la costa atlántica. Su centro político y demográfico es <strong>Mar del Plata</strong> (Partido de General Pueyrredón), el principal núcleo urbano. Concentra una alta diversidad: ciudades turísticas (Pinamar, Villa Gesell, Mar de las Pampas), portuarias y agroindustriales (Necochea), y agropecuarias (Tandil, Balcarce).</p>
+    </div>
+
+    <h2 id="sexta"><span class="seccion-num">— 6ª Sección</span>Sur <em>bonaerense</em></h2>
+
+    <div class="seccion-card" id="sexta">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 6</span>
+        <span class="seccion-card-renueva">Renueva diputados en 2025, senadores en 2027</span>
+      </div>
+      <h3>6ª Sección · Sur <em>bonaerense</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>22</strong> municipios</div>
+        <div class="stat-item"><strong>620K+</strong> electores</div>
+        <div class="stat-item"><strong>11</strong> diputados</div>
+        <div class="stat-item"><strong>6</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Adolfo Alsina, Adolfo Gonzales Chaves, Bahía Blanca, Benito Juárez, Coronel Dorrego, Coronel Pringles, Coronel Rosales, Coronel Suárez, Daireaux, General Lamadrid, Guaminí, Laprida, Monte Hermoso, Patagones, Pellegrini, Puán, Saavedra, Salliqueló, San Cayetano, Tornquist, Tres Arroyos, Villarino.</p>
+      <p>La Sexta agrupa todos los partidos del sur bonaerense, hasta la frontera con Río Negro. Su centro es <strong>Bahía Blanca</strong>, importante por su puerto y por la presencia de la Universidad Nacional del Sur. La sección incluye Patagones, el partido más austral de la provincia.</p>
+    </div>
+
+    <h2 id="septima"><span class="seccion-num">— 7ª Sección</span>Centro <em>provincial</em></h2>
+
+    <div class="seccion-card" id="septima">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 7</span>
+        <span class="seccion-card-renueva">Renueva senadores en 2025, diputados en 2027</span>
+      </div>
+      <h3>7ª Sección · Centro <em>provincial</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>8</strong> municipios</div>
+        <div class="stat-item"><strong>260K+</strong> electores</div>
+        <div class="stat-item"><strong>3</strong> diputados</div>
+        <div class="stat-item"><strong>3</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipios:</strong> Azul, Bolívar, General Alvear, Olavarría, Roque Pérez, Saladillo, Tapalqué, 25 de Mayo.</p>
+      <p>Es la sección más pequeña por población y por número de bancas. Predominantemente rural y agropecuaria, con <strong>Olavarría</strong> como principal centro urbano (capital cementera del país).</p>
+    </div>
+
+    <h2 id="octava"><span class="seccion-num">— 8ª Sección</span>La <em>Plata</em></h2>
+
+    <div class="seccion-card" id="octava">
+      <div class="seccion-card-header">
+        <span class="seccion-card-num">— Sección 8 (Capital)</span>
+        <span class="seccion-card-renueva">Renueva diputados en 2025, senadores en 2027</span>
+      </div>
+      <h3>8ª Sección · Capital · <em>La Plata</em></h3>
+      <div class="stats-row">
+        <div class="stat-item"><strong>1</strong> municipio</div>
+        <div class="stat-item"><strong>590K+</strong> electores</div>
+        <div class="stat-item"><strong>6</strong> diputados</div>
+        <div class="stat-item"><strong>3</strong> senadores</div>
+      </div>
+      <p class="municipios-list"><strong>Municipio único:</strong> La Plata (Partido capital de la provincia).</p>
+      <p>La sección Capital tiene una particularidad: <strong>está integrada por un único municipio</strong>, el partido de La Plata. Esto se debe a la importancia institucional de la ciudad capital, sede de los tres poderes provinciales. La población de La Plata supera el medio millón de habitantes, lo que justifica una representación legislativa propia.</p>
+    </div>
+
+    <h2 id="balance"><span class="seccion-num">— Balance</span>El <em>peso político</em> de cada sección</h2>
+
+    <p>Una vez explicada cada sección, el panorama del peso político relativo:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Sección</th>
+          <th>Municipios</th>
+          <th>Electores</th>
+          <th>Bancas (Dip+Sen)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1ª (Norte Conurbano)</strong></td><td>24</td><td>~5.1M</td><td>15+8 = 23</td></tr>
+        <tr><td>2ª (Norte pampeano)</td><td>15</td><td>~620K</td><td>11+5 = 16</td></tr>
+        <tr><td><strong>3ª (Sur Conurbano)</strong></td><td>19</td><td>~4.6M</td><td>18+9 = 27</td></tr>
+        <tr><td>4ª (Centro-norte)</td><td>19</td><td>~500K</td><td>7+7 = 14</td></tr>
+        <tr><td>5ª (Atlántica)</td><td>27</td><td>~1.2M</td><td>11+5 = 16</td></tr>
+        <tr><td>6ª (Sur)</td><td>22</td><td>~620K</td><td>11+6 = 17</td></tr>
+        <tr><td>7ª (Centro)</td><td>8</td><td>~260K</td><td>3+3 = 6</td></tr>
+        <tr><td>8ª (La Plata)</td><td>1</td><td>~590K</td><td>6+3 = 9</td></tr>
+      </tbody>
+    </table>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Las llaves del poder</div>
+      <p>Entre la <strong>Primera y la Tercera Sección</strong> concentran cerca del 9,7 millones de electores (de los 14 millones de la provincia), es decir <strong>aproximadamente el 70% del padrón bonaerense</strong>. Y entre ambas eligen 50 de las 138 bancas de la Legislatura provincial. Esto significa que, para gobernar la provincia, <strong>es prácticamente imposible no ganar al menos una de estas dos secciones</strong>.</p>
+    </div>
+
+    <h3>Distribución de electores</h3>
+    <p>La asimetría demográfica entre secciones es enorme. La Séptima (260 mil electores) podría caber 20 veces dentro de la Primera (5,1 millones de electores). Sin embargo, ambas tienen representación en la Legislatura por el sistema proporcional.</p>
+
+    <h3>Distribución urbana / rural</h3>
+    <p>El sistema de secciones tiene un sesgo implícito: <strong>las secciones del Conurbano (Primera y Tercera) concentran la mayoría del peso electoral provincial</strong>. Las secciones del interior provincial (Segunda, Cuarta, Sexta, Séptima) tienen un peso comparativamente menor pese a su extensión geográfica.</p>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">El sistema de las 8 secciones electorales bonaerenses es una de las particularidades institucionales más relevantes del federalismo argentino: una provincia que, ante su propia diversidad territorial, optó por un sistema de circunscripciones que no replica ningún otro distrito del país. Su existencia explica buena parte de la dinámica política de Argentina, ya que <strong>quien controla las secciones decisivas de Buenos Aires tiene una llave para controlar la política nacional</strong>. Es un sistema diseñado en 1946 que, casi 80 años después, sigue siendo el corazón del aparato electoral más grande del país.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Provincia de Buenos Aires (reforma 1994).</li>
+        <li>Ley provincial 5.109 - Régimen Electoral Provincial.</li>
+        <li>Junta Electoral de la Provincia de Buenos Aires.</li>
+        <li>INDEC. <em>Censo Nacional de Población, Hogares y Viviendas 2022</em>.</li>
+        <li>Chequeado. <em>Elecciones Buenos Aires 2025: la conformación de la Legislatura</em>.</li>
+        <li>Infocielo. <em>Las secciones electorales bonaerenses</em>.</li>
+        <li>Dirección Nacional Electoral. Ministerio del Interior.</li>
+        <li>Cruz, Facundo. <em>Política bonaerense y secciones electorales</em>. CIPECC.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="buenos-aires-poderes.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Capítulo 10.02</div>
+        <div class="nav-cap-titulo">Los tres poderes</div>
+      </a>
+      <a href="buenos-aires-amba.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Capítulo 10.04 →</div>
+        <div class="nav-cap-titulo">El AMBA y el Conurbano</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

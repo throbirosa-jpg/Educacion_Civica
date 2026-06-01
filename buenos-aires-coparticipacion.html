@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Buenos Aires · La subrepresentación fiscal y política (10.01.05) — Educación Cívica</title>
+<meta name="description" content="La gran paradoja bonaerense: la provincia aporta el 35-40% del PBI nacional pero recibe apenas el 19,93% de la coparticipación. Análisis del Fondo del Conurbano congelado en 1996, la Ley 23.548 vigente desde 1988, los 70 diputados nacionales y los reclamos ante la Corte Suprema.">
+<link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-coparticipacion.html">
+
+<meta property="og:title" content="Buenos Aires · La subrepresentación fiscal y política">
+<meta property="og:description" content="La provincia que aporta el 40% del PBI nacional pero recibe el 22% de la coparticipación.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/buenos-aires-coparticipacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.01.05</strong> de la sección Buenos Aires en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="buenos-aires-en-profundidad.html">Buenos Aires</a> ·
+      <span>Subrepresentación fiscal</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.01.05 · Estudio provincial</div>
+    <h1 class="page-title">La <em>subrepresentación</em> fiscal y política</h1>
+    <div class="page-subtitulo">— La gran paradoja del federalismo argentino</div>
+    <p class="page-intro">La provincia de Buenos Aires <strong>aporta entre el 35% y el 40% del PBI nacional</strong>, concentra el 38% de la población argentina y el 42% de la población económicamente activa. Pero por la <strong>Ley de Coparticipación Federal 23.548 de 1988</strong>, recibe apenas el <strong>19,93%</strong> de los recursos coparticipables. Con todas las transferencias automáticas incluidas, la cifra apenas trepa al 22,5%. Es la segunda jurisdicción más perjudicada del país en términos relativos, sólo después de CABA. Esta brecha se profundiza con el <strong>Fondo del Conurbano congelado en 1996</strong> en un tope nominal de $650 millones que nunca se actualizó, y con la subrepresentación en el Congreso (70 diputados nacionales fijados en 1983 sobre un padrón que era la mitad del actual).</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">35-40%</div>
+        <div class="page-stat-label">Del PBI argentino</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">19,93%</div>
+        <div class="page-stat-label">De la coparticipación</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">$650M</div>
+        <div class="page-stat-label">Tope del Fondo Conurbano (1996)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">70</div>
+        <div class="page-stat-label">Diputados nacionales</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#paradoja">01 · La gran paradoja</a></li>
+      <li><a href="#ley-23548">02 · La Ley 23.548 de 1988</a></li>
+      <li><a href="#desfase">03 · El desfase aporte-retorno</a></li>
+      <li><a href="#fondo-conurbano">04 · El Fondo del Conurbano</a></li>
+      <li><a href="#litigio">05 · Reclamos ante la Corte</a></li>
+      <li><a href="#subrepresentacion">06 · Subrepresentación legislativa</a></li>
+      <li><a href="#comparacion">07 · Comparación interprovincial</a></li>
+      <li><a href="#agenda">08 · La agenda pendiente</a></li>
+      <li><a href="#fuentes">09 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="paradoja">
+      <div class="seccion-num">01 · La gran paradoja</div>
+      <h2>Aportar el 40% y recibir <em>el 22%</em></h2>
+
+      <p>En todos los discursos de apertura de sesiones legislativas bonaerenses desde la restauración democrática, los sucesivos gobernadores —de signos políticos diversos— repiten una variante de la misma frase: <em>"la provincia aporta el 40% de la recaudación nacional y recibe por coparticipación apenas el 22%"</em>. La afirmación es esencialmente correcta, está respaldada por los informes oficiales de la Comisión de Coparticipación Federal de Impuestos del Senado, y es una de las pocas constantes de la política bonaerense por encima de las divisiones partidarias.</p>
+
+      <p>Buenos Aires es una provincia <strong>grande, rica y al mismo tiempo precaria</strong>. Por su tamaño absoluto, concentra el grueso de la actividad económica argentina. Pero por su composición interna —con un Conurbano altamente urbanizado, denso y empobrecido en muchos de sus distritos— también concentra una porción muy alta de la pobreza y vulnerabilidad social del país. El propio gobernador Axel Kicillof, en su escrito ante la Corte Suprema de 2024, presentó la siguiente foto:</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La provincia en datos comparados (2024)</div>
+        <p>La provincia de Buenos Aires <strong>aporta el 35% del PBI nacional</strong>, concentra el 42% de la población económicamente activa y el 50% del valor agregado industrial. Concentra también el 38% de la matrícula educativa, el 38% de las camas de terapia intensiva y posee una alta vulnerabilidad social: reside casi el 58% de las personas pobres y el 61% de las indigentes del país.</p>
+        <p>Frente a esos indicadores, <strong>la provincia recibe el 19,93% por coparticipación pura</strong> y aproximadamente el 22,5% si se incluyen las transferencias automáticas no coparticipables.</p>
+      </div>
+
+      <p>No hay criterio interpretativo posible —ni devolutivo (recibir en función de lo aportado), ni redistributivo (recibir en función de la necesidad social)— que pueda explicar esta brecha. <strong>Si se aplicara un criterio puramente devolutivo</strong>, la provincia debería recibir alrededor del 35% (en línea con su aporte al PBI). <strong>Si se aplicara un criterio puramente redistributivo</strong>, debería recibir incluso más, porque concentra el grueso de la pobreza argentina. Ambos criterios convergen en que la cifra real está por debajo de lo que cualquier lógica justificaría.</p>
+    </div>
+
+    <div class="seccion" id="ley-23548">
+      <div class="seccion-num">02 · La Ley de Coparticipación 23.548</div>
+      <h2>Una norma "transitoria" que <em>cumple 38 años</em></h2>
+
+      <p>El régimen vigente de coparticipación se rige por la <strong>Ley 23.548</strong>, sancionada el 7 de enero de 1988, durante la presidencia de Raúl Alfonsín, ante el vencimiento del régimen anterior y el riesgo de quedar sin norma. La propia ley se autodefine como un <strong>"régimen transitorio"</strong> de coparticipación federal de recursos fiscales. En 2026 cumple 38 años de vigencia "transitoria".</p>
+
+      <p>La Reforma Constitucional de 1994 incorporó en el Artículo 75 inciso 2 de la Constitución Nacional un mandato preciso: el Congreso debía sancionar <strong>una nueva ley convenio de coparticipación antes de fines de 1996</strong>. La cláusula transitoria sexta de la Constitución reformada establece textualmente: <em>"La distribución de competencias, servicios y funciones vigentes a la sanción de esta reforma, no podrá modificarse sin la aprobación de la provincia interesada... antes del año 1996"</em>. Treinta años después, esa nueva ley sigue sin sancionarse.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Ley 23.548</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción</div>
+            <div class="ficha-valor">7 de enero de <strong>1988</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Vigencia</div>
+            <div class="ficha-valor">Transitoria · <strong>38 años en 2026</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Distribución primaria Nación</div>
+            <div class="ficha-valor">42,34% al Tesoro Nacional</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Distribución primaria provincias</div>
+            <div class="ficha-valor">56,66% al conjunto de provincias</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">ATN (Aportes Tesoro Nacional)</div>
+            <div class="ficha-valor">1% discrecional del Ejecutivo</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Coeficiente PBA secundaria</div>
+            <div class="ficha-valor"><strong>19,93%</strong> (sin ajuste)</div>
+          </div>
+        </div>
+      </div>
+
+      <p>La ley distingue dos niveles de distribución. La <strong>coparticipación primaria</strong> reparte los recursos coparticipables entre la Nación (42,34%) y el conjunto de provincias (56,66%), más un 1% para los Aportes del Tesoro Nacional (ATN) que el Ejecutivo distribuye a discreción. La <strong>coparticipación secundaria</strong> reparte ese 56,66% entre las provincias según coeficientes fijos establecidos en la propia ley, <strong>sin ningún criterio explícito de población, superficie o necesidades</strong>.</p>
+
+      <div class="cita">
+        "Si se analizan criterios objetivos, la provincia de Buenos Aires recibe el 22% de los recursos coparticipables y concentra el 38,2% de la población. La Ley de Coparticipación Federal vigente es anterior a la sanción de la Constitución de 1994 y no cumple con el mandato del Artículo 75 inciso 2 de dictar una nueva ley convenio."
+        <span class="cita-fuente">— Argumentos de la provincia de Buenos Aires ante la Corte Suprema, en la causa por coparticipación. Citado en Palabras del Derecho (2024).</span>
+      </div>
+
+      <p>Los coeficientes fijos de 1988 reflejan la realidad demográfica y económica de mediados de los 80, una foto que tiene cuatro décadas de antigüedad. Provincias que hoy son grandes receptoras netas de coparticipación (es decir, reciben más de lo que aportan en PBI) fueron diseñadas como tales en el contexto del retorno democrático: pequeñas provincias del NOA y NEA con poca actividad económica pero con gran peso institucional en el Senado.</p>
+    </div>
+
+    <div class="seccion" id="desfase">
+      <div class="seccion-num">03 · El desfase aporte-retorno</div>
+      <h2>18 puntos de <em>brecha</em> entre lo que aporta y lo que recibe</h2>
+
+      <p>Según los datos consolidados de la Comisión de Coparticipación Federal de Impuestos del Senado, los principales receptores de coparticipación secundaria son: <strong>Buenos Aires (19,93% nominal, ~21,3% efectivo)</strong>, Santa Fe (9,28%), Córdoba (9,22%), Chaco (5,18%), Entre Ríos (5,07%) y Tucumán (4,94%). En el otro extremo, Tierra del Fuego (0,7%) y Santa Cruz (1,38%) son los menores receptores en valor absoluto, aunque por su escasa población son grandes receptores per cápita.</p>
+
+      <p>El indicador más revelador es la <strong>brecha entre aporte al PBI y participación en la coparticipación</strong>. Con datos de la consultora Muñoz publicados en 2025, las provincias que dan más de lo que reciben son siete:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Provincia</th>
+              <th>Aporta al PBI</th>
+              <th>Recibe coparticipación</th>
+              <th>Brecha (puntos)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Buenos Aires</strong></td>
+              <td>38-40%</td>
+              <td>~21,3%</td>
+              <td><strong>−18,3 puntos</strong></td>
+            </tr>
+            <tr>
+              <td>Santa Fe</td>
+              <td>11,5%</td>
+              <td>10,2%</td>
+              <td>−1,3 punto</td>
+            </tr>
+            <tr>
+              <td>Córdoba</td>
+              <td>10,1%</td>
+              <td>9,5%</td>
+              <td>−0,6 punto</td>
+            </tr>
+            <tr>
+              <td>Mendoza</td>
+              <td>5,3%</td>
+              <td>4,6%</td>
+              <td>−0,7 punto</td>
+            </tr>
+            <tr>
+              <td>Neuquén</td>
+              <td>5,9%</td>
+              <td>3,8%</td>
+              <td>−2,1 puntos</td>
+            </tr>
+            <tr>
+              <td>Chubut</td>
+              <td>4,0%</td>
+              <td>2,8%</td>
+              <td>−1,2 punto</td>
+            </tr>
+            <tr>
+              <td>Santa Cruz</td>
+              <td>2,7%</td>
+              <td>2,2%</td>
+              <td>−0,5 punto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Como muestra la tabla, Buenos Aires no es la única provincia perjudicada en términos relativos, pero <strong>su brecha es muy superior a la del resto</strong>: 18 puntos de diferencia entre aporte y retorno, frente a brechas de entre 0,5 y 2,1 puntos en las otras provincias contribuyentes netas. Las 16 provincias restantes reciben más coparticipación de lo que aportan al PBI nacional, con desfases que llegan hasta los 2,9 puntos positivos en favor de algunas provincias chicas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Cuánta plata representa la brecha bonaerense?</div>
+        <p>Si Buenos Aires recibiera por coparticipación una proporción equivalente a su aporte al PBI (35% en lugar del 22% actual), recibiría aproximadamente <strong>13 puntos porcentuales más</strong> de la masa coparticipable. En cifras nominales actuales, eso representa varios billones de pesos al año, o equivalente a casi un presupuesto provincial completo.</p>
+        <p>Esa cifra explica por qué el debate por una reforma de la coparticipación es estructuralmente irresoluble: <strong>cualquier ganancia bonaerense significaría pérdidas equivalentes para las 16 provincias contribuyentes netas</strong>, y la decisión se toma en el Senado, donde esas provincias tienen mayoría 2 a 1.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fondo-conurbano">
+      <div class="seccion-num">04 · El Fondo del Conurbano</div>
+      <h2>El tope de <em>$650 millones</em> congelado desde 1996</h2>
+
+      <p>El llamado <strong>Fondo del Conurbano Bonaerense</strong> es uno de los casos más emblemáticos del desfase fiscal argentino. Su historia ilumina la lógica perversa de varios mecanismos de coparticipación: una compensación que con el paso del tiempo se transforma en su contrario.</p>
+
+      <h3>Origen: 1992, la compensación a Buenos Aires</h3>
+
+      <p>El fondo fue creado por la <strong>Ley 24.073 de 1992</strong>, sancionada durante la presidencia de Carlos Menem y a iniciativa del entonces vicepresidente Eduardo Duhalde (quien poco después sería gobernador bonaerense). El objetivo: devolverle a la provincia los puntos de coparticipación que había perdido en los años 80 por las sucesivas reformas. La ley estableció que <strong>el 10% de la recaudación del impuesto a las Ganancias se destinaría exclusivamente al financiamiento de obras de carácter social en el Conurbano Bonaerense</strong>.</p>
+
+      <p>Durante los primeros cuatro años, el sistema funcionó como había sido pensado: el dinero se giraba íntegramente a la provincia, sin tope. El crecimiento del Producto Bruto Geográfico bonaerense, combinado con la recaudación creciente del impuesto a las Ganancias, hizo que el fondo aportara recursos significativos a las cuentas provinciales.</p>
+
+      <h3>1996: el tope de $650 millones</h3>
+
+      <p>En diciembre de 1995, ante reclamos de los gobernadores del interior que veían crecer el fondo bonaerense, el Congreso sancionó la <strong>Ley 24.621</strong>, promulgada el 3 de enero de 1996. Esta ley introdujo dos modificaciones clave:</p>
+
+      <ol>
+        <li>Estableció un <strong>tope nominal de $650 millones anuales</strong> a lo que la provincia podía recibir del fondo (en esa fecha, $1 era equivalente a US$1 por la convertibilidad).</li>
+        <li>Determinó que <strong>el excedente sobre ese tope se redistribuyera entre el resto de las provincias</strong> (excluyendo a CABA), de acuerdo con los coeficientes de coparticipación.</li>
+      </ol>
+
+      <p>La distorsión que esto generó es uno de los casos más estudiados del federalismo fiscal argentino. <strong>El tope se fijó en términos nominales de 1996 y nunca se actualizó por inflación, devaluación o crecimiento económico</strong>. Mientras tanto, la recaudación del impuesto a Ganancias multiplicó su valor real muchas veces durante las décadas siguientes.</p>
+
+      <div class="cita">
+        "Esto produjo que la provincia de Buenos Aires se quede hoy con menos del 2% del Fondo del Conurbano, mientras el 98% se redistribuye entre las demás provincias. Buenos Aires pasó de recibir un 96% de lo recaudado por el Fondo en 1996 a sólo el 1,5% en 2016."
+        <span class="cita-fuente">— Chequeado, "¿Qué es el Fondo del Conurbano y por qué es importante para las provincias?" (2017).</span>
+      </div>
+
+      <p>El nombre formal del fondo —"Fondo de Reparación Histórica del Conurbano Bonaerense"— se transformó, en los hechos, en una redistribución hacia las demás provincias. La paradoja institucional es que un mecanismo creado para compensar el subfinanciamiento bonaerense terminó alimentando a las provincias que ya recibían más de lo que aportaban.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Fondo del Conurbano Bonaerense</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Creación</div>
+            <div class="ficha-valor">Ley 24.073 de <strong>1992</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Origen de recursos</div>
+            <div class="ficha-valor">10% del impuesto a las Ganancias</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Tope nominal</div>
+            <div class="ficha-valor"><strong>$650 millones</strong> (desde 1996)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Ley del tope</div>
+            <div class="ficha-valor">Ley 24.621 de 1996</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Destino del excedente</div>
+            <div class="ficha-valor">Resto de provincias (no CABA)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Actualización del tope</div>
+            <div class="ficha-valor"><strong>Nunca</strong> en 30 años</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2017: el acuerdo de descongelamiento</h3>
+
+      <p>En agosto de 2016, la gobernadora María Eugenia Vidal presentó ante la Corte Suprema una <strong>acción declarativa de inconstitucionalidad</strong> sobre el tope del Fondo del Conurbano, reclamando además un pago retroactivo equivalente al de los últimos cinco años. La cifra reclamada superaba los $300 mil millones de pesos de aquel momento.</p>
+
+      <p>El caso nunca llegó a fallarse. En el marco del <strong>Consenso Fiscal del 16 de noviembre de 2017</strong>, la Nación, las provincias y CABA acordaron una solución gradual: la provincia retiraría su reclamo ante la Corte y, a cambio, se desactivaría el tope mediante una solución financiada principalmente por la Nación, sin afectar a las otras provincias. La pieza clave del acuerdo fue derogar el Artículo 104 de la Ley de Ganancias que canalizaba el excedente del Fondo del Conurbano hacia las demás provincias.</p>
+
+      <p>El descongelamiento parcial mejoró las cuentas bonaerenses temporalmente, pero <strong>el reclamo estructural sobre la coparticipación quedó intacto</strong>. El acuerdo de 2017 fue luego revisado, suspendido o reinterpretado por sucesivos gobiernos nacionales, lo que mantiene la cuestión del federalismo fiscal en un permanente estado de litigio político.</p>
+    </div>
+
+    <div class="seccion" id="litigio">
+      <div class="seccion-num">05 · Los reclamos ante la Corte Suprema</div>
+      <h2>Tres décadas de <em>litigio constitucional</em></h2>
+
+      <p>La provincia de Buenos Aires —junto con otras provincias y CABA— ha llevado reiteradamente la cuestión coparticipativa ante la <strong>Corte Suprema de Justicia de la Nación</strong>. La doctrina judicial sobre el tema es por ahora limitada, porque la Corte tiende a no involucrarse en lo que considera "cuestiones políticas no justiciables", pero hay algunos antecedentes relevantes.</p>
+
+      <h3>Causa "Provincia de San Luis c/ Estado Nacional" (2003)</h3>
+
+      <p>En este precedente, la Corte se pronunció sobre las <strong>detracciones unilaterales</strong> de la masa coparticipable. El caso surgió de la pesificación asimétrica de 2002, que afectaba a recursos coparticipables sin consultar a las provincias. La Corte estableció que la masa coparticipable es un derecho de las provincias y que la Nación no puede modificarla unilateralmente.</p>
+
+      <h3>Causa CABA c/ Estado Nacional (2020-2024)</h3>
+
+      <p>El caso más resonante del último ciclo democrático. Ante la decisión del Poder Ejecutivo Nacional de reducir por decreto el coeficiente de coparticipación de CABA del 3,5% al 1,4%, CABA recurrió a la Corte y obtuvo en 2024 una medida cautelar que ordenó restituir buena parte de los fondos. <strong>La doctrina sentada por la Corte en este caso establece que los coeficientes coparticipables no pueden modificarse por decreto</strong>, sino por ley y con acuerdo provincial.</p>
+
+      <h3>Reclamos bonaerenses 2022-2025</h3>
+
+      <p>La provincia presentó reiterados reclamos durante los últimos años por:</p>
+
+      <ul>
+        <li>La distribución del <strong>15% de la masa coparticipable derivado a la ANSES</strong> en los años 90, considerado por la provincia como una detracción inconstitucional no compensada.</li>
+        <li>La eliminación o reducción del impuesto a las Ganancias por categorías que afectó la base del Fondo del Conurbano.</li>
+        <li>La distribución de los <strong>fondos del impuesto al cheque</strong> (Impuesto sobre los Débitos y Créditos Bancarios), creado en 2001 como impuesto extraordinario y nunca derogado.</li>
+        <li>La <strong>recomposición del Fondo del Conurbano</strong> tras la suspensión del acuerdo de 2017.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El problema estructural</div>
+        <p>La Corte Suprema ha sido cautelosa al avanzar sobre la cuestión coparticipativa porque su intervención podría tener efectos sistémicos imprevisibles. <strong>Modificar los coeficientes de Buenos Aires implicaría afectar a las demás provincias</strong>, y la Corte no puede dictar reformas legales en lugar del Congreso.</p>
+        <p>Como resultado, los reclamos individuales prosperan cuando se trata de detracciones unilaterales (como en el caso CABA), pero el debate estructural sobre los coeficientes secundarios sigue siendo materia política, no judicial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="subrepresentacion">
+      <div class="seccion-num">06 · La subrepresentación legislativa</div>
+      <h2>70 diputados con el padrón de <em>1983</em></h2>
+
+      <p>La cuestión de la coparticipación tiene un hermano mellizo en el plano político: la <strong>subrepresentación de Buenos Aires en la Cámara de Diputados de la Nación</strong>. Es un caso menos discutido públicamente pero igualmente estructural.</p>
+
+      <h3>El piso de 1983</h3>
+
+      <p>La distribución actual de las bancas en la Cámara de Diputados nacional se rige por el <strong>Decreto-Ley 22.847 de 1983</strong>, sancionado durante el período de transición democrática para asegurar la conformación del Congreso de la restauración institucional. Este decreto-ley estableció:</p>
+
+      <ul>
+        <li>Una <strong>base de un diputado por cada 161.000 habitantes o fracción mayor a 80.500</strong>, según los datos del Censo 1980.</li>
+        <li>Un <strong>piso mínimo de 5 diputados por provincia</strong>, independientemente de su población.</li>
+        <li>Un total de 257 bancas, repartidas según esos criterios.</li>
+      </ul>
+
+      <p>El resultado fue una distribución claramente sesgada en favor de las provincias chicas, justificada en su momento por la lógica de proteger a las jurisdicciones menores en un Congreso recién recompuesto. Pero <strong>esa distribución se cristalizó y nunca se revisó</strong> a pesar del crecimiento demográfico desigual entre provincias.</p>
+
+      <h3>La distribución congelada</h3>
+
+      <p>Hoy, Buenos Aires tiene 70 diputados nacionales (la mayor delegación), pero esto representa el <strong>27% de la cámara con el 38% de la población</strong>. Si la distribución se hiciera con datos del Censo 2022 y sin pisos artificialmente altos para las provincias chicas, Buenos Aires debería tener entre 95 y 100 diputados.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Distribución de Diputados</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Total de bancas</div>
+            <div class="ficha-valor">257 diputados nacionales</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Bancas Buenos Aires</div>
+            <div class="ficha-valor"><strong>70</strong> (27% del total)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Población PBA</div>
+            <div class="ficha-valor">38% del país (Censo 2022)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Bancas "justas" (proporcional)</div>
+            <div class="ficha-valor">95-100 diputados</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Norma vigente</div>
+            <div class="ficha-valor">DL 22.847 de 1983</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Base censal</div>
+            <div class="ficha-valor"><strong>Censo 1980</strong> (44 años de atraso)</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Esta subrepresentación se profundiza en el <strong>Senado</strong>, donde la lógica institucional es deliberadamente igualitaria: 3 senadores por jurisdicción, independientemente de su población. Buenos Aires tiene los mismos 3 senadores que La Rioja, una provincia 47 veces menos poblada. Eso es propio del sistema federal y figura en la Constitución Nacional, pero amplifica la asimetría política en cualquier votación legislativa.</p>
+
+      <div class="cita">
+        "El problema de la representación bonaerense en el Congreso Nacional combina dos asimetrías: en Diputados, por la cristalización de la base de 1983; en Senadores, por el principio federal de igualdad entre provincias. La provincia más grande del país tiene voz minoritaria en ambas cámaras."
+        <span class="cita-fuente">— Análisis sobre la representación bonaerense en el Congreso. Estudio académico de la UNGS (2023).</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="comparacion">
+      <div class="seccion-num">07 · Comparación interprovincial</div>
+      <h2>El mapa argentino del <em>federalismo fiscal</em></h2>
+
+      <p>Para entender la singularidad bonaerense, conviene compararla con el resto del país. Algunas provincias ofrecen el extremo opuesto del espectro:</p>
+
+      <h3>Provincias receptoras netas</h3>
+
+      <p>Las provincias que reciben significativamente más coparticipación de lo que aportan al PBI nacional son principalmente del NOA y NEA. Algunos casos destacados:</p>
+
+      <ul>
+        <li><strong>Formosa</strong>: aporta el 0,5% del PBI nacional y recibe el 3,79% de la coparticipación secundaria. Brecha positiva de 3,3 puntos. Si tomamos el coeficiente per cápita, Formosa recibe múltiples veces más por habitante que Buenos Aires.</li>
+        <li><strong>La Rioja</strong>: aporta el 0,4% del PBI y recibe el 2,15% de la coparticipación. Brecha positiva de 1,75 puntos.</li>
+        <li><strong>Catamarca</strong>: aporta el 0,7% del PBI y recibe el 2,86% de la coparticipación.</li>
+        <li><strong>Santiago del Estero</strong>: aporta el 0,9% del PBI y recibe el 4,29% de la coparticipación.</li>
+      </ul>
+
+      <p>Estas provincias son históricamente las defensoras más firmes del régimen vigente. Cualquier reforma que iguale criterios per cápita o que devuelva en proporción al aporte económico significaría una <strong>caída drástica en sus ingresos coparticipables</strong>, lo que explica el bloqueo estructural en el Senado de cualquier reforma.</p>
+
+      <h3>Las que pierden con la actual ley (además de PBA)</h3>
+
+      <p>Como vimos, Santa Fe, Córdoba y Mendoza también pierden, pero en magnitudes mucho menores. Las provincias patagónicas (Neuquén, Chubut, Santa Cruz) también pierden por su alta producción de hidrocarburos, pero compensan con regalías propias no coparticipables que no entran en este cálculo.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué la reforma es estructuralmente imposible</div>
+        <p>La sanción de una nueva ley de coparticipación requiere, según el Art. 75 inciso 2 de la Constitución Nacional, el voto de la <strong>mayoría absoluta de la totalidad de los miembros de cada Cámara</strong>, además del consentimiento de todas las provincias afectadas.</p>
+        <p>En el Senado, las 16 provincias contribuyentes netas tienen 48 senadores. Las 7 provincias contribuyentes (Buenos Aires, Santa Fe, Córdoba, Mendoza, Neuquén, Chubut, Santa Cruz) más CABA tienen 24 senadores. Es matemáticamente imposible que la reforma prospere sin que las provincias chicas la acepten, y aceptar significaría —para muchas de ellas— renunciar a una parte sustancial de sus presupuestos.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="agenda">
+      <div class="seccion-num">08 · La agenda pendiente</div>
+      <h2>¿Hay <em>salidas</em> al laberinto federal?</h2>
+
+      <p>La reforma estructural del régimen de coparticipación es probablemente la asignatura pendiente más importante del federalismo argentino. Los debates académicos y políticos sobre cómo destrabarla suelen agruparse en cuatro grandes enfoques:</p>
+
+      <h3>1. Reforma integral con compensación nacional</h3>
+
+      <p>Implica sancionar una nueva ley convenio con coeficientes actualizados y, a cambio, que la Nación compense a las provincias que pierdan recursos con transferencias adicionales del Tesoro durante un período de transición. Es la idea detrás del Consenso Fiscal 2017 pero a mayor escala. La principal dificultad es el costo fiscal que implica para la Nación.</p>
+
+      <h3>2. Reforma gradual con criterios mixtos</h3>
+
+      <p>Propone introducir lentamente criterios objetivos (población, desarrollo relativo, esfuerzo fiscal propio) en una proporción creciente del cálculo, manteniendo en una proporción decreciente los coeficientes históricos. Sería un cambio menos abrupto pero también menos efectivo en el corto plazo.</p>
+
+      <h3>3. Reforma específica del Fondo del Conurbano</h3>
+
+      <p>El enfoque más acotado: actualizar el tope de $650 millones por inflación acumulada desde 1996 (cifra que multiplicaría el monto varios miles de veces) y restaurar el destino bonaerense del fondo, sin tocar los coeficientes secundarios principales. Es lo que parcialmente intentó el acuerdo de 2017.</p>
+
+      <h3>4. Reforma de la base de representación legislativa</h3>
+
+      <p>Una salida indirecta: si se actualizara la distribución de bancas en Diputados según el Censo 2022, la provincia de Buenos Aires y otros distritos sub-representados ganarían peso político y eso podría inclinar la balanza en futuras reformas de coparticipación. Pero esta reforma también requiere quórum de las provincias chicas en el Congreso, lo que la hace estructuralmente difícil.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Qué dice la Constitución</div>
+        <p>El Artículo 75 inciso 2 de la Constitución Nacional (texto reformado en 1994) establece que la coparticipación federal "será establecida por una ley convenio, sobre la base de acuerdos entre la Nación y las provincias". La distribución, dice expresamente la norma, debe atender a "<strong>las competencias, servicios y funciones de cada una</strong>, contemplando criterios objetivos de reparto" y debe ser "<strong>equitativa, solidaria y dará prioridad al logro de un grado equivalente de desarrollo, calidad de vida e igualdad de oportunidades en todo el territorio nacional</strong>".</p>
+        <p>Es decir: la actual distribución, sin criterios objetivos y sin actualización, es contraria al mandato constitucional. Pero al ser materia de ley convenio (requiere acuerdo de las provincias), su modificación está bloqueada por la propia institucionalidad federal.</p>
+      </div>
+
+      <p>Buenos Aires, por su tamaño, es la jurisdicción más afectada por el régimen vigente. Pero la <strong>resolución de su agravio no depende exclusivamente de su voluntad o de la del Gobierno Nacional</strong>: requiere el acuerdo de un sistema federal cuyo diseño institucional protege deliberadamente a las jurisdicciones menores. Esa es la paradoja final del federalismo argentino: la provincia más grande tiene la voz política más débil cuando se trata de redistribuir los recursos del Estado nacional.</p>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">09 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución Nacional</strong> · Artículo 75 inciso 2 (texto según reforma de 1994). Disposición Transitoria Sexta sobre el plazo para la nueva ley de coparticipación. Texto oficial disponible en InfoLEG.</li>
+        <li><strong>Ley 23.548</strong> · Régimen Transitorio de Coparticipación Federal de Recursos Fiscales, sancionada el 7 de enero de 1988. Boletín Oficial, 26 de enero de 1988.</li>
+        <li><strong>Ley 24.073</strong> · Creación del Fondo del Conurbano Bonaerense, sancionada el 4 de abril de 1992. Boletín Oficial, 8 de abril de 1992.</li>
+        <li><strong>Ley 24.621</strong> · Modificación del régimen de Ganancias y tope al Fondo del Conurbano, sancionada el 27 de diciembre de 1995, promulgada el 3 de enero de 1996. Boletín Oficial, 9 de enero de 1996.</li>
+        <li><strong>Decreto-Ley 22.847/1983</strong> · Distribución de bancas en la Cámara de Diputados de la Nación.</li>
+        <li><strong>Consenso Fiscal del 16 de noviembre de 2017</strong>. Acuerdo entre el Estado Nacional, las provincias y CABA. Aprobado por Ley 27.429.</li>
+        <li><strong>Comisión Federal de Impuestos</strong> (cfi.gov.ar) · Informes anuales sobre distribución secundaria de la coparticipación.</li>
+        <li><strong>Comisión de Coparticipación Federal de Impuestos del Senado</strong> · Informes comparativos entre aporte al PBI y distribución coparticipativa.</li>
+        <li><strong>Chequeado</strong> (chequeado.com) · "¿Qué es el Fondo del Conurbano?" (2017) y verificación del discurso de apertura de sesiones del gobernador bonaerense (2024).</li>
+        <li><strong>CIPPEC</strong> (cippec.org) · Informes sobre federalismo fiscal y reforma de la coparticipación.</li>
+        <li><strong>Causa CSJN "Ciudad Autónoma de Buenos Aires c/ Estado Nacional"</strong> (2020-2024) · Sentencia y medidas cautelares sobre detracción unilateral del coeficiente.</li>
+        <li><strong>Causa CSJN "Provincia de San Luis c/ Estado Nacional"</strong> (2003) · Precedente sobre intangibilidad de la masa coparticipable.</li>
+        <li><strong>INDEC</strong> · Censo Nacional de Población, Hogares y Viviendas 2022. Datos de distribución poblacional por jurisdicción.</li>
+      </ul>
+    </div>
+
+    <a href="buenos-aires-en-profundidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al hub del estudio</div>
+        <h3>Buenos Aires <em>en profundidad</em></h3>
+        <p>Este es el último capítulo de la serie sustantiva sobre la provincia de Buenos Aires. Volvé al hub para acceder a los cinco capítulos completos y al bonus sobre las ocho secciones electorales.</p>
+      </div>
+      <div class="proximo-cap-arrow">↩ VOLVER →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

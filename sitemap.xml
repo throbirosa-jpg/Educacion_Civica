@@ -264,4 +264,42 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Capítulo 10.01: Provincia de Buenos Aires (5 caps + 1 bonus) -->
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-historia.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-poderes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-municipios.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-amba.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-coparticipacion.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/buenos-aires-secciones-electorales.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

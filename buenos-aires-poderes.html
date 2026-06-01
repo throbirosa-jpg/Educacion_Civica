@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Los tres poderes de la Provincia de Buenos Aires — Educación Cívica</title>
+<meta name="description" content="Los tres poderes de la Provincia de Buenos Aires: el Gobernador y sus atribuciones, la Legislatura bicameral (92 diputados + 46 senadores en 8 secciones electorales), la Suprema Corte de Justicia. Órganos extra-poderes: Tribunal de Cuentas, Fiscalía de Estado, Defensor del Pueblo y Junta Electoral.">
+<link rel="canonical" href="https://educacioncivica.com.ar/buenos-aires-poderes.html">
+<meta property="og:title" content="Los tres poderes de la Provincia de Buenos Aires · Educación Cívica">
+<meta property="og:description" content="Gobernador, Legislatura bicameral y Suprema Corte. Sistema institucional de la provincia más poblada del país.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/buenos-aires-poderes.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.2rem; max-width: 900px; margin: 2rem auto 0; padding: 1.8rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; margin-bottom: 0.5rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+  .ficha-poder { background: white; border: 1px solid var(--linea); border-top: 4px solid var(--premium); padding: 1.8rem; margin-bottom: 1.5rem; }
+  .ficha-poder-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.15rem; color: var(--premium-dark); margin-bottom: 1rem; }
+  .ficha-poder-grid { display: grid; grid-template-columns: 1fr; gap: 0.7rem; }
+  .ficha-item { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; }
+  .ficha-item:last-child { border-bottom: none; }
+  .ficha-item .label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 140px; }
+  .ficha-item .valor { flex: 1; color: var(--tinta); }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.88rem; }
+  .tabla-datos th { text-align: left; padding: 0.7rem 0.8rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.7rem 0.8rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .proximo-capitulo { background: var(--premium); color: white; padding: 2.5rem; margin-top: 3rem; }
+  .proximo-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 1rem; }
+  .proximo-capitulo h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.6rem; margin-bottom: 0.8rem; color: white; }
+  .proximo-capitulo h3 em { font-style: italic; color: var(--sol); }
+  .proximo-capitulo p { color: rgba(255,255,255,0.92); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.2rem; }
+  .proximo-capitulo a { display: inline-block; background: var(--sol); color: var(--premium-dark); text-decoration: none; padding: 0.85rem 1.6rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.2s; }
+  .proximo-capitulo a:hover { background: white; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--premium-dark); text-decoration: none; border-bottom: 1px dotted var(--premium-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-item { flex-direction: column; gap: 0.2rem; }
+    .ficha-item .label { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="provincias-en-profundidad.html">Provincias en profundidad</a> · <a href="buenos-aires-en-profundidad.html">Buenos Aires</a> · <span>Los tres poderes</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.01.02 · Estudio provincial</div>
+    <h1 class="page-title">Los tres <em>poderes</em> de la Provincia de Buenos Aires</h1>
+    <p class="page-intro">El gobernador con una reelección consecutiva. Una Legislatura bicameral con 92 diputados y 46 senadores distribuidos en 8 secciones electorales. Una Suprema Corte de 7 jueces con sede en La Plata desde 1886. Más cinco órganos extra-poderes (Tribunal de Cuentas, Fiscalía de Estado, Defensor del Pueblo, Asesoría General de Gobierno, Junta Electoral). Una arquitectura institucional con dos siglos de evolución.</p>
+  </div>
+  <div class="page-stats">
+    <div class="page-stat">
+      <div class="page-stat-num">4</div>
+      <div class="page-stat-label">Años de mandato gobernador</div>
+    </div>
+    <div class="page-stat">
+      <div class="page-stat-num">138</div>
+      <div class="page-stat-label">Legisladores totales</div>
+    </div>
+    <div class="page-stat">
+      <div class="page-stat-num">7</div>
+      <div class="page-stat-label">Jueces Suprema Corte</div>
+    </div>
+    <div class="page-stat">
+      <div class="page-stat-num">21</div>
+      <div class="page-stat-label">Departamentos judiciales</div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#marco-constitucional"><span class="toc-num">01</span> Marco constitucional</a></li>
+      <li><a href="#poder-ejecutivo"><span class="toc-num">02</span> Poder Ejecutivo</a></li>
+      <li><a href="#atribuciones-gobernador"><span class="toc-num">03</span> Atribuciones del gobernador</a></li>
+      <li><a href="#vicegobernador"><span class="toc-num">04</span> Vicegobernador y gabinete</a></li>
+      <li><a href="#camara-diputados"><span class="toc-num">05</span> Cámara de Diputados</a></li>
+      <li><a href="#camara-senadores"><span class="toc-num">06</span> Cámara de Senadores</a></li>
+      <li><a href="#funcionamiento-legislatura"><span class="toc-num">07</span> Funcionamiento legislativo</a></li>
+      <li><a href="#suprema-corte"><span class="toc-num">08</span> Suprema Corte</a></li>
+      <li><a href="#ministerio-publico"><span class="toc-num">09</span> Ministerio Público</a></li>
+      <li><a href="#extra-poderes"><span class="toc-num">10</span> Órganos extra-poderes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section id="marco-constitucional" class="seccion">
+      <div class="seccion-eyebrow">— Sección 1</div>
+      <div class="seccion-num">01</div>
+      <h2>El marco <em>constitucional</em> de los tres poderes</h2>
+      <p>La actual organización de los poderes provinciales está regulada por la <strong>Constitución de la Provincia de Buenos Aires reformada en 1994</strong>, que dedica las secciones III a V de su texto a los poderes Legislativo (Arts. 68 a 121), Ejecutivo (Arts. 119 a 158) y Judicial (Arts. 159 a 188). El esquema básico se mantiene desde la constitución de 1934, con ajustes incrementales: la reforma de 1994 habilitó la reelección del gobernador por un período consecutivo, creó el Consejo de la Magistratura, fortaleció los órganos de control y consagró la figura del Defensor del Pueblo.</p>
+
+      <p>A diferencia de algunas provincias que adoptaron el sistema unicameral (Córdoba, La Rioja, Santiago del Estero, entre otras), Buenos Aires mantiene desde 1854 un <strong>sistema bicameral</strong>: dos cámaras —Diputados y Senadores— con composiciones distintas pero ambas elegidas en las mismas 8 secciones electorales históricas.</p>
+
+      <div class="cita-articulo">
+        El Gobierno de la Provincia se compone de tres poderes: Legislativo, Ejecutivo y Judicial.
+        <div class="cita-articulo-ref">— Art. 66, Constitución de la Provincia de Buenos Aires</div>
+      </div>
+
+      <p>Sobre estos tres poderes se asientan los <strong>órganos extra-poderes</strong> con rango constitucional: el Tribunal de Cuentas (control fiscal externo), la Fiscalía de Estado (defensa del patrimonio público), la Asesoría General de Gobierno (asesoramiento jurídico), la Junta Electoral (organización de comicios provinciales) y, desde 1994, el Defensor del Pueblo (Art. 55).</p>
+    </section>
+
+    <section id="poder-ejecutivo" class="seccion">
+      <div class="seccion-eyebrow">— Sección 2</div>
+      <div class="seccion-num">02</div>
+      <h2>El <em>Poder Ejecutivo</em>: el gobernador</h2>
+      <p>El Poder Ejecutivo de la Provincia de Buenos Aires es ejercido por <strong>un solo ciudadano</strong> con el título de Gobernador, según el Art. 119 de la Constitución. La provincia opta por el modelo presidencialista unipersonal con un vicegobernador que lo acompaña pero sin compartir las funciones ejecutivas.</p>
+
+      <div class="cita-articulo">
+        El Poder Ejecutivo será desempeñado por un ciudadano con el título de Gobernador de la Provincia de Buenos Aires, y en su defecto, conforme a lo establecido por esta Constitución, por un Vicegobernador, electo al mismo tiempo, en igual forma y por idéntico período.
+        <div class="cita-articulo-ref">— Art. 119, Constitución provincial</div>
+      </div>
+
+      <h3>Requisitos y elección</h3>
+      <p>Para ser elegido gobernador o vicegobernador se requiere:</p>
+      <ul>
+        <li>Ser ciudadano argentino, nativo o naturalizado, con cinco años de ejercicio de la ciudadanía</li>
+        <li>Haber cumplido <strong>treinta años de edad</strong></li>
+        <li>Si no se ha nacido en la Provincia, ser hijo de ciudadano nativo</li>
+        <li>Tener cinco años de residencia inmediata en ella, si no se ha nacido en su territorio</li>
+      </ul>
+
+      <p>La elección se realiza <strong>directamente por el pueblo de la Provincia, por simple mayoría de votos</strong> (Art. 134), sin sistema de balotaje provincial. Esto distingue a Buenos Aires de otras provincias y de la propia Nación, donde sí hay segunda vuelta. En la práctica, el gobernador puede ser electo con un porcentaje relativamente bajo de votos si la oferta electoral está fragmentada.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica: Gobernador bonaerense</div>
+        <div class="ficha-poder-grid">
+          <div class="ficha-item">
+            <span class="label">Mandato</span>
+            <span class="valor">4 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Reelección</span>
+            <span class="valor">Una sola vez consecutiva (Art. 123)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sistema electoral</span>
+            <span class="valor">Mayoría simple, sin balotaje provincial</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Edad mínima</span>
+            <span class="valor">30 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Asunción</span>
+            <span class="valor">Primer día hábil tras integración de las Cámaras</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sede oficial</span>
+            <span class="valor">Casa de Gobierno · La Plata</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">— La cuestión de las dos elecciones</div>
+        Las elecciones de gobernador y vicegobernador deben realizarse <strong>conjuntamente con la de senadores y diputados</strong> del año que corresponda (Art. 135 CP). El proceso de escrutinio lo realiza la Junta Electoral provincial, que remite constancia al gobernador en ejercicio y al presidente de la Asamblea Legislativa para que esta última proclame y diplome a los ciudadanos electos.
+      </div>
+    </section>
+
+    <section id="atribuciones-gobernador" class="seccion">
+      <div class="seccion-eyebrow">— Sección 3</div>
+      <div class="seccion-num">03</div>
+      <h2>Las atribuciones del <em>gobernador</em></h2>
+      <p>El Art. 144 de la Constitución provincial enumera las atribuciones del gobernador, en una lista extensa que abarca desde funciones administrativas básicas hasta facultades de gobierno político de gran amplitud. Las principales son:</p>
+
+      <ul>
+        <li><strong>Nombrar y remover</strong> a los ministros secretarios del despacho (inc. 1)</li>
+        <li><strong>Promulgar y hacer ejecutar</strong> las leyes de la Provincia, facilitando su ejecución por reglamentos y disposiciones especiales que no alteren su espíritu (inc. 2)</li>
+        <li><strong>Concurrir a la formación de las leyes</strong>, con derecho de iniciativa, presentando proyectos a las Cámaras y tomando parte en su discusión por medio de los ministros (inc. 3)</li>
+        <li><strong>Conmutar penas</strong> impuestas por delitos sujetos a jurisdicción provincial, previo informe motivado de la Suprema Corte (inc. 4). Excepción: no puede conmutar penas en casos donde el Senado actúa como juez ni en delitos cometidos por funcionarios en ejercicio de sus funciones</li>
+        <li><strong>Ejercer los derechos de patronato</strong> como vicepatrono (inc. 5)</li>
+        <li><strong>Informar a la Legislatura</strong> al inicio del período ordinario sobre el estado general de la Administración (inc. 6)</li>
+        <li><strong>Convocar al pueblo</strong> a todas las elecciones en la oportunidad debida (inc. 7)</li>
+        <li><strong>Convocar a sesiones extraordinarias</strong> a la Legislatura o a cualquiera de las Cámaras cuando lo exija un grande interés público (inc. 8)</li>
+        <li><strong>Comandar las fuerzas militares</strong> de la Provincia, con las limitaciones establecidas por la Constitución Nacional (inc. 14)</li>
+        <li><strong>Conservar el orden público</strong> dentro de la provincia (inc. 16)</li>
+        <li><strong>Recaudar y administrar</strong> las rentas provinciales (inc. 19)</li>
+      </ul>
+
+      <h3>El veto y la promulgación parcial</h3>
+      <p>El gobernador tiene la facultad de <strong>vetar</strong> total o parcialmente los proyectos de ley sancionados por la Legislatura, dentro de los diez días hábiles de recibidos. Si transcurrido ese plazo no se ha pronunciado, el proyecto se considera promulgado automáticamente. La Legislatura puede insistir con la sanción original con mayoría de dos tercios de los miembros presentes de cada Cámara.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El detalle</div>
+        El proceso de promulgación parcial fue formalizado en la reforma de 1994 (en línea con el Art. 80 de la Constitución Nacional). Permite al gobernador promulgar las partes no vetadas de un proyecto siempre que tengan <strong>autonomía normativa</strong> y no alteren la unidad del proyecto original.
+      </div>
+    </section>
+
+    <section id="vicegobernador" class="seccion">
+      <div class="seccion-eyebrow">— Sección 4</div>
+      <div class="seccion-num">04</div>
+      <h2>El <em>vicegobernador</em> y el gabinete</h2>
+      <p>El vicegobernador bonaerense tiene tres funciones constitucionalmente definidas:</p>
+
+      <ul>
+        <li><strong>Reemplazar al gobernador</strong> en caso de ausencia, enfermedad, suspensión, muerte, destitución o renuncia</li>
+        <li><strong>Presidir la Cámara de Senadores</strong>, con voto en caso de empate (Art. 138)</li>
+        <li><strong>Presidir la Asamblea Legislativa</strong> en aquellos casos en que ambas cámaras sesionan en conjunto</li>
+      </ul>
+
+      <p>En la práctica institucional, el vicegobernador tiene un rol político importante porque controla, junto con la mayoría parlamentaria del oficialismo, el funcionamiento del Senado. En momentos de cohabitación política (gobernador de un partido, vicegobernador opositor), esto puede generar tensiones institucionales relevantes.</p>
+
+      <h3>El Gabinete: los ministros del despacho</h3>
+      <p>El gabinete provincial está integrado por <strong>ministros nombrados y removidos libremente por el gobernador</strong>. La cantidad y las funciones específicas de los ministerios se establecen por <strong>Ley de Ministerios</strong> (la actual es la Ley 15.164 con sus modificatorias). La composición típica del gabinete bonaerense incluye:</p>
+
+      <ul>
+        <li>Ministerio de Gobierno (relaciones institucionales)</li>
+        <li>Ministerio de Hacienda y Finanzas</li>
+        <li>Ministerio de Economía</li>
+        <li>Ministerio de Educación</li>
+        <li>Ministerio de Salud</li>
+        <li>Ministerio de Seguridad</li>
+        <li>Ministerio de Justicia y Derechos Humanos</li>
+        <li>Ministerio de Infraestructura y Servicios Públicos</li>
+        <li>Ministerio de Trabajo</li>
+        <li>Ministerio de Desarrollo Agrario</li>
+        <li>Ministerio de Producción, Ciencia e Innovación Tecnológica</li>
+        <li>Ministerio de Desarrollo de la Comunidad</li>
+      </ul>
+
+      <p>La cantidad de ministerios puede variar de gestión a gestión por modificaciones a la Ley de Ministerios. Históricamente, los gabinetes bonaerenses han oscilado entre 8 y 14 ministerios, en función de las prioridades políticas y la organización administrativa.</p>
+    </section>
+
+    <section id="camara-diputados" class="seccion">
+      <div class="seccion-eyebrow">— Sección 5</div>
+      <div class="seccion-num">05</div>
+      <h2>La <em>Cámara de Diputados</em></h2>
+      <p>La Cámara de Diputados de la Provincia de Buenos Aires es uno de los cuerpos legislativos más numerosos del país: tiene <strong>92 miembros</strong>. La constitución provincial (Art. 70) establece que la cantidad puede ser modificada por la legislatura sin necesidad de reforma constitucional, dentro de ciertos límites. El número actual de 92 está fijado por la Ley 5.109 (Ley Electoral provincial).</p>
+
+      <h3>Distribución por secciones electorales</h3>
+      <p>Los 92 diputados se eligen en las <strong>8 secciones electorales</strong> en las que se divide la provincia desde fines del siglo XIX. Cada sección tiene una cantidad distinta de bancas asignadas en función de su población. La distribución actual de las 92 bancas es la siguiente:</p>
+
+      <table class="tabla-datos">
+        <thead>
+          <tr><th>Sección</th><th>Distrito principal / partidos representativos</th><th>Diputados</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primera</td><td>Norte conurbano: San Isidro, Vicente López, San Martín, San Fernando, etc.</td><td>15</td></tr>
+          <tr><td>Segunda</td><td>Centro-Norte: Pergamino, San Nicolás, Zárate, Campana, etc.</td><td>11</td></tr>
+          <tr><td>Tercera</td><td>Sur del conurbano: La Matanza, Avellaneda, Lanús, Quilmes, etc.</td><td>18</td></tr>
+          <tr><td>Cuarta</td><td>Oeste: Junín, Chivilcoy, Mercedes, 9 de Julio, etc.</td><td>7</td></tr>
+          <tr><td>Quinta</td><td>Sudeste: Mar del Plata, Tandil, Necochea, Balcarce, etc.</td><td>11</td></tr>
+          <tr><td>Sexta</td><td>Sudoeste: Bahía Blanca, Tres Arroyos, Coronel Dorrego, etc.</td><td>11</td></tr>
+          <tr><td>Séptima</td><td>Centro: Olavarría, Azul, Tapalqué, Bolívar, etc.</td><td>5</td></tr>
+          <tr><td>Octava</td><td>La Plata (capital provincial)</td><td>6</td></tr>
+        </tbody>
+      </table>
+
+      <p>Las elecciones de diputados se realizan por el <strong>sistema D'Hondt</strong> con un <strong>piso del 3% del padrón</strong> en cada sección, lo que excluye a los partidos minoritarios. La renovación es por mitades: cada dos años se renuevan 46 bancas (las que correspondan según el ciclo).</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica: Cámara de Diputados</div>
+        <div class="ficha-poder-grid">
+          <div class="ficha-item">
+            <span class="label">Miembros</span>
+            <span class="valor">92 diputados</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Mandato</span>
+            <span class="valor">4 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Renovación</span>
+            <span class="valor">Por mitades cada 2 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Reelección</span>
+            <span class="valor">Sí, indefinidamente</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sistema electoral</span>
+            <span class="valor">D'Hondt en cada sección, piso 3%</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Edad mínima</span>
+            <span class="valor">22 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Presidente</span>
+            <span class="valor">Elegido entre sus pares anualmente</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sede</span>
+            <span class="valor">Palacio Legislativo · La Plata</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Atribuciones específicas de Diputados</h3>
+      <p>La Cámara de Diputados tiene atribuciones generales compartidas con el Senado (sancionar leyes, controlar al Ejecutivo, autorizar empréstitos) y algunas específicas:</p>
+
+      <ul>
+        <li><strong>Iniciativa exclusiva</strong> en leyes sobre presupuestos, impuestos y empréstitos</li>
+        <li><strong>Acusar</strong> al gobernador, vicegobernador, ministros y miembros de la Suprema Corte ante el Senado (juicio político)</li>
+        <li><strong>Aprobar</strong> el presupuesto general de la administración pública provincial (cada año)</li>
+      </ul>
+    </section>
+
+    <section id="camara-senadores" class="seccion">
+      <div class="seccion-eyebrow">— Sección 6</div>
+      <div class="seccion-num">06</div>
+      <h2>La <em>Cámara de Senadores</em></h2>
+      <p>La Cámara de Senadores de la Provincia de Buenos Aires tiene <strong>46 miembros</strong>. A diferencia de los senadores nacionales (3 por provincia y CABA, totalizando 72), los senadores provinciales bonaerenses se eligen en las mismas 8 secciones electorales que los diputados.</p>
+
+      <h3>Distribución por secciones</h3>
+      <table class="tabla-datos">
+        <thead>
+          <tr><th>Sección</th><th>Senadores</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primera</td><td>8</td></tr>
+          <tr><td>Segunda</td><td>5</td></tr>
+          <tr><td>Tercera</td><td>9</td></tr>
+          <tr><td>Cuarta</td><td>3</td></tr>
+          <tr><td>Quinta</td><td>5</td></tr>
+          <tr><td>Sexta</td><td>6</td></tr>
+          <tr><td>Séptima</td><td>3</td></tr>
+          <tr><td>Octava</td><td>3</td></tr>
+        </tbody>
+      </table>
+
+      <p>El Senado bonaerense se renueva también por mitades cada dos años, alternando las secciones que eligen senadores. Por convención, en los años terminados en número impar se eligen senadores de unas secciones y en los pares de las otras.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica: Cámara de Senadores</div>
+        <div class="ficha-poder-grid">
+          <div class="ficha-item">
+            <span class="label">Miembros</span>
+            <span class="valor">46 senadores</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Mandato</span>
+            <span class="valor">4 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Renovación</span>
+            <span class="valor">Por mitades cada 2 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Reelección</span>
+            <span class="valor">Sí, indefinidamente</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sistema electoral</span>
+            <span class="valor">D'Hondt en cada sección, piso 3%</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Edad mínima</span>
+            <span class="valor">30 años</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Presidente</span>
+            <span class="valor">Vicegobernador (con voto solo en caso de empate)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Presidente provisional</span>
+            <span class="valor">Senador electo anualmente entre sus pares</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Atribuciones específicas del Senado</h3>
+      <p>El Senado tiene varias atribuciones exclusivas:</p>
+
+      <ul>
+        <li>Prestar <strong>acuerdo</strong> al gobernador para el nombramiento de jueces de la Suprema Corte, demás jueces, Procurador y Subprocurador General (con mayoría absoluta de sus miembros, en sesión pública)</li>
+        <li>Prestar acuerdo para el nombramiento del Defensor del Pueblo</li>
+        <li>Juzgar en juicio político a los funcionarios acusados por la Cámara de Diputados</li>
+        <li>Examinar la cuenta de inversión del año vencido</li>
+      </ul>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">— El detalle clave</div>
+        Los jueces de la Suprema Corte, el Procurador y el Subprocurador General son designados por el Poder Ejecutivo <strong>con acuerdo del Senado en sesión pública por mayoría absoluta</strong>. Los demás jueces e integrantes del Ministerio Público son designados por el Ejecutivo <strong>de una terna vinculante propuesta por el Consejo de la Magistratura</strong>, también con acuerdo del Senado en sesión pública.
+      </div>
+    </section>
+
+    <section id="funcionamiento-legislatura" class="seccion">
+      <div class="seccion-eyebrow">— Sección 7</div>
+      <div class="seccion-num">07</div>
+      <h2>El <em>funcionamiento</em> de la Legislatura</h2>
+      <p>La Legislatura de la Provincia de Buenos Aires tiene su sede en el Palacio Legislativo de La Plata. Sus sesiones <strong>ordinarias se extienden del 1° de marzo al 30 de noviembre</strong> de cada año. Fuera de ese período, pueden celebrarse sesiones extraordinarias convocadas por el Poder Ejecutivo o de oficio por las propias cámaras cuando se reúnan los votos requeridos.</p>
+
+      <h3>La Asamblea Legislativa</h3>
+      <p>La Asamblea Legislativa es la reunión conjunta de Diputados y Senadores en sesión única. Sus principales funciones son:</p>
+
+      <ul>
+        <li>Recibir el juramento del gobernador y del vicegobernador</li>
+        <li>Decidir en caso de empate en la elección de gobernador y vicegobernador</li>
+        <li>Recibir el informe anual del gobernador sobre el estado general de la Administración (al inicio del período ordinario)</li>
+        <li>Aprobar las renuncias del gobernador y vicegobernador</li>
+        <li>Resolver sobre la inhabilidad física o mental sobreviniente de carácter permanente del gobernador o vicegobernador (por dos tercios de votos)</li>
+      </ul>
+
+      <h3>Comisiones permanentes</h3>
+      <p>Tanto la Cámara de Diputados como la de Senadores funcionan en buena parte a través de <strong>comisiones permanentes</strong> que estudian los proyectos antes de su debate en el recinto. Las principales son: Legislación General, Asuntos Constitucionales, Presupuesto e Impuestos, Reforma Política, Legislación Penal, Salud Pública, Educación, Trabajo, Asuntos Municipales y Desarrollo Social, entre otras. La cantidad y las denominaciones específicas varían en cada período legislativo según los reglamentos internos de cada cámara.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El procedimiento legislativo</div>
+        Para sancionar una ley, el proyecto debe ser aprobado por <strong>ambas cámaras</strong> en sus respectivas mayorías. Una vez aprobado, pasa al Poder Ejecutivo para su promulgación. Si el Ejecutivo lo veta, la Legislatura puede insistir con la sanción por dos tercios de los presentes en cada cámara. El proyecto se considera promulgado automáticamente si el Ejecutivo no se pronuncia en diez días hábiles.
+      </div>
+    </section>
+
+    <section id="suprema-corte" class="seccion">
+      <div class="seccion-eyebrow">— Sección 8</div>
+      <div class="seccion-num">08</div>
+      <h2>La <em>Suprema Corte</em> de Justicia</h2>
+      <p>La Suprema Corte de Justicia de la Provincia de Buenos Aires es el <strong>órgano superior</strong> del Poder Judicial provincial. Tiene su sede en el <strong>Palacio de Justicia de La Plata</strong> desde 1886. Su antecedente colonial más remoto es la Real Audiencia de Buenos Aires de 1783, y su antecedente provincial inmediato es el Superior Tribunal de Justicia previsto en la Constitución de 1854.</p>
+
+      <h3>Composición y designación</h3>
+      <p>La Suprema Corte está compuesta por <strong>7 jueces</strong>. La presidencia es <strong>rotativa anual</strong> entre sus miembros (Art. 162 CP). Los jueces son designados por el <strong>Poder Ejecutivo con acuerdo del Senado</strong> en sesión pública por <strong>mayoría absoluta</strong> de sus miembros (Art. 175).</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica: Suprema Corte</div>
+        <div class="ficha-poder-grid">
+          <div class="ficha-item">
+            <span class="label">Jueces</span>
+            <span class="valor">7 miembros</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Presidencia</span>
+            <span class="valor">Rotativa anual entre los jueces</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Designación</span>
+            <span class="valor">Gobernador con acuerdo del Senado (mayoría absoluta)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Inamovilidad</span>
+            <span class="valor">Mientras dure su buena conducta (Art. 176)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Sede</span>
+            <span class="valor">Palacio de Justicia, La Plata (desde 1886)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="label">Norma orgánica</span>
+            <span class="valor">Ley 5.827 (Ley Orgánica del Poder Judicial)</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Atribuciones constitucionales</h3>
+      <p>La Suprema Corte conoce y resuelve originariamente:</p>
+
+      <ul>
+        <li>De las <strong>acciones de inconstitucionalidad</strong> de leyes, decretos y reglamentos contrarios a la Constitución provincial (Art. 161)</li>
+        <li>De las <strong>cuestiones de competencia</strong> entre los poderes del Estado y entre tribunales que no tengan otro superior común</li>
+        <li>De los <strong>recursos extraordinarios</strong> de inaplicabilidad de ley, nulidad e inconstitucionalidad</li>
+        <li>De los <strong>conflictos territoriales</strong> entre municipalidades</li>
+      </ul>
+
+      <h3>Los 21 departamentos judiciales</h3>
+      <p>El Poder Judicial bonaerense se organiza territorialmente en <strong>21 departamentos judiciales</strong>, cada uno con cámaras de apelaciones, juzgados de primera instancia, juzgados de paz y otros tribunales especializados. Esta organización territorial busca acercar la justicia a la ciudadanía y descentralizar el sistema judicial en una provincia de gran extensión geográfica y poblacional.</p>
+
+      <p>Los principales departamentos judiciales son: La Plata, San Isidro, Quilmes, Lomas de Zamora, San Martín, Morón, Mercedes, Mar del Plata, Bahía Blanca, Trenque Lauquen, Junín, Pergamino, Azul, Dolores, Necochea, San Nicolás, Tandil, Zárate-Campana, Moreno-General Rodríguez, Avellaneda-Lanús y La Matanza.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">— Hito histórico</div>
+        El edificio del Palacio de Justicia, sede de la Suprema Corte desde 1886, fue uno de los primeros edificios públicos construidos en La Plata tras su fundación en 1882. La planificación arquitectónica de la ciudad asignó un eje cívico-monumental al Palacio Legislativo, la Casa de Gobierno y el Palacio de Justicia, conformando lo que se conoce como el <strong>"eje del poder"</strong> platense en torno a la Plaza San Martín.
+      </div>
+    </section>
+
+    <section id="ministerio-publico" class="seccion">
+      <div class="seccion-eyebrow">— Sección 9</div>
+      <div class="seccion-num">09</div>
+      <h2>El <em>Ministerio Público</em></h2>
+      <p>El Ministerio Público bonaerense está integrado por el <strong>Ministerio Público de la Acusación</strong> (encabezado por el Procurador General) y el <strong>Ministerio Público de la Defensa</strong> (encabezado por el Defensor General). Ambos órganos tienen <strong>autonomía funcional y autarquía financiera</strong>, aunque institucionalmente forman parte del Poder Judicial.</p>
+
+      <h3>El Procurador General</h3>
+      <p>El Procurador General es designado por el <strong>Poder Ejecutivo con acuerdo del Senado por mayoría absoluta</strong>, en sesión pública. Sus funciones principales son:</p>
+
+      <ul>
+        <li>Ejercer la <strong>acción penal pública</strong> ante los tribunales provinciales</li>
+        <li>Dirigir el Ministerio Público Fiscal</li>
+        <li>Velar por el cumplimiento de la Constitución y las leyes provinciales</li>
+        <li>Representar al Estado provincial en juicios cuando corresponda</li>
+        <li>Coordinar la actividad de los fiscales departamentales</li>
+      </ul>
+
+      <h3>El Defensor General</h3>
+      <p>El Defensor General es designado por el mismo procedimiento que el Procurador. Dirige el Ministerio Público de la Defensa, que provee <strong>defensa técnica gratuita</strong> a quienes no pueden costear un abogado particular en procesos penales, civiles, laborales, de familia y otros. La Defensa Pública es uno de los pilares del acceso a la justicia.</p>
+
+      <p>El Ministerio Público de la Defensa bonaerense es uno de los más grandes del país por volumen de causas y cantidad de defensores oficiales, dado el tamaño y la complejidad social de la provincia. La defensa pública atiende anualmente cientos de miles de causas en los 21 departamentos judiciales.</p>
+    </section>
+
+    <section id="extra-poderes" class="seccion">
+      <div class="seccion-eyebrow">— Sección 10</div>
+      <div class="seccion-num">10</div>
+      <h2>Los órganos <em>extra-poderes</em></h2>
+      <p>La Constitución provincial reconoce a cinco órganos con rango constitucional que no integran ninguno de los tres poderes pero ejercen funciones cruciales de control y representación:</p>
+
+      <h3>1. El Tribunal de Cuentas</h3>
+      <p>Creado en su forma actual en la reforma de 1934 (con antecedentes desde 1889), el Tribunal de Cuentas es el <strong>órgano de control externo</strong> de la administración pública provincial y municipal. Sus funciones principales:</p>
+
+      <ul>
+        <li>Examinar las cuentas de la administración pública provincial y de los 135 municipios</li>
+        <li>Aprobar o rechazar las rendiciones de cuentas de los funcionarios públicos</li>
+        <li>Aplicar sanciones administrativas por irregularidades en el manejo de fondos públicos</li>
+        <li>Informar a la Legislatura sobre las cuentas de inversión</li>
+      </ul>
+
+      <p>El Tribunal de Cuentas bonaerense es uno de los pocos órganos provinciales del país que <strong>controla también a los 135 municipios</strong>, una particularidad derivada del régimen municipal sin autonomía plena.</p>
+
+      <h3>2. La Fiscalía de Estado</h3>
+      <p>La Fiscalía de Estado es el órgano constitucional encargado de <strong>defender los intereses patrimoniales de la Provincia</strong> en sede judicial y administrativa. El Fiscal de Estado es designado por el Poder Ejecutivo con acuerdo del Senado.</p>
+
+      <p>Sus funciones incluyen demandar a quien lesione el patrimonio público, oponerse a actos de la administración que considere contrarios a derecho, y dictaminar en cuestiones que comprometan el patrimonio provincial.</p>
+
+      <h3>3. La Asesoría General de Gobierno</h3>
+      <p>Es el órgano <strong>asesor jurídico del Poder Ejecutivo</strong>. Su titular es designado por el gobernador, tiene rango ministerial y dictamina sobre los proyectos de ley, decretos y actos administrativos relevantes que el Ejecutivo somete a su consideración.</p>
+
+      <h3>4. La Junta Electoral</h3>
+      <p>La Junta Electoral de la Provincia es el órgano que <strong>organiza las elecciones provinciales y municipales</strong>. Está integrada por los presidentes de la Suprema Corte de Justicia, del Tribunal de Cuentas y de tres Cámaras de Apelación del Departamento Capital (La Plata), funcionando en el Palacio Legislativo bajo la presidencia del primero.</p>
+
+      <p>Sus funciones son: oficializar las candidaturas, aprobar los modelos de boleta única (cuando se utilice), realizar el escrutinio definitivo, juzgar las elecciones, atender los reclamos electorales y proclamar los electos.</p>
+
+      <h3>5. El Defensor del Pueblo</h3>
+      <p>Creado por la reforma constitucional de 1994 (Art. 55), el Defensor del Pueblo es el órgano de <strong>defensa de los derechos individuales y colectivos</strong> de los habitantes de la Provincia frente a actos u omisiones de la administración pública. Es designado por la Legislatura por dos tercios de los presentes en sesión conjunta de ambas cámaras.</p>
+
+      <p>Tiene autonomía funcional y plena independencia técnica. Sus funciones son: recibir reclamos de los ciudadanos, investigar irregularidades administrativas, emitir recomendaciones a los organismos públicos, y promover acciones judiciales en defensa de derechos colectivos.</p>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">— El equilibrio institucional</div>
+        Los cinco órganos extra-poderes bonaerenses conforman un <strong>entramado de control</strong> sobre la administración pública. Tribunal de Cuentas (control fiscal), Fiscalía de Estado (defensa patrimonial), Asesoría General de Gobierno (control de legalidad ex-ante), Junta Electoral (legitimidad democrática) y Defensor del Pueblo (defensa de derechos). Esta arquitectura, en buena medida heredada de la constitución de 1934 y completada en 1994, está pensada para distribuir las funciones de control entre órganos especializados.
+      </div>
+    </section>
+
+    <div class="proximo-capitulo">
+      <div class="proximo-eyebrow">— Próximo capítulo · 10.01.03</div>
+      <h3>Los 135 <em>municipios</em> y la falta de autonomía</h3>
+      <p>¿Por qué se llaman partidos y no departamentos? El sistema de ejidos colindantes que cubre toda la provincia. Las disparidades extremas: La Matanza con 1,8 millones de habitantes y Tordillo con menos de 2.000. El régimen del Decreto-Ley 6.769/58 que sigue rigiendo a los 135 municipios. La autonomía municipal del Art. 123 CN que la provincia nunca implementó plenamente.</p>
+      <a href="buenos-aires-municipios.html">Ver capítulo 10.01.03 →</a>
+    </div>
+
+    <div class="fuentes">
+      <h3>— Fuentes y referencias normativas</h3>
+      <ul>
+        <li><a href="https://www.hcdiputados-ba.gov.ar/index.php?page=normativas&section=constitucionProvincial">Constitución de la Provincia de Buenos Aires (texto vigente)</a> · Honorable Cámara de Diputados de la Provincia de Buenos Aires</li>
+        <li><a href="https://mapadelestado.gba.gob.ar/organismos/1">Mapa del Estado bonaerense</a> · Gobierno de la Provincia de Buenos Aires</li>
+        <li><a href="https://www.scba.gov.ar/">Suprema Corte de Justicia de la Provincia de Buenos Aires</a> · Sitio oficial</li>
+        <li><a href="https://www.cmagistratura.gba.gov.ar/">Consejo de la Magistratura bonaerense</a></li>
+        <li><a href="https://www.htc.gba.gov.ar/">Honorable Tribunal de Cuentas de la Provincia de Buenos Aires</a></li>
+        <li><a href="https://www.juntaelectoralba.gob.ar/">Junta Electoral de la Provincia de Buenos Aires</a></li>
+        <li>Ley 5.827 · Ley Orgánica del Poder Judicial</li>
+        <li>Ley 5.109 · Ley Electoral provincial</li>
+        <li>Ley 15.164 · Ley de Ministerios (con sus modificatorias)</li>
+        <li>Decreto-Ley 6.769/58 · Ley Orgánica de las Municipalidades</li>
+        <li><a href="poderes.html">Los poderes del Estado argentino</a> · Educación Cívica · Capítulo base</li>
+        <li><a href="buenos-aires-historia.html">Historia institucional de la Provincia de Buenos Aires</a> · Educación Cívica · Capítulo 10.01.01</li>
+      </ul>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
