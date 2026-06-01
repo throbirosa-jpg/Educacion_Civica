@@ -6,12 +6,12 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Educación Cívica — Entendé el Estado argentino con datos</title>
 <meta name="google-site-verification" content="t4xlSmdvdLl4hRi3YsrjdNA4BDIbPuu4llnYsSypVdo" />
-<meta name="description" content="Educación cívica argentina con datos. Conocé los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos, la historia institucional y un estudio profundo de CABA.">
+<meta name="description" content="Educación cívica argentina con datos. Aprendé sobre los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos y la historia institucional. Tres secciones premium: Historia (7 capítulos), Elecciones (5 capítulos) y CABA en profundidad (5 capítulos). Sin grieta, con fuentes verificables.">
 <link rel="canonical" href="https://educacioncivica.com.ar/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Educación Cívica · Guía del Estado argentino con datos">
-<meta property="og:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudio profundo de CABA. Sin grieta, con datos abiertos.">
+<meta property="og:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudios premium en profundidad. Sin grieta, con datos abiertos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://educacioncivica.com.ar/">
 <meta property="og:site_name" content="Educación Cívica">
@@ -20,7 +20,84 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Educación Cívica · Guía del Estado argentino con datos">
-<meta name="twitter:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudio profundo de CABA. Sin grieta, con datos abiertos.">
+<meta name="twitter:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudios premium. Sin grieta, con datos abiertos.">
+
+<!-- JSON-LD: Datos estructurados para motores de búsqueda -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Educación Cívica",
+  "alternateName": "educacioncivica.com.ar",
+  "url": "https://educacioncivica.com.ar",
+  "description": "Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional. Sin grieta, con datos abiertos y fuentes verificables.",
+  "inLanguage": "es-AR",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Argentina"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Educación Cívica",
+  "url": "https://educacioncivica.com.ar",
+  "inLanguage": "es-AR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Educación Cívica"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://educacioncivica.com.ar/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Estudios en profundidad",
+  "description": "Capítulos premium sobre instituciones, períodos históricos y jurisdicciones argentinas",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Historia institucional argentina",
+      "url": "https://educacioncivica.com.ar/historia.html",
+      "description": "Siete capítulos sobre reformas constitucionales, inestabilidad 1930-1983, Congreso, Corte Suprema, federalismo, documentos fundacionales y debates parlamentarios."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sistema electoral argentino",
+      "url": "https://educacioncivica.com.ar/elecciones.html",
+      "description": "Cinco capítulos sobre el calendario electoral, sistemas presidenciales, sistemas legislativos, cronología completa de elecciones e innovaciones del siglo XXI."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ciudad Autónoma de Buenos Aires",
+      "url": "https://educacioncivica.com.ar/caba-en-profundidad.html",
+      "description": "Cinco capítulos sobre la historia, los poderes, las 15 comunas, la coparticipación y los pendientes institucionales de CABA."
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -285,6 +362,90 @@
     height: 50px;
     opacity: 0.6;
     z-index: 2;
+  }
+
+  /* ========== NOVEDADES (highlight strip) ========== */
+  .novedades-strip {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 2.5rem 2rem;
+    margin: 0;
+  }
+  .novedades-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .novedades-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--sol);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .novedades-pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--sol);
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    animation: pulse 2s ease-in-out infinite;
+    vertical-align: middle;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+  .novedades-titulo {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--crema);
+    margin: 0;
+  }
+  .novedades-titulo em {
+    font-style: italic;
+    color: var(--sol);
+  }
+  .novedades-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(251, 247, 240, 0.82);
+    margin: 0;
+  }
+  .novedades-desc strong { color: var(--crema); font-weight: 600; }
+  .novedades-cta {
+    background: var(--sol);
+    color: var(--tinta);
+    padding: 0.9rem 1.6rem;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--sol);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .novedades-cta:hover {
+    background: var(--sol-dark);
+    border-color: var(--sol-dark);
+  }
+  @media (max-width: 900px) {
+    .novedades-inner {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      text-align: left;
+    }
+    .novedades-cta { justify-self: start; }
   }
 
   /* ========== SECTION ========== */
@@ -1212,6 +1373,18 @@
   </div>
 </section>
 
+<!-- ========== NOVEDADES ========== -->
+<div class="novedades-strip">
+  <div class="novedades-inner">
+    <div>
+      <div class="novedades-eyebrow"><span class="novedades-pulse"></span>Recién publicado</div>
+      <h3 class="novedades-titulo">Sección <em>Elecciones</em> · 5 capítulos completos</h3>
+    </div>
+    <p class="novedades-desc">Acaba de cerrarse la sección sobre el <strong>sistema electoral argentino</strong>: el calendario electoral, los seis sistemas presidenciales aplicados desde 1853, los cinco sistemas legislativos a lo largo del tiempo, la cronología de las 32 elecciones presidenciales y las grandes innovaciones del siglo XXI (PASO, voto a los 16, paridad, BUP). Una sección premium completa.</p>
+    <a href="elecciones.html" class="novedades-cta">Explorar →</a>
+  </div>
+</div>
+
 <section id="poderes">
   <div class="section-head">
     <div>
@@ -1622,20 +1795,50 @@
       <div class="section-head">
         <div>
           <div class="premium-badge">★ Acceso premium</div>
-          <div class="section-eyebrow">Capítulo 09 · Estudios en profundidad</div>
+          <div class="section-eyebrow">Estudios en profundidad · Acceso libre durante el período de prueba</div>
           <h2 class="section-title">Análisis especializado de <em>casos institucionales</em></h2>
         </div>
       </div>
-      <p class="estudios-intro">Una nueva línea de contenido del sitio. Cada estudio toma un tema institucional argentino concreto —una jurisdicción, un período, una temática— y lo desarrolla con la <strong>densidad jurídica, las citas a fuentes oficiales y las referencias que merece</strong>. Sin nombres propios, sin grieta, con foco institucional. Acceso libre durante el período de prueba.</p>
+      <p class="estudios-intro">Una línea de contenido del sitio que va más allá de las páginas base. Cada estudio toma un tema institucional argentino concreto —una jurisdicción, un período, una temática— y lo desarrolla con la <strong>densidad jurídica, las citas a fuentes oficiales y las referencias que merece</strong>. Sin nombres propios, sin grieta, con foco institucional. Tres secciones disponibles, completas, y más en desarrollo.</p>
 
       <div class="estudios-grid">
 
-        <a href="caba-en-profundidad.html" class="estudio-card">
+        <a href="historia.html" class="estudio-card">
           <div class="estudio-card-num">01</div>
           <div class="estudio-card-content">
-            <div class="estudio-card-eyebrow">Estudio disponible</div>
+            <div class="estudio-card-eyebrow">★ Estudio completo · Capítulo 07</div>
+            <h3 class="estudio-card-titulo">Historia institucional <em>argentina</em></h3>
+            <p class="estudio-card-desc">Siete capítulos sobre las reformas constitucionales, la inestabilidad democrática 1930-1983, la historia del Congreso, los grandes fallos de la Corte Suprema, el federalismo, los documentos fundacionales y los debates parlamentarios clave del país.</p>
+            <div class="estudio-card-meta">
+              <span>7 capítulos</span>
+              <span>~485 KB</span>
+              <span>Mayo 2026</span>
+            </div>
+          </div>
+          <div class="estudio-card-arrow">Leer estudio →</div>
+        </a>
+
+        <a href="elecciones.html" class="estudio-card">
+          <div class="estudio-card-num">02</div>
+          <div class="estudio-card-content">
+            <div class="estudio-card-eyebrow">★ Estudio completo · Capítulo 08</div>
+            <h3 class="estudio-card-titulo">Sistema <em>electoral</em> argentino</h3>
+            <p class="estudio-card-desc">Cinco capítulos sobre el calendario electoral nacional y provincial, los seis sistemas presidenciales aplicados desde 1853, los cinco sistemas legislativos, la cronología completa de las 32 elecciones presidenciales y las grandes innovaciones del siglo XXI (PASO, voto a los 16, paridad, BUP).</p>
+            <div class="estudio-card-meta">
+              <span>5 capítulos</span>
+              <span>~265 KB</span>
+              <span>Mayo 2026</span>
+            </div>
+          </div>
+          <div class="estudio-card-arrow">Leer estudio →</div>
+        </a>
+
+        <a href="caba-en-profundidad.html" class="estudio-card">
+          <div class="estudio-card-num">03</div>
+          <div class="estudio-card-content">
+            <div class="estudio-card-eyebrow">★ Estudio completo · Capítulo 09</div>
             <h3 class="estudio-card-titulo">Ciudad Autónoma de <em>Buenos Aires</em></h3>
-            <p class="estudio-card-desc">El caso institucional más complejo del federalismo argentino. Historia, los tres poderes porteños, las 15 comunas, sistema fiscal y coparticipación, y los pendientes de la autonomía.</p>
+            <p class="estudio-card-desc">El caso institucional más complejo del federalismo argentino. Historia de la autonomía, los tres poderes porteños, las 15 comunas, sistema fiscal y coparticipación con la Nación, y los pendientes de la autonomía plena.</p>
             <div class="estudio-card-meta">
               <span>5 capítulos</span>
               <span>~228 KB</span>
@@ -1649,7 +1852,7 @@
 
       <div class="estudios-roadmap">
         <div class="estudios-roadmap-titulo">— Próximos estudios en desarrollo</div>
-        <p>El formato es replicable. Próximamente sumaremos estudios en profundidad sobre otras jurisdicciones, instituciones y períodos históricos argentinos. Si querés sugerir un tema, escribinos.</p>
+        <p>El formato es replicable. Próximamente sumaremos un <strong>Glosario cívico y jurídico</strong> con definiciones precisas de los conceptos clave del derecho público argentino, profundizaciones específicas de las provincias más grandes (Buenos Aires, Córdoba, Santa Fe, Mendoza), análisis sobre el financiamiento de campañas y otros temas institucionales pendientes. Si querés sugerir un tema, escribinos.</p>
       </div>
     </div>
   </div>
@@ -1726,11 +1929,10 @@
       <h4>Secciones</h4>
       <ul>
         <li><a href="poderes.html">Los poderes</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="elecciones-cronologia.html">Cronología electoral</a></li>
         <li><a href="provincias.html">Provincias</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="elecciones.html">Elecciones</a></li>
         <li><a href="caba-en-profundidad.html">CABA en profundidad</a></li>
-        <li><a href="#aprender">Aula</a></li>
       </ul>
     </div>
     <div class="footer-col">
