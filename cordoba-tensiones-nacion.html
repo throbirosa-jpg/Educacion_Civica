@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Córdoba · Tensiones con la Nación (10.02.05) — Educación Cívica</title>
+<meta name="description" content="Las tensiones estructurales entre Córdoba y la Nación: la caja de jubilaciones provincial no transferida (litigio actual ante la Corte Suprema), la coparticipación cordobesa (10% del PBI aportado, 9.5% recibido), la histórica retención del 15% para ANSES, y la doctrina cordobesa de no subordinación política.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-tensiones-nacion.html">
+
+<meta property="og:title" content="Córdoba · Tensiones con la Nación">
+<meta property="og:description" content="Caja jubilatoria, coparticipación y doctrina de no subordinación: cuatro décadas de litigios con el Estado Nacional.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-tensiones-nacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.02.05</strong> de la sección Córdoba en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="cordoba-en-profundidad.html">Córdoba</a> ·
+      <span>Tensiones con la Nación</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02.05 · Estudio provincial</div>
+    <h1 class="page-title">Tensiones con <em>la Nación</em></h1>
+    <div class="page-subtitulo">— Caja previsional · Coparticipación · Doctrina de no subordinación</div>
+    <p class="page-intro">Córdoba mantiene <strong>tensiones estructurales con el Estado Nacional</strong> que atraviesan los últimos cuarenta años de la democracia argentina. Tres son los frentes activos: (1) la <strong>caja de jubilaciones provincial</strong> nunca transferida a ANSES, con litigio actualmente en la Corte Suprema por una deuda superior a $1 billón (2020-2024); (2) la <strong>coparticipación federal</strong>, donde Córdoba aporta aproximadamente el 10% del PBI nacional y recibe alrededor del 9.5% por coparticipación pura; y (3) la <strong>doctrina cordobesa de no subordinación política</strong>, una identidad provincial que históricamente ha resistido el alineamiento automático con los aparatos nacionales. Este capítulo cierra el estudio cordobés analizando estos tres ejes y sus consecuencias institucionales.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">13</div>
+        <div class="page-stat-label">Cajas previsionales no transferidas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">$1 bn</div>
+        <div class="page-stat-label">Deuda ANSES con Córdoba (2020-2024)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">10%</div>
+        <div class="page-stat-label">Aporte cordobés al PBI nacional</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">18</div>
+        <div class="page-stat-label">Diputados nacionales por Córdoba</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#caja-previsional">01 · La caja previsional</a></li>
+      <li><a href="#transferencias-90">02 · El no-pacto de los 90</a></li>
+      <li><a href="#litigio-corte">03 · El litigio ante la Corte</a></li>
+      <li><a href="#coparticipacion">04 · Coparticipación cordobesa</a></li>
+      <li><a href="#15-anses">05 · El histórico 15% para ANSES</a></li>
+      <li><a href="#otros-litigios">06 · Otros litigios fiscales</a></li>
+      <li><a href="#no-subordinacion">07 · Doctrina de no subordinación</a></li>
+      <li><a href="#crisis-2013">08 · La rebelión policial 2013</a></li>
+      <li><a href="#fuentes">09 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="caja-previsional">
+      <div class="seccion-num">01 · La caja previsional cordobesa</div>
+      <h2>Una <em>de las 13</em> no transferidas</h2>
+
+      <p>El sistema previsional cordobés tiene una particularidad institucional decisiva: <strong>Córdoba conserva su propia Caja de Jubilaciones, Pensiones y Retiros provincial</strong>. No la transfirió al sistema nacional administrado por la ANSES en los años 90, como sí lo hicieron varias provincias argentinas. Esta decisión, tomada bajo distintos gobiernos cordobeses, ha tenido consecuencias institucionales profundas y es la fuente de uno de los litigios actuales más relevantes entre la provincia y la Nación.</p>
+
+      <h3>Las 13 jurisdicciones no transferidas</h3>
+
+      <p>De las 24 jurisdicciones argentinas (23 provincias + CABA), <strong>13 mantienen sistemas previsionales provinciales propios</strong>. Las 11 jurisdicciones que sí transfirieron sus cajas (en general durante los pactos fiscales de los años 90) reciben las jubilaciones de su personal estatal a través del régimen nacional administrado por ANSES.</p>
+
+      <p>Las 13 jurisdicciones que conservaron su caja previsional propia son una mezcla heterogénea: incluyen tanto a provincias muy grandes (Buenos Aires, Córdoba, Santa Fe) como a otras de tamaño medio (Chubut, Misiones, Formosa, Entre Ríos, Corrientes, Tierra del Fuego, Neuquén, Santa Cruz, La Pampa) e incluye también a una provincia que tomó la decisión más tardíamente. Esta heterogeneidad refleja que la decisión no respondió a criterios uniformes sino a equilibrios políticos provinciales específicos.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Caja de Jubilaciones de Córdoba</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Sigla oficial</div>
+            <div class="ficha-valor">Caja JPR (Jubilaciones, Pensiones y Retiros)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Cobertura</div>
+            <div class="ficha-valor">Empleados públicos provinciales y docentes</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Estatus</div>
+            <div class="ficha-valor"><strong>No transferida a ANSES</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Marco legal nacional</div>
+            <div class="ficha-valor">Ley 27.260 (compensación de déficits)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Déficit mensual (2025)</div>
+            <div class="ficha-valor">~$20 mil millones</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Déficit estimado 2026</div>
+            <div class="ficha-valor"><strong>~$420 mil millones</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Por qué conserva la caja</h3>
+
+      <p>Los argumentos cordobeses para conservar la caja propia son tradicionalmente tres:</p>
+
+      <ul>
+        <li><strong>Régimen previsional propio</strong>: los regímenes previsionales provinciales tienen alícuotas de aportes y contribuciones mayores que el sistema nacional, así como condiciones específicas para empleados públicos provinciales. La transferencia implicaría perder estos derechos.</li>
+        <li><strong>Estabilidad institucional</strong>: la caja propia da estabilidad y previsibilidad a los empleados estatales cordobeses, evitando los avatares de las reformas previsionales nacionales.</li>
+        <li><strong>Autonomía provincial</strong>: la administración del sistema previsional es una de las facultades no delegadas a la Nación. Conservar la caja es ejercer plenamente el federalismo argentino.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="transferencias-90">
+      <div class="seccion-num">02 · El "no-pacto" de los 90</div>
+      <h2>La <em>obligación de compensación</em> nacional</h2>
+
+      <p>El contexto histórico es relevante. Durante los años 90, bajo la presidencia de Carlos Menem, varias provincias <strong>transfirieron</strong> sus cajas previsionales al sistema nacional como parte de los pactos fiscales firmados con la Nación. La transferencia tuvo dos objetivos: aliviar las finanzas provinciales y unificar el sistema previsional argentino.</p>
+
+      <p>Sin embargo, una decena de provincias no firmó esos pactos o los firmó parcialmente sin transferir la caja. Córdoba fue una de ellas. La consecuencia es que durante los años 90 y 2000, esas provincias quedaron en una situación asimétrica respecto de las que sí habían transferido sus cajas.</p>
+
+      <h3>La Ley 27.260 y la obligación de compensación</h3>
+
+      <p>Para resolver esta asimetría, en 2016 la Nación sancionó la <strong>Ley 27.260</strong> (Ley de Reparación Histórica), que en su Artículo 24 estableció el compromiso del Estado Nacional de <strong>compensar a través de ANSES los déficits operativos</strong> de las cajas previsionales provinciales no transferidas.</p>
+
+      <div class="cita">
+        "El Estado Nacional, a través de la Administración Nacional de Seguridad Social (ANSES), financiará los déficits de los sistemas previsionales provinciales que no fueron transferidos oportunamente al ámbito nacional, en un estricto acto de justicia respecto de aquellas provincias que sí decidieron transferir sus sistemas previsionales."
+        <span class="cita-fuente">— Síntesis de los considerandos de la Ley Nacional 27.260 (Ley de Reparación Histórica), 2016. Mencionada en la demanda cordobesa de 2023 ante la Corte Suprema.</span>
+      </div>
+
+      <p>El mecanismo concreto establece que la ANSES reconocerá los déficits provinciales a través de un ejercicio que simula —bajo los parámetros y condiciones del régimen nacional— cuánto costaría asumir las jubilaciones provinciales si la caja hubiera sido transferida. La diferencia con el déficit real provincial es la cifra que la ANSES debería compensar.</p>
+
+      <h3>Los pagos hasta 2023</h3>
+
+      <p>Entre 2016 y 2023, la ANSES realizó transferencias parciales a las cajas provinciales no transferidas, incluyendo la cordobesa. Las cifras fueron variables: hubo períodos con cumplimiento razonable y otros con desfases significativos. La inflación argentina hizo que las transferencias nominales perdieran valor real, generando litigios sobre las "actualizaciones" debidas.</p>
+    </div>
+
+    <div class="seccion" id="litigio-corte">
+      <div class="seccion-num">03 · El litigio ante la Corte (2023-2026)</div>
+      <h2>La <em>conciliación</em> en la Corte Suprema</h2>
+
+      <p>En 2023, la provincia de Córdoba presentó una <strong>demanda ante la Corte Suprema de Justicia de la Nación</strong> contra el Estado Nacional, solicitando el cumplimiento de las leyes y pactos fiscales que establecen la obligación de asistir financieramente a la Caja de Jubilaciones provincial por los déficits acumulados de los años 2020, 2021 y 2022.</p>
+
+      <h3>El agravamiento de 2023-2024</h3>
+
+      <p>La situación se agravó significativamente desde diciembre de 2023, cuando la nueva administración nacional interrumpió las transferencias a las cajas provinciales no transferidas. Esto significó que durante todo 2024 y la mayor parte de 2025, Córdoba debió cubrir el déficit de su caja con recursos propios del Tesoro provincial, sin recibir compensaciones de la ANSES. La deuda acumulada por la ANSES con la caja cordobesa, según las estimaciones provinciales, alcanzó cifras cercanas a <strong>$1 billón de pesos</strong> para el período 2020-2024.</p>
+
+      <h3>La audiencia de conciliación</h3>
+
+      <p>En marzo de 2025, la Corte Suprema convocó a una <strong>audiencia de conciliación</strong> entre la provincia y la Nación. La iniciativa de la Corte fue significativa: en lugar de avanzar con el dictado de una sentencia, abrió un espacio institucional para que las partes negociaran un acuerdo intermediado por el máximo tribunal. La primera audiencia se realizó en abril de 2025; la segunda, en mayo de 2025.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El acuerdo de mayo de 2025</div>
+        <p>En la segunda audiencia, la Nación reconoció formalmente la deuda y presentó una <strong>propuesta de pago a cuenta de 2025</strong>: $60 mil millones en total, pagados en <strong>12 cuotas mensuales de $5 mil millones cada una</strong>, comenzando en mayo de 2025 y finalizando en abril de 2026. La propuesta fue aceptada por Córdoba como un avance parcial, pero la provincia reiteró que el monto cubría solo una porción del déficit mensual real (estimado en $20 mil millones por mes).</p>
+      </div>
+
+      <h3>El acuerdo de marzo de 2026</h3>
+
+      <p>Hacia inicios de 2026, próximo al vencimiento del acuerdo original, se firmó un nuevo convenio que duplicó las transferencias mensuales. Aún así, según estimaciones provinciales, el nuevo monto cubre alrededor de una cuarta parte del déficit mensual real. La negociación continúa abierta y se prevén nuevas audiencias en la Corte para evaluar el cumplimiento del acuerdo y discutir las cifras del período 2025.</p>
+
+      <p>Las estimaciones del Tribunal de Cuentas provincial cifran la deuda efectiva hasta el 30 de septiembre de 2025 en torno a los <strong>$246 mil millones</strong>. La diferencia con la cifra de la provincia (cercana al billón) se explica por distinciones conceptuales: el Tribunal contabiliza lo que la caja le adeuda al Tesoro provincial, mientras que la caja reclama a la ANSES el déficit que le corresponde cubrir por ley.</p>
+
+      <p>El déficit estimado para 2026 supera los <strong>$420 mil millones</strong>. Es uno de los grandes temas pendientes del federalismo fiscal argentino y un emblema del tipo de litigios estructurales que enfrentan provincia y Nación.</p>
+    </div>
+
+    <div class="seccion" id="coparticipacion">
+      <div class="seccion-num">04 · La coparticipación cordobesa</div>
+      <h2>Aporta <em>10%</em>, recibe 9,5%</h2>
+
+      <p>El segundo gran eje de tensión fiscal entre Córdoba y la Nación es la <strong>distribución de la coparticipación federal de impuestos</strong>. La provincia mediterránea es una de las que <strong>aporta más de lo que recibe</strong> en términos relativos, lo cual la convierte en una "contribuyente neta" del sistema federal.</p>
+
+      <h3>Las cifras estructurales</h3>
+
+      <p>Las estimaciones más consensuadas (basadas en datos del INDEC y de la Comisión Federal de Impuestos) son las siguientes:</p>
+
+      <ul>
+        <li>Córdoba aporta aproximadamente el <strong>10,1% del PBI nacional</strong>.</li>
+        <li>Recibe el <strong>9,5% de la coparticipación pura</strong> (según los coeficientes fijados por la Ley 23.548).</li>
+        <li>La diferencia bruta es de aproximadamente <strong>-0,6 puntos porcentuales</strong> en términos relativos.</li>
+        <li>Si se incluyen las transferencias automáticas no coparticipables (Fondo Federal Solidario, Fondo Educativo, etc.), Córdoba captura aproximadamente el 2,94% adicional del total nacional.</li>
+      </ul>
+
+      <p>En términos absolutos, Córdoba es la <strong>segunda provincia contribuyente neta</strong> del sistema, después de Buenos Aires. Otras provincias del centro-oeste (Santa Fe, Mendoza) tienen perfiles similares aunque con cifras menores.</p>
+
+      <h3>El régimen actual de coparticipación</h3>
+
+      <p>El sistema de coparticipación federal vigente sigue rigiéndose por la <strong>Ley 23.548 de 1988</strong>, que tiene rango "transitorio" desde su sanción hace 38 años. La reforma constitucional de 1994 mandó sancionar una nueva ley convenio sobre coparticipación, pero el Congreso Nacional nunca cumplió ese mandato. La Disposición Transitoria Sexta de la Constitución Nacional establecía que la nueva ley debía sancionarse <strong>antes de la finalización del año 1996</strong>, pero pasaron 30 años sin que se cumpla.</p>
+
+      <p>Esta situación de "inconstitucionalidad por omisión" del Congreso Nacional es uno de los grandes temas pendientes del federalismo fiscal argentino. Córdoba ha sido una de las voces más críticas sobre la prolongación indefinida del régimen transitorio, junto con las otras provincias contribuyentes netas.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Coparticipación cordobesa</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Coeficiente Ley 23.548</div>
+            <div class="ficha-valor">~9,5%</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Aporte al PBI nacional</div>
+            <div class="ficha-valor"><strong>~10,1%</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Posición contribuyente</div>
+            <div class="ficha-valor">Neta (segunda después de PBA)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Diputados nacionales</div>
+            <div class="ficha-valor">18 (sobre 257 totales)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Senadores nacionales</div>
+            <div class="ficha-valor">3 (como todas las provincias)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Régimen vigente</div>
+            <div class="ficha-valor">Ley 23.548 (1988) "transitoria"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="15-anses">
+      <div class="seccion-num">05 · El histórico 15% para ANSES</div>
+      <h2>El pacto fiscal de <em>1992</em></h2>
+
+      <p>Un episodio fiscal de los años 90 sigue generando litigios actuales: la <strong>retención del 15% de la coparticipación federal</strong> que las provincias cedieron a la Nación en el Pacto Fiscal de 1992. El contexto: ese año, la creación de las Administradoras de Fondos de Jubilaciones y Pensiones (AFJP) había desfinanciado el sistema previsional nacional, y las provincias aceptaron ceder un porcentaje de su coparticipación para sostenerlo.</p>
+
+      <h3>La denuncia cordobesa de 2012</h3>
+
+      <p>En agosto de 2012, la Legislatura de Córdoba sancionó una ley <strong>denunciando el Pacto Fiscal de 1992</strong>. La denuncia tenía un objetivo concreto: dar por extinguida la vigencia del acuerdo y reclamar la devolución del 15% retenido. Otras provincias hicieron lo mismo, aunque con distintos calendarios y enfoques.</p>
+
+      <p>El fundamento jurídico cordobés era doble. Primero, el Pacto Fiscal había sido firmado en un contexto específico (desfinanciamiento por AFJP) que ya había desaparecido (las AFJP fueron eliminadas por la Ley 26.425 de 2008, que reestatizó el sistema previsional). Segundo, sostener una retención del 15% del coparticipable durante dos décadas excedía cualquier "transitoriedad" razonable.</p>
+
+      <h3>La jurisprudencia de 2015</h3>
+
+      <p>En noviembre de 2015, la Corte Suprema de Justicia de la Nación dictó una sentencia favorable a las provincias en los casos "Santa Fe" y "San Luis", declarando inconstitucionales las retenciones del 15% por considerarlas violatorias de la coparticipación federal. La sentencia obligaba al Estado Nacional a restituir los fondos retenidos indebidamente.</p>
+
+      <p>A partir de diciembre de 2015, comenzó el proceso de restitución del 15% para las provincias de <strong>Córdoba, Santa Fe y San Luis</strong>. Otras provincias siguieron litigios análogos en años posteriores. Esto constituyó un paso adelante en el reconocimiento del federalismo fiscal pleno, aunque el cumplimiento efectivo de las restituciones siguió generando controversias.</p>
+    </div>
+
+    <div class="seccion" id="otros-litigios">
+      <div class="seccion-num">06 · Otros litigios fiscales</div>
+      <h2>IVA financiero, <em>combustibles</em> y rutas</h2>
+
+      <p>El litigio del 15% para ANSES y el de la caja jubilatoria son los más visibles, pero hay otros frentes fiscales abiertos entre Córdoba y la Nación. Vamos a los principales:</p>
+
+      <h3>El "IVA financiero"</h3>
+
+      <p>Una porción del IVA recaudado se destina al financiamiento del sistema de Seguridad Social (aproximadamente el 11%), por fuera del régimen de coparticipación. Las provincias contribuyentes netas, incluyendo Córdoba, han argumentado que esta detracción debería reformularse, ya que beneficia exclusivamente al sistema nacional sin contraprestación equivalente para las provincias con cajas no transferidas.</p>
+
+      <h3>Combustibles y obras viales</h3>
+
+      <p>Los impuestos a los combustibles tienen un componente importante para obras viales nacionales. Córdoba, atravesada por importantes rutas nacionales (Ruta 9 Buenos Aires-Salta, Ruta 8, Ruta 36, Ruta 158, entre otras), ha demandado mayor inversión nacional en su red vial. El estado de las rutas nacionales en territorio cordobés ha sido fuente de quejas reiteradas y de demandas formales del gobierno provincial.</p>
+
+      <h3>Financiamiento docente</h3>
+
+      <p>La Ley de Financiamiento Educativo (Ley 26.075) estableció que las provincias debían destinar el 25% de sus recursos coparticipables a Educación. Esta obligación ha sido modificada y prorrogada en distintos momentos. Córdoba ha tenido litigios sobre la implementación específica de la ley y sobre las transferencias compensatorias del Fondo Nacional de Incentivo Docente y otros fondos análogos.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Una provincia litigante?</div>
+        <p>Córdoba es <strong>una de las provincias más activas litigando ante la Corte Suprema</strong> contra el Estado Nacional en materia fiscal. Esta posición no es de un signo político específico: gobernadores de distintos espacios partidarios han mantenido el litigio activo. Refleja una constante de la política provincial cordobesa: la defensa robusta de los derechos fiscales y constitucionales de la provincia, independientemente del color político del oficialismo nacional o provincial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="no-subordinacion">
+      <div class="seccion-num">07 · La doctrina de no subordinación</div>
+      <h2>Una <em>identidad política</em> propia</h2>
+
+      <p>Más allá de los litigios fiscales específicos, hay una característica de fondo en la política cordobesa que conviene nombrar: la <strong>doctrina de no subordinación</strong>. Es una identidad provincial que atraviesa los últimos 40 años de democracia y que se manifiesta tanto en lo institucional como en lo electoral.</p>
+
+      <h3>Las manifestaciones de la doctrina</h3>
+
+      <p>La no subordinación cordobesa se ha expresado en varias formas:</p>
+
+      <ul>
+        <li><strong>Calendarios electorales propios</strong>: Córdoba ha desdoblado frecuentemente sus elecciones provinciales del calendario nacional, evitando el "efecto arrastre" del clima electoral nacional sobre los comicios provinciales.</li>
+        <li><strong>Coaliciones provinciales propias</strong>: los espacios políticos cordobeses (como la histórica "Unión por Córdoba", "Hacemos por Córdoba" y sus continuadoras) han operado con relativa independencia de los aparatos nacionales de sus respectivos partidos.</li>
+        <li><strong>Posiciones legislativas distintas</strong>: los diputados y senadores cordobeses han votado frecuentemente con criterios provinciales más que con disciplina partidaria nacional, sobre temas que afectan los intereses de la provincia.</li>
+        <li><strong>Diálogo interpartidario provincial</strong>: la política cordobesa ha mostrado capacidad para construir consensos provinciales que cruzan líneas partidarias nacionales (por ejemplo, en temas como la caja previsional o la coparticipación).</li>
+      </ul>
+
+      <h3>Las raíces históricas</h3>
+
+      <p>La doctrina de no subordinación tiene raíces históricas profundas, varias de las cuales vimos en el capítulo 10.02.01:</p>
+
+      <ul>
+        <li><strong>La Reforma Universitaria de 1918</strong> y su latinoamericanismo antiimperial.</li>
+        <li>El <strong>Partido Demócrata Cristiano</strong> cordobés de los años 60-70, que mantuvo perfil propio dentro del catolicismo argentino.</li>
+        <li>El peronismo cordobés con perfil propio (los "duartistas", luego "Hacemos por Córdoba").</li>
+        <li>La <strong>UCR fuerte</strong> cordobesa, con figuras como Eduardo Angeloz que dieron a la provincia perfil propio en el primer ciclo democrático posterior a 1983.</li>
+        <li>La <strong>tradición universitaria robusta</strong> (UNC, UNRC, UPC, UCC) que mantiene a Córdoba como segundo polo cultural-académico de Argentina después de Buenos Aires.</li>
+      </ul>
+
+      <p>Esta doctrina explica por qué los gobiernos nacionales —de cualquier signo político— suelen tener menos influencia directa sobre la política cordobesa que sobre la de otras provincias. Y por qué, recíprocamente, los gobernadores cordobeses han podido sostener posiciones independientes en el escenario nacional sin que esto les implique necesariamente costos políticos locales.</p>
+    </div>
+
+    <div class="seccion" id="crisis-2013">
+      <div class="seccion-num">08 · La rebelión policial de 2013</div>
+      <h2>Una <em>crisis</em> nacional desde Córdoba</h2>
+
+      <p>El 3 de diciembre de 2013, Córdoba protagonizó uno de los episodios institucionales más graves de la democracia argentina reciente: un <strong>autoacuartelamiento policial</strong> en reclamo de aumentos salariales. La rebelión se extendió a otras provincias y derivó en una crisis institucional nacional que duró casi dos semanas. Aunque la rebelión fue resuelta con concesiones salariales por parte del gobierno provincial, el episodio dejó marcas profundas.</p>
+
+      <h3>La cronología</h3>
+
+      <p>El conflicto se desarrolló así:</p>
+
+      <ul>
+        <li><strong>3 de diciembre</strong>: efectivos de la Policía de Córdoba se autoacuartelaron en el Cabildo Histórico, declarando rebelión salarial.</li>
+        <li><strong>4-5 de diciembre</strong>: la falta de presencia policial en las calles desencadenó saqueos en supermercados y comercios cordobeses, con varios muertos y heridos.</li>
+        <li><strong>6 de diciembre</strong>: el gobernador provincial acordó un aumento salarial significativo para la Policía, levantando el autoacuartelamiento.</li>
+        <li><strong>7-15 de diciembre</strong>: la rebelión policial se replicó en otras 11 provincias (entre ellas Catamarca, Chaco, Jujuy, Salta, Santa Fe, Tucumán), generando escenas similares.</li>
+      </ul>
+
+      <h3>El debate institucional</h3>
+
+      <p>La rebelión cordobesa abrió un debate institucional que sigue abierto:</p>
+
+      <ul>
+        <li>Sobre la <strong>relación entre fuerzas de seguridad y poder político provincial</strong>.</li>
+        <li>Sobre los <strong>mecanismos de respuesta nacional</strong> en casos de rebeliones policiales (las provincias no tienen fuerzas militares; las fuerzas federales —Gendarmería, Prefectura— deben ser convocadas por el Ejecutivo Nacional).</li>
+        <li>Sobre los <strong>regímenes salariales policiales</strong> y su sustentabilidad fiscal.</li>
+        <li>Sobre la <strong>coordinación interfederal</strong> en situaciones de crisis simultáneas.</li>
+      </ul>
+
+      <p>El episodio mostró que las tensiones federales no son solo fiscales: tienen también dimensiones de seguridad pública y coordinación institucional. Córdoba, en este caso, fue el "primer dominó" de una crisis que se generalizó al resto del país.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Lo que dejó la crisis</div>
+        <p>La crisis policial de 2013 dejó como saldo una serie de <strong>reformas en la organización de las fuerzas de seguridad provinciales</strong>: revisión de regímenes salariales, fortalecimiento de los mecanismos de control civil, mayor coordinación con fuerzas federales. Sin embargo, las causas estructurales —tensiones salariales en contextos inflacionarios, falta de actualización de los regímenes previsionales y de carrera— no se resolvieron de fondo. Episodios análogos, aunque menos graves, se repitieron en años posteriores.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">09 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley Nacional 27.260</strong> · Ley de Reparación Histórica (2016). Artículo 24: obligación de la ANSES de compensar déficits de las cajas previsionales provinciales no transferidas.</li>
+        <li><strong>Ley Nacional 23.548</strong> · Régimen Transitorio de Coparticipación Federal de Impuestos (1988). Vigente desde su sanción.</li>
+        <li><strong>Constitución Nacional</strong> · Artículo 75 inciso 2 (coparticipación) y Disposición Transitoria Sexta (mandato de ley convenio antes de 1996).</li>
+        <li><strong>Pacto Fiscal de 1992</strong> · Acuerdo entre Nación y provincias sobre relaciones financieras. Denunciado por Córdoba en 2012.</li>
+        <li><strong>Ley Nacional 26.425</strong> · Reestatización del sistema previsional (eliminación de AFJP, 2008).</li>
+        <li><strong>Ley Nacional 26.075</strong> · Financiamiento Educativo (2006).</li>
+        <li><strong>Demanda de Córdoba ante la CSJN</strong> · 2023. Reclamo por incumplimientos de la Ley 27.260. Documentación oficial en prensa.cba.gov.ar.</li>
+        <li><strong>Sentencias CSJN "Santa Fe" y "San Luis"</strong> · Noviembre de 2015. Declaración de inconstitucionalidad de la retención del 15% para ANSES.</li>
+        <li><strong>Caja de Jubilaciones, Pensiones y Retiros de la Provincia de Córdoba</strong> · Sitio oficial: cajajubilaciones.cba.gov.ar.</li>
+        <li><strong>Comisión Federal de Impuestos</strong> (cfi.gov.ar) · Índices de distribución de la coparticipación federal.</li>
+        <li><strong>Ley Provincial 8.663</strong> · Régimen de Coparticipación Municipal en la Provincia de Córdoba (1997).</li>
+        <li><strong>"Funcionamiento del sistema de coparticipación municipal en Córdoba"</strong> · Estudio técnico de la Legislatura de Córdoba (2024). Disponible en legislaturacba.gob.ar.</li>
+        <li><strong>"Régimen de Coparticipación Municipal en la Provincia de Córdoba"</strong> · Análisis institucional. Legislatura provincial.</li>
+        <li><strong>Cobertura periodística del litigio Caja-ANSES</strong>: Perfil Córdoba, Comercio y Justicia Córdoba, El Cronista, El Destape. 2023-2026.</li>
+        <li><strong>Tribunal de Cuentas de la Provincia de Córdoba</strong> · Informes anuales sobre las cuentas previsionales provinciales.</li>
+      </ul>
+    </div>
+
+    <a href="cordoba-en-profundidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al hub provincial</div>
+        <h3>Córdoba en <em>profundidad</em></h3>
+        <p>Has completado los cinco capítulos del estudio cordobés. Volvé al hub para repasar la sección, navegar entre capítulos o explorar las otras provincias en profundidad (Buenos Aires, Santa Fe, Mendoza, CABA).</p>
+      </div>
+      <div class="proximo-cap-arrow">VOLVER AL HUB →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

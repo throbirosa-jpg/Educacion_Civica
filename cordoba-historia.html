@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Córdoba · Historia constitucional (10.02.01) — Educación Cívica</title>
+<meta name="description" content="La historia constitucional de la Provincia de Córdoba desde el Reglamento Provisorio de 1821 hasta la unicameralización de 2001. Las cinco constituciones cordobesas, la Reforma Universitaria de 1918, las reformas de 1987 y 2001, y la identidad política de no subordinación a Buenos Aires.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-historia.html">
+
+<meta property="og:title" content="Córdoba · Historia constitucional">
+<meta property="og:description" content="Las cinco constituciones cordobesas, la Reforma Universitaria de 1918 y la identidad política de no subordinación.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-historia.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.02.01</strong> de la sección Córdoba en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="cordoba-en-profundidad.html">Córdoba</a> ·
+      <span>Historia constitucional</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02.01 · Estudio provincial</div>
+    <h1 class="page-title">Historia <em>constitucional</em> de Córdoba</h1>
+    <div class="page-subtitulo">— Cinco constituciones · dos siglos · una identidad de no subordinación</div>
+    <p class="page-intro">Córdoba tiene <strong>una de las tradiciones constitucionales más extensas de Argentina</strong>: cinco textos constitucionales sancionados desde 1821 hasta 2001, con múltiples reformas en cada uno de ellos. La provincia mediterránea combina la <strong>identidad de "la docta"</strong> (sede de la primera universidad de Argentina y de la Reforma Universitaria de 1918) con una <strong>identidad política de no subordinación a Buenos Aires</strong> que atraviesa los dos siglos de historia institucional argentina. Este capítulo recorre las constituciones cordobesas, el Manifiesto Liminar de 1918 y las reformas constitucionales de 1987 (autonomía municipal) y 2001 (unicameralización) que definen el régimen vigente.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">5</div>
+        <div class="page-stat-label">Constituciones cordobesas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1821</div>
+        <div class="page-stat-label">Primer Reglamento Provisorio</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1918</div>
+        <div class="page-stat-label">Manifiesto Liminar (Reforma)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2001</div>
+        <div class="page-stat-label">Reforma de la unicameralización</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#reglamento-1821">01 · Reglamento Provisorio 1821</a></li>
+      <li><a href="#quebracho-1847">02 · El Código del "Quebracho"</a></li>
+      <li><a href="#constitucion-1855">03 · Constitución de 1855</a></li>
+      <li><a href="#constitucion-1870">04 · Constitución de 1870</a></li>
+      <li><a href="#reforma-1923">05 · La reforma de 1923</a></li>
+      <li><a href="#reforma-universitaria">06 · La Reforma Universitaria 1918</a></li>
+      <li><a href="#peronismo-1949">07 · Constitución peronista 1949</a></li>
+      <li><a href="#reforma-1987">08 · La gran reforma de 1987</a></li>
+      <li><a href="#reforma-2001">09 · La unicameralización 2001</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="reglamento-1821">
+      <div class="seccion-num">01 · El Reglamento Provisorio de 1821</div>
+      <h2>El <em>nacimiento institucional</em> de la provincia</h2>
+
+      <p>La historia constitucional cordobesa se abre el 27 de septiembre de 1821, cuando la Legislatura provincial votó si Córdoba debía sancionar una constitución permanente o un reglamento provisorio. Por mayoría, prevaleció la opción del <strong>Reglamento Provisorio</strong>, redactado por José Gregorio Baigorrí —quien había sido convencional en la Asamblea del Año XIII— junto con un cuerpo de juristas locales.</p>
+
+      <p>El Reglamento Provisorio de 1821 estableció los cimientos de la organización política provincial en un contexto en el que aún no existía un Estado nacional unificado. Argentina vivía la fase de las autonomías provinciales tras la disolución del Directorio en 1820. Córdoba, junto con Buenos Aires, Santa Fe y otras provincias, ejerció en aquel período una soberanía plena.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Lo que sentó el Reglamento de 1821</div>
+        <p>El Reglamento Provisorio consolidó la <strong>organización republicana</strong> de la provincia, estableció una <strong>Sala de Representantes</strong> como Legislatura unicameral, separó las funciones de gobierno y dispuso la administración de justicia. Tuvo vigencia hasta 1847 (con reformas parciales) y fue el documento que mantuvo la institucionalidad cordobesa durante todo el período rosista.</p>
+      </div>
+
+      <p>Durante este período rige también una particularidad cordobesa: la <strong>cámara única</strong>, que sería una constante institucional hasta 1870 y que volvería a ser el régimen vigente desde 2001. Córdoba mantuvo el unicameralismo durante 49 años en su primer ciclo histórico, una decisión que sería revisitada con frecuencia en debates constitucionales posteriores.</p>
+    </div>
+
+    <div class="seccion" id="quebracho-1847">
+      <div class="seccion-num">02 · El "Quebracho" y el Código Constitucional</div>
+      <h2>La constitución rosista de <em>1847</em></h2>
+
+      <p>En 1847, el gobernador <strong>Manuel "Quebracho" López</strong> dictó la segunda constitución cordobesa: el <strong>Código Constitucional Provisorio</strong>. El documento es notable por su lenguaje, que abría con la fórmula rosista: <em>"¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios!"</em></p>
+
+      <p>Más allá de la retórica, el Código del "Quebracho" mantuvo la organización política básica de 1821 con ajustes que reflejaban la estructura del Estado durante la Confederación Argentina. La provincia conservó su sistema unicameral y los mecanismos de elección. El documento sería reformado seis veces en los pocos años de su vigencia.</p>
+
+      <div class="cita">
+        "¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios! Nos, los representantes del pueblo de Córdoba, reunidos en sala de Representantes, en uso de las facultades soberanas que nos son inherentes, hemos sancionado el siguiente Código Constitucional Provisorio."
+        <span class="cita-fuente">— Preámbulo del Código Constitucional Provisorio de Córdoba, 1847. Citado en el Digesto Constitucional de la Provincia de Córdoba.</span>
+      </div>
+
+      <p>La caída de Rosas en febrero de 1852 (tras la Batalla de Caseros) y la posterior sanción de la Constitución Nacional de 1853 dejaron al Código del "Quebracho" como un anacronismo. Córdoba comenzó entonces el proceso de redactar una nueva constitución provincial que estuviera alineada con el nuevo orden federal nacional.</p>
+    </div>
+
+    <div class="seccion" id="constitucion-1855">
+      <div class="seccion-num">03 · Constitución de 1855</div>
+      <h2>La <em>tercera constitución</em>: el alineamiento con la Nación</h2>
+
+      <p>En 1855, siendo gobernador <strong>Alejo Carmen Guzmán</strong>, Córdoba sancionó su tercera constitución provincial. Esta vez en el marco de la organización nacional bajo la Constitución de 1853. El proceso constituyente cordobés tuvo una particularidad institucional: <strong>el Congreso de la Nación revisó y rechazó la redacción propuesta para algunos artículos</strong>, en uso de la facultad que le otorgaba la Constitución de la Confederación Argentina, aprobándose finalmente un texto modificado por el Congreso Nacional.</p>
+
+      <p>Esta intervención del Congreso Nacional sobre el texto provincial es una particularidad del régimen federal de la época: <strong>las constituciones provinciales eran sometidas a control del Congreso Nacional antes de su entrada en vigor</strong>. Esta práctica se mantuvo hasta la Reforma Constitucional de 1860, que estableció el principio de autonomía provincial constitucional (las provincias se dan sus constituciones sin intervención del Congreso Nacional).</p>
+
+      <p>La Constitución de 1855 fue reformada dos veces antes de ser reemplazada por la Constitución de 1870, en pleno proceso de organización nacional bajo la presidencia de Bartolomé Mitre.</p>
+    </div>
+
+    <div class="seccion" id="constitucion-1870">
+      <div class="seccion-num">04 · La Constitución de 1870</div>
+      <h2>La <em>bicameralización</em> y la consolidación institucional</h2>
+
+      <p>En 1870, siendo gobernador <strong>Félix de la Peña</strong>, Córdoba sancionó la cuarta constitución provincial. Esta carta fue un punto de inflexión institucional: <strong>después de 49 años de cámara única, Córdoba creó un Senado y una Cámara de Diputados</strong>, adoptando el sistema bicameral que sería la regla hasta 2001.</p>
+
+      <p>La Constitución de 1870 también consolidó los principios republicanos clásicos: división de poderes, garantías individuales, organización de la justicia provincial. Como señala la doctrina constitucional cordobesa contemporánea, la Constitución de 1870 fue la que <strong>consolidó el basamento jurídico-institucional de la provincia</strong>, al punto que las reformas posteriores fueron modificaciones parciales hasta llegar a la nueva constitución de 1987.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Constitución de 1870</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Gobernador convocante</div>
+            <div class="ficha-valor">Félix de la Peña</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sanción</div>
+            <div class="ficha-valor">1870</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Innovación principal</div>
+            <div class="ficha-valor"><strong>Bicameralización</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Reformas posteriores</div>
+            <div class="ficha-valor">1883, 1900, 1912, 1923, 1949</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Vigencia</div>
+            <div class="ficha-valor">Hasta la reforma de 1987</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Carácter</div>
+            <div class="ficha-valor">Base institucional hasta 1987</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Las primeras reformas posteriores —<strong>1883, 1900 y 1912</strong>— introdujeron modificaciones parciales pero significativas, en particular en el régimen electoral. La reforma de 1912 incorporó al texto provincial los lineamientos de la <strong>Ley Sáenz Peña</strong> (voto secreto, obligatorio y universal masculino, sancionada ese año a nivel nacional), fortaleciendo los derechos de ciudadanía política.</p>
+    </div>
+
+    <div class="seccion" id="reforma-1923">
+      <div class="seccion-num">05 · La reforma de 1923</div>
+      <h2>La <em>modernización</em> de las instituciones cordobesas</h2>
+
+      <p>La reforma de 1923 fue una de las más sustantivas del siglo XX cordobés. La Convención Constituyente sesionó durante <strong>51 reuniones entre el 17 de enero y el 13 de octubre de 1923</strong>, y la reforma fue promulgada el 15 de octubre de ese año. Su impacto institucional fue significativo: transformó las instituciones locales e influyó en procesos análogos en otras provincias argentinas.</p>
+
+      <h3>Las principales innovaciones</h3>
+
+      <p>La reforma de 1923 introdujo tres modificaciones estructurales que perdurarían:</p>
+
+      <ul>
+        <li><strong>Creó el Superior Tribunal de Justicia</strong> de Córdoba como cabeza del Poder Judicial provincial, reemplazando el sistema anterior.</li>
+        <li><strong>Amplió el mandato del Poder Ejecutivo de tres a cuatro años</strong>, una innovación que después sería adoptada por otras provincias.</li>
+        <li><strong>Reconoció constitucionalmente el régimen de partidos políticos</strong>, incorporando entre las atribuciones de la Legislatura la de legislar sobre su organización, elección de autoridades y candidatos.</li>
+      </ul>
+
+      <p>El reconocimiento constitucional del régimen de partidos políticos era una novedad continental: la mayoría de las constituciones de la época ignoraban la existencia de los partidos como sujetos institucionales. Córdoba fue pionera al incorporarlos formalmente al texto constitucional.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El régimen municipal en 1923</div>
+        <p>La reforma de 1923 también debatió ampliamente el régimen municipal, aunque mantuvo un esquema conservador que reservaba al ámbito local la función administrativa y limitaba la participación política. Los convencionales que bregaron por <strong>ampliar el electorado municipal</strong> y por <strong>universalizar el sufragio</strong> en las elecciones locales fueron derrotados. Hubo que esperar hasta la reforma de 1987 para que se reconociera plenamente la autonomía municipal cordobesa.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="reforma-universitaria">
+      <div class="seccion-num">06 · La Reforma Universitaria de 1918</div>
+      <h2>"Hombres de una <em>república libre</em>"</h2>
+
+      <p>Cinco años antes de la reforma constitucional de 1923, Córdoba protagonizó uno de los hitos políticos más importantes del siglo XX argentino: la <strong>Reforma Universitaria de 1918</strong>, conocida también como <em>Grito de Córdoba</em>. Aunque no es estrictamente parte de la historia constitucional provincial, su impacto sobre la cultura política cordobesa y argentina fue tan profundo que cualquier relato histórico institucional debe incluirla.</p>
+
+      <p>El conflicto comenzó en marzo de 1918 con una protesta estudiantil en la Universidad Nacional de Córdoba (la primera universidad de Argentina, fundada en 1613) contra las prácticas autoritarias y dogmáticas de la administración universitaria, controlada por <strong>camarillas académicas clericales</strong>. El 11 de junio el Consejo Superior clausuró la Universidad, y el 21 de junio se publicó el documento programático del movimiento.</p>
+
+      <h3>El Manifiesto Liminar</h3>
+
+      <p>El <strong>Manifiesto Liminar</strong>, publicado el 21 de junio de 1918 en La Gaceta Universitaria, fue redactado por <strong>Deodoro Roca</strong> (sin firmar la autoría) y firmado por los dirigentes de la Federación Universitaria de Córdoba (FUC). El documento se dirigió a "los hombres libres de Sud América" y se convirtió en la base de todos los movimientos reformistas universitarios posteriores en América Latina.</p>
+
+      <div class="cita">
+        "Hombres de una república libre, acabamos de romper la última cadena que en pleno siglo XX nos ataba a la antigua dominación monárquica y monástica. Hemos resuelto llamar a todas las cosas por el nombre que tienen. Córdoba se redime. Desde hoy contamos para el país una vergüenza menos y una libertad más. Los dolores que nos quedan son las libertades que nos faltan. Creemos no equivocarnos, las resonancias del corazón nos lo advierten: estamos pisando sobre una revolución, estamos viviendo una hora americana."
+        <span class="cita-fuente">— Manifiesto Liminar de la Federación Universitaria de Córdoba, 21 de junio de 1918. Texto redactado por Deodoro Roca y firmado por los dirigentes de la FUC.</span>
+      </div>
+
+      <h3>Los principios reformistas</h3>
+
+      <p>El movimiento estableció seis principios que se convertirían en patrimonio del sistema universitario argentino y latinoamericano:</p>
+
+      <ol>
+        <li><strong>Autonomía universitaria</strong>: las universidades se autogobiernan sin intervención del Estado político.</li>
+        <li><strong>Cogobierno</strong>: participación estudiantil, docente y graduada en los órganos de gobierno universitario.</li>
+        <li><strong>Extensión universitaria</strong>: la universidad debe interactuar con la sociedad y servir a sus problemas.</li>
+        <li><strong>Periodicidad de la cátedra</strong>: los cargos docentes son temporales y se concursan periódicamente.</li>
+        <li><strong>Libertad de cátedra</strong>: los docentes pueden enseñar sus ideas sin censura.</li>
+        <li><strong>Concursos de oposición</strong> y gratuidad de la enseñanza universitaria.</li>
+      </ol>
+
+      <p>La proyección continental del movimiento fue inmediata. En 1921 se realizó en México el <strong>Primer Congreso Internacional de Estudiantes</strong>, que recogió los principios de Córdoba y creó la Organización Internacional de Estudiantes. La UNESCO incluyó posteriormente al Manifiesto Liminar en su programa <strong>Memoria del Mundo</strong> como uno de los documentos fundacionales del pensamiento latinoamericano del siglo XX.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué importa para la historia constitucional</div>
+        <p>Aunque el Manifiesto de 1918 no es un texto constitucional, su impacto sobre la <strong>cultura política cordobesa</strong> fue determinante. Sentó las bases del antimilitarismo, el latinoamericanismo y el espíritu de no subordinación que caracterizaría a la política cordobesa a lo largo del siglo XX. Es uno de los elementos que explica por qué Córdoba ha sostenido históricamente una <strong>identidad institucional propia</strong> y no alineada con los aparatos nacionales.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="peronismo-1949">
+      <div class="seccion-num">07 · La Constitución peronista de 1949</div>
+      <h2>El <em>interregno</em> 1949-1956</h2>
+
+      <p>En 1949, la <strong>quinta disposición transitoria</strong> de la Reforma Constitucional Nacional del peronismo habilitaba a las provincias a reformar sus constituciones provinciales en un plazo de tres meses. Córdoba aprovechó la habilitación: <strong>la propia Legislatura provincial se constituyó en Asamblea Constituyente</strong> y en 11 sesiones llevó a cabo las reformas, que fueron promulgadas por el gobernador Juan Ignacio San Martín el <strong>9 de junio de 1949</strong>.</p>
+
+      <p>La reforma de 1949 incorporó los principios del <strong>constitucionalismo social</strong>: derechos del trabajador, derechos de la familia, derechos de la ancianidad, función social de la propiedad. Era una constitución en sintonía con las reformas peronistas del orden nacional. También incorporó referencias explícitas a la enseñanza religiosa en el sistema educativo, en línea con el clima ideológico de la época.</p>
+
+      <p>La constitución cordobesa de 1949 tuvo una vigencia corta: el <strong>1° de mayo de 1956</strong>, el gobierno de la Revolución Libertadora derogó por decreto todas las constituciones reformadas durante el peronismo y restableció los textos previos. Córdoba volvió a regirse por su Constitución de 1870 (con las reformas anteriores a 1949), que estaría vigente hasta la nueva constitución de 1987.</p>
+    </div>
+
+    <div class="seccion" id="reforma-1987">
+      <div class="seccion-num">08 · La gran reforma de 1987</div>
+      <h2>La <em>modernización constitucional</em> de la democracia</h2>
+
+      <p>Con el regreso de la democracia, Córdoba inició un proceso de modernización constitucional que culminó en una reforma integral. La <strong>Constitución sancionada el 26 de abril de 1987</strong> fue la primera reforma sustantiva tras la restauración democrática de 1983 y un punto de inflexión institucional. Fue la quinta constitución cordobesa en sentido estricto.</p>
+
+      <h3>Las grandes innovaciones de 1987</h3>
+
+      <p>La reforma de 1987 introdujo cambios estructurales que modernizaron completamente el régimen institucional cordobés:</p>
+
+      <ul>
+        <li><strong>Reelección del gobernador</strong>: por primera vez la Constitución provincial permitió la reelección consecutiva del Ejecutivo (una reelección, mandato de 4 años).</li>
+        <li><strong>Autonomía municipal plena</strong>: reconocimiento explícito del Artículo 180, que define al Municipio como "una comunidad natural fundada en la convivencia" con autonomía política, administrativa, económica, financiera e institucional. <strong>Siete años antes que la Constitución Nacional</strong> reconociera el mismo principio en 1994.</li>
+        <li><strong>Categorización municipal</strong>: distinguió Municipios (más de 2.000 habitantes) y Ciudades (más de 10.000), habilitando a las ciudades a dictar sus propias <strong>Cartas Orgánicas</strong>.</li>
+        <li><strong>Modernización del sistema electoral</strong>: incorporó modificaciones en la composición legislativa que sería reformada nuevamente en 2001.</li>
+        <li><strong>Robustecimiento de derechos sociales y políticos</strong>: en línea con el constitucionalismo democrático de la época.</li>
+      </ul>
+
+      <div class="cita">
+        "Esta Constitución reconoce la existencia del Municipio como una comunidad natural fundada en la convivencia y asegura el régimen municipal basado en su autonomía política, administrativa, económica, financiera e institucional. Los Municipios son independientes de todo otro poder en el ejercicio de sus atribuciones, conforme a esta Constitución y las leyes que en su consecuencia se dicten."
+        <span class="cita-fuente">— Constitución de la Provincia de Córdoba (1987), Artículo 180.</span>
+      </div>
+
+      <p>La autonomía municipal cordobesa fue una <strong>innovación pionera</strong> que sería imitada por otras provincias y consagrada a nivel nacional en la Reforma Constitucional de 1994. Hoy, treinta y nueve años después, Córdoba sigue siendo una de las provincias con régimen municipal más robusto de Argentina, con más de 250 municipios y 173 comunas, varios de los cuales han dictado sus propias cartas orgánicas.</p>
+    </div>
+
+    <div class="seccion" id="reforma-2001">
+      <div class="seccion-num">09 · La unicameralización de 2001</div>
+      <h2>El <em>retorno</em> a la cámara única</h2>
+
+      <p>El 27 de julio de 2001, en medio de una de las crisis institucionales más profundas de Argentina, la Legislatura cordobesa sancionó la <strong>Ley 8.947 de Necesidad de la Reforma Constitucional</strong>. El argumento central de la iniciativa fue <em>"reducir los costos de la política"</em>, en sintonía con un clima social marcado por el descreimiento generalizado en la representación política.</p>
+
+      <h3>La consulta popular de 2001</h3>
+
+      <p>La necesidad de la reforma había sido apoyada antes por una <strong>consulta popular no vinculante celebrada en julio de 2001</strong>, en la que la ciudadanía cordobesa se pronunció a favor de la reducción del número de legisladores provinciales. La consulta fue el primer mecanismo de democracia directa significativo aplicado en una reforma constitucional provincial argentina.</p>
+
+      <p>La Convención Constituyente sesionó solamente <strong>7 días</strong>, entre el 8 y 15 de septiembre de 2001 (los mismos días, casualmente, en que ocurría el ataque terrorista a las Torres Gemelas en Estados Unidos). Las urgencias políticas y económicas que vivía Argentina marcaron el debate.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Reforma de 2001</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Necesidad declarada</div>
+            <div class="ficha-valor">Ley 8.947 (julio 2001)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Consulta popular</div>
+            <div class="ficha-valor">Julio 2001 (no vinculante)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Convención Constituyente</div>
+            <div class="ficha-valor">8-15 de septiembre de 2001</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Innovación principal</div>
+            <div class="ficha-valor"><strong>Legislatura unicameral</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Reducción de legisladores</div>
+            <div class="ficha-valor">De 133 a <strong>70 miembros</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sistema electoral nuevo</div>
+            <div class="ficha-valor">Mixto: 26 dep. + 44 distrito único</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Las reformas clave</h3>
+
+      <p>La reforma de 2001 introdujo cambios profundos en el Poder Legislativo:</p>
+
+      <ul>
+        <li>Reemplazó el <strong>sistema bicameral</strong> (vigente desde 1870) por un sistema unicameral con una sola cámara de 70 miembros, retornando al unicameralismo cordobés del período 1821-1870.</li>
+        <li>Estableció un <strong>sistema electoral mixto</strong> único en el país: 26 legisladores son elegidos por departamento (uno por cada uno de los 26 departamentos provinciales) y 44 son elegidos por distrito único provincial con representación proporcional D'Hondt.</li>
+        <li>Modificó los <strong>requisitos para ser legislador</strong>: anteriormente había que tener 21 años (diputados) o 30 (senadores). Desde 2001, se requiere haber cumplido 18 años al momento de la incorporación.</li>
+        <li>Estableció que los <strong>legisladores inician y concluyen sus mandatos en la misma oportunidad que el Poder Ejecutivo</strong>, terminando con los desfases temporales que existían anteriormente.</li>
+        <li>Amplió el <strong>período de sesiones ordinarias</strong>: de febrero a diciembre, uno de los más extensos del país.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué fue posible la unicameralización?</div>
+        <p>La reforma de 2001 fue posible por una combinación de factores: el <strong>clima de antipolítica</strong> de la época (crisis del 2001), la presión social por reducir los costos de la representación, el <strong>impulso del oficialismo cordobés</strong> (que controlaba la Legislatura y promovió la reforma), y el <strong>uso de la consulta popular</strong> como mecanismo legitimante. Otras provincias argentinas debatieron reformas similares en años posteriores, pero Córdoba ha sido la única jurisdicción grande en sostener efectivamente el unicameralismo.</p>
+      </div>
+
+      <p>El sistema unicameral cordobés es hoy una particularidad nacional: <strong>de las cuatro provincias más grandes de Argentina, Córdoba es la única con legislatura unicameral</strong>. Buenos Aires, Santa Fe y Mendoza mantienen sus regímenes bicamerales. Esta singularidad explica buena parte del peso del sistema electoral cordobés sobre la representación territorial provincial, tema del capítulo 10.02.04.</p>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Córdoba</strong> (texto vigente, con la reforma de 2001). Disponible en el sitio oficial de la Legislatura: legislaturacba.gob.ar</li>
+        <li><strong>Digesto Constitucional de la Provincia de Córdoba</strong> · Constituciones y reformas constitucionales entre los años 1821 y 2001. Dirección: Juan Ferrer. Publicado por la Legislatura de la Provincia de Córdoba.</li>
+        <li><strong>Historia Constitucional de la Provincia de Córdoba</strong> (1821-2001). Proyecto de investigación de la Universidad Siglo 21. Editorial UNC.</li>
+        <li><strong>Manifiesto Liminar de la Reforma Universitaria</strong>, Córdoba, 21 de junio de 1918. Texto redactado por Deodoro Roca. Publicado originalmente en La Gaceta Universitaria.</li>
+        <li><strong>UNESCO · Memoria del Mundo</strong> - Latinoamérica y el Caribe. Inscripción del Manifiesto Liminar como documento patrimonial. unesco.org/memory-world.</li>
+        <li><strong>Ley 8.947 de Necesidad de la Reforma Constitucional</strong> (Córdoba, 27 de julio de 2001).</li>
+        <li><strong>200 años de la Constitución de Córdoba</strong> · Publicación de la Facultad de Derecho de la Universidad Nacional de Córdoba (2021).</li>
+        <li><strong>Buchbinder, Pablo</strong> (2018). "La Reforma y su impacto en América Latina: aportes para la actualización y revisión historiográfica".</li>
+        <li><strong>Bolaños, Juan</strong> (ed.). Historia Constitucional de la Provincia de Córdoba II. Editorial UNC. Aborda específicamente las reformas del "largo siglo XX" (1900-2001).</li>
+        <li><strong>Universidad Nacional de Córdoba</strong> · Aniversario de la Reforma Universitaria. Documentación histórica del movimiento de 1918.</li>
+      </ul>
+    </div>
+
+    <a href="cordoba-poderes.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.02.02</div>
+        <h3>Los tres <em>poderes</em> provinciales</h3>
+        <p>El sistema institucional cordobés vigente: el gobernador, la legislatura unicameral con sistema electoral mixto único en el país, y el Tribunal Superior de Justicia. Los órganos extra-poderes y las particularidades del régimen.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

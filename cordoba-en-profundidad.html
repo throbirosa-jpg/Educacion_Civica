@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Provincia de Córdoba · En profundidad — Educación Cívica</title>
-<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Córdoba: historia constitucional, poderes provinciales, régimen municipal, particularidades distintivas y agenda institucional pendiente. Cinco capítulos premium con datos verificables.">
+<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Córdoba: cinco capítulos premium publicados con historia constitucional, poderes provinciales, autonomía municipal plena, sistema electoral pionero (BUS y paridad) y tensiones con la Nación (caja previsional, coparticipación, doctrina de no subordinación).">
 <link rel="canonical" href="https://educacioncivica.com.ar/cordoba-en-profundidad.html">
 
 <meta property="og:title" content="Provincia de Córdoba · En profundidad">
-<meta property="og:description" content="Estudio institucional en profundidad: cinco capítulos sobre la Provincia de Córdoba.">
+<meta property="og:description" content="Cinco capítulos publicados sobre la Provincia de Córdoba: historia, poderes, municipios, sistema electoral y tensiones con la Nación.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://educacioncivica.com.ar/cordoba-en-profundidad.html">
 <meta property="og:site_name" content="Educación Cívica">
@@ -68,11 +68,11 @@
 
   .capitulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
 
-  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; opacity: 0.92; }
-  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--sol-dark); }
-  .capitulo-card:hover { opacity: 1; border-color: var(--sol-dark); }
+  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; }
+  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--premium); }
+  .capitulo-card:hover { border-color: var(--premium); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 79, 140, 0.12); }
 
-  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--sol-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--premium-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
   .capitulo-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); line-height: 1.25; margin-bottom: 0.8rem; }
   .capitulo-titulo em { font-style: italic; color: var(--premium-dark); }
   .capitulo-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
@@ -80,7 +80,9 @@
   .capitulo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
   .capitulo-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.7rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); font-weight: 500; }
   .capitulo-tag.estado-pronto { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
-  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--sol-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-tag.estado-disponible { background: var(--verde-soft); border-color: var(--verde); color: var(--verde); font-weight: 600; }
+  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--premium-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-card:hover .capitulo-link { color: var(--premium); }
 
   .nav-otras-provincias { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem; margin: 3rem 0; }
   .nav-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
@@ -91,6 +93,10 @@
   .nav-link p { font-size: 0.78rem; color: var(--tinta-soft); line-height: 1.4; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase; }
 
   .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .proximos-contenidos.completado { background: var(--verde-soft); border-left-color: var(--verde); }
+  .proximos-contenidos.completado .proximos-titulo { color: var(--verde); }
+  .proximos-contenidos.completado h3 em { color: var(--verde); }
+  .proximos-contenidos.completado p strong { color: var(--verde); }
   .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
   .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
   .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
@@ -109,7 +115,7 @@
 </head>
 <body>
 
-<div class="premium-banner">— Estudio provincial · <strong>Capítulos en producción</strong></div>
+<div class="premium-banner">— Estudio provincial · <strong>★ 5 capítulos publicados</strong></div>
 
 <nav>
   <div class="nav-inner">
@@ -160,77 +166,77 @@
 <div class="container">
 
   <div class="seccion-intro">
-    <div class="seccion-eyebrow">— Cinco capítulos en desarrollo</div>
-    <h2 class="seccion-titulo">El plan de <em>contenidos</em> de esta sección</h2>
-    <p class="seccion-descripcion">Esta es la estructura del estudio sobre la Provincia de Córdoba, replicando el modelo del estudio sobre CABA. Los cinco capítulos están planificados pero <strong>aún en producción</strong>: cada uno se publicará en próximas entregas con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+    <div class="seccion-eyebrow">— Cinco capítulos publicados</div>
+    <h2 class="seccion-titulo">Los <em>cinco capítulos</em> publicados</h2>
+    <p class="seccion-descripcion">El estudio completo de la Provincia de Córdoba: <strong>cinco capítulos publicados</strong> con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Total: aproximadamente <strong>215 KB de contenido institucional</strong> sobre la provincia mediterránea, desde el Reglamento Provisorio de 1821 hasta el litigio actual de la Caja de Jubilaciones ante la Corte Suprema.</p>
   </div>
 
   <div class="capitulos-grid">
 
-    <div class="capitulo-card">
+    <a href="cordoba-historia.html" class="capitulo-card">
       <div class="capitulo-num">10.02.01</div>
-      <h3 class="capitulo-titulo">Historia <em>institucional</em></h3>
-      <p class="capitulo-desc">Córdoba en el ciclo del federalismo argentino: la Liga del Norte y los enfrentamientos con Buenos Aires del siglo XIX. La Reforma Universitaria de 1918 y su proyección continental. Las reformas constitucionales provinciales de 1923, 1949, 1987 (la gran modernización) y 2001 (la unicameralización).</p>
+      <h3 class="capitulo-titulo">Historia <em>constitucional</em></h3>
+      <p class="capitulo-desc">Cinco constituciones cordobesas desde el Reglamento Provisorio de 1821 hasta la unicameralización de 2001. La Reforma Universitaria de 1918 y el Manifiesto Liminar de Deodoro Roca. Las grandes reformas de 1923 (modernización), 1987 (autonomía municipal plena) y 2001 (unicameralización).</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Reforma 1918</span>
           <span class="capitulo-tag">Federalismo cordobés</span>
           <span class="capitulo-tag">Reformas constitucionales</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="cordoba-poderes.html" class="capitulo-card">
       <div class="capitulo-num">10.02.02</div>
       <h3 class="capitulo-titulo">Los tres <em>poderes</em></h3>
-      <p class="capitulo-desc">El gobernador (con una reelección consecutiva), la Legislatura unicameral de 70 miembros (26 departamentales + 44 por distrito único) y el Tribunal Superior de Justicia. Sistema electoral mixto único en el país: combina representación territorial departamental con representación proporcional provincial.</p>
+      <p class="capitulo-desc">El gobernador (con una reelección consecutiva sin balotaje provincial), la Legislatura unicameral de 70 miembros (26 departamentales + 44 por distrito único) y el Tribunal Superior de Justicia. Sistema electoral mixto único en el país. Los órganos extra-poderes (Tribunal de Cuentas electo en boleta, Fiscalía de Estado, Defensoría del Pueblo).</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Unicameralismo</span>
           <span class="capitulo-tag">Sistema mixto</span>
           <span class="capitulo-tag">Reforma 2001</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="cordoba-municipios.html" class="capitulo-card">
       <div class="capitulo-num">10.02.03</div>
       <h3 class="capitulo-titulo">Autonomía municipal <em>plena</em></h3>
-      <p class="capitulo-desc">Córdoba fue pionera en reconocer la autonomía municipal plena en su reforma constitucional de 1987 (siete años antes que la Constitución Nacional). Los municipios cordobeses pueden dictar sus propias cartas orgánicas. Hoy existen más de 250 municipios y 170 comunas con distintos niveles de autonomía.</p>
+      <p class="capitulo-desc">El régimen municipal cordobés: Artículo 180 de la Constitución provincial (1987, siete años antes que el Art. 123 CN). Distinción entre Municipios (>2.000 hab), Ciudades (>10.000) y Comunas (<2.000). Ley 8.102 y régimen de Cartas Orgánicas. Comparación con BA, Santa Fe y Mendoza.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Autonomía municipal</span>
           <span class="capitulo-tag">Cartas orgánicas</span>
           <span class="capitulo-tag">Reforma 1987</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="cordoba-electoral.html" class="capitulo-card">
       <div class="capitulo-num">10.02.04</div>
       <h3 class="capitulo-titulo">Pionera <em>electoral</em></h3>
-      <p class="capitulo-desc">Tres innovaciones electorales argentinas nacieron en Córdoba: la <strong>Ley de Paridad 8.901 del año 2000</strong> (primera del país), la <strong>boleta única provincial</strong> en uso desde 2011, y el modelo institucional que inspiró la BUP nacional de 2024. Análisis de cada innovación y de sus efectos sobre el sistema político cordobés.</p>
+      <p class="capitulo-desc">Tres innovaciones electorales nacieron en Córdoba: la <strong>Ley 8.901 de Paridad</strong> (noviembre de 2000, tercera del país pero primera grande), la <strong>Boleta Única de Sufragio provincial</strong> (estrenada en 2011 junto con Santa Fe), y el modelo que inspiró la BUP nacional de 2024. Efectos verificados: efecto fatiga y voto cruzado documentados por Pérez Corti.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Paridad 2000</span>
-          <span class="capitulo-tag">BUP cordobés</span>
+          <span class="capitulo-tag">BUS cordobesa</span>
           <span class="capitulo-tag">Modelo nacional</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="cordoba-tensiones-nacion.html" class="capitulo-card">
       <div class="capitulo-num">10.02.05</div>
       <h3 class="capitulo-titulo">Tensiones con la <em>Nación</em></h3>
-      <p class="capitulo-desc">Córdoba ha sido históricamente una provincia con una identidad política propia, no alineada con los aparatos nacionales. Análisis de la coparticipación de Córdoba (aporta más de lo que recibe), de los conflictos por la caja jubilatoria provincial no transferida, y de la doctrina cordobesa de la "no subordinación" política a Buenos Aires.</p>
+      <p class="capitulo-desc">La caja de jubilaciones provincial no transferida (litigio actual ante la Corte Suprema por más de $1 billón, 2020-2024). La coparticipación cordobesa: aporta el 10% del PBI, recibe el 9,5%. El histórico 15% para ANSES y las sentencias "Santa Fe" y "San Luis" de 2015. La doctrina de no subordinación política y la rebelión policial de 2013.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Caja jubilatoria</span>
           <span class="capitulo-tag">Coparticipación</span>
-          <span class="capitulo-tag">Autonomía política</span>
+          <span class="capitulo-tag">No subordinación</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
   </div>
 
@@ -260,10 +266,10 @@
     </div>
   </div>
 
-  <div class="proximos-contenidos">
-    <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
-    <h3>Los <em>cinco capítulos</em> en producción</h3>
-    <p>Los cinco capítulos planificados sobre la Provincia de Córdoba se publicarán progresivamente en próximas entregas, siguiendo el orden de prioridad establecido en el hub general de provincias. Cada capítulo incluirá análisis institucional, datos verificables, referencias normativas y fuentes oficiales. Si tenés sugerencias sobre qué temas profundizar o qué fuentes consultar, escribinos.</p>
+  <div class="proximos-contenidos completado">
+    <div class="proximos-titulo">— Estudio publicado completo</div>
+    <h3>Los <em>cinco capítulos</em> ya están disponibles</h3>
+    <p>El estudio sobre la Provincia de Córdoba está <strong>completo</strong>. Los cinco capítulos suman aproximadamente <strong>215 KB de contenido institucional</strong> con citas a fuentes oficiales, análisis comparado con otras provincias y revisión histórica. <strong>Próximos estudios provinciales</strong>: Santa Fe (con foco en la reforma constitucional 2025) y Mendoza (modelo BUP, única sin reelección de gobernador). Si tenés sugerencias sobre qué temas profundizar, escribinos.</p>
   </div>
 
 </div>

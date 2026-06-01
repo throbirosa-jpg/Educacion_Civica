@@ -302,4 +302,36 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Capítulo 10.02: Provincia de Córdoba (5 caps) -->
+  <url>
+    <loc>https://educacioncivica.com.ar/cordoba-historia.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/cordoba-poderes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/cordoba-municipios.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/cordoba-electoral.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/cordoba-tensiones-nacion.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

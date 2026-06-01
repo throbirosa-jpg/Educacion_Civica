@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Córdoba · Autonomía municipal plena (10.02.03) — Educación Cívica</title>
+<meta name="description" content="El régimen municipal de Córdoba: 250+ municipios y 173 comunas con autonomía plena reconocida por la Constitución provincial de 1987 (siete años antes que la Reforma Nacional de 1994). Cartas orgánicas, categorización por habitantes y particularidades del régimen cordobés.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-municipios.html">
+
+<meta property="og:title" content="Córdoba · Autonomía municipal plena">
+<meta property="og:description" content="Más de 250 municipios y 173 comunas con autonomía constitucional reconocida desde 1987.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-municipios.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.02.03</strong> de la sección Córdoba en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="cordoba-en-profundidad.html">Córdoba</a> ·
+      <span>Régimen municipal</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02.03 · Estudio provincial</div>
+    <h1 class="page-title">Autonomía municipal <em>plena</em></h1>
+    <div class="page-subtitulo">— Pionera nacional · Reforma constitucional 1987</div>
+    <p class="page-intro">Córdoba <strong>reconoció constitucionalmente la autonomía municipal plena en 1987</strong>, <strong>siete años antes</strong> que la Reforma Constitucional Nacional de 1994 incorporara el principio en el Artículo 123. El Artículo 180 de la Constitución provincial define al Municipio como <em>"una comunidad natural fundada en la convivencia"</em> con autonomía política, administrativa, económica, financiera e institucional. Hoy existen en la provincia más de <strong>250 municipios</strong> y <strong>173 comunas</strong>, varios de los cuales han dictado sus propias Cartas Orgánicas. Este capítulo cubre el régimen municipal cordobés, la distinción municipios/ciudades/comunas, la Ley 8.102 que organiza el funcionamiento de los municipios sin carta y la posición de Córdoba como modelo nacional de autonomía local.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">250+</div>
+        <div class="page-stat-label">Municipios</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">173</div>
+        <div class="page-stat-label">Comunas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1987</div>
+        <div class="page-stat-label">Reforma de autonomía plena</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">10.000</div>
+        <div class="page-stat-label">Habitantes mín. para Ciudad</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#marco-constitucional">01 · Marco constitucional 1987</a></li>
+      <li><a href="#categorias">02 · Categorías municipales</a></li>
+      <li><a href="#municipio-ciudad">03 · Municipio vs Ciudad</a></li>
+      <li><a href="#carta-organica">04 · Las Cartas Orgánicas</a></li>
+      <li><a href="#ley-8102">05 · La Ley 8.102 de Municipios</a></li>
+      <li><a href="#comunas">06 · El régimen de Comunas</a></li>
+      <li><a href="#capital">07 · La Carta Orgánica de Córdoba Capital</a></li>
+      <li><a href="#comparacion">08 · Comparación con otras provincias</a></li>
+      <li><a href="#fuentes">09 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="marco-constitucional">
+      <div class="seccion-num">01 · Marco constitucional</div>
+      <h2>El <em>Artículo 180</em> de la Constitución</h2>
+
+      <p>El régimen municipal cordobés vigente se basa en los Artículos 180 a 194 de la <strong>Constitución de la Provincia de Córdoba</strong> sancionada en 1987. La sección está específicamente dedicada al "Régimen Municipal" y constituye una de las regulaciones constitucionales sobre autonomía local más extensas y robustas del país.</p>
+
+      <p>El texto del Artículo 180 es la clave del régimen, y vale la pena leerlo completo:</p>
+
+      <div class="cita">
+        "Esta Constitución reconoce la existencia del Municipio como una comunidad natural fundada en la convivencia y asegura el régimen municipal basado en su autonomía política, administrativa, económica, financiera e institucional. Los Municipios son independientes de todo otro poder en el ejercicio de sus atribuciones, conforme a esta Constitución y las leyes que en su consecuencia se dicten."
+        <span class="cita-fuente">— Constitución de la Provincia de Córdoba (1987), Artículo 180.</span>
+      </div>
+
+      <p>El texto reconoce <strong>cinco dimensiones de autonomía municipal</strong>: política (los municipios eligen sus propias autoridades), administrativa (organizan su propia estructura administrativa), económica (gestionan sus recursos), financiera (administran sus presupuestos) y institucional (pueden dictarse sus propias normas básicas, las Cartas Orgánicas). Es la definición más amplia de autonomía municipal del derecho público argentino.</p>
+
+      <h3>El Artículo 181: criterio poblacional</h3>
+
+      <p>El Artículo 181 establece el criterio poblacional para el reconocimiento de un asentamiento como municipio:</p>
+
+      <div class="cita">
+        "Toda población con asentamiento estable de más de dos mil (2.000) habitantes, se considera Municipio. Aquellas a las que la ley reconozca el carácter de ciudades, pueden dictar sus Cartas Orgánicas."
+        <span class="cita-fuente">— Constitución de la Provincia de Córdoba (1987), Artículo 181.</span>
+      </div>
+
+      <p>El umbral de 2.000 habitantes para constituirse en Municipio es uno de los más bajos del país, lo que ha permitido la proliferación de gobiernos locales. Los asentamientos con menos de 2.000 habitantes son considerados <strong>Comunas</strong>, una figura institucional intermedia que también tiene autonomía aunque más limitada.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Qué significa "autonomía institucional"?</div>
+        <p>La <strong>autonomía institucional</strong> es la dimensión más amplia y distintiva del régimen cordobés. Significa que los municipios pueden <strong>dictarse a sí mismos sus propias normas básicas</strong> (cartas orgánicas), análogas a constituciones locales. Pueden definir su forma de gobierno, sus mecanismos de control, sus instituciones de participación ciudadana, sus reglas electorales locales, etc., dentro del marco de la Constitución provincial. Es una capacidad equivalente a la que tienen las provincias frente a la Nación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="categorias">
+      <div class="seccion-num">02 · Las categorías municipales</div>
+      <h2>Municipios, ciudades y <em>comunas</em></h2>
+
+      <p>El régimen cordobés distingue tres categorías de gobiernos locales, definidas en función de la cantidad de habitantes:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Habitantes</th>
+              <th>Puede dictar Carta Orgánica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Comuna</strong></td>
+              <td>Menos de 2.000</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Municipio</strong></td>
+              <td>2.000 a 10.000</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Ciudad</strong></td>
+              <td>Más de 10.000</td>
+              <td><strong>Sí</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Reconocimiento por ley</h3>
+
+      <p>El reconocimiento de un asentamiento como Municipio se realiza por <strong>ley provincial</strong> (Art. 3 de la Ley 8.102). El procedimiento incluye:</p>
+
+      <ol>
+        <li>Iniciativa del Poder Ejecutivo Provincial, de oficio o a pedido de los vecinos.</li>
+        <li>Realización de un <strong>censo</strong> para verificar el cumplimiento del requisito poblacional.</li>
+        <li>Confección de una <strong>memoria descriptiva</strong> de la planta urbana con mapa.</li>
+        <li>Elaboración de un <strong>informe sobre la necesidad y factibilidad</strong> de la prestación de servicios.</li>
+        <li>Preparación de un <strong>plan regulador de desarrollo urbano</strong>.</li>
+        <li>Demarcación del <strong>radio municipal</strong> dentro de los 90 días.</li>
+        <li>Envío del proyecto de ley a la Legislatura provincial dentro de los 180 días.</li>
+        <li>Sanción de la ley de reconocimiento.</li>
+      </ol>
+
+      <h3>La categoría de "ciudad"</h3>
+
+      <p>La declaración de un municipio como "ciudad" tiene un procedimiento particular: <strong>desde la sanción de la Ley 4.778 en 1964</strong>, se realiza por <strong>decreto del Poder Ejecutivo Provincial</strong> cuando el municipio supera los 10.000 habitantes. Antes de esa ley, la declaración requería ley específica.</p>
+
+      <p>Sin embargo, la Legislatura ha hecho declaraciones de ciudad a municipios con menos de 10.000 habitantes en casos puntuales, ejerciendo una facultad excepcional. Los datos del Censo provincial de 1996 mostraron que eran ciudades formales con menos de 10.000 habitantes los casos de <strong>Almafuerte, General Cabrera, Leones, Corral de Bustos, Huinca Renancó y Coronel Moldes</strong>. Para el Censo Nacional 2010, Huinca Renancó y Coronel Moldes aún estaban por debajo del piso poblacional.</p>
+    </div>
+
+    <div class="seccion" id="municipio-ciudad">
+      <div class="seccion-num">03 · Municipio vs Ciudad</div>
+      <h2>¿Qué cambia con la <em>categoría de ciudad</em>?</h2>
+
+      <p>La diferencia institucional más importante entre un Municipio común y una Ciudad es la <strong>capacidad de dictar Carta Orgánica</strong>. Esta diferencia tiene consecuencias significativas:</p>
+
+      <h3>Municipios sin Carta Orgánica</h3>
+
+      <p>Los Municipios que no pueden dictar Carta Orgánica (los que tienen menos de 10.000 habitantes) o las Ciudades que aún no lo han hecho se rigen por la <strong>Ley 8.102 de Régimen de Municipios y Comunas</strong>. Esta ley provincial es un marco general que regula:</p>
+
+      <ul>
+        <li>La forma de gobierno local (sistema Concejo Deliberante - Departamento Ejecutivo).</li>
+        <li>La composición de los órganos.</li>
+        <li>El procedimiento legislativo municipal.</li>
+        <li>El régimen de funcionarios.</li>
+        <li>El sistema de control de cuentas.</li>
+        <li>El régimen electoral.</li>
+        <li>Los mecanismos de democracia directa (referéndum, iniciativa popular, revocatoria).</li>
+      </ul>
+
+      <h3>Ciudades con Carta Orgánica</h3>
+
+      <p>Las Ciudades que <strong>han dictado su Carta Orgánica</strong> se rigen primariamente por ese instrumento, dentro del marco de la Constitución provincial y de las leyes generales. La Carta Orgánica es el equivalente de una "constitución municipal" y define:</p>
+
+      <ul>
+        <li>La <strong>forma de gobierno</strong> específica (que puede apartarse del modelo Concejo Deliberante - Departamento Ejecutivo si la Carta así lo dispone).</li>
+        <li>La <strong>composición de los órganos municipales</strong>.</li>
+        <li>Los <strong>mecanismos de participación ciudadana</strong> (consejos vecinales, audiencias públicas, presupuestos participativos, etc.).</li>
+        <li>El <strong>régimen tributario municipal</strong>.</li>
+        <li>Las <strong>materias específicas de competencia local</strong>.</li>
+        <li>Los <strong>derechos vecinales</strong> garantizados por el municipio.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Cómo se sanciona una Carta Orgánica?</div>
+        <p>Para sancionar una Carta Orgánica, el municipio debe convocar a una <strong>Convención Municipal</strong> elegida por el cuerpo electoral local. La convocatoria se hace por ordenanza municipal. La Convención sesiona durante un período acotado y sanciona el texto, que entra en vigencia tras su promulgación. La Carta puede modificarse por una nueva convención convocada al efecto. Más de 40 ciudades cordobesas han ejercido esta facultad y dictado sus propias cartas orgánicas, incluyendo la Capital, Río Cuarto, Villa Carlos Paz, Villa María, San Francisco, Río Tercero, entre otras.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="carta-organica">
+      <div class="seccion-num">04 · Las Cartas Orgánicas</div>
+      <h2>"Constituciones <em>municipales</em>" en Córdoba</h2>
+
+      <p>Las Cartas Orgánicas son una de las particularidades más distintivas del régimen cordobés y reflejan la profundidad del reconocimiento de la autonomía municipal. A diferencia de provincias como Buenos Aires (donde los municipios no pueden dictarse cartas orgánicas), Córdoba ha generado una <strong>tradición de constitucionalismo local</strong> que es única en el contexto argentino.</p>
+
+      <h3>Composición de las Cartas Orgánicas</h3>
+
+      <p>Una Carta Orgánica municipal cordobesa típica contiene:</p>
+
+      <ul>
+        <li><strong>Preámbulo y declaraciones</strong>: principios generales, derechos garantizados, fines del municipio.</li>
+        <li><strong>Estructura de gobierno</strong>: composición y atribuciones del Concejo Deliberante (o del órgano equivalente) y del Departamento Ejecutivo (Intendencia).</li>
+        <li><strong>Régimen electoral local</strong>: sistema electoral, requisitos para candidatos, mecanismos electorales.</li>
+        <li><strong>Régimen tributario y financiero</strong>: facultades para crear tasas y contribuciones, regulación del presupuesto local.</li>
+        <li><strong>Organismos de control</strong>: tribunales de cuentas locales, defensorías del vecino, etc.</li>
+        <li><strong>Mecanismos de participación</strong>: audiencias públicas, presupuesto participativo, iniciativa popular, referéndum, revocatoria de mandatos, etc.</li>
+        <li><strong>Régimen de servicios públicos</strong>: agua, transporte, residuos, etc.</li>
+        <li><strong>Régimen de planificación urbana</strong>: facultades sobre uso del suelo, planificación territorial.</li>
+        <li><strong>Disposiciones transitorias</strong>.</li>
+      </ul>
+
+      <h3>Ejemplos de innovación municipal</h3>
+
+      <p>Las Cartas Orgánicas cordobesas han incorporado innovaciones institucionales que no estaban disponibles bajo el régimen de la Ley 8.102. Algunos ejemplos:</p>
+
+      <ul>
+        <li><strong>Defensorías del Vecino o del Pueblo Municipal</strong>: órganos análogos al Defensor del Pueblo provincial, pero en el ámbito local.</li>
+        <li><strong>Tribunales de Cuentas locales</strong>: órganos de control externo de las cuentas municipales propios del municipio.</li>
+        <li><strong>Mecanismos de presupuesto participativo</strong>: procedimientos formales para que los vecinos decidan sobre una porción del presupuesto local.</li>
+        <li><strong>Sistemas de votación electrónica</strong> o de boleta única en elecciones locales.</li>
+        <li><strong>Cupos y paridad de género</strong> en órganos electivos locales.</li>
+        <li><strong>Derechos especiales</strong> para adultos mayores, personas con discapacidad, niños y adolescentes.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="ley-8102">
+      <div class="seccion-num">05 · La Ley 8.102</div>
+      <h2>El marco de los <em>municipios sin Carta</em></h2>
+
+      <p>La <strong>Ley Provincial 8.102 de Régimen de Municipios y Comunas</strong> es la norma que organiza el funcionamiento de todos los gobiernos locales que no han dictado su propia Carta Orgánica. La ley fue sancionada en 1991 y modificada en varias oportunidades. Su Artículo 1 define su ámbito de aplicación:</p>
+
+      <div class="cita">
+        "La presente Ley regirá: 1) En los Municipios que no estén facultados para dictar su Carta Orgánica. 2) En los Municipios que no hayan dictado su Carta Orgánica, estando facultados para hacerlo. 3) En las Comunas."
+        <span class="cita-fuente">— Ley Provincial 8.102, Artículo 1.</span>
+      </div>
+
+      <p>Es decir, la Ley 8.102 rige supletoriamente para todos los municipios cordobeses que no se hayan dado sus propias cartas. Su rol es similar al de un código civil local que provee reglas básicas cuando no hay normas específicas.</p>
+
+      <h3>El sistema de gobierno municipal estándar</h3>
+
+      <p>Para los municipios sin Carta Orgánica, la Ley 8.102 dispone un sistema obligatorio de gobierno: <strong>Concejo Deliberante - Departamento Ejecutivo</strong>. Es decir, un cuerpo deliberativo (Concejo) electo por el pueblo del municipio que sanciona ordenanzas locales, y un Departamento Ejecutivo unipersonal (Intendente) electo por el pueblo que ejecuta las ordenanzas y administra el municipio.</p>
+
+      <p>Las atribuciones de los municipios bajo la Ley 8.102 son extensas e incluyen:</p>
+
+      <ul>
+        <li><strong>Establecer restricciones al dominio</strong>, servidumbres y calificar casos de expropiación por utilidad pública.</li>
+        <li><strong>Regular y coordinar planes urbanísticos y edilicios</strong>.</li>
+        <li><strong>Reglamentar la instalación y funcionamiento</strong> de salas de espectáculos, entretenimientos y deportes.</li>
+        <li><strong>Reglamentar la organización</strong> de Comisiones de Vecinos, Consejos Asesores Municipales y otros institutos de participación.</li>
+        <li><strong>Crear tasas y contribuciones</strong> dentro del marco de su competencia.</li>
+        <li><strong>Administrar los servicios públicos locales</strong>.</li>
+        <li><strong>Ejercer el poder de policía</strong> en materias de su competencia, dentro del radio municipal.</li>
+      </ul>
+
+      <h3>Mecanismos de democracia directa</h3>
+
+      <p>La Ley 8.102 establece tres mecanismos de democracia directa que tienen rango legal para todos los municipios cordobeses (las Cartas Orgánicas pueden ampliarlos pero no reducirlos):</p>
+
+      <ul>
+        <li><strong>Iniciativa popular</strong>: los vecinos pueden presentar proyectos de ordenanza ante el Concejo Deliberante.</li>
+        <li><strong>Referéndum</strong>: el Concejo o el Departamento Ejecutivo pueden convocar a referéndum sobre temas específicos.</li>
+        <li><strong>Revocatoria popular</strong>: los vecinos pueden revocar los mandatos de Intendente y Concejales mediante un procedimiento formal.</li>
+      </ul>
+
+      <p>Estos institutos son derecho positivo cordobés desde 1991 y han sido aplicados en diversas ocasiones a lo largo de los últimos 30 años, aunque con menor frecuencia que en jurisdicciones de tradición plebiscitaria más fuerte.</p>
+    </div>
+
+    <div class="seccion" id="comunas">
+      <div class="seccion-num">06 · El régimen de Comunas</div>
+      <h2>Los asentamientos de <em>menos de 2.000</em> habitantes</h2>
+
+      <p>Las <strong>Comunas</strong> son una figura institucional propia del régimen cordobés (que también existe en otras provincias como Santa Fe pero con criterios diferentes). Se aplica a asentamientos estables de menos de 2.000 habitantes que tienen autonomía limitada respecto del Municipio común. La Ley 8.102 las regula específicamente.</p>
+
+      <h3>Diferencias entre Comunas y Municipios</h3>
+
+      <p>Las principales diferencias entre Comunas y Municipios son:</p>
+
+      <ul>
+        <li><strong>Población mínima</strong>: Municipios desde 2.000 habitantes; Comunas pueden tener menos.</li>
+        <li><strong>Estructura de gobierno</strong>: las Comunas tienen una <strong>Comisión Comunal</strong> de varios miembros, en lugar del Concejo Deliberante + Departamento Ejecutivo separados. La Comisión Comunal combina las funciones legislativas y ejecutivas.</li>
+        <li><strong>Carta Orgánica</strong>: las Comunas <strong>no pueden</strong> dictar Carta Orgánica, sea cual sea su evolución poblacional posterior.</li>
+        <li><strong>Recursos</strong>: las Comunas reciben coparticipación provincial pero con coeficientes menores y tienen menor capacidad de generar recursos propios.</li>
+      </ul>
+
+      <p>Algunas Comunas cordobesas son históricas y se mantienen como tales a pesar de tener poblaciones cercanas al umbral de 2.000 habitantes. Otras se constituyeron a partir de pequeños asentamientos rurales que demandaron una organización institucional propia.</p>
+    </div>
+
+    <div class="seccion" id="capital">
+      <div class="seccion-num">07 · La Carta Orgánica de Córdoba Capital</div>
+      <h2>El <em>caso emblemático</em>: la ciudad capital</h2>
+
+      <p>La <strong>Municipalidad de la Ciudad de Córdoba</strong> dictó su Carta Orgánica en 1995, ejerciendo la facultad reconocida por la Constitución provincial de 1987. Es uno de los textos más completos del constitucionalismo local argentino y refleja el peso institucional de la capital provincial: la ciudad de Córdoba tiene aproximadamente 1.460.000 habitantes (Censo 2022), siendo la <strong>segunda ciudad más poblada de Argentina</strong> después de CABA.</p>
+
+      <h3>Estructura institucional de la Capital</h3>
+
+      <p>La Carta Orgánica de la Ciudad de Córdoba establece:</p>
+
+      <ul>
+        <li><strong>Departamento Ejecutivo</strong>: encabezado por un <strong>Intendente</strong> con mandato de cuatro años y reelección por un período consecutivo.</li>
+        <li><strong>Concejo Deliberante</strong>: integrado por <strong>31 concejales</strong> elegidos por el sistema D'Hondt en distrito único urbano.</li>
+        <li><strong>Tribunal de Cuentas municipal</strong>: órgano de control externo de las cuentas municipales, electo por el cuerpo electoral local.</li>
+        <li><strong>Defensoría del Pueblo de la Ciudad</strong>: órgano de defensa de derechos vecinales.</li>
+        <li><strong>Centros de Participación Comunal (CPC)</strong>: organismos descentralizados para la gestión urbana en distintas zonas de la ciudad.</li>
+      </ul>
+
+      <div class="cita">
+        "El pueblo de la Ciudad de Córdoba dicta esta Carta Orgánica en ejercicio de la autonomía en el orden institucional, político, administrativo, económico y financiero. La Carta Orgánica es de aplicación en el territorio de la Ciudad de Córdoba, con los límites que por ley le corresponde, donde el Municipio ejerce las funciones, atribuciones y finalidades inherentes a su competencia material."
+        <span class="cita-fuente">— Carta Orgánica Municipal de la Ciudad de Córdoba, Artículos 2 y 3.</span>
+      </div>
+
+      <h3>Innovaciones institucionales</h3>
+
+      <p>La Carta Orgánica de la Capital ha sido pionera en varias innovaciones institucionales locales:</p>
+
+      <ul>
+        <li><strong>División en Centros de Participación Comunal (CPC)</strong>: divide la ciudad en zonas administrativas con presencia institucional, similar a las comunas de CABA aunque sin órganos electivos propios.</li>
+        <li><strong>Presupuesto participativo</strong>: mecanismo formal para que los vecinos decidan sobre porciones del presupuesto.</li>
+        <li><strong>Audiencias públicas obligatorias</strong> para temas de impacto urbano significativo.</li>
+        <li><strong>Banca del Vecino</strong>: en algunas sesiones del Concejo Deliberante, vecinos seleccionados pueden hacer uso de la palabra.</li>
+        <li><strong>Defensa de los derechos vecinales</strong> ampliada con derechos específicos sobre medio ambiente, transporte público, urbanismo, etc.</li>
+      </ul>
+
+      <p>La Carta de la Ciudad de Córdoba ha sido reformada en varias oportunidades desde 1995 y sigue siendo un referente del constitucionalismo local argentino.</p>
+    </div>
+
+    <div class="seccion" id="comparacion">
+      <div class="seccion-num">08 · Comparación con otras provincias</div>
+      <h2>Córdoba como <em>modelo nacional</em></h2>
+
+      <p>El régimen municipal cordobés contrasta marcadamente con el de otras provincias argentinas, especialmente con el de Buenos Aires. La diferencia se ha vuelto un caso paradigmático en el debate sobre federalismo y autonomía local.</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Córdoba</th>
+              <th>Buenos Aires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reconocimiento de autonomía</strong></td>
+              <td>Plena (desde 1987)</td>
+              <td>Limitada</td>
+            </tr>
+            <tr>
+              <td><strong>Cartas Orgánicas municipales</strong></td>
+              <td>Sí (más de 40 ciudades)</td>
+              <td>No autorizadas</td>
+            </tr>
+            <tr>
+              <td><strong>Unidad territorial</strong></td>
+              <td>Municipios + Comunas</td>
+              <td>Partidos (135)</td>
+            </tr>
+            <tr>
+              <td><strong>Régimen base</strong></td>
+              <td>Ley 8.102 + Cartas</td>
+              <td>DL 6.769/58 uniforme</td>
+            </tr>
+            <tr>
+              <td><strong>Categorías municipales</strong></td>
+              <td>3 (Municipio, Ciudad, Comuna)</td>
+              <td>Unificada (Partido)</td>
+            </tr>
+            <tr>
+              <td><strong>Reelección intendentes</strong></td>
+              <td>Según Carta o Ley 8.102</td>
+              <td>Limitada por Ley 14.836</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Comparación con Santa Fe y Mendoza</h3>
+
+      <p>El régimen cordobés también difiere de los de las otras dos provincias grandes:</p>
+
+      <ul>
+        <li><strong>Santa Fe</strong> distingue entre <strong>Municipios</strong> (que tienen autonomía y pueden dictar cartas orgánicas) y <strong>Comunas</strong> (que no la tienen). La distinción es similar a la cordobesa, pero los criterios poblacionales y los procedimientos son distintos.</li>
+        <li><strong>Mendoza</strong> tiene un sistema municipal más centralizado: los <strong>18 departamentos</strong> son las unidades territoriales y municipales al mismo tiempo, y la autonomía municipal está más limitada que en Córdoba o Santa Fe.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La proyección cordobesa</div>
+        <p>El modelo cordobés de autonomía municipal plena fue <strong>incorporado al Artículo 123 de la Constitución Nacional</strong> en la Reforma de 1994. El nuevo texto establece: <em>"Cada provincia dicta su propia constitución, conforme a lo dispuesto por el Artículo 5° asegurando la autonomía municipal y reglando su alcance y contenido en el orden institucional, político, administrativo, económico y financiero"</em>. Las cinco dimensiones de autonomía mencionadas son exactamente las cinco del Artículo 180 cordobés de 1987. La influencia es directa y reconocida en la doctrina constitucional argentina.</p>
+      </div>
+
+      <p>Sin embargo, no todas las provincias se adecuaron al mandato del Art. 123 CN. Buenos Aires, en particular, sigue sin reconocer la autonomía municipal plena 32 años después del mandato constitucional. Esta tensión es uno de los grandes temas pendientes del federalismo argentino, como analizamos en el capítulo 10.01.03 sobre Buenos Aires.</p>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">09 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Córdoba</strong> · Artículos 180 a 194 (Régimen Municipal). Disponible en legislaturacba.gob.ar</li>
+        <li><strong>Ley Provincial 8.102</strong> · Régimen de Municipios y Comunas de la Provincia de Córdoba. Sancionada en 1991. Texto actualizado en argentina.gob.ar/normativa/provincial.</li>
+        <li><strong>Carta Orgánica Municipal de la Ciudad de Córdoba</strong> · Sancionada en 1995, con sucesivas reformas. Disponible en static.cordoba.gov.ar/DigestoWeb.</li>
+        <li><strong>Ley Provincial 4.778</strong> · Procedimiento de declaración de "ciudad" por decreto (1964).</li>
+        <li><strong>Constitución Nacional</strong> · Artículo 123 (autonomía municipal, texto reformado 1994).</li>
+        <li><strong>Graglia, J. E.</strong> · "Municipios de Córdoba". Estudio comparativo sobre formas de gobierno municipal en Córdoba. Universidad Católica de Córdoba.</li>
+        <li><strong>"Treinta años de la Reforma Constitucional de Córdoba"</strong> (2017) · Libro homenaje sobre la Convención Reformadora de 1987.</li>
+        <li><strong>"Organización municipal de la provincia de Córdoba"</strong> · Análisis institucional comparado. Wikipedia y bibliografía citada.</li>
+        <li><strong>Ministerio de Gobierno de la Provincia de Córdoba</strong> · Información sobre municipios y comunas registrados.</li>
+        <li><strong>Tribunal Superior de Justicia de Córdoba</strong> · Jurisprudencia sobre autonomía municipal y conflictos de competencia entre municipios y provincia.</li>
+        <li><strong>Universidad Nacional de Córdoba</strong> · Facultad de Derecho. Cátedra de Derecho Público Provincial y Municipal. Documentación académica sobre el régimen municipal cordobés.</li>
+      </ul>
+    </div>
+
+    <a href="cordoba-electoral.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.02.04</div>
+        <h3>Pionera <em>electoral</em></h3>
+        <p>Tres innovaciones electorales argentinas nacieron en Córdoba: la Ley 8.901 de Paridad (2000), la boleta única provincial (en uso desde 2011) y el modelo institucional que inspiró la BUP nacional de 2024. Análisis de cada innovación y de sus efectos.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

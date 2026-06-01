@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Córdoba · Los tres poderes provinciales (10.02.02) — Educación Cívica</title>
+<meta name="description" content="Los tres poderes de la Provincia de Córdoba: el gobernador con una reelección consecutiva, la única legislatura unicameral del país (70 miembros con sistema electoral mixto), y el Tribunal Superior de Justicia. Los órganos extra-poderes y las particularidades del régimen.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-poderes.html">
+
+<meta property="og:title" content="Córdoba · Los tres poderes provinciales">
+<meta property="og:description" content="El sistema institucional cordobés: ejecutivo, unicameral con sistema mixto único y Tribunal Superior de Justicia.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-poderes.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.02.02</strong> de la sección Córdoba en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="cordoba-en-profundidad.html">Córdoba</a> ·
+      <span>Los tres poderes</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02.02 · Estudio provincial</div>
+    <h1 class="page-title">Los tres <em>poderes</em> provinciales</h1>
+    <div class="page-subtitulo">— Ejecutivo · Legislatura unicameral · Tribunal Superior</div>
+    <p class="page-intro">Córdoba es la <strong>única provincia grande de Argentina con legislatura unicameral</strong>. Su Ejecutivo es elegido por simple pluralidad (sin balotaje provincial) y puede reelegirse una vez. Su Legislatura de 70 miembros combina dos lógicas: <strong>26 legisladores territoriales</strong> (uno por departamento) y <strong>44 legisladores por distrito único</strong> con D'Hondt, un sistema mixto único en el país. El Tribunal Superior de Justicia es la cabeza de un Poder Judicial provincial con jurisdicción extensa. Este capítulo describe el funcionamiento de los tres poderes provinciales, los órganos extra-poderes (Tribunal de Cuentas, Fiscalía de Estado, Defensoría del Pueblo) y las particularidades del régimen.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">70</div>
+        <div class="page-stat-label">Legisladores (unicameral)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">26+44</div>
+        <div class="page-stat-label">Departamentales + distrito único</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">4 años</div>
+        <div class="page-stat-label">Mandato del gobernador</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">7</div>
+        <div class="page-stat-label">Vocales del TSJ</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#marco">01 · Marco constitucional</a></li>
+      <li><a href="#ejecutivo">02 · Poder Ejecutivo</a></li>
+      <li><a href="#atribuciones">03 · Atribuciones del Gobernador</a></li>
+      <li><a href="#vicegobernador">04 · Vicegobernador y Gabinete</a></li>
+      <li><a href="#legislatura">05 · Legislatura unicameral</a></li>
+      <li><a href="#sistema-electoral">06 · El sistema electoral mixto</a></li>
+      <li><a href="#funcionamiento">07 · Funcionamiento legislativo</a></li>
+      <li><a href="#judicial">08 · Tribunal Superior de Justicia</a></li>
+      <li><a href="#extra-poderes">09 · Órganos extra-poderes</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="marco">
+      <div class="seccion-num">01 · Marco constitucional</div>
+      <h2>La <em>constitución vigente</em> de Córdoba</h2>
+
+      <p>El marco constitucional vigente de Córdoba combina dos grandes momentos reformistas: la <strong>Constitución de 1987</strong> (que estableció el régimen de autonomía municipal pleno y modernizó el sistema institucional) y la <strong>Reforma de 2001</strong> (que reemplazó el sistema bicameral por uno unicameral). Estas dos reformas configuran el régimen actual y reflejan dos tradiciones políticas distintas: la del primer ciclo democrático posterior a 1983 y la del clima antipolítico de inicios del siglo XXI.</p>
+
+      <p>La Constitución provincial cordobesa adopta el régimen <strong>representativo, republicano y democrático</strong> previsto por el Artículo 5 de la Constitución Nacional, en sintonía con el sistema federal argentino. La provincia ejerce todas las facultades no delegadas a la Nación, según el Artículo 121 de la Constitución Nacional.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Las tres marcas del régimen cordobés</div>
+        <p>El régimen institucional cordobés tiene tres marcas distintivas: (1) <strong>autonomía municipal plena</strong> reconocida desde 1987, mucho antes que la Reforma Nacional de 1994; (2) <strong>legislatura unicameral</strong> desde 2001, única en las provincias grandes del país; (3) <strong>sistema electoral mixto</strong> que combina representación departamental con representación proporcional por distrito único, también único en el país.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ejecutivo">
+      <div class="seccion-num">02 · El Poder Ejecutivo</div>
+      <h2>El <em>Gobernador</em> · 4 años + 1 reelección</h2>
+
+      <p>El Poder Ejecutivo de Córdoba es ejercido por un ciudadano electo por el cuerpo electoral provincial. El sistema de elección es de <strong>simple pluralidad de sufragios</strong>, sin balotaje provincial. El mandato dura <strong>cuatro años</strong> y existe la posibilidad de <strong>una reelección consecutiva</strong> (en la reforma de 1987 se incorporó la reelección). Tras dos mandatos consecutivos, debe transcurrir al menos un período antes de poder volver a postularse.</p>
+
+      <h3>Requisitos para ser gobernador</h3>
+
+      <p>La Constitución provincial establece los requisitos para ocupar el cargo:</p>
+
+      <ul>
+        <li>Ser <strong>argentino nativo o por opción</strong> (los naturalizados deben tener al menos diez años de ciudadanía).</li>
+        <li>Tener <strong>treinta años de edad</strong> como mínimo.</li>
+        <li>Tener al menos <strong>cinco años de residencia inmediata anterior</strong> en la provincia (si no se nació en ella).</li>
+        <li>Las inhabilidades incluyen ser miembro del clero secular o regular, así como deudores morosos del Tesoro provincial.</li>
+      </ul>
+
+      <h3>Mecánica de elección</h3>
+
+      <p>La elección del gobernador y vicegobernador se realiza de manera directa, <strong>en una sola vuelta electoral</strong>, sin que sea necesario alcanzar un porcentaje mínimo de votos. Gana quien obtenga la mayor cantidad de sufragios afirmativos. Esta particularidad —compartida con Buenos Aires y otras provincias— diferencia al régimen provincial cordobés del régimen nacional, que sí prevé balotaje cuando ningún candidato alcanza el 45% (o el 40% con una diferencia de 10 puntos sobre el segundo).</p>
+
+      <p>La elección del gobernador se realiza cada cuatro años en <strong>fechas que pueden estar desdobladas del calendario electoral nacional</strong>, decisión que toma el gobernador en ejercicio. Históricamente, Córdoba ha alternado entre el desdoblamiento y la coincidencia con las elecciones nacionales, dependiendo de la estrategia política del oficialismo provincial de turno.</p>
+    </div>
+
+    <div class="seccion" id="atribuciones">
+      <div class="seccion-num">03 · Atribuciones del Gobernador</div>
+      <h2>El <em>jefe de la administración</em> provincial</h2>
+
+      <p>El Gobernador es el jefe del Estado provincial, ejerce el Poder Ejecutivo y es responsable de la administración general de la provincia. Sus atribuciones constitucionales son extensas y comparables a las del Poder Ejecutivo Nacional en su esfera territorial. Las más importantes son:</p>
+
+      <ul>
+        <li><strong>Nombrar y remover</strong> a los ministros del Poder Ejecutivo.</li>
+        <li><strong>Promulgar y hacer ejecutar</strong> las leyes provinciales, dictando reglamentos para su aplicación.</li>
+        <li><strong>Iniciar leyes</strong> ante la Legislatura mediante proyectos del Ejecutivo (concurrir a la formación de las leyes con derecho de iniciativa).</li>
+        <li><strong>Vetar total o parcialmente</strong> los proyectos de ley sancionados por la Legislatura.</li>
+        <li><strong>Convocar a sesiones extraordinarias</strong> a la Legislatura cuando lo exija un interés público significativo.</li>
+        <li><strong>Conmutar penas e indultar</strong> (con limitaciones constitucionales).</li>
+        <li><strong>Convocar al pueblo provincial</strong> a las elecciones provinciales en la oportunidad debida.</li>
+        <li><strong>Conducir las relaciones</strong> con el Gobierno Nacional, con las demás provincias y con los municipios de la provincia.</li>
+        <li><strong>Recaudar los impuestos provinciales</strong> y administrar las cuentas fiscales.</li>
+        <li><strong>Comandar</strong> a las fuerzas de seguridad provinciales (Policía de Córdoba y Servicio Penitenciario).</li>
+        <li><strong>Informar a la Legislatura</strong> del estado general de la administración al inicio de cada período de sesiones ordinarias.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una particularidad cordobesa: la Caja jubilatoria</div>
+        <p>Córdoba es una de las pocas provincias argentinas que <strong>conserva su caja de jubilaciones provincial</strong> (no la transfirió al sistema nacional de la ANSES en los años 90, como sí lo hicieron la mayoría de las provincias). Esto le da al Gobernador una atribución institucional adicional: la administración del sistema previsional provincial, que cubre a empleados públicos, docentes y otros trabajadores estatales cordobeses. Esta caja ha sido fuente de litigios reiterados con la Nación por el déficit operativo y por las transferencias compensatorias.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="vicegobernador">
+      <div class="seccion-num">04 · Vicegobernador y Gabinete</div>
+      <h2>El <em>vicegobernador</em> y los ministros</h2>
+
+      <p>El Vicegobernador es la primera autoridad en el orden de sucesión del Ejecutivo y ocupa simultáneamente la <strong>presidencia de la Legislatura unicameral</strong>. Es electo en la misma boleta y mediante el mismo sistema que el Gobernador. Su rol institucional es doble: representa al Ejecutivo en la actividad parlamentaria y reemplaza al Gobernador en casos de ausencia temporal, enfermedad, renuncia, destitución o muerte.</p>
+
+      <h3>El doble rol del Vicegobernador</h3>
+
+      <p>Como presidente de la Legislatura, el Vicegobernador conduce las sesiones del cuerpo, pero <strong>no vota</strong> excepto en caso de empate. Su voto de desempate puede ser determinante en momentos críticos. Como integrante del Ejecutivo, participa con el Gobernador en la formulación de políticas generales. Esta doble función es una particularidad del sistema cordobés que combina elementos del régimen estadounidense (vicepresidente) con elementos del régimen parlamentario (presidente del cuerpo legislativo).</p>
+
+      <h3>El Gabinete provincial</h3>
+
+      <p>El Gobernador organiza el Gabinete según las necesidades de su gestión. La Constitución provincial no fija el número exacto de ministerios: corresponde al Ejecutivo definir la estructura ministerial dentro de los límites presupuestarios. Históricamente, los gabinetes cordobeses han incluido carteras como <strong>Hacienda, Gobierno, Justicia, Seguridad, Educación, Salud, Desarrollo Social, Producción y Trabajo, Servicios Públicos, Comunicaciones</strong>, además de secretarías específicas (Vivienda, Niñez, etc.).</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Poder Ejecutivo cordobés</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Sistema de elección</div>
+            <div class="ficha-valor">Directo · simple pluralidad</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Mandato</div>
+            <div class="ficha-valor"><strong>4 años · 1 reelección</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Balotaje provincial</div>
+            <div class="ficha-valor">No previsto</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Edad mínima</div>
+            <div class="ficha-valor">30 años</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Vicegobernador</div>
+            <div class="ficha-valor">Preside la Legislatura</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Caja previsional</div>
+            <div class="ficha-valor"><strong>Provincial</strong> (no transferida)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="legislatura">
+      <div class="seccion-num">05 · La Legislatura unicameral</div>
+      <h2>70 miembros · <em>la única unicameral</em> de las grandes</h2>
+
+      <p>El Poder Legislativo de Córdoba es ejercido por la <strong>Legislatura Provincial</strong>, una cámara única de 70 miembros (Artículo 77 de la Constitución provincial). Es el rasgo más distintivo del régimen cordobés: <strong>de las cuatro provincias más grandes de Argentina, Córdoba es la única con sistema legislativo unicameral</strong>. Buenos Aires, Santa Fe y Mendoza mantienen regímenes bicamerales con Cámaras de Diputados y de Senadores separadas.</p>
+
+      <h3>Composición de la cámara</h3>
+
+      <p>El Artículo 78 de la Constitución establece la integración de la Legislatura, que combina <strong>dos lógicas representativas distintas en una misma cámara</strong>:</p>
+
+      <ol>
+        <li><strong>26 legisladores departamentales</strong>: uno por cada uno de los 26 departamentos en que se divide territorialmente la provincia. Se eligen directamente por el pueblo del departamento <strong>a pluralidad de sufragios</strong> (gana el que más votos obtenga, sin proporcionalidad). Cada departamento aporta un legislador, independientemente de su población.</li>
+        <li><strong>44 legisladores por distrito único provincial</strong>: se eligen directamente por el pueblo de toda la provincia tomando a Córdoba como un solo distrito electoral, mediante el <strong>sistema D'Hondt</strong> de representación proporcional, sin piso electoral.</li>
+      </ol>
+
+      <p>Esta integración mixta es <strong>única en Argentina</strong>. Equilibra dos principios: la representación territorial (a través de los departamentos) y la representación proporcional (a través del distrito único). Ningún departamento queda sin representación legislativa, por más pequeño que sea, y al mismo tiempo, las fuerzas políticas minoritarias pueden obtener bancas a través de la lista de distrito único.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué este sistema mixto?</div>
+        <p>La reforma de 2001 buscó conciliar dos objetivos a veces contradictorios: la <strong>reducción del número de legisladores</strong> (de 133 a 70) y la <strong>preservación de la representación territorial</strong> de los departamentos cordobeses, muchos de los cuales son rurales y de población baja. El sistema mixto resuelve esta tensión: garantiza que cada departamento tenga al menos un legislador, pero asigna las restantes bancas según el voto provincial total. Es un experimento institucional que ha mostrado tener efectos sobre el equilibrio entre los partidos y sobre el peso de los departamentos del interior cordobés en la política provincial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sistema-electoral">
+      <div class="seccion-num">06 · El sistema electoral mixto</div>
+      <h2>El sistema <em>26 + 44</em> en detalle</h2>
+
+      <p>El sistema mixto cordobés merece un análisis pormenorizado porque es la pieza institucional más distintiva del régimen provincial y porque combina dos lógicas electorales que tienen efectos políticos diferentes.</p>
+
+      <h3>La elección departamental (26 bancas)</h3>
+
+      <p>Cada uno de los 26 departamentos cordobeses elige un legislador por simple pluralidad de votos. <strong>El que más votos obtiene en el departamento se queda con la banca, sin importar el margen</strong>. Este sistema tiende a favorecer al partido con mayor presencia territorial en cada departamento: si un partido tiene una hegemonía territorial extendida, gana muchas bancas departamentales con porcentajes relativamente modestos del voto provincial total.</p>
+
+      <p>La distribución de los 26 departamentos cordobeses (en orden alfabético, con población aproximada según el Censo 2022):</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Departamento</th>
+              <th>Cabecera</th>
+              <th>Población aprox.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Capital</strong></td><td>Córdoba</td><td>1.460.000</td></tr>
+            <tr><td><strong>Calamuchita</strong></td><td>La Cumbre</td><td>71.000</td></tr>
+            <tr><td><strong>Colón</strong></td><td>Jesús María</td><td>282.000</td></tr>
+            <tr><td><strong>Cruz del Eje</strong></td><td>Cruz del Eje</td><td>62.000</td></tr>
+            <tr><td><strong>General Roca</strong></td><td>Villa Huidobro</td><td>40.000</td></tr>
+            <tr><td><strong>General San Martín</strong></td><td>Villa María</td><td>149.000</td></tr>
+            <tr><td><strong>Ischilín</strong></td><td>Deán Funes</td><td>34.000</td></tr>
+            <tr><td><strong>Juárez Celman</strong></td><td>La Carlota</td><td>62.000</td></tr>
+            <tr><td><strong>Marcos Juárez</strong></td><td>Marcos Juárez</td><td>108.000</td></tr>
+            <tr><td><strong>Minas</strong></td><td>San Carlos Minas</td><td>5.500</td></tr>
+            <tr><td><strong>Pocho</strong></td><td>Salsacate</td><td>5.500</td></tr>
+            <tr><td><strong>Presidente Roque Sáenz Peña</strong></td><td>Laboulaye</td><td>37.000</td></tr>
+            <tr><td><strong>Punilla</strong></td><td>Cosquín</td><td>211.000</td></tr>
+            <tr><td><strong>Río Cuarto</strong></td><td>Río Cuarto</td><td>271.000</td></tr>
+            <tr><td><strong>Río Primero</strong></td><td>Santa Rosa de Río Primero</td><td>53.000</td></tr>
+            <tr><td><strong>Río Seco</strong></td><td>Villa de María</td><td>14.000</td></tr>
+            <tr><td><strong>Río Segundo</strong></td><td>Río Segundo</td><td>117.000</td></tr>
+            <tr><td><strong>San Alberto</strong></td><td>San Pedro</td><td>39.000</td></tr>
+            <tr><td><strong>San Javier</strong></td><td>Villa Dolores</td><td>74.000</td></tr>
+            <tr><td><strong>San Justo</strong></td><td>San Francisco</td><td>225.000</td></tr>
+            <tr><td><strong>Santa María</strong></td><td>Alta Gracia</td><td>137.000</td></tr>
+            <tr><td><strong>Sobremonte</strong></td><td>San Francisco del Chañar</td><td>5.000</td></tr>
+            <tr><td><strong>Tercero Arriba</strong></td><td>Oliva</td><td>118.000</td></tr>
+            <tr><td><strong>Totoral</strong></td><td>Villa del Totoral</td><td>22.000</td></tr>
+            <tr><td><strong>Tulumba</strong></td><td>Tulumba</td><td>14.000</td></tr>
+            <tr><td><strong>Unión</strong></td><td>Bell Ville</td><td>121.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>La asimetría poblacional es enorme: Capital tiene aproximadamente 1.460.000 habitantes y elige <strong>una</strong> banca departamental, mientras que Sobremonte tiene 5.000 habitantes y también elige <strong>una</strong>. Es decir, un legislador de Sobremonte representa a menos del 0,4% de la población de Capital, pero tiene el mismo voto institucional. Esta sobrerrepresentación territorial es una decisión política deliberada: protege a los departamentos rurales del interior cordobés frente al peso demográfico de la Capital.</p>
+
+      <h3>La elección por distrito único (44 bancas)</h3>
+
+      <p>Los 44 legisladores restantes se eligen tomando a la provincia entera como un solo distrito electoral. Las listas son provinciales (cada partido presenta una lista de 44 candidatos) y la distribución de bancas se hace por <strong>sistema D'Hondt sin piso electoral</strong>. La ausencia de piso permite que partidos minoritarios obtengan bancas con porcentajes relativamente bajos.</p>
+
+      <p>Las bancas por distrito único <strong>compensan parcialmente la sobrerrepresentación territorial</strong>: los partidos con presencia urbana fuerte (especialmente en Capital, donde vive aproximadamente el 40% de la población provincial) obtienen muchas bancas por distrito único, aunque pierdan muchas bancas departamentales del interior.</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Ficha técnica · Sistema electoral cordobés</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Total de bancas</div>
+            <div class="ficha-valor"><strong>70 legisladores</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Bancas departamentales</div>
+            <div class="ficha-valor">26 (una por departamento)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Bancas distrito único</div>
+            <div class="ficha-valor">44 (provincial)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sistema departamental</div>
+            <div class="ficha-valor">Pluralidad simple</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Sistema distrito único</div>
+            <div class="ficha-valor">D'Hondt sin piso</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Paridad de género</div>
+            <div class="ficha-valor"><strong>Ley 8.901</strong> (desde 2000)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seccion" id="funcionamiento">
+      <div class="seccion-num">07 · El funcionamiento de la Legislatura</div>
+      <h2>Sesiones, mandatos y <em>doble lectura</em></h2>
+
+      <h3>Mandatos y sesiones</h3>
+
+      <p>Los 70 legisladores cordobeses duran <strong>cuatro años en sus funciones</strong> y son reelegibles por un período consecutivo (límite establecido en la reforma de 2001). Inician y concluyen sus mandatos en la misma oportunidad que el Poder Ejecutivo, terminando con los desfases que existían en el régimen anterior.</p>
+
+      <p>El período de sesiones ordinarias se extiende <strong>de febrero a diciembre</strong>, uno de los más extensos del país. Esta extensión permite a la Legislatura cordobesa tener una actividad institucional más continua que la de muchas otras provincias argentinas (donde las sesiones suelen ser de marzo a noviembre o aún más cortas).</p>
+
+      <h3>El sistema de doble lectura</h3>
+
+      <p>Una particularidad procedimental cordobesa es el sistema de <strong>aprobación por doble lectura</strong> (Artículo 106 de la Constitución provincial). Para los proyectos de ley que afectan ciertas materias específicas (impuestos, presupuesto, leyes orgánicas, modificaciones a leyes electorales), se requiere que sean aprobados en <strong>dos sesiones distintas</strong> de la Legislatura, con un período de reflexión entre ambas. Este mecanismo busca dar más estabilidad y deliberación a las decisiones legislativas en materias sensibles.</p>
+
+      <h3>Requisitos para ser legislador</h3>
+
+      <p>Desde la reforma de 2001, los requisitos para ser legislador provincial son:</p>
+
+      <ul>
+        <li>Tener <strong>al menos 18 años</strong> cumplidos al momento de la incorporación al cuerpo (anteriormente eran 21 para diputados y 30 para senadores).</li>
+        <li>Ser <strong>argentino nativo, por opción o naturalizado</strong> (en este último caso, con al menos cinco años de ejercicio de la ciudadanía).</li>
+        <li>Tener <strong>residencia inmediata anterior</strong> en la provincia (para no nacidos en ella) y en el departamento (para legisladores departamentales).</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="judicial">
+      <div class="seccion-num">08 · El Tribunal Superior de Justicia</div>
+      <h2>El <em>Poder Judicial</em> cordobés</h2>
+
+      <p>El Poder Judicial de Córdoba está encabezado por el <strong>Tribunal Superior de Justicia (TSJ)</strong>, integrado por <strong>siete vocales</strong>. El TSJ tiene asiento en la ciudad de Córdoba y es la máxima instancia judicial de la provincia. Sus integrantes son designados por el Poder Ejecutivo con acuerdo del Senado (en el régimen anterior a 2001) o de la Legislatura unicameral (en el régimen actual).</p>
+
+      <h3>Composición y funcionamiento</h3>
+
+      <p>El Tribunal Superior funciona en pleno o dividido en salas especializadas, dependiendo de la materia. Las salas tradicionales son:</p>
+
+      <ul>
+        <li><strong>Sala Civil y Comercial</strong>: causas en materia civil, comercial, contencioso-administrativo.</li>
+        <li><strong>Sala Penal</strong>: causas penales en su instancia superior provincial.</li>
+        <li><strong>Sala Contencioso-Administrativa</strong>: conflictos entre particulares y la administración pública provincial.</li>
+        <li><strong>Sala Electoral</strong>: cuestiones electorales provinciales (en algunos modelos institucionales, esta función la cumple el Juzgado Electoral).</li>
+        <li><strong>Sala Laboral</strong>: causas laborales en su instancia superior provincial.</li>
+      </ul>
+
+      <h3>La presidencia del TSJ</h3>
+
+      <p>La presidencia del Tribunal Superior es <strong>rotativa anual</strong> entre los siete vocales, una práctica institucional similar a la de otras cortes provinciales argentinas. Esta rotación busca evitar la concentración de poder simbólico en un solo magistrado y distribuir la representación institucional del Poder Judicial.</p>
+
+      <h3>Estructura inferior</h3>
+
+      <p>Por debajo del Tribunal Superior, el Poder Judicial cordobés tiene una estructura compleja organizada por <strong>circunscripciones judiciales</strong>:</p>
+
+      <ul>
+        <li><strong>Cámaras de Apelaciones</strong> (Cámaras Civiles, Penales, Laborales, etc.) que constituyen la segunda instancia.</li>
+        <li><strong>Juzgados de Primera Instancia</strong> en distintas materias (civil, comercial, penal, laboral, familia, niñez y adolescencia, etc.).</li>
+        <li><strong>Juzgados de Paz</strong> y <strong>Jueces de Paz Letrados</strong> en localidades del interior provincial.</li>
+        <li><strong>Ministerio Público Fiscal</strong> y <strong>Ministerio Público de la Defensa</strong>, con autonomía funcional.</li>
+      </ul>
+
+      <p>Córdoba ha sido pionera en algunas reformas judiciales en el ámbito nacional, como la implementación temprana del <strong>juicio oral en materia penal</strong> y el desarrollo de tribunales especializados en familia y niñez. La provincia mantiene una tradición jurídica robusta vinculada a la <strong>Facultad de Derecho de la Universidad Nacional de Córdoba</strong>, una de las más antiguas y prestigiosas del país.</p>
+    </div>
+
+    <div class="seccion" id="extra-poderes">
+      <div class="seccion-num">09 · Los órganos extra-poderes</div>
+      <h2>Tribunal de Cuentas, Fiscalía y <em>Defensoría</em></h2>
+
+      <p>El régimen institucional cordobés contempla varios <strong>órganos extra-poderes</strong> que ejercen funciones de control y representación independientes de los tres poderes clásicos. Los principales son:</p>
+
+      <h3>El Tribunal de Cuentas</h3>
+
+      <p>El <strong>Tribunal de Cuentas de la Provincia de Córdoba</strong> es el órgano constitucional de control externo de las cuentas públicas provinciales. Está conformado por tres miembros: dos vocales y un presidente, elegidos directamente por el cuerpo electoral provincial en simultáneo con la elección de gobernador. Esta elección popular del Tribunal de Cuentas es una particularidad cordobesa: <strong>la mayoría de las provincias designan a sus tribunales de cuentas por vía legislativa, no por elección directa</strong>.</p>
+
+      <p>Sus atribuciones incluyen:</p>
+
+      <ul>
+        <li>Controlar la <strong>ejecución del presupuesto provincial</strong>.</li>
+        <li>Auditar las <strong>cuentas de los organismos descentralizados</strong> y entidades autárquicas provinciales.</li>
+        <li>Supervisar las <strong>cuentas municipales</strong> de los municipios sin Carta Orgánica.</li>
+        <li>Formular <strong>observaciones, juicios de cuentas y juicios de responsabilidad</strong> contra funcionarios públicos.</li>
+      </ul>
+
+      <h3>La Fiscalía de Estado</h3>
+
+      <p>La <strong>Fiscalía de Estado</strong> es el órgano constitucional encargado de la <strong>defensa del patrimonio del fisco provincial</strong>. El Fiscal de Estado es designado por el Poder Ejecutivo y representa los intereses patrimoniales de la provincia en los litigios judiciales en los que ésta sea parte. Tiene también funciones consultivas en materia jurídica para el Ejecutivo.</p>
+
+      <h3>La Defensoría del Pueblo</h3>
+
+      <p>La <strong>Defensoría del Pueblo</strong> de Córdoba es el órgano constitucional encargado de proteger los <strong>derechos e intereses de los habitantes</strong> ante el Estado provincial. Fue creada por la reforma constitucional de 1987 y reglamentada por Ley provincial. El Defensor del Pueblo es designado por la Legislatura con mayorías especiales y dura cinco años en sus funciones. Sus atribuciones incluyen investigar oficios o por denuncia, presentar acciones judiciales en defensa de derechos colectivos y formular recomendaciones a los organismos provinciales.</p>
+
+      <h3>La Junta Electoral provincial</h3>
+
+      <p>La <strong>Junta Electoral</strong> es el órgano constitucional encargado de la organización y control de los procesos electorales provinciales. Está integrada por el presidente del Tribunal Superior de Justicia, el presidente de la Legislatura (el Vicegobernador) y el Fiscal de Estado, o sus reemplazantes legales. Sus funciones se complementan con las del <strong>Juzgado Electoral Provincial</strong>, que tiene competencia en materia electoral, partidaria y de control patrimonial de los partidos políticos.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una arquitectura institucional robusta</div>
+        <p>El régimen cordobés se caracteriza por una <strong>fuerte presencia de órganos de control institucional</strong>, varios de ellos electos directamente por la ciudadanía (como el Tribunal de Cuentas, que es elegido en la boleta junto con el Gobernador). Esta arquitectura busca consolidar la <strong>autonomía funcional</strong> de los órganos de control respecto del Ejecutivo, fortaleciendo el principio de separación de poderes en su versión más amplia.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Córdoba</strong> · Texto vigente con la Reforma de 2001. Artículos 77 a 110 (Poder Legislativo), 132 a 144 (Poder Ejecutivo), 152 a 175 (Poder Judicial). Disponible en legislaturacba.gob.ar</li>
+        <li><strong>Ley N° 9.571</strong> · Código Electoral Provincial de Córdoba. Texto vigente. Disponible en justiciacordoba.gob.ar</li>
+        <li><strong>Ley N° 8.901</strong> · Principio de Participación Equivalente de Géneros en las elecciones (Paridad). Sancionada el 29 de noviembre de 2000. Disponible en argentina.gob.ar/normativa.</li>
+        <li><strong>Sitio oficial del Gobierno de Córdoba</strong> (cba.gov.ar) · Información institucional sobre estructura del gobierno, ministerios y organismos.</li>
+        <li><strong>Sitio oficial de la Legislatura de Córdoba</strong> (legislaturacba.gob.ar) · Composición actual, comisiones, sesiones, leyes sancionadas.</li>
+        <li><strong>Sitio oficial del Poder Judicial de Córdoba</strong> (justiciacordoba.gob.ar) · Estructura judicial, jurisprudencia del TSJ, normativa.</li>
+        <li><strong>Tribunal de Cuentas de la Provincia de Córdoba</strong> (tribunaldecuentas.cba.gov.ar) · Memoria anual, informes de auditoría.</li>
+        <li><strong>Pérez Corti, José Manuel</strong> (2012). "Boleta Única de Sufragio: Su implementación en Córdoba". Editorial La Ley Córdoba.</li>
+        <li><strong>"20 años del Sistema Unicameral en Córdoba"</strong> · Publicación de la Legislatura provincial (2021).</li>
+        <li><strong>Constitución Nacional</strong> · Art. 5° (sistema representativo y republicano de las provincias), Art. 121° (poderes no delegados de las provincias), Art. 123° (autonomía municipal).</li>
+      </ul>
+    </div>
+
+    <a href="cordoba-municipios.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.02.03</div>
+        <h3>Autonomía municipal <em>plena</em></h3>
+        <p>Córdoba fue pionera nacional en reconocer la autonomía municipal en su reforma constitucional de 1987 (siete años antes que la Constitución Nacional). Los municipios pueden dictar sus propias cartas orgánicas. Hoy existen más de 250 municipios y 173 comunas con distintos niveles de autonomía.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

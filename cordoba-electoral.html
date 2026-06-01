@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Córdoba · Pionera electoral (10.02.04) — Educación Cívica</title>
+<meta name="description" content="Córdoba es la pionera electoral de Argentina: ley 8.901 de paridad de género del año 2000, primera Boleta Única de Sufragio provincial argentina en 2011 (junto con Santa Fe), modelo institucional que inspiró la BUP nacional de 2024. Análisis de cada innovación y de sus efectos sobre el sistema electoral.">
+<link rel="canonical" href="https://educacioncivica.com.ar/cordoba-electoral.html">
+
+<meta property="og:title" content="Córdoba · Pionera electoral">
+<meta property="og:description" content="Ley 8.901 de Paridad, Boleta Única provincial de 2011 y modelo de la BUP nacional.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/cordoba-electoral.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.02.04</strong> de la sección Córdoba en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="cordoba-en-profundidad.html">Córdoba</a> ·
+      <span>Pionera electoral</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.02.04 · Estudio provincial</div>
+    <h1 class="page-title">Pionera <em>electoral</em></h1>
+    <div class="page-subtitulo">— Paridad de género · Boleta Única · Influencia en la BUP nacional</div>
+    <p class="page-intro">Córdoba aportó al sistema electoral argentino <strong>tres innovaciones institucionales decisivas</strong>: la Ley 8.901 de Paridad de Género (sancionada en noviembre de 2000, la <strong>tercera del país</strong> pero la primera de una provincia grande); la <strong>Boleta Única de Sufragio (BUS)</strong> provincial, estrenada el 7 de agosto de 2011 junto con Santa Fe; y el modelo institucional que inspiró parcialmente la <strong>Boleta Única Papel (BUP) nacional de la Ley 27.781 de 2024</strong>. Este capítulo recorre cada una de estas innovaciones, sus efectos verificados sobre el comportamiento electoral cordobés (efecto fatiga y voto cruzado documentados por la doctrina electoral), y la influencia continental del modelo cordobés.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2000</div>
+        <div class="page-stat-label">Ley 8.901 de Paridad</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2011</div>
+        <div class="page-stat-label">Primera elección con BUS</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">15.128</div>
+        <div class="page-stat-label">Autoridades de Mesa capacitadas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">16 años</div>
+        <div class="page-stat-label">Edad mínima para votar</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#contexto">01 · El contexto cordobés</a></li>
+      <li><a href="#ley-paridad">02 · Ley 8.901 de Paridad</a></li>
+      <li><a href="#paridad-funcionamiento">03 · La paridad en la práctica</a></li>
+      <li><a href="#codigo-electoral">04 · El Código Electoral · Ley 9.571</a></li>
+      <li><a href="#bus-cordoba">05 · La Boleta Única cordobesa</a></li>
+      <li><a href="#implementacion-2011">06 · La implementación de 2011</a></li>
+      <li><a href="#efectos">07 · Efectos: fatiga y voto cruzado</a></li>
+      <li><a href="#bup-nacional">08 · Influencia en la BUP nacional 2024</a></li>
+      <li><a href="#otros-rasgos">09 · Otros rasgos del sistema</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="contexto">
+      <div class="seccion-num">01 · El contexto cordobés</div>
+      <h2>Tres innovaciones, <em>una tradición</em></h2>
+
+      <p>El sistema electoral cordobés se distingue por una combinación que ninguna otra provincia argentina exhibe: <strong>una temprana adopción de la paridad de género, una temprana adopción de la boleta única de sufragio, y una arquitectura institucional electoral robusta</strong>. Tres dimensiones que, juntas, han hecho de Córdoba un laboratorio electoral observado por el resto del país.</p>
+
+      <p>Esta posición pionera no es casual: se inscribe en la tradición de no subordinación política cordobesa que vimos en el capítulo de historia constitucional. Córdoba ha sostenido históricamente una identidad institucional propia, y ha usado esa autonomía para experimentar con reformas que el orden nacional no estaba en condiciones de implementar.</p>
+
+      <p>Las tres innovaciones se desarrollaron en momentos políticos distintos, con gobiernos provinciales de diferente signo, lo que sugiere que la tradición experimental cordobesa atraviesa varios espacios políticos y no es exclusiva de un sector partidario.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Las tres reformas cordobesas en perspectiva</div>
+        <p><strong>Ley 8.901 (paridad de género, 2000)</strong>: sancionada bajo gobierno de la UCR-Frepaso del entonces gobernador José Manuel De la Sota. Iniciativa impulsada por la Primera Dama, Olga Riutort, durante el último año del mandato del peronista cordobés que había asumido en 1999. <strong>Ley 9.571 (Código Electoral con BUS, 2008-2011)</strong>: sancionada bajo gobierno justicialista provincial. <strong>BUP nacional (2024)</strong>: sancionada bajo un Congreso Nacional fragmentado, tomando elementos del modelo cordobés y mendocino.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-paridad">
+      <div class="seccion-num">02 · Ley 8.901 de Paridad</div>
+      <h2>La <em>tercera ley provincial</em> de paridad del país</h2>
+
+      <p>La <strong>Ley Provincial 8.901</strong> de Córdoba estableció el "Principio de Participación Equivalente de Géneros en las Elecciones". Fue <strong>sancionada el 29 de noviembre de 2000</strong> y promulgada el 12 de diciembre de ese mismo año, con publicación en el Boletín Provincial el 19 de diciembre de 2000.</p>
+
+      <p>Es importante precisar la posición cronológica de la ley cordobesa en el conjunto argentino, porque suele afirmarse erróneamente que Córdoba fue la primera. Los hechos verificables son los siguientes:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Provincia</th>
+              <th>Ley</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Santiago del Estero</strong></td>
+              <td>Ley 6.509</td>
+              <td>Septiembre de 2000</td>
+            </tr>
+            <tr>
+              <td><strong>Río Negro</strong></td>
+              <td>Ley 3.717</td>
+              <td>Octubre de 2000</td>
+            </tr>
+            <tr>
+              <td><strong>Córdoba</strong></td>
+              <td>Ley 8.901</td>
+              <td><strong>29 de noviembre de 2000</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Córdoba fue <strong>la tercera provincia argentina</strong> en sancionar paridad de género, no la primera. Pero hay una particularidad significativa: <strong>fue la primera provincia grande</strong> y la de mayor impacto institucional. Santiago del Estero y Río Negro tienen poblaciones y representaciones legislativas mucho menores. Córdoba aplicó la paridad sobre una Legislatura provincial de 70 miembros, lo cual implicó una transformación más profunda del sistema de representación.</p>
+
+      <h3>La iniciativa y el contexto político</h3>
+
+      <p>La iniciativa parlamentaria de la Ley 8.901 corresponde a la entonces <strong>Primera Dama, Olga Riutort</strong>, esposa del gobernador José Manuel De la Sota. La elección de impulsar la ley desde el oficialismo provincial le aseguró respaldo político y una sanción relativamente fluida. Esta es una característica que la doctrina electoral ha identificado como recurrente en las primeras leyes provinciales de paridad argentinas: las iniciativas fueron impulsadas por <strong>cónyuges o aliadas de los gobernadores</strong> (en Santiago del Estero también, donde Mariana Aragonés de Juárez —esposa del gobernador Carlos Juárez— promovió la Ley 6.509).</p>
+
+      <p>El debate doctrinario sobre el "oportunismo político" de las primeras leyes ha sido tratado en estudios académicos como los de Catalina Smulovitz y la investigación sobre paridad en Argentina publicada por SciELO. Lo cierto es que <strong>la iniciativa, sea cual sea su origen político, modificó estructuralmente la representación legislativa</strong> en Córdoba y proyectó un modelo que sería seguido por otras provincias.</p>
+
+      <h3>Contenido normativo central</h3>
+
+      <p>La Ley 8.901 establece, en su núcleo:</p>
+
+      <ul>
+        <li><strong>Artículo 1</strong>: Principio de Participación Equivalente de Géneros (paridad 50-50).</li>
+        <li><strong>Artículo 2</strong>: el principio debe observarse "obligatoriamente, en toda lista de candidaturas electivas para desempeñar cargos representativos en órganos colegiados ejecutivos, deliberativos, control, selección, profesionales o disciplinarios previstos en la Constitución de la Provincia o en sus respectivas leyes de creación o estatutos".</li>
+        <li><strong>Artículo 3</strong>: alcance: cargos electivos <strong>provinciales, municipales</strong> (correspondientes a localidades sin Carta Orgánica) <strong>y comunales</strong>.</li>
+        <li><strong>Artículo 5</strong>: orden de inclusión imperativo:
+          <ul>
+            <li>Cuando se convocan números <strong>pares</strong>, las listas deben efectuar la postulación en forma <strong>alternada</strong> (uno de cada género por cada tramo de dos candidaturas).</li>
+            <li>Cuando se convocan números impares, se aplican reglas específicas para garantizar la equivalencia.</li>
+          </ul>
+        </li>
+        <li><strong>Artículo 7</strong>: excepción para entidades cuyos matriculados de un género no superen el 30% del total del padrón (caso particular para entidades profesionales o gremiales).</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="paridad-funcionamiento">
+      <div class="seccion-num">03 · La paridad en la práctica</div>
+      <h2>Cómo cambió la <em>composición</em> de la Legislatura</h2>
+
+      <p>La Ley 8.901 entró en vigor para las elecciones inmediatamente posteriores a su sanción. Los efectos sobre la composición legislativa fueron <strong>verificables y significativos</strong>. Estudios académicos publicados en SciELO han documentado el cambio: antes de la ley, las mujeres ocupaban un porcentaje bajo de las bancas legislativas cordobesas; después de la ley, la representación se equilibró según los términos previstos por la norma.</p>
+
+      <h3>El comparativo con la Nación</h3>
+
+      <p>Es relevante señalar que la <strong>Nación recién sancionó paridad de género en 2017</strong> (Ley 27.412), <strong>17 años después</strong> que Córdoba. Esto significa que durante casi dos décadas, las provincias que habían adoptado paridad temprana (Santiago del Estero, Río Negro, Córdoba) tuvieron legislaturas equilibradas, mientras que el Congreso Nacional aún operaba bajo el régimen de cupo del 30% (Ley 24.012 de 1991).</p>
+
+      <p>La Ley 27.412 nacional se inspiró en buena medida en la experiencia de las provincias pioneras, incluyendo Córdoba. La doctrina electoral ha señalado que <strong>las experiencias subnacionales sirvieron como "laboratorio institucional"</strong> para validar la viabilidad de la paridad antes de su adopción en el orden nacional.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué Buenos Aires recién en 2016?</div>
+        <p>La provincia de Buenos Aires sancionó paridad recién el <strong>4 de octubre de 2016</strong>, mediante la Ley 14.848. Es decir, <strong>16 años después que Córdoba</strong>. Esto refleja el patrón más amplio: las provincias del interior (especialmente Córdoba, Santa Fe, Mendoza, Río Negro) suelen adoptar reformas institucionales antes que la provincia de Buenos Aires, que tiende a ser más conservadora institucionalmente. La razón es múltiple: pesos políticos, estructuras partidarias dominantes y mayor distancia respecto del poder nacional.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="codigo-electoral">
+      <div class="seccion-num">04 · El Código Electoral · Ley 9.571</div>
+      <h2>El <em>marco legal</em> de la modernización</h2>
+
+      <p>El sistema electoral cordobés vigente está organizado por el <strong>Código Electoral Provincial · Ley 9.571</strong>, sancionado en 2008 y reformado significativamente en 2010, con primera aplicación en agosto de 2011. Es uno de los códigos electorales provinciales más completos del país y reemplazó al régimen anterior, basado en la Ley 8.643.</p>
+
+      <h3>Estructura del Código</h3>
+
+      <p>El Código Electoral cordobés está organizado en dos libros principales:</p>
+
+      <ul>
+        <li><strong>Libro Primero</strong>: regula el <strong>cuerpo electoral provincial</strong>, los procedimientos electorales, la <strong>boleta única de sufragio</strong>, las autoridades de mesa, los fiscales públicos, los registros de aspirantes y las inmunidades electorales.</li>
+        <li><strong>Libro Segundo</strong>: regula las <strong>campañas electorales</strong> y su <strong>régimen de financiamiento</strong> (público y privado), la publicidad electoral permitida y prohibida, el clientelismo político y los espacios publicitarios.</li>
+      </ul>
+
+      <h3>Cuerpo electoral cordobés</h3>
+
+      <p>El Código establece quiénes pueden votar en elecciones provinciales:</p>
+
+      <ul>
+        <li><strong>Argentinos nativos y por opción</strong>: con domicilio en la provincia y <strong>desde los 16 años de edad</strong> hasta el día de la elección.</li>
+        <li><strong>Argentinos naturalizados</strong>: con cinco años de ejercicio de la ciudadanía.</li>
+        <li><strong>Extranjeros</strong>: pueden votar en elecciones provinciales los extranjeros con <strong>residencia permanente y continua en la Provincia de Córdoba superior a cinco años</strong>, que soliciten voluntariamente su incorporación al fichero electoral provincial ante el Juzgado Electoral.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Voto a los 16 y voto extranjero</div>
+        <p>El voto a los 16 años es un derecho establecido para las elecciones provinciales cordobesas. La <strong>Nación adoptó el voto a los 16</strong> mediante la Ley 26.774 de 2012, después que varias provincias (incluyendo Córdoba) ya lo aplicaran. El voto extranjero provincial es otro derecho que opera por inscripción voluntaria. En las elecciones de junio de 2023, alrededor de <strong>1.500 extranjeros</strong> estaban habilitados a votar en la provincia.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="bus-cordoba">
+      <div class="seccion-num">05 · La Boleta Única cordobesa</div>
+      <h2>El <em>modelo</em> de bloques por categorías</h2>
+
+      <p>La pieza más conocida del Código Electoral cordobés es el sistema de <strong>Boleta Única de Sufragio (BUS)</strong>. Su aplicación inicial en agosto de 2011 fue una de las primeras experiencias con boleta única provincial argentina, junto con Santa Fe (Ley 13.156, sancionada en diciembre de 2010 y promulgada en enero de 2011, con primera aplicación en mayo de 2011 para PASO). Ambos sistemas tienen modelos diferentes.</p>
+
+      <h3>El modelo cordobés: bloques por categorías</h3>
+
+      <p>El modelo cordobés organiza la boleta en <strong>bloques por categorías de cargos</strong>. Es decir, hay una columna por cada categoría electiva y dentro de cada columna se listan los partidos políticos. El elector marca su preferencia en cada categoría, eligiendo el partido (o lista) que prefiere para cada cargo. Las categorías cordobesas son:</p>
+
+      <ul>
+        <li><strong>Voto Lista Completa</strong>: marca todas las categorías con un mismo partido (atajo opcional).</li>
+        <li><strong>Gobernador y Vicegobernador</strong>: una fila para esta categoría.</li>
+        <li><strong>Legisladores Distrito Único</strong>: la elección de los 44 legisladores por distrito único provincial.</li>
+        <li><strong>Legislador Departamental</strong>: la elección del legislador del departamento del votante.</li>
+        <li><strong>Tribunal de Cuentas</strong>: la elección de los miembros del Tribunal de Cuentas Provincial.</li>
+        <li><strong>Intendente y Concejales</strong> (cuando hay simultaneidad con elecciones municipales).</li>
+        <li><strong>Presidente Comunal y Tribunal de Cuentas Comunal</strong> (cuando hay simultaneidad con elecciones comunales).</li>
+      </ul>
+
+      <p>La <strong>diferencia con el modelo de Santa Fe</strong> es importante: la BUS santafesina usa <strong>columnas partidarias</strong>, es decir, una columna por cada partido y dentro de la columna se listan los candidatos a cada categoría. El elector tilda los casilleros que prefiere. Ambos modelos cumplen el mismo objetivo (boleta única emitida por el Estado, no por los partidos), pero tienen efectos diferentes sobre el comportamiento del elector.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué el modelo cordobés es relevante?</div>
+        <p>El modelo cordobés favorece la <strong>elección por categoría</strong>: el elector ve claramente qué cargos elige y puede votar diferentes partidos en cada categoría con facilidad. El modelo santafesino, en cambio, favorece la <strong>elección por partido</strong>: el elector navega primero la oferta partidaria y luego define los cargos. Esta diferencia es importante para entender los efectos políticos que veremos en la sección 07.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="implementacion-2011">
+      <div class="seccion-num">06 · La implementación de 2011</div>
+      <h2>La <em>primera elección</em> con BUS cordobesa</h2>
+
+      <p>La primera aplicación de la Boleta Única de Sufragio en Córdoba fue la elección provincial del <strong>7 de agosto de 2011</strong>. La fecha fue elegida deliberadamente: el gobernador en ejercicio decidió desdoblar la elección provincial de la nacional (que se realizaba el 23 de octubre de 2011), para evitar el "efecto arrastre" del clima electoral nacional sobre el voto provincial y, simultáneamente, estrenar el nuevo sistema sin la complejidad de simultaneidad con la elección presidencial.</p>
+
+      <h3>El despliegue operativo</h3>
+
+      <p>La organización de la elección requirió un despliegue institucional considerable:</p>
+
+      <ul>
+        <li><strong>15.128 Autoridades de Mesa</strong> (AMVs) capacitadas en el nuevo sistema, según la documentación de la Escuela Judicial de Capacitación Electoral.</li>
+        <li><strong>Capacitación visual</strong>: producción de un video instructivo para Autoridades de Mesa y para el público general.</li>
+        <li><strong>Material electoral nuevo</strong>: urnas adaptadas, boletas únicas oficiales, plantillas para no videntes, papeles especiales, fichas de control.</li>
+        <li><strong>Sistema de escrutinio adaptado</strong>: capacitación de los fiscales partidarios y de las autoridades de cómputo para procesar el nuevo formato de boleta.</li>
+      </ul>
+
+      <p>La elección de 2011 transcurrió sin incidentes operativos significativos. Los <strong>tiempos de votación</strong> resultaron comparables a los del sistema anterior (boleta múltiple emitida por partidos), aunque hubo un período inicial de adaptación. La capacitación previa fue considerada clave para la viabilidad operativa.</p>
+
+      <h3>Las elecciones siguientes</h3>
+
+      <p>Desde 2011, todas las elecciones provinciales cordobesas se realizan con BUS:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Tipo</th>
+              <th>Particularidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2011</strong></td>
+              <td>Provincial · Gobernador</td>
+              <td>Primera aplicación BUS</td>
+            </tr>
+            <tr>
+              <td><strong>2015</strong></td>
+              <td>Provincial · Gobernador</td>
+              <td>Segunda aplicación</td>
+            </tr>
+            <tr>
+              <td><strong>2019</strong></td>
+              <td>Provincial · Gobernador</td>
+              <td>Tercera aplicación</td>
+            </tr>
+            <tr>
+              <td><strong>2023</strong></td>
+              <td>Provincial · Gobernador</td>
+              <td>Cuarta aplicación · ~3.048.677 electores cordobeses + 1.500 extranjeros</td>
+            </tr>
+            <tr>
+              <td><strong>2027</strong></td>
+              <td>Provincial · Gobernador</td>
+              <td>Quinta aplicación prevista</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="seccion" id="efectos">
+      <div class="seccion-num">07 · Efectos: fatiga y voto cruzado</div>
+      <h2>Lo que <em>documentó</em> la doctrina electoral</h2>
+
+      <p>La aplicación de la BUS cordobesa permitió documentar empíricamente dos fenómenos electorales que la doctrina venía discutiendo teóricamente. El <strong>investigador José Manuel Pérez Corti</strong>, en su trabajo "Boleta Única de Sufragio: Su implementación en Córdoba" (publicado en La Ley Córdoba en 2012), sistematizó los hallazgos.</p>
+
+      <h3>El "efecto fatiga"</h3>
+
+      <p>El <strong>efecto fatiga</strong> se produce cuando el elector limita su elección a las categorías que considera más importantes o a las que mejor conoce, absteniéndose de sufragar por aquellas que no identifica correctamente o a las que no les asigna interés.</p>
+
+      <p>La documentación cordobesa mostró un <strong>drop de 13 puntos</strong> en los sufragios afirmativos en las categorías legislativas y de Tribunal de Cuentas, en comparación con las categorías principales (Gobernador). En la misma proporción aumentaron los votos en blanco en esas categorías. Es decir, una proporción considerable de electores votaba para Gobernador pero dejaba en blanco las casillas de las categorías legislativas y de control.</p>
+
+      <h3>El "voto cruzado"</h3>
+
+      <p>El <strong>voto cruzado</strong> se produce cuando el elector selecciona ofertas políticas <strong>diferentes</strong> para cada categoría de cargos. Es el opuesto al "efecto arrastre" (donde el elector vota un mismo partido en todas las categorías).</p>
+
+      <p>La BUS cordobesa facilita el voto cruzado: como cada categoría está separada visualmente y el elector debe marcar cada una independientemente, es fácil elegir un Gobernador de un partido, un Legislador Departamental de otro, y un Legislador por Distrito Único de un tercero. El sistema anterior (boleta múltiple por partido) creaba mayor incentivo para el voto único: bastaba con tomar una sola boleta.</p>
+
+      <p>Los datos cordobeses confirmaron que el voto cruzado aumentó significativamente con la BUS, particularmente entre electores urbanos de estratos medios y altos. Este es un fenómeno que tiene implicancias políticas: <strong>aumenta el costo electoral de las coaliciones</strong> y favorece el comportamiento independiente del elector.</p>
+
+      <div class="cita">
+        "La incorporación de la Boleta Única de Sufragio no debe enfocarse sólo como un mecanismo de votación, sino que debe estar acompañada de las previsiones necesarias para garantizar su adecuado funcionamiento. La capacitación electoral y una correcta campaña de información pública son condiciones clave para su éxito."
+        <span class="cita-fuente">— José Manuel Pérez Corti, "Boleta Única de Sufragio: Su implementación en Córdoba" (La Ley Córdoba, 2012).</span>
+      </div>
+
+      <h3>Las recomendaciones de Pérez Corti</h3>
+
+      <p>El estudio de Pérez Corti concluye que la BUS requiere:</p>
+
+      <ul>
+        <li><strong>Capacitación intensiva</strong> de Autoridades de Mesa con tiempo suficiente.</li>
+        <li><strong>Campañas de comunicación pública</strong> antes de las elecciones para informar sobre el nuevo formato.</li>
+        <li><strong>Materiales auxiliares</strong> (plantillas para no videntes, instructivos visuales) para facilitar el voto de electores con dificultades.</li>
+        <li><strong>Sistemas de escrutinio adaptados</strong> para procesar correctamente el voto por categoría.</li>
+        <li><strong>Reconocimiento explícito del efecto fatiga</strong> en el análisis de resultados, particularmente en categorías secundarias.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="bup-nacional">
+      <div class="seccion-num">08 · Influencia en la BUP nacional 2024</div>
+      <h2>El <em>modelo cordobés</em> en el Congreso</h2>
+
+      <p>La experiencia cordobesa con BUS desde 2011 fue una referencia fundamental para el debate de la Boleta Única Papel (BUP) nacional, sancionada como Ley 27.781 en julio de 2024 y aplicada por primera vez en las elecciones nacionales del 26 de octubre de 2025. El debate parlamentario nacional incorporó explícitamente las experiencias cordobesa, santafesina y mendocina.</p>
+
+      <h3>El proyecto debatido</h3>
+
+      <p>El proyecto de la BUP nacional discutido en el Senado en septiembre de 2024 contemplaba dos modelos posibles, basados respectivamente en los sistemas cordobés y santafesino:</p>
+
+      <ul>
+        <li><strong>Modelo cordobés</strong> (bloques por categorías): cada cargo en una fila, partidos en columnas dentro de cada fila.</li>
+        <li><strong>Modelo santafesino</strong> (columnas partidarias): cada partido en una columna, cargos en filas dentro de cada columna.</li>
+      </ul>
+
+      <p>El modelo finalmente adoptado por la Ley 27.781 incorpora <strong>elementos de ambos</strong>, con una preferencia general por el formato de columnas partidarias (más cercano al modelo santafesino) pero con organización por categorías en algunos aspectos. La implementación de la BUP en octubre de 2025 fue la primera elección nacional con boleta única en Argentina.</p>
+
+      <h3>Lo que aportó Córdoba al debate nacional</h3>
+
+      <p>Las contribuciones cordobesas al diseño de la BUP nacional incluyen:</p>
+
+      <ul>
+        <li><strong>Validación empírica</strong> del sistema BUS provincial durante 14 años (2011-2024), con cuatro elecciones documentadas.</li>
+        <li><strong>Identificación del efecto fatiga</strong> como fenómeno a contemplar en el diseño y comunicación del nuevo sistema.</li>
+        <li><strong>Modelo de capacitación masiva</strong> de Autoridades de Mesa (los 15.128 AMVs cordobeses de 2011 fueron una referencia para escalar a nivel nacional).</li>
+        <li><strong>Sistemas auxiliares</strong> (plantillas para no videntes, instructivos visuales) que fueron adaptados para el contexto nacional.</li>
+        <li><strong>Procedimientos de escrutinio</strong> y validación del voto.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El "modelo Schiaretti" como referencia nacional</div>
+        <p>En el debate parlamentario nacional de 2024, varios diputados y senadores hicieron referencia explícita al "modelo cordobés" implementado por el entonces gobernador Juan Schiaretti en 2011. La capacidad cordobesa para implementar reformas electorales sin grandes traumas institucionales fue uno de los argumentos a favor de la viabilidad operativa de la BUP nacional. La provincia de Córdoba, con sus 3 millones de electores y 9.060 mesas (datos de 2023), era una buena escala de validación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="otros-rasgos">
+      <div class="seccion-num">09 · Otros rasgos del sistema</div>
+      <h2>Régimen de campañas y <em>financiamiento</em></h2>
+
+      <p>Más allá de la paridad y de la boleta única, el sistema electoral cordobés tiene otros rasgos que lo diferencian del régimen nacional y de la mayoría de las provincias.</p>
+
+      <h3>Financiamiento de campañas</h3>
+
+      <p>El Libro Segundo del Código Electoral cordobés (Ley 9.571) regula extensamente el <strong>financiamiento de campañas electorales</strong>, distinguiendo entre financiamiento público y privado:</p>
+
+      <ul>
+        <li><strong>Financiamiento público</strong>: el Estado provincial provee fondos a los partidos políticos para el desarrollo de las campañas, con criterios de distribución basados en el desempeño electoral previo y en el número de candidaturas presentadas.</li>
+        <li><strong>Financiamiento privado</strong>: regulado con topes a las donaciones particulares y obligaciones de transparencia sobre origen de los fondos.</li>
+        <li><strong>Espacios publicitarios</strong>: distribución equitativa de espacios en medios radiales y televisivos, con criterios definidos por la Junta Electoral.</li>
+        <li><strong>Publicidad prohibida</strong>: la ley enumera las modalidades publicitarias que están vedadas durante el período electoral (publicidad oficial proselitista, encuestas sin publicar metodología, clientelismo político, etc.).</li>
+      </ul>
+
+      <h3>El Juzgado Electoral Provincial</h3>
+
+      <p>El control de los procesos electorales está a cargo del <strong>Juzgado Electoral de la Provincia de Córdoba</strong>, órgano especializado del Poder Judicial provincial. Sus funciones incluyen:</p>
+
+      <ul>
+        <li>Oficialización de listas de candidatos.</li>
+        <li>Control del registro electoral.</li>
+        <li>Resolución de impugnaciones y recursos.</li>
+        <li>Control del financiamiento de campañas y verificación del cumplimiento de la Ley 8.901 de Paridad.</li>
+        <li>Organización del cómputo y proclamación de los electos.</li>
+      </ul>
+
+      <h3>La Junta Electoral Provincial</h3>
+
+      <p>La <strong>Junta Electoral Provincial</strong> es el órgano constitucional que organiza la elección. Está integrada por el presidente del Tribunal Superior de Justicia, el presidente de la Legislatura (el Vicegobernador) y el Fiscal de Estado, o sus reemplazantes legales. Su rol es complementario al del Juzgado Electoral: la Junta organiza la elección, el Juzgado controla su legalidad.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El Tribunal de Cuentas electo en boleta: una particularidad cordobesa</div>
+        <p>Recordemos del capítulo 10.02.02 que el Tribunal de Cuentas Provincial de Córdoba es elegido directamente por el cuerpo electoral, simultáneamente con la elección de Gobernador. Esta es una <strong>particularidad cordobesa única en el país</strong>: en la mayoría de las provincias, los miembros del Tribunal de Cuentas son designados por la Legislatura. La elección popular del Tribunal de Cuentas le da una <strong>legitimidad democrática directa</strong> al órgano de control externo, una arquitectura institucional notable.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley Provincial 8.901</strong> · Principio de Participación Equivalente de Géneros en las Elecciones. Sancionada el 29 de noviembre de 2000, promulgada el 12 de diciembre de 2000. Texto en argentina.gob.ar/normativa/provincial.</li>
+        <li><strong>Ley Provincial 9.571</strong> · Código Electoral Provincial de Córdoba. Texto vigente en justiciacordoba.gob.ar.</li>
+        <li><strong>Pérez Corti, José Manuel</strong> (2012). "Boleta Única de Sufragio: Su implementación en Córdoba". La Ley Córdoba. Disponible en joseperezcorti.com.ar.</li>
+        <li><strong>Pérez Corti, José Manuel</strong>. "La reforma del régimen electoral de la provincia de Córdoba" (análisis del Código Ley 9.571). joseperezcorti.com.ar.</li>
+        <li><strong>Ley Nacional 27.412</strong> · Paridad de Género en Ámbitos de Representación Política (2017).</li>
+        <li><strong>Ley Nacional 27.781</strong> · Boleta Única Papel (BUP) nacional (julio de 2024).</li>
+        <li><strong>Ley Nacional 24.012</strong> · Cupo Femenino (1991, primera ley argentina de cupo).</li>
+        <li><strong>Ley Nacional 26.774</strong> · Voto a los 16 años (2012).</li>
+        <li><strong>"El origen de la primera generación de reformas de paridad de género en América Latina. Evidencia de Argentina"</strong> · SciELO, Revista Política y Gobierno, México (2019).</li>
+        <li><strong>"Pasado y presente: del cupo a la paridad de género en las provincias argentinas"</strong> · Argentina Elections (2016).</li>
+        <li><strong>Observatorio Electoral Argentino</strong> · Ministerio del Interior. Paridad electoral en ámbitos de representación política provinciales.</li>
+        <li><strong>Defensoría del Pueblo de CABA</strong>. Monitoreo de cumplimiento de la Ley de Paridad en las provincias argentinas.</li>
+        <li><strong>"Boleta única: cómo funcionan los modelos de Santa Fe y Córdoba"</strong> · LetraP, análisis comparado de modelos (septiembre de 2024).</li>
+        <li><strong>Junta Electoral Provincial de Córdoba</strong> · Resultados electorales históricos.</li>
+      </ul>
+    </div>
+
+    <a href="cordoba-tensiones-nacion.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.02.05</div>
+        <h3>Tensiones con <em>la Nación</em></h3>
+        <p>Córdoba aporta el 10% del PBI nacional pero recibe el 9.5% de la coparticipación pura. Conserva su caja jubilatoria provincial (no transferida a ANSES). Su doctrina de "no subordinación" política y sus litigios reiterados ante la Corte Suprema. Los conflictos por fondos.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
