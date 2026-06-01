@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Calendario electoral argentino · 08.01 — Educación Cívica</title>
+<meta name="description" content="Cómo se distribuye el calendario electoral argentino: renovación de Diputados por mitades cada 2 años, Senado por tercios cada 6 años, elecciones presidenciales cada 4 años, calendarios provinciales y municipales. Mapa completo del año electoral.">
+<link rel="canonical" href="https://educacioncivica.com.ar/elecciones-calendario.html">
+
+<meta property="og:title" content="Calendario electoral argentino · 08.01">
+<meta property="og:description" content="Cómo se distribuye el calendario electoral argentino: nacional, provincial y municipal.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/elecciones-calendario.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calendario electoral argentino · 08.01">
+<meta name="twitter:description" content="El ritmo electoral argentino completo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); margin: 1.5rem 0 0.6rem; line-height: 1.3; }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+
+  .ciclo-card {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 4px solid var(--premium);
+    padding: 1.6rem 1.8rem;
+    margin: 1.5rem 0 1.2rem;
+  }
+  .ciclo-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    color: var(--tinta);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+  .ciclo-card h4 em { color: var(--premium-dark); font-style: italic; }
+  .ciclo-card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--premium-dark);
+    background: var(--premium-soft);
+    padding: 0.3rem 0.7rem;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .ciclo-card dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.92rem;
+    margin: 0.8rem 0 0;
+  }
+  .ciclo-card dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 0.15rem;
+  }
+  .ciclo-card dd {
+    color: var(--tinta);
+    line-height: 1.55;
+  }
+  .ciclo-card dd strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .ciclo-card dl { grid-template-columns: 1fr; gap: 0.3rem; }
+    .ciclo-card dt { margin-top: 0.6rem; }
+  }
+
+  .timeline-año {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem 1.8rem;
+    margin: 1rem 0;
+    position: relative;
+    padding-left: 5rem;
+  }
+  .timeline-año::before {
+    content: attr(data-año);
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--premium);
+    letter-spacing: 0.02em;
+  }
+  .timeline-año h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    color: var(--tinta);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+  .timeline-año p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .timeline-año p strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .timeline-año { padding-left: 1.5rem; }
+    .timeline-año::before { position: static; display: block; margin-bottom: 0.5rem; }
+  }
+
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .tabla-comparativa td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--premium-dark); font-weight: 600; white-space: nowrap; }
+
+  .grupo-senado {
+    background: var(--crema-warm);
+    border: 1px solid var(--linea);
+    padding: 1.3rem 1.6rem;
+    margin: 0.8rem 0;
+  }
+  .grupo-senado-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--premium);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+  .grupo-senado h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    color: var(--tinta);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .grupo-senado .provincias-list {
+    font-size: 0.92rem;
+    color: var(--tinta);
+    line-height: 1.6;
+  }
+
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Calendario electoral</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 08.01 · Sistema electoral</div>
+    <h1 class="page-title">El <em>calendario electoral</em> argentino</h1>
+    <p class="page-intro">En Argentina <strong>se vota cada dos años</strong>. Pero qué se vota en cada elección depende de un sistema escalonado: la Cámara de Diputados se renueva por mitades, el Senado por tercios, la presidencia se elige cada cuatro años, y cada provincia define su propio calendario para gobernador y legislatura local. A esto se suman elecciones municipales, simultaneidad, desdoblamientos y PASO. Este capítulo explica <strong>cómo funciona el ritmo electoral argentino</strong>: qué se vota, cuándo, por qué y bajo qué reglas.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2</div>
+        <div class="page-stat-label">Años entre elecciones nacionales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">4</div>
+        <div class="page-stat-label">Años mandato presidencial</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">6</div>
+        <div class="page-stat-label">Años mandato senadores</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">24</div>
+        <div class="page-stat-label">Distritos electorales</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#intro">Tres niveles, un calendario</a></li>
+      <li><a href="#nacional">El calendario nacional</a></li>
+      <li><a href="#diputados">Cámara de Diputados · Por mitades</a></li>
+      <li><a href="#senado">Senado · Por tercios</a></li>
+      <li><a href="#grupos-senado">Los 3 grupos del Senado</a></li>
+      <li><a href="#presidencia">La elección presidencial</a></li>
+      <li><a href="#provincias">Las elecciones provinciales</a></li>
+      <li><a href="#municipios">Las elecciones municipales</a></li>
+      <li><a href="#simultaneidad">Simultaneidad y desdoblamiento</a></li>
+      <li><a href="#ciclo-electoral">Línea de tiempo del ciclo electoral</a></li>
+      <li><a href="#proxima-decada">La próxima década electoral</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="intro"><span class="seccion-num">— Introducción</span>Tres niveles, <em>un calendario</em></h2>
+    <p>El sistema electoral argentino opera en <strong>tres niveles simultáneos</strong>: nacional (presidente, Diputados, Senado), provincial (gobernador, legislaturas provinciales) y municipal (intendentes, concejales). Cada uno tiene reglas y plazos propios, pero todos se entrelazan en un ritmo bianual que define el pulso político del país.</p>
+
+    <p>La regla básica es <strong>elecciones cada dos años</strong>. En los años pares (numeración no estricta, sino lógica institucional: 2023, 2025, 2027...) se realizan las elecciones nacionales. Cada elección renueva una parte del Congreso, y cada cuatro años se elige también al Presidente y al Vicepresidente. Las provincias pueden adherir al calendario nacional ("simultaneidad") o convocar a sus propios comicios en otra fecha ("desdoblamiento"), una decisión cada vez más frecuente.</p>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Definición clave</div>
+      <p>"Elecciones de medio término" son las elecciones legislativas que se realizan en la mitad del mandato presidencial (2017, 2021, 2025...) y que renuevan solo parte del Congreso. Son consideradas un termómetro del gobierno: si pierde, suele iniciar un período de debilidad política. Si gana, consolida su agenda hasta el final del mandato.</p>
+    </div>
+
+    <h2 id="nacional"><span class="seccion-num">— Sección 1</span>El calendario <em>nacional</em></h2>
+    <p>El calendario nacional argentino tiene <strong>cuatro tipos de elecciones</strong>, todas reguladas por la Constitución Nacional y el Código Electoral Nacional (Ley 19.945, con sus modificatorias):</p>
+
+    <div class="ciclo-card">
+      <div class="ciclo-card-tag">★ Presidencial</div>
+      <h4>Elección de <em>Presidente</em> y Vicepresidente</h4>
+      <dl>
+        <dt>Periodicidad</dt>
+        <dd>Cada <strong>4 años</strong></dd>
+        <dt>Mandato</dt>
+        <dd>4 años, con posibilidad de una reelección consecutiva (Art. 90 CN)</dd>
+        <dt>Sistema</dt>
+        <dd>Elección directa con doble vuelta condicional (45% o 40% + 10 puntos de diferencia)</dd>
+        <dt>Fechas típicas</dt>
+        <dd>Octubre (primera vuelta), noviembre (eventual balotaje), asunción 10 de diciembre</dd>
+        <dt>Próximas</dt>
+        <dd>Octubre de 2027, octubre de 2031, octubre de 2035</dd>
+      </dl>
+    </div>
+
+    <div class="ciclo-card">
+      <div class="ciclo-card-tag">★ Diputados</div>
+      <h4>Renovación de la <em>Cámara de Diputados</em></h4>
+      <dl>
+        <dt>Periodicidad</dt>
+        <dd>Cada <strong>2 años</strong></dd>
+        <dt>Mandato</dt>
+        <dd>4 años, reelegibles indefinidamente (Art. 50 CN)</dd>
+        <dt>Renovación</dt>
+        <dd>Por mitades: <strong>127 de 257 bancas</strong> en cada elección</dd>
+        <dt>Sistema</dt>
+        <dd>Elección directa con sistema proporcional D'Hondt en cada distrito provincial</dd>
+        <dt>Fechas típicas</dt>
+        <dd>Octubre, asunción 10 de diciembre</dd>
+      </dl>
+    </div>
+
+    <div class="ciclo-card">
+      <div class="ciclo-card-tag">★ Senado</div>
+      <h4>Renovación del <em>Senado</em></h4>
+      <dl>
+        <dt>Periodicidad</dt>
+        <dd>Cada <strong>2 años</strong></dd>
+        <dt>Mandato</dt>
+        <dd>6 años, reelegibles indefinidamente (Art. 56 CN)</dd>
+        <dt>Renovación</dt>
+        <dd>Por tercios: <strong>24 de 72 bancas</strong> (3 senadores por 8 provincias)</dd>
+        <dt>Sistema</dt>
+        <dd>Elección directa con sistema mayoría-minoría: 2 al ganador, 1 al segundo</dd>
+        <dt>Fechas típicas</dt>
+        <dd>Coincide con las elecciones de Diputados</dd>
+      </dl>
+    </div>
+
+    <div class="ciclo-card">
+      <div class="ciclo-card-tag">★ Parlasur</div>
+      <h4>Parlamentarios del <em>Mercosur</em></h4>
+      <dl>
+        <dt>Periodicidad</dt>
+        <dd>Cada <strong>4 años</strong>, coincidente con la elección presidencial</dd>
+        <dt>Cantidad</dt>
+        <dd>43 parlamentarios: 24 por distritos provinciales + 19 por distrito nacional</dd>
+        <dt>Sistema</dt>
+        <dd>Elección directa por voto popular (desde 2015)</dd>
+        <dt>Estado actual</dt>
+        <dd>El Parlamento del Mercosur es órgano consultivo. La participación argentina ha estado en discusión en los últimos años.</dd>
+      </dl>
+    </div>
+
+    <h2 id="diputados"><span class="seccion-num">— Sección 2</span>Cámara de <em>Diputados</em> · Por mitades</h2>
+    <p>La Cámara de Diputados de la Nación tiene <strong>257 bancas</strong> que se distribuyen entre las 24 jurisdicciones (23 provincias + CABA) según su población. La regla constitucional original (Art. 45 CN) establecía que la representación debía ser proporcional a la población según el último censo, con un mínimo de 5 diputados por provincia. Sin embargo, esa regla nunca volvió a aplicarse después de 1983.</p>
+
+    <h3>La distribución actual: una distorsión histórica</h3>
+    <p>La distribución de las 257 bancas fue establecida por el <strong>Decreto-Ley 22.847/83</strong> del último gobierno militar, basado en el censo de 1980, y nunca se actualizó. Esto genera <strong>distorsiones representativas</strong>: algunas provincias chicas y CABA tienen más diputados de los que les corresponderían por población, y otras (Buenos Aires, Córdoba, Santa Fe, Mendoza, Salta) tienen menos.</p>
+
+    <p>Distribución actual de las 257 bancas:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Jurisdicción</th>
+          <th>Diputados</th>
+          <th>Jurisdicción</th>
+          <th>Diputados</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Buenos Aires</td><td>70</td><td>Salta</td><td>7</td></tr>
+        <tr><td>CABA</td><td>25</td><td>Chaco</td><td>7</td></tr>
+        <tr><td>Córdoba</td><td>18</td><td>Corrientes</td><td>7</td></tr>
+        <tr><td>Santa Fe</td><td>19</td><td>Misiones</td><td>7</td></tr>
+        <tr><td>Mendoza</td><td>10</td><td>San Juan</td><td>6</td></tr>
+        <tr><td>Tucumán</td><td>9</td><td>Jujuy</td><td>6</td></tr>
+        <tr><td>Entre Ríos</td><td>9</td><td>Río Negro</td><td>5</td></tr>
+        <tr><td>Santiago del Estero</td><td>7</td><td>Neuquén</td><td>5</td></tr>
+        <tr><td>Formosa</td><td>5</td><td>Chubut</td><td>5</td></tr>
+        <tr><td>Catamarca</td><td>5</td><td>La Pampa</td><td>5</td></tr>
+        <tr><td>La Rioja</td><td>5</td><td>San Luis</td><td>5</td></tr>
+        <tr><td>Santa Cruz</td><td>5</td><td>Tierra del Fuego</td><td>5</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Sistema D'Hondt</h3>
+    <p>En cada distrito, las bancas que se renuevan se distribuyen proporcionalmente a los votos obtenidos por cada lista, usando el <strong>sistema D'Hondt</strong>. Solo participan del reparto las fuerzas que superan el <strong>piso del 3% del padrón electoral</strong> del distrito. Esto excluye automáticamente a las fuerzas más pequeñas que no alcanzan ese umbral.</p>
+
+    <p>Como cada distrito renueva la mitad de su delegación cada 2 años, la práctica varía: en distritos con 5 diputados, se renuevan 2 o 3 alternadamente; en Buenos Aires (70 diputados), se renuevan 35 cada vez.</p>
+
+    <p>Para profundizar sobre el método D'Hondt, ver <a href="dhondt.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">la página específica del sistema</a>.</p>
+
+    <h2 id="senado"><span class="seccion-num">— Sección 3</span>El <em>Senado</em> · Por tercios</h2>
+    <p>El Senado de la Nación tiene <strong>72 bancas</strong>: 3 senadores por cada una de las 23 provincias y 3 por CABA. La regla, establecida por la reforma de 1994 (Art. 54 CN), es simple: en cada distrito, <strong>2 senadores corresponden a la fuerza más votada, y 1 a la segunda</strong>.</p>
+
+    <p>Esto significa que el Senado argentino tiene una representación bipartidista garantizada por norma: el ganador no se lleva todo, sino que la primera minoría siempre tiene presencia. Es lo que se conoce como <em>"sistema mayoría-minoría"</em>.</p>
+
+    <h3>La renovación por tercios</h3>
+    <p>El Senado se renueva por tercios cada 2 años. Esto significa que en cada elección legislativa, <strong>8 provincias eligen sus 3 senadores</strong>, mientras las otras 16 mantienen las suyas. Cada provincia vota senadores nacionales <strong>cada 6 años</strong>.</p>
+
+    <p>Esta lógica produce una <strong>continuidad institucional</strong> mayor en el Senado que en Diputados: en cualquier momento, dos tercios de los senadores ya están en el cargo y solo un tercio se renueva. Es difícil que un cambio político produzca un giro completo en el Senado en una sola elección.</p>
+
+    <h2 id="grupos-senado"><span class="seccion-num">— Sección 4</span>Los <em>tres grupos</em> del Senado</h2>
+    <p>Las 24 jurisdicciones argentinas se agrupan en <strong>tres clases o grupos</strong> para la renovación del Senado. Cada grupo vota cada 6 años:</p>
+
+    <div class="grupo-senado">
+      <div class="grupo-senado-tag">— Grupo I · Renovaciones 2003, 2009, 2015, 2021, 2027, 2033</div>
+      <h4>8 provincias</h4>
+      <p class="provincias-list"><strong>Catamarca</strong> · <strong>Córdoba</strong> · <strong>Corrientes</strong> · <strong>Chubut</strong> · <strong>La Pampa</strong> · <strong>Mendoza</strong> · <strong>Santa Fe</strong> · <strong>Tucumán</strong></p>
+    </div>
+
+    <div class="grupo-senado">
+      <div class="grupo-senado-tag">— Grupo II · Renovaciones 2005, 2011, 2017, 2023, 2029, 2035</div>
+      <h4>8 provincias</h4>
+      <p class="provincias-list"><strong>Buenos Aires</strong> · <strong>Formosa</strong> · <strong>Jujuy</strong> · <strong>La Rioja</strong> · <strong>Misiones</strong> · <strong>San Juan</strong> · <strong>San Luis</strong> · <strong>Santa Cruz</strong></p>
+    </div>
+
+    <div class="grupo-senado">
+      <div class="grupo-senado-tag">— Grupo III · Renovaciones 2001, 2007, 2013, 2019, 2025, 2031</div>
+      <h4>8 jurisdicciones (incluye CABA)</h4>
+      <p class="provincias-list"><strong>Ciudad Autónoma de Buenos Aires</strong> · <strong>Chaco</strong> · <strong>Entre Ríos</strong> · <strong>Neuquén</strong> · <strong>Río Negro</strong> · <strong>Salta</strong> · <strong>Santiago del Estero</strong> · <strong>Tierra del Fuego</strong></p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Particularidad histórica</div>
+      <p>La división actual de grupos se estableció con la <strong>reforma constitucional de 1994</strong>, que dispuso la transición del antiguo sistema (senadores elegidos por las legislaturas provinciales cada 9 años) al actual (elección directa cada 6 años con tercios escalonados). El sorteo inicial de las clases determinó cómo se ubicaría cada provincia en su grupo correspondiente.</p>
+    </div>
+
+    <h2 id="presidencia"><span class="seccion-num">— Sección 5</span>La elección <em>presidencial</em></h2>
+    <p>El Presidente y el Vicepresidente se eligen <strong>cada 4 años</strong> en una sola fórmula conjunta. Desde la reforma constitucional de 1994, el sistema es:</p>
+
+    <h3>Elección directa con doble vuelta condicional</h3>
+    <p>La fórmula gana en <strong>primera vuelta</strong> si obtiene:</p>
+    <ul>
+      <li><strong>Más del 45% de los votos afirmativos</strong>, o</li>
+      <li><strong>Más del 40% y diferencia mayor a 10 puntos</strong> con la segunda fórmula</li>
+    </ul>
+
+    <p>Si ninguna fórmula cumple alguna de esas condiciones, se realiza una <strong>segunda vuelta o balotaje</strong> entre las dos fórmulas más votadas. El balotaje se realiza dentro de los 30 días posteriores a la primera vuelta.</p>
+
+    <p>Hasta hoy, las elecciones presidenciales argentinas posteriores a 1995 han tenido los siguientes desenlaces:</p>
+    <ul>
+      <li><strong>Decididas en primera vuelta</strong>: 1995, 1999, 2003 (por baja de Menem), 2007, 2011, 2019</li>
+      <li><strong>Decididas en balotaje</strong>: 2015 y 2023</li>
+    </ul>
+
+    <p>Para ver el detalle histórico de cada elección, consultar el capítulo <a href="elecciones-cronologia.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">08.04 sobre la cronología electoral completa</a>.</p>
+
+    <h2 id="provincias"><span class="seccion-num">— Sección 6</span>Las elecciones <em>provinciales</em></h2>
+    <p>Cada provincia tiene su propio sistema electoral, regulado por su constitución provincial y leyes locales. Las elecciones provinciales <strong>no están atadas obligatoriamente</strong> al calendario nacional: cada gobernador puede decidir si su elección coincide con la nacional ("simultaneidad") o se realiza en otra fecha ("desdoblamiento"). Pero hay límites: cada constitución provincial define plazos máximos para convocar.</p>
+
+    <h3>Qué se elige a nivel provincial</h3>
+    <p>En las elecciones provinciales se vota:</p>
+    <ul>
+      <li><strong>Gobernador y vicegobernador</strong>, cada 4 años (en todas las provincias)</li>
+      <li><strong>Legisladores provinciales</strong>: cada provincia tiene su propia legislatura, unicameral o bicameral, con sus propias reglas de renovación</li>
+      <li><strong>Convencionales constituyentes</strong>: cuando hay reformas constitucionales provinciales</li>
+    </ul>
+
+    <h3>La diversidad de los calendarios provinciales</h3>
+    <p>Las 24 jurisdicciones argentinas tienen calendarios variados:</p>
+    <ul>
+      <li><strong>Mandatos de gobernador</strong>: 4 años en casi todas las provincias. Algunas habilitan reelección indefinida, otras solo una reelección, otras ninguna.</li>
+      <li><strong>Legislaturas bicamerales</strong>: Buenos Aires, Catamarca, Corrientes, Mendoza, Salta, San Luis y Entre Ríos.</li>
+      <li><strong>Legislaturas unicamerales</strong>: el resto.</li>
+      <li><strong>Renovaciones parciales</strong>: la mayoría de las provincias renuevan sus cámaras por mitades cada 2 años.</li>
+    </ul>
+
+    <p>Para más detalles sobre cada provincia, ver el capítulo <a href="provincias.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">sobre las 24 jurisdicciones argentinas</a>.</p>
+
+    <h2 id="municipios"><span class="seccion-num">— Sección 7</span>Las elecciones <em>municipales</em></h2>
+    <p>Argentina tiene aproximadamente <strong>2.300 gobiernos locales</strong> (municipios, comunas, juntas vecinales, dependiendo de la provincia). Cada uno elige sus autoridades —intendente o presidente comunal, concejales— según las reglas que define la legislación provincial respectiva. La autonomía municipal está garantizada por el Art. 123 CN reformado en 1994: cada provincia debe asegurarla en sus aspectos institucional, político, administrativo, económico y financiero.</p>
+
+    <p>Los calendarios municipales suelen seguir uno de tres modelos:</p>
+    <ul>
+      <li><strong>Concurrencia con las elecciones provinciales</strong>: el municipio vota el mismo día que el gobernador.</li>
+      <li><strong>Concurrencia con las elecciones nacionales</strong>: el municipio vota el mismo día que el Presidente o las legislativas nacionales.</li>
+      <li><strong>Fecha autónoma</strong>: el municipio elige su propia fecha, distinta de las anteriores.</li>
+    </ul>
+
+    <p>El caso de CABA es particular: como ciudad autónoma con régimen propio (Art. 129 CN), tiene un calendario independiente para Jefe de Gobierno (cada 4 años) y para Legislatura Porteña (60 diputados, renovación por mitades cada 2 años). Para profundizar, ver el capítulo <a href="caba-poderes.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">09.02 sobre los poderes porteños</a>.</p>
+
+    <h2 id="simultaneidad"><span class="seccion-num">— Sección 8</span>Simultaneidad y <em>desdoblamiento</em></h2>
+    <p>Una de las decisiones políticas más importantes de los gobernadores cada año electoral es si <strong>juntar o separar</strong> las elecciones provinciales de las nacionales.</p>
+
+    <h3>Simultaneidad</h3>
+    <p>La <strong>Ley 15.262 de Simultaneidad de Elecciones Nacionales y Provinciales</strong>, de 1959, permite que las provincias adhieran al calendario nacional. Cuando una provincia adhiere a la simultaneidad, las elecciones provinciales se realizan el mismo día que las nacionales, con las mismas autoridades de mesa y el mismo procedimiento de escrutinio.</p>
+
+    <p>Ventajas: ahorro de recursos, mayor participación, una sola convocatoria a fiscalizar. Desventaja política: las cuestiones locales quedan subsumidas por la agenda nacional. Si el gobierno nacional tiene baja imagen, eso suele arrastrar a sus candidatos locales y viceversa.</p>
+
+    <h3>Desdoblamiento</h3>
+    <p>El <strong>desdoblamiento</strong> es la decisión inversa: el gobernador convoca a las elecciones provinciales en una fecha distinta de las nacionales. Esto separa los debates locales de los nacionales y permite que las dinámicas distritales se discutan por sí mismas.</p>
+
+    <p>El desdoblamiento se intensificó en los últimos años. En las elecciones de 2023, 16 provincias desdoblaron sus comicios. En 2025, otras tantas siguieron el mismo camino. Pero el caso emblemático fue el de la <strong>provincia de Buenos Aires</strong> en 2025: la mayor jurisdicción del país desdobló por primera vez desde 1995, convocando a elecciones provinciales el 7 de septiembre, separadas de las nacionales del 26 de octubre.</p>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Por qué se desdobla</div>
+      <p>Los gobernadores que desdoblan suelen argumentar que las cuestiones provinciales merecen un debate propio sin interferencia de la agenda nacional. Pero el cálculo político real es más profundo: el desdoblamiento permite al gobernador <strong>medir sus propios candidatos</strong> sin que el resultado quede contaminado por una marea favorable o adversa al gobierno nacional. Si la gestión provincial es buena pero la nacional impopular (o viceversa), el desdoblamiento aísla los resultados.</p>
+    </div>
+
+    <h2 id="ciclo-electoral"><span class="seccion-num">— Sección 9</span>Línea de tiempo del <em>ciclo electoral</em></h2>
+    <p>Un ciclo electoral nacional típico se extiende durante varios meses y combina actos preparatorios con votaciones efectivas. El esquema general:</p>
+
+    <div class="timeline-año" data-año="Mar">
+      <h4>Convocatoria oficial</h4>
+      <p>El Poder Ejecutivo Nacional convoca formalmente a elecciones mediante decreto, fijando las fechas exactas. <strong>Suele publicarse entre marzo y abril del año electoral.</strong></p>
+    </div>
+
+    <div class="timeline-año" data-año="May">
+      <h4>Plazos partidarios</h4>
+      <p>Los partidos deben presentar precandidaturas, reconocimiento de alianzas y confederaciones. <strong>Fecha límite habitual: mediados de mayo</strong> para alianzas.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Jun">
+      <h4>Padrón provisorio</h4>
+      <p>La Cámara Nacional Electoral publica el padrón electoral provisorio para que la ciudadanía verifique sus datos y solicite correcciones.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Ago">
+      <h4>PASO (si están vigentes)</h4>
+      <p>Las <strong>Primarias Abiertas, Simultáneas y Obligatorias</strong> se realizaban tradicionalmente en agosto (segundo domingo). Definían los candidatos de cada fuerza y eliminaban a quienes no superaran el 1,5% del padrón. <strong>En 2025 fueron suspendidas excepcionalmente</strong> por ley. Su continuidad futura está en discusión política activa.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Sep">
+      <h4>Campaña electoral</h4>
+      <p>Período de campaña activa con publicidad, debates, actos públicos. La Cámara Nacional Electoral controla los plazos y el financiamiento.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Oct">
+      <h4>Elecciones generales</h4>
+      <p>Se realizan tradicionalmente el <strong>cuarto domingo de octubre</strong>. En 2023: 22 de octubre. En 2025: 26 de octubre. Mesa abierta 8:00 a 18:00. Padrón publicado, fiscalización partidaria, escrutinio provisorio.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Nov">
+      <h4>Eventual balotaje</h4>
+      <p>Si la elección presidencial no se define en primera vuelta, se realiza un balotaje <strong>30 días después</strong>, en noviembre. En 2015: 22 de noviembre. En 2023: 19 de noviembre.</p>
+    </div>
+
+    <div class="timeline-año" data-año="Dic">
+      <h4>Asunción</h4>
+      <p>Los nuevos legisladores asumen el <strong>10 de diciembre</strong>. Si fue elección presidencial, también asume el Presidente. La Cámara de Diputados, el Senado y la Casa Rosada inauguran nuevos elencos.</p>
+    </div>
+
+    <h2 id="proxima-decada"><span class="seccion-num">— Sección 10</span>La próxima <em>década electoral</em></h2>
+    <p>Cómo se distribuyen las elecciones nacionales argentinas en el horizonte temporal próximo:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Qué se elige</th>
+          <th>Senado renueva</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025</td>
+          <td>Diputados (mitad) + Senado (1/3)</td>
+          <td>Grupo III · CABA + 7 provincias</td>
+          <td>Medio término</td>
+        </tr>
+        <tr>
+          <td>2027</td>
+          <td>Presidente · Diputados · Senado · Parlasur</td>
+          <td>Grupo I · 8 provincias</td>
+          <td>General presidencial</td>
+        </tr>
+        <tr>
+          <td>2029</td>
+          <td>Diputados (mitad) + Senado (1/3)</td>
+          <td>Grupo II · 8 provincias</td>
+          <td>Medio término</td>
+        </tr>
+        <tr>
+          <td>2031</td>
+          <td>Presidente · Diputados · Senado · Parlasur</td>
+          <td>Grupo III · CABA + 7 provincias</td>
+          <td>General presidencial</td>
+        </tr>
+        <tr>
+          <td>2033</td>
+          <td>Diputados (mitad) + Senado (1/3)</td>
+          <td>Grupo I · 8 provincias</td>
+          <td>Medio término</td>
+        </tr>
+        <tr>
+          <td>2035</td>
+          <td>Presidente · Diputados · Senado · Parlasur</td>
+          <td>Grupo II · 8 provincias</td>
+          <td>General presidencial</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>A esto hay que sumarle las elecciones provinciales y municipales, que pueden coincidir o no con el calendario nacional según las decisiones de cada gobernador y cada intendente.</p>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">El calendario electoral argentino es un instrumento institucional precioso: garantiza que cada dos años haya una posibilidad de renovación democrática. La Constitución diseñó un sistema escalonado para que ningún momento político —por más extraordinario que sea— pueda producir un cambio total en todas las instituciones representativas. Es una herramienta de <strong>continuidad institucional</strong> tanto como de <strong>alternancia</strong>.</p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Próximos contenidos en desarrollo</div>
+      <p>Este capítulo es parte de la sección Elecciones. Otros temas que se sumarán: <strong>08.02 Sistemas presidenciales aplicados</strong> (análisis técnico de cada modelo); <strong>08.03 Sistemas legislativos a lo largo del tiempo</strong>; <strong>08.05 Innovaciones electorales del siglo XXI</strong> (PASO, BUP, paridad, voto joven); también un hub que organice toda la sección. Si tenés sugerencias, escribinos.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Nación Argentina, Arts. 45, 50, 54, 56, 90, 94-98, 123, 129.</li>
+        <li>Código Electoral Nacional (Ley 19.945) y sus modificatorias.</li>
+        <li>Ley 24.444 - Reforma al régimen de elección de senadores (sistema mayoría-minoría).</li>
+        <li>Ley 15.262 de Simultaneidad de Elecciones Nacionales y Provinciales (1959).</li>
+        <li>Ley 27.781 - Boleta Única de Papel (2024).</li>
+        <li>Decreto-Ley 22.847/83 - Distribución de bancas de Diputados Nacionales.</li>
+        <li>Decreto 1049/2024 - Reglamentación de la Boleta Única de Papel.</li>
+        <li>Ministerio del Interior. Dirección Nacional Electoral. <em>Calendario electoral histórico</em>.</li>
+        <li>Cámara Nacional Electoral. <em>Resultados electorales y cronogramas oficiales</em>.</li>
+        <li>Honorable Senado de la Nación. <em>Composición por períodos</em>.</li>
+        <li>Honorable Cámara de Diputados de la Nación. <em>Diputados por provincia</em>.</li>
+        <li>Argentina.gob.ar - Subsecretaría de Asuntos Políticos. <em>Informe de simultaneidad y concurrencia</em> (2024).</li>
+        <li>Chequeado. <em>Calendario electoral 2025</em>.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino</em>. Eudeba.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino</em>. Ediar.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="elecciones-cronologia.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Capítulo 08.04</div>
+        <div class="nav-cap-titulo">Cronología electoral completa</div>
+      </a>
+      <a href="historia.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Sección relacionada</div>
+        <div class="nav-cap-titulo">Historia institucional</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
