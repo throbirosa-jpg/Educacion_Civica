@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Mendoza · Los tres poderes (10.04.02) — Educación Cívica</title>
+<meta name="description" content="El sistema institucional mendocino: el gobernador (4 años, sin reelección, único caso entre las grandes provincias), la Legislatura bicameral (48 diputados + 38 senadores en 4 secciones electorales) y la Suprema Corte de Justicia. El vicegobernador preside el Senado. Análisis técnico de la arquitectura del poder en la Provincia más austera institucionalmente.">
+<link rel="canonical" href="https://educacioncivica.com.ar/mendoza-poderes.html">
+
+<meta property="og:title" content="Mendoza · Los tres poderes provinciales">
+<meta property="og:description" content="La única provincia grande sin reelección del gobernador. 48 diputados + 38 senadores en 4 secciones electorales.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/mendoza-poderes.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.04.02</strong> de la sección Mendoza en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="mendoza-en-profundidad.html">Mendoza</a> ·
+      <span>Los tres poderes</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.04.02 · Estudio provincial</div>
+    <h1 class="page-title">Los tres <em>poderes</em> provinciales</h1>
+    <div class="page-subtitulo">— Sin reelección · Bicameral · 4 secciones electorales</div>
+    <p class="page-intro">Mendoza es la <strong>única provincia argentina grande sin reelección consecutiva</strong> del gobernador. Su Ejecutivo dura <strong>cuatro años</strong> y, al término del mandato, queda inhabilitado para postularse nuevamente para el mismo cargo. La Legislatura es <strong>bicameral</strong>, con <strong>48 diputados</strong> y <strong>38 senadores</strong>, distribuidos entre <strong>cuatro secciones electorales</strong> que agrupan a los 18 departamentos de la provincia. El <strong>vicegobernador</strong> preside el Senado provincial. El Poder Judicial está encabezado por la <strong>Suprema Corte de Justicia de Mendoza</strong> (SCJM), con un Consejo de la Magistratura incorporado al texto constitucional por la enmienda de 1997. Este capítulo analiza la arquitectura institucional del poder en una de las provincias más austeras del federalismo argentino.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">4 años</div>
+        <div class="page-stat-label">Mandato gobernador (sin reelección)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">48</div>
+        <div class="page-stat-label">Diputados provinciales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">38</div>
+        <div class="page-stat-label">Senadores provinciales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">4</div>
+        <div class="page-stat-label">Secciones electorales</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#gobernador">01 · El Gobernador · 4 años sin reelección</a></li>
+      <li><a href="#vicegobernador">02 · El Vicegobernador</a></li>
+      <li><a href="#eleccion-ejecutivo">03 · Elección del Ejecutivo</a></li>
+      <li><a href="#legislatura">04 · Legislatura bicameral</a></li>
+      <li><a href="#diputados">05 · La Cámara de Diputados</a></li>
+      <li><a href="#senadores">06 · La Cámara de Senadores</a></li>
+      <li><a href="#sesiones">07 · Sesiones y procedimiento</a></li>
+      <li><a href="#poder-judicial">08 · La Suprema Corte de Justicia</a></li>
+      <li><a href="#otros-organos">09 · Otros órganos constitucionales</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="gobernador">
+      <div class="seccion-num">01 · El Gobernador</div>
+      <h2>Cuatro años, <em>sin reelección consecutiva</em></h2>
+
+      <p>La característica institucional más distintiva de Mendoza es la <strong>prohibición de reelección consecutiva del gobernador</strong>. Es una regla establecida en la Constitución de 1916 y que ha sobrevivido a múltiples intentos de modificación. En el escenario federal argentino, donde la mayoría de las provincias ha avanzado hacia la habilitación de reelecciones consecutivas, Mendoza permanece como una excepción notable.</p>
+
+      <h3>El régimen de reelección en perspectiva federal</h3>
+
+      <p>Casi todas las provincias argentinas habilitan alguna forma de reelección del gobernador:</p>
+
+      <ul>
+        <li><strong>Reelección por un solo período consecutivo</strong>: la mayoría de las provincias (Buenos Aires, Córdoba, Salta, Santa Fe desde 2025, entre otras).</li>
+        <li><strong>Reelección indefinida</strong>: en Argentina hoy solo Formosa (la única jurisdicción que mantiene este régimen). Catamarca también lo permite en algunas interpretaciones del texto.</li>
+        <li><strong>Sin reelección consecutiva</strong>: Mendoza es el caso paradigmático. Históricamente también lo eran Corrientes (que la habilitó), Santa Fe (que la habilitó en 2025) y algunas otras.</li>
+      </ul>
+
+      <p>El régimen mendocino no es absoluto: el gobernador puede volver al cargo <strong>después de un período intermedio</strong>. Esta posibilidad ha sido aprovechada por varios gobernadores históricos: tras un mandato, esperan cuatro años (durante los cuales gobernador otra persona) y vuelven a postularse. Es el caso del propio Alfredo Cornejo, que fue gobernador en 2015-2019 y volvió en 2023-2027.</p>
+
+      <h3>Requisitos para ser gobernador</h3>
+
+      <p>El texto constitucional mendocino establece los requisitos para acceder a la gobernación:</p>
+
+      <ul>
+        <li><strong>Ciudadanía argentina nativa</strong> o por opción.</li>
+        <li><strong>30 años de edad mínima</strong>.</li>
+        <li><strong>Residencia en la provincia</strong> por períodos establecidos.</li>
+        <li>No estar inhabilitado por causales penales o políticas.</li>
+      </ul>
+
+      <h3>Las atribuciones del Ejecutivo</h3>
+
+      <p>El gobernador mendocino ejerce las atribuciones clásicas del Ejecutivo provincial: jefatura de la administración, comando de la policía provincial, conducción de las relaciones con la Nación y otras provincias, iniciativa legislativa, veto de leyes (total o parcial), promulgación, designación de ministros y secretarios, nombramiento de magistrados con acuerdo del Senado, conducción de la política exterior comercial provincial (en el marco de las atribuciones del Art. 124 CN), entre otras.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La austeridad institucional mendocina</div>
+        <p>La doctrina constitucional argentina ha señalado a Mendoza como un caso de <strong>"austeridad institucional"</strong>: la combinación de no-reelección del gobernador, mecanismos rígidos de reforma constitucional y régimen municipal limitado configuran un modelo provincial más conservador en términos de transferencia y concentración del poder. Esta austeridad ha sido a veces criticada por restar dinamismo institucional, y a veces elogiada por preservar equilibrios democráticos a largo plazo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="vicegobernador">
+      <div class="seccion-num">02 · El Vicegobernador</div>
+      <h2>El <em>presidente del Senado</em></h2>
+
+      <p>La figura del vicegobernador mendocino tiene una particularidad institucional: además de ser el reemplazo eventual del gobernador (en casos de ausencia, enfermedad o vacancia), <strong>preside el Senado provincial</strong>. Esta combinación de funciones —ejecutiva eventual y legislativa permanente— es una herencia del diseño institucional argentino que sigue el modelo del vicepresidente nacional (que preside el Senado de la Nación).</p>
+
+      <h3>Funciones del vicegobernador</h3>
+
+      <ul>
+        <li><strong>Reemplaza al gobernador</strong> en casos de ausencia, enfermedad temporal o vacancia definitiva.</li>
+        <li><strong>Preside el Senado</strong> provincial: dirige los debates, ordena las sesiones, vota en caso de empate.</li>
+        <li><strong>Ejerce funciones representativas</strong> en actos protocolares y oficiales.</li>
+        <li>En ciertas circunstancias, puede ejercer atribuciones específicas delegadas por el gobernador.</li>
+      </ul>
+
+      <h3>Elección conjunta</h3>
+
+      <p>El vicegobernador se elige en la misma fórmula que el gobernador, con voto simultáneo del cuerpo electoral. La fórmula gobernador-vicegobernador es indivisible: el elector vota por ambos juntos. Esta cláusula garantiza coherencia política entre los dos cargos del Ejecutivo provincial.</p>
+
+      <h3>Reemplazo del Vicegobernador</h3>
+
+      <p>Si el vicegobernador asume como gobernador (por vacancia definitiva), el Senado provincial elige a uno de sus miembros como <strong>presidente provisional</strong>, quien ejerce las funciones de vicegobernador hasta que se complete el período. Este mecanismo asegura continuidad institucional sin necesidad de elecciones complementarias.</p>
+    </div>
+
+    <div class="seccion" id="eleccion-ejecutivo">
+      <div class="seccion-num">03 · Elección del Ejecutivo</div>
+      <h2>Simple <em>mayoría</em>, sin balotaje</h2>
+
+      <p>La <strong>elección del gobernador y vicegobernador</strong> en Mendoza se rige por el <strong>Artículo 120 de la Constitución provincial</strong>, reformado por la enmienda de 1985 (Ley 5047). El artículo establece un sistema de elección directa por <strong>simple mayoría</strong> de los votos válidamente emitidos.</p>
+
+      <h3>El procedimiento</h3>
+
+      <p>El sistema funciona así:</p>
+
+      <ol>
+        <li>El gobernador y vicegobernador se eligen <strong>simultánea y directamente por el pueblo</strong>.</li>
+        <li>El territorio provincial constituye un <strong>distrito único</strong>.</li>
+        <li>Los partidos políticos habilitados presentan <strong>fórmulas conjuntas</strong>.</li>
+        <li>Se proclama electa la fórmula que <strong>obtenga simple mayoría</strong> de los votos válidamente emitidos.</li>
+        <li><strong>Sin balotaje, sin segunda vuelta</strong>: el candidato más votado se proclama electo.</li>
+      </ol>
+
+      <div class="cita">
+        "El gobernador y vicegobernador serán elegidos simultánea y directamente por el pueblo de la provincia, cuyo territorio a ese efecto formará un distrito único, mediante una fórmula que presentarán los partidos políticos habilitados, de acuerdo con las disposiciones de la Ley Electoral provincial. Se proclamará electa la fórmula de candidatos que obtuviere simple mayoría de los votos válidos emitidos."
+        <span class="cita-fuente">— Constitución de Mendoza, Artículo 120 (texto sancionado por Ley 5047, BO Mza. 9-10-85).</span>
+      </div>
+
+      <h3>El intento Suárez de incorporar el balotaje</h3>
+
+      <p>El proyecto de reforma constitucional impulsado por el gobernador Rodolfo Suárez en 2020-2021 (analizado en el capítulo de historia) contemplaba la <strong>incorporación del balotaje</strong> al sistema mendocino. El argumento era que, en escenarios de oferta política fragmentada, la simple mayoría podía producir gobiernos con baja legitimidad democrática (por ejemplo, un gobernador electo con 30-35% de los votos). El proyecto no prosperó y Mendoza mantiene el sistema de simple mayoría.</p>
+    </div>
+
+    <div class="seccion" id="legislatura">
+      <div class="seccion-num">04 · Legislatura bicameral</div>
+      <h2>Dos cámaras · <em>cuatro secciones</em></h2>
+
+      <p>La Legislatura provincial de Mendoza es <strong>bicameral</strong>, compuesta por la Cámara de Diputados (48 miembros) y la Cámara de Senadores (38 miembros). El total de legisladores es de <strong>86</strong>, lo que la convierte en la <strong>segunda legislatura provincial más numerosa del país</strong> en términos absolutos, después de la de Buenos Aires (138 legisladores). En términos relativos a la población, Mendoza tiene una representación legislativa elevada: aproximadamente <strong>un legislador cada 24.000 habitantes</strong>.</p>
+
+      <h3>La estructura de cuatro secciones electorales</h3>
+
+      <p>Tanto la Cámara de Diputados como la de Senadores se eligen sobre la base de las <strong>cuatro secciones electorales</strong> que agrupan a los 18 departamentos provinciales. La distribución de bancas entre secciones es <strong>proporcional a la población</strong> de cada una, con mínimos garantizados (al menos 8 diputados y 6 senadores por sección).</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Sección</th>
+              <th>Departamentos</th>
+              <th>Población aprox.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primera</strong></td>
+              <td>Capital, Guaymallén, Las Heras, Lavalle</td>
+              <td>~650.000 hab.</td>
+            </tr>
+            <tr>
+              <td><strong>Segunda</strong></td>
+              <td>Maipú, San Martín, Junín, Rivadavia, Santa Rosa, La Paz</td>
+              <td>~450.000 hab.</td>
+            </tr>
+            <tr>
+              <td><strong>Tercera</strong></td>
+              <td>Godoy Cruz, Luján de Cuyo, Tupungato, Tunuyán, San Carlos</td>
+              <td>~500.000 hab.</td>
+            </tr>
+            <tr>
+              <td><strong>Cuarta</strong></td>
+              <td>San Rafael, General Alvear, Malargüe</td>
+              <td>~290.000 hab.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Sede de la Legislatura</h3>
+
+      <p>Ambas cámaras funcionan en el <strong>edificio de la Legislatura provincial</strong>, ubicado en la Ciudad de Mendoza, en Peatonal Sarmiento y calle Patricias Mendocinas. Es <strong>patrimonio cultural</strong> de la provincia: comenzó a construirse alrededor de 1889 como Club Social de la clase dirigente mendocina, proyectado por el ingeniero Federico Knoll. La construcción es de estilo afrancesado con el frente orientado al norte. En la planta baja se hallan los recintos de las Cámaras, de estilo grecorromano.</p>
+    </div>
+
+    <div class="seccion" id="diputados">
+      <div class="seccion-num">05 · La Cámara de Diputados</div>
+      <h2>48 miembros · <em>renovación por mitades</em></h2>
+
+      <p>La Cámara de Diputados de Mendoza está conformada por <strong>48 legisladores</strong> elegidos directamente por el pueblo. La Constitución provincial establece que <strong>el total no puede exceder de 50</strong> y que cada sección electoral debe elegir <strong>al menos 8 diputados</strong>.</p>
+
+      <h3>Características de los diputados</h3>
+
+      <ul>
+        <li><strong>Mandato</strong>: 4 años.</li>
+        <li><strong>Reelegibles</strong>: sí, sin límites.</li>
+        <li><strong>Renovación</strong>: por mitades cada 2 años.</li>
+        <li><strong>Edad mínima</strong>: 22 años.</li>
+        <li><strong>Residencia mínima</strong>: definida por la ley electoral.</li>
+        <li><strong>Iniciativa exclusiva</strong>: proyectos de ley referidos a impuestos y presupuesto deben iniciarse en Diputados.</li>
+      </ul>
+
+      <h3>Composición actual por sección (mandato 2023-2027)</h3>
+
+      <p>La distribución actual de las 48 bancas entre las cuatro secciones se reparte proporcionalmente a la población. La Primera Sección (que incluye al Gran Mendoza norte) y la Tercera (que incluye Godoy Cruz, el departamento más poblado después de la Capital) tienen mayor número de bancas. La Cuarta Sección (Sur), pese a su menor población, conserva su representación mínima de 8 bancas.</p>
+
+      <h3>Atribuciones de la Cámara</h3>
+
+      <p>La Cámara de Diputados ejerce las atribuciones clásicas de una cámara baja:</p>
+
+      <ul>
+        <li>Iniciativa exclusiva en materia tributaria y presupuestaria.</li>
+        <li>Acusación en el juicio político (jury de enjuiciamiento) a funcionarios provinciales.</li>
+        <li>Sanción de leyes en su rol legislativo general.</li>
+        <li>Control político del Ejecutivo provincial mediante pedidos de informe e interpelaciones.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="senadores">
+      <div class="seccion-num">06 · La Cámara de Senadores</div>
+      <h2>38 miembros · <em>representación seccional</em></h2>
+
+      <p>La Cámara de Senadores de Mendoza está conformada por <strong>38 senadores</strong> elegidos directamente por el pueblo. La Constitución provincial establece que el total no puede exceder de <strong>40</strong> y que cada sección electoral debe elegir <strong>al menos 6 senadores</strong>.</p>
+
+      <h3>Características de los senadores</h3>
+
+      <ul>
+        <li><strong>Mandato</strong>: 4 años.</li>
+        <li><strong>Reelegibles</strong>: sí, sin límites.</li>
+        <li><strong>Renovación</strong>: por mitades cada 2 años.</li>
+        <li><strong>Edad mínima</strong>: 25 años.</li>
+        <li><strong>Presidente</strong>: el vicegobernador de la provincia (con voto solo en caso de empate).</li>
+        <li><strong>Presidente provisional</strong>: elegido entre los 38 senadores.</li>
+      </ul>
+
+      <h3>Atribuciones de la Cámara</h3>
+
+      <p>La Cámara de Senadores ejerce las atribuciones clásicas de una cámara alta:</p>
+
+      <ul>
+        <li><strong>Acuerdo del Senado</strong>: requerido para la designación de magistrados del Poder Judicial provincial, embajadores comerciales y otros funcionarios.</li>
+        <li><strong>Juzgamiento en el juicio político</strong>: actúa como tribunal cuando la Cámara de Diputados formaliza la acusación de juicio político.</li>
+        <li><strong>Sanción de leyes</strong> en su rol legislativo general.</li>
+        <li>Cualquier otra atribución específica que la Constitución o las leyes le confieran.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué Mendoza tiene 86 legisladores?</div>
+        <p>El número total de 86 legisladores (segunda provincia con más legisladores del país) ha sido criticado reiteradamente como excesivo para una provincia de 2 millones de habitantes. La comparación más usual es con Santa Fe (3,5M habitantes, 69 legisladores totales) o Buenos Aires (17,5M habitantes, 138 legisladores). El gobernador Suárez propuso en 2020 reducir esta cifra adoptando un sistema unicameral, pero el proyecto no prosperó. La crítica recurrente al "alto costo del aparato legislativo" mendocino es uno de los argumentos centrales para futuros intentos de reforma.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sesiones">
+      <div class="seccion-num">07 · Sesiones y procedimiento</div>
+      <h2>Las <em>sesiones ordinarias</em> mendocinas</h2>
+
+      <p>El período ordinario de sesiones de la Legislatura mendocina se extiende del <strong>1 de mayo al 30 de septiembre</strong> de cada año. Es uno de los períodos más cortos entre las legislaturas provinciales argentinas. Las cámaras pueden prorrogar sus sesiones por propia iniciativa hasta <strong>30 días adicionales</strong>.</p>
+
+      <h3>Comparación con otras provincias</h3>
+
+      <p>El período de sesiones ordinarias mendocino (5 meses + 1 mes de prórroga) es notablemente más corto que el de provincias comparables:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Provincia</th>
+              <th>Sesiones ordinarias</th>
+              <th>Duración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mendoza</strong></td>
+              <td>1 mayo - 30 septiembre</td>
+              <td>5 meses</td>
+            </tr>
+            <tr>
+              <td><strong>Santa Fe (post 2025)</strong></td>
+              <td>15 febrero - 30 noviembre</td>
+              <td>9,5 meses</td>
+            </tr>
+            <tr>
+              <td><strong>Santa Fe (pre 2025)</strong></td>
+              <td>1 mayo - 31 octubre</td>
+              <td>6 meses</td>
+            </tr>
+            <tr>
+              <td><strong>Córdoba</strong></td>
+              <td>1 febrero - 30 diciembre</td>
+              <td>11 meses</td>
+            </tr>
+            <tr>
+              <td><strong>Buenos Aires</strong></td>
+              <td>1 marzo - 30 noviembre</td>
+              <td>9 meses</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Sesiones extraordinarias</h3>
+
+      <p>El Poder Ejecutivo puede convocar a <strong>sesiones extraordinarias</strong> cuando lo considere necesario, y solo para tratar los asuntos específicos incluidos en la convocatoria. También las cámaras pueden autoconvocarse a sesiones extraordinarias con el pedido de la cuarta parte de sus miembros.</p>
+
+      <h3>Publicidad y reglamentación</h3>
+
+      <p>Las sesiones de ambas Cámaras son <strong>públicas</strong>, a menos que un grave interés declarado por ellas mismas exigiera lo contrario, o cuando así se determine en casos especiales en sus respectivos reglamentos. Cada Cámara dicta su reglamento interno y designa a sus empleados.</p>
+    </div>
+
+    <div class="seccion" id="poder-judicial">
+      <div class="seccion-num">08 · La Suprema Corte de Justicia</div>
+      <h2>La <em>SCJM</em> y el Consejo de la Magistratura</h2>
+
+      <p>El Poder Judicial de Mendoza está encabezado por la <strong>Suprema Corte de Justicia de Mendoza (SCJM)</strong>, máximo tribunal provincial. La SCJM ejerce el control de constitucionalidad provincial, la jurisdicción originaria en ciertos casos, y la conducción del Poder Judicial en sus aspectos administrativos.</p>
+
+      <h3>Composición de la SCJM</h3>
+
+      <p>La SCJM se compone de magistrados designados por el Ejecutivo con acuerdo del Senado. El número de miembros y los requisitos para integrarla están establecidos en la Constitución provincial y en las leyes orgánicas del Poder Judicial. Tradicionalmente la Corte ha tenido 7 miembros, aunque el número ha variado en distintas épocas.</p>
+
+      <h3>El Consejo de la Magistratura (enmienda 1997)</h3>
+
+      <p>La <strong>enmienda del Artículo 150 de la Constitución, aprobada en 1997</strong>, incorporó al texto constitucional el <strong>Consejo de la Magistratura</strong> provincial. Es uno de los avances institucionales más importantes del régimen mendocino post-1916, y refleja la incorporación de las recomendaciones de la reforma constitucional nacional de 1994.</p>
+
+      <p>El Consejo de la Magistratura mendocino tiene funciones de:</p>
+
+      <ul>
+        <li><strong>Selección de magistrados</strong>: organiza los concursos de antecedentes y oposición para la designación de jueces de los tribunales inferiores.</li>
+        <li><strong>Acusación en juicio de remoción</strong>: en ciertos casos, participa del procedimiento de remoción de magistrados.</li>
+        <li><strong>Administración del Poder Judicial</strong>: en aspectos específicos definidos por la ley.</li>
+      </ul>
+
+      <h3>Intangibilidad de los salarios (enmienda 2005)</h3>
+
+      <p>La enmienda del <strong>Artículo 151, aprobada por Ley 7405 en 2005</strong>, reglamentó el <strong>principio de intangibilidad de los magistrados</strong>, prohibiendo la indexación de los salarios de los funcionarios judiciales. Era una medida de control fiscal: limitaba el crecimiento automático de las remuneraciones del Poder Judicial, alineándolas con las decisiones presupuestarias generales del Estado provincial.</p>
+
+      <h3>Otros tribunales provinciales</h3>
+
+      <p>El Poder Judicial mendocino se estructura en distintos niveles e instancias:</p>
+
+      <ul>
+        <li><strong>Suprema Corte de Justicia</strong>: máximo tribunal.</li>
+        <li><strong>Cámaras de Apelaciones</strong>: segunda instancia en materias civil, comercial, penal, laboral, contencioso-administrativa.</li>
+        <li><strong>Juzgados de Primera Instancia</strong>: primera instancia en las distintas materias.</li>
+        <li><strong>Tribunales orales penales</strong>: para procesos penales en juicio oral.</li>
+        <li><strong>Justicia de Paz</strong>: jurisdicciones menores en los departamentos.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="otros-organos">
+      <div class="seccion-num">09 · Otros órganos constitucionales</div>
+      <h2>Fiscalía de Estado, Tribunal de <em>Cuentas</em>, MPF</h2>
+
+      <p>Más allá de los tres poderes clásicos, la Constitución mendocina prevé varios <strong>órganos constitucionales</strong> con funciones específicas de control y representación del Estado provincial.</p>
+
+      <h3>La Fiscalía de Estado</h3>
+
+      <p>La <strong>Fiscalía de Estado</strong> es un órgano constitucional con la función de <strong>representar y defender los intereses patrimoniales del Estado provincial</strong> en juicio. Es titular activo y pasivo de las acciones judiciales que involucren al patrimonio público. Su titular es designado por el Ejecutivo con acuerdo del Senado, con estabilidad funcional. Es una figura típica del derecho público provincial argentino.</p>
+
+      <h3>El Tribunal de Cuentas</h3>
+
+      <p>El <strong>Tribunal de Cuentas de Mendoza</strong> es el órgano constitucional de control externo de las finanzas públicas. Sus funciones principales:</p>
+
+      <ul>
+        <li><strong>Aprobar o desaprobar</strong> las cuentas de la administración pública provincial.</li>
+        <li><strong>Examinar la legalidad</strong> de los actos administrativos con consecuencias económicas.</li>
+        <li><strong>Controlar la ejecución del presupuesto</strong> provincial.</li>
+        <li><strong>Auditoría sobre las administraciones municipales</strong> (esta función se mantiene incluso con la nueva autonomía municipal de 2026).</li>
+      </ul>
+
+      <p>El Tribunal de Cuentas mendocino es uno de los más antiguos del país y mantiene un perfil técnico de alto reconocimiento profesional. Sus integrantes son designados por concursos.</p>
+
+      <h3>El Ministerio Público</h3>
+
+      <p>El Ministerio Público mendocino tiene rango constitucional y se organiza en dos ramas principales:</p>
+
+      <ul>
+        <li><strong>Ministerio Público Fiscal (MPF)</strong>: encabezado por el Procurador General. Ejerce la acción penal pública y representa al Estado provincial en distintas materias.</li>
+        <li><strong>Ministerio Público de la Defensa</strong>: encabezado por el Defensor General. Asegura la defensa técnica de las personas que no pueden costearla por sí mismas.</li>
+      </ul>
+
+      <h3>Otros órganos relevantes</h3>
+
+      <ul>
+        <li><strong>Asesoría de Gobierno</strong>: dictamina sobre la legalidad de los actos del Ejecutivo provincial.</li>
+        <li><strong>Junta Electoral provincial</strong>: presidida por el presidente de la SCJM. Organiza las elecciones provinciales y municipales.</li>
+        <li><strong>Departamento General de Irrigación (DGI)</strong>: órgano descentralizado con rango constitucional, responsable de la administración del agua. Una particularidad mendocina, dado que es una provincia árida donde el riego artificial es fundamental para la economía vitivinícola y agrícola.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El Departamento General de Irrigación</div>
+        <p>El <strong>DGI</strong> es una particularidad institucional mendocina única en el país. Tiene <strong>rango constitucional</strong> (incorporado en 1916) y administra autónomamente el régimen de aguas provincial. Tiene un Superintendente designado por el Ejecutivo con acuerdo del Senado, y tres Inspectores de Cauce elegidos por los regantes de cada zona. Su poder es notable: es responsable de la distribución del agua entre los oasis productivos de la provincia (Norte, Valle de Uco, Sur), gestiona las concesiones de riego, organiza los catastros hídricos. En una provincia árida con riego artificial milenario, el DGI es probablemente el órgano técnico más decisivo del Estado provincial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Mendoza</strong> · Texto vigente con sus enmiendas posteriores (1916 + reformas parciales).</li>
+        <li><strong>Sitio oficial de la Legislatura de Mendoza</strong>: legislaturamendoza.gob.ar.</li>
+        <li><strong>Cámara de Diputados de Mendoza</strong>: hcdmza.gob.ar. Información institucional, normativa y proyectos.</li>
+        <li><strong>Cámara de Senadores de Mendoza</strong>: senadomendoza.gob.ar. Información sobre composición, sesiones y normativa.</li>
+        <li><strong>Suprema Corte de Justicia de Mendoza</strong>: jusmendoza.gob.ar. Información institucional del Poder Judicial provincial.</li>
+        <li><strong>Departamento General de Irrigación</strong>: irrigacion.gov.ar. Información sobre el régimen de aguas provincial.</li>
+        <li><strong>Tribunal de Cuentas de la Provincia de Mendoza</strong>: tribunaldecuentas.mendoza.gov.ar.</li>
+        <li><strong>"Elecciones 2025: conocé cómo están conformados los distritos electorales en la provincia de Mendoza"</strong> · Sitio Andino (agosto de 2025).</li>
+        <li><strong>"Para bajar el gasto, el gobernador de Mendoza propuso ir a una legislatura unicameral"</strong> · Infobae (mayo de 2020).</li>
+        <li><strong>"Mendoza: impulsan una reforma de la Constitución para reducir costos políticos"</strong> · La Nación (febrero de 2021).</li>
+        <li><strong>Wikipedia, "Legislatura de la Provincia de Mendoza"</strong> y entradas relacionadas (Cámara de Diputados, Cámara de Senadores). Fuente secundaria con datos verificados.</li>
+        <li><strong>Constitución Nacional Argentina</strong> · Artículos 5, 121, 122, 123, 124. Marco federal del régimen provincial.</li>
+        <li><strong>"La reelección en el Derecho Público Provincial"</strong> · SciELO Argentina. Análisis comparado.</li>
+      </ul>
+    </div>
+
+    <a href="mendoza-municipios.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.04.03</div>
+        <h3>Régimen <em>municipal</em></h3>
+        <p>Los 18 departamentos mendocinos: del régimen autárquico de la Ley 1079 de 1934 (vigente durante 92 años) a la autonomía municipal incorporada por la enmienda de 2026. El sistema de "oasis": Gran Mendoza, Valle de Uco, Norte y Sur. Las particularidades de los municipios del Gran Mendoza y los conflictos con San Rafael.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

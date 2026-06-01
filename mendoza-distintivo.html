@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Mendoza · El paquete distintivo (10.04.05) — Educación Cívica</title>
+<meta name="description" content="Mendoza, la provincia institucionalmente más rígida de Argentina: 110 años con la Constitución de 1916, única gran provincia sin reelección consecutiva, modelo BUP exportado a la Nación, autonomía municipal en construcción (Ley 9709, plebiscito 2027), conflicto Cornejo-Félix por San Rafael, identidad vitivinícola y frontera con Chile.">
+<link rel="canonical" href="https://educacioncivica.com.ar/mendoza-distintivo.html">
+
+<meta property="og:title" content="Mendoza · El paquete distintivo">
+<meta property="og:description" content="La provincia institucionalmente más rígida de Argentina: rigidez constitucional, sin reelección, modelo BUP nacional, agua y vino.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/mendoza-distintivo.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.04.05</strong> de la sección Mendoza en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="mendoza-en-profundidad.html">Mendoza</a> ·
+      <span>Paquete distintivo</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.04.05 · Estudio provincial</div>
+    <h1 class="page-title">El paquete <em>distintivo</em></h1>
+    <div class="page-subtitulo">— La provincia institucionalmente más rígida · Identidad y particularidades</div>
+    <p class="page-intro">Mendoza es la <strong>provincia institucionalmente más rígida de Argentina</strong>. Su Constitución de <strong>1916</strong> cumple <strong>110 años</strong> de vigencia ininterrumpida (con sus seis enmiendas exitosas pero sin reforma total), la más antigua del país. Es la <strong>única gran provincia argentina que mantiene la prohibición de reelección consecutiva del gobernador</strong> — Mendoza queda como la última gran provincia con este rasgo identitario. Tiene un sistema de <strong>cuatro secciones electorales</strong> para su Legislatura bicameral, un Departamento General de Irrigación (DGI) con <strong>rango constitucional</strong> que administra el agua, su propia <strong>Boleta Única Provincial</strong> (BUP, modelo que la Nación adoptó en octubre de 2024 para las elecciones nacionales), y una <strong>reforma de autonomía municipal en proceso</strong>: la Ley 9709 promulgada el 20 de mayo de 2026 pendiente de plebiscito popular en las elecciones legislativas de 2027. Este capítulo sintetiza los rasgos distintivos del modelo mendocino.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">110</div>
+        <div class="page-stat-label">Años Constitución 1916</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">0</div>
+        <div class="page-stat-label">Reelecciones consecutivas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2,01M</div>
+        <div class="page-stat-label">Habitantes (Censo 2022)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">10</div>
+        <div class="page-stat-label">Diputados nacionales</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#rigidez">01 · La Constitución más antigua</a></li>
+      <li><a href="#sin-reeleccion">02 · La última sin reelección</a></li>
+      <li><a href="#paradoja-2011">03 · La paradoja del referéndum 2011</a></li>
+      <li><a href="#agua-dgi">04 · Agua, DGI y oasis</a></li>
+      <li><a href="#economia">05 · Vino, energía y frontera</a></li>
+      <li><a href="#demografia">06 · Demografía y peso nacional</a></li>
+      <li><a href="#modelo-exportado">07 · El modelo Mendoza en la BUP nacional</a></li>
+      <li><a href="#autonomia-construccion">08 · Autonomía municipal en construcción</a></li>
+      <li><a href="#san-rafael">09 · El conflicto Cornejo-Félix por San Rafael</a></li>
+      <li><a href="#sintesis">10 · El paquete distintivo</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="rigidez">
+      <div class="seccion-num">01 · La Constitución más antigua del país</div>
+      <h2>Ciento diez años con la <em>misma Carta Magna</em></h2>
+
+      <p>La <strong>Constitución de Mendoza de 1916</strong> es, al día de hoy, la <strong>Constitución provincial argentina con mayor antigüedad continua sin reforma total</strong>. Fue sancionada el <strong>11 de febrero de 1916</strong> con Julián Barraquero como mentor doctrinario, y desde entonces ha sobrevivido a todas las turbulencias institucionales argentinas del último siglo: presidencias democráticas, golpes militares, retornos democráticos, la reforma constitucional nacional de 1994, todas las reformas constitucionales provinciales que se han producido en el resto del país.</p>
+
+      <p>Como se analiza en el capítulo <strong>10.04.01 (Historia constitucional)</strong>, Mendoza ha modificado su Constitución <strong>solo por seis enmiendas exitosas</strong> desde la recuperación democrática de 1983, y ninguna de ellas ha sido una reforma total mediante Convención Constituyente. Las enmiendas mendocinas son cambios artículo por artículo, votados con dos tercios de cada Cámara y ratificados por referéndum popular obligatorio. Es un sistema deliberadamente <strong>conservador</strong>, diseñado para que las modificaciones constitucionales sean excepcionales.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La rigidez como identidad institucional</div>
+        <p>La rigidez constitucional mendocina no es un accidente histórico ni una mora reformista: <strong>es una elección política sostenida</strong> a lo largo de generaciones. Mendoza ha decidido —de manera explícita en cada votación de las Cámaras y en cada referéndum— que prefiere un texto constitucional <strong>antiguo, estable y modificable solo de manera puntual</strong> en lugar de una reforma integral. Esta rigidez ha funcionado como un <strong>ancla institucional</strong> que produce previsibilidad política, aunque también limita la capacidad de adaptación a desafíos contemporáneos.</p>
+      </div>
+
+      <h3>Comparación con otras provincias</h3>
+
+      <p>El contraste con el resto del país es notable. Las constituciones provinciales argentinas vigentes son, en general, mucho más recientes:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Provincia</th>
+              <th>Constitución vigente</th>
+              <th>Antigüedad (2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mendoza</strong></td>
+              <td><strong>1916</strong></td>
+              <td><strong>110 años</strong></td>
+            </tr>
+            <tr>
+              <td>Buenos Aires</td>
+              <td>1994</td>
+              <td>32 años</td>
+            </tr>
+            <tr>
+              <td>Córdoba</td>
+              <td>1987 (reforma 2001)</td>
+              <td>39 / 25 años</td>
+            </tr>
+            <tr>
+              <td>Santa Fe</td>
+              <td>2025</td>
+              <td>1 año</td>
+            </tr>
+            <tr>
+              <td>CABA</td>
+              <td>1996</td>
+              <td>30 años</td>
+            </tr>
+            <tr>
+              <td>Tierra del Fuego</td>
+              <td>1991</td>
+              <td>35 años</td>
+            </tr>
+            <tr>
+              <td>Chaco</td>
+              <td>1994</td>
+              <td>32 años</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Las constituciones provinciales con más antigüedad después de la mendocina son las de provincias como Santa Fe (que justamente acaba de reformar la suya en 2025, dejando atrás 63 años con el texto de 1962) o las de provincias con reformas parciales recientes. Pero ninguna se acerca a los <strong>110 años</strong> de la mendocina.</p>
+    </div>
+
+    <div class="seccion" id="sin-reeleccion">
+      <div class="seccion-num">02 · La última gran provincia sin reelección</div>
+      <h2>Mendoza queda <em>sola</em> en el panorama nacional</h2>
+
+      <p>Mendoza es, al cierre de 2025-inicio de 2026, la <strong>única provincia argentina grande que mantiene la prohibición de reelección consecutiva del gobernador</strong>. Es un rasgo identitario que se ha sostenido durante toda la vigencia de la Constitución de 1916, sin excepciones ni reformas que lo modifiquen. Con la reforma constitucional de Santa Fe de septiembre de 2025 (que habilitó la reelección por un mandato consecutivo del gobernador), Mendoza quedó como la <strong>única provincia grande</strong> que conserva esta característica.</p>
+
+      <h3>El panorama actual de la reelección en Argentina</h3>
+
+      <p>Las 24 jurisdicciones argentinas (23 provincias + CABA) se distribuyen así en cuanto a reelección del Ejecutivo provincial:</p>
+
+      <ul>
+        <li><strong>Reelección indefinida</strong>: Formosa y Catamarca (con interpretaciones jurídicas debatidas).</li>
+        <li><strong>Reelección por un mandato consecutivo</strong>: la mayoría de las provincias argentinas, incluyendo Buenos Aires, Córdoba, Salta, Jujuy, La Pampa, Río Negro, Neuquén, Chubut, Santa Cruz, Tierra del Fuego, Chaco, Corrientes, Misiones, Entre Ríos, Santiago del Estero, Tucumán, San Juan, San Luis, La Rioja, CABA. <strong>Santa Fe se sumó a este grupo desde 2025</strong>.</li>
+        <li><strong>Sin reelección consecutiva</strong>: <strong>Mendoza</strong> es la única gran provincia que mantiene esta prohibición.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La rotación obligatoria como diseño institucional</div>
+        <p>El sistema mendocino de "no reelección consecutiva" obliga a que <strong>todo gobernador deba esperar al menos un mandato</strong> antes de poder volver a postularse. En la práctica, este diseño produce una <strong>rotación natural del Ejecutivo</strong> que distingue a Mendoza del resto del país. Los gobernadores mendocinos vienen de hacer pasar por todas las experiencias institucionales posibles: gestión, oposición, regreso al poder. Es un esquema que algunos analistas consideran <strong>positivo para la calidad democrática</strong> (más renovación, menos personalismo), y otros consideran <strong>limitante para la continuidad de políticas públicas de largo plazo</strong>.</p>
+      </div>
+
+      <h3>Los intentos de habilitar la reelección</h3>
+
+      <p>Varios gobernadores mendocinos han intentado habilitar la reelección a través del mecanismo de enmienda (Art. 223 de la Constitución provincial). Los más recientes:</p>
+
+      <ul>
+        <li><strong>2011</strong>: el referéndum sobre el Art. 221 (que regula los procedimientos de reforma constitucional) fue derrotado. Aunque ganó el SÍ entre los votos emitidos, no alcanzó la mayoría absoluta del padrón requerida por la interpretación judicial. Es la <strong>paradoja del referéndum 2011</strong> (próxima sección).</li>
+        <li><strong>2020-2021</strong>: el entonces gobernador Rodolfo Suárez intentó un paquete de enmiendas que incluía unicameralidad y balotaje, <strong>pero explícitamente no incluía la reelección</strong> — un gesto político de respeto a la tradición mendocina. El paquete no prosperó por falta de los dos tercios.</li>
+        <li><strong>2026 (actual)</strong>: la enmienda al Art. 197 sobre autonomía municipal no toca la cuestión de la reelección. La administración Cornejo ha priorizado la autonomía municipal por sobre la habilitación de su propia reelección.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="paradoja-2011">
+      <div class="seccion-num">03 · La paradoja del referéndum 2011</div>
+      <h2>La regla <em>bloqueando</em> su propia reforma</h2>
+
+      <p>El caso del <strong>referéndum del 23 de octubre de 2011</strong> es uno de los episodios más notables del constitucionalismo mendocino. Bajo el gobierno de Celso Jaque (PJ), la Legislatura sancionó la <strong>Ley 8252</strong> que declaraba la necesidad de enmendar el <strong>Artículo 221</strong> de la Constitución provincial — el artículo que regula precisamente los <strong>procedimientos de reforma constitucional</strong>.</p>
+
+      <h3>Qué se quería cambiar</h3>
+
+      <p>El Art. 221 de la Constitución mendocina establece que las reformas constitucionales requieren la ratificación por <strong>"la mayoría de los electores"</strong>. La interpretación judicial dominante (consolidada en un fallo de la Suprema Corte de Mendoza de 1987) sostiene que esta expresión debe leerse como <strong>"más de la mitad de los empadronados"</strong>, no como "más de la mitad de los votos emitidos".</p>
+
+      <p>Esta interpretación crea una <strong>barrera muy alta</strong>: en una elección donde típicamente vota el 70-75% del padrón, alcanzar la mayoría absoluta del padrón requiere que aproximadamente el 67% de los votantes vote por el SÍ. Es decir: <strong>el ausentismo y el voto en blanco/nulo cuentan como "voto en contra"</strong> de la reforma.</p>
+
+      <h3>La paradoja</h3>
+
+      <p>El referéndum del 23 de octubre de 2011 propuso reformar precisamente este artículo, para que en el futuro las reformas constitucionales pudieran ratificarse con la mayoría de los <strong>votos emitidos</strong> en lugar de la mayoría del padrón. La paradoja: <strong>el SÍ a la reforma ganó entre los votos emitidos, pero perdió porque no alcanzó la mayoría absoluta del padrón</strong>. La regla del Art. 221 bloqueó su propia reforma.</p>
+
+      <div class="cita">
+        "La reforma quedó atrapada en la regla que pretendía cambiar. El SÍ ganó entre los votos emitidos, pero el ausentismo y los votos en blanco hicieron imposible alcanzar el umbral del 50% del padrón establecido por el fallo de 1987. Es un caso paradigmático de cómo una regla constitucional puede volverse irreformable."
+        <span class="cita-fuente">— Análisis comentado del referéndum mendocino del 23 de octubre de 2011 sobre la Ley 8252.</span>
+      </div>
+
+      <h3>El efecto político</h3>
+
+      <p>La paradoja del referéndum 2011 ha tenido un efecto duradero en la política mendocina: ha enseñado a los gobiernos provinciales que <strong>cualquier intento de reforma constitucional debe contar con un consenso social muy amplio</strong>, no solo con las mayorías legislativas. La conciencia de esta barrera ha desalentado los grandes paquetes de enmiendas, llevando a los gobiernos provinciales a apostar por reformas más acotadas y consensuadas. La enmienda al Art. 197 de 2026 sigue esta lógica: un solo artículo, con consenso amplio, sometido a referéndum dentro de las elecciones generales para maximizar la participación.</p>
+    </div>
+
+    <div class="seccion" id="agua-dgi">
+      <div class="seccion-num">04 · Agua, DGI y oasis productivos</div>
+      <h2>La "<em>constitución hidráulica</em>" mendocina</h2>
+
+      <p>Como se desarrolla en detalle en el capítulo <strong>10.04.03 (Régimen municipal)</strong>, Mendoza tiene una particularidad institucional única en el país: el <strong>Departamento General de Irrigación (DGI)</strong>, un órgano con <strong>rango constitucional propio</strong> (Capítulo II de la Constitución de 1916) que administra el agua de la provincia. Ninguna otra provincia argentina tiene un órgano administrativo del agua con rango constitucional. Mendoza sí.</p>
+
+      <p>Esta particularidad refleja una realidad geográfica: Mendoza es una <strong>provincia desértica</strong> (más del 95% de su territorio es árido o semiárido), con una pluviometría anual inferior a los 250 mm en la mayor parte del territorio. La economía, la población y la organización institucional se concentran en los <strong>5 oasis productivos</strong> que aprovechan el deshielo de la cordillera:</p>
+
+      <ul>
+        <li><strong>Oasis Norte</strong>: ríos Mendoza y Tunuyán Inferior. Gran Mendoza, Lavalle. El más poblado.</li>
+        <li><strong>Oasis Centro / Valle de Uco</strong>: río Tunuyán Superior. Tupungato, Tunuyán, San Carlos. 47.000 hectáreas cultivadas, 18% de la vid mendocina.</li>
+        <li><strong>Oasis Este</strong>: ríos Tunuyán Inferior y Mendoza. San Martín, Junín, Rivadavia, Santa Rosa, La Paz.</li>
+        <li><strong>Oasis Sur</strong>: ríos Diamante y Atuel. San Rafael, General Alvear.</li>
+        <li><strong>Oasis de Malargüe</strong>: río Malargüe. El más pequeño y meridional.</li>
+      </ul>
+
+      <h3>El agua como ordenador institucional</h3>
+
+      <p>En Mendoza, <strong>el agua organiza la política</strong>. La distribución del recurso hídrico, las concesiones de uso, los conflictos interprovinciales (especialmente con La Pampa por el río Atuel), las inversiones en represas y embalses, la administración de la red de canales y acequias — todo esto pasa por el DGI, que opera con autonomía técnica y financiera respecto del gobierno provincial. El <strong>Superintendente General de Irrigación</strong> y el <strong>Honorable Consejo de Apelaciones</strong> son figuras institucionales que tienen tanta o más relevancia en algunos temas que los propios poderes provinciales tradicionales.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La "constitución hidráulica"</div>
+        <p>Algunos constitucionalistas han llamado al modelo mendocino "la <strong>constitución hidráulica</strong>" porque el régimen del agua ocupa un lugar central en el diseño institucional. El DGI con rango constitucional, los inspectores de cauce electos por los regantes, la organización de las asociaciones de usuarios del agua, las multas y sanciones por uso indebido — todo forma un <strong>sistema institucional paralelo</strong> al de los tres poderes clásicos, que se ocupa del recurso que define la posibilidad misma de habitar Mendoza.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="economia">
+      <div class="seccion-num">05 · Vino, energía y frontera con Chile</div>
+      <h2>La <em>identidad económica</em> mendocina</h2>
+
+      <p>La economía mendocina tiene una particularidad regional que se proyecta sobre la institucionalidad: es a la vez una <strong>economía vitivinícola</strong> (la principal del país), una <strong>economía energética</strong> (con yacimientos hidrocarburíferos en Malargüe y producción hidroeléctrica) y una <strong>economía logística</strong> (por la frontera con Chile y el Paso Cristo Redentor).</p>
+
+      <h3>La vitivinicultura</h3>
+
+      <p>Mendoza concentra aproximadamente el <strong>70% de la producción vitivinícola argentina</strong>. Hay más de 1.000 bodegas registradas en la provincia, y la cadena de valor del vino representa una porción significativa del PBI provincial y del empleo. El Valle de Uco se ha consolidado como zona de vinos premium en las últimas dos décadas, atrayendo inversiones internacionales y desarrollando un sector turístico especializado (enoturismo).</p>
+
+      <p>La importancia institucional del vino se refleja en el <strong>Instituto Nacional de Vitivinicultura (INV)</strong>, organismo nacional con sede en Mendoza que regula la actividad vitivinícola argentina. La provincia también tiene una <strong>Ley Provincial del Vino</strong> y varios mecanismos institucionales específicos para el sector.</p>
+
+      <h3>Hidrocarburos</h3>
+
+      <p>El Art. 1 de la Constitución mendocina (modificado por la <strong>enmienda de 1990, Ley 5557</strong>) establece que los <strong>yacimientos de hidrocarburos son patrimonio provincial</strong>. Es una particularidad importante: Mendoza fue de las primeras provincias en provincializar sus recursos hidrocarburíferos antes de la reforma constitucional nacional de 1994 que generalizó este principio. Malargüe y otras áreas del sur provincial tienen actividad hidrocarburífera relevante.</p>
+
+      <h3>Frontera con Chile</h3>
+
+      <p>Mendoza tiene una <strong>frontera de 600+ km con Chile</strong> a través de la Cordillera de los Andes. El paso fronterizo más importante es el <strong>Sistema Cristo Redentor</strong> (Paso de los Libertadores), por donde transita aproximadamente el <strong>80% del comercio terrestre argentino-chileno</strong>. La gestión institucional de la frontera —pasos fronterizos, complejos integrados de control, accidentes y cierres por temporal— involucra directamente al gobierno provincial mendocino en cooperación con el gobierno federal.</p>
+
+      <p>La frontera también tiene un peso geopolítico: Mendoza es la "puerta argentina al Pacífico" para el comercio sudamericano, y este rol se ve reforzado por los proyectos de Corredor Bioceánico Central que conectarían los puertos chilenos del Pacífico (Valparaíso, San Antonio) con los puertos argentinos del Atlántico (Buenos Aires, Rosario) atravesando Mendoza y otras provincias.</p>
+    </div>
+
+    <div class="seccion" id="demografia">
+      <div class="seccion-num">06 · Demografía y peso nacional</div>
+      <h2>Dos millones de habitantes, <em>diez diputados</em></h2>
+
+      <p>Según el <strong>Censo Nacional 2022</strong>, Mendoza tiene una población de aproximadamente <strong>2.014.534 habitantes</strong>. Es la <strong>quinta provincia más poblada</strong> de Argentina, después de Buenos Aires, Córdoba, Santa Fe y CABA. Su superficie es de <strong>148.827 km²</strong>, lo que la convierte en la <strong>séptima provincia más extensa</strong> del país.</p>
+
+      <h3>Distribución demográfica</h3>
+
+      <p>La población mendocina está fuertemente concentrada en el <strong>Gran Mendoza</strong>: aproximadamente <strong>1 millón de habitantes</strong> (cerca del 50% del total provincial) viven en el aglomerado urbano formado por los departamentos de Capital, Godoy Cruz, Guaymallén, Las Heras, Luján de Cuyo, Maipú y parte de Lavalle. El resto se distribuye en los oasis productivos del Este (San Martín, Junín, Rivadavia y Santa Rosa), del Sur (San Rafael, General Alvear, Malargüe) y del Valle de Uco (Tupungato, Tunuyán, San Carlos).</p>
+
+      <h3>Representación nacional</h3>
+
+      <p>Mendoza tiene <strong>10 diputados nacionales</strong> sobre 257 totales (3,9% del cuerpo). Y <strong>3 senadores nacionales</strong> como toda provincia argentina. En proporción a su población, está aproximadamente correctamente representada (con leves diferencias respecto del padrón).</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Mendoza en números (2026)</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Población (Censo 2022)</div>
+            <div class="ficha-valor"><strong>2.014.534</strong> habitantes</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Superficie</div>
+            <div class="ficha-valor"><strong>148.827 km²</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Densidad</div>
+            <div class="ficha-valor">~13,5 hab/km²</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Gran Mendoza</div>
+            <div class="ficha-valor">~1.000.000 hab (~50%)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Departamentos</div>
+            <div class="ficha-valor"><strong>18</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Secciones electorales</div>
+            <div class="ficha-valor">4</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Diputados nacionales</div>
+            <div class="ficha-valor">10 de 257 (3,9%)</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Senadores nacionales</div>
+            <div class="ficha-valor">3</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Comparación con las otras grandes provincias</h3>
+
+      <p>Para situar a Mendoza en el contexto nacional:</p>
+
+      <ul>
+        <li><strong>Buenos Aires</strong>: 17,5 millones de habitantes · 70 diputados nacionales.</li>
+        <li><strong>CABA</strong>: 3,1 millones de habitantes · 25 diputados nacionales.</li>
+        <li><strong>Córdoba</strong>: 3,9 millones de habitantes · 18 diputados nacionales.</li>
+        <li><strong>Santa Fe</strong>: 3,6 millones de habitantes · 19 diputados nacionales.</li>
+        <li><strong>Mendoza</strong>: <strong>2,0 millones de habitantes</strong> · <strong>10 diputados nacionales</strong>.</li>
+      </ul>
+
+      <p>Mendoza es claramente más pequeña que las cuatro provincias más grandes, pero al mismo tiempo está significativamente por encima del promedio nacional, lo que la convierte en una <strong>provincia de tamaño medio-grande</strong> con peso institucional propio.</p>
+    </div>
+
+    <div class="seccion" id="modelo-exportado">
+      <div class="seccion-num">07 · El modelo Mendoza en la BUP nacional</div>
+      <h2>Cuando una provincia <em>exporta</em> su modelo</h2>
+
+      <p>Como se desarrolla en detalle en el capítulo <strong>10.04.04 (Sistema electoral)</strong>, uno de los hitos institucionales más significativos para Mendoza en los últimos años fue la decisión del Congreso Nacional, en octubre de 2024, de adoptar el <strong>"modelo Mendoza" para la Boleta Única de Papel (BUP) nacional</strong>, en lugar del modelo cordobés. La <strong>Ley 27.781</strong> nacional, sancionada en 2024 y aplicada por primera vez en las elecciones de octubre de 2025, replicó el esquema mendocino: <strong>filas horizontales por categoría de cargo y columnas verticales por agrupación política</strong>.</p>
+
+      <h3>Por qué el modelo Mendoza</h3>
+
+      <p>La decisión fue tomada por la <strong>Comisión de Asuntos Constitucionales del Senado</strong> nacional. Los argumentos a favor del modelo Mendoza fueron varios:</p>
+
+      <ul>
+        <li><strong>Inclusión de fotos a color</strong>: el formato de filas horizontales permite incluir la foto del cabeza de lista de cada agrupación, facilitando el reconocimiento visual del candidato.</li>
+        <li><strong>Probada operatividad</strong>: el modelo mendocino tenía ya experiencia de aplicación práctica (desde febrero de 2023 en elecciones provinciales y municipales desdobladas).</li>
+        <li><strong>Facilidad para el voto cruzado</strong>: el elector puede votar por candidatos de diferentes agrupaciones en distintas categorías, simplemente marcando casilleros en distintas columnas.</li>
+        <li><strong>Costo y logística verificados</strong>: el sistema ya tenía métricas de costo, tiempo de impresión, distribución logística y capacitación de autoridades de mesa.</li>
+      </ul>
+
+      <h3>El significado político</h3>
+
+      <p>Que el Congreso Nacional adopte un modelo electoral desarrollado por una provincia es una circunstancia poco habitual en el constitucionalismo argentino. Implícitamente, es un reconocimiento de que <strong>Mendoza ha tenido un rol pionero en innovación institucional electoral</strong> que la coloca a la par de Santa Fe (que en 2011 fue la primera provincia en aplicar Boleta Única en general) y Córdoba (que en 2011 también aplicó su Boleta Única Simultánea pero con diseño diferente).</p>
+
+      <p>La primera aplicación nacional del modelo Mendoza fue el <strong>26 de octubre de 2025</strong>, en las elecciones legislativas nacionales. Por primera vez en la historia argentina, en una misma elección coexistieron tres sistemas electorales: la BUP nacional (modelo Mendoza), la BU provincial mendocina (modelo similar pero implementación provincial), y las BU provinciales de las provincias que las habían adoptado previamente.</p>
+    </div>
+
+    <div class="seccion" id="autonomia-construccion">
+      <div class="seccion-num">08 · Autonomía municipal en construcción</div>
+      <h2>La <em>Ley 9709</em> y el plebiscito de 2027</h2>
+
+      <p>Como se analiza en detalle en el capítulo <strong>10.04.03 (Régimen municipal)</strong>, Mendoza está atravesando en este momento la transformación más profunda de su régimen municipal desde 1934. La <strong>enmienda constitucional al Artículo 197</strong> establece por primera vez en la Constitución provincial la <strong>autonomía municipal</strong>, alineando el régimen mendocino con el Artículo 123 de la Constitución Nacional (que está vigente desde la reforma de 1994).</p>
+
+      <h3>Estado actual de la enmienda</h3>
+
+      <p>El recorrido institucional de la enmienda hasta la fecha:</p>
+
+      <ul>
+        <li><strong>14 de abril de 2026</strong>: el Ejecutivo provincial presenta el proyecto en la Legislatura mendocina.</li>
+        <li><strong>22 de abril de 2026</strong>: media sanción de Diputados, con dos modificaciones impulsadas por la oposición:
+          <ul>
+            <li>Cada municipio define su propio sistema de renovación de concejos (elimina la obligatoriedad bianual).</li>
+            <li>Las cartas orgánicas no requieren ratificación legislativa (si la Legislatura no se expide en 90 días, quedan automáticamente aprobadas).</li>
+          </ul>
+        </li>
+        <li><strong>12 de mayo de 2026</strong>: sanción definitiva en el Senado, con amplio respaldo pero <strong>sin los votos del peronismo</strong> (que se opuso al tratamiento por la judicialización del proceso de autonomía de San Rafael).</li>
+        <li><strong>20 de mayo de 2026</strong>: el gobernador Alfredo Cornejo promulga la enmienda como <strong>Ley 9709</strong>.</li>
+        <li><strong>Próxima elección legislativa de 2027</strong>: <strong>plebiscito popular obligatorio</strong> para ratificar la enmienda. Si la mayoría vota a favor, queda incorporada al texto constitucional.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una autonomía limitada</div>
+        <p>La autonomía municipal mendocina diseñada por la enmienda 2026 es deliberadamente <strong>limitada</strong>: los municipios podrán crear tasas retributivas, contribuciones por mejoras y derechos sobre el dominio público, <strong>pero no podrán crear impuestos</strong>. Se garantiza la participación municipal en la coparticipación provincial. Se mantiene el control del Tribunal de Cuentas y la intervención del Fiscal de Estado. Es una autonomía "<strong>institucional, política, administrativa y económica financiera</strong>" según el texto literal del nuevo artículo 197, pero con techos claros que impiden la creación de poderes tributarios paralelos al provincial.</p>
+      </div>
+
+      <h3>Cuál es el desafío</h3>
+
+      <p>El plebiscito de 2027 enfrenta el mismo desafío histórico que todos los referéndum mendocinos: la regla del Art. 221 que exige la <strong>mayoría absoluta del padrón</strong> (no de los votos emitidos). El gobierno provincial ha optado por <strong>sincronizar el plebiscito con las elecciones legislativas</strong> precisamente para maximizar la participación electoral, dado que en una elección general la concurrencia es típicamente del 70-75% (mucho más alta que en un referéndum específico, donde suele bajar al 35-45%). Aún así, alcanzar más del 50% del padrón con SÍ requerirá un esfuerzo de comunicación amplio y una coalición política transversal.</p>
+    </div>
+
+    <div class="seccion" id="san-rafael">
+      <div class="seccion-num">09 · El conflicto Cornejo-Félix por San Rafael</div>
+      <h2>Cuando un <em>departamento</em> se anticipa</h2>
+
+      <p>El proceso de autonomía municipal mendocino tuvo un episodio inesperado: el <strong>departamento de San Rafael</strong> (el más extenso y poblado del sur mendocino, gobernado por el peronista <strong>Omar Félix</strong>) decidió en febrero de 2026 <strong>convocar a elección de convencionales constituyentes para redactar su propia Carta Orgánica</strong>, sin esperar la enmienda constitucional provincial que estaba en trámite.</p>
+
+      <h3>La secuencia de los hechos</h3>
+
+      <ul>
+        <li><strong>22 de febrero de 2026</strong>: San Rafael realiza la elección de convencionales constituyentes municipales. Es una elección sin precedentes en el marco constitucional mendocino vigente (que aún no reconocía la autonomía municipal).</li>
+        <li>El <strong>Gobierno de Mendoza</strong> (Cornejo) impugna el proceso por considerarlo <strong>inconstitucional</strong>: argumenta que San Rafael no puede dictar Carta Orgánica antes de que la Constitución provincial reconozca formalmente la autonomía municipal.</li>
+        <li>El proceso es <strong>judicializado</strong>: la <strong>Suprema Corte de Justicia de Mendoza</strong> acepta el recurso y se aboca al análisis del caso.</li>
+        <li>El conflicto se traslada a la Legislatura mendocina, donde el peronismo plantea que, mientras la Corte tenga pendiente el recurso, no corresponde avanzar con la enmienda al Art. 197 (por la regla procesal de suspensión de procedimientos en curso por conflicto de competencias).</li>
+        <li>El oficialismo provincial argumenta que la enmienda no afecta exclusivamente a San Rafael sino al régimen municipal general, por lo cual el conflicto judicial específico no obliga a suspender el proceso legislativo.</li>
+        <li><strong>Abril-mayo de 2026</strong>: la Legislatura sanciona la enmienda. El peronismo no acompaña en el Senado (5 votos en contra del bloque).</li>
+        <li><strong>Estado actual</strong>: el proceso judicial sobre San Rafael sigue abierto. El plebiscito de 2027 ratificará o rechazará la enmienda. El caso San Rafael deberá resolverse en función del resultado del plebiscito y de las decisiones judiciales pendientes.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un conflicto institucional con varias capas</div>
+        <p>El conflicto Cornejo-Félix tiene <strong>varias dimensiones simultáneas</strong>: (1) <em>institucional</em>: ¿puede un departamento anticiparse al texto constitucional? (2) <em>partidario</em>: el radicalismo provincial vs. el peronismo en uno de sus pocos bastiones territoriales mendocinos. (3) <em>simbólico</em>: la autonomía municipal "desde abajo" (San Rafael) vs. la autonomía municipal "desde arriba" (la Legislatura). (4) <em>geográfico</em>: el norte mendocino (Gran Mendoza, oasis Norte, oasis Este, gobernados por el oficialismo provincial) vs. el sur (San Rafael, oasis Sur, con peso peronista histórico). Es un caso testigo que probablemente se estudiará durante décadas en las facultades de derecho constitucional.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">10 · El paquete distintivo</div>
+      <h2>Lo que <em>define</em> a Mendoza institucionalmente</h2>
+
+      <p>Si tuviéramos que sintetizar el paquete distintivo de la institucionalidad mendocina en pocos puntos, serían los siguientes:</p>
+
+      <ol>
+        <li><strong>Rigidez constitucional</strong>: 110 años con la Constitución de 1916, modificada solo por enmiendas puntuales. La barrera del 50% del padrón para los referéndum (Art. 221) ha sido el ancla de esta rigidez. Es la Constitución provincial argentina con mayor antigüedad continua.</li>
+        <li><strong>No reelección consecutiva del Ejecutivo provincial</strong>: la única gran provincia argentina que mantiene esta regla. Produce una rotación natural de gobernadores que distingue a Mendoza del resto del país.</li>
+        <li><strong>"Constitución hidráulica"</strong>: el agua como recurso central, organizada institucionalmente a través del DGI con rango constitucional. Una particularidad única en el constitucionalismo argentino, reflejo de la realidad geográfica desértica de la provincia.</li>
+        <li><strong>Cinco oasis productivos</strong>: la geografía hidráulica organiza también la geografía política y económica. Cada oasis tiene su perfil productivo, sus elites políticas, sus tensiones internas.</li>
+        <li><strong>Mendoza vitivinícola</strong>: 70% de la producción nacional de vino, con instituciones específicas (INV) y proyección internacional.</li>
+        <li><strong>Frontera con Chile</strong>: 80% del comercio terrestre Argentina-Chile pasa por Mendoza. Una dimensión geopolítica que se proyecta a la institucionalidad provincial.</li>
+        <li><strong>Innovación electoral exportada</strong>: la BUP mendocina inspiró el modelo nacional adoptado por Ley 27.781 en 2024. Es la primera vez que un modelo provincial argentino se traslada al ámbito nacional en materia electoral.</li>
+        <li><strong>Bicameralismo</strong>: con 48 diputados + 38 senadores (86 legisladores totales, segundo cuerpo legislativo más numeroso del país después de la PBA). Cuatro secciones electorales basadas en población.</li>
+        <li><strong>Autonomía municipal en construcción</strong>: 31 años de mora respecto del Art. 123 CN, finalmente abordada por la enmienda de 2026 (Ley 9709). El plebiscito de 2027 decidirá su incorporación efectiva.</li>
+        <li><strong>Tensión institucional</strong>: el caso San Rafael (Cornejo-Félix) ilustra cómo las tensiones partidarias y geográficas pueden traducirse en conflictos institucionales que ponen a prueba el diseño federal mendocino.</li>
+      </ol>
+
+      <p>El conjunto define a Mendoza como una provincia con un <strong>perfil institucional fuerte y diferenciado</strong>, donde la tradición constitucional, la geografía hidráulica, la innovación electoral y los conflictos políticos contemporáneos conviven en un sistema institucional centenario que enfrenta ahora la pregunta sobre cómo equilibrar la <strong>estabilidad histórica</strong> con la <strong>modernización institucional</strong>.</p>
+
+      <div class="cita">
+        "Mendoza es a la vez la provincia más antigua institucionalmente —porque su Constitución de 1916 es la más vieja vigente— y una de las más innovadoras en la práctica electoral —porque su BUP fue elegida como modelo nacional. Es una paradoja productiva: la rigidez del marco constitucional permite la innovación legal-electoral, porque las reglas básicas no están en discusión permanente."
+        <span class="cita-fuente">— Síntesis del análisis institucional mendocino. 2026.</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Mendoza</strong> (1916, con sus enmiendas hasta 2026). Texto vigente disponible en el sitio oficial del Gobierno de Mendoza.</li>
+        <li><strong>Ley Provincial 9709</strong> · Enmienda constitucional sobre autonomía municipal (Art. 197). Promulgada el 20 de mayo de 2026 por el gobernador Alfredo Cornejo. Pendiente de plebiscito en elecciones legislativas de 2027.</li>
+        <li><strong>Censo Nacional 2022</strong> · INDEC. Datos demográficos de Mendoza.</li>
+        <li><strong>Ley Provincial 9295</strong> · Ley de Boleta Única Provincial de Mendoza (BUP). Sancionada el 16 de marzo de 2022.</li>
+        <li><strong>Ley Nacional 27.781</strong> · Boleta Única de Papel (BUP) nacional. Sancionada en 2024. Inspirada en el modelo mendocino.</li>
+        <li><strong>Constitución Nacional Argentina</strong> · Artículo 123 (autonomía municipal). Mandato a las provincias desde la reforma de 1994.</li>
+        <li><strong>Departamento General de Irrigación (DGI)</strong> · Sitio oficial: irrigacion.gov.ar. Documentación sobre el régimen del agua mendocino.</li>
+        <li><strong>Instituto Nacional de Vitivinicultura (INV)</strong> · Sede Mendoza. Datos sobre la vitivinicultura argentina.</li>
+        <li><strong>Cobertura periodística del proceso de enmienda 2026</strong>: Los Andes, MDZ, Diario Mendoza, El Sol, Mendovoz, Sitio Andino, On24. Abril a junio de 2026.</li>
+        <li><strong>"Promulgaron la enmienda por la autonomía municipal"</strong> · El Sol, Diario Mendoza, Los Andes (20-22 de mayo de 2026).</li>
+        <li><strong>"Autonomía municipal: con cambios y tras sortear un pedido de suspensión, Diputados aprobó la enmienda"</strong> · Sitio Andino (22 de abril de 2026).</li>
+        <li><strong>"El largo camino que aún queda para que se aplique la autonomía municipal"</strong> · El Sol (12 de mayo de 2026).</li>
+        <li><strong>Análisis sobre el caso San Rafael</strong>: cobertura de la elección de convencionales municipales del 22 de febrero de 2026 y de su judicialización posterior.</li>
+        <li><strong>Cobertura del referéndum del 23 de octubre de 2011</strong> · Ley 8252. Análisis sobre la paradoja del Art. 221.</li>
+        <li><strong>Suprema Corte de Justicia de Mendoza</strong> · Fallo de 1987 que interpretó el Art. 221 como "mayoría del padrón" (no de votos emitidos).</li>
+      </ul>
+    </div>
+
+    <a href="mendoza-en-profundidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al hub provincial</div>
+        <h3>Mendoza en <em>profundidad</em></h3>
+        <p>Has completado los cinco capítulos del estudio mendocino. Volvé al hub para repasar la sección, navegar entre capítulos o explorar las otras provincias en profundidad (Buenos Aires, Córdoba, Santa Fe, CABA).</p>
+      </div>
+      <div class="proximo-cap-arrow">VOLVER AL HUB →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

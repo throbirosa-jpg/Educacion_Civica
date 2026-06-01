@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Provincia de Mendoza · En profundidad — Educación Cívica</title>
-<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Mendoza: historia constitucional, poderes provinciales, régimen municipal, particularidades distintivas y agenda institucional pendiente. Cinco capítulos premium con datos verificables.">
+<meta name="description" content="Estudio institucional en profundidad sobre la Provincia de Mendoza: cinco capítulos premium publicados con historia constitucional (1916-2026), los tres poderes provinciales bicamerales en 4 secciones, régimen municipal con sus 18 departamentos y 5 oasis productivos, sistema electoral BUP exportado a la Nación, y la síntesis distintiva mendocina con la enmienda 2026 y el caso San Rafael.">
 <link rel="canonical" href="https://educacioncivica.com.ar/mendoza-en-profundidad.html">
 
 <meta property="og:title" content="Provincia de Mendoza · En profundidad">
-<meta property="og:description" content="Estudio institucional en profundidad: cinco capítulos sobre la Provincia de Mendoza.">
+<meta property="og:description" content="Cinco capítulos publicados sobre Mendoza: la provincia más rígida del país constitucionalmente, con modelo BUP nacional.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://educacioncivica.com.ar/mendoza-en-profundidad.html">
 <meta property="og:site_name" content="Educación Cívica">
@@ -68,11 +68,11 @@
 
   .capitulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
 
-  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; opacity: 0.92; }
-  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--sol-dark); }
-  .capitulo-card:hover { opacity: 1; border-color: var(--sol-dark); }
+  .capitulo-card { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 1.8rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; }
+  .capitulo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--premium); }
+  .capitulo-card:hover { border-color: var(--premium); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 79, 140, 0.12); }
 
-  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--sol-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .capitulo-num { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 600; color: var(--premium-dark); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
   .capitulo-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); line-height: 1.25; margin-bottom: 0.8rem; }
   .capitulo-titulo em { font-style: italic; color: var(--premium-dark); }
   .capitulo-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
@@ -80,7 +80,9 @@
   .capitulo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
   .capitulo-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.7rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); font-weight: 500; }
   .capitulo-tag.estado-pronto { background: var(--sol-soft); border-color: var(--sol-dark); color: var(--sol-dark); font-weight: 600; }
-  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--sol-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-tag.estado-disponible { background: var(--verde-soft); border-color: var(--verde); color: var(--verde); font-weight: 600; }
+  .capitulo-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--premium-dark); font-weight: 600; margin-top: auto; }
+  .capitulo-card:hover .capitulo-link { color: var(--premium); }
 
   .nav-otras-provincias { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem; margin: 3rem 0; }
   .nav-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.2rem; }
@@ -91,6 +93,10 @@
   .nav-link p { font-size: 0.78rem; color: var(--tinta-soft); line-height: 1.4; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase; }
 
   .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .proximos-contenidos.completado { background: var(--verde-soft); border-left-color: var(--verde); }
+  .proximos-contenidos.completado .proximos-titulo { color: var(--verde); }
+  .proximos-contenidos.completado h3 em { color: var(--verde); }
+  .proximos-contenidos.completado p strong { color: var(--verde); }
   .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
   .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
   .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
@@ -109,7 +115,7 @@
 </head>
 <body>
 
-<div class="premium-banner">— Estudio provincial · <strong>Capítulos en producción</strong></div>
+<div class="premium-banner">— Estudio provincial · <strong>★ 5 capítulos publicados</strong></div>
 
 <nav>
   <div class="nav-inner">
@@ -160,77 +166,77 @@
 <div class="container">
 
   <div class="seccion-intro">
-    <div class="seccion-eyebrow">— Cinco capítulos en desarrollo</div>
-    <h2 class="seccion-titulo">El plan de <em>contenidos</em> de esta sección</h2>
-    <p class="seccion-descripcion">Esta es la estructura del estudio sobre la Provincia de Mendoza, replicando el modelo del estudio sobre CABA. Los cinco capítulos están planificados pero <strong>aún en producción</strong>: cada uno se publicará en próximas entregas con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Si tenés sugerencias sobre qué profundizar, escribinos.</p>
+    <div class="seccion-eyebrow">— Cinco capítulos publicados</div>
+    <h2 class="seccion-titulo">Los <em>cinco capítulos</em> publicados</h2>
+    <p class="seccion-descripcion">El estudio completo de la Provincia de Mendoza: <strong>cinco capítulos publicados</strong> con la misma densidad jurídica, citas a fuentes oficiales y análisis institucional que caracteriza a los demás estudios premium del sitio. Total: aproximadamente <strong>240 KB de contenido institucional</strong> sobre la provincia más rígida del país constitucionalmente, con 110 años de la Constitución de 1916, su singular "constitución hidráulica", la única gran provincia sin reelección consecutiva, y el modelo BUP que la Nación adoptó en 2024.</p>
   </div>
 
   <div class="capitulos-grid">
 
-    <div class="capitulo-card">
+    <a href="mendoza-historia.html" class="capitulo-card">
       <div class="capitulo-num">10.04.01</div>
-      <h3 class="capitulo-titulo">Historia <em>institucional</em></h3>
-      <p class="capitulo-desc">Mendoza desde la fundación en 1561 hasta la provincia moderna. La gesta sanmartiniana de 1817 y el peso del Ejército de los Andes en la identidad mendocina. Las constituciones provinciales: la de 1854, 1900, 1916 (la que prohibió la reelección, vigente con modificaciones hasta hoy) y 1949. Los proyectos de reforma constitucional pendientes.</p>
+      <h3 class="capitulo-titulo">Historia <em>constitucional</em></h3>
+      <p class="capitulo-desc">Mendoza institucional: Julián Barraquero ("el Alberdi mendocino"), la <strong>Constitución de 1916</strong> (la más antigua del país en vigencia), el paréntesis peronista de 1948-49, el experimento de elección indirecta de 1965, los dos mecanismos de reforma (convención + enmienda), las <strong>6 enmiendas exitosas</strong> desde 1985 y los intentos fallidos: referéndum 2011 (Ley 8252) y paquete Suárez 2020-2021.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">Ejército de los Andes</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Constitución 1916</span>
-          <span class="capitulo-tag">Sin reelección</span>
+          <span class="capitulo-tag">6 enmiendas</span>
+          <span class="capitulo-tag">Barraquero</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="mendoza-poderes.html" class="capitulo-card">
       <div class="capitulo-num">10.04.02</div>
       <h3 class="capitulo-titulo">Los tres <em>poderes</em></h3>
-      <p class="capitulo-desc">El gobernador (con mandato único, sin posibilidad de reelección consecutiva, una de las pocas provincias del país con esta restricción), la Legislatura bicameral (48 diputados y 38 senadores en 4 secciones electorales) y la Suprema Corte de Justicia. Análisis del sistema de control de constitucionalidad provincial.</p>
+      <p class="capitulo-desc">El gobernador (4 años <strong>sin reelección consecutiva</strong>, única gran provincia con esta regla), vicegobernador presidente del Senado, simple mayoría sin balotaje. Legislatura bicameral con <strong>48 diputados + 38 senadores</strong> (86 totales, segundo cuerpo más numeroso del país) en <strong>4 secciones electorales</strong>. Sesiones del 1 mayo al 30 sept (las más cortas entre las grandes provincias). SCJM y Consejo de la Magistratura.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">Sin reelección</span>
-          <span class="capitulo-tag">Bicameralismo</span>
+          <span class="capitulo-tag">86 legisladores</span>
           <span class="capitulo-tag">4 secciones</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="mendoza-municipios.html" class="capitulo-card">
       <div class="capitulo-num">10.04.03</div>
-      <h3 class="capitulo-titulo">Los 18 <em>departamentos</em></h3>
-      <p class="capitulo-desc">Régimen municipal mendocino: cada departamento tiene un intendente y un Concejo Deliberante. La particularidad mendocina: <strong>los municipios no tienen autonomía plena</strong> en el sentido de poder dictarse cartas orgánicas (con excepciones recientes). Análisis del sistema departamental y de la dependencia parcial de la legislatura provincial.</p>
+      <h3 class="capitulo-titulo">Régimen <em>municipal</em></h3>
+      <p class="capitulo-desc"><strong>92 años con la Ley 1079 de 1934</strong>. Los 18 departamentos, los 5 oasis productivos (Norte, Centro/Valle de Uco, Este, Sur, Malargüe), el sistema Intendente + Concejo Deliberante. La <strong>"constitución hidráulica"</strong>: DGI con rango constitucional único en el país. La enmienda 2026 (Ley 9709) sobre autonomía municipal pendiente de plebiscito 2027.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
           <span class="capitulo-tag">18 departamentos</span>
-          <span class="capitulo-tag">Régimen municipal</span>
-          <span class="capitulo-tag">Sin cartas orgánicas</span>
+          <span class="capitulo-tag">5 oasis</span>
+          <span class="capitulo-tag">DGI · Ley 9709</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="mendoza-electoral.html" class="capitulo-card">
       <div class="capitulo-num">10.04.04</div>
-      <h3 class="capitulo-titulo">El <em>modelo BUP</em></h3>
-      <p class="capitulo-desc">Mendoza implementó la boleta única provincial en 2023 (mediante reforma a la Ley 2.551). Su modelo se convirtió en la <strong>referencia nacional para la BUP de la Ley 27.781 de 2024</strong>. Análisis técnico del diseño de la boleta, su debut en las primarias provinciales del 11 de junio de 2023, y los aprendizajes que se trasladaron al sistema nacional.</p>
+      <h3 class="capitulo-titulo">Sistema <em>electoral</em></h3>
+      <p class="capitulo-desc">El Código Electoral mendocino (Ley 2551), el sistema tradicional de boleta partidaria múltiple, la Ley 8967 (BU facultativa), y finalmente la <strong>Ley 9295 sancionada el 16 de marzo de 2022</strong> (BUP). Modelo de filas horizontales y columnas verticales con foto del candidato a color. <strong>Elegido por el Senado nacional como modelo para la BUP nacional</strong> (Ley 27.781) en 2024. PASO suspendidas 2025-2026.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">BUP mendocina</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">BUP Ley 9295</span>
           <span class="capitulo-tag">Modelo nacional</span>
-          <span class="capitulo-tag">Reforma electoral</span>
+          <span class="capitulo-tag">Sin PASO</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
-    <div class="capitulo-card">
+    <a href="mendoza-distintivo.html" class="capitulo-card">
       <div class="capitulo-num">10.04.05</div>
-      <h3 class="capitulo-titulo">La cuestión del <em>agua</em></h3>
-      <p class="capitulo-desc">Una particularidad institucional única de Mendoza: el <strong>Departamento General de Irrigación (DGI)</strong>, organismo descentralizado con rango cuasi-constitucional que administra el agua del territorio. Su rol en la organización productiva (vid, frutas, hortalizas) y en el ordenamiento territorial. La doctrina mendocina del "agua como bien constitucional".</p>
+      <h3 class="capitulo-titulo">El paquete <em>distintivo</em></h3>
+      <p class="capitulo-desc">Síntesis de la identidad institucional mendocina: <strong>110 años con la Constitución de 1916</strong> (la más antigua del país), única gran provincia sin reelección consecutiva, la paradoja del referéndum 2011, identidad vitivinícola y frontera con Chile, el modelo BUP exportado a la Nación, la enmienda 2026 sobre autonomía municipal y el <strong>conflicto Cornejo-Félix por San Rafael</strong> judicializado.</p>
       <div class="capitulo-tags">
-          <span class="capitulo-tag estado-pronto">Próximamente</span>
-          <span class="capitulo-tag">DGI</span>
-          <span class="capitulo-tag">Irrigación</span>
-          <span class="capitulo-tag">Bien constitucional</span>
+          <span class="capitulo-tag estado-disponible">Disponible</span>
+          <span class="capitulo-tag">Identidad institucional</span>
+          <span class="capitulo-tag">Caso San Rafael</span>
+          <span class="capitulo-tag">Plebiscito 2027</span>
       </div>
-      <span class="capitulo-link">En producción · Próxima entrega</span>
-    </div>
+      <span class="capitulo-link">Leer capítulo →</span>
+    </a>
 
   </div>
 
@@ -260,10 +266,10 @@
     </div>
   </div>
 
-  <div class="proximos-contenidos">
-    <div class="proximos-titulo">— Próximos contenidos en desarrollo</div>
-    <h3>Los <em>cinco capítulos</em> en producción</h3>
-    <p>Los cinco capítulos planificados sobre la Provincia de Mendoza se publicarán progresivamente en próximas entregas, siguiendo el orden de prioridad establecido en el hub general de provincias. Cada capítulo incluirá análisis institucional, datos verificables, referencias normativas y fuentes oficiales. Si tenés sugerencias sobre qué temas profundizar o qué fuentes consultar, escribinos.</p>
+  <div class="proximos-contenidos completado">
+    <div class="proximos-titulo">— Estudio publicado completo</div>
+    <h3>Los <em>cinco capítulos</em> ya están disponibles</h3>
+    <p>El estudio sobre la Provincia de Mendoza está <strong>completo</strong>. Los cinco capítulos suman aproximadamente <strong>240 KB de contenido institucional</strong> con análisis exhaustivo de la rigidez constitucional, los 18 departamentos en los 5 oasis productivos, el modelo BUP exportado a la Nación, la enmienda de 2026 sobre autonomía municipal, y la síntesis distintiva de la institucionalidad mendocina. <strong>Las cuatro grandes provincias argentinas tienen su estudio completo</strong>. Si tenés sugerencias sobre qué temas profundizar, escribinos.</p>
   </div>
 
 </div>

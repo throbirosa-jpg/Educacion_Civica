@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Mendoza · Historia constitucional (10.04.01) — Educación Cívica</title>
+<meta name="description" content="La historia constitucional de Mendoza: la Constitución provincial más antigua de Argentina en vigencia. Sancionada el 11 de febrero de 1916 por iniciativa de Julián Barraquero ('el Alberdi mendocino'), ha sobrevivido a múltiples intentos de reforma total. Las cuatro enmiendas exitosas, los referéndum perdidos, y la nueva enmienda de autonomía municipal de 2026.">
+<link rel="canonical" href="https://educacioncivica.com.ar/mendoza-historia.html">
+
+<meta property="og:title" content="Mendoza · Historia constitucional">
+<meta property="og:description" content="La Constitución más longeva del país: 110 años con la Carta de 1916. Reformas parciales, intentos fallidos y la enmienda de 2026.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/mendoza-historia.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.04.01</strong> de la sección Mendoza en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="mendoza-en-profundidad.html">Mendoza</a> ·
+      <span>Historia constitucional</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.04.01 · Estudio provincial</div>
+    <h1 class="page-title">Historia <em>constitucional</em> de Mendoza</h1>
+    <div class="page-subtitulo">— La Constitución más antigua del país en vigencia</div>
+    <p class="page-intro">La <strong>Constitución de Mendoza de 1916</strong> es la <strong>Carta Magna provincial más antigua de la Argentina en vigencia</strong>. Sancionada el <strong>11 de febrero de 1916</strong> por iniciativa de <strong>Julián Barraquero</strong> —el "Alberdi mendocino"—, lleva más de <strong>110 años</strong> rigiendo la institucionalidad provincial. Es una constitución <strong>rígida</strong>, que exige dos procedimientos especiales para reformarse: convención reformadora (para reforma total o parcial) o enmienda (un artículo por año mediante ley + referéndum obligatorio). El mecanismo de enmienda ha producido cinco reformas parciales exitosas desde 1985, pero los intentos de reforma integral —incluido el del gobernador Suárez en 2020-2021— han fracasado sistemáticamente. En abril de 2026, una nueva enmienda al Artículo 197 incorpora la autonomía municipal plena al texto, aunque su vigencia final depende del referéndum popular pendiente.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">1916</div>
+        <div class="page-stat-label">Año de sanción de la Carta</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">110+</div>
+        <div class="page-stat-label">Años de vigencia continua</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">5</div>
+        <div class="page-stat-label">Enmiendas parciales exitosas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2026</div>
+        <div class="page-stat-label">Última enmienda · Autonomía municipal</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#orígenes">01 · Los orígenes constitucionales</a></li>
+      <li><a href="#barraquero">02 · Julián Barraquero y la reforma</a></li>
+      <li><a href="#1916">03 · La Constitución de 1916</a></li>
+      <li><a href="#peronismo">04 · Reforma de 1949 y derogación</a></li>
+      <li><a href="#1965">05 · Las reformas de 1965</a></li>
+      <li><a href="#mecanismos">06 · Los dos mecanismos de reforma</a></li>
+      <li><a href="#enmiendas">07 · Las enmiendas exitosas</a></li>
+      <li><a href="#intentos-fallidos">08 · Los intentos fallidos</a></li>
+      <li><a href="#enmienda-2026">09 · La enmienda de 2026</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="orígenes">
+      <div class="seccion-num">01 · Los orígenes constitucionales</div>
+      <h2>Antes de <em>1916</em></h2>
+
+      <p>La historia constitucional de Mendoza se inicia formalmente con la organización institucional argentina del siglo XIX. Como las demás provincias argentinas, Mendoza tuvo que dictar su propia Constitución después de la sanción de la Constitución Nacional de 1853-1860. La primera Constitución mendocina fue sancionada en <strong>1854</strong>, en cumplimiento del mandato de la Constitución Nacional original.</p>
+
+      <p>El siglo XIX mendocino estuvo marcado por la consolidación territorial (la provincia se desprendió definitivamente de Cuyo en 1820) y por el desarrollo agrícola del valle de Mendoza, impulsado por la <strong>inmigración italiana, española y francesa</strong> que se intensificó hacia fin de siglo. La economía vitivinícola se convirtió en el motor productivo y modeló los rasgos sociales y políticos que la nueva Constitución de 1916 buscaría reflejar.</p>
+
+      <h3>Las constituciones del siglo XIX</h3>
+
+      <p>Antes de 1916, Mendoza tuvo dos textos constitucionales principales:</p>
+
+      <ul>
+        <li><strong>Constitución de 1854</strong>: el primer texto provincial, sancionado en cumplimiento de la CN de 1853. Estableció una estructura institucional clásica para la época.</li>
+        <li><strong>Reforma de 1894-1895</strong>: introdujo cambios importantes, entre ellos la figura del <strong>vicegobernador</strong> (establecida desde 1895) con la función eventual de reemplazar al gobernador y la permanente de presidir el Senado provincial. El mandato del gobernador se fijó en <strong>tres años</strong>, con posibilidad de reelección.</li>
+      </ul>
+
+      <p>El Senado provincial mendocino se conformaba originalmente por <strong>un senador por Capital y uno por cada departamento</strong>, con mandatos de seis años (luego cuatro). Era un criterio de representación territorial estricta, que se mantendría hasta la reforma de 1916.</p>
+    </div>
+
+    <div class="seccion" id="barraquero">
+      <div class="seccion-num">02 · Julián Barraquero y la reforma</div>
+      <h2>El "<em>Alberdi mendocino</em>"</h2>
+
+      <p>La Constitución mendocina de 1916 tuvo un mentor intelectual con un perfil comparable al de <strong>Juan Bautista Alberdi</strong> respecto de la Constitución Nacional de 1853: el jurista y político <strong>Julián Barraquero</strong>. Por su rol en la redacción y orientación doctrinaria del nuevo texto provincial, la historiografía mendocina lo ha denominado el "Alberdi mendocino".</p>
+
+      <h3>El contexto político y social</h3>
+
+      <p>La reforma de 1916 se produjo en un contexto muy específico. Mendoza era ya una provincia próspera, con una <strong>economía vitivinícola consolidada</strong> y un proceso de inmigración europea avanzado. La sociedad mendocina del primer cuarto del siglo XX estaba marcada por tensiones modernas: la cuestión obrera, las relaciones entre capital y trabajo, la urbanización de los pueblos vecinales del Gran Mendoza.</p>
+
+      <p>Los convencionales mendocinos de 1916 introdujeron deliberadamente correctivos institucionales para <strong>reducir el margen de maniobra de los gobernadores</strong>, evitar la formación de "caudillos" y preservar el equilibrio entre los poderes públicos. La memoria política mendocina de las décadas anteriores estaba marcada por experiencias autoritarias que la nueva Constitución buscaba prevenir.</p>
+
+      <div class="cita">
+        "En la reforma constitucional de 1916 los convencionales mendocinos introducían correctivos destinados a reducir el margen de maniobra de los gobernadores, evitar la formación de 'caudillos' y preservar el equilibrio entre los poderes públicos."
+        <span class="cita-fuente">— Los Andes, "Una constitución histórica", análisis del Centenario de la Constitución de 1916.</span>
+      </div>
+
+      <h3>Una doble respuesta</h3>
+
+      <p>La Constitución de 1916 es citada por la doctrina constitucional argentina como un texto que dio <strong>una doble respuesta</strong>:</p>
+
+      <ul>
+        <li><strong>Respuesta social</strong>: dotó de carácter constitucional las <strong>primeras leyes sociales</strong> que regularon las relaciones entre capital y trabajo. Fue una constitución pionera en materia laboral y de protección social, anticipándose en décadas al constitucionalismo social que se generalizaría en Argentina con la reforma nacional de 1949.</li>
+        <li><strong>Respuesta política</strong>: estableció controles institucionales robustos al Poder Ejecutivo, definió mecanismos de reforma constitucional muy exigentes, y configuró un régimen bicameral con representación territorial proporcional a la población.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="1916">
+      <div class="seccion-num">03 · La Constitución de 1916</div>
+      <h2>Las <em>innovaciones</em> del texto</h2>
+
+      <p>La Constitución sancionada el <strong>11 de febrero de 1916</strong> introdujo varias innovaciones institucionales que perdurarían hasta hoy:</p>
+
+      <h3>Sistema bicameral con representación poblacional</h3>
+
+      <p>El bicameralismo mendocino se mantuvo, pero el criterio de representación del Senado cambió radicalmente. El texto de 1895 establecía un senador por Capital y uno por cada departamento (criterio territorial estricto). La Constitución de 1916 los reorganizó <strong>en proporción a la población de cada una de las secciones electorales</strong>, diluyendo el anterior perfil de representación departamental directa. Es una decisión institucional importante: prima la representación poblacional sobre la territorial pura.</p>
+
+      <h3>Cuatro secciones electorales</h3>
+
+      <p>La Constitución de 1916 estableció el sistema de <strong>cuatro secciones electorales</strong> que agrupan a los 18 departamentos provinciales. Esta organización sigue vigente:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Sección</th>
+              <th>Departamentos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primera</strong></td>
+              <td>Capital, Guaymallén, Las Heras, Lavalle</td>
+            </tr>
+            <tr>
+              <td><strong>Segunda</strong></td>
+              <td>Maipú, San Martín, Junín, Rivadavia, Santa Rosa, La Paz</td>
+            </tr>
+            <tr>
+              <td><strong>Tercera</strong></td>
+              <td>Godoy Cruz, Luján de Cuyo, Tupungato, Tunuyán, San Carlos</td>
+            </tr>
+            <tr>
+              <td><strong>Cuarta</strong></td>
+              <td>San Rafael, General Alvear, Malargüe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>El mandato del gobernador: cuatro años, sin reelección</h3>
+
+      <p>La Constitución de 1916 fijó el mandato del gobernador en <strong>cuatro años</strong>, sin posibilidad de reelección inmediata. Esta cláusula resultaría una de las más distintivas y resistentes del orden mendocino: durante los <strong>108 años posteriores</strong>, ningún gobernador mendocino logró reelección consecutiva, aún cuando varios intentaron modificar la cláusula.</p>
+
+      <h3>El mecanismo de enmienda</h3>
+
+      <p>La Constitución de 1916 incorporó un mecanismo de reforma específico: la posibilidad de modificar <strong>hasta un artículo por año mediante una ley provincial</strong>, con la condición de someter la cláusula a consideración del pueblo en las siguientes elecciones de diputados. Este mecanismo permitiría —a lo largo de las décadas siguientes— enmiendas parciales sin necesidad de convocar a una Convención Reformadora.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El preámbulo y los derechos sociales</div>
+        <p>El preámbulo de la Constitución mendocina incorpora menciones al "bien común", al "progreso económico", a la "justicia social" y a la "promoción del trabajo". Este vocabulario, anticipado en 1916, sería retomado décadas después por el constitucionalismo social latinoamericano. La sección de derechos y garantías es relativamente robusta para su época, e incluye <strong>derechos laborales, derechos de la familia y disposiciones sobre el régimen tributario</strong> que la diferenciaban de las constituciones provinciales más conservadoras del período.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="peronismo">
+      <div class="seccion-num">04 · Reforma de 1949 y derogación</div>
+      <h2>El <em>paréntesis peronista</em></h2>
+
+      <p>Como ocurrió con casi todas las constituciones provinciales argentinas en el período 1948-1949, Mendoza adaptó su Carta a la <strong>reforma nacional peronista de 1949</strong>. La Constitución mendocina de <strong>1948-1949</strong> incorporó los principios del constitucionalismo social peronista: derechos del trabajador, derechos de la familia, derechos de la ancianidad, función social de la propiedad.</p>
+
+      <p>La vigencia de esta reforma fue corta. Tras el <strong>golpe de Estado de 1955</strong>, el gobierno militar de la "Revolución Libertadora" derogó por decreto todas las reformas constitucionales sancionadas durante el peronismo. En Mendoza, el <strong>gobernador de facto Isidoro Busquets</strong> derogó la Carta de 1948-1949 y puso en vigencia nuevamente la Constitución de 1916. Es la Constitución que sigue rigiendo hasta hoy.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un caso de "supervivencia" constitucional</div>
+        <p>La Constitución de 1916 sobrevivió al peronismo, al antiperonismo, a los gobiernos militares de los años 60 y 70, al retorno democrático de 1983 y a múltiples intentos de reforma desde entonces. Su supervivencia se explica por dos factores: <strong>(1)</strong> es una constitución <strong>rígida</strong>, con mecanismos de reforma muy exigentes que dificultan los cambios; y <strong>(2)</strong> el dispositivo de enmiendas parciales (un artículo por año) ha funcionado como "<strong>válvula de escape</strong>" que permite actualizaciones puntuales sin necesidad de reforma integral.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="1965">
+      <div class="seccion-num">05 · Las reformas de 1965</div>
+      <h2>El <em>experimento</em> de la elección indirecta</h2>
+
+      <p>En <strong>1965</strong>, bajo el gobierno del presidente Arturo Illia (UCR), se introdujeron nuevas modificaciones a la Constitución provincial mendocina, entre ellas la <strong>elección indirecta del gobernador y vicegobernador</strong> mediante una Junta de Electores —similar al sistema electoral estadounidense—. Era una innovación contrintuitiva en un contexto democrático: en lugar de simplificar el voto popular, se interpuso un cuerpo electoral intermedio.</p>
+
+      <p>El sistema operaba así: el pueblo no votaba directamente al gobernador y vice, sino que elegía <strong>electores</strong> en cada sección electoral. La Junta de Electores se reunía después y elegía al gobernador y vice. Si la Junta no se reunía en el plazo previsto, la Asamblea Legislativa elegía por mayoría absoluta. Si no se obtenía esa mayoría en primera votación, se aplicaba un procedimiento específico para casos de división del voto.</p>
+
+      <h3>Derogación temprana</h3>
+
+      <p>Las reformas de 1965 fueron <strong>derogadas poco después</strong> mediante mecanismos de enmienda parcial. La experiencia mostró que la elección indirecta no era adecuada para el contexto mendocino: agregaba complejidad institucional sin beneficios claros, y dejaba al gobernador con una legitimidad democrática mediatizada. Mendoza volvió al sistema de elección directa, aunque la cláusula constitucional sobre Junta de Electores tardaría décadas en ser reformada definitivamente.</p>
+
+      <p>El <strong>Artículo 120 de la Constitución mendocina</strong> sigue mencionando elementos del sistema de Junta de Electores, aunque la <strong>enmienda de 1985 (Ley 5047)</strong> reescribió el artículo para establecer la <strong>elección directa con simple mayoría</strong> de los votos válidamente emitidos. Es decir: sin balotaje, sin segunda vuelta, sin sistema de electores. El candidato más votado se proclama gobernador electo.</p>
+    </div>
+
+    <div class="seccion" id="mecanismos">
+      <div class="seccion-num">06 · Los dos mecanismos de reforma</div>
+      <h2>Convención <em>o enmienda</em></h2>
+
+      <p>La Constitución mendocina de 1916 prevé dos mecanismos especiales y distintos para su reforma. Esta dualidad la hace una de las constituciones provinciales más sofisticadas en su régimen reformista:</p>
+
+      <h3>Mecanismo 1 · Convención Reformadora</h3>
+
+      <p>Para una reforma total o parcial del texto, regulado por el <strong>Artículo 219</strong>. El procedimiento exige:</p>
+
+      <ol>
+        <li><strong>Declaración de necesidad de reforma</strong> por ley de la Legislatura provincial. Mayoría especial: dos tercios de los miembros de cada Cámara.</li>
+        <li><strong>Convocatoria a elecciones de convencionales constituyentes</strong>.</li>
+        <li><strong>Funcionamiento de la Convención Reformadora</strong>.</li>
+        <li><strong>Sanción del texto reformado</strong>.</li>
+        <li><strong>Referéndum popular obligatorio</strong> (Art. 221). El texto reformado debe ser ratificado por el cuerpo electoral.</li>
+      </ol>
+
+      <h3>Mecanismo 2 · Enmienda</h3>
+
+      <p>Para la reforma de un solo artículo por año, regulado por el <strong>Artículo 223</strong>. El procedimiento exige:</p>
+
+      <ol>
+        <li><strong>Ley de la Legislatura</strong> que propone la enmienda. Mayoría: dos tercios de los miembros de cada Cámara.</li>
+        <li><strong>Referéndum popular obligatorio</strong>. La ciudadanía debe ratificar la enmienda en una elección general posterior.</li>
+        <li><strong>Promulgación</strong> de la enmienda como reforma constitucional.</li>
+      </ol>
+
+      <h3>La interpretación de la Corte sobre el referéndum</h3>
+
+      <p>Un aspecto crítico del mecanismo es la interpretación del Artículo 221 sobre <strong>qué mayoría se necesita en el referéndum</strong>. La <strong>Suprema Corte de Justicia de la Provincia</strong>, en un fallo de 1987, interpretó que la "mayoría de electores" exigida en el artículo debe entenderse como <strong>"más de la mitad de los empadronados"</strong> (no de los votos emitidos). Esta interpretación elevó significativamente la dificultad de aprobar reformas mediante referéndum.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una barra muy alta</div>
+        <p>La interpretación de la Corte mendocina ("mitad más uno de los empadronados", no de los emitidos) significa que <strong>el voto en blanco, el ausentismo y el voto en contra cuentan como rechazo</strong> a la reforma. Para aprobar una enmienda, no basta con que la mayoría de los votantes diga "sí": hace falta que <strong>más del 50% de todos los habilitados a votar</strong> diga "sí" expresamente. Es una barrera difícil de superar en una provincia con ausentismo electoral significativo. El intento de modificar esta interpretación en 2011 fracasó en otro referéndum perdido (ver sección 8).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="enmiendas">
+      <div class="seccion-num">07 · Las enmiendas exitosas</div>
+      <h2>Cinco <em>reformas parciales</em> desde la democracia</h2>
+
+      <p>Desde la recuperación democrática de 1983, Mendoza ha aprobado <strong>cinco enmiendas constitucionales</strong> mediante el mecanismo del Artículo 223. Cada una modificó un artículo específico de la Constitución:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Ley</th>
+              <th>Artículo</th>
+              <th>Contenido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1985</strong></td>
+              <td>Ley 5047</td>
+              <td>Art. 120</td>
+              <td>Elección directa del gobernador y vicegobernador (eliminación de la Junta de Electores)</td>
+            </tr>
+            <tr>
+              <td><strong>1989</strong></td>
+              <td>—</td>
+              <td>Art. 198</td>
+              <td>Elección directa de los intendentes municipales</td>
+            </tr>
+            <tr>
+              <td><strong>1990</strong></td>
+              <td>Ley 5557</td>
+              <td>Art. 1</td>
+              <td>Yacimientos de hidrocarburos como patrimonio provincial</td>
+            </tr>
+            <tr>
+              <td><strong>1997</strong></td>
+              <td>—</td>
+              <td>Art. 150</td>
+              <td>Incorporación del Consejo de la Magistratura</td>
+            </tr>
+            <tr>
+              <td><strong>2005</strong></td>
+              <td>Ley 7405</td>
+              <td>Art. 151</td>
+              <td>Prohibición de indexación de salarios de magistrados (reglamentación del principio de intangibilidad)</td>
+            </tr>
+            <tr>
+              <td><strong>2009</strong></td>
+              <td>—</td>
+              <td>Art. 198</td>
+              <td>Limitación de la reelección de intendentes a un solo período consecutivo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La enmienda de 2009 sobre intendentes</h3>
+
+      <p>La enmienda más significativa de los últimos veinte años fue la de <strong>2009</strong>: limitó la reelección de los intendentes a <strong>un solo período consecutivo</strong>. Hasta entonces, los caudillos vecinales podían persistir en el manejo comunal indefinidamente, mientras sus aparatos políticos consiguieran armar sucesivas victorias electorales. La enmienda terminó con la reelección indefinida de los jefes comunales, alineando el régimen mendocino con el de provincias como San Juan que habían adoptado la misma limitación.</p>
+
+      <p>El referéndum ratificatorio se realizó el <strong>28 de junio de 2009</strong>, en simultaneidad con las elecciones legislativas nacionales. Las tres fuerzas políticas principales —UCR, PJ y Demócrata— acordaron militar el "sí", lo que facilitó su aprobación.</p>
+
+      <h3>El patrón de las enmiendas mendocinas</h3>
+
+      <p>Una característica notable de las enmiendas mendocinas es que <strong>todas han funcionado como ajustes técnico-institucionales</strong>, sin tocar la cuestión central de la <strong>reelección del gobernador</strong>. Ningún oficialismo provincial ha logrado articular la mayoría política necesaria para someter a referéndum la habilitación de la reelección consecutiva del Ejecutivo provincial. Mendoza sigue siendo, junto con muy pocas otras provincias, una jurisdicción donde el gobernador no puede ser reelecto consecutivamente.</p>
+    </div>
+
+    <div class="seccion" id="intentos-fallidos">
+      <div class="seccion-num">08 · Los intentos fallidos</div>
+      <h2>Múltiples <em>reformas frustradas</em></h2>
+
+      <p>Junto con las cinco enmiendas exitosas, Mendoza ha vivido <strong>numerosos intentos fallidos</strong> de reforma constitucional total o parcial. La lista es larga y atraviesa varios gobiernos provinciales:</p>
+
+      <h3>Los referéndum perdidos</h3>
+
+      <p>Algunos intentos llegaron al referéndum y fueron rechazados. El más reciente y emblemático fue el de <strong>2011</strong>, durante el gobierno de Celso Jaque (PJ). La <strong>Ley 8252</strong> buscaba modificar el <strong>Artículo 221 de la Constitución</strong>, precisamente el que rige el mecanismo de referéndum. La intención era cambiar la interpretación de la Corte sobre la mayoría requerida: pasar de "más de la mitad de los empadronados" a <strong>"mitad más uno de los votos emitidos"</strong>. Habría sido una reforma "facilitadora" de futuras reformas.</p>
+
+      <p>El referéndum se realizó el <strong>23 de octubre de 2011</strong>, en simultaneidad con las elecciones nacionales. <strong>Ganó el "sí"</strong> entre los votos emitidos, pero <strong>no alcanzó la mitad más uno de los empadronados</strong>. Es decir: la propia reforma quedó atrapada en la regla que pretendía modificar. Un ejemplo casi paradójico de la rigidez constitucional mendocina.</p>
+
+      <div class="cita">
+        "En aquel referéndum ganó el 'sí' a la reforma pero no logró que la cantidad de sufragios positivos llegara al menos a la mitad más uno del padrón electoral, una cláusula impuesta por la Corte mendocina en un fallo de 1987."
+        <span class="cita-fuente">— MDZ Online, análisis del referéndum del 23 de octubre de 2011. Reseña reproducida por Unidiversidad UNCuyo.</span>
+      </div>
+
+      <h3>El intento Suárez (2020-2021)</h3>
+
+      <p>Durante el gobierno del radical Rodolfo Suárez (2019-2023), se planteó una <strong>reforma constitucional integral</strong> con tres ejes principales:</p>
+
+      <ul>
+        <li><strong>Unicameralidad legislativa</strong>: reducir el sistema bicameral (48 diputados + 38 senadores) a una sola cámara con menor número de miembros. La principal motivación declarada era reducir el costo del aparato político.</li>
+        <li><strong>Balotaje</strong>: incorporar una segunda vuelta electoral para la elección del gobernador (que actualmente se elige por simple mayoría).</li>
+        <li><strong>NO incluía la reelección del gobernador</strong>: explícitamente, el proyecto de Suárez mantenía la prohibición de reelección consecutiva del Ejecutivo. Fue una decisión política significativa, dado que la reelección era el tema más controvertido históricamente.</li>
+      </ul>
+
+      <p>El proyecto no prosperó: la Legislatura no logró articular los dos tercios necesarios para sancionar la ley de necesidad de reforma. Las críticas más fuertes provinieron del peronismo y de partidos vecinales, que veían en la unicameralidad una pérdida de representación territorial. La reforma quedó en el archivo.</p>
+
+      <h3>Otros intentos previos</h3>
+
+      <p>La Cámara de Diputados mendocina ha registrado <strong>varios intentos de reforma</strong> desde la recuperación democrática, ninguno de los cuales pudo concretarse mediante el mecanismo del Artículo 221:</p>
+
+      <ul>
+        <li>Intentos en la década de 1990 bajo gobiernos justicialistas y radicales.</li>
+        <li>Intentos en la década de 2000 bajo distintos gobernadores.</li>
+        <li>Discusiones académicas y políticas recurrentes sobre la necesidad de modernizar el texto.</li>
+      </ul>
+
+      <p>La Cámara de Diputados ha reconocido oficialmente que <strong>"nuestra Provincia ha transitado varios intentos de reformas siguiendo el mecanismo previsto en el artículo 221 de la Constitución, sin que ninguno de ellos haya podido concretarse"</strong>. Es una autoevaluación oficial de la dificultad de reformar el texto de 1916.</p>
+    </div>
+
+    <div class="seccion" id="enmienda-2026">
+      <div class="seccion-num">09 · La enmienda de 2026</div>
+      <h2>La <em>autonomía municipal</em> 31 años tarde</h2>
+
+      <p>En <strong>abril de 2026</strong>, la Legislatura mendocina sancionó la <strong>Ley 9709</strong>, que declara la necesidad de enmendar el <strong>Artículo 197 de la Constitución provincial</strong> para incorporar la <strong>autonomía municipal plena</strong>, alineando el régimen mendocino con el Artículo 123 de la Constitución Nacional reformada en 1994. Es la enmienda más significativa de los últimos años y refleja una <strong>deuda histórica</strong> con la reforma constitucional nacional: durante <strong>31 años</strong> Mendoza fue una de las pocas provincias argentinas en mora respecto del mandato del Art. 123 CN.</p>
+
+      <h3>El proceso parlamentario</h3>
+
+      <p>La enmienda fue impulsada por el gobernador <strong>Alfredo Cornejo</strong> (UCR), quien retomó el mando provincial en diciembre de 2023. El proyecto avanzó así:</p>
+
+      <ul>
+        <li><strong>30 de marzo de 2026</strong>: Cornejo anuncia en San Rafael el envío del proyecto a la Legislatura.</li>
+        <li><strong>14 de abril de 2026</strong>: comienza el tratamiento en comisión.</li>
+        <li><strong>22 de abril de 2026</strong>: la Cámara de Diputados aprueba con media sanción la enmienda al Art. 197, con modificaciones impulsadas por la oposición.</li>
+        <li><strong>Abril de 2026</strong>: el Senado da sanción definitiva al proyecto.</li>
+        <li><strong>Pendiente</strong>: referéndum ratificatorio en próxima elección general.</li>
+      </ul>
+
+      <h3>Contenido de la enmienda</h3>
+
+      <p>La nueva redacción del Art. 197:</p>
+
+      <ul>
+        <li><strong>Habilita</strong> a los 18 municipios mendocinos a dictar sus propias <strong>Cartas Orgánicas Municipales</strong> (no es obligatorio, cada municipio decide).</li>
+        <li><strong>Restringe</strong> la potestad tributaria municipal: los municipios <strong>no pueden crear impuestos</strong>, solo tasas retributivas de servicios, contribuciones por mejoras y derechos sobre el dominio público.</li>
+        <li><strong>Garantiza</strong> la participación municipal en el régimen de coparticipación provincial.</li>
+        <li><strong>Elimina</strong> la obligatoriedad de renovar los concejos deliberantes por mitades cada 2 años: cada municipio podrá decidirlo en su Carta Orgánica.</li>
+        <li><strong>Mantiene</strong> los controles del Tribunal de Cuentas y la intervención del Fiscal de Estado.</li>
+        <li><strong>Modificación clave de la oposición</strong>: las Cartas Orgánicas no requerirán ratificación legislativa posterior (el proyecto original sí lo exigía).</li>
+      </ul>
+
+      <h3>El conflicto con San Rafael</h3>
+
+      <p>El proceso tuvo un episodio conflictivo. El <strong>22 de febrero de 2026</strong>, la municipalidad de <strong>San Rafael</strong> (gobernada por el peronista Omar Félix) realizó una elección de convencionales para redactar su propia Carta Orgánica, <strong>antes</strong> del plebiscito ratificatorio constitucional. Este proceso fue interpretado por el gobernador Cornejo como una violación del orden constitucional provincial y fue <strong>judicializado</strong>. La gestión Cornejo señaló que "Mendoza no puede tener autonomía a la carta" según como interprete cada intendente sus facultades.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una enmienda "controlada"</div>
+        <p>La enmienda del Art. 197 de 2026 ha sido caracterizada por la prensa local como una <strong>"autonomía controlada"</strong>. Por un lado, incorpora formalmente el principio del Art. 123 CN al texto mendocino, saldando una mora institucional de 31 años. Por otro lado, las <strong>restricciones tributarias</strong> (sin impuestos nuevos), el <strong>carácter opcional</strong> (cada municipio decide si avanza con Carta Orgánica) y los <strong>controles provinciales</strong> mantenidos (Tribunal de Cuentas, Fiscal de Estado) limitan el alcance real de la autonomía. La comparación con la autonomía plena cordobesa (1987) o santafesina (2025) muestra que el modelo mendocino es más restrictivo y gradual.</p>
+      </div>
+
+      <h3>El referéndum pendiente</h3>
+
+      <p>La enmienda fue promulgada por el gobernador Cornejo tras la sanción legislativa. Sin embargo, su <strong>vigencia efectiva depende del referéndum popular</strong> que la ciudadanía debe celebrar, probablemente en simultaneidad con las próximas elecciones legislativas. La interpretación de la Corte sobre la mayoría requerida (más del 50% de los empadronados) hace incierto el resultado: aunque las tres fuerzas políticas principales acuerden militar el "sí", el ausentismo electoral podría jugar en contra de la enmienda, como ocurrió en 2011 con el referéndum del Art. 221.</p>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución de la Provincia de Mendoza</strong> · Sancionada el 11 de febrero de 1916. Texto vigente con sus enmiendas posteriores. Disponible en jus.mendoza.gov.ar y www3.hcdn.gob.ar/dependencias/secparl/dgral_info_parlamentaria/dip/constituciones/provinciales/.</li>
+        <li><strong>Ley Provincial 5047</strong> · Enmienda del Art. 120 (elección directa del gobernador, 1985).</li>
+        <li><strong>Ley Provincial 5557</strong> · Enmienda del Art. 1 (yacimientos de hidrocarburos, 1990).</li>
+        <li><strong>Ley Provincial 7405</strong> · Enmienda del Art. 151 (intangibilidad de magistrados, 2005).</li>
+        <li><strong>Ley Provincial 8252</strong> · Proyecto de enmienda del Art. 221 (referéndum perdido del 23 de octubre de 2011).</li>
+        <li><strong>Ley Provincial 9709</strong> · Enmienda del Art. 197 (autonomía municipal, 2026). Pendiente de ratificación popular.</li>
+        <li><strong>Constitución Nacional Argentina</strong> · Artículos 5 y 123 (régimen municipal y autonomía).</li>
+        <li><strong>"Constitución de Mendoza de 1916"</strong> · Análisis institucional en mendoza.edu.ar (gobierno escolar provincial).</li>
+        <li><strong>"Una constitución histórica"</strong> · Los Andes, opinión sobre el Centenario de la Constitución de 1916.</li>
+        <li><strong>"Lo necesario: conocer la Constitución de Mendoza"</strong> · Unidiversidad, UNCuyo. Análisis del régimen constitucional mendocino.</li>
+        <li><strong>"Reforma parcial de la Constitución"</strong> · Cámara de Diputados de Mendoza, hcdmza.gob.ar.</li>
+        <li><strong>"Coloquio sobre el Centenario de la Constitución de 1916 en la Legislatura de Mendoza"</strong> · Prensa Gobierno de Mendoza (2016).</li>
+        <li><strong>"La reelección en el Derecho Público Provincial"</strong> · SciELO Argentina. Análisis comparado de los regímenes provinciales.</li>
+        <li><strong>Cobertura periodística de la enmienda 2026</strong>: Los Andes, Mendoza Post, El Sol, Diario San Rafael, Sitio Andino, Diario El Sol, El Editor Mendoza. Marzo-abril de 2026.</li>
+        <li><strong>"Mendoza aprobó una reforma constitucional para incluir las autonomías municipales en la Carta Magna"</strong> · Ámbito Financiero (mayo de 2026).</li>
+      </ul>
+    </div>
+
+    <a href="mendoza-poderes.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.04.02</div>
+        <h3>Los tres <em>poderes</em> provinciales</h3>
+        <p>El sistema institucional mendocino: el gobernador (4 años, <strong>sin reelección</strong> consecutiva, único caso entre las grandes provincias), la Legislatura bicameral (48 diputados + 38 senadores en 4 secciones electorales) y la Suprema Corte de Justicia. Las particularidades del régimen interno: vicegobernador como presidente del Senado, secciones electorales con representación poblacional.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

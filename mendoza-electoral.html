@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Mendoza · Sistema electoral (10.04.04) — Educación Cívica</title>
+<meta name="description" content="El sistema electoral mendocino: la Boleta Única Papel sancionada el 16 de marzo de 2022 con modelo de filas horizontales y columnas partidarias, la simple mayoría sin balotaje para gobernador (Art. 120 Constitución), las PASO mendocinas suspendidas en 2025 y 2026, y la influencia decisiva del 'modelo Mendoza' en la BUP nacional Ley 27.781 que se aplicó por primera vez el 26 de octubre de 2025.">
+<link rel="canonical" href="https://educacioncivica.com.ar/mendoza-electoral.html">
+
+<meta property="og:title" content="Mendoza · Sistema electoral">
+<meta property="og:description" content="La BUP Mendoza marzo 2022 · Modelo elegido para la BUP nacional · Simple mayoría sin balotaje.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/mendoza-electoral.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>10.04.04</strong> de la sección Mendoza en profundidad</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a> ·
+      <a href="mendoza-en-profundidad.html">Mendoza</a> ·
+      <span>Sistema electoral</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 10.04.04 · Estudio provincial</div>
+    <h1 class="page-title">Sistema <em>electoral</em></h1>
+    <div class="page-subtitulo">— BUP Mendoza · El modelo elegido por la Nación</div>
+    <p class="page-intro">El sistema electoral mendocino combina varios rasgos distintivos. Por un lado, la <strong>Boleta Única Papel</strong> sancionada el <strong>16 de marzo de 2022</strong>, con un modelo propio de cargos en <strong>filas horizontales</strong> y agrupaciones políticas en <strong>columnas verticales</strong>. Este modelo fue elegido por el Senado nacional como base para la <strong>Boleta Única Papel nacional (Ley 27.781)</strong>, en lugar del modelo cordobés. La BUP nacional se aplicó por primera vez el <strong>26 de octubre de 2025</strong>. Por otro lado, Mendoza mantiene un sistema de <strong>simple mayoría sin balotaje</strong> para la elección del gobernador (Art. 120 de la Constitución, reformado por Ley 5047 en 1985). Las <strong>PASO mendocinas</strong> fueron suspendidas para 2025 y 2026 por ley provincial. Este capítulo recorre el sistema y su influencia decisiva en la reforma electoral nacional.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2022</div>
+        <div class="page-stat-label">Ley BUP Mendoza (16 mar)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2023</div>
+        <div class="page-stat-label">Primera aplicación BUP</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2024</div>
+        <div class="page-stat-label">Modelo elegido por BUP nacional</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2025</div>
+        <div class="page-stat-label">PASO suspendidas</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#codigo-electoral">01 · El Código Electoral provincial</a></li>
+      <li><a href="#sistema-tradicional">02 · El sistema tradicional</a></li>
+      <li><a href="#bup-mendoza">03 · La BUP Mendoza de 2022</a></li>
+      <li><a href="#modelo-mendocino">04 · El modelo de boleta</a></li>
+      <li><a href="#primera-aplicacion">05 · La primera aplicación</a></li>
+      <li><a href="#bup-nacional">06 · La influencia en la BUP nacional</a></li>
+      <li><a href="#gobernador">07 · Elección del gobernador</a></li>
+      <li><a href="#paso-suspendidas">08 · PASO suspendidas</a></li>
+      <li><a href="#comparacion">09 · Comparación de modelos BU</a></li>
+      <li><a href="#fuentes">10 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="codigo-electoral">
+      <div class="seccion-num">01 · El Código Electoral provincial</div>
+      <h2>La <em>Ley 2551</em></h2>
+
+      <p>El régimen electoral mendocino se rige por el <strong>Código Electoral de la Provincia (Ley 2551)</strong> con sus múltiples modificaciones posteriores. La norma es bastante antigua —su esquema básico data de la primera mitad del siglo XX— pero ha sido objeto de actualizaciones técnicas significativas. Las reformas más importantes recientes son la incorporación de la Boleta Única Papel (Ley 9295, 2022) y los ajustes a las PASO mendocinas.</p>
+
+      <h3>Cargos provinciales electivos</h3>
+
+      <p>Los cargos provinciales electivos en Mendoza son:</p>
+
+      <ul>
+        <li><strong>Gobernador y vicegobernador</strong>: fórmula conjunta, mandato de 4 años, sin reelección consecutiva. Elección por simple mayoría de votos válidamente emitidos.</li>
+        <li><strong>Diputados provinciales</strong>: 48 en total, distribuidos entre las 4 secciones electorales. Renovación por mitades cada 2 años. Edad mínima 22 años.</li>
+        <li><strong>Senadores provinciales</strong>: 38 en total, distribuidos entre las 4 secciones electorales. Renovación por mitades cada 2 años. Edad mínima 25 años.</li>
+        <li><strong>Intendentes municipales</strong>: uno por cada uno de los 18 departamentos. Mandato de 4 años, una sola reelección consecutiva (desde la enmienda 2009).</li>
+        <li><strong>Concejales</strong>: número variable según el departamento. Renovación por mitades cada 2 años (esto puede cambiar con las nuevas Cartas Orgánicas Municipales).</li>
+      </ul>
+
+      <h3>Junta Electoral Provincial</h3>
+
+      <p>La organización de los comicios provinciales y municipales está a cargo de la <strong>Junta Electoral Provincial</strong>, presidida por el <strong>Presidente de la Suprema Corte de Justicia</strong>. Esta vinculación constitucional entre el máximo tribunal provincial y el órgano electoral es una particularidad mendocina que garantiza autonomía del proceso electoral respecto del Ejecutivo provincial.</p>
+    </div>
+
+    <div class="seccion" id="sistema-tradicional">
+      <div class="seccion-num">02 · El sistema tradicional</div>
+      <h2>De la <em>boleta sábana</em> a la Boleta Única</h2>
+
+      <p>Hasta 2022-2023, Mendoza utilizaba el sistema clásico de <strong>boleta partidaria</strong> (popularmente conocida como "boleta sábana"). Cada partido o alianza imprimía sus propias boletas, que distribuía en los cuartos oscuros. El elector elegía la boleta del partido de su preferencia y la introducía en el sobre. Si quería votar diferente para distintas categorías, debía cortar la boleta o tomar boletas de distintos partidos.</p>
+
+      <h3>Los problemas del sistema tradicional</h3>
+
+      <p>El sistema de boleta partidaria mostró las siguientes debilidades:</p>
+
+      <ul>
+        <li><strong>Costo de impresión</strong>: cada partido debía imprimir millones de boletas, con costos significativos. Esto perjudicaba especialmente a los partidos pequeños sin estructura.</li>
+        <li><strong>Vulnerabilidad al robo de boletas</strong>: las boletas podían sustraerse del cuarto oscuro, generando situaciones de denuncias durante el día electoral.</li>
+        <li><strong>Listas sábana</strong>: la presentación de candidatos en una sola boleta dificultaba la selección categoría por categoría y favorecía el voto en bloque por listas.</li>
+        <li><strong>Dificultad para el voto cruzado</strong>: el corte de boletas era una operación física que requería tiempo y exponía la opción del elector.</li>
+        <li><strong>Impacto ambiental</strong>: el uso masivo de papel para boletas que en gran parte no se utilizaban era un problema creciente.</li>
+      </ul>
+
+      <h3>La Ley 8967 (antecedente fallido)</h3>
+
+      <p>En el período previo, Mendoza tuvo un primer intento legal de incorporar la Boleta Única: la <strong>Ley 8967</strong>. Sin embargo, esta norma <strong>no era operativa</strong>: dependía de la decisión del Ejecutivo provincial de aplicarla en cada elección concreta, sin generar obligatoriedad. La discrecionalidad del Ejecutivo neutralizó la reforma, que nunca se aplicó efectivamente. Era una "boleta única a la carta" que en la práctica no cambiaba nada.</p>
+
+      <p>Esta experiencia frustrada motivó la sanción posterior de la Ley 9295 (2022), que sí estableció la BUP como sistema obligatorio para todas las elecciones provinciales y municipales.</p>
+    </div>
+
+    <div class="seccion" id="bup-mendoza">
+      <div class="seccion-num">03 · La BUP Mendoza de 2022</div>
+      <h2>La <em>sanción</em> definitiva</h2>
+
+      <p>El <strong>16 de marzo de 2022</strong>, la Cámara de Diputados mendocina sancionó definitivamente el proyecto de Boleta Única Papel (BUP), enviado por el Poder Ejecutivo del gobernador <strong>Rodolfo Suárez</strong> (UCR-Cambia Mendoza). La iniciativa había sido aprobada por el Senado la semana anterior. La votación en Diputados fue de <strong>31 a favor, 15 en contra y 1 ausente</strong>. El <strong>Frente de Todos</strong> votó en contra del proyecto.</p>
+
+      <h3>El debate político</h3>
+
+      <p>El proyecto de BUP mendocino tuvo apoyos transversales del oficialismo provincial y los bloques opositores no peronistas. El Frente de Todos votó en contra argumentando que el modelo <strong>"induce el voto a partidos tradicionales"</strong> al contener un casillero para votar la lista completa de un partido político, lo que (según esa lectura) favorecería a los partidos con estructura territorial sobre los partidos nuevos o emergentes. Esta crítica retornaría más tarde en el debate de la BUP nacional.</p>
+
+      <h3>Características de la nueva norma</h3>
+
+      <p>La Ley 9295 estableció varios principios:</p>
+
+      <ul>
+        <li><strong>Obligatoriedad</strong>: todos los procesos electorales de autoridades electivas provinciales y municipales se realizarán por medio de BUP. Sin discrecionalidad del Ejecutivo.</li>
+        <li><strong>Una boleta por categoría</strong>: el modelo no integra todas las categorías en una sola boleta, sino que prevé una boleta por cada cargo (gobernador, diputados, senadores, intendentes, concejales).</li>
+        <li><strong>Prohibición de colectoras</strong>: se modifica el Art. 17 del Código Electoral provincial (Ley 2551) para impedir la práctica de "candidaturas testimoniales" y los acuerdos electorales con listas espejo.</li>
+        <li><strong>Piso del 3% en PASO</strong>: las agrupaciones políticas que hayan alcanzado el 3% de los votos afirmativos válidamente emitidos en las elecciones primarias pueden incorporar sus listas a la BUP de las generales.</li>
+        <li><strong>50 días de anticipación</strong>: las listas de candidatos deben presentarse ante la Junta Electoral al menos 50 días hábiles antes de las elecciones generales.</li>
+      </ul>
+
+      <div class="cita">
+        "Los procesos electorales de autoridades electivas provinciales y municipales de la Provincia de Mendoza se deben realizar por medio de la utilización de la Boleta Única, de acuerdo a las normas que se establecen por la presente."
+        <span class="cita-fuente">— Ley Provincial 9295, Artículo 1. Mendoza, marzo de 2022.</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="modelo-mendocino">
+      <div class="seccion-num">04 · El modelo de boleta</div>
+      <h2>Filas <em>horizontales</em>, columnas verticales</h2>
+
+      <p>La principal innovación del modelo mendocino —que después sería elegido para la BUP nacional— es la organización de la boleta en una <strong>matriz de filas y columnas</strong>. Cada elemento ocupa un lugar específico:</p>
+
+      <h3>La estructura matricial</h3>
+
+      <ul>
+        <li><strong>Filas horizontales</strong>: cada fila representa un <strong>cargo electivo</strong> (gobernador, vice, diputados, senadores, etc.). Aunque la práctica es una boleta por categoría, la disposición espacial respeta esta lógica de filas por cargo.</li>
+        <li><strong>Columnas verticales</strong>: cada columna representa una <strong>agrupación política</strong> (partido o alianza). Las columnas se ordenan por número o letra de identificación oficial.</li>
+        <li><strong>Casilleros</strong>: en la intersección de cada cargo con cada agrupación hay un casillero con el nombre del candidato cabecera de lista, su número de orden y eventualmente su foto.</li>
+      </ul>
+
+      <h3>El espacio horizontal y las fotos</h3>
+
+      <p>El argumento decisivo a favor del modelo mendocino (en el debate nacional) fue que las <strong>filas horizontales tienen más espacio</strong> para incluir información visual: fotos de los candidatos a color, logos de los partidos, números de orden. Esto facilita la identificación del candidato y, en teoría, reduce los errores de voto. El modelo cordobés, con bloques verticales por categoría, no tiene este espacio horizontal y obliga a un diseño más compacto.</p>
+
+      <h3>Otras características operativas</h3>
+
+      <ul>
+        <li><strong>Bolígrafo con tinta indeleble</strong>: el elector marca con un bolígrafo (no con pre-impresión).</li>
+        <li><strong>Troquel</strong>: cada boleta tiene un talón troquelado con la serie y número, que se separa antes del depósito en urna.</li>
+        <li><strong>5 boxes por mesa</strong>: el sistema permite habilitar hasta 5 boxes individuales por mesa para que los electores voten simultáneamente.</li>
+        <li><strong>Costo por boleta</strong>: aproximadamente $300 ARS al momento del lanzamiento (2023), con cerca de <strong>350-380 boletas por mesa</strong>. Globalmente, el sistema resulta más económico que el de boleta partidaria, aunque cada boleta individual sea más cara.</li>
+        <li><strong>Reducción del uso de papel</strong>: una sola boleta por elector, en lugar de múltiples boletas partidarias.</li>
+      </ul>
+
+      <div class="cita">
+        "Al tener la oferta en forma horizontal, hay espacio lo suficientemente amplio para facilitar la foto de los candidatos."
+        <span class="cita-fuente">— Senador nacional Edgardo Kueider (Cambia Federal), presidente de la Comisión de Asuntos Constitucionales del Senado, al informar el dictamen que adoptó el modelo Mendoza para la BUP nacional (septiembre de 2024).</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="primera-aplicacion">
+      <div class="seccion-num">05 · La primera aplicación</div>
+      <h2>Febrero de <em>2023</em></h2>
+
+      <p>La <strong>primera aplicación efectiva</strong> de la BUP mendocina se produjo en <strong>febrero de 2023</strong>, en los <strong>municipios que decidieron desdoblar sus elecciones</strong> de las nacionales y provinciales. Siete de los 18 departamentos mendocinos optaron por la desdoblada, lo que los obligó a financiar sus propios comicios. La BUP se aplicó en estos siete municipios.</p>
+
+      <h3>La presentación oficial</h3>
+
+      <p>El sistema fue presentado oficialmente por el <strong>Presidente de la Suprema Corte de Justicia y de la Junta Electoral, Dalmiro Garay Cueli</strong>, junto con el ministro de Gobierno Víctor Ibáñez Rozas y el Secretario de la Junta Electoral Jorge Albarracín. La presentación se hizo a la prensa, mostrando físicamente cómo serían las boletas para las elecciones a intendente y concejal de los municipios desdoblados.</p>
+
+      <h3>La aplicación general 2023</h3>
+
+      <p>Las elecciones generales provinciales mendocinas de 2023 (presidenciales + gobernador + legislativas) ya se realizaron con BUP para los cargos provinciales y municipales no desdoblados. Fue el primer test masivo del sistema. El proceso transcurrió sin incidentes técnicos significativos, lo que reforzó la legitimidad del nuevo modelo y abrió el camino para su adopción nacional.</p>
+
+      <h3>La aplicación 2025</h3>
+
+      <p>El <strong>26 de octubre de 2025</strong>, Mendoza fue una de las cuatro provincias del país que <strong>ya tenían BUP propia</strong> al momento de aplicarse la BUP nacional. En esas elecciones se votó:</p>
+
+      <ul>
+        <li><strong>Con BUP nacional</strong>: diputados nacionales (Mendoza eligió la mitad de sus 10 diputados nacionales; no eligió senadores en este turno).</li>
+        <li><strong>Con BUP provincial</strong>: 24 diputados provinciales y 19 senadores provinciales (renovación por mitades).</li>
+        <li><strong>Compitieron 8 alianzas</strong> a nivel provincial, con candidatos en cada uno de los cuatro distritos electorales.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Las 4 provincias con BUP previa</div>
+        <p>Al momento de aplicarse la BUP nacional en octubre de 2025, las provincias que ya tenían BUP propia para sus cargos provinciales eran: <strong>Santa Fe</strong> (Ley 13.156 de 2011, primera del país), <strong>Córdoba</strong> (BUS de 2011), <strong>Mendoza</strong> (Ley 9295 de 2022) y <strong>Salta</strong>. En estas cuatro provincias, los electores recibieron dos boletas únicas: una para los cargos nacionales (modelo Mendoza, vía Ley 27.781) y otra para los cargos provinciales (cada una con su propio modelo). En las restantes provincias, los cargos provinciales se siguieron eligiendo con boleta partidaria.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="bup-nacional">
+      <div class="seccion-num">06 · La influencia en la BUP nacional</div>
+      <h2>El <em>"modelo Mendoza"</em> elegido por el Senado</h2>
+
+      <p>La sanción de la <strong>Boleta Única Papel nacional (Ley 27.781)</strong> en octubre de 2024 fue uno de los procesos legislativos más importantes del año. El Senado nacional debatió largamente sobre qué modelo de boleta única adoptar. Las dos opciones principales eran el modelo cordobés y el modelo mendocino.</p>
+
+      <h3>El proceso parlamentario</h3>
+
+      <p>El debate parlamentario sobre la BUP nacional fue complejo. En Diputados, el proyecto inicial se aprobó con cierto consenso. En el Senado, sin embargo, el dictamen final introdujo modificaciones significativas, entre ellas:</p>
+
+      <ul>
+        <li><strong>Adopción del modelo Mendoza</strong> en lugar del cordobés.</li>
+        <li><strong>Prohibición de votar lista completa</strong>: eliminación del casillero "voto lista completa" que el modelo mendocino sí incluía.</li>
+        <li><strong>Modificación de plazos electorales</strong>: extensión del calendario para facilitar la impresión de las boletas.</li>
+        <li><strong>Primarias en agosto</strong>: la primera semana de agosto, con presentación de candidaturas a comienzos de junio.</li>
+      </ul>
+
+      <p>El texto modificado fue devuelto a la Cámara de Diputados, que finalmente lo sancionó. La votación en el Senado fue de <strong>39 a favor y 31 en contra</strong>. Apoyaron La Libertad Avanza, el PRO, la UCR y partidos provinciales. Solo Unión por la Patria se opuso. Como era una ley electoral, se requerían 37 votos (por mayoría absoluta del cuerpo).</p>
+
+      <h3>Por qué se eligió el modelo Mendoza</h3>
+
+      <p>Los argumentos a favor del modelo mendocino fueron tres principales:</p>
+
+      <ol>
+        <li><strong>Mejor inclusión de fotos</strong>: las filas horizontales permiten incluir fotos a color de los candidatos, lo que se consideró importante para una BUP nacional con muchas categorías y candidaturas.</li>
+        <li><strong>Mejor adaptación a la cantidad de listas</strong>: el modelo cordobés podía generar "boletas larguísimas" cuando había muchas listas competidoras. El modelo mendocino, con su disposición horizontal, era más flexible en términos visuales.</li>
+        <li><strong>Antecedente operativo reciente</strong>: Mendoza había aplicado exitosamente su BUP en 2023, con resultados técnicos satisfactorios. Era un modelo "probado" en una elección reciente.</li>
+      </ol>
+
+      <h3>La aplicación nacional 2025</h3>
+
+      <p>La BUP nacional se aplicó por primera vez el <strong>26 de octubre de 2025</strong>, en las elecciones legislativas nacionales. El sistema funcionó técnicamente bien, aunque con tiempos de votación algo mayores a los del sistema tradicional. La participación electoral fue del 68% del padrón, la más baja desde el retorno de la democracia.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué Mendoza es importante para la BUP nacional</div>
+        <p>La influencia de Mendoza en la BUP nacional es un caso de <strong>federalismo institucional ascendente</strong>: una innovación provincial que se proyecta al ámbito nacional. Es comparable a lo que pasó con las PASO santafesinas (Ley 12.367 de 2004) que inspiraron las PASO nacionales (Ley 26.571 de 2009). Pero la BUP es aún más significativa: por primera vez en décadas, una reforma electoral nacional adoptó <strong>directamente un modelo provincial</strong>, no como inspiración sino como base normativa. La BUP nacional argentina es, en términos prácticos, una "BUP mendocina escalada al ámbito nacional".</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="gobernador">
+      <div class="seccion-num">07 · Elección del gobernador</div>
+      <h2>Simple <em>mayoría</em> sin balotaje</h2>
+
+      <p>El sistema mendocino de elección del gobernador es uno de los más simples del federalismo argentino. El <strong>Artículo 120 de la Constitución provincial</strong>, reformado por la enmienda de 1985 (Ley 5047), establece la <strong>elección directa con simple mayoría</strong> de los votos válidamente emitidos.</p>
+
+      <h3>El procedimiento</h3>
+
+      <p>El sistema opera así:</p>
+
+      <ol>
+        <li>Los partidos políticos habilitados presentan <strong>fórmulas conjuntas</strong> de gobernador y vicegobernador.</li>
+        <li>El cuerpo electoral provincial vota directamente por una de las fórmulas. El territorio constituye un <strong>distrito único</strong>.</li>
+        <li>Se proclama electa la fórmula que <strong>obtenga simple mayoría</strong> de los votos válidamente emitidos.</li>
+        <li><strong>No hay balotaje ni segunda vuelta</strong>: el candidato más votado se proclama gobernador electo, sin importar el porcentaje absoluto.</li>
+      </ol>
+
+      <h3>Por qué Mendoza no tiene balotaje</h3>
+
+      <p>El sistema sin balotaje refleja una decisión política sostenida. Las razones esgrimidas en favor de mantenerlo:</p>
+
+      <ul>
+        <li><strong>Sencillez del proceso electoral</strong>: una sola elección resuelve el resultado, sin necesidad de un segundo turno.</li>
+        <li><strong>Menor costo electoral</strong>: no hay que financiar una eventual segunda vuelta.</li>
+        <li><strong>Continuidad institucional</strong>: cuando un gobernador se elige con menos del 50% pero con clara primera mayoría, asume con legitimidad democrática suficiente.</li>
+      </ul>
+
+      <p>Los argumentos en contra (a favor de incorporar balotaje, como propuso el gobernador Suárez en 2020-2021):</p>
+
+      <ul>
+        <li>En contextos de oferta fragmentada, un candidato puede ganar con 30-35% de los votos, lo que genera dudas sobre su legitimidad democrática.</li>
+        <li>La segunda vuelta obliga a construir coaliciones más amplias antes de asumir.</li>
+        <li>Permite una mejor expresión de las preferencias del electorado en escenarios competitivos.</li>
+      </ul>
+
+      <p>La propuesta de Suárez de incorporar balotaje no prosperó. Mendoza sigue con el sistema de simple mayoría.</p>
+    </div>
+
+    <div class="seccion" id="paso-suspendidas">
+      <div class="seccion-num">08 · PASO suspendidas</div>
+      <h2>Sin <em>primarias</em> en 2025 y 2026</h2>
+
+      <p>Mendoza tiene <strong>Elecciones Primarias Abiertas, Simultáneas y Obligatorias (PASO)</strong> a nivel provincial desde antes de la sanción de las PASO nacionales (Ley 26.571 de 2009). Sin embargo, la Legislatura provincial aprobó la <strong>suspensión de las PASO tanto para 2025 como para 2026</strong>.</p>
+
+      <h3>Razones de la suspensión</h3>
+
+      <p>Los argumentos para la suspensión fueron similares a los esgrimidos en otras provincias y a nivel nacional:</p>
+
+      <ul>
+        <li><strong>Bajo costo político</strong>: las PASO mendocinas en años recientes habían perdido función como mecanismo de competencia interna. La mayoría de los partidos presentaban listas únicas, lo que reducía las primarias a una "encuesta cara" más que a un verdadero proceso de selección de candidatos.</li>
+        <li><strong>Alto costo económico</strong>: la organización de PASO obligatorias generaba un gasto público significativo para el Estado provincial.</li>
+        <li><strong>Cansancio electoral</strong>: el calendario electoral argentino, ya saturado, sumaba con las PASO una elección adicional que el electorado vivía con menor interés.</li>
+      </ul>
+
+      <h3>El efecto en 2025</h3>
+
+      <p>La suspensión de las PASO 2025 implicó que las elecciones generales del 26 de octubre fueran <strong>la primera y única instancia electoral</strong> de ese año en Mendoza. Cada partido o alianza definió sus candidatos por mecanismos internos (acuerdos de cúpula, internas cerradas) sin participación del electorado general. Las <strong>8 alianzas competidoras</strong> presentaron sus listas para gobernador y los cargos provinciales sin filtro previo.</p>
+
+      <h3>El debate sobre PASO permanentes</h3>
+
+      <p>La suspensión de 2025-2026 abrió un debate más amplio sobre la <strong>conveniencia de eliminar definitivamente</strong> las PASO mendocinas (lo mismo se discutió a nivel nacional, donde finalmente se eliminaron por ley en octubre de 2024). El argumento mendocino tiene matices: como el sistema provincial ya tiene BUP, podría sustituirse el filtro de las primarias por una organización más cuidadosa de la oferta electoral en las generales. La discusión continúa.</p>
+    </div>
+
+    <div class="seccion" id="comparacion">
+      <div class="seccion-num">09 · Comparación de modelos BU</div>
+      <h2>Cuatro <em>modelos</em> de Boleta Única en Argentina</h2>
+
+      <p>Argentina tiene actualmente cuatro modelos provinciales de Boleta Única en aplicación. La comparación permite ver las distintas filosofías de diseño electoral:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Provincia</th>
+              <th>Ley</th>
+              <th>Primera aplicación</th>
+              <th>Modelo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Santa Fe</strong></td>
+              <td>13.156 (2011)</td>
+              <td>Mayo 2011</td>
+              <td>Columnas partidarias</td>
+            </tr>
+            <tr>
+              <td><strong>Córdoba</strong></td>
+              <td>BUS (2011)</td>
+              <td>Agosto 2011</td>
+              <td>Bloques por categorías (vertical)</td>
+            </tr>
+            <tr>
+              <td><strong>Salta</strong></td>
+              <td>Ley provincial</td>
+              <td>2011 (voto electrónico)</td>
+              <td>Boleta única electrónica</td>
+            </tr>
+            <tr>
+              <td><strong>Mendoza</strong></td>
+              <td>9.295 (2022)</td>
+              <td>Febrero 2023</td>
+              <td>Filas horizontales × columnas partidarias</td>
+            </tr>
+            <tr>
+              <td><strong>Nación</strong></td>
+              <td>27.781 (2024)</td>
+              <td>Octubre 2025</td>
+              <td>Modelo Mendoza adaptado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Mendoza vs Córdoba: una rivalidad institucional</h3>
+
+      <p>El debate entre el modelo cordobés y el mendocino fue significativo en la discusión nacional. La <strong>senadora cordobesa Alejandra Vigo</strong> (Hacemos por Córdoba) defendió en el Senado el modelo de su provincia, mientras que el <strong>senador entrerriano Edgardo Kueider</strong> (Cambia Federal), presidente de la Comisión de Asuntos Constitucionales, defendió e impuso el modelo Mendoza.</p>
+
+      <h3>Las diferencias clave entre los dos modelos</h3>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Modelo Córdoba (BUS)</th>
+              <th>Modelo Mendoza (BUP)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Organización principal</strong></td>
+              <td>Bloques por categoría</td>
+              <td>Filas por cargo, columnas por agrupación</td>
+            </tr>
+            <tr>
+              <td><strong>Fotos de candidatos</strong></td>
+              <td>Limitadas por espacio vertical</td>
+              <td>Mejor espacio horizontal</td>
+            </tr>
+            <tr>
+              <td><strong>Adaptabilidad a muchas listas</strong></td>
+              <td>Boletas pueden resultar muy largas</td>
+              <td>Más flexible</td>
+            </tr>
+            <tr>
+              <td><strong>Voto cruzado</strong></td>
+              <td>Más directo (marca por categoría)</td>
+              <td>Requiere marcar columnas por fila</td>
+            </tr>
+            <tr>
+              <td><strong>Identificación del partido</strong></td>
+              <td>Menos visible</td>
+              <td>Columna identifica claramente</td>
+            </tr>
+            <tr>
+              <td><strong>Boletas por elección</strong></td>
+              <td>Una integral por categoría</td>
+              <td>Una boleta por categoría</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>El modelo nacional 2025</h3>
+
+      <p>La BUP nacional aplicada en octubre de 2025 sigue el modelo mendocino con algunas adaptaciones, principalmente:</p>
+
+      <ul>
+        <li>Filas horizontales por cargo (modelo Mendoza).</li>
+        <li>Columnas verticales por agrupación política (modelo Mendoza).</li>
+        <li><strong>Sin casillero de "voto lista completa"</strong> (modificación introducida por el Senado): obliga al elector a marcar agrupación por agrupación, sin atajos.</li>
+        <li>Fotos de los candidatos cabeza de lista a color.</li>
+        <li>Bolígrafo con tinta indeleble para marcar.</li>
+      </ul>
+
+      <p>El modelo nacional, en este sentido, es <strong>"modelo Mendoza sin voto en bloque"</strong>: incorpora las ventajas espaciales del diseño mendocino pero elimina el casillero que facilitaba el voto en bloque a las listas tradicionales.</p>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">10 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley Provincial 9295</strong> · Boleta Única Papel de Mendoza (sancionada el 16 de marzo de 2022).</li>
+        <li><strong>Ley Provincial 2551</strong> · Código Electoral de la Provincia de Mendoza.</li>
+        <li><strong>Ley Provincial 8967</strong> · Antecedente fallido de Boleta Única (no operativo).</li>
+        <li><strong>Ley Nacional 27.781</strong> · Boleta Única Papel nacional (sancionada en octubre de 2024). Adopta el modelo Mendoza.</li>
+        <li><strong>Constitución de Mendoza, Artículo 120</strong> · Sistema de elección del gobernador (texto sancionado por Ley 5047, BO Mza. 9-10-85).</li>
+        <li><strong>Junta Electoral de la Provincia de Mendoza</strong>: jus.mendoza.gov.ar/web/junta. Información oficial sobre el sistema electoral provincial.</li>
+        <li><strong>Sitio oficial del Gobierno de Mendoza, "Boleta Única"</strong>: mendoza.gov.ar/elecciones/boleta-unica/.</li>
+        <li><strong>Suprema Corte de Justicia de Mendoza, "Se presentó oficialmente la Boleta Única Papel"</strong> · jusmendoza.gob.ar (febrero de 2023).</li>
+        <li><strong>"La Boleta Única ya es ley: así se votará en Mendoza"</strong> · Diario El Sol Mendoza (marzo de 2022).</li>
+        <li><strong>"Mendoza se suma a las provincias con Boleta Única"</strong> · Legislaturas Conectadas, Cámara de Diputados de Mendoza.</li>
+        <li><strong>"Boleta única: el Senado aprobó el modelo Mendoza, sin voto a lista completa"</strong> · LetraP (septiembre de 2024). Análisis del debate parlamentario nacional.</li>
+        <li><strong>"El Gobierno reglamentó la ley de la boleta única de papel"</strong> · La Nación (noviembre de 2024).</li>
+        <li><strong>"Elecciones 2025: conocé cómo están conformados los distritos electorales en la provincia de Mendoza"</strong> · Sitio Andino (agosto de 2025).</li>
+        <li><strong>"Elecciones 2025: qué se pone en juego en los cuatro distritos que votan cargos provinciales el 26 de octubre"</strong> · Infobae (octubre de 2025).</li>
+      </ul>
+    </div>
+
+    <a href="mendoza-distintivo.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 10.04.05</div>
+        <h3>Lo <em>distintivo</em> mendocino</h3>
+        <p>La provincia institucionalmente más austera de Argentina. La rigidez constitucional como rasgo identitario. La administración hidráulica como "constitución paralela". El modelo "no reelección" como bandera política. Las particularidades demográficas, productivas y geográficas: 2 millones de habitantes en 150.000 km², frontera con Chile, los oasis productivos y la economía vitivinícola.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
