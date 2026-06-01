@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Glosario cívico y jurídico argentino · Educación Cívica</title>
+<meta name="description" content="Glosario cívico y jurídico argentino con 91 términos clave del derecho público: poderes del Estado, sistema electoral, derechos y garantías, federalismo, conceptos fiscales. Con buscador, referencias cruzadas y citas a fuentes oficiales.">
+<link rel="canonical" href="https://educacioncivica.com.ar/glosario.html">
+
+<meta property="og:title" content="Glosario cívico y jurídico argentino">
+<meta property="og:description" content="Definiciones precisas de los conceptos clave del derecho público argentino, con referencias cruzadas y fuentes oficiales.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/glosario.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glosario cívico y jurídico argentino">
+<meta name="twitter:description" content="Diccionario de referencia sobre derecho público argentino.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  /* ========== HERRAMIENTAS · BUSCADOR Y NAV A-Z ========== */
+  .herramientas {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 65px;
+    z-index: 90;
+  }
+  .herramientas-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .herramientas-inner { grid-template-columns: 1fr; gap: 1rem; }
+  }
+
+  .buscador-wrapper {
+    position: relative;
+  }
+  .buscador-input {
+    width: 100%;
+    padding: 0.8rem 1.2rem 0.8rem 2.5rem;
+    background: var(--crema);
+    border: 1px solid var(--linea);
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    color: var(--tinta);
+    transition: all 0.2s;
+  }
+  .buscador-input::placeholder {
+    color: var(--tinta-soft);
+    font-style: italic;
+  }
+  .buscador-input:focus {
+    outline: none;
+    border-color: var(--premium);
+    background: white;
+    box-shadow: 0 0 0 3px var(--premium-soft);
+  }
+  .buscador-icon {
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--tinta-soft);
+    font-size: 0.95rem;
+    pointer-events: none;
+  }
+  .buscador-clear {
+    position: absolute;
+    right: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--tinta-soft);
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    display: none;
+  }
+  .buscador-clear:hover { color: var(--tinta); }
+  .buscador-clear.visible { display: block; }
+
+  .nav-az {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+  .nav-az a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--linea);
+    background: var(--crema);
+    color: var(--tinta-soft);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .nav-az a:hover {
+    border-color: var(--premium);
+    background: var(--premium-soft);
+    color: var(--premium-dark);
+  }
+  .nav-az a.activo {
+    background: var(--premium);
+    border-color: var(--premium);
+    color: white;
+  }
+  .nav-az a.deshabilitada {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* ========== CONTENIDO ========== */
+  .container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+
+  .info-resultados {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  .info-resultados strong { color: var(--premium-dark); font-weight: 600; }
+
+  .letra-grupo {
+    margin-bottom: 3rem;
+    scroll-margin-top: 160px;
+  }
+  .letra-titulo {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 4rem;
+    color: var(--premium);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--premium);
+    letter-spacing: -0.02em;
+  }
+  .letra-grupo.oculto { display: none; }
+
+  .terminos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  @media (min-width: 768px) {
+    .terminos-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .termino {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.4rem 1.6rem;
+    transition: all 0.2s;
+  }
+  .termino:hover {
+    border-color: var(--premium);
+    box-shadow: 0 4px 12px rgba(107, 79, 140, 0.08);
+  }
+  .termino.oculto { display: none; }
+  .termino.destacado {
+    border-color: var(--sol);
+    background: linear-gradient(180deg, var(--sol-soft) 0%, white 50%);
+  }
+
+  .termino-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+    gap: 0.8rem;
+  }
+  .termino-nombre {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--tinta);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .termino-nombre em {
+    font-style: italic;
+    color: var(--premium-dark);
+  }
+  .termino-tipo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.55rem;
+    background: var(--premium-soft);
+    color: var(--premium-dark);
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid var(--premium);
+  }
+  .termino-tipo.t-derecho { background: var(--celeste-soft); color: var(--celeste-dark); border-color: var(--celeste-dark); }
+  .termino-tipo.t-institucion { background: var(--sol-soft); color: var(--sol-dark); border-color: var(--sol-dark); }
+  .termino-tipo.t-ley { background: var(--rojo-soft); color: var(--rojo-fed); border-color: var(--rojo-fed); }
+  .termino-tipo.t-procedimiento { background: var(--verde-soft); color: var(--verde); border-color: var(--verde); }
+  .termino-tipo.t-principio { background: var(--premium-soft); color: var(--premium-dark); border-color: var(--premium); }
+
+  .termino-def {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin-bottom: 0.7rem;
+  }
+  .termino-def strong { color: var(--premium-dark); font-weight: 600; }
+
+  .termino-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    margin-top: 0.6rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--linea-soft);
+    font-size: 0.78rem;
+  }
+  .termino-norma {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--tinta-soft);
+  }
+  .termino-norma::before {
+    content: '§';
+    color: var(--premium);
+    margin-right: 0.3rem;
+  }
+  .termino-vermas {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--premium-dark);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-left: auto;
+  }
+  .termino-vermas:hover {
+    color: var(--premium);
+    text-decoration: underline;
+  }
+
+  .sin-resultados {
+    background: var(--crema-warm);
+    border: 1px dashed var(--linea);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    display: none;
+  }
+  .sin-resultados.visible { display: block; }
+  .sin-resultados h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    color: var(--tinta);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .sin-resultados p {
+    font-size: 0.95rem;
+    color: var(--tinta-soft);
+    line-height: 1.6;
+  }
+
+  .ayuda-card {
+    background: var(--premium-soft);
+    border-left: 4px solid var(--premium);
+    padding: 1.5rem 1.8rem;
+    margin: 3rem 0 2rem;
+  }
+  .ayuda-card-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+  .ayuda-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    color: var(--tinta);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .ayuda-card h3 em { font-style: italic; color: var(--premium-dark); }
+  .ayuda-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .ayuda-card p strong { color: var(--premium-dark); }
+
+  /* ========== FOOTER ========== */
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Glosario cívico y jurídico · <strong>Referencia rápida del derecho público argentino</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Glosario</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Recurso de referencia</div>
+    <h1 class="page-title">Glosario <em>cívico y jurídico</em></h1>
+    <p class="page-intro">Las palabras clave del derecho público argentino, definidas con precisión y conectadas a su capítulo del sitio. <strong>Una herramienta de consulta rápida</strong> para entender los términos que aparecen al leer sobre el Estado, los poderes, las elecciones, los derechos y el federalismo. Cada entrada incluye la definición técnica, la referencia normativa cuando corresponde, y un link al capítulo donde se profundiza el tema.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">91</div>
+        <div class="page-stat-label">Términos definidos</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">5</div>
+        <div class="page-stat-label">Categorías temáticas</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">A-Z</div>
+        <div class="page-stat-label">Navegación alfabética</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">50+</div>
+        <div class="page-stat-label">Referencias cruzadas</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERRAMIENTAS ========== -->
+<div class="herramientas">
+  <div class="herramientas-inner">
+    <div class="buscador-wrapper">
+      <span class="buscador-icon">⌕</span>
+      <input type="text" id="buscador" class="buscador-input" placeholder="Buscar un término (ej. federalismo, balotaje, habeas corpus)..." autocomplete="off">
+      <button class="buscador-clear" id="buscador-clear" aria-label="Limpiar búsqueda">esc</button>
+    </div>
+    <div class="nav-az" id="nav-az">
+      <a href="#a">A</a>
+      <a href="#b">B</a>
+      <a href="#c">C</a>
+      <a href="#d">D</a>
+      <a href="#e">E</a>
+      <a href="#f">F</a>
+      <a href="#g">G</a>
+      <a href="#h">H</a>
+      <a href="#i">I</a>
+      <a href="#j">J</a>
+      <a href="#l">L</a>
+      <a href="#m">M</a>
+      <a href="#n">N</a>
+      <a href="#o">O</a>
+      <a href="#p">P</a>
+      <a href="#q">Q</a>
+      <a href="#r">R</a>
+      <a href="#s">S</a>
+      <a href="#t">T</a>
+      <a href="#v">V</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="info-resultados" id="info-resultados">
+    Mostrando <strong id="contador-total">85</strong> términos · Ordenados alfabéticamente
+  </div>
+
+  <div class="sin-resultados" id="sin-resultados">
+    <h3>Sin resultados</h3>
+    <p>No encontramos términos que coincidan con tu búsqueda. Probá con otra palabra clave o usá la navegación alfabética.</p>
+  </div>
+
+  <!-- ========== A ========== -->
+  <div class="letra-grupo" id="a" data-letra="a">
+    <h2 class="letra-titulo">A</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="acceso a la informacion publica derecho">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Acceso a la <em>información pública</em></h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Derecho de toda persona a solicitar y recibir información en poder del Estado, sin necesidad de justificar el pedido ni acreditar interés legítimo. Tiene rango constitucional implícito (Art. 1 y 33 CN) y rango legal explícito desde la Ley 27.275.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 27.275 (2016) · Art. 1 CN</span>
+          <a href="acceso-informacion.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="accion de amparo amparo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Acción de <em>amparo</em></h3>
+          <span class="termino-tipo t-derecho">Garantía</span>
+        </div>
+        <p class="termino-def">Acción judicial rápida y expedita para proteger derechos constitucionales lesionados por actos u omisiones de autoridades públicas o particulares. Procede cuando no existe otro medio judicial más idóneo. Reconocida en el Art. 43 CN tras la reforma de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 43 CN · Ley 16.986</span>
+          <a href="amparo.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="acuerdo san nicolas 1852 historia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Acuerdo de <em>San Nicolás</em> (1852)</h3>
+          <span class="termino-tipo t-ley">Documento</span>
+        </div>
+        <p class="termino-def">Pacto firmado el 31 de mayo de 1852 por los gobernadores de las provincias argentinas (excepto Buenos Aires), que estableció las bases para convocar al Congreso General Constituyente que sancionaría la Constitución de 1853. Designó a Urquiza como Director Provisorio de la Confederación.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">31 de mayo de 1852</span>
+          <a href="historia-documentos-fundacionales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="alianza coalicion partido politico">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Alianza electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Unión transitoria de dos o más partidos políticos para presentarse en una elección con candidaturas comunes. Debe inscribirse ante la Justicia Electoral con anticipación. Si dura más allá de la elección, debe transformarse en confederación.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 26.571 · Código Electoral Nacional</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="asamblea legislativa congreso">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Asamblea Legislativa</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Reunión conjunta de ambas Cámaras del Congreso (Diputados y Senado) bajo la presidencia del Vicepresidente de la Nación. Se convoca en ocasiones especiales: apertura de sesiones ordinarias, jura presidencial, recepción de mandatarios extranjeros, decisión sobre acefalía.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 75 inc. 21, 88, 99 inc. 8 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="autarquia autonomia diferencia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Autarquía</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Capacidad de un ente público para administrarse a sí mismo dentro de los límites fijados por una norma superior. A diferencia de la autonomía, la autarquía no incluye la potestad de dictarse sus propias normas fundamentales. Ejemplo típico: las universidades nacionales.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Doctrina · Distinguir de autonomía</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="autonomia provincial constitucion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Autonomía <em>provincial</em></h3>
+          <span class="termino-tipo t-principio">Federalismo</span>
+        </div>
+        <p class="termino-def">Capacidad de las provincias argentinas para dictar su propia constitución, elegir sus autoridades sin intervención del gobierno federal y conservar todo el poder no delegado a la Nación. Es uno de los pilares del régimen federal.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 5, 121 y 122 CN</span>
+          <a href="historia-federalismo.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="autonomia municipal">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Autonomía <em>municipal</em></h3>
+          <span class="termino-tipo t-principio">Federalismo</span>
+        </div>
+        <p class="termino-def">Reconocimiento de los municipios como entes con autonomía propia en sus aspectos institucional, político, administrativo, económico y financiero. Garantizada por la reforma constitucional de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 123 CN (reforma 1994)</span>
+          <a href="niveles-gobierno.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== B ========== -->
+  <div class="letra-grupo" id="b" data-letra="b">
+    <h2 class="letra-titulo">B</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="balotaje segunda vuelta presidencial">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Balotaje</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Segunda vuelta electoral entre las dos fórmulas presidenciales más votadas, cuando ninguna alcanza los umbrales constitucionales en primera vuelta. En Argentina se realiza dentro de los 30 días posteriores a la primera vuelta. <strong>Argentina es el único país del mundo con umbral del 45% o 40%+10 puntos de diferencia.</strong></p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 96-98 CN</span>
+          <a href="elecciones-sistemas-presidenciales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="bicameral congreso dos camaras">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Bicameralismo</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Sistema legislativo dividido en dos Cámaras con composición y funciones complementarias. En Argentina, Diputados representa al pueblo (proporcional a la población) y el Senado a las provincias (igualdad federal: 3 por jurisdicción).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 44 CN</span>
+          <a href="historia-congreso-argentino.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="bloque constitucionalidad tratados">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Bloque de <em>constitucionalidad</em></h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Conjunto de normas que tienen jerarquía constitucional o superior a las leyes ordinarias. En Argentina incluye la Constitución Nacional y los tratados internacionales de derechos humanos enumerados en el Art. 75 inc. 22 (Pacto de San José, Convención sobre los Derechos del Niño, entre otros).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 inc. 22 CN (reforma 1994)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="boleta unica papel bup voto">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Boleta <em>Única de Papel</em> (BUP)</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Instrumento de votación introducido por la Ley 27.781 (2024) que reemplaza la boleta partidaria histórica. Consiste en una única papeleta oficial con todos los candidatos en filas (por categoría) y columnas (por agrupación política). Debutó en las elecciones nacionales del 26 de octubre de 2025.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 27.781 · Decreto 915/2024</span>
+          <a href="boleta-unica.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== C ========== -->
+  <div class="letra-grupo" id="c" data-letra="c">
+    <h2 class="letra-titulo">C</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="camara diputados nacional">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Cámara de <em>Diputados</em></h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Cámara baja del Congreso de la Nación. Representa al pueblo en proporción a la población. Tiene 257 bancas distribuidas entre las 24 jurisdicciones. Los diputados duran 4 años y se renueva por mitades cada 2 años.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 45-53 CN</span>
+          <a href="poderes.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="camara nacional electoral cne justicia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Cámara <em>Nacional Electoral</em></h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Tribunal de alzada en materia electoral, con jurisdicción en todo el país. Es la máxima autoridad de la Justicia Electoral. Resuelve apelaciones contra decisiones de los jueces federales con competencia electoral en cada distrito.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 19.108 (orgánica de la justicia nacional electoral)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="coparticipacion federal recursos provincias nacion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Coparticipación <em>federal</em></h3>
+          <span class="termino-tipo t-principio">Federalismo</span>
+        </div>
+        <p class="termino-def">Mecanismo de distribución entre la Nación y las provincias de los recursos recaudados por impuestos nacionales coparticipables. Está regulada por la Ley 23.548 de 1988 (régimen transitorio) y debe ser actualizada por una nueva ley convenio según mandato constitucional de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 inc. 2 CN · Ley 23.548</span>
+          <a href="coparticipacion.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="colegio electoral presidente indirecto">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Colegio <em>Electoral</em></h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Órgano transitorio que eligió al presidente y vicepresidente argentinos entre 1854 y 1994 (con interrupciones). Cada provincia designaba electores en número equivalente al doble de sus legisladores nacionales. Fue abolido por la reforma constitucional de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Texto histórico Arts. 81-85 CN 1853</span>
+          <a href="elecciones-sistemas-presidenciales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="congreso nacional poder legislativo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Congreso de la <em>Nación</em></h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Órgano del Poder Legislativo Nacional argentino. Está compuesto por dos Cámaras: Diputados (257 miembros) y Senado (72 miembros). Su función principal es sancionar las leyes nacionales.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 44-86 CN</span>
+          <a href="historia-congreso-argentino.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="constitucion nacional argentina suprema">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Constitución <em>Nacional</em></h3>
+          <span class="termino-tipo t-ley">Norma suprema</span>
+        </div>
+        <p class="termino-def">Ley fundamental de la República Argentina. Sancionada el 1 de mayo de 1853 por el Congreso General Constituyente en Santa Fe. Reformada en 1860, 1866, 1898, 1949 (derogada), 1957, 1972 (caducada) y 1994 (vigente). Establece la forma representativa, republicana y federal de gobierno.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Preámbulo · Arts. 1 al 129 CN</span>
+          <a href="historia-documentos-fundacionales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="control constitucionalidad difuso jueces">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Control de <em>constitucionalidad</em></h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Facultad de los jueces de declarar inaplicable, para el caso concreto, una norma que consideren contraria a la Constitución. En Argentina es <strong>difuso</strong> (todos los jueces pueden ejercerlo) y <strong>concreto</strong> (solo en el caso bajo juzgamiento, no como declaración abstracta).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Doctrina (caso "Sojo", 1887) · Art. 31 CN</span>
+          <a href="historia-corte-suprema-fallos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="corte suprema justicia maxima tribunal">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Corte Suprema de <em>Justicia</em></h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Máximo tribunal del Poder Judicial argentino. Es el último intérprete de la Constitución y de los tratados internacionales con jerarquía constitucional. Sus jueces son designados por el Presidente con acuerdo del Senado (dos tercios de los presentes).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 108, 116 y 117 CN</span>
+          <a href="historia-corte-suprema-fallos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="cuorum quorum minimo sesionar">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Quórum</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Número mínimo de legisladores presentes requerido para que una Cámara pueda sesionar válidamente. En el Congreso argentino, el quórum básico es la mayoría absoluta del total de miembros de cada Cámara: 129 diputados de 257, o 37 senadores de 72.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 64 CN · Reglamentos de las Cámaras</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="cupo femenino genero ley 24012">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Cupo femenino</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Disposición histórica (Ley 24.012 de 1991, conocida como Ley Malharro) que exigía un piso del 30% de mujeres en las listas a cargos legislativos nacionales en lugares con expectativa real de ser electas. Fue la primera ley de su tipo en el mundo. Reemplazada en 2017 por el sistema de paridad 50/50.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 24.012 (1991) · Reemplazada por Ley 27.412</span>
+          <a href="elecciones-innovaciones-siglo-xxi.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== D ========== -->
+  <div class="letra-grupo" id="d" data-letra="d">
+    <h2 class="letra-titulo">D</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="debido proceso legal garantia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Debido proceso <em>legal</em></h3>
+          <span class="termino-tipo t-derecho">Garantía</span>
+        </div>
+        <p class="termino-def">Conjunto de garantías procesales mínimas que debe respetar el Estado al juzgar a una persona: defensa en juicio, juez natural, presunción de inocencia, doble instancia, no autoincriminación, irretroactividad de la ley penal. Es la base del sistema judicial democrático.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 18 CN · Art. 8 Pacto San José</span>
+          <a href="derechos-fundamentales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="declaracion inconstitucionalidad fallo judicial">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Declaración de <em>inconstitucionalidad</em></h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Sentencia judicial que considera que una norma (ley, decreto, reglamento) es contraria a la Constitución y por tanto inaplicable al caso concreto. En Argentina no anula la norma en abstracto: solo evita su aplicación en el caso resuelto. Otros tribunales pueden aplicarla nuevamente hasta que la Corte Suprema lo confirme reiteradamente.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Doctrina judicial · Caso "Marbury vs. Madison" (1803)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="decreto necesidad urgencia dnu">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Decreto de <em>Necesidad y Urgencia</em> (DNU)</h3>
+          <span class="termino-tipo t-ley">Norma</span>
+        </div>
+        <p class="termino-def">Norma con jerarquía de ley dictada por el Poder Ejecutivo sin intervención del Congreso, en circunstancias excepcionales. Reconocido en el Art. 99 inc. 3 CN tras la reforma de 1994. Debe ser ratificado por la Comisión Bicameral Permanente y luego por ambas Cámaras del Congreso.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 99 inc. 3 CN · Ley 26.122</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="desdoblamiento elecciones provincial nacional">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Desdoblamiento <em>electoral</em></h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Decisión de una provincia de realizar sus elecciones en fecha distinta a las elecciones nacionales. Es facultativo de cada gobernador. Contrasta con la simultaneidad (Ley 15.262 de 1959). Permite separar los debates locales de los nacionales.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Distinto de la Ley 15.262 de Simultaneidad</span>
+          <a href="elecciones-calendario.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="dhondt sistema proporcional reparto">
+        <div class="termino-header">
+          <h3 class="termino-nombre">D'Hondt (sistema)</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Método de reparto proporcional usado en Argentina desde 1962 para distribuir las bancas de Diputados nacionales. Divide los votos de cada lista sucesivamente por 1, 2, 3, 4... y asigna las bancas a los cocientes más altos. Solo participan las listas que superan el 3% del padrón del distrito.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Decreto-Ley 4.034/57 · Ley 19.945</span>
+          <a href="dhondt.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="diputado representante pueblo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Diputado nacional</h3>
+          <span class="termino-tipo t-institucion">Cargo</span>
+        </div>
+        <p class="termino-def">Legislador del Congreso de la Nación que integra la Cámara baja. Representa al pueblo de su distrito (no a la provincia como entidad). Duración: 4 años, reelegible indefinidamente. Edad mínima: 25 años. Argentina tiene 257 diputados nacionales.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 45-53 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="distrito electoral provincia jurisdiccion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Distrito electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Unidad territorial en la cual se computan los votos para una categoría electoral. En Argentina, cada una de las 23 provincias y CABA constituye un distrito electoral propio para diputados y senadores nacionales. La elección presidencial se computa a nivel nacional.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional (Ley 19.945)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="division poderes estado">
+        <div class="termino-header">
+          <h3 class="termino-nombre">División de <em>poderes</em></h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Principio organizativo del Estado democrático que separa las funciones de gobierno en tres ramas independientes: Ejecutivo, Legislativo y Judicial. Cada una controla a las otras mediante mecanismos de pesos y contrapesos (checks and balances). Idea original de Montesquieu.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Estructura general CN (1853)</span>
+          <a href="poderes.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== E ========== -->
+  <div class="letra-grupo" id="e" data-letra="e">
+    <h2 class="letra-titulo">E</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="elector votante ciudadano padron">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Elector</h3>
+          <span class="termino-tipo t-derecho">Sujeto</span>
+        </div>
+        <p class="termino-def">Persona habilitada legalmente para emitir su voto en una elección. En Argentina, son electores los ciudadanos argentinos mayores de 16 años (optativo entre 16-17, obligatorio desde los 18 hasta los 70) inscriptos en el padrón electoral.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 26.774 (voto joven) · Código Electoral</span>
+          <a href="voto.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="escrutinio provisorio definitivo recuento">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Escrutinio</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Proceso de recuento de los votos. Existen dos instancias: el <strong>escrutinio provisorio</strong> (realizado por el Ministerio del Interior la misma noche de la elección, sin valor jurídico) y el <strong>escrutinio definitivo</strong> (realizado por las Juntas Electorales con valor legal, comienza 48 horas después).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional · Arts. 100-114</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="estado nacion soberania pueblo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Estado</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Organización política y jurídica de una sociedad que ejerce el poder soberano sobre un territorio determinado. En Argentina, el Estado es federal: coexisten el Estado Nacional, los Estados provinciales y los municipios, cada uno con sus competencias.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Estructura general CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="estado derecho rule of law legalidad">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Estado de <em>derecho</em></h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Modelo de Estado donde tanto las personas como las autoridades están sometidas al imperio de la ley. Sus pilares: imperio de la Constitución, división de poderes, garantía de derechos fundamentales, control judicial de los actos del Estado, responsabilidad del Estado por sus actos.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Doctrina constitucional</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="estado sitio emergencia 23 constitucion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Estado de <em>sitio</em></h3>
+          <span class="termino-tipo t-procedimiento">Excepcional</span>
+        </div>
+        <p class="termino-def">Medida excepcional que suspende temporariamente ciertas garantías constitucionales en caso de conmoción interior o ataque exterior. Lo declara el Congreso (en caso de conmoción interior) o el Presidente con acuerdo del Senado (ataque exterior). No suspende todos los derechos: el habeas corpus sigue vigente.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 23 CN · Arts. 75 inc. 29 y 99 inc. 16</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== F ========== -->
+  <div class="letra-grupo" id="f" data-letra="f">
+    <h2 class="letra-titulo">F</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="fallo sentencia jurisprudencia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Fallo</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Sentencia o decisión final de un tribunal en un caso concreto. Los fallos de la Corte Suprema son los más importantes porque establecen jurisprudencia que influye en todo el sistema judicial. La acumulación de fallos similares se llama "doctrina judicial".</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Códigos procesales</span>
+          <a href="historia-corte-suprema-fallos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="federalismo federal nacion provincias">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Federalismo</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Forma de organización del Estado en la cual el poder está dividido entre un gobierno central (federal) y gobiernos locales autónomos (provinciales). En Argentina, el federalismo es un principio constitucional desde 1853: las provincias conservan todo el poder no delegado a la Nación (Art. 121 CN).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 1, 5, 121-129 CN</span>
+          <a href="historia-federalismo.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="fiscalizacion fiscal mesa boleta">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Fiscalización electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Vigilancia del acto electoral por parte de los partidos políticos. Cada agrupación puede designar fiscales en cada mesa de votación para controlar la apertura, votación, escrutinio y transporte de las urnas. Es una garantía clave de la transparencia electoral.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="fuero federal provincial jurisdiccion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Fuero federal</h3>
+          <span class="termino-tipo t-institucion">Justicia</span>
+        </div>
+        <p class="termino-def">Conjunto de tribunales que entienden en causas que afectan intereses de la Nación, normas federales, conflictos entre provincias o casos en los que la Nación es parte. Distinto del fuero ordinario (provincial), que entiende en cuestiones de derecho común dentro de cada provincia.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 116 CN</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== G ========== -->
+  <div class="letra-grupo" id="g" data-letra="g">
+    <h2 class="letra-titulo">G</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="garantia constitucional proteger">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Garantía constitucional</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Medio jurídico que la Constitución brinda a las personas para asegurar el efectivo ejercicio de sus derechos frente a violaciones del Estado o de particulares. Las principales son: amparo, habeas corpus, habeas data, debido proceso y juez natural.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 18, 43, 14 bis CN</span>
+          <a href="derechos-fundamentales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="gobernador provincial poder ejecutivo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Gobernador</h3>
+          <span class="termino-tipo t-institucion">Cargo</span>
+        </div>
+        <p class="termino-def">Titular del Poder Ejecutivo de cada provincia argentina. Su elección, mandato y atribuciones están reguladas por la constitución de cada provincia. La mayoría dura 4 años; algunas habilitan reelección consecutiva y otras no.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Constituciones provinciales</span>
+          <a href="provincias.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== H ========== -->
+  <div class="letra-grupo" id="h" data-letra="h">
+    <h2 class="letra-titulo">H</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="habeas corpus libertad detencion arbitraria">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Habeas <em>corpus</em></h3>
+          <span class="termino-tipo t-derecho">Garantía</span>
+        </div>
+        <p class="termino-def">Garantía constitucional que protege la libertad física de las personas contra detenciones arbitrarias o agravamientos ilegítimos de las condiciones de detención. Acción judicial rápida y sin formalidades especiales. Funciona incluso durante el estado de sitio.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 43 CN · Ley 23.098</span>
+          <a href="habeas.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="habeas data informacion personal datos">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Habeas <em>data</em></h3>
+          <span class="termino-tipo t-derecho">Garantía</span>
+        </div>
+        <p class="termino-def">Acción judicial que permite a toda persona conocer los datos personales que sobre ella obren en registros públicos o privados, y exigir su corrección, supresión, confidencialidad o actualización en caso de falsedad o discriminación. Incorporada al Art. 43 CN en la reforma de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 43 CN · Ley 25.326</span>
+          <a href="habeas.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== I ========== -->
+  <div class="letra-grupo" id="i" data-letra="i">
+    <h2 class="letra-titulo">I</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="impuestos tributo recaudacion estado">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Impuestos</h3>
+          <span class="termino-tipo t-procedimiento">Fiscal</span>
+        </div>
+        <p class="termino-def">Tributos exigidos por el Estado sin contraprestación directa al contribuyente. Se clasifican en directos (sobre la renta o el patrimonio) e indirectos (sobre el consumo). En Argentina conviven impuestos nacionales, provinciales y municipales.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 incs. 1 y 2 CN</span>
+          <a href="impuestos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="impuesto progresivo regresivo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Impuesto progresivo vs regresivo</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Un impuesto es <strong>progresivo</strong> cuando la tasa aumenta con la capacidad económica del contribuyente (ej. Impuesto a las Ganancias). Es <strong>regresivo</strong> cuando se aplica una tasa uniforme y por lo tanto pesa más sobre quienes menos tienen (ej. IVA sobre productos de consumo masivo).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Doctrina tributaria</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="impuesto coparticipable nacional">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Impuesto coparticipable</h3>
+          <span class="termino-tipo t-procedimiento">Fiscal</span>
+        </div>
+        <p class="termino-def">Tributo recaudado por la Nación cuyo producido se distribuye entre el Estado Nacional y las provincias según porcentajes establecidos por ley convenio. Los principales son IVA, Ganancias e Internos. Algunos impuestos nacionales son <strong>no coparticipables</strong> (retenciones, derechos aduaneros).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 23.548 · Art. 75 inc. 2 CN</span>
+          <a href="coparticipacion.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="intervencion federal provincia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Intervención <em>federal</em></h3>
+          <span class="termino-tipo t-procedimiento">Excepcional</span>
+        </div>
+        <p class="termino-def">Acto excepcional del gobierno federal por el cual asume temporariamente las funciones de un gobierno provincial, con el objetivo de garantizar la forma republicana de gobierno o restablecer las autoridades depuestas por sedición o invasión. La decide el Congreso (o el Ejecutivo durante el receso, con ratificación posterior).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 6 CN · Art. 75 inc. 31</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== J ========== -->
+  <div class="letra-grupo" id="j" data-letra="j">
+    <h2 class="letra-titulo">J</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="jefe gabinete ministros coordinador">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Jefe de Gabinete</h3>
+          <span class="termino-tipo t-institucion">Cargo</span>
+        </div>
+        <p class="termino-def">Ministro coordinador de los demás ministros del Poder Ejecutivo. Cargo creado por la reforma constitucional de 1994. Tiene a su cargo la administración general del país y puede ser interpelado y removido por moción de censura del Congreso (con doble mayoría calificada).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 100-101 CN (reforma 1994)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="jerarquia normativa supremacia constitucional">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Jerarquía normativa</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Orden de prelación entre normas, donde cada nivel debe respetar al superior. En Argentina: 1° Constitución y tratados de DDHH con jerarquía constitucional, 2° demás tratados internacionales, 3° leyes nacionales, 4° decretos del Ejecutivo, 5° resoluciones ministeriales, etc.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 31 y 75 inc. 22 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="juez natural tribunal competente">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Juez natural</h3>
+          <span class="termino-tipo t-derecho">Garantía</span>
+        </div>
+        <p class="termino-def">Principio según el cual nadie puede ser juzgado por comisiones especiales ni sacado de la jurisdicción del juez designado por la ley antes del hecho de la causa. Garantía clave del debido proceso.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 18 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="justicia electoral competencia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Justicia <em>Electoral</em></h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Fuero federal especializado en materia electoral. En cada distrito hay un juez federal con competencia electoral, y a nivel nacional la Cámara Nacional Electoral actúa como tribunal de alzada. Controla padrones, oficialización de candidaturas, escrutinios y financiamiento partidario.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 19.108</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== L ========== -->
+  <div class="letra-grupo" id="l" data-letra="l">
+    <h2 class="letra-titulo">L</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="legislatura provincial camara local">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Legislatura provincial</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Órgano del Poder Legislativo en cada provincia argentina. Puede ser unicameral o bicameral según lo defina la constitución provincial. Sus integrantes (diputados y/o senadores provinciales) se eligen por el sistema electoral local.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Constituciones provinciales</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="ley norma sancion congreso">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Ley</h3>
+          <span class="termino-tipo t-ley">Norma</span>
+        </div>
+        <p class="termino-def">Norma jurídica general, abstracta y obligatoria sancionada por el Congreso de la Nación. Sigue un proceso de iniciativa, discusión en ambas Cámaras, sanción, promulgación por el Ejecutivo (o veto), y publicación en el Boletín Oficial.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 77-84 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="ley saenz pena 8871 voto secreto">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Ley <em>Sáenz Peña</em> (8.871)</h3>
+          <span class="termino-tipo t-ley">Ley histórica</span>
+        </div>
+        <p class="termino-def">Sancionada el 10 de febrero de 1912 durante la presidencia de Roque Sáenz Peña. Estableció el voto universal (masculino), secreto y obligatorio en Argentina, y el sistema de lista incompleta (2/3 al ganador, 1/3 a la minoría). Punto de partida de la democracia electoral argentina moderna.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 8.871 (1912)</span>
+          <a href="historia-documentos-fundacionales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="ley 13010 voto femenino mujer">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Ley 13.010 · Voto <em>femenino</em></h3>
+          <span class="termino-tipo t-ley">Ley histórica</span>
+        </div>
+        <p class="termino-def">Sancionada el 9 de septiembre de 1947 durante el primer gobierno de Perón. Estableció los derechos políticos de las mujeres en Argentina: derecho a votar y a ser elegida. Primera aplicación: elecciones presidenciales de 1951.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 13.010 (1947)</span>
+          <a href="historia-documentos-fundacionales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="libertad expresion prensa pensamiento">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Libertad de <em>expresión</em></h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Derecho de todas las personas a difundir libremente sus ideas, opiniones e información sin censura previa. Comprende también la libertad de prensa (Art. 14 CN), de pensamiento, de expresión artística y la prohibición de la jurisdicción federal sobre delitos de imprenta (Art. 32).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 14 y 32 CN · Art. 13 Pacto San José</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="lista incompleta saenz pena tercio">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Lista incompleta</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Sistema electoral establecido por la Ley Sáenz Peña (1912) para distribuir las bancas de Diputados. Otorga 2/3 de las bancas del distrito a la lista más votada y 1/3 a la primera minoría. Vigente hasta 1962, cuando fue reemplazado por el sistema D'Hondt.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 8.871 (1912)</span>
+          <a href="elecciones-sistemas-legislativos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== M ========== -->
+  <div class="letra-grupo" id="m" data-letra="m">
+    <h2 class="letra-titulo">M</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="mayoria simple absoluta calificada">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Mayoría (simple, absoluta, calificada)</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def"><strong>Simple</strong>: más votos a favor que en contra, sobre presentes. <strong>Absoluta</strong>: más de la mitad del total de miembros (no solo presentes). <strong>Calificada</strong>: dos tercios u otra proporción superior. Cada cuestión legislativa requiere una mayoría distinta según su importancia.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Reglamentos de las Cámaras del Congreso</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="ministerio publico fiscal defensor">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Ministerio Público</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Órgano independiente del Estado encargado de promover la actuación de la justicia en defensa de la legalidad y los intereses generales de la sociedad. En Argentina se divide en Ministerio Público Fiscal y Ministerio Público de la Defensa. Reconocido en el Art. 120 CN tras la reforma de 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 120 CN · Ley 27.148</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="municipio comuna gobierno local">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Municipio</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Nivel de gobierno local con autonomía propia (Art. 123 CN). Argentina tiene aproximadamente 2.300 gobiernos locales (municipios, comunas, juntas vecinales, etc.). Su organización depende de la constitución provincial respectiva.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 123 CN</span>
+          <a href="niveles-gobierno.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== N ========== -->
+  <div class="letra-grupo" id="n" data-letra="n">
+    <h2 class="letra-titulo">N</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="niveles gobierno federal nacional provincial municipal">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Niveles de <em>gobierno</em></h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">En Argentina conviven tres niveles de gobierno: <strong>federal</strong> (Estado Nacional), <strong>provincial</strong> (23 provincias + CABA) y <strong>municipal</strong> (más de 2.300 gobiernos locales). Cada nivel tiene sus propias competencias y autoridades.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 1, 5, 121, 123, 129 CN</span>
+          <a href="niveles-gobierno.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== O ========== -->
+  <div class="letra-grupo" id="o" data-letra="o">
+    <h2 class="letra-titulo">O</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="oficializacion candidatos lista justicia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Oficialización</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Trámite ante la Justicia Electoral por el cual una lista de candidatos queda formalmente habilitada para competir en una elección. La Justicia verifica que los candidatos cumplan los requisitos legales (edad, ciudadanía, residencia, paridad de género, no inhabilidades).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional · Ley 27.412</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== P ========== -->
+  <div class="letra-grupo" id="p" data-letra="p">
+    <h2 class="letra-titulo">P</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="pacto san jose costa rica derechos humanos">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Pacto de <em>San José de Costa Rica</em></h3>
+          <span class="termino-tipo t-ley">Tratado</span>
+        </div>
+        <p class="termino-def">Nombre coloquial de la Convención Americana sobre Derechos Humanos, firmada en San José en 1969. Argentina la ratificó en 1984 y le otorgó jerarquía constitucional en la reforma de 1994 (Art. 75 inc. 22). Establece derechos civiles y políticos y crea la Corte Interamericana de Derechos Humanos.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 inc. 22 CN · Ley 23.054</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="padron electoral registro votantes">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Padrón electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Registro oficial de los ciudadanos habilitados para votar en una elección. Se elabora a partir del registro civil nacional y se publica con antelación a cada acto eleccionario. Lo administra la Cámara Nacional Electoral.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="paridad genero 50 listas alternancia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Paridad de <em>género</em></h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Sistema establecido por la Ley 27.412 (2017) que obliga a integrar las listas a cargos legislativos nacionales con varones y mujeres alternados desde el primer titular hasta el último suplente, sin que pueda haber dos personas continuas del mismo género. Reemplazó al cupo del 30%.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 27.412 (2017)</span>
+          <a href="elecciones-innovaciones-siglo-xxi.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="paso primarias abiertas obligatorias">
+        <div class="termino-header">
+          <h3 class="termino-nombre">PASO</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Primarias Abiertas, Simultáneas y Obligatorias. Sistema de selección de candidatos a cargos nacionales establecido por la Ley 26.571 (2009). Funcionan como filtro: las fuerzas que no superan el 1,5% de los votos válidos no pueden competir en las generales. Suspendidas excepcionalmente para 2025.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 26.571 (2009)</span>
+          <a href="paso-balotaje.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="piso electoral 3 padron umbral">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Piso electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Porcentaje mínimo de votos que una lista debe obtener para acceder al reparto de bancas. En Argentina, para Diputados nacionales es el 3% del padrón electoral del distrito (no del total de votos válidos). Las fuerzas que no lo superan quedan excluidas del reparto.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Código Electoral Nacional (Ley 19.945)</span>
+          <a href="dhondt.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="poder ejecutivo presidente administracion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Poder <em>Ejecutivo</em></h3>
+          <span class="termino-tipo t-institucion">Poder</span>
+        </div>
+        <p class="termino-def">Una de las tres ramas del Estado argentino. Lo ejerce el Presidente de la Nación (Art. 87 CN), asistido por el Jefe de Gabinete y los demás ministros. Sus funciones principales son administrar el país, conducir las relaciones exteriores y ser comandante en jefe de las Fuerzas Armadas.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 87-107 CN</span>
+          <a href="poderes.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="poder judicial juzgar justicia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Poder <em>Judicial</em></h3>
+          <span class="termino-tipo t-institucion">Poder</span>
+        </div>
+        <p class="termino-def">Una de las tres ramas del Estado argentino. Aplica las leyes a casos concretos y controla la constitucionalidad de las normas. Lo ejercen la Corte Suprema y los tribunales federales inferiores. Cada provincia tiene además su propio Poder Judicial.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 108-119 CN</span>
+          <a href="poderes.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="poder legislativo congreso leyes">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Poder <em>Legislativo</em></h3>
+          <span class="termino-tipo t-institucion">Poder</span>
+        </div>
+        <p class="termino-def">Una de las tres ramas del Estado argentino. Sanciona las leyes. Lo ejerce el Congreso de la Nación, compuesto por Diputados y Senado. Tiene además funciones de control sobre el Ejecutivo, como aprobar el presupuesto y juzgar políticamente a altos funcionarios.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 44-86 CN</span>
+          <a href="poderes.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="presidencia presidente mandato eleccion">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Presidente de la Nación</h3>
+          <span class="termino-tipo t-institucion">Cargo</span>
+        </div>
+        <p class="termino-def">Jefe de Estado y de Gobierno de la República Argentina. Titular del Poder Ejecutivo. Elegido por voto directo en fórmula con el vicepresidente. Mandato: 4 años con una sola reelección consecutiva posible. Edad mínima: 30 años.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 87-92 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="presupuesto nacional ley anual">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Presupuesto Nacional</h3>
+          <span class="termino-tipo t-ley">Ley anual</span>
+        </div>
+        <p class="termino-def">Ley anual que autoriza los gastos del Estado Nacional y estima los recursos para financiarlos. Lo proyecta el Poder Ejecutivo (Jefe de Gabinete) y lo aprueba el Congreso. Es una de las leyes más importantes porque define la política fiscal del año.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 inc. 8 CN · Ley 24.156</span>
+          <a href="presupuesto.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="promulgacion ley boletin oficial">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Promulgación</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Acto del Presidente por el cual reconoce y ordena cumplir una ley sancionada por el Congreso. Puede ser expresa (mediante decreto) o tácita (transcurridos 10 días hábiles sin objeción). Distinta de la publicación en el Boletín Oficial.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 78 y 80 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="provincia estado autonomo argentina">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Provincia</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Estado autónomo que integra la Nación Argentina. Cada una conserva todo el poder no delegado al Estado Nacional (Art. 121 CN). Argentina tiene 23 provincias, más la Ciudad Autónoma de Buenos Aires, que es una jurisdicción equiparable.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 121-129 CN</span>
+          <a href="provincias.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== Q ========== -->
+  <div class="letra-grupo" id="q" data-letra="q">
+    <h2 class="letra-titulo">Q</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="quorum congreso minimo sesionar">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Quórum</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Número mínimo de legisladores necesarios para que una Cámara pueda sesionar válidamente. En el Congreso argentino, el quórum básico es la mayoría absoluta del total de miembros: 129 diputados de 257, o 37 senadores de 72.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 64 CN · Reglamentos</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== R ========== -->
+  <div class="letra-grupo" id="r" data-letra="r">
+    <h2 class="letra-titulo">R</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="recurso extraordinario federal corte">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Recurso <em>extraordinario federal</em></h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Vía procesal por la cual la Corte Suprema interviene en causas resueltas por tribunales inferiores cuando se discute una cuestión federal: interpretación de la Constitución, validez de leyes federales o de actos contrarios a normas federales. Es el principal instrumento de control de constitucionalidad por la Corte.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 14 Ley 48 (1863)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="reforma constitucional convencion 1994">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Reforma constitucional</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Proceso por el cual se modifica el texto de la Constitución Nacional. Requiere ley del Congreso que declare la necesidad de la reforma (mayoría de dos tercios), elección de convencionales constituyentes y reunión de la Convención Constituyente. Argentina la reformó en 1860, 1866, 1898, 1949 (derogada), 1957, 1972 (caducada) y 1994.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 30 CN</span>
+          <a href="reformas-constitucionales.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="reeleccion mandato continuidad">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Reelección</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Posibilidad de que una persona vuelva a ser elegida para el mismo cargo. En Argentina, el Presidente puede ser reelecto una sola vez consecutiva. Los diputados, senadores y gobernadores tienen reglas distintas según la jurisdicción.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 90 CN (reforma 1994)</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="retenciones derechos exportacion impuestos">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Retenciones</h3>
+          <span class="termino-tipo t-procedimiento">Fiscal</span>
+        </div>
+        <p class="termino-def">Derechos de exportación que se aplican sobre productos argentinos vendidos al exterior. Son recaudados por el Estado Nacional y <strong>no son coparticipables</strong> con las provincias. Históricamente han sido objeto de controversia por la concentración del recurso en la Nación.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 75 inc. 1 CN · Código Aduanero</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== S ========== -->
+  <div class="letra-grupo" id="s" data-letra="s">
+    <h2 class="letra-titulo">S</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="senado camara alta provincial">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Senado</h3>
+          <span class="termino-tipo t-institucion">Institución</span>
+        </div>
+        <p class="termino-def">Cámara alta del Congreso Nacional. Representa a las provincias y a CABA en igualdad federal: 3 senadores por jurisdicción (2 por la mayoría, 1 por la primera minoría). Total: 72 miembros. Mandato: 6 años, renovación por tercios cada 2 años.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 54-65 CN</span>
+          <a href="elecciones-sistemas-legislativos.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="sesion ordinaria preparatoria extraordinaria">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Sesiones del Congreso</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def"><strong>Preparatorias</strong>: previas al inicio del período, para tomar juramento a nuevos legisladores. <strong>Ordinarias</strong>: del 1 de marzo al 30 de noviembre, regulares. <strong>Extraordinarias</strong>: convocadas por el Ejecutivo fuera del período ordinario, solo para tratar temas que él indique. <strong>De prórroga</strong>: continuación de las ordinarias por decisión propia del Congreso.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 63 y 99 inc. 9 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="simultaneidad eleccion provincial nacional 15262">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Simultaneidad electoral</h3>
+          <span class="termino-tipo t-procedimiento">Electoral</span>
+        </div>
+        <p class="termino-def">Régimen establecido por la Ley 15.262 (1959) que permite a las provincias adherir voluntariamente al calendario nacional, realizando sus elecciones el mismo día que las nacionales, con las mismas autoridades y procedimientos. Contrasta con el desdoblamiento.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 15.262 (1959)</span>
+          <a href="elecciones-calendario.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="soberania popular pueblo democracia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Soberanía popular</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Principio según el cual la fuente última de la autoridad estatal es el pueblo. Está consagrado en el Art. 33 CN (derechos no enumerados) y en el preámbulo. Se ejerce mediante el sufragio y los mecanismos de democracia directa (consulta popular, iniciativa).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Preámbulo · Art. 33 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="sufragio voto derecho politico">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Sufragio</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Derecho político fundamental de los ciudadanos a participar en la elección de las autoridades y, eventualmente, ser elegidos. En Argentina es universal, igual, secreto y obligatorio. Está garantizado por el Art. 37 CN.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 37 CN</span>
+          <a href="voto.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="supremacia constitucional norma superior">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Supremacía constitucional</h3>
+          <span class="termino-tipo t-principio">Concepto</span>
+        </div>
+        <p class="termino-def">Principio según el cual la Constitución es la norma de máxima jerarquía dentro del ordenamiento jurídico. Todas las demás normas (leyes, decretos, ordenanzas) deben ajustarse a ella. Es la base del control de constitucionalidad.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 31 CN</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== T ========== -->
+  <div class="letra-grupo" id="t" data-letra="t">
+    <h2 class="letra-titulo">T</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="tratado internacional jerarquia 22">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Tratado internacional</h3>
+          <span class="termino-tipo t-ley">Norma</span>
+        </div>
+        <p class="termino-def">Acuerdo entre Estados o entre Estados y organismos internacionales, con efectos jurídicos. En Argentina, los tratados aprobados por el Congreso tienen jerarquía superior a las leyes. Once tratados de derechos humanos tienen jerarquía constitucional (Art. 75 inc. 22 CN reforma 1994).</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 75 incs. 22 y 24, 99 inc. 11 CN</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== V ========== -->
+  <div class="letra-grupo" id="v" data-letra="v">
+    <h2 class="letra-titulo">V</h2>
+    <div class="terminos-grid">
+
+      <article class="termino" data-busqueda="veto presidencial promulgacion ley">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Veto presidencial</h3>
+          <span class="termino-tipo t-procedimiento">Procedimental</span>
+        </div>
+        <p class="termino-def">Acto por el cual el Presidente rechaza, total o parcialmente, un proyecto de ley sancionado por el Congreso. Puede ser superado si ambas Cámaras insisten con la mayoría de dos tercios de los presentes. El veto parcial permite promulgar las partes no objetadas si tienen autonomía normativa.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 78, 80 y 83 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="vicepresidente sucesion acefalia">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Vicepresidente</h3>
+          <span class="termino-tipo t-institucion">Cargo</span>
+        </div>
+        <p class="termino-def">Cargo electivo nacional, segundo en jerarquía después del Presidente. Preside el Senado, pero solo vota en caso de empate. Reemplaza al Presidente en caso de licencia, ausencia o acefalía definitiva. Elegido en la misma fórmula que el Presidente.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Arts. 88 y 57 CN</span>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="voto secreto obligatorio universal">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Voto</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Acto por el cual el elector expresa su preferencia en una elección. En Argentina, el voto es universal, igual, secreto y obligatorio (Art. 37 CN). El incumplimiento del voto obligatorio para mayores de 18 años hasta los 70 puede generar una multa o restricciones administrativas.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Art. 37 CN · Código Electoral Nacional</span>
+          <a href="voto.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="voto joven 16 anos optativo">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Voto joven</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Derecho establecido por la Ley 26.774 (2012) que habilita a los argentinos de 16 y 17 años a participar en las elecciones nacionales. Es optativo: pueden votar pero no son sancionados si no lo hacen. Argentina es uno de los 5 países latinoamericanos que reconoce este derecho.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 26.774 (2012)</span>
+          <a href="elecciones-innovaciones-siglo-xxi.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+      <article class="termino" data-busqueda="voto exterior consulado correo postal">
+        <div class="termino-header">
+          <h3 class="termino-nombre">Voto en el exterior</h3>
+          <span class="termino-tipo t-derecho">Derecho</span>
+        </div>
+        <p class="termino-def">Derecho de los argentinos residentes en el exterior a votar en elecciones nacionales. Establecido por la Ley 24.007 (1991) y ampliado por leyes posteriores. Desde la Ley 27.781 (2024) puede ejercerse presencialmente en consulados o por correo postal.</p>
+        <div class="termino-footer">
+          <span class="termino-norma">Ley 24.007 (1991) · Ley 27.781 (2024)</span>
+          <a href="elecciones-innovaciones-siglo-xxi.html" class="termino-vermas">Ver capítulo →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="ayuda-card">
+    <div class="ayuda-card-titulo">— Sobre este glosario</div>
+    <h3>Una herramienta de <em>referencia rápida</em></h3>
+    <p>Este glosario reúne <strong>91 términos clave del derecho público y la educación cívica argentina</strong>, definidos con precisión y conectados a su capítulo del sitio cuando corresponde. Las definiciones se basan en el texto de la Constitución Nacional, las principales leyes argentinas y la doctrina constitucional consolidada. Si encontrás un término que falta o una definición que querés sugerir mejorar, podés escribirnos. La idea es que el glosario crezca con el sitio.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  const buscador = document.getElementById('buscador');
+  const buscadorClear = document.getElementById('buscador-clear');
+  const sinResultados = document.getElementById('sin-resultados');
+  const infoResultados = document.getElementById('info-resultados');
+  const contadorTotal = document.getElementById('contador-total');
+  const navAz = document.getElementById('nav-az');
+  const grupos = document.querySelectorAll('.letra-grupo');
+  const terminos = document.querySelectorAll('.termino');
+
+  // Set total inicial
+  const totalTerminos = terminos.length;
+  contadorTotal.textContent = totalTerminos;
+
+  // Función de normalización (quitar acentos para búsqueda)
+  function normalizar(s) {
+    return s.toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim();
+  }
+
+  // Función de filtrado
+  function filtrar(query) {
+    const q = normalizar(query);
+
+    if (q === '') {
+      // Mostrar todo
+      terminos.forEach(t => t.classList.remove('oculto', 'destacado'));
+      grupos.forEach(g => g.classList.remove('oculto'));
+      sinResultados.classList.remove('visible');
+      infoResultados.innerHTML = 'Mostrando <strong>' + totalTerminos + '</strong> términos · Ordenados alfabéticamente';
+      buscadorClear.classList.remove('visible');
+      return;
+    }
+
+    buscadorClear.classList.add('visible');
+
+    let visibles = 0;
+    const letrasConResultados = new Set();
+
+    terminos.forEach(t => {
+      const busqueda = normalizar(t.dataset.busqueda || '');
+      const nombre = normalizar(t.querySelector('.termino-nombre').textContent);
+      const def = normalizar(t.querySelector('.termino-def').textContent);
+
+      // Match si contiene en cualquiera de los campos
+      if (busqueda.includes(q) || nombre.includes(q) || def.includes(q)) {
+        t.classList.remove('oculto');
+        t.classList.add('destacado');
+        visibles++;
+        // Marcar la letra
+        const grupo = t.closest('.letra-grupo');
+        if (grupo) letrasConResultados.add(grupo.dataset.letra);
+      } else {
+        t.classList.add('oculto');
+        t.classList.remove('destacado');
+      }
+    });
+
+    // Mostrar solo grupos con resultados
+    grupos.forEach(g => {
+      if (letrasConResultados.has(g.dataset.letra)) {
+        g.classList.remove('oculto');
+      } else {
+        g.classList.add('oculto');
+      }
+    });
+
+    // Actualizar info
+    if (visibles === 0) {
+      sinResultados.classList.add('visible');
+      infoResultados.innerHTML = '<strong>0</strong> resultados para "' + query + '"';
+    } else {
+      sinResultados.classList.remove('visible');
+      infoResultados.innerHTML = '<strong>' + visibles + '</strong> ' +
+        (visibles === 1 ? 'término encontrado' : 'términos encontrados') +
+        ' para "' + query + '"';
+    }
+  }
+
+  // Eventos del buscador
+  buscador.addEventListener('input', function(e) {
+    filtrar(e.target.value);
+  });
+
+  buscadorClear.addEventListener('click', function() {
+    buscador.value = '';
+    filtrar('');
+    buscador.focus();
+  });
+
+  // ESC para limpiar
+  buscador.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      buscador.value = '';
+      filtrar('');
+      buscador.blur();
+    }
+  });
+
+  // Marcar letra activa según scroll
+  function actualizarLetraActiva() {
+    const headerHeight = 160;
+    const scrollPos = window.scrollY + headerHeight + 50;
+    let activeLetra = null;
+
+    grupos.forEach(g => {
+      if (g.classList.contains('oculto')) return;
+      const top = g.offsetTop;
+      if (top <= scrollPos) {
+        activeLetra = g.dataset.letra;
+      }
+    });
+
+    navAz.querySelectorAll('a').forEach(a => {
+      const letra = a.getAttribute('href').replace('#', '');
+      a.classList.toggle('activo', letra === activeLetra);
+    });
+  }
+
+  // Deshabilitar letras vacías (las que no aparecen como grupo)
+  const letrasExistentes = new Set();
+  grupos.forEach(g => letrasExistentes.add(g.dataset.letra));
+  navAz.querySelectorAll('a').forEach(a => {
+    const letra = a.getAttribute('href').replace('#', '');
+    if (!letrasExistentes.has(letra)) {
+      a.classList.add('deshabilitada');
+    }
+  });
+
+  window.addEventListener('scroll', actualizarLetraActiva, { passive: true });
+  actualizarLetraActiva();
+
+  // Foco automático en el buscador si la URL tiene ?q=
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('q')) {
+    const q = params.get('q');
+    buscador.value = q;
+    filtrar(q);
+  }
+})();
+</script>
+
+</body>
+</html>
