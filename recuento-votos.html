@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Recuento de votos (11.02) — Educación Cívica</title>
+<meta name="description" content="Cómo se cuentan los votos en Argentina: el escrutinio provisorio que gestiona la Dirección Nacional Electoral (DINE), el escrutinio definitivo de la Justicia Nacional Electoral, los telegramas, los actores del proceso (autoridades de mesa, fiscales, correo, veedores), los tipos de voto (válido, blanco, nulo, recurrido, impugnado), el sistema técnico (Indra/Smartmatic) y los casos paradigmáticos: PASO 2019, balotaje 2023, BUP 2025.">
+<link rel="canonical" href="https://educacioncivica.com.ar/recuento-votos.html">
+
+<meta property="og:title" content="Recuento de votos · El sistema argentino">
+<meta property="og:description" content="Provisorio vs definitivo, telegramas, fiscales, Indra/Smartmatic, casos PASO 2019, balotaje 2023, BUP 2025.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/recuento-votos.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>11.02</strong> de la sección Análisis transversales</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="analisis-transversales.html">Análisis transversales</a> ·
+      <span>Recuento de votos</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 11.02 · Análisis transversal</div>
+    <h1 class="page-title">El <em>recuento</em> de los votos</h1>
+    <div class="page-subtitulo">— Provisorio, definitivo y la noche electoral</div>
+    <p class="page-intro">En Argentina existen <strong>dos escrutinios</strong>. El <strong>provisorio</strong>, que se hace la misma noche de la elección a partir de telegramas transmitidos desde cada escuela, lo gestiona el <strong>Poder Ejecutivo</strong> a través de la <strong>Dirección Nacional Electoral (DINE)</strong>. Le permite a la ciudadanía conocer tendencias en pocas horas, pero <strong>no tiene validez legal</strong>. El <strong>escrutinio definitivo</strong>, en cambio, lo realiza la <strong>Justicia Nacional Electoral</strong> a partir de las actas oficiales que llegan dentro de las urnas, comienza 48 horas después y <strong>es el único que proclama resultados</strong>. Entre ambos suele haber diferencias mínimas: desde 1983, la divergencia entre provisorio y definitivo se mantiene por debajo del 1%. El sistema involucra autoridades de mesa, fiscales partidarios, el Correo Argentino, empresas tecnológicas adjudicadas por licitación (Indra y Smartmatic históricamente) y los jueces federales con competencia electoral. La <strong>Boleta Única de Papel</strong>, implementada por primera vez a nivel nacional en las legislativas de 2025, modificó parte del procedimiento sin alterar la arquitectura de los dos escrutinios.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2</div>
+        <div class="page-stat-label">Escrutinios sucesivos del mismo voto</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">48h</div>
+        <div class="page-stat-label">Después de la elección comienza el definitivo</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">&lt;1%</div>
+        <div class="page-stat-label">Diferencia histórica entre provisorio y definitivo</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2025</div>
+        <div class="page-stat-label">Debut nacional de la Boleta Única de Papel</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#dos-escrutinios">01 · Por qué hay dos escrutinios</a></li>
+      <li><a href="#escrutinio-mesa">02 · El escrutinio de mesa</a></li>
+      <li><a href="#telegrama">03 · El telegrama y su transmisión</a></li>
+      <li><a href="#provisorio">04 · El escrutinio provisorio</a></li>
+      <li><a href="#definitivo">05 · El escrutinio definitivo</a></li>
+      <li><a href="#actores">06 · Los actores del proceso</a></li>
+      <li><a href="#tipos-voto">07 · Los tipos de voto</a></li>
+      <li><a href="#tecnologia">08 · El sistema técnico</a></li>
+      <li><a href="#casos">09 · Casos paradigmáticos</a></li>
+      <li><a href="#tensiones">10 · Garantías y tensiones</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="dos-escrutinios">
+      <div class="seccion-num">01 · Dos escrutinios</div>
+      <h2>Por qué hay <em>dos</em> escrutinios</h2>
+
+      <p>El sistema argentino cuenta los votos <strong>dos veces</strong>: primero rápido, después con valor legal. No es una redundancia inútil sino una respuesta a una tensión real: la ciudadanía quiere conocer los resultados <em>la misma noche</em> de la elección, pero la <strong>proclamación oficial</strong> de los ganadores exige un control riguroso que toma días.</p>
+
+      <h3>La función de cada escrutinio</h3>
+
+      <p>Cada escrutinio cumple una función distinta:</p>
+
+      <ul>
+        <li><strong>El escrutinio provisorio</strong> ofrece <strong>información rápida</strong> a la sociedad sobre cómo viene la elección. Permite que candidatos ganadores hablen esa misma noche, que perdedores reconozcan, que la transición política empiece en horas, no en semanas. Pero <strong>no tiene validez legal</strong>: los resultados que muestra son <em>indicativos</em>.</li>
+        <li><strong>El escrutinio definitivo</strong> es el que <strong>cuenta legalmente</strong>. Lo realiza la Justicia Electoral con las actas originales que vienen dentro de las urnas. Resuelve los votos en disputa, sumas, errores, votos especiales (cárceles, exterior). Es el que produce el resultado oficial y a partir del cual se proclama a los electos.</li>
+      </ul>
+
+      <h3>La separación institucional</h3>
+
+      <p>La división tiene también una <strong>lógica institucional</strong>: el escrutinio provisorio lo realiza el <strong>Poder Ejecutivo</strong> a través de la Dirección Nacional Electoral del Ministerio del Interior. El definitivo lo realiza el <strong>Poder Judicial</strong>, a través de los jueces federales con competencia electoral y la Cámara Nacional Electoral. Quien proclama oficialmente al ganador no es el gobierno saliente: es la justicia. Es un dispositivo institucional para evitar suspicacias y proteger la independencia del resultado.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una arquitectura con buena ingeniería</div>
+        <p>La diferencia histórica entre el escrutinio provisorio y el definitivo en Argentina es <strong>menor al 1%</strong> desde 1983. Esto significa que <strong>el provisorio acierta</strong>: aunque legalmente no proclame, en la práctica anuncia con bastante fidelidad lo que la Justicia confirmará días después. La razón es que ambos escrutinios parten del mismo lugar —los votos contados mesa por mesa— y solo difieren en el procedimiento posterior. La diferencia en el balotaje 2023, por ejemplo, fue del <strong>0,04% en porcentajes</strong> entre Milei y Massa: 55,69% (provisorio) vs 55,65% (definitivo).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="escrutinio-mesa">
+      <div class="seccion-num">02 · El escrutinio de mesa</div>
+      <h2>El <em>escrutinio de mesa</em></h2>
+
+      <p>Todo empieza en cada una de las <strong>mesas de votación</strong>. Esta etapa, que ocurre <strong>antes de los dos escrutinios formales</strong>, es la base de todo el sistema: cuando se cuenta mal acá, el error puede propagarse al provisorio y solo lo corrige el definitivo. Por eso es la etapa más fiscalizada.</p>
+
+      <h3>El cierre de la mesa</h3>
+
+      <p>Las mesas de votación <strong>cierran a las 18 horas</strong> del domingo electoral. Una vez que ya no quedan electores en la cola y los votantes presentes terminaron de emitir su voto, la <strong>autoridad de mesa</strong> declara cerrado el acto comicial. Se firma un acta que documenta esa clausura.</p>
+
+      <h3>El conteo</h3>
+
+      <p>Inmediatamente después comienza el conteo. La autoridad de mesa, en presencia de los <strong>fiscales partidarios</strong> que estén acreditados en esa mesa, procede a:</p>
+
+      <ol>
+        <li><strong>Abrir la urna</strong>.</li>
+        <li><strong>Contar los sobres</strong> (en el sistema de boletas partidarias) o los <strong>votos</strong> (en el sistema de Boleta Única de Papel, BUP, desde 2025).</li>
+        <li><strong>Cotejar el total contra el padrón</strong>. La cantidad de votos no puede ser mayor a la cantidad de electores que firmaron el padrón. Si hay una diferencia significativa, se anota.</li>
+        <li><strong>Clasificar cada voto</strong> según las categorías que correspondan: votos válidos a cada partido, votos en blanco, votos nulos, votos recurridos, votos impugnados.</li>
+        <li><strong>Volcar los resultados al acta de escrutinio</strong>, al certificado de escrutinio para cada fiscal, y al telegrama que se enviará a la DINE.</li>
+      </ol>
+
+      <h3>Las tres copias del resultado</h3>
+
+      <p>Una vez contados los votos, los datos se vuelcan en <strong>tres instrumentos distintos</strong>, cada uno con un destino:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Los tres instrumentos del cierre de mesa</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Acta de escrutinio</div>
+            <div class="ficha-valor">Documento oficial que <strong>queda dentro de la urna</strong> y va a la Justicia Electoral. Es la <strong>base del escrutinio definitivo</strong>.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Certificado de escrutinio</div>
+            <div class="ficha-valor">Copia firmada que se entrega a <strong>cada fiscal partidario</strong> presente. Les permite controlar y, eventualmente, denunciar discrepancias.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Telegrama</div>
+            <div class="ficha-valor">Documento que se entrega al <strong>empleado del Correo Argentino</strong> para transmisión al sistema del escrutinio provisorio. Es la base del recuento de la misma noche.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Los tres documentos contienen <strong>los mismos números</strong>, pero su recorrido es distinto: el acta y los votos van a la Justicia, los certificados a los partidos, el telegrama al escrutinio provisorio del Ejecutivo. La firma de las autoridades de mesa y de los fiscales presentes valida los tres documentos.</p>
+    </div>
+
+    <div class="seccion" id="telegrama">
+      <div class="seccion-num">03 · El telegrama</div>
+      <h2>El <em>telegrama</em> y su transmisión</h2>
+
+      <p>El <strong>telegrama</strong> es la pieza clave del escrutinio provisorio. Es un documento estandarizado donde la autoridad de mesa consigna los resultados de cada categoría electoral, lo firma junto con los fiscales y lo entrega al personal del Correo Argentino. La velocidad del escrutinio provisorio depende íntegramente de la velocidad con la que esos telegramas se transmitan al sistema central.</p>
+
+      <h3>El recorrido del telegrama</h3>
+
+      <p>Tradicionalmente, el telegrama tenía un recorrido físico: del presidente de mesa al empleado del Correo, del empleado al centro de transmisión de cada escuela, del centro de cómputos del Correo a las empresas adjudicatarias del recuento, y finalmente al sistema público del Ministerio del Interior. Cada etapa agregaba demoras.</p>
+
+      <p>La modernización progresiva del sistema introdujo la <strong>transmisión electrónica desde la propia escuela de votación</strong>. En 2019 ya estaba previsto digitalizar los telegramas en la misma escuela, transmitirlos por internet a un centro de cómputos y publicarlos en el sitio del escrutinio provisorio en cuestión de minutos. Esto redujo drásticamente los tiempos.</p>
+
+      <h3>El sistema de transmisión y los kits</h3>
+
+      <p>Cada escuela de votación recibe un <strong>kit tecnológico</strong> con el equipamiento necesario para la digitalización y transmisión de telegramas: un escáner, una computadora, una conexión a internet o satelital. En el simulacro nacional previo a las generales de 2023, se transmitieron <strong>108.106 telegramas desde los 24 distritos</strong>, habilitándose <strong>12.006 locales de votación con kits</strong>. Adicionalmente, se mantiene un sistema de back-up con cerca de <strong>1.200 oficinas del Correo</strong> distribuidas en todo el país, para casos donde la transmisión desde la escuela falla.</p>
+
+      <h3>Por qué no llega al 100% de las mesas</h3>
+
+      <p>Una característica conocida del escrutinio provisorio: <strong>nunca alcanza al 100% de las mesas escrutadas</strong> esa misma noche. Las razones son varias:</p>
+
+      <ul>
+        <li><strong>Telegramas con errores de confección</strong> (sumas que no cuadran, casillas vacías, firmas faltantes).</li>
+        <li><strong>Telegramas que no llegan a transmitirse</strong> por problemas técnicos.</li>
+        <li><strong>Mesas con votos recurridos o impugnados</strong> que prefieren esperar la resolución judicial.</li>
+        <li><strong>Mesas en zonas remotas</strong> con retrasos logísticos.</li>
+      </ul>
+
+      <p>El porcentaje que no llega esa noche queda registrado en el sistema y se resuelve en el escrutinio definitivo. Es <strong>residual pero no nulo</strong>: típicamente entre el 0,5% y el 2% de las mesas.</p>
+    </div>
+
+    <div class="seccion" id="provisorio">
+      <div class="seccion-num">04 · Escrutinio provisorio</div>
+      <h2>El escrutinio <em>provisorio</em></h2>
+
+      <p>El <strong>escrutinio provisorio</strong> es el conteo que se realiza <strong>la misma noche de la elección</strong> a partir de los telegramas. Lo administra la <strong>Dirección Nacional Electoral (DINE)</strong> del Ministerio del Interior, con apoyo técnico de empresas adjudicatarias del recuento y del Correo Argentino.</p>
+
+      <h3>Quién hace qué</h3>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Actor</th>
+              <th>Función en el provisorio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>DINE</strong> · Dirección Nacional Electoral</td>
+              <td>Conduce el operativo. Licita las empresas tecnológicas. Publica los resultados oficiales del provisorio en su sitio web.</td>
+            </tr>
+            <tr>
+              <td><strong>Correo Argentino</strong></td>
+              <td>Logística: distribución de kits, traslado de telegramas físicos, back-up en oficinas postales, traslado de urnas al juzgado electoral.</td>
+            </tr>
+            <tr>
+              <td><strong>Empresa adjudicataria</strong></td>
+              <td>Procesamiento técnico: digitalización de telegramas, transmisión, totalización, exhibición pública. Históricamente Indra y Smartmatic.</td>
+            </tr>
+            <tr>
+              <td><strong>Cámara Nacional Electoral</strong></td>
+              <td>Supervisión institucional. Recibe los códigos fuente del software para auditoría. Habilita veedores informáticos.</td>
+            </tr>
+            <tr>
+              <td><strong>Veedores partidarios</strong></td>
+              <td>Cada agrupación política tiene derecho a designar veedores que controlan el procesamiento técnico en los centros de cómputo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La veda y la publicación inicial</h3>
+
+      <p>Los resultados del provisorio <strong>no pueden publicarse antes de las 21 horas</strong>, por imperio de la <strong>veda electoral</strong> que se extiende hasta tres horas después del cierre de los comicios (cierre que es a las 18). Esta veda protege el voto de quienes todavía no votaron en franja horaria extendida o en distritos con cierre demorado. Hasta esa hora, ningún medio puede difundir tendencias, encuestas ni boca de urna.</p>
+
+      <p>Los primeros datos del provisorio se exhiben cuando ya se alcanzó un <strong>umbral de mesas escrutadas suficientemente representativo</strong>. La Justicia Electoral suele determinar qué porcentaje mínimo de mesas (en los grandes distritos) habilita el inicio de la publicación. En las PASO 2019, por ejemplo, los primeros números se conocieron <strong>4 horas y media después del cierre de los comicios</strong>, cuando se alcanzó al menos el 10% del escrutinio en la provincia de Buenos Aires, la Capital, Santa Fe y Córdoba.</p>
+
+      <h3>El acceso público a los datos</h3>
+
+      <p>La DINE publica los resultados del provisorio en un <strong>sitio web público</strong> donde cualquier ciudadano puede consultar:</p>
+
+      <ul>
+        <li>Resultados <strong>nacionales</strong>, <strong>provinciales</strong>, <strong>de cada distrito</strong>, e incluso <strong>mesa por mesa</strong>.</li>
+        <li>Comparación entre los datos del telegrama y la imagen escaneada del propio telegrama.</li>
+        <li>Cantidad de mesas escrutadas vs total esperado.</li>
+      </ul>
+
+      <p>Para las legislativas de 2025, la Cámara Nacional Electoral resolvió que la publicación del provisorio <strong>respetaría el criterio de división por distrito electoral</strong> y no mostraría un conteo nacional unificado, dado que las legislativas eligen representantes por distrito, no a nivel nacional.</p>
+    </div>
+
+    <div class="seccion" id="definitivo">
+      <div class="seccion-num">05 · Escrutinio definitivo</div>
+      <h2>El escrutinio <em>definitivo</em></h2>
+
+      <p>El <strong>escrutinio definitivo</strong> es el único con validez legal. Lo realiza la <strong>Justicia Nacional Electoral</strong>: los <strong>jueces federales con competencia electoral</strong> de cada distrito, con la supervisión de la <strong>Cámara Nacional Electoral</strong> como tribunal de alzada.</p>
+
+      <h3>Cuándo y dónde</h3>
+
+      <p>El escrutinio definitivo <strong>comienza 48 horas después del cierre de los comicios</strong>, según el Código Nacional Electoral. Se realiza en sedes dispuestas por cada Juzgado Federal con competencia electoral del distrito. En la provincia de Buenos Aires, por su tamaño, suelen utilizarse espacios amplios: el Teatro Argentino de La Plata o el Pasaje Dardo Rocha, según el año. En CABA y otros distritos se utilizan sedes judiciales o auditorios habilitados.</p>
+
+      <h3>Cómo se hace</h3>
+
+      <p>El procedimiento del definitivo es el siguiente:</p>
+
+      <ol>
+        <li><strong>Se reciben las urnas</strong> trasladadas por el Correo Argentino bajo custodia, junto con la documentación (actas, certificados, sobres con votos recurridos).</li>
+        <li><strong>Se cotejan las actas y certificados de escrutinio</strong> con los telegramas que ya fueron computados en el provisorio.</li>
+        <li><strong>Si todo coincide</strong>, los resultados de la mesa se validan sin abrir la urna.</li>
+        <li><strong>Si hay discrepancias</strong>, errores de suma o impugnaciones, la Junta Electoral <strong>abre la urna</strong> y procede a un recuento manual de los votos de esa mesa específica.</li>
+        <li><strong>Se resuelven los votos recurridos e impugnados</strong>: la Justicia evalúa cada caso (descripto en la sección 7).</li>
+        <li><strong>Se computan los votos especiales</strong>: cárceles, exterior, mesas con doble sobre del Comando General Electoral.</li>
+        <li><strong>Se totaliza el resultado oficial</strong> y se proclaman los candidatos electos por categoría.</li>
+      </ol>
+
+      <h3>Los plazos</h3>
+
+      <p>El Código Nacional Electoral establece reglas distintas según la categoría:</p>
+
+      <ul>
+        <li>Para la <strong>elección presidencial</strong>, el escrutinio definitivo no puede demorar más de <strong>10 días corridos</strong> en conocerse el resultado.</li>
+        <li>Para <strong>otras categorías</strong>, no hay un plazo fijo legalmente establecido, pero la práctica indica que se completa en <strong>10 a 30 días</strong> según el distrito.</li>
+        <li>Para las <strong>PASO</strong>, el plazo es más ajustado porque el resultado debe estar antes de la <strong>oficialización de candidatos</strong> para las generales (el 2 de septiembre, históricamente).</li>
+      </ul>
+
+      <h3>Por qué hay (pequeñas) diferencias</h3>
+
+      <p>La diferencia entre provisorio y definitivo se debe a tres factores principales:</p>
+
+      <ul>
+        <li><strong>Mesas que no se computaron en el provisorio</strong> (entre el 0,5% y el 2%) se suman al definitivo.</li>
+        <li><strong>Votos recurridos e impugnados</strong> que la Justicia resuelve durante el definitivo se distribuyen entre las categorías correspondientes.</li>
+        <li><strong>Errores de transmisión o transcripción</strong> de telegramas que el definitivo corrige al comparar con el acta original.</li>
+        <li><strong>Votos especiales</strong>: en el balotaje 2023, los votos del exterior (Milei ganó con 74,4%) y de personas privadas de libertad (Massa con 80,9%) se incorporaron en el definitivo.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="actores">
+      <div class="seccion-num">06 · Los actores</div>
+      <h2>Los <em>actores</em> del proceso</h2>
+
+      <p>El sistema involucra una <strong>red de actores</strong> con funciones específicas. Su superposición es deliberada: cada uno controla a los otros.</p>
+
+      <h3>Las autoridades de mesa</h3>
+
+      <p>Cada mesa tiene una <strong>autoridad de mesa</strong> (presidente y, optativamente, suplente). Son <strong>ciudadanos comunes</strong> designados por la Justicia Electoral a partir del padrón general. Se les paga un viático, reciben capacitación previa y son responsables de:</p>
+
+      <ul>
+        <li>Abrir la mesa a las 8 de la mañana.</li>
+        <li>Identificar a cada votante con DNI y padrón.</li>
+        <li>Entregar boletas o BUP y lapicera (en BUP).</li>
+        <li>Asegurar la privacidad del voto.</li>
+        <li>Cerrar la mesa a las 18 horas.</li>
+        <li>Conducir el escrutinio de mesa.</li>
+        <li>Firmar acta, certificados y telegrama.</li>
+        <li>Entregar todo al Correo Argentino al cierre.</li>
+      </ul>
+
+      <h3>Los fiscales partidarios</h3>
+
+      <p>Cada agrupación política puede acreditar <strong>fiscales</strong> en cada mesa. Son representantes que controlan que el proceso se desarrolle correctamente, observan el escrutinio, firman certificados y pueden plantear observaciones o recursos. Las grandes alianzas suelen tener fiscales en la mayoría de las mesas; los partidos chicos pueden no tener cobertura completa, lo que es una desventaja estructural.</p>
+
+      <p>Además de los fiscales de mesa, existen:</p>
+
+      <ul>
+        <li><strong>Fiscales generales</strong>: coordinan a los fiscales de mesa por escuela.</li>
+        <li><strong>Apoderados partidarios</strong>: representan legalmente al partido o alianza ante la Justicia Electoral.</li>
+        <li><strong>Veedores informáticos</strong>: controlan el procesamiento técnico en los centros de cómputo.</li>
+      </ul>
+
+      <h3>El Correo Argentino</h3>
+
+      <p>El <strong>Correo Argentino (CORASA)</strong>, empresa estatal de servicios postales, es el ejecutor logístico clave: distribuye los kits a las escuelas antes de la elección, retira los telegramas y las urnas al cierre, traslada las urnas al juzgado electoral para el definitivo, opera la red de back-up de oficinas. Desde 2025, además, gestiona las licitaciones del escrutinio provisorio y de la impresión de la BUP.</p>
+
+      <h3>El Juez Federal con competencia electoral</h3>
+
+      <p>Cada distrito tiene un <strong>juez federal con competencia electoral</strong> (no es un fuero separado: son jueces federales con esa competencia atribuida). Es la autoridad judicial de primera instancia del proceso electoral local. Convoca a las juntas electorales, recibe las urnas, conduce el escrutinio definitivo, resuelve impugnaciones y proclama a los electos.</p>
+
+      <h3>La Cámara Nacional Electoral</h3>
+
+      <p>La <strong>Cámara Nacional Electoral (CNE)</strong> es el tribunal de alzada: revisa los fallos de los jueces electorales, dicta jurisprudencia uniforme, supervisa el sistema en su conjunto. Su rol es centrado en garantías y control (ver capítulo siguiente, 11.03).</p>
+    </div>
+
+    <div class="seccion" id="tipos-voto">
+      <div class="seccion-num">07 · Tipos de voto</div>
+      <h2>Los <em>tipos</em> de voto</h2>
+
+      <p>No todo voto cuenta de la misma manera. El sistema distingue varios tipos:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de voto</th>
+              <th>Definición</th>
+              <th>Efecto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Voto válido</strong></td>
+              <td>Voto correctamente emitido a favor de una agrupación política habilitada.</td>
+              <td>Se computa para esa fuerza.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto en blanco</strong></td>
+              <td>Voto sin marcar ninguna opción, o sobre vacío en el sistema de boletas.</td>
+              <td>Computa como expresión válida pero no se asigna a ningún partido.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto nulo</strong></td>
+              <td>Voto con marcas múltiples (varias opciones), tachaduras, escritos, o materiales no oficiales.</td>
+              <td>No computa. Se registra en el acta.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto recurrido</strong></td>
+              <td>Voto cuya validez o nulidad es cuestionada por la autoridad de mesa o un fiscal. Se coloca en sobre cerrado especial.</td>
+              <td>No se decide en la mesa: lo resuelve la Justicia Electoral en el definitivo.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto impugnado</strong></td>
+              <td>Voto cuya emisión está cuestionada por dudas sobre la identidad del votante (por ejemplo, sospecha de suplantación).</td>
+              <td>Se separa del resto. Lo investiga la Justicia.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto del personal de comando</strong></td>
+              <td>Personas del Comando General Electoral que votan fuera de su mesa con doble sobre.</td>
+              <td>Se computa en el definitivo en la mesa que correspondería al votante.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto en cárceles</strong></td>
+              <td>Personas privadas de libertad procesadas (con derecho a voto reconocido por la CSJN en el fallo "Mignone").</td>
+              <td>Se computa centralmente en la Cámara Nacional Electoral.</td>
+            </tr>
+            <tr>
+              <td><strong>Voto en el exterior</strong></td>
+              <td>Argentinos residentes en el extranjero registrados en consulados.</td>
+              <td>Se computa en el definitivo, asignado al último domicilio registrado en Argentina.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>El cambio con la BUP</h3>
+
+      <p>Con la Boleta Única de Papel (desde 2025), el concepto de voto nulo cambió. En el sistema anterior de boletas partidarias, era difícil generar un voto nulo no intencional. Con la BUP, en cambio, hay más causales de nulidad: <strong>marcar más de una opción por categoría</strong>, <strong>tachar o escribir sobre la boleta</strong>, <strong>no marcar nada</strong>. Esto explica por qué el voto nulo <strong>casi se duplicó</strong> en el debut de la BUP en octubre de 2025 (pasó del 1,8% en 2021 al 2,46% en 2025).</p>
+    </div>
+
+    <div class="seccion" id="tecnologia">
+      <div class="seccion-num">08 · El sistema técnico</div>
+      <h2>El <em>sistema</em> técnico del escrutinio</h2>
+
+      <p>El procesamiento técnico del escrutinio provisorio —desde la digitalización del telegrama hasta su publicación en la web— está a cargo de <strong>empresas privadas</strong> contratadas por licitación. Es uno de los puntos más sensibles del sistema y donde la transparencia institucional ha sido más cuestionada.</p>
+
+      <h3>La historia: Indra y Smartmatic</h3>
+
+      <p>Durante <strong>20 años</strong> (aproximadamente desde la apertura democrática hasta 2019), la empresa española <strong>Indra Sistemas</strong> tuvo el contrato del escrutinio provisorio en Argentina. Era una contratación recurrente, casi monopolizada por la firma española.</p>
+
+      <p>En 2019, el gobierno de Macri cambió de proveedor: contrató a <strong>Smartmatic</strong>, empresa de origen venezolano con operaciones internacionales. La adjudicación se hizo en 2019 mediante licitación con varias oferentes internacionales. Smartmatic ofreció USD 16.900.000, casi un 50% menos de lo que se había pagado a Indra en 2015 (USD 33.000.000). El escrutinio de las PASO 2019, sin embargo, fue cuestionado: el <strong>veedor informático de la Justicia, Juan Franchino</strong>, emitió un informe señalando que el recuento funcionó <em>"de forma totalmente defectuosa"</em>.</p>
+
+      <p>En 2023, la <strong>licitación pública internacional</strong> conducida por la DINE volvió a adjudicar a Indra (oferta de $6.667 millones, contra una oferta superior de Smartmatic). En 2025, con el sistema licitatorio modificado, el <strong>Correo Argentino</strong> condujo licitaciones privadas a sobre cerrado y adjudicó nuevamente a Indra ($21.000 millones).</p>
+
+      <h3>Los códigos fuente y la auditoría</h3>
+
+      <p>El <strong>artículo 108 del Código Nacional Electoral</strong> obliga a entregar los <strong>códigos fuente</strong> del software de transmisión, recuento y difusión a la <strong>Cámara Nacional Electoral</strong> con suficiente antelación. Esto permite auditoría partidaria y judicial: las agrupaciones pueden inspeccionar el código y hacer comprobaciones técnicas antes de la elección.</p>
+
+      <p>El proceso de simulacro nacional, realizado típicamente <strong>una semana antes</strong> de cada elección, simula con miles de telegramas reales el funcionamiento del sistema, en un entorno controlado, con presencia de partidos, justicia electoral y prensa.</p>
+
+      <h3>La controversia por la modalidad de contratación</h3>
+
+      <p>El cambio en 2025 hacia <strong>licitaciones privadas conducidas por el Correo Argentino</strong> (en vez de licitaciones públicas internacionales de la DINE) ha sido cuestionado por su opacidad relativa: pliegos sin publicación en el Boletín Oficial, ofertas a sobre cerrado, número limitado de invitadas (típicamente 3 empresas). Los defensores sostienen que el procedimiento es más ágil y económicamente más conveniente; los críticos señalan la menor exposición pública del proceso.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una tensión institucional permanente</div>
+        <p>El escrutinio provisorio es <strong>técnicamente complejo</strong> y, históricamente, ha sido objeto de debates institucionales sobre <em>quién debería conducirlo</em>. La Justicia Electoral ha reclamado durante años hacerse cargo también del escrutinio provisorio, dado que ya tiene a cargo el definitivo. Por ahora ese traspaso no se ha producido y el provisorio sigue siendo una responsabilidad del Poder Ejecutivo, ejecutada a través del Correo y empresas privadas. La justificación habitual es la <strong>velocidad</strong>: el provisorio necesita producir resultados en horas, una capacidad operativa que la Justicia Electoral, con su estructura más burocrática, podría no tener.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="casos">
+      <div class="seccion-num">09 · Casos paradigmáticos</div>
+      <h2>Casos <em>paradigmáticos</em></h2>
+
+      <p>Tres episodios recientes ilustran cómo funciona el sistema en condiciones diversas: una sorpresa electoral mayúscula, un balotaje categórico y un cambio de instrumento de votación.</p>
+
+      <h3>PASO 2019 · La sorpresa</h3>
+
+      <p>Las <strong>PASO del 11 de agosto de 2019</strong> son recordadas por una sorpresa generalizada: Alberto Fernández (Frente de Todos) le sacó <strong>15 puntos</strong> de ventaja a Mauricio Macri (Juntos por el Cambio), un resultado que ningún encuestador había previsto. El escrutinio provisorio mostró:</p>
+
+      <ul>
+        <li>Fernández: 47,32% / Macri: 32,28%.</li>
+        <li>Los primeros datos se conocieron <strong>4 horas y media después del cierre</strong>, a las 22:30, después de que el búnker opositor denunciara <em>"ocultamiento de resultados"</em> por el gobierno.</li>
+      </ul>
+
+      <p>El escrutinio definitivo, conocido el 29 de agosto, <strong>amplió levemente la ventaja</strong> de Fernández:</p>
+
+      <ul>
+        <li>Fernández pasó de 11.622.020 a 12.205.938 votos (porcentaje: de 47,65% a 47,78%).</li>
+        <li>Macri pasó de 7.824.996 a 8.121.689 votos (porcentaje: de 32,08% a 31,79%).</li>
+        <li>La diferencia se amplió de 3.797.024 a 4.084.249 votos.</li>
+      </ul>
+
+      <p>La diferencia entre provisorio y definitivo fue de <strong>0,13 puntos</strong> a favor de Fernández: la <strong>fidelidad histórica del provisorio quedó confirmada</strong>, incluso en una elección de magnitudes sorpresivas. El defecto técnico del recuento de Smartmatic señalado por el veedor Franchino <strong>no alteró sustancialmente el resultado</strong>: solo demoró tiempos y generó dudas operativas.</p>
+
+      <h3>Balotaje 2023 · La diferencia mínima entre escrutinios</h3>
+
+      <p>El <strong>balotaje del 19 de noviembre de 2023</strong> enfrentó a Javier Milei (La Libertad Avanza) con Sergio Massa (Unión por la Patria). Milei ganó claramente, y la comparación entre escrutinios es elocuente sobre la <strong>precisión del sistema</strong>:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Provisorio vs definitivo · Balotaje 2023</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Milei · provisorio</div>
+            <div class="ficha-valor"><strong>55,69%</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Milei · definitivo</div>
+            <div class="ficha-valor"><strong>55,65%</strong> · 14.554.560 votos</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Massa · provisorio</div>
+            <div class="ficha-valor"><strong>44,30%</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Massa · definitivo</div>
+            <div class="ficha-valor"><strong>44,35%</strong> · 11.598.720 votos</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Diferencia provisorio-definitivo</div>
+            <div class="ficha-valor"><strong>0,04% en porcentajes</strong></div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Participación</div>
+            <div class="ficha-valor"><strong>76,32%</strong> del padrón</div>
+          </div>
+        </div>
+      </div>
+
+      <p>En el balotaje 2023, Massa reconoció su derrota <strong>antes de que se publicara el escrutinio provisorio</strong>: lo hizo a las 20:30, media hora antes del horario habitual de publicación. La Justicia Nacional Electoral autorizó entonces difundir los primeros datos del provisorio, dado que la veda perdía su sentido protector cuando el propio candidato perdedor había reconocido el resultado.</p>
+
+      <p>Los <strong>votos en el exterior</strong> y de personas <strong>privadas de libertad</strong> se incorporaron solo en el definitivo: Milei ganó con el 74,4% en el exterior, Massa con el 80,9% en las cárceles.</p>
+
+      <h3>BUP 2025 · El debut nacional</h3>
+
+      <p>Las <strong>elecciones legislativas del 26 de octubre de 2025</strong> fueron las primeras a nivel nacional con <strong>Boleta Única de Papel</strong>, según la <strong>Ley 27.781 sancionada el 1 de octubre de 2024</strong>. Algunas características del cambio:</p>
+
+      <ul>
+        <li>Las boletas partidarias desaparecieron. Cada elector recibió <strong>una única boleta</strong> con todas las opciones, en su mesa.</li>
+        <li>Cada elector marcó con <strong>lapicera indeleble</strong> el casillero correspondiente a la opción elegida.</li>
+        <li>El <strong>escrutinio fue significativamente más rápido</strong> que en 2021: no había que separar boletas por sobres ni clasificar boletas partidarias robadas o cortadas.</li>
+        <li>Se mantuvo la división de competencias: el provisorio (DINE/Correo/Indra) y el definitivo (Justicia Electoral) operaron como siempre.</li>
+        <li>El <strong>voto nulo casi se duplicó</strong>: pasó del 1,8% (2021) al 2,46% (2025), por errores no intencionales propios de un sistema nuevo (votar más de una categoría con la misma marca, tachar, escribir).</li>
+        <li>El <strong>voto en blanco</strong> fue del 2,71%.</li>
+        <li><strong>No hubo denuncias relevantes</strong> de robo de boletas (problema clásico del sistema anterior).</li>
+        <li>La Cámara Nacional Electoral exigió que el provisorio se publicara <strong>por distrito</strong> y no consolidado a nivel nacional.</li>
+      </ul>
+
+      <p>La provincia de Córdoba (BUP desde 2011) y Santa Fe (BUP desde 2011) habían anticipado lo que ocurriría: en sus respectivos debuts, el voto nulo había aumentado entre 0,5 y 2,5 puntos por errores de votantes habituados al sistema anterior.</p>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Garantías y <em>tensiones</em> del sistema</h2>
+
+      <p>El sistema argentino de recuento ha demostrado robustez histórica: la diferencia entre provisorio y definitivo se mantiene por debajo del 1% en cuatro décadas de democracia. Pero hay <strong>tensiones permanentes</strong> que requieren atención.</p>
+
+      <h3>Quién controla el provisorio</h3>
+
+      <p>El debate sobre <strong>quién debería conducir el escrutinio provisorio</strong> es recurrente. La división actual —Poder Ejecutivo con apoyo de empresas privadas— protege la velocidad y la operatividad, pero también deja la primera narrativa de la noche electoral en manos del gobierno saliente. La Justicia Electoral ha reclamado asumir esa función para unificar la responsabilidad institucional; otros sostienen que separar provisorio y definitivo, con auditoría cruzada, es una virtud, no un defecto.</p>
+
+      <h3>La opacidad de las contrataciones</h3>
+
+      <p>El proceso de contratación de las empresas tecnológicas ha tenido <strong>distintos grados de transparencia</strong> según la gestión. Las licitaciones públicas internacionales (modelo histórico) son más auditables que las licitaciones privadas a sobre cerrado (modelo 2025). El acceso público a los pliegos, ofertas y criterios de adjudicación es una garantía que las distintas administraciones han manejado de modo desigual.</p>
+
+      <h3>El acceso desigual a la fiscalización</h3>
+
+      <p>La fiscalización exhaustiva en todas las mesas del país requiere <strong>recursos significativos</strong>: voluntarios entrenados, coordinación logística, viáticos, presencia en sedes alejadas. Los <strong>partidos grandes</strong> pueden cubrir la mayoría de las mesas; los chicos no. Esto produce una <strong>asimetría estructural</strong> de control que solo el régimen de fiscalización pública (mediante la Justicia Electoral) puede compensar parcialmente.</p>
+
+      <h3>La transmisión electrónica y las dudas</h3>
+
+      <p>Cada elección genera <strong>denuncias en redes sociales</strong> sobre supuestas inconsistencias entre los telegramas y los datos publicados, sobre mesas con resultados sospechosos, sobre patrones extraños. Como la Cámara Nacional Electoral ha aclarado, <strong>esas denuncias por redes no tienen validez</strong>: deben presentarse formalmente ante la Justicia Electoral, con nombre, apellido y documentación. La cantidad de denuncias formales suele ser <strong>significativamente menor</strong> al ruido en redes.</p>
+
+      <h3>La calidad del telegrama</h3>
+
+      <p>Como el telegrama es el insumo del provisorio, la <strong>calidad de su confección por la autoridad de mesa</strong> es decisiva. Telegramas mal llenados (sumas mal hechas, casillas vacías, firmas faltantes) generan demoras o no se computan en el provisorio. La <strong>capacitación de las autoridades de mesa</strong> —ciudadanos comunes con un solo entrenamiento previo— es un cuello de botella permanente.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema robusto, perfectible</div>
+        <p>La fortaleza del sistema argentino no radica en su sofisticación tecnológica sino en su <strong>diseño institucional redundante</strong>: tres copias del mismo resultado (acta, certificado, telegrama), dos escrutinios sucesivos con actores institucionalmente distintos, una cadena judicial con tres instancias (juez federal electoral, CNE, CSJN). Esa redundancia es lo que permite que, aún con errores técnicos puntuales (como el cuestionado escrutinio 2019), el resultado oficial nunca haya sido cuestionado seriamente en cuatro décadas. La perfectibilidad del sistema pasa por mejorar la velocidad de transmisión, reducir errores de confección y aumentar la transparencia de las contrataciones, no por sustituir su arquitectura fundamental.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Código Nacional Electoral</strong> · Ley 19.945 y sus modificatorias. Regulación general del proceso electoral.</li>
+        <li><strong>Ley 27.781 de Boleta Única de Papel</strong> · Sancionada el 1 de octubre de 2024. Introdujo la BUP como instrumento de votación en elecciones nacionales.</li>
+        <li><strong>Dirección Nacional Electoral (DINE)</strong> · Ministerio del Interior. Información sobre escrutinio provisorio, simulacros, contrataciones. argentina.gob.ar/interior/dine.</li>
+        <li><strong>Justicia Nacional Electoral</strong> · Cámara Nacional Electoral y juzgados federales con competencia electoral. electoral.gob.ar.</li>
+        <li><strong>Acordadas de la Cámara Nacional Electoral</strong> · 96/2005, 3/2017 y otras. Regulan el acceso de partidos a códigos fuente y la auditoría de software de escrutinio.</li>
+        <li><strong>"Boleta Única Papel (BUP)"</strong> · Argentina.gob.ar, ficha técnica del Observatorio Electoral. Diseño, normativa, debut nacional.</li>
+        <li><strong>"Diferencias entre escrutinio provisorio y definitivo"</strong> · Página/12, Perfil, La Nación, Rosario3, Rosario la Ciudad (varios artículos 2019-2025).</li>
+        <li><strong>"Elecciones 2025: paso a paso, cómo se realiza el escrutinio provisorio con la Boleta Única de Papel"</strong> · Chequeado (octubre de 2025).</li>
+        <li><strong>"La Boleta Única de Papel debutó con éxito"</strong> · La Nación, Infobae (octubre de 2025). Cobertura del debut nacional de la BUP.</li>
+        <li><strong>"Escrutinio definitivo: así fue la diferencia de votos entre Milei y Massa en el balotaje 2023"</strong> · Infobae (noviembre de 2023).</li>
+        <li><strong>"El escrutinio definitivo: cuáles son los datos finales de las PASO 2019"</strong> · Chequeado (agosto de 2019).</li>
+        <li><strong>"PASO 2019: Alberto Fernández amplió la ventaja sobre Mauricio Macri"</strong> · Infobae, La Nación (agosto de 2019).</li>
+        <li><strong>"La Justicia Electoral empezará el escrutinio definitivo"</strong> · Infobae (octubre de 2025). Cobertura del definitivo posterior a las legislativas BUP.</li>
+        <li><strong>"Pliego secreto: vía licitación privada, el Gobierno contrató a Indra"</strong> · La Nación (julio de 2025). Análisis crítico del proceso de contratación.</li>
+        <li><strong>"Voto cantado: el Gobierno le dio a Indra el negocio millonario del escrutinio"</strong> · Letra P (mayo de 2025).</li>
+        <li><strong>"Concluyó la licitación para realizar el recuento provisorio de votos en las elecciones 2023"</strong> · Argentina.gob.ar.</li>
+        <li><strong>"Una firma venezolana quedó a cargo de transmitir los datos de las elecciones presidenciales"</strong> · La Nación (2019). Cobertura del cambio Indra → Smartmatic.</li>
+        <li><strong>Casa Rosada</strong> · "Sobre el escrutinio provisorio" (2019). Posición oficial del entonces gobierno sobre el procesamiento técnico del provisorio.</li>
+        <li><strong>Comunicados de la CNE</strong> sobre denuncias en redes sociales y procedimientos formales para impugnaciones.</li>
+        <li><strong>Cobertura de coberturas electorales</strong> 2019, 2021, 2023 y 2025 en Página/12, Perfil, La Nación, Infobae, Clarín, Ámbito.</li>
+      </ul>
+    </div>
+
+    <a href="justicia-electoral.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 11.03</div>
+        <h3>La <em>Justicia</em> Electoral</h3>
+        <p>La arquitectura del fuero electoral argentino: la <strong>Cámara Nacional Electoral (CNE)</strong> como tribunal especializado, los jueces federales con competencia electoral en cada distrito, las Juntas Electorales Nacionales, los padrones, la oficialización de candidaturas, la doctrina de la inhabilitación moral. Y el régimen provincial: 24 tribunales electorales locales con autonomía propia.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>
