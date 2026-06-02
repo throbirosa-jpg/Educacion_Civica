@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Buscar — Educación Cívica</title>
+<meta name="description" content="Buscador interno del sitio Educación Cívica. Encontrá artículos, capítulos, secciones y conceptos institucionales del Estado argentino: los tres poderes, las provincias en profundidad, el sistema electoral, la historia constitucional y los derechos fundamentales.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://educacioncivica.com.ar/buscar.html">
+
+<meta property="og:title" content="Buscar en Educación Cívica">
+<meta property="og:description" content="Buscador interno del sitio: 62 páginas, 483 secciones indexadas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/buscar.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Precargar el índice de búsqueda en paralelo con el JS -->
+<link rel="preload" href="busqueda-indice.json" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="buscador.js" as="script">
+
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+
+    /* Colores específicos por categoría */
+    --cat-fundamentos: #3D7BB0;
+    --cat-fundamentos-soft: #E4F0FA;
+    --cat-elecciones: #C8941A;
+    --cat-elecciones-soft: #FBE5AA;
+    --cat-historia: #B8341B;
+    --cat-historia-soft: #F2D5CE;
+    --cat-caba: #4A7C59;
+    --cat-caba-soft: #D5E5D6;
+    --cat-buenos-aires: #6B4F8C;
+    --cat-buenos-aires-soft: #E8DFF0;
+    --cat-cordoba: #6B4F8C;
+    --cat-cordoba-soft: #E8DFF0;
+    --cat-santa-fe: #6B4F8C;
+    --cat-santa-fe-soft: #E8DFF0;
+    --cat-mendoza: #6B4F8C;
+    --cat-mendoza-soft: #E8DFF0;
+    --cat-provincias: #545465;
+    --cat-provincias-soft: #ECE6DA;
+    --cat-inicio: #1A1A2E;
+    --cat-inicio-soft: #DDD7CB;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+
+  /* Navbar */
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+
+  /* Hero del buscador */
+  .buscador-hero { background: linear-gradient(180deg, var(--crema-warm) 0%, var(--crema) 100%); padding: 3.5rem 2rem 2.5rem; border-bottom: 1px solid var(--linea); }
+  .buscador-hero-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .buscador-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); background: white; padding: 0.5rem 1rem; border: 1px solid var(--linea); margin-bottom: 1.5rem; }
+  .buscador-titulo { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.15; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+  .buscador-titulo em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .buscador-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 2rem; }
+
+  /* Caja de búsqueda principal */
+  .buscador-box { position: relative; max-width: 700px; margin: 0 auto; }
+  .buscador-input-wrap { position: relative; }
+  .buscador-input { width: 100%; font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 400; padding: 1.2rem 3.5rem 1.2rem 3.5rem; background: white; border: 2px solid var(--linea); color: var(--tinta); transition: all 0.15s ease; -webkit-appearance: none; appearance: none; border-radius: 0; }
+  .buscador-input:focus { outline: none; border-color: var(--premium); box-shadow: 0 4px 16px rgba(107, 79, 140, 0.12); }
+  .buscador-input::placeholder { color: var(--tinta-soft); font-style: italic; font-weight: 300; opacity: 0.75; }
+  .buscador-icon { position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; color: var(--tinta-soft); pointer-events: none; }
+  .buscador-input:focus + .buscador-icon, .buscador-input-wrap:focus-within .buscador-icon { color: var(--premium); }
+  .buscador-clear { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: transparent; border: none; cursor: pointer; padding: 0.5rem; color: var(--tinta-soft); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em; border-radius: 3px; transition: all 0.15s ease; display: none; }
+  .buscador-clear.visible { display: flex; align-items: center; gap: 0.3rem; }
+  .buscador-clear:hover { color: var(--tinta); background: var(--linea-soft); }
+  .buscador-kbd { background: var(--linea-soft); border: 1px solid var(--linea); padding: 0.15rem 0.4rem; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); }
+
+  /* Filtros por categoría */
+  .filtros-cat { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; }
+  .filtro-chip { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tinta-soft); background: white; border: 1px solid var(--linea); padding: 0.45rem 0.9rem; cursor: pointer; transition: all 0.15s ease; user-select: none; border-radius: 0; }
+  .filtro-chip:hover { border-color: var(--premium); color: var(--premium-dark); }
+  .filtro-chip.activa { background: var(--premium); color: white; border-color: var(--premium); }
+  .filtro-chip.activa:hover { background: var(--premium-dark); }
+  .filtro-chip-count { opacity: 0.65; margin-left: 0.4rem; font-weight: 600; }
+
+  /* Resultados */
+  main { flex: 1; padding: 2rem; }
+  .resultados-wrap { max-width: 900px; margin: 0 auto; }
+  .resultados-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--tinta-soft); padding: 1rem 0; border-bottom: 1px solid var(--linea); margin-bottom: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .resultados-count strong { color: var(--tinta); font-weight: 600; }
+  .resultados-meta-loading { color: var(--premium); }
+
+  /* Resultado individual */
+  .resultado { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin-bottom: 1rem; text-decoration: none; color: var(--tinta); display: block; transition: all 0.15s ease; position: relative; }
+  .resultado::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cat-color, var(--linea)); }
+  .resultado:hover { border-color: var(--cat-color, var(--premium)); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); }
+  .resultado-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+  .resultado-cat { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.6rem; background: var(--cat-soft, var(--linea-soft)); color: var(--cat-color, var(--tinta-soft)); font-weight: 600; }
+  .resultado-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--tinta-soft); letter-spacing: 0.05em; }
+  .resultado-titulo { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 500; line-height: 1.3; margin-bottom: 0.5rem; color: var(--tinta); }
+  .resultado-titulo mark { background: var(--sol-soft); color: var(--tinta); padding: 0 0.15em; font-weight: 600; }
+  .resultado-desc { font-size: 0.97rem; color: var(--tinta-soft); line-height: 1.55; margin-bottom: 0.6rem; }
+  .resultado-desc mark { background: var(--sol-soft); color: var(--tinta); padding: 0 0.15em; }
+
+  /* Sección coincidente (cuando el match es en un H2 específico) */
+  .resultado-seccion { background: var(--crema-warm); border-left: 3px solid var(--cat-color, var(--premium)); padding: 0.7rem 1rem; margin-top: 0.6rem; font-size: 0.88rem; }
+  .resultado-seccion-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.3rem; }
+  .resultado-seccion-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 0.97rem; color: var(--tinta); margin-bottom: 0.3rem; }
+  .resultado-seccion-snippet { color: var(--tinta-soft); line-height: 1.5; font-size: 0.88rem; }
+  .resultado-seccion-snippet mark, .resultado-seccion-titulo mark { background: var(--sol-soft); color: var(--tinta); padding: 0 0.15em; }
+
+  .resultado-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px dashed var(--linea); }
+  .resultado-url { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--tinta-soft); letter-spacing: 0.03em; opacity: 0.8; }
+  .resultado-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cat-color, var(--premium)); font-weight: 600; letter-spacing: 0.05em; }
+
+  /* Colores por categoría aplicados al resultado */
+  .resultado[data-cat="fundamentos"] { --cat-color: var(--cat-fundamentos); --cat-soft: var(--cat-fundamentos-soft); }
+  .resultado[data-cat="elecciones"] { --cat-color: var(--cat-elecciones); --cat-soft: var(--cat-elecciones-soft); }
+  .resultado[data-cat="historia"] { --cat-color: var(--cat-historia); --cat-soft: var(--cat-historia-soft); }
+  .resultado[data-cat="caba"] { --cat-color: var(--cat-caba); --cat-soft: var(--cat-caba-soft); }
+  .resultado[data-cat="buenos-aires"] { --cat-color: var(--cat-buenos-aires); --cat-soft: var(--cat-buenos-aires-soft); }
+  .resultado[data-cat="cordoba"] { --cat-color: var(--cat-cordoba); --cat-soft: var(--cat-cordoba-soft); }
+  .resultado[data-cat="santa-fe"] { --cat-color: var(--cat-santa-fe); --cat-soft: var(--cat-santa-fe-soft); }
+  .resultado[data-cat="mendoza"] { --cat-color: var(--cat-mendoza); --cat-soft: var(--cat-mendoza-soft); }
+  .resultado[data-cat="provincias"] { --cat-color: var(--cat-provincias); --cat-soft: var(--cat-provincias-soft); }
+  .resultado[data-cat="inicio"] { --cat-color: var(--cat-inicio); --cat-soft: var(--cat-inicio-soft); }
+
+  /* Estados especiales */
+  .empty-state { text-align: center; padding: 3rem 2rem; }
+  .empty-state-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.3; }
+  .empty-state-titulo { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--tinta); }
+  .empty-state-titulo em { font-style: italic; color: var(--premium-dark); }
+  .empty-state-desc { color: var(--tinta-soft); max-width: 480px; margin: 0 auto 1.5rem; line-height: 1.6; font-size: 0.97rem; }
+  .empty-state-sugerencias { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
+  .sugerencia { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; padding: 0.5rem 0.9rem; background: white; border: 1px solid var(--linea); color: var(--tinta-soft); cursor: pointer; transition: all 0.15s ease; }
+  .sugerencia:hover { border-color: var(--premium); color: var(--premium-dark); background: var(--premium-soft); }
+
+  /* Estado inicial: sugerencias destacadas */
+  .destacados { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .destacado-card { background: white; border: 1px solid var(--linea); padding: 1.5rem; text-decoration: none; color: var(--tinta); transition: all 0.15s ease; }
+  .destacado-card:hover { border-color: var(--premium); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 79, 140, 0.08); }
+  .destacado-cat { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.5rem; font-weight: 600; }
+  .destacado-titulo { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.4rem; line-height: 1.3; }
+  .destacado-titulo em { font-style: italic; color: var(--premium-dark); }
+  .destacado-desc { font-size: 0.88rem; color: var(--tinta-soft); line-height: 1.5; }
+
+  .seccion-destacados-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; color: var(--tinta-soft); text-transform: uppercase; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--linea); }
+
+  /* Loading skeleton */
+  .skeleton { background: linear-gradient(90deg, var(--linea-soft) 25%, var(--crema-warm) 50%, var(--linea-soft) 75%); background-size: 200% 100%; animation: skeleton 1.5s infinite; height: 1em; border-radius: 2px; }
+  @keyframes skeleton { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+  .skeleton-resultado { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin-bottom: 1rem; }
+  .skeleton-h { height: 24px; width: 60%; margin-bottom: 1rem; }
+  .skeleton-l { height: 14px; margin-bottom: 0.5rem; }
+  .skeleton-l.short { width: 80%; }
+
+  /* Footer */
+  footer { background: var(--tinta); color: var(--crema); padding: 2.5rem 2rem; margin-top: auto; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.88rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.25rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 1.8rem; }
+    .buscador-hero { padding: 2.5rem 1rem 2rem; }
+    main { padding: 1.5rem 1rem; }
+    .buscador-input { font-size: 1.1rem; padding: 1rem 3.2rem 1rem 3.2rem; }
+    .filtros-cat { gap: 0.35rem; }
+    .filtro-chip { padding: 0.4rem 0.7rem; font-size: 0.68rem; }
+    .resultado { padding: 1.2rem 1.3rem; }
+  }
+
+  /* No-print del kbd indicator en mobile */
+  @media (max-width: 600px) {
+    .kbd-tip { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> · <span>Buscar</span>
+    </div>
+  </div>
+</nav>
+
+<header class="buscador-hero">
+  <div class="buscador-hero-inner">
+    <div class="buscador-eyebrow">Buscador interno · 62 páginas · 483 secciones indexadas</div>
+    <h1 class="buscador-titulo">Buscá en el <em>sitio entero</em></h1>
+    <div class="buscador-subtitulo">— Capítulos · Secciones · Conceptos · Provincias · Historia</div>
+
+    <div class="buscador-box">
+      <div class="buscador-input-wrap">
+        <svg class="buscador-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="20" y1="20" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="search"
+          id="busqueda-input"
+          class="buscador-input"
+          placeholder="Boleta única, reelección, autonomía municipal, paridad..."
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="Buscar en Educación Cívica"
+        >
+        <button type="button" id="busqueda-clear" class="buscador-clear" aria-label="Limpiar búsqueda">
+          <span>Limpiar</span>
+          <span class="buscador-kbd">esc</span>
+        </button>
+      </div>
+
+      <!-- Filtros por categoría -->
+      <div class="filtros-cat" id="filtros-cat">
+        <button type="button" class="filtro-chip activa" data-cat="">Todo</button>
+        <button type="button" class="filtro-chip" data-cat="fundamentos">Fundamentos<span class="filtro-chip-count" data-count="fundamentos"></span></button>
+        <button type="button" class="filtro-chip" data-cat="historia">Historia<span class="filtro-chip-count" data-count="historia"></span></button>
+        <button type="button" class="filtro-chip" data-cat="elecciones">Elecciones<span class="filtro-chip-count" data-count="elecciones"></span></button>
+        <button type="button" class="filtro-chip" data-cat="caba">CABA<span class="filtro-chip-count" data-count="caba"></span></button>
+        <button type="button" class="filtro-chip" data-cat="buenos-aires">Buenos Aires<span class="filtro-chip-count" data-count="buenos-aires"></span></button>
+        <button type="button" class="filtro-chip" data-cat="cordoba">Córdoba<span class="filtro-chip-count" data-count="cordoba"></span></button>
+        <button type="button" class="filtro-chip" data-cat="santa-fe">Santa Fe<span class="filtro-chip-count" data-count="santa-fe"></span></button>
+        <button type="button" class="filtro-chip" data-cat="mendoza">Mendoza<span class="filtro-chip-count" data-count="mendoza"></span></button>
+        <button type="button" class="filtro-chip" data-cat="provincias">Provincias<span class="filtro-chip-count" data-count="provincias"></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="resultados-wrap">
+
+    <!-- Meta info de resultados (count, etc) -->
+    <div class="resultados-meta" id="resultados-meta" style="display: none;">
+      <span class="resultados-count" id="resultados-count"></span>
+      <span class="resultados-tiempo" id="resultados-tiempo"></span>
+    </div>
+
+    <!-- Container de resultados -->
+    <div id="resultados-container"></div>
+
+    <!-- Estado inicial: sugerencias destacadas -->
+    <div id="estado-inicial">
+      <div class="seccion-destacados-titulo">— Empezá por aquí · Búsquedas frecuentes</div>
+      <div class="empty-state-sugerencias">
+        <span class="sugerencia" data-q="boleta única">Boleta única</span>
+        <span class="sugerencia" data-q="reelección">Reelección</span>
+        <span class="sugerencia" data-q="autonomía municipal">Autonomía municipal</span>
+        <span class="sugerencia" data-q="amparo">Amparo</span>
+        <span class="sugerencia" data-q="paridad de género">Paridad de género</span>
+        <span class="sugerencia" data-q="coparticipación">Coparticipación</span>
+        <span class="sugerencia" data-q="D'Hondt">D'Hondt</span>
+        <span class="sugerencia" data-q="PASO">PASO</span>
+        <span class="sugerencia" data-q="balotaje">Balotaje</span>
+        <span class="sugerencia" data-q="Corte Suprema">Corte Suprema</span>
+        <span class="sugerencia" data-q="federalismo">Federalismo</span>
+        <span class="sugerencia" data-q="presupuesto">Presupuesto</span>
+      </div>
+
+      <div class="seccion-destacados-titulo">— Capítulos destacados del sitio</div>
+      <div class="destacados">
+        <a href="provincias-en-profundidad.html" class="destacado-card">
+          <div class="destacado-cat">Capítulo 10 · ~970 KB</div>
+          <h3 class="destacado-titulo">Las 4 grandes <em>provincias</em></h3>
+          <p class="destacado-desc">Estudios premium completos sobre Buenos Aires, Córdoba, Santa Fe y Mendoza. 26 capítulos sustantivos.</p>
+        </a>
+        <a href="elecciones.html" class="destacado-card">
+          <div class="destacado-cat">Capítulo 08 · 5 capítulos</div>
+          <h3 class="destacado-titulo">Sistema <em>electoral</em> argentino</h3>
+          <p class="destacado-desc">Calendarios, sistemas presidenciales y legislativos, cronología 1853-2025, innovaciones del siglo XXI.</p>
+        </a>
+        <a href="historia.html" class="destacado-card">
+          <div class="destacado-cat">Capítulo 07 · 7 capítulos</div>
+          <h3 class="destacado-titulo">Historia <em>institucional</em></h3>
+          <p class="destacado-desc">Reformas constitucionales, inestabilidad 1930-1983, Congreso, Corte Suprema, federalismo, documentos.</p>
+        </a>
+        <a href="poderes.html" class="destacado-card">
+          <div class="destacado-cat">Fundamentos</div>
+          <h3 class="destacado-titulo">Los tres <em>poderes</em> del Estado</h3>
+          <p class="destacado-desc">Ejecutivo, Legislativo y Judicial: cómo se organizan y se controlan recíprocamente en el sistema argentino.</p>
+        </a>
+        <a href="glosario.html" class="destacado-card">
+          <div class="destacado-cat">Referencia · 91 términos</div>
+          <h3 class="destacado-titulo"><em>Glosario</em> cívico y jurídico</h3>
+          <p class="destacado-desc">Definiciones precisas de 91 conceptos institucionales, electorales y jurídicos del derecho argentino.</p>
+        </a>
+        <a href="caba-en-profundidad.html" class="destacado-card">
+          <div class="destacado-cat">Capítulo 09 · 5 capítulos</div>
+          <h3 class="destacado-titulo">CABA en <em>profundidad</em></h3>
+          <p class="destacado-desc">La Ciudad Autónoma desde 1996: Constitución, los tres poderes, 15 comunas, coparticipación y pendientes.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Buscador interno con índice JSON · 62 páginas · 483 secciones
+    </div>
+  </div>
+</footer>
+
+<script src="buscador.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política Argentina — Educación cívica con datos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --celeste: #74ACDF;
+    --celeste-dark: #5a8fc0;
+    --celeste-soft: #e8f2fb;
+    --sol: #F6B40E;
+    --sol-dark: #d99a00;
+    --crema: #FBF7F0;
+    --tinta: #1a1a2e;
+    --tinta-soft: #4a4a5e;
+    --linea: #d8d4cc;
+    --rojo-fed: #b8341b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--crema);
+    color: var(--tinta);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--crema);
+    border-bottom: 1px solid var(--linea);
+    padding: 1rem 2rem;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .logo-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--celeste);
+    border-radius: 50%;
+    position: relative;
+  }
+  .logo-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; height: 5px;
+    background: var(--sol);
+    border-radius: 50%;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--tinta-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--tinta); }
+  .nav-cta {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    padding: 6rem 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+  }
+  .hero-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--tinta-soft);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.5rem;
+  }
+  h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--celeste-dark);
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--tinta-soft);
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--linea);
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--tinta);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.5rem;
+  }
+
+  /* Hero visual: simplified Argentina map */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--celeste-soft) 0%, var(--crema) 100%);
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--linea);
+  }
+  .hero-visual::before {
+    content: 'ARG';
+    position: absolute;
+    top: 1rem; left: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.2em;
+  }
+  .hero-visual::after {
+    content: '46.044.703 habitantes · Censo 2022 (datos a verificar)';
+    position: absolute;
+    bottom: 1rem; left: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--tinta-soft);
+  }
+  .map-svg {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+  }
+  .map-svg path {
+    fill: var(--celeste);
+    stroke: var(--crema);
+    stroke-width: 1.5;
+    transition: fill 0.2s;
+    cursor: pointer;
+  }
+  .map-svg path:hover {
+    fill: var(--sol);
+  }
+  .sun-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+  }
+
+  /* ========== SECTION HEADER ========== */
+  section {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    max-width: 700px;
+  }
+  .section-title em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--celeste-dark);
+  }
+
+  /* ========== PODERES ========== */
+  .poderes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .poder-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .poder-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(26, 26, 46, 0.15);
+  }
+  .poder-num {
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    color: var(--tinta-soft);
+    margin-bottom: 1rem;
+  }
+  .poder-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .poder-desc {
+    font-size: 0.92rem;
+    color: var(--tinta-soft);
+    margin-bottom: 2rem;
+  }
+  .poder-data {
+    border-top: 1px dashed var(--linea);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .poder-data-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  .poder-data-row span:first-child { color: var(--tinta-soft); }
+  .poder-data-row span:last-child { font-weight: 500; }
+  .poder-card.ejecutivo { border-top: 4px solid var(--celeste); }
+  .poder-card.legislativo { border-top: 4px solid var(--sol); }
+  .poder-card.judicial { border-top: 4px solid var(--rojo-fed); }
+  .poder-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .poder-link::after {
+    content: '→';
+    transition: transform 0.2s;
+  }
+  .poder-card:hover .poder-link::after {
+    transform: translateX(4px);
+  }
+
+  /* ========== CALENDARIO ========== */
+  .calendario {
+    background: var(--tinta);
+    color: var(--crema);
+    margin: 5rem -2rem 0;
+    padding: 5rem 2rem;
+  }
+  .calendario-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .calendario .section-head { border-color: rgba(255,255,255,0.1); }
+  .calendario .section-eyebrow { color: var(--sol); }
+  .calendario .section-title { color: var(--crema); }
+  .calendario .section-title em { color: var(--sol); }
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .event {
+    background: var(--tinta);
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+  .event-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--sol);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+  }
+  .event-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .event-desc {
+    font-size: 0.85rem;
+    color: rgba(251, 247, 240, 0.6);
+  }
+
+  /* ========== EDUCATIVO ========== */
+  .educativo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .lesson {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .lesson:hover {
+    background: var(--celeste-soft);
+    border-color: var(--celeste);
+  }
+  .lesson-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--celeste-dark);
+    font-style: italic;
+  }
+  .lesson-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-top: 1.5rem;
+  }
+  .lesson-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ========== PROVINCIAS ========== */
+  .provincias-strip {
+    background: var(--celeste-soft);
+    margin: 0 -2rem;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  }
+  .provincias-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .provincias-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .prov-chip {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .prov-chip::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--celeste);
+  }
+  .prov-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -10px rgba(26, 26, 46, 0.15);
+  }
+  .prov-chip.caba::before { background: var(--sol); }
+  .prov-chip.ba::before { background: var(--celeste-dark); }
+  .prov-chip.cba::before { background: var(--rojo-fed); }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--crema);
+    border-top: 1px solid var(--linea);
+    padding: 4rem 2rem 2rem;
+    margin-top: 5rem;
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .footer-brand p {
+    font-size: 0.9rem;
+    color: var(--tinta-soft);
+    max-width: 400px;
+  }
+  .footer-col h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    color: var(--tinta-soft);
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-col a {
+    color: var(--tinta);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .footer-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--linea);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+    .poderes { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr 1fr; }
+    .educativo-grid { grid-template-columns: 1fr; }
+    .provincias-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      Política Argentina
+    </div>
+    <ul class="nav-links">
+      <li><a href="#poderes">Los poderes</a></li>
+      <li><a href="#provincias">Provincias</a></li>
+      <li><a href="#calendario">Calendario</a></li>
+      <li><a href="#aprender">Aprender</a></li>
+      <li><a href="#">Glosario</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Suscribirse</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="hero-tag">Educación cívica · Datos abiertos</div>
+    <h1>Entendé cómo funciona <em>la política argentina</em>, con datos y sin grieta.</h1>
+    <p class="hero-sub">Una guía visual y educativa sobre los poderes del Estado, las provincias, el calendario electoral y la dinámica institucional. Hecha para estudiantes, ciudadanos y curiosos.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">23+1</span>
+        <span class="stat-label">Provincias y CABA</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Poderes del Estado</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">~2.300</span>
+        <span class="stat-label">Municipios (aprox.)</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <svg class="sun-icon" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="15" fill="#F6B40E"/>
+      <g stroke="#F6B40E" stroke-width="2" stroke-linecap="round">
+        <line x1="50" y1="20" x2="50" y2="10"/>
+        <line x1="50" y1="90" x2="50" y2="80"/>
+        <line x1="20" y1="50" x2="10" y2="50"/>
+        <line x1="90" y1="50" x2="80" y2="50"/>
+        <line x1="29" y1="29" x2="22" y2="22"/>
+        <line x1="78" y1="78" x2="71" y2="71"/>
+        <line x1="29" y1="71" x2="22" y2="78"/>
+        <line x1="78" y1="22" x2="71" y2="29"/>
+      </g>
+    </svg>
+    <svg class="map-svg" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid meet">
+      <!-- Mapa simplificado de Argentina, por provincia (forma estilizada) -->
+      <!-- Norte -->
+      <path d="M 95 30 L 115 28 L 125 45 L 115 55 L 95 50 Z" data-prov="Jujuy"/>
+      <path d="M 95 50 L 115 55 L 120 75 L 100 78 L 88 65 Z" data-prov="Salta"/>
+      <path d="M 120 75 L 135 78 L 138 95 L 122 95 Z" data-prov="Formosa"/>
+      <path d="M 122 95 L 138 95 L 140 115 L 125 115 Z" data-prov="Chaco"/>
+      <!-- Centro-norte -->
+      <path d="M 100 78 L 120 75 L 122 95 L 105 98 L 95 85 Z" data-prov="Tucumán/Santiago"/>
+      <path d="M 88 65 L 100 78 L 95 95 L 80 92 L 78 75 Z" data-prov="Catamarca"/>
+      <path d="M 78 75 L 95 95 L 92 115 L 75 110 Z" data-prov="La Rioja"/>
+      <path d="M 95 95 L 105 98 L 108 120 L 90 122 L 92 110 Z" data-prov="Córdoba"/>
+      <path d="M 105 98 L 125 115 L 130 135 L 110 135 L 108 120 Z" data-prov="Santa Fe"/>
+      <path d="M 125 115 L 140 115 L 145 130 L 130 135 Z" data-prov="Corrientes"/>
+      <path d="M 140 115 L 155 115 L 155 130 L 145 130 Z" data-prov="Misiones"/>
+      <path d="M 130 135 L 145 130 L 145 150 L 130 152 Z" data-prov="Entre Ríos"/>
+      <!-- Cuyo -->
+      <path d="M 75 110 L 92 115 L 90 135 L 72 132 Z" data-prov="San Juan"/>
+      <path d="M 72 132 L 90 135 L 90 158 L 70 155 Z" data-prov="Mendoza"/>
+      <path d="M 90 122 L 108 120 L 110 140 L 92 142 Z" data-prov="San Luis"/>
+      <!-- Pampa -->
+      <path d="M 90 142 L 130 140 L 130 165 L 90 165 Z" data-prov="La Pampa"/>
+      <path d="M 108 120 L 130 135 L 130 165 L 145 170 L 145 195 L 110 195 L 108 165 Z" data-prov="Buenos Aires"/>
+      <path d="M 128 152 L 138 152 L 138 162 L 128 162 Z" data-prov="CABA" fill="#F6B40E"/>
+      <!-- Patagonia -->
+      <path d="M 70 155 L 90 158 L 92 178 L 75 180 L 68 168 Z" data-prov="Neuquén"/>
+      <path d="M 90 158 L 110 165 L 110 195 L 92 195 L 92 178 Z" data-prov="Río Negro"/>
+      <path d="M 68 168 L 92 178 L 92 220 L 70 218 Z" data-prov="Chubut"/>
+      <path d="M 70 218 L 92 220 L 92 248 L 72 250 Z" data-prov="Santa Cruz"/>
+      <path d="M 75 252 L 95 252 L 95 268 L 75 268 Z" data-prov="T. del Fuego"/>
+    </svg>
+  </div>
+</section>
+
+<section id="poderes">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Capítulo 01 · La foto actual</div>
+      <h2 class="section-title">Los tres <em>poderes del Estado</em></h2>
+    </div>
+  </div>
+  <div class="poderes">
+    <div class="poder-card ejecutivo">
+      <div class="poder-num">01 / Poder Ejecutivo</div>
+      <h3 class="poder-title">Presidencia</h3>
+      <p class="poder-desc">Ejerce la administración del país. Lo encabeza el Presidente, electo por voto directo cada 4 años, con posibilidad de una reelección.</p>
+      <div class="poder-data">
+        <div class="poder-data-row"><span>Presidente</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Vicepresidente</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Ministerios</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Período</span><span>2023–2027</span></div>
+      </div>
+      <a href="#" class="poder-link">Ver gabinete completo</a>
+    </div>
+
+    <div class="poder-card legislativo">
+      <div class="poder-num">02 / Poder Legislativo</div>
+      <h3 class="poder-title">Congreso</h3>
+      <p class="poder-desc">Sanciona las leyes. Es bicameral: Diputados representa a la población y el Senado a las provincias. Se renueva parcialmente cada 2 años.</p>
+      <div class="poder-data">
+        <div class="poder-data-row"><span>Diputados</span><span>257 bancas</span></div>
+        <div class="poder-data-row"><span>Senadores</span><span>72 bancas</span></div>
+        <div class="poder-data-row"><span>Próxima renovación</span><span>(a cargar)</span></div>
+        <div class="poder-data-row"><span>Composición</span><span>Ver gráfico</span></div>
+      </div>
+      <a href="#" class="poder-link">Ver bloques y bancas</a>
+    </div>
+
+    <div class="poder-card judicial">
+      <div class="poder-num">03 / Poder Judicial</div>
+      <h3 class="poder-title">Corte Suprema</h3>
+      <p class="poder-desc">Aplica e interpreta las leyes. Su cabeza es la Corte Suprema de Justicia. Los jueces son vitalicios y los nombra el Ejecutivo con acuerdo del Senado.</p>
+      <div class="poder-data">
+        <div class="poder-data-row"><span>Miembros Corte</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Presidente Corte</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Procurador</span><span>(datos a cargar)</span></div>
+        <div class="poder-data-row"><span>Consejo Magist.</span><span>(datos a cargar)</span></div>
+      </div>
+      <a href="#" class="poder-link">Ver estructura judicial</a>
+    </div>
+  </div>
+</section>
+
+<section id="provincias" class="provincias-strip">
+  <div class="provincias-inner">
+    <div class="section-head" style="border-bottom-color: rgba(26,26,46,0.1);">
+      <div>
+        <div class="section-eyebrow">Capítulo 02 · El federalismo</div>
+        <h2 class="section-title">24 jurisdicciones, <em>24 realidades políticas</em></h2>
+      </div>
+    </div>
+    <div class="provincias-grid">
+      <div class="prov-chip caba">CABA</div>
+      <div class="prov-chip ba">Buenos Aires</div>
+      <div class="prov-chip">Catamarca</div>
+      <div class="prov-chip">Chaco</div>
+      <div class="prov-chip">Chubut</div>
+      <div class="prov-chip cba">Córdoba</div>
+      <div class="prov-chip">Corrientes</div>
+      <div class="prov-chip">Entre Ríos</div>
+      <div class="prov-chip">Formosa</div>
+      <div class="prov-chip">Jujuy</div>
+      <div class="prov-chip">La Pampa</div>
+      <div class="prov-chip">La Rioja</div>
+      <div class="prov-chip">Mendoza</div>
+      <div class="prov-chip">Misiones</div>
+      <div class="prov-chip">Neuquén</div>
+      <div class="prov-chip">Río Negro</div>
+      <div class="prov-chip">Salta</div>
+      <div class="prov-chip">San Juan</div>
+      <div class="prov-chip">San Luis</div>
+      <div class="prov-chip">Santa Cruz</div>
+      <div class="prov-chip">Santa Fe</div>
+      <div class="prov-chip">Santiago del Estero</div>
+      <div class="prov-chip">Tierra del Fuego</div>
+      <div class="prov-chip">Tucumán</div>
+    </div>
+  </div>
+</section>
+
+<section id="calendario" style="padding: 0;">
+  <div class="calendario">
+    <div class="calendario-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">Capítulo 03 · Qué viene</div>
+          <h2 class="section-title">Calendario <em>institucional</em></h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="event">
+          <div class="event-date">— PRÓXIMO</div>
+          <h3 class="event-title">Sesiones ordinarias</h3>
+          <p class="event-desc">Apertura del año legislativo en el Congreso de la Nación.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— 2027</div>
+          <h3 class="event-title">Elecciones presidenciales</h3>
+          <p class="event-desc">Se renuevan Presidencia, Vicepresidencia y bancas del Congreso.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— BIENAL</div>
+          <h3 class="event-title">Renovación legislativa</h3>
+          <p class="event-desc">Cada 2 años se renueva la mitad de Diputados y un tercio del Senado.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— PROVINCIAL</div>
+          <h3 class="event-title">Elecciones locales</h3>
+          <p class="event-desc">Cada provincia define su propio calendario electoral.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aprender">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Capítulo 04 · Aula abierta</div>
+      <h2 class="section-title">Aprendé desde cero <em>cómo funciona todo</em></h2>
+    </div>
+  </div>
+  <div class="educativo-grid">
+    <div class="lesson">
+      <div>
+        <div class="lesson-num">i.</div>
+        <h3 class="lesson-title">¿Qué es la división de poderes y por qué existe?</h3>
+      </div>
+      <div class="lesson-meta">
+        <span>8 MIN</span>
+        <span>NIVEL INICIAL</span>
+      </div>
+    </div>
+    <div class="lesson">
+      <div>
+        <div class="lesson-num">ii.</div>
+        <h3 class="lesson-title">El recorrido de una ley: del proyecto al Boletín Oficial.</h3>
+      </div>
+      <div class="lesson-meta">
+        <span>12 MIN</span>
+        <span>NIVEL INICIAL</span>
+      </div>
+    </div>
+    <div class="lesson">
+      <div>
+        <div class="lesson-num">iii.</div>
+        <h3 class="lesson-title">Sistema electoral argentino: cómo se cuentan los votos.</h3>
+      </div>
+      <div class="lesson-meta">
+        <span>10 MIN</span>
+        <span>NIVEL INTERMEDIO</span>
+      </div>
+    </div>
+    <div class="lesson">
+      <div>
+        <div class="lesson-num">iv.</div>
+        <h3 class="lesson-title">Federalismo: qué decide la Nación y qué decide tu provincia.</h3>
+      </div>
+      <div class="lesson-meta">
+        <span>9 MIN</span>
+        <span>NIVEL INICIAL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Política Argentina</h3>
+      <p>Un proyecto de educación cívica con datos abiertos. Sin partidismo, sin grieta. Para entender mejor el país en el que vivimos.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="#">Los poderes</a></li>
+        <li><a href="#">Provincias</a></li>
+        <li><a href="#">Calendario</a></li>
+        <li><a href="#">Aula</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Fuentes</h4>
+      <ul>
+        <li><a href="#">INDEC</a></li>
+        <li><a href="#">Cámara Nacional Electoral</a></li>
+        <li><a href="#">Congreso</a></li>
+        <li><a href="#">datos.gob.ar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre</h4>
+      <ul>
+        <li><a href="#">Manifiesto</a></li>
+        <li><a href="#">Metodología</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Para colegios</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-inner footer-meta">
+    <span>politicargentina.com.ar · v0.1 prototipo</span>
+    <span>Última actualización de datos: pendiente</span>
+  </div>
+</footer>
+
+<script src="buscador-global.js" defer></script>
+
+
+</body>
+</html>

@@ -398,4 +398,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Buscador interno -->
+  <url>
+    <loc>https://educacioncivica.com.ar/buscar.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

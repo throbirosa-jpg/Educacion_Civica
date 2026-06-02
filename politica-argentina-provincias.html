@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provincias — Política Argentina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --celeste: #74ACDF;
+    --celeste-dark: #5a8fc0;
+    --celeste-soft: #e8f2fb;
+    --sol: #F6B40E;
+    --sol-dark: #d99a00;
+    --crema: #FBF7F0;
+    --tinta: #1a1a2e;
+    --tinta-soft: #4a4a5e;
+    --linea: #d8d4cc;
+    --rojo-fed: #b8341b;
+    --verde-hist: #1f4a3d;
+    --papel: #f4ede0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--crema);
+    color: var(--tinta);
+    line-height: 1.6;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--crema);
+    border-bottom: 1px solid var(--linea);
+    padding: 1rem 2rem;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--tinta);
+  }
+  .logo-dot {
+    width: 11px;
+    height: 11px;
+    background: var(--celeste);
+    border-radius: 50%;
+    position: relative;
+  }
+  .logo-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; height: 5px;
+    background: var(--sol);
+    border-radius: 50%;
+  }
+  .breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .breadcrumb span { color: var(--tinta); font-weight: 600; }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+
+  /* ========== VIEW TOGGLE ========== */
+  .view-toggle {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 64px;
+    z-index: 90;
+  }
+  .view-toggle-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .view-tab {
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--tinta-soft);
+    border: 1px solid var(--linea);
+    background: white;
+    transition: all 0.2s;
+  }
+  .view-tab.active {
+    background: var(--tinta);
+    color: var(--crema);
+    border-color: var(--tinta);
+  }
+
+  /* ========== PANELS ========== */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* ========================================== */
+  /* VISTA 1: ÍNDICE DE PROVINCIAS              */
+  /* ========================================== */
+  .indice-header {
+    padding: 4rem 2rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .indice-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--celeste-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .indice-eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--celeste-dark);
+  }
+  .indice-header h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .indice-header h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--celeste-dark);
+    font-weight: 400;
+  }
+  .indice-header p {
+    font-size: 1.1rem;
+    color: var(--tinta-soft);
+    max-width: 700px;
+  }
+
+  /* MAPA + LISTA */
+  .indice-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .indice-mapa {
+    position: sticky;
+    top: 130px;
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    aspect-ratio: 3/4;
+  }
+  .indice-mapa svg {
+    width: 100%;
+    height: 100%;
+  }
+  .indice-mapa path {
+    fill: var(--celeste);
+    stroke: white;
+    stroke-width: 0.8;
+    cursor: pointer;
+    transition: fill 0.2s;
+  }
+  .indice-mapa path:hover {
+    fill: var(--sol);
+  }
+  .indice-mapa path.caba {
+    fill: var(--sol);
+  }
+  .indice-mapa path.activa {
+    fill: var(--rojo-fed);
+  }
+  .mapa-tooltip {
+    position: absolute;
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 0.5rem 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 10;
+    letter-spacing: 0.05em;
+  }
+
+  /* LISTA PROVINCIAS */
+  .indice-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .indice-controls h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .indice-sort {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .sort-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--linea);
+    border-radius: 100px;
+    cursor: pointer;
+    background: white;
+    letter-spacing: 0.05em;
+  }
+  .sort-chip.active { background: var(--tinta); color: var(--crema); border-color: var(--tinta); }
+
+  .provincia-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .provincia-card:hover {
+    border-color: var(--tinta);
+    transform: translateX(4px);
+  }
+  .provincia-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+  }
+  .bandera-mini {
+    width: 60px;
+    height: 38px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--linea);
+  }
+  .prov-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .prov-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .prov-meta {
+    font-size: 0.8rem;
+    color: var(--tinta-soft);
+    display: flex;
+    gap: 1rem;
+  }
+  .prov-meta span::before {
+    content: '·';
+    margin-right: 0.5rem;
+    color: var(--linea);
+  }
+  .prov-meta span:first-child::before { content: ''; margin: 0; }
+  .prov-pop {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--tinta);
+    font-weight: 500;
+  }
+  .prov-pop-label {
+    font-size: 0.65rem;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.2rem;
+  }
+
+  /* Colores de banderas (simplificadas) */
+  .b-caba { background: linear-gradient(180deg, white 0%, white 50%, #74ACDF 50%, #74ACDF 100%); }
+  .b-ba { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 33%, white 33%, white 66%, #74ACDF 66%, #74ACDF 100%); }
+  .b-catamarca { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-chaco { background: linear-gradient(180deg, #2b7a4e 0%, #2b7a4e 33%, white 33%, white 66%, #74ACDF 66%, #74ACDF 100%); }
+  .b-chubut { background: linear-gradient(90deg, #74ACDF 0%, #74ACDF 33%, white 33%, white 66%, #d62828 66%, #d62828 100%); }
+  .b-cordoba { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); position: relative; }
+  .b-cordoba::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .b-corrientes { background: linear-gradient(180deg, white 0%, white 100%); position: relative; }
+  .b-corrientes::after { content: '★'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--sol); font-size: 18px; }
+  .b-entrerios { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-formosa { background: linear-gradient(90deg, #2b7a4e 0%, #2b7a4e 25%, white 25%, white 50%, #74ACDF 50%, #74ACDF 75%, #d62828 75%, #d62828 100%); }
+  .b-jujuy { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 100%); }
+  .b-lapampa { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, #2b7a4e 50%, #2b7a4e 100%); }
+  .b-larioja { background: linear-gradient(180deg, #d62828 0%, #d62828 33%, white 33%, white 66%, #74ACDF 66%, #74ACDF 100%); }
+  .b-mendoza { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 100%); position: relative; }
+  .b-mendoza::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; background: var(--sol); border-radius: 50%; }
+  .b-misiones { background: linear-gradient(180deg, #d62828 0%, #d62828 50%, #74ACDF 50%, #74ACDF 100%); }
+  .b-neuquen { background: linear-gradient(135deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-rionegro { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-salta { background: linear-gradient(180deg, #d62828 0%, #d62828 50%, #74ACDF 50%, #74ACDF 100%); }
+  .b-sanjuan { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 33%, white 33%, white 66%, #d62828 66%, #d62828 100%); }
+  .b-sanluis { background: linear-gradient(135deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-santacruz { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-santafe { background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 100%); position: relative; }
+  .b-santafe::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid white; }
+  .b-santiago { background: linear-gradient(180deg, white 0%, white 50%, #74ACDF 50%, #74ACDF 100%); }
+  .b-tierra { background: linear-gradient(45deg, #74ACDF 0%, #74ACDF 50%, white 50%, white 100%); }
+  .b-tucuman { background: linear-gradient(180deg, white 0%, white 100%); position: relative; }
+  .b-tucuman::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 16px; height: 16px; background: var(--sol); border-radius: 50%; }
+
+  /* ========================================== */
+  /* VISTA 2: FICHA INDIVIDUAL                  */
+  /* ========================================== */
+  .prov-header {
+    background: linear-gradient(180deg, var(--celeste) 0%, var(--celeste-dark) 100%);
+    color: var(--crema);
+    padding: 3rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .prov-header::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    pointer-events: none;
+  }
+  .prov-header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    position: relative;
+  }
+  .prov-id {
+    display: flex;
+    gap: 2rem;
+    align-items: end;
+  }
+  .prov-bandera-grande {
+    width: 140px;
+    height: 90px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 2px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .prov-bandera-grande.ba {
+    background: linear-gradient(180deg, #74ACDF 0%, #74ACDF 33%, white 33%, white 66%, #74ACDF 66%, #74ACDF 100%);
+  }
+  .prov-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+  .prov-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .prov-titulo em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .prov-capital {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
+    color: rgba(255,255,255,0.85);
+  }
+  .prov-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .prov-stat-box {
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.1);
+    padding: 1.25rem;
+  }
+  .prov-stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .prov-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* TABS DE FICHA */
+  .ficha-tabs {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 0 2rem;
+    position: sticky;
+    top: 64px;
+    z-index: 80;
+  }
+  .ficha-tabs-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+  }
+  .ficha-tab {
+    padding: 1.25rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--tinta-soft);
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .ficha-tab:hover { color: var(--tinta); }
+  .ficha-tab.active {
+    color: var(--tinta);
+    border-bottom-color: var(--celeste-dark);
+    font-weight: 600;
+  }
+
+  /* SECCIONES FICHA */
+  .ficha-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .ficha-section.papel {
+    background: var(--papel);
+    margin: 0;
+    max-width: none;
+  }
+  .ficha-section.papel .ficha-section-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .ficha-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .ficha-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .ficha-title em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--celeste-dark);
+  }
+  .ficha-desc {
+    color: var(--tinta-soft);
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* TRES PODERES PROVINCIALES */
+  .poderes-prov {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .poder-prov {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.75rem;
+    border-top: 3px solid var(--celeste);
+  }
+  .poder-prov.legi { border-top-color: var(--sol); }
+  .poder-prov.judi { border-top-color: var(--rojo-fed); }
+  .poder-prov-cargo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .poder-prov-foto {
+    width: 60px;
+    height: 60px;
+    background: var(--celeste-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: var(--celeste-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .poder-prov.legi .poder-prov-foto { background: #fdf3d8; color: var(--sol-dark); }
+  .poder-prov.judi .poder-prov-foto { background: #f8e6e3; color: var(--rojo-fed); }
+  .poder-prov-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
+  .poder-prov-detalle {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    margin-bottom: 1rem;
+  }
+  .poder-prov-data {
+    border-top: 1px dashed var(--linea);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+  }
+  .poder-prov-data-row { display: flex; justify-content: space-between; }
+  .poder-prov-data-row span:first-child { color: var(--tinta-soft); }
+  .poder-prov-data-row span:last-child { font-weight: 600; }
+
+  /* REPRESENTACIÓN NACIONAL */
+  .repnac-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .repnac-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2rem;
+  }
+  .repnac-num {
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--celeste-dark);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .repnac-label {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .repnac-desc {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+  }
+
+  /* PARTICULARIDADES */
+  .particularidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .partic-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem;
+    border-left: 3px solid var(--celeste);
+  }
+  .partic-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .partic-desc {
+    font-size: 0.88rem;
+    color: var(--tinta-soft);
+    line-height: 1.5;
+  }
+  .partic-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+    background: var(--celeste-soft);
+    color: var(--celeste-dark);
+    margin-top: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* MUNICIPIOS PREVIEW */
+  .municipios-preview {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .municipios-stat {
+    font-family: 'Fraunces', serif;
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: var(--celeste-dark);
+    line-height: 1;
+  }
+  .municipios-stat-label {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    margin-top: 0.5rem;
+  }
+  .municipios-desc h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .municipios-desc p {
+    color: var(--tinta-soft);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .municipios-link {
+    color: var(--celeste-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .municipios-link::after {
+    content: '→';
+    transition: transform 0.2s;
+  }
+  .municipios-link:hover::after { transform: translateX(4px); }
+
+  /* FOOTER NOTA */
+  .nota-fuentes {
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--linea);
+  }
+
+  footer {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 900px) {
+    .indice-layout { grid-template-columns: 1fr; }
+    .indice-mapa { position: relative; top: 0; }
+    .prov-header-inner { grid-template-columns: 1fr; }
+    .prov-id { flex-direction: column; align-items: start; gap: 1.5rem; }
+    .poderes-prov { grid-template-columns: 1fr; }
+    .repnac-grid { grid-template-columns: 1fr; }
+    .particularidades { grid-template-columns: 1fr; }
+    .municipios-preview { grid-template-columns: 1fr; gap: 1.5rem; }
+    .prov-stats { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      Política Argentina
+    </a>
+    <div class="breadcrumb">
+      <a href="#">Inicio</a> · <span id="bc-current">Provincias</span>
+    </div>
+  </div>
+</nav>
+
+<div class="view-toggle">
+  <div class="view-toggle-inner">
+    <button class="view-tab active" data-view="indice">Índice nacional</button>
+    <button class="view-tab" data-view="ficha">Ver ficha (ej: Buenos Aires)</button>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- PANEL 1: ÍNDICE DE PROVINCIAS              -->
+<!-- ========================================== -->
+<div class="panel active" id="panel-indice">
+
+  <div class="indice-header">
+    <div class="indice-eyebrow">— 24 jurisdicciones</div>
+    <h1>Las <em>provincias</em> de Argentina, una por una.</h1>
+    <p>Argentina es un país federal: 23 provincias y la Ciudad Autónoma de Buenos Aires. Cada una tiene su propia constitución, sus propios poderes y sus propias reglas. Explorá la diversidad institucional del país.</p>
+  </div>
+
+  <div class="indice-layout">
+    <div class="indice-mapa">
+      <div class="mapa-tooltip" id="mapaTooltip"></div>
+      <svg viewBox="0 0 280 600" preserveAspectRatio="xMidYMid meet">
+        <!-- NOA: Jujuy (esquina superior, forma trapezoidal alargada) -->
+        <path d="M 110 25 L 135 22 L 142 35 L 148 55 L 138 72 L 122 78 L 110 70 L 102 50 L 105 35 Z" data-prov="Jujuy"/>
+
+        <!-- Salta (forma de L invertida hacia el este) -->
+        <path d="M 102 70 L 122 78 L 138 72 L 165 75 L 180 95 L 195 105 L 200 125 L 185 140 L 165 145 L 145 138 L 128 142 L 115 130 L 105 110 L 95 95 Z" data-prov="Salta"/>
+
+        <!-- Formosa (alargada este-oeste, estrecha) -->
+        <path d="M 180 95 L 220 90 L 245 105 L 250 130 L 230 140 L 200 138 L 195 122 L 185 110 Z" data-prov="Formosa"/>
+
+        <!-- Chaco (debajo de Formosa, más ancha al este) -->
+        <path d="M 195 138 L 230 140 L 245 155 L 248 185 L 230 200 L 210 200 L 195 185 L 188 165 L 192 148 Z" data-prov="Chaco"/>
+
+        <!-- Misiones (forma característica de "uña" en el NE) -->
+        <path d="M 248 165 L 265 158 L 270 175 L 268 200 L 258 215 L 245 220 L 240 200 L 245 180 Z" data-prov="Misiones"/>
+
+        <!-- Tucumán (chica, central NOA) -->
+        <path d="M 115 130 L 128 142 L 135 158 L 128 172 L 113 168 L 108 152 Z" data-prov="Tucumán"/>
+
+        <!-- Catamarca (al oeste, alargada N-S) -->
+        <path d="M 95 95 L 105 110 L 108 152 L 100 175 L 88 178 L 80 160 L 78 130 L 82 110 Z" data-prov="Catamarca"/>
+
+        <!-- Santiago del Estero (centro, forma rectangular) -->
+        <path d="M 128 142 L 145 138 L 165 145 L 175 165 L 178 195 L 165 210 L 145 208 L 135 195 L 128 172 L 135 158 Z" data-prov="Santiago del Estero"/>
+
+        <!-- La Rioja (oeste, alargada) -->
+        <path d="M 78 130 L 88 178 L 92 215 L 80 220 L 70 200 L 65 170 L 70 145 Z" data-prov="La Rioja"/>
+
+        <!-- Corrientes (forma redondeada en el NE, junto a Misiones y Paraná) -->
+        <path d="M 210 200 L 230 200 L 245 220 L 250 245 L 245 270 L 225 275 L 205 265 L 195 248 L 200 220 Z" data-prov="Corrientes"/>
+
+        <!-- Santa Fe (centro-este, alargada N-S) -->
+        <path d="M 165 210 L 195 200 L 200 220 L 195 248 L 188 275 L 175 295 L 158 295 L 152 270 L 155 240 L 162 220 Z" data-prov="Santa Fe"/>
+
+        <!-- Entre Ríos (esquina baja del Litoral, redondeada) -->
+        <path d="M 195 248 L 205 265 L 215 285 L 210 315 L 195 325 L 180 318 L 175 295 L 188 275 Z" data-prov="Entre Ríos"/>
+
+        <!-- Córdoba (central, grande, forma de pera) -->
+        <path d="M 100 175 L 108 152 L 128 172 L 135 195 L 145 208 L 152 240 L 155 270 L 140 290 L 120 295 L 105 280 L 95 250 L 92 215 L 95 195 Z" data-prov="Córdoba"/>
+
+        <!-- San Juan (oeste, junto a Mendoza) -->
+        <path d="M 65 170 L 70 200 L 80 220 L 78 245 L 65 250 L 55 235 L 50 205 L 55 180 Z" data-prov="San Juan"/>
+
+        <!-- San Luis (centro-oeste, chica) -->
+        <path d="M 80 220 L 92 215 L 95 250 L 90 280 L 78 285 L 70 270 L 68 250 L 78 245 Z" data-prov="San Luis"/>
+
+        <!-- Mendoza (oeste, grande, alargada N-S) -->
+        <path d="M 50 205 L 55 235 L 65 250 L 68 250 L 70 270 L 65 305 L 50 320 L 38 305 L 32 275 L 32 240 L 40 215 Z" data-prov="Mendoza"/>
+
+        <!-- La Pampa (centro-sur, rectangular) -->
+        <path d="M 65 305 L 90 280 L 105 280 L 120 295 L 125 330 L 115 360 L 90 365 L 70 350 L 62 325 Z" data-prov="La Pampa"/>
+
+        <!-- Buenos Aires (forma característica grande, hacia el SE) -->
+        <path class="activa" d="M 120 295 L 140 290 L 155 270 L 175 295 L 180 318 L 195 325 L 200 355 L 195 390 L 185 420 L 170 445 L 145 455 L 125 445 L 115 420 L 115 390 L 120 360 L 125 330 Z" data-prov="Buenos Aires"/>
+
+        <!-- CABA (puntito amarillo) -->
+        <path class="caba" d="M 172 332 L 182 332 L 182 343 L 172 343 Z" data-prov="CABA"/>
+
+        <!-- PATAGONIA: Neuquén (NO patagónico) -->
+        <path d="M 32 305 L 50 320 L 65 305 L 70 350 L 60 365 L 38 365 L 28 350 L 25 325 Z" data-prov="Neuquén"/>
+
+        <!-- Río Negro (atravesando E-O, ensanchada en el este) -->
+        <path d="M 38 365 L 70 350 L 90 365 L 115 390 L 115 420 L 95 425 L 70 420 L 50 410 L 32 395 Z" data-prov="Río Negro"/>
+
+        <!-- Chubut (más ancha, ensanchamiento característico) -->
+        <path d="M 32 395 L 50 410 L 70 420 L 95 425 L 100 460 L 95 490 L 78 495 L 55 490 L 38 475 L 25 450 L 22 420 Z" data-prov="Chubut"/>
+
+        <!-- Santa Cruz (alargada hacia el sur, esquina inferior) -->
+        <path d="M 25 490 L 38 475 L 55 490 L 78 495 L 85 525 L 78 555 L 60 570 L 42 565 L 28 545 L 18 515 Z" data-prov="Santa Cruz"/>
+
+        <!-- Tierra del Fuego (isla separada al sur) -->
+        <path d="M 50 580 L 75 578 L 80 588 L 65 595 L 48 593 Z" data-prov="Tierra del Fuego"/>
+      </svg>
+    </div>
+
+    <div>
+      <div class="indice-controls">
+        <h2>Listado de jurisdicciones</h2>
+        <div class="indice-sort">
+          <span class="sort-chip active">ALFABÉTICO</span>
+          <span class="sort-chip">POBLACIÓN</span>
+          <span class="sort-chip">SUPERFICIE</span>
+        </div>
+      </div>
+
+      <div class="provincia-card" style="border-left: 4px solid var(--sol);">
+        <div class="bandera-mini b-caba"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Ciudad Autónoma de Buenos Aires</div>
+          <div class="prov-meta"><span>Capital del país</span><span>1 jurisdicción especial</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">3,1 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card" style="border-left: 4px solid var(--celeste-dark);">
+        <div class="bandera-mini b-ba"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Buenos Aires</div>
+          <div class="prov-meta"><span>Capital: La Plata</span><span>135 partidos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">17,5 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-catamarca"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Catamarca</div>
+          <div class="prov-meta"><span>Capital: SFV de Catamarca</span><span>16 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">429 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-chaco"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Chaco</div>
+          <div class="prov-meta"><span>Capital: Resistencia</span><span>25 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">1,2 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-chubut"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Chubut</div>
+          <div class="prov-meta"><span>Capital: Rawson</span><span>15 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">615 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card" style="border-left: 4px solid var(--rojo-fed);">
+        <div class="bandera-mini b-cordoba"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Córdoba</div>
+          <div class="prov-meta"><span>Capital: Córdoba</span><span>26 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">3,8 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-corrientes"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Corrientes</div>
+          <div class="prov-meta"><span>Capital: Corrientes</span><span>25 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">1,2 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-entrerios"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Entre Ríos</div>
+          <div class="prov-meta"><span>Capital: Paraná</span><span>17 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">1,4 M</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-formosa"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Formosa</div>
+          <div class="prov-meta"><span>Capital: Formosa</span><span>9 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">606 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-jujuy"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">Jujuy</div>
+          <div class="prov-meta"><span>Capital: San Salvador</span><span>16 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">797 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-lapampa"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">La Pampa</div>
+          <div class="prov-meta"><span>Capital: Santa Rosa</span><span>22 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">366 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div class="provincia-card">
+        <div class="bandera-mini b-larioja"></div>
+        <div class="prov-info">
+          <div class="prov-nombre">La Rioja</div>
+          <div class="prov-meta"><span>Capital: La Rioja</span><span>18 departamentos</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div class="prov-pop">393 mil</div>
+          <div class="prov-pop-label">habitantes</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; padding: 2rem; color: var(--tinta-soft); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em;">
+        — 12 PROVINCIAS MÁS —
+      </div>
+
+      <p class="nota-fuentes">
+        Población estimada Censo 2022 (INDEC). Cantidad de departamentos a verificar por provincia. Algunas capitales abreviadas por espacio.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- PANEL 2: FICHA INDIVIDUAL (BUENOS AIRES)   -->
+<!-- ========================================== -->
+<div class="panel" id="panel-ficha">
+
+  <header class="prov-header">
+    <div class="prov-header-inner">
+      <div class="prov-id">
+        <div class="prov-bandera-grande ba"></div>
+        <div>
+          <div class="prov-eyebrow">— Provincia 02 de 24</div>
+          <h1 class="prov-titulo">Buenos <em>Aires</em></h1>
+          <div class="prov-capital">Capital: La Plata · Lema: "Tradición y progreso"</div>
+        </div>
+      </div>
+
+      <div class="prov-stats">
+        <div class="prov-stat-box">
+          <div class="prov-stat-num">17,5 M</div>
+          <div class="prov-stat-label">Habitantes · Censo 2022</div>
+        </div>
+        <div class="prov-stat-box">
+          <div class="prov-stat-num">307.571</div>
+          <div class="prov-stat-label">km² · 11% del territorio</div>
+        </div>
+        <div class="prov-stat-box">
+          <div class="prov-stat-num">135</div>
+          <div class="prov-stat-label">Partidos (municipios)</div>
+        </div>
+        <div class="prov-stat-box">
+          <div class="prov-stat-num">38%</div>
+          <div class="prov-stat-label">Del padrón electoral nacional</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ficha-tabs">
+    <div class="ficha-tabs-inner">
+      <div class="ficha-tab active">Resumen</div>
+      <div class="ficha-tab">Poderes provinciales</div>
+      <div class="ficha-tab">Representación nacional</div>
+      <div class="ficha-tab">Municipios</div>
+      <div class="ficha-tab">Datos electorales</div>
+      <div class="ficha-tab">Historia</div>
+    </div>
+  </div>
+
+  <!-- TRES PODERES PROVINCIALES -->
+  <section class="ficha-section">
+    <div class="ficha-eyebrow">— Capítulo 01 · La foto actual</div>
+    <h2 class="ficha-title">Los tres <em>poderes provinciales</em></h2>
+    <p class="ficha-desc">Cada provincia tiene sus propios tres poderes, en paralelo a los nacionales. Buenos Aires tiene la particularidad de tener una legislatura <strong>bicameral</strong> (con Senado y Diputados provinciales), como solo 7 provincias más.</p>
+
+    <div class="poderes-prov">
+      <div class="poder-prov">
+        <div class="poder-prov-cargo">Ejecutivo Provincial</div>
+        <div class="poder-prov-foto">G</div>
+        <div class="poder-prov-nombre">[Gobernador/a]</div>
+        <div class="poder-prov-detalle">Espacio político · Vice: [Nombre]</div>
+        <div class="poder-prov-data">
+          <div class="poder-prov-data-row"><span>Mandato</span><span>4 años</span></div>
+          <div class="poder-prov-data-row"><span>Reelección</span><span>1 consecutiva</span></div>
+          <div class="poder-prov-data-row"><span>Asumió</span><span>10 dic. 2023</span></div>
+          <div class="poder-prov-data-row"><span>Hasta</span><span>10 dic. 2027</span></div>
+        </div>
+      </div>
+
+      <div class="poder-prov legi">
+        <div class="poder-prov-cargo">Legislatura Bicameral</div>
+        <div class="poder-prov-foto">L</div>
+        <div class="poder-prov-nombre">Honorable Legislatura</div>
+        <div class="poder-prov-detalle">Senado + Diputados Provinciales</div>
+        <div class="poder-prov-data">
+          <div class="poder-prov-data-row"><span>Senadores prov.</span><span>46 bancas</span></div>
+          <div class="poder-prov-data-row"><span>Diputados prov.</span><span>92 bancas</span></div>
+          <div class="poder-prov-data-row"><span>Total</span><span>138 bancas</span></div>
+          <div class="poder-prov-data-row"><span>Renovación</span><span>Cada 2 años</span></div>
+        </div>
+      </div>
+
+      <div class="poder-prov judi">
+        <div class="poder-prov-cargo">Judicial Provincial</div>
+        <div class="poder-prov-foto">J</div>
+        <div class="poder-prov-nombre">Suprema Corte de Justicia</div>
+        <div class="poder-prov-detalle">Máximo tribunal bonaerense</div>
+        <div class="poder-prov-data">
+          <div class="poder-prov-data-row"><span>Miembros</span><span>7 jueces</span></div>
+          <div class="poder-prov-data-row"><span>Sede</span><span>La Plata</span></div>
+          <div class="poder-prov-data-row"><span>Mandato</span><span>Vitalicio</span></div>
+          <div class="poder-prov-data-row"><span>Procurador</span><span>[Nombre]</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="nota-fuentes">Datos a verificar contra gba.gob.ar, hcdiputados-ba.gov.ar, scba.gov.ar</p>
+  </section>
+
+  <!-- REPRESENTACIÓN NACIONAL -->
+  <section class="ficha-section papel">
+    <div class="ficha-section-inner">
+      <div class="ficha-eyebrow">— Capítulo 02 · En el Congreso de la Nación</div>
+      <h2 class="ficha-title">¿Cuánto <em>pesa</em> Buenos Aires a nivel federal?</h2>
+      <p class="ficha-desc">Buenos Aires concentra el mayor poder electoral del país: aporta más diputados nacionales que cualquier otra provincia, aunque en el Senado todas tienen igual representación (3 bancas).</p>
+
+      <div class="repnac-grid">
+        <div class="repnac-card">
+          <div class="repnac-num">70</div>
+          <div class="repnac-label">Diputados Nacionales</div>
+          <div class="repnac-desc">Es la provincia con más diputados (27% del total). La cantidad se asigna en proporción a la población, según el último censo.</div>
+        </div>
+        <div class="repnac-card">
+          <div class="repnac-num">3</div>
+          <div class="repnac-label">Senadores Nacionales</div>
+          <div class="repnac-desc">Como todas las provincias y CABA. Es el principio igualitario del federalismo argentino: cada jurisdicción tiene igual voz en el Senado.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTICULARIDADES INSTITUCIONALES -->
+  <section class="ficha-section">
+    <div class="ficha-eyebrow">— Capítulo 03 · Lo que la hace única</div>
+    <h2 class="ficha-title">Particularidades <em>institucionales</em></h2>
+    <p class="ficha-desc">Cada provincia tiene su propia constitución y sus reglas. Estas son las características más distintivas de Buenos Aires.</p>
+
+    <div class="particularidades">
+      <div class="partic-card">
+        <div class="partic-titulo">Legislatura bicameral</div>
+        <div class="partic-desc">Una de las 8 provincias con dos cámaras legislativas. La mayoría tiene legislatura unicameral.</div>
+        <span class="partic-tag">8 DE 24 JURISDICCIONES</span>
+      </div>
+      <div class="partic-card">
+        <div class="partic-titulo">Reelección limitada</div>
+        <div class="partic-desc">El Gobernador puede ser reelecto una sola vez consecutiva. Luego debe pasar un período.</div>
+        <span class="partic-tag">CONSTITUCIÓN PROVINCIAL</span>
+      </div>
+      <div class="partic-card">
+        <div class="partic-titulo">Conurbano bonaerense</div>
+        <div class="partic-desc">Los 24 partidos del Gran Buenos Aires concentran el 60% de la población provincial.</div>
+        <span class="partic-tag">FENÓMENO ÚNICO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUNICIPIOS -->
+  <section class="ficha-section papel">
+    <div class="ficha-section-inner">
+      <div class="ficha-eyebrow">— Capítulo 04 · El nivel municipal</div>
+      <h2 class="ficha-title">135 <em>partidos</em>, 135 intendencias</h2>
+      <p class="ficha-desc">En Buenos Aires los municipios se llaman "partidos". Cada uno tiene un intendente y un concejo deliberante propios.</p>
+
+      <div class="municipios-preview">
+        <div>
+          <div class="municipios-stat">135</div>
+          <div class="municipios-stat-label">PARTIDOS · INTENDENCIAS</div>
+        </div>
+        <div class="municipios-desc">
+          <h3>Una galaxia de gobiernos locales</h3>
+          <p>Buenos Aires tiene más municipios que cualquier otra provincia. Cada partido elige su propio intendente cada 4 años, y un concejo deliberante que se renueva cada 2. Los 24 partidos del conurbano son los más poblados, y concentran la mayor disputa política provincial.</p>
+          <a href="#" class="municipios-link">Ver lista completa de partidos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA HISTORIA -->
+  <section class="ficha-section" style="padding-bottom: 6rem;">
+    <div style="background: var(--verde-hist); color: var(--crema); padding: 3rem; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: center;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--sol); letter-spacing: 0.2em; margin-bottom: 0.75rem;">★ ACCESO PREMIUM</div>
+        <h2 style="font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 500; line-height: 1.1; margin-bottom: 0.75rem;">Mirá <em style="font-family: 'Instrument Serif', serif; font-style: italic; color: var(--sol);">todos los gobernadores</em> de Buenos Aires desde 1820.</h2>
+        <p style="color: rgba(251,247,240,0.75); margin: 0;">El archivo histórico premium incluye la sucesión completa de gobernadores, intervenciones federales y contexto histórico provincia por provincia.</p>
+      </div>
+      <a href="#" style="background: var(--sol); color: var(--tinta); padding: 1rem 2rem; border-radius: 100px; font-weight: 600; text-decoration: none; justify-self: end;">Explorar archivo →</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  politicargentina.com.ar · Sección provincias v0.1 · Datos demográficos: INDEC Censo 2022 · Datos institucionales a verificar
+</footer>
+
+<script>
+  // Toggle entre vistas
+  const tabs = document.querySelectorAll('.view-tab');
+  const panels = document.querySelectorAll('.panel');
+  const bc = document.getElementById('bc-current');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-view');
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+      bc.textContent = target === 'indice' ? 'Provincias' : 'Provincias · Buenos Aires';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Click en provincia del mapa -> ir a ficha
+  const paths = document.querySelectorAll('.indice-mapa path');
+  const tooltip = document.getElementById('mapaTooltip');
+  const mapa = document.querySelector('.indice-mapa');
+
+  paths.forEach(path => {
+    path.addEventListener('mouseenter', () => {
+      tooltip.textContent = path.getAttribute('data-prov');
+      tooltip.style.opacity = '1';
+    });
+    path.addEventListener('mousemove', (e) => {
+      const rect = mapa.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - rect.left + 15) + 'px';
+      tooltip.style.top = (e.clientY - rect.top + 10) + 'px';
+    });
+    path.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = '0';
+    });
+    path.addEventListener('click', () => {
+      // Si clickea Buenos Aires va a ficha
+      if (path.getAttribute('data-prov') === 'Buenos Aires') {
+        document.querySelector('[data-view="ficha"]').click();
+      }
+    });
+  });
+
+  // Click en card de provincia BA -> ir a ficha
+  document.querySelectorAll('.provincia-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const nombre = card.querySelector('.prov-nombre').textContent;
+      if (nombre === 'Buenos Aires') {
+        document.querySelector('[data-view="ficha"]').click();
+      }
+    });
+  });
+</script>
+
+<script src="buscador-global.js" defer></script>
+
+
+</body>
+</html>

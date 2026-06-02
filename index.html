@@ -202,6 +202,38 @@
     font-weight: 500;
     text-decoration: none;
   }
+  .nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--crema-warm);
+    border: 1px solid var(--linea);
+    padding: 0.5rem 0.8rem 0.5rem 0.7rem;
+    color: var(--tinta-soft);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    font-family: 'Inter', system-ui, sans-serif;
+    cursor: pointer;
+    min-width: 220px;
+  }
+  .nav-search:hover { border-color: var(--tinta); color: var(--tinta); background: white; }
+  .nav-search svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .nav-search-text { flex: 1; opacity: 0.85; }
+  .nav-search-kbd {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .nav-search { min-width: 0; padding: 0.5rem; }
+    .nav-search-text, .nav-search-kbd { display: none; }
+  }
 
   /* ========== HERO ========== */
   .hero {
@@ -1317,7 +1349,14 @@
       <li><a href="caba-en-profundidad.html">CABA</a></li>
       <li><a href="#aprender">Aula</a></li>
     </ul>
-    <a href="#" class="nav-cta">Suscribirse</a>
+    <a href="buscar.html" class="nav-search" aria-label="Buscar en el sitio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="20" y1="20" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span class="nav-search-text">Buscar en el sitio...</span>
+      <span class="nav-search-kbd">⌘K</span>
+    </a>
   </div>
 </nav>
 
@@ -1990,6 +2029,8 @@
     <span>Última actualización de datos: mayo 2026</span>
   </div>
 </footer>
+<script src="buscador-global.js" defer></script>
+
 
 </body>
 </html>
