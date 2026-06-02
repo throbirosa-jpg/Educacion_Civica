@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Financiamiento de campañas (11.01) — Educación Cívica</title>
+<meta name="description" content="Cómo se financian las campañas electorales en Argentina. La Ley 26.215 (2006), su reforma sustancial de 2019 (Ley 27.504): bancarización obligatoria, reincorporación de aportes empresariales y plataforma pública. El Fondo Partidario Permanente, los aportantes prohibidos, los espacios de publicidad audiovisual gratuitos y el régimen de sanciones. Casos resonantes: los aportantes truchos de 2017.">
+<link rel="canonical" href="https://educacioncivica.com.ar/financiamiento-campanas.html">
+
+<meta property="og:title" content="Financiamiento de campañas electorales · Argentina">
+<meta property="og:description" content="La arquitectura legal del financiamiento político: Ley 26.215, reforma 2019, Fondo Partidario, aportantes prohibidos, sanciones y casos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/financiamiento-campanas.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>11.01</strong> de la sección Análisis transversales</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="analisis-transversales.html">Análisis transversales</a> ·
+      <span>Financiamiento de campañas</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 11.01 · Análisis transversal</div>
+    <h1 class="page-title">Financiamiento de <em>campañas</em> electorales</h1>
+    <div class="page-subtitulo">— Cómo se paga la política en Argentina</div>
+    <p class="page-intro">Toda campaña electoral cuesta dinero: alquilar locales partidarios, imprimir boletas, pagar publicidad, contratar encuestadores, pagar viáticos a fiscales, sostener actos. La pregunta institucional clave es <strong>quién paga, cuánto, con qué límites y con qué controles</strong>. La respuesta argentina vigente la da la <strong>Ley 26.215 de Financiamiento de los Partidos Políticos</strong>, sancionada el <strong>20 de diciembre de 2006</strong> y reformada sustancialmente por la <strong>Ley 27.504 en mayo de 2019</strong>. El sistema es <strong>mixto</strong>: combina <strong>aportes públicos</strong> del Estado (Fondo Partidario Permanente + aportes extraordinarios de campaña) con <strong>aportes privados</strong> de personas humanas y, desde 2019, también de personas jurídicas (con bancarización obligatoria). La <strong>Cámara Nacional Electoral</strong> controla las rendiciones de cuentas y la <strong>Dirección Nacional Electoral</strong> distribuye los fondos públicos. El caso de los <strong>"aportantes truchos" de 2017</strong> y la creación de la plataforma pública de aportantes en 2019 marcan los hitos recientes del sistema.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2006</div>
+        <div class="page-stat-label">Sanción de la Ley 26.215</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2019</div>
+        <div class="page-stat-label">Reforma sustancial · Ley 27.504</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">Mixto</div>
+        <div class="page-stat-label">Modelo público + privado</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1%</div>
+        <div class="page-stat-label">Umbral del padrón para aporte público</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#por-que-importa">01 · Por qué importa</a></li>
+      <li><a href="#ley-26215">02 · La Ley 26.215 (2006)</a></li>
+      <li><a href="#modelo-mixto">03 · El modelo mixto</a></li>
+      <li><a href="#fondo-partidario">04 · El Fondo Partidario</a></li>
+      <li><a href="#prohibidos">05 · Aportantes prohibidos</a></li>
+      <li><a href="#reforma-2019">06 · La reforma de 2019</a></li>
+      <li><a href="#espacios-publicidad">07 · Espacios de publicidad</a></li>
+      <li><a href="#rendicion">08 · Rendición y sanciones</a></li>
+      <li><a href="#aportantes-truchos">09 · El caso de 2017</a></li>
+      <li><a href="#tensiones">10 · Tensiones del sistema</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="por-que-importa">
+      <div class="seccion-num">01 · Por qué importa</div>
+      <h2>Por qué importa cómo se <em>financia</em> la política</h2>
+
+      <p>El financiamiento de las campañas electorales es uno de los <strong>nudos más sensibles</strong> de cualquier democracia. La razón es directa: el dinero condiciona la política. Quien aporta a una campaña ganadora puede esperar algo a cambio —explícito o implícito—, y los partidos sin acceso a recursos quedan estructuralmente en desventaja. Por eso todos los sistemas democráticos del mundo regulan el financiamiento político, aunque con enfoques muy distintos.</p>
+
+      <p>Las preguntas centrales que todo régimen de financiamiento debe responder son:</p>
+
+      <ul>
+        <li><strong>¿Quién paga?</strong> ¿El Estado con fondos públicos, los privados con sus aportes, o una combinación?</li>
+        <li><strong>¿Quién puede aportar y quién no?</strong> ¿Las empresas? ¿Los contratistas del Estado? ¿Los extranjeros?</li>
+        <li><strong>¿Cuánto puede aportar cada uno?</strong> ¿Hay un techo por aportante? ¿Por campaña? ¿Por categoría electoral?</li>
+        <li><strong>¿Por qué medios?</strong> ¿En efectivo? ¿Solo bancarizado? ¿Por la web?</li>
+        <li><strong>¿Cómo se controla?</strong> ¿Qué organismo audita las rendiciones? ¿Qué sanciones hay si se incumple?</li>
+        <li><strong>¿Qué se publica?</strong> ¿Los nombres de los aportantes y los montos son públicos o secretos?</li>
+      </ul>
+
+      <p>La <strong>respuesta argentina vigente</strong> a estas preguntas se construye sobre tres normas centrales: la <strong>Ley 26.215 de Financiamiento de los Partidos Políticos</strong> (de 2006, base del sistema), la <strong>Ley 26.571 de PASO</strong> (de 2009, que incorporó el régimen de espacios publicitarios audiovisuales gratuitos) y la <strong>Ley 27.504 de 2019</strong> (que reformó sustancialmente la 26.215 introduciendo bancarización y aportes empresariales). El conjunto es complementado por el <strong>Código Nacional Electoral</strong> y por la jurisprudencia de la Cámara Nacional Electoral.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una tensión inevitable</div>
+        <p>Cualquier régimen de financiamiento navega entre <strong>dos riesgos opuestos</strong>. Si el sistema es <strong>demasiado restrictivo</strong> (prohíbe casi todo y limita mucho), empuja el dinero hacia los canales informales y el "negro": se sigue financiando pero sin trazabilidad. Si es <strong>demasiado permisivo</strong>, abre la puerta al financiamiento opaco de grupos económicos que buscan condicionar a los gobiernos electos. La búsqueda de equilibrio entre transparencia, eficacia regulatoria y financiamiento suficiente es una discusión permanente en todas las democracias.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-26215">
+      <div class="seccion-num">02 · La Ley 26.215</div>
+      <h2>La <em>arquitectura</em> de la Ley 26.215</h2>
+
+      <p>La <strong>Ley 26.215</strong> de Financiamiento de los Partidos Políticos fue <strong>sancionada el 20 de diciembre de 2006</strong> y <strong>promulgada de hecho el 15 de enero de 2007</strong>, durante el primer gobierno de Néstor Kirchner. Reemplazó a la Ley 25.600 anterior. Constituye el marco normativo vigente del sistema, aunque con reformas posteriores significativas —en particular la Ley 27.504 de 2019—.</p>
+
+      <p>La ley regula <strong>dos circuitos diferenciados</strong> de financiamiento:</p>
+
+      <ul>
+        <li><strong>Financiamiento partidario</strong>: los recursos que reciben los partidos políticos para su funcionamiento ordinario (alquileres, sueldos, capacitación, investigación). Se llama <em>desenvolvimiento institucional</em>.</li>
+        <li><strong>Financiamiento de campaña</strong>: los recursos específicos que se destinan a las campañas electorales (publicidad, locales, materiales, fiscalización). Tiene reglas propias, más estrictas en materia de bancarización y publicidad.</li>
+      </ul>
+
+      <h3>Estructura formal de la ley</h3>
+
+      <p>La Ley 26.215 está organizada en tres títulos principales:</p>
+
+      <ul>
+        <li><strong>Título I · Del patrimonio de los partidos políticos</strong>. Define los bienes y recursos partidarios, la exención impositiva, el Fondo Partidario Permanente, los aportantes prohibidos, los aportes privados y la rendición patrimonial anual ante la Justicia Electoral.</li>
+        <li><strong>Título II · Campañas electorales</strong>. Regula la duración de campaña, los fondos electorales (cuenta bancaria única por alianza), el límite de gastos por categoría, el aporte público de campaña y el aporte privado de campaña.</li>
+        <li><strong>Título III · Control de financiamiento</strong>. Incluye el Capítulo III bis sobre espacios de publicidad audiovisual (incorporado por la Ley 26.571 de 2009), el régimen de auditoría, los plazos de presentación y las sanciones.</li>
+      </ul>
+
+      <h3>Las leyes complementarias</h3>
+
+      <p>La Ley 26.215 no opera sola. Forma un <strong>entramado normativo</strong> con otras leyes:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Norma</th>
+              <th>Año</th>
+              <th>Aporte al sistema</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ley 23.298</strong> · Orgánica de Partidos Políticos</td>
+              <td>1985</td>
+              <td>Marco general: requisitos de reconocimiento partidario, cartas orgánicas, padrón de afiliados.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 26.215</strong> · Financiamiento de Partidos</td>
+              <td>2006</td>
+              <td>Base actual del régimen: Fondo Partidario, modelo mixto, aportantes prohibidos.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 26.571</strong> · Democratización política</td>
+              <td>2009</td>
+              <td>Incorporó las PASO. Añadió el Capítulo III bis a la 26.215: espacios de publicidad audiovisual gratuitos.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 27.504</strong> · Reforma del financiamiento</td>
+              <td>2019</td>
+              <td>Bancarización obligatoria, aportes empresariales habilitados, plataforma pública de aportantes.</td>
+            </tr>
+            <tr>
+              <td><strong>Decreto 342/2023</strong> · Reglamentación</td>
+              <td>2023</td>
+              <td>Reglamenta el Art. 43 quáter (cesión de tiempo audiovisual como pago a cuenta de impuestos).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="seccion" id="modelo-mixto">
+      <div class="seccion-num">03 · El modelo mixto</div>
+      <h2>Un modelo <em>mixto</em>: público y privado</h2>
+
+      <p>El <strong>Artículo 4</strong> de la Ley 26.215, en su redacción dada por la Ley 27.504 de 2019, define el sistema con una formulación expresa:</p>
+
+      <div class="cita">
+        "Se establece un modelo mixto por el cual los partidos políticos obtendrán sus recursos mediante el financiamiento público y privado para el desarrollo de sus operaciones ordinarias y actividades electorales, de acuerdo a lo establecido en la presente ley."
+        <span class="cita-fuente">— Art. 4 de la Ley 26.215, según reforma de la Ley 27.504</span>
+      </div>
+
+      <p>El sistema argentino opta así por una <strong>combinación deliberada</strong>: ni financiamiento exclusivamente público (como en algunas democracias europeas) ni privado puro (como en buena parte de Estados Unidos hasta el siglo XX), sino una mezcla que busca aprovechar las ventajas de ambos modelos y limitar sus riesgos.</p>
+
+      <h3>El componente público</h3>
+
+      <p>El Estado argentino aporta recursos a los partidos políticos por <strong>tres vías principales</strong>:</p>
+
+      <ul>
+        <li><strong>Aporte anual para desenvolvimiento institucional</strong>. Se distribuye del Fondo Partidario Permanente entre los partidos reconocidos. Sostiene el funcionamiento ordinario partidario.</li>
+        <li><strong>Aporte extraordinario para campaña electoral</strong>. Se otorga en años electorales a los partidos que oficialicen candidaturas a cargos nacionales. Se calcula sobre un módulo electoral fijado por la Ley de Presupuesto.</li>
+        <li><strong>Aporte para impresión de boletas</strong>. El Estado contribuye a financiar la impresión de las boletas electorales. Con la migración a la <strong>Boleta Única de Papel</strong> en 2025, este aporte cambia su finalidad: ya no son boletas partidarias sino las que produce centralmente la Justicia Electoral.</li>
+        <li><strong>Espacios de publicidad audiovisual gratuitos</strong>. Más que un aporte monetario, es una transferencia en especie: el Estado obliga a los medios audiovisuales a ceder un porcentaje de su programación para publicidad electoral, distribuida igualitaria y proporcionalmente.</li>
+      </ul>
+
+      <h3>El componente privado</h3>
+
+      <p>El financiamiento privado tiene dos vertientes:</p>
+
+      <ul>
+        <li><strong>Aportes para desenvolvimiento institucional</strong>: contribuciones permanentes que personas humanas (y desde 2019 también jurídicas) hacen a los partidos.</li>
+        <li><strong>Aportes para campaña electoral</strong>: contribuciones específicamente destinadas a financiar una campaña, ingresadas a la cuenta única de la alianza durante el período de campaña.</li>
+      </ul>
+
+      <p>El aporte privado tiene tres exigencias estructurales desde la reforma de 2019:</p>
+
+      <ul>
+        <li><strong>Bancarización obligatoria</strong>: no se permite el efectivo. Todo aporte debe pasar por transferencia bancaria, tarjeta o medios electrónicos que identifiquen al aportante.</li>
+        <li><strong>Identificación del aportante</strong>: queda prohibido el aporte anónimo.</li>
+        <li><strong>Publicidad de los aportes</strong>: los aportes se cargan en una plataforma pública de la Cámara Nacional Electoral consultable por cualquier ciudadano.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="fondo-partidario">
+      <div class="seccion-num">04 · El Fondo Partidario</div>
+      <h2>El Fondo Partidario <em>Permanente</em></h2>
+
+      <p>El <strong>Fondo Partidario Permanente</strong> es la pieza central del financiamiento público partidario. Lo administra el <strong>Ministerio del Interior</strong> a través de la <strong>Dirección Nacional Electoral (DINE)</strong>. Cada año en enero, el Ministerio del Interior debe informar a los partidos y a la Cámara Nacional Electoral el monto del Fondo al 31 de diciembre del año anterior (Art. 8 de la Ley 26.215).</p>
+
+      <h3>Cómo se integra el Fondo</h3>
+
+      <p>El Fondo Partidario Permanente se constituye con (Art. 6):</p>
+
+      <ul>
+        <li>El <strong>aporte que destine anualmente la Ley de Presupuesto</strong> General de la Nación (la fuente principal).</li>
+        <li>El dinero de las <strong>multas</strong> recaudadas por aplicación de la Ley 26.215 y del Código Nacional Electoral.</li>
+        <li>El producto de las <strong>liquidaciones de bienes</strong> de partidos políticos extinguidos.</li>
+        <li>Los <strong>legados y donaciones</strong> efectuados al Estado nacional con ese destino.</li>
+        <li>Los <strong>reintegros</strong> que efectúen los partidos, confederaciones y alianzas.</li>
+        <li>Los <strong>aportes privados</strong> destinados directamente al Fondo.</li>
+        <li>Los <strong>fondos remanentes</strong> de campañas o ejercicios anteriores.</li>
+      </ul>
+
+      <h3>Cómo se distribuye el Fondo</h3>
+
+      <p>Una vez constituido el Fondo, se deducen primero <strong>20%</strong> que retiene el Ministerio del Interior para gastos administrativos y franquicias (Art. 7). El <strong>80% restante</strong> es el monto efectivo a distribuir entre los partidos, con una regla doble (Art. 9):</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Reglas de distribución del Fondo Partidario</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">20% igualitario</div>
+            <div class="ficha-valor">Se distribuye en <strong>partes iguales entre todos los partidos políticos reconocidos</strong>, sin importar su caudal electoral. Asegura un piso mínimo.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">80% proporcional</div>
+            <div class="ficha-valor">Se distribuye <strong>según los votos obtenidos en la última elección de diputados nacionales</strong>. Solo participan los partidos que hayan alcanzado al menos el <strong>1% del padrón electoral</strong> en esa elección.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>El umbral del 1% del padrón funciona como una <strong>cláusula de barrera</strong>: filtra a los partidos sin caudal electoral significativo para concentrar el aporte público en aquellos con respaldo ciudadano demostrado. Los partidos pequeños reciben solo la porción igualitaria, los grandes reciben además la porción proporcional.</p>
+
+      <h3>El reparto interno: distrito vs nacional</h3>
+
+      <p>Una vez determinado el monto que recibe cada partido, hay una regla adicional sobre el <strong>reparto interno</strong>: el <strong>80% se distribuye a los organismos partidarios de distrito</strong> (las estructuras provinciales del partido) y el <strong>20% restante a los organismos nacionales</strong>. Esta regla refleja el carácter federal de los partidos argentinos y busca fortalecer las estructuras territoriales.</p>
+
+      <h3>Destinos obligatorios del aporte</h3>
+
+      <p>El aporte para desenvolvimiento institucional no puede gastarse libremente. La ley exige (Art. 12) que <strong>al menos el 20%</strong> se destine a <strong>actividades de capacitación para la función pública, formación de dirigentes e investigación</strong>. Esta exigencia, reforzada por la Ley 27.504 de 2019, busca que el aporte público no se diluya en gastos ordinarios y produzca <strong>externalidades positivas</strong>: mejor formación de cuadros, mejor calidad de la dirigencia pública.</p>
+    </div>
+
+    <div class="seccion" id="prohibidos">
+      <div class="seccion-num">05 · Aportantes prohibidos</div>
+      <h2>Quién <em>no puede</em> aportar</h2>
+
+      <p>El <strong>Artículo 15</strong> de la Ley 26.215 establece quiénes están <strong>prohibidos de aportar</strong> a partidos políticos. La lógica de la prohibición es prevenir el <strong>captura del poder político por intereses específicos</strong> que podrían condicionar las políticas públicas. La jurisprudencia de la Cámara Nacional Electoral ha sido consistente: la prohibición busca <em>"salvaguardar la independencia, especialmente de aquellos candidatos que resultaren electos, respecto de grupos económicos que hubieren colaborado en la financiación de su propaganda"</em>.</p>
+
+      <h3>Las categorías de aportantes prohibidos</h3>
+
+      <p>El artículo 15 prohíbe los aportes provenientes de:</p>
+
+      <ul>
+        <li><strong>Contribuciones anónimas</strong>. Todo aporte debe identificarse con nombre, DNI y monto del aportante.</li>
+        <li><strong>Entidades centralizadas o descentralizadas del Estado</strong> (nacionales, provinciales o municipales). No pueden aportar empresas estatales, organismos públicos ni entes autárquicos.</li>
+        <li><strong>Empresas concesionarias o contratistas de servicios u obras públicas, o proveedores del Estado</strong> (en cualquiera de sus niveles). Es una de las prohibiciones más relevantes: las empresas que viven del Estado no pueden financiar al Estado.</li>
+        <li><strong>Personas humanas o jurídicas que exploten juegos de azar</strong> (casinos, salas de bingo, agencias de lotería).</li>
+        <li><strong>Gobiernos o entidades públicas extranjeras</strong>. Prohibición histórica: ningún Estado extranjero puede financiar campañas argentinas.</li>
+        <li><strong>Personas humanas o jurídicas extranjeras</strong> que no tengan residencia o domicilio en el país.</li>
+        <li><strong>Asociaciones sindicales, patronales y profesionales</strong>. Los gremios y cámaras empresariales no pueden aportar como organizaciones.</li>
+        <li><strong>Personas humanas o jurídicas que se encuentren imputadas en un proceso penal en trámite</strong>.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Por qué prohibir aportes de contratistas?</div>
+        <p>La prohibición a las empresas que contratan con el Estado es la más significativa institucionalmente. Si una empresa concesionaria de un servicio público financia la campaña del partido que gobierna o aspira a gobernar, surge un <strong>conflicto de interés estructural</strong>: la empresa puede esperar tratos favorables en sus contratos, las renovaciones, los pliegos, las tarifas. La prohibición busca evitar esa captura. En la práctica, sin embargo, los controles son imperfectos: se han detectado aportes <em>indirectos</em> a través de empleados, directivos o accionistas de empresas vinculadas.</p>
+      </div>
+
+      <h3>El criterio jurisprudencial del "aporte indirecto"</h3>
+
+      <p>La Cámara Nacional Electoral ha desarrollado una <strong>doctrina del aporte indirecto</strong>. Si una empresa prohibida de aportar aparece haciéndolo a través de varias personas físicas vinculadas a ella (empleados, gerentes, familiares), la justicia puede inferir que se trata de un <strong>aporte de la empresa</strong> y no de cada uno de los individuos. Esta interpretación ha sido aplicada en varias rendiciones de cuentas: cuando aparecen múltiples aportantes con domicilios coincidentes, vínculos laborales o familiares y montos similares, el patrón sugiere un aporte agregado oculto.</p>
+    </div>
+
+    <div class="seccion" id="reforma-2019">
+      <div class="seccion-num">06 · La reforma de 2019</div>
+      <h2>La <em>reforma</em> de 2019 · Ley 27.504</h2>
+
+      <p>La <strong>Ley 27.504</strong> fue sancionada el <strong>15 de mayo de 2019</strong> y publicada en el Boletín Oficial el <strong>31 de mayo de 2019</strong>, durante el gobierno de Mauricio Macri. Modificó sustancialmente la Ley 26.215. Su tratamiento parlamentario fue interpartidario: obtuvo <strong>148 votos a favor contra 69</strong> en Diputados, con apoyo de Cambiemos, el massismo, Alternativa Federal y bloques provinciales, y rechazo del kirchnerismo, Red por Argentina y la izquierda. El <strong>miembro informante de la Comisión de Asuntos Constitucionales</strong> en el Senado fue Dalmacio Mera (PJ-Catamarca), quien afirmó: <em>"entendíamos que era necesario blanquear el aporte privado a las campañas políticas, también realizar un proceso más riguroso, específico y transparente de fiscalización patrimonial"</em>.</p>
+
+      <h3>Las cuatro reformas principales</h3>
+
+      <ol>
+        <li><strong>Bancarización obligatoria de todos los aportes</strong>. Quedó prohibido el aporte en efectivo. Todo aporte —tanto para desenvolvimiento institucional como para campaña— debe realizarse por transferencia bancaria, tarjeta de crédito/débito o medios electrónicos que acrediten la identidad del aportante. Es el cambio más sustantivo.</li>
+        <li><strong>Reincorporación de aportes empresariales para campañas</strong>. Antes de 2019, las personas jurídicas privadas estaban prohibidas de aportar a campañas electorales (solo podían hacerlo personas humanas). La reforma habilitó nuevamente los aportes empresariales, con las mismas restricciones que rigen para personas humanas (concesionarios del Estado, juegos de azar, sindicatos, etc. siguen prohibidos). El argumento del oficialismo fue que <em>"las empresas ya aportaban igual por canales informales; permitirlas formalmente y bancarizado las saca del lado oscuro"</em>.</li>
+        <li><strong>Plataforma pública de aportantes</strong>. La Cámara Nacional Electoral debe operar una <strong>plataforma web pública</strong> donde se cargan en tiempo cuasi real todos los aportes recibidos por las agrupaciones políticas. Cualquier ciudadano puede consultar quién aportó cuánto a quién. Es un salto cualitativo en transparencia.</li>
+        <li><strong>Fiscalización patrimonial más rigurosa</strong>. La reforma incorporó figuras como el "responsable económico financiero" obligatorio en cada agrupación, la apertura de cuenta corriente única para campaña (ya prevista pero reforzada), nuevos plazos y reportes intermedios y una mejor articulación con la Unidad de Información Financiera (UIF) para detectar lavado de activos.</li>
+      </ol>
+
+      <h3>Reducción del aporte audiovisual de los medios</h3>
+
+      <p>La Ley 27.504 también <strong>redujo del 10% al 5%</strong> del total del espacio publicitario disponible la franja obligatoria que los servicios de comunicación audiovisual deben ceder gratuitamente al sistema electoral. La reducción fue cuestionada: para sus críticos, debilita la transferencia en especie del Estado y obliga a los partidos a pagar más publicidad privada. Para sus defensores, alinea la carga con prácticas internacionales menos gravosas para los medios.</p>
+
+      <h3>La deducción impositiva (Art. 17)</h3>
+
+      <p>Otro cambio relevante: las <strong>donaciones realizadas por personas físicas o jurídicas</strong> al Fondo Partidario Permanente o directamente a los partidos políticos se pueden <strong>deducir del Impuesto a las Ganancias</strong>, hasta determinado tope. Es un incentivo fiscal para canalizar aportes privados por la vía formal y bancarizada.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una reforma técnica con votos cruzados</div>
+        <p>La Ley 27.504 fue de las pocas reformas políticas de los últimos años aprobadas con apoyo transversal de oficialismo y opositores no kirchneristas. Su núcleo —la bancarización— es difícil de cuestionar: vuelve trazable lo que antes era opaco. La habilitación de aportes empresariales fue más discutida: para algunos, abre una puerta peligrosa; para otros, blanquea una práctica que ocurría igual por la vía informal. El tiempo dirá si la transparencia ganada compensa el riesgo de mayor influencia empresarial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="espacios-publicidad">
+      <div class="seccion-num">07 · Espacios de publicidad</div>
+      <h2>Los espacios de <em>publicidad</em> audiovisual</h2>
+
+      <p>El <strong>Capítulo III bis del Título III</strong> de la Ley 26.215 —incorporado por la Ley 26.571 en 2009— regula uno de los componentes más originales del sistema argentino: la <strong>cesión obligatoria y gratuita de espacios publicitarios en servicios de comunicación audiovisual</strong> para las campañas electorales nacionales.</p>
+
+      <h3>La lógica del sistema</h3>
+
+      <p>La premisa es que el <strong>acceso al electorado a través de medios masivos</strong> no debe depender exclusivamente del poder económico de cada partido. Si los grandes partidos pueden comprar publicidad masiva y los chicos no, la competencia electoral se vuelve estructuralmente desigual. La cesión gratuita y obligatoria de espacios <strong>nivela parcialmente</strong> esa desventaja.</p>
+
+      <h3>Cómo funciona</h3>
+
+      <p>El régimen tiene los siguientes elementos:</p>
+
+      <ul>
+        <li><strong>Aplica a las elecciones nacionales</strong>: PASO, generales y eventual balotaje presidencial.</li>
+        <li><strong>Servicios obligados</strong>: todos los servicios de comunicación audiovisual (canales de TV abierta y radios de gestión privada y pública).</li>
+        <li><strong>Porcentaje cedido</strong>: hasta 2019 era el 10% del espacio publicitario disponible; la Ley 27.504 lo redujo al <strong>5%</strong>.</li>
+        <li><strong>Distribución</strong>: lo gestiona la <strong>Dirección Nacional Electoral (DINE)</strong> del Ministerio del Interior, sobre la base de <strong>criterios de igualdad y proporcionalidad</strong>. Está vedada la posibilidad de su contratación o intercambio.</li>
+        <li><strong>Mecanismo de compensación</strong>: las empresas de comunicación audiovisual que ceden los espacios pueden computar el equivalente económico como <strong>pago a cuenta de impuestos nacionales</strong>. El Decreto 342/2023 reglamentó el Art. 43 quáter estableciendo el cálculo exacto.</li>
+      </ul>
+
+      <h3>Compensación al medio: el cálculo</h3>
+
+      <p>Para que el sistema no funcione como una carga unilateral sobre los medios, la ley prevé una <strong>compensación fiscal</strong>. En cada año electoral, el monto total que se considera pago a cuenta de impuestos nacionales por la cesión de tiempo audiovisual es <strong>equivalente a la sumatoria de los montos asignados como aporte extraordinario para campañas electorales</strong> en las categorías de diputados nacionales y senadores nacionales. Es decir: lo que el Estado le da a los partidos como aporte extraordinario para campañas (parte del costo monetario), lo descuenta a los medios como pago a cuenta de impuestos por la cesión gratuita.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué importa este sistema</div>
+        <p>Sin la cesión obligatoria de espacios, la competencia mediática quedaría dominada por los partidos con mayor capacidad de pago. La cesión asegura que todas las agrupaciones —incluidas las nuevas o pequeñas— tengan <strong>una visibilidad mínima garantizada</strong> durante la campaña. No iguala las posibilidades en redes sociales ni en publicidad privada paga, pero sí en el canal tradicionalmente más influyente. Es un componente clave del modelo argentino frente a sistemas como el estadounidense, donde la publicidad electoral es íntegramente paga y los recursos privados se vuelven determinantes.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="rendicion">
+      <div class="seccion-num">08 · Rendición y sanciones</div>
+      <h2>Rendición de cuentas y <em>sanciones</em></h2>
+
+      <p>Todo el sistema de financiamiento es <strong>auditable</strong>: los partidos políticos están obligados a rendir cuentas detalladas de sus ingresos y egresos ante la <strong>Justicia Electoral</strong>. La eficacia del régimen depende de esos controles.</p>
+
+      <h3>Los dos informes obligatorios</h3>
+
+      <p>Los partidos políticos que presenten candidatos a cargos nacionales <strong>deben rendir dos balances financieros</strong> ante la Justicia Electoral:</p>
+
+      <ul>
+        <li><strong>Informe previo a la elección</strong>: presentado antes del comicio. Detalla los aportes recibidos y gastos hechos hasta ese momento.</li>
+        <li><strong>Informe final</strong>: presentado después del comicio. Cierra el balance de la campaña: total de ingresos, total de gastos, saldos, documentación respaldatoria.</li>
+      </ul>
+
+      <p>Además, los partidos deben presentar <strong>balances anuales de patrimonio</strong> independientemente de la actividad electoral, para acreditar el cumplimiento del régimen de desenvolvimiento institucional.</p>
+
+      <h3>La cuenta única de campaña</h3>
+
+      <p>Por orden del Art. 32 (reformado por la Ley 27.504), el <strong>Juzgado Federal con competencia electoral</strong> libra oficio para que se abra una <strong>cuenta corriente única</strong> en el banco establecido por la alianza. Por esta cuenta deben ingresar <strong>todos los aportes</strong> —tanto públicos como privados— y debe ser el único medio de pago de gastos de campaña. La cuenta se cierra a los 30 días de la elección general. Toda transacción de campaña que no pase por esa cuenta es objetable.</p>
+
+      <h3>Quién audita</h3>
+
+      <p>El control está distribuido entre varios actores:</p>
+
+      <ul>
+        <li><strong>El Juez Federal con competencia electoral</strong> de cada distrito. Recibe las rendiciones y emite el dictamen aprobatorio o desaprobatorio.</li>
+        <li><strong>El cuerpo de auditores contadores de la Cámara Nacional Electoral</strong>. Realiza las pericias técnicas sobre las rendiciones.</li>
+        <li><strong>La Cámara Nacional Electoral (CNE)</strong>. Es el tribunal de alzada: revisa los fallos de los jueces electorales y dicta jurisprudencia.</li>
+        <li><strong>El Ministerio Público Fiscal</strong>, a través del Fiscal Nacional Electoral. Interviene como parte representando el interés general.</li>
+        <li><strong>La Dirección Nacional Electoral (DINE)</strong>, en su rol administrativo de distribución del Fondo Partidario.</li>
+      </ul>
+
+      <h3>Las sanciones por incumplimiento</h3>
+
+      <p>La Ley 26.215 prevé diversas sanciones:</p>
+
+      <ul>
+        <li><strong>Multas</strong> al partido y a sus responsables financieros, en montos calibrados según la gravedad del incumplimiento. El producto de estas multas se reintegra al Fondo Partidario Permanente.</li>
+        <li><strong>Pérdida temporaria o definitiva del derecho al aporte público</strong>. Un partido sancionado puede quedar excluido del Fondo Partidario por uno o varios ejercicios.</li>
+        <li><strong>Inhabilitación de los responsables</strong> para ocupar cargos públicos o partidarios.</li>
+        <li><strong>Desaprobación del informe de rendición</strong>. Es la sanción institucional más fuerte: deja al partido con sus cuentas formalmente reprobadas.</li>
+        <li><strong>Acciones penales</strong>. Si la rendición incluye datos falsos (aportantes inventados, montos adulterados), se configura el delito de <em>falsedad ideológica de documento público</em>, perseguible penalmente.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="aportantes-truchos">
+      <div class="seccion-num">09 · El caso de 2017</div>
+      <h2>Los <em>aportantes truchos</em> de 2017</h2>
+
+      <p>El caso más resonante del régimen de financiamiento argentino es el conocido como <strong>"aportantes truchos"</strong> de la campaña de Cambiemos en la provincia de Buenos Aires para las PASO legislativas de 2017. Es un caso paradigmático tanto por su magnitud como por las decisiones jurisdiccionales que produjo.</p>
+
+      <h3>Qué pasó</h3>
+
+      <p>En 2018, una <strong>investigación periodística de Juan Amorín</strong> reveló que en los informes finales de recursos y gastos de la campaña de Cambiemos en la Provincia de Buenos Aires aparecían como aportantes <strong>205 personas de bajos ingresos</strong> que recibían planes sociales y, según la denuncia, <strong>no habían realizado los aportes</strong> que figuraban a su nombre. Con el avance de la investigación judicial, el número creció: se llegaron a detectar <strong>más de 1.400 personas</strong> incluidas como donantes en condiciones similares.</p>
+
+      <p>Las irregularidades incluyeron, según el fallo posterior:</p>
+
+      <ul>
+        <li>Personas que <strong>negaron haber aportado</strong> los montos consignados a su nombre.</li>
+        <li><strong>DNI que no se correspondían</strong> con datos del Registro Nacional de Electores.</li>
+        <li>El <strong>95% de los aportes privados habrían sido en efectivo</strong> (algo prohibido tras la reforma de 2019, pero permitido en 2017).</li>
+        <li>Cifras donde "el 100% de los aportes son truchos", según declaraciones posteriores de excandidatos del propio espacio.</li>
+      </ul>
+
+      <h3>El recorrido judicial</h3>
+
+      <p>El recorrido del caso muestra el funcionamiento de la cadena institucional:</p>
+
+      <ul>
+        <li><strong>2018</strong>: investigación periodística + denuncia judicial.</li>
+        <li><strong>Febrero de 2022</strong>: el juez federal con competencia electoral <strong>Alejo Ramos Padilla</strong> desaprobó los informes finales de recursos y gastos de la campaña, al concluir que Cambiemos <em>"no pudo acreditar el origen y destino de los fondos de la campaña electoral"</em>. La auditoría de la CNE había determinado que la información suministrada no coincidía con la de la DINE, y al cruzar los datos de los supuestos donantes con el Registro Nacional de Electores, varios DNI no se correspondían.</li>
+        <li><strong>Abril de 2023</strong>: la <strong>Cámara Nacional Electoral confirmó la resolución</strong> de Ramos Padilla, en una decisión unánime de los jueces electorales. Devolvió el expediente para investigar la posible comisión de delitos penales.</li>
+        <li><strong>Diciembre de 2024</strong>: el juez Ramos Padilla <strong>procesó penalmente</strong> a cuatro responsables económicos y al apoderado de la alianza por los delitos de <strong>falsedad ideológica de documento público</strong> y <strong>omisión dolosa de acreditación del origen de los fondos de campaña</strong>.</li>
+        <li><strong>2025</strong>: la <strong>Corte Suprema</strong> dejó firme el fallo de la Cámara Electoral, cerrando la vía recursiva sobre la cuestión electoral.</li>
+      </ul>
+
+      <h3>La trascendencia institucional</h3>
+
+      <p>El caso es paradigmático por varios motivos. Mostró las <strong>limitaciones del régimen anterior a la reforma de 2019</strong>: con aportes en efectivo permitidos, era posible construir registros ficticios sin trazabilidad real. Mostró también la <strong>eficacia del control judicial cuando se activa</strong>: la cadena periodismo → denuncia → juez electoral → Cámara → Corte funcionó hasta el final, aunque con plazos largos (siete años entre la campaña y el procesamiento penal). Y mostró por qué la <strong>bancarización obligatoria</strong> introducida en 2019 era una reforma estructural: sin efectivo, este tipo de maniobra se vuelve significativamente más difícil de ejecutar.</p>
+
+      <div class="cita">
+        "Sin una rendición de cuentas transparente, principalmente en cuanto al origen de los fondos provenientes de donaciones privadas, es imposible saber si el financiamiento provino de una empresa determinada, de actividades de narcotráfico, de dinero vinculado a hechos de corrupción, actividades terroristas, u otra actividad vinculada con el crimen organizado."
+        <span class="cita-fuente">— Juez Alejo Ramos Padilla, fallo de procesamiento (diciembre de 2024)</span>
+      </div>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones del sistema</div>
+      <h2>Lo que la ley <em>no resuelve</em></h2>
+
+      <p>Aun con la reforma de 2019 y los avances en transparencia, el régimen argentino de financiamiento tiene <strong>tensiones estructurales</strong> que la normativa no termina de cerrar. Comprenderlas es esencial para entender el debate público recurrente sobre el tema.</p>
+
+      <h3>El financiamiento informal subsistente</h3>
+
+      <p>Las organizaciones especializadas en transparencia política coinciden en un diagnóstico: <strong>buena parte del gasto efectivo de campaña sigue ocurriendo fuera del registro formal</strong>. Pueden ser aportes en negro, aportes en especie no declarados (alquiler gratuito de un estadio para un acto, vehículos cedidos sin facturación, servicios profesionales no documentados), o fondos canalizados por terceros que enmascaran el aportante real. La bancarización obligatoria ayuda, pero no elimina la posibilidad de que el gasto se sostenga con fondos opacos. Pablo Secchi (director ejecutivo de Poder Ciudadano) ha caracterizado el fenómeno señalando que <em>"las campañas siguen siendo en un porcentaje muy grande en negro, se siguen manejando por fuera de la ley"</em>.</p>
+
+      <h3>Los aportes a través de personas físicas vinculadas</h3>
+
+      <p>Aunque las empresas no puedan aportar (en aportes prohibidos) o aporten dentro de su límite, persiste la posibilidad de <strong>aportes indirectos</strong>: una empresa interesada en favorecer a un partido puede coordinar aportes de varios empleados o directivos a título personal. Mientras cada aporte individual respete los límites individuales, el agregado puede ser significativo. La doctrina del aporte indirecto de la CNE busca detectar estos patrones, pero requiere análisis caso por caso.</p>
+
+      <h3>El control en tiempo real</h3>
+
+      <p>El régimen prevé controles principalmente <strong>ex post</strong>: las rendiciones finales se presentan después de la elección. Las plataformas públicas (post-2019) acercan el control al "tiempo real", pero la auditoría profunda llega meses o años después. Un partido que viola el régimen puede ganar una elección antes de que la justicia detecte la irregularidad. Las sanciones —retiro futuro de aportes, multas, procesamientos penales— no anulan los resultados electorales.</p>
+
+      <h3>Las campañas provinciales y municipales</h3>
+
+      <p>La Ley 26.215 regula las campañas <strong>nacionales</strong> (presidente, diputados nacionales, senadores nacionales). Las elecciones <strong>provinciales y municipales</strong> se rigen por las normas de cada provincia, con regímenes <strong>muy heterogéneos</strong>. CABA tiene su propia Ley 268, otras provincias replican la nacional con adaptaciones, y algunas tienen regulaciones más laxas o más estrictas. Las campañas locales pueden quedar fuera del régimen federal de transparencia.</p>
+
+      <h3>La discusión presupuestaria</h3>
+
+      <p>El monto del Fondo Partidario Permanente se fija cada año en la <strong>Ley de Presupuesto</strong>. Eso lo vuelve <strong>políticamente discrecional</strong>: el oficialismo del Congreso puede modular el aporte público en función de coyunturas. Los críticos sostienen que el monto debería estar <strong>indexado por ley</strong> a alguna variable estable (un porcentaje del PBI, una cantidad de salarios mínimos por elector) para sustraerlo de la coyuntura presupuestaria.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un equilibrio en construcción</div>
+        <p>El régimen argentino de financiamiento de campañas es uno de los más completos de la región en términos formales: combina financiamiento mixto, espacios audiovisuales gratuitos, bancarización obligatoria, plataforma pública de aportantes y un sistema de auditoría judicial específica. Sus déficits no están tanto en el diseño normativo como en la <strong>brecha entre la norma y la práctica</strong>: lo que ocurre formalmente (registrado, bancarizado, publicado) y lo que ocurre realmente. Cerrar esa brecha es el desafío de la próxima década: requiere más controles tecnológicos, más capacidad fiscalizadora, mayores sanciones efectivas y, sobre todo, una cultura política dispuesta a someter su financiamiento a escrutinio público integral.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley 26.215 de Financiamiento de los Partidos Políticos</strong> · Sancionada el 20 de diciembre de 2006, promulgada de hecho el 15 de enero de 2007. Texto completo en argentina.gob.ar/normativa/nacional/ley-26215-124231.</li>
+        <li><strong>Ley 26.571 de Democratización de la Representación Política</strong> · Sancionada en 2009. Incorporó el régimen de PASO y el Capítulo III bis sobre espacios de publicidad audiovisual a la Ley 26.215.</li>
+        <li><strong>Ley 27.504</strong> · Sancionada el 15 de mayo de 2019, publicada en el Boletín Oficial el 31 de mayo de 2019. Modificaciones a la Ley 26.215. Texto en boletinoficial.gob.ar/detalleAviso/primera/208603/20190531.</li>
+        <li><strong>Decreto 342/2023</strong> · Reglamenta el Art. 43 quáter de la Ley 26.215 sobre cesión de tiempo audiovisual como pago a cuenta de impuestos. Publicado el 7 de julio de 2023.</li>
+        <li><strong>Ley 23.298 Orgánica de los Partidos Políticos</strong> · Marco general del régimen partidario argentino.</li>
+        <li><strong>Código Nacional Electoral</strong> · Régimen general de elecciones y faltas electorales.</li>
+        <li><strong>Cámara Nacional Electoral</strong> · Cuerpo de auditores contadores y jurisprudencia electoral consolidada. Sitio del MPF: mpf.gob.ar/fiscalia-nacional-electoral.</li>
+        <li><strong>Dirección Nacional Electoral (DINE)</strong> · Información sobre el Fondo Partidario Permanente en argentina.gob.ar/dine/financiamiento-partidario y argentina.gob.ar/distribucion-del-fondo-partidario-permanente.</li>
+        <li><strong>"Financiamiento privado de campaña"</strong> · Argentina.gob.ar, ficha técnica sobre límites y procedimientos del aporte privado.</li>
+        <li><strong>"Financiamiento de la política: qué dice la ley y qué pasa en la práctica"</strong> · Chequeado (diciembre de 2023). Análisis técnico del régimen y sus déficits.</li>
+        <li><strong>"12 cosas que tenés que saber sobre el financiamiento de la campaña electoral"</strong> · CIPPEC (2019). Documento técnico sobre la reforma de 2019.</li>
+        <li><strong>"Ya es ley: las empresas podrán hacer aportes a las campañas políticas"</strong> · El Día, mayo de 2019. Cobertura del debate parlamentario.</li>
+        <li><strong>"Aportantes truchos"</strong> · cobertura periodística: Página/12 (artículos sobre fallos de Ramos Padilla y CNE), Perfil ("Venta de candidaturas"), Infocielo, Letra P, ElAgora. Investigación original del periodista Juan Amorín, 2018.</li>
+        <li><strong>Fallo del juez federal con competencia electoral Alejo Ramos Padilla</strong> · Desaprobación de los informes finales de Cambiemos PBA 2017 (febrero de 2022). Procesamiento penal de responsables económicos (diciembre de 2024).</li>
+        <li><strong>Fallo de la Cámara Nacional Electoral</strong> confirmando la desaprobación (abril de 2023).</li>
+        <li><strong>Poder Ciudadano</strong> · Análisis técnico del régimen de financiamiento y sus déficits. Declaraciones de su director ejecutivo Pablo Secchi.</li>
+        <li><strong>CIPPEC</strong> · Centro de Implementación de Políticas Públicas para la Equidad y el Crecimiento. Análisis comparado y series de datos sobre financiamiento.</li>
+        <li><strong>ADEBA · Asociación de Bancos Argentinos</strong> · Comunicado técnico sobre la bancarización (junio de 2019).</li>
+      </ul>
+    </div>
+
+    <a href="recuento-votos.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 11.02</div>
+        <h3>El <em>recuento</em> de votos</h3>
+        <p>Cómo se cuenta el voto en Argentina: el escrutinio provisorio que gestiona la <strong>Dirección Nacional Electoral</strong>, el escrutinio definitivo de la <strong>Justicia Electoral</strong>, los telegramas, los fiscales, los plazos entre la noche electoral y la proclamación. Los casos paradigmáticos: las PASO sorpresa de 2019, el balotaje de 2023, la Boleta Única de Papel de 2025.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>
