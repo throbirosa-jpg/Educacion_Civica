@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Justicia Electoral (11.03) — Educación Cívica</title>
+<meta name="description" content="La arquitectura del fuero electoral argentino: la Cámara Nacional Electoral (CNE) como tribunal especializado de alzada creado por Ley 19.108 (1971), los 24 jueces federales con competencia electoral, las Juntas Electorales Nacionales, el Registro Nacional de Electores. Padrones, oficialización de candidaturas, declaración jurada, el debate por la ficha limpia. Fallos paradigmáticos: Mignone, Procuración Penitenciaria, fallos sobre paridad. El régimen provincial con 24 tribunales electorales locales y su relación con la CSJN.">
+<link rel="canonical" href="https://educacioncivica.com.ar/justicia-electoral.html">
+
+<meta property="og:title" content="La Justicia Electoral argentina">
+<meta property="og:description" content="CNE, jueces electorales, Juntas, padrones, oficialización de candidaturas, fallos paradigmáticos y régimen provincial.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/justicia-electoral.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>11.03</strong> de la sección Análisis transversales</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="analisis-transversales.html">Análisis transversales</a> ·
+      <span>Justicia Electoral</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 11.03 · Análisis transversal</div>
+    <h1 class="page-title">La Justicia <em>Electoral</em></h1>
+    <div class="page-subtitulo">— El fuero que custodia el proceso democrático</div>
+    <p class="page-intro">Argentina tiene un <strong>fuero electoral especializado</strong> dentro del Poder Judicial. Lo encabeza la <strong>Cámara Nacional Electoral (CNE)</strong>, creada por la <strong>Ley 19.108 de 1971</strong>, integrada por tres jueces con sede en CABA y jurisdicción en todo el país. Debajo, los <strong>24 juzgados federales con competencia electoral</strong> —uno por cada distrito (23 provincias + CABA)— ejercen la primera instancia. En cada elección se constituyen además las <strong>Juntas Electorales Nacionales</strong>. Sus funciones combinan lo jurisdiccional, lo administrativo y lo registral: aplican la legislación electoral, conducen el escrutinio definitivo, gestionan el <strong>Registro Nacional de Electores</strong>, controlan el <strong>Registro Nacional de Afiliados a Partidos Políticos</strong>, oficializan candidaturas, auditan el financiamiento partidario y resuelven impugnaciones. La jurisprudencia de la CNE <strong>tiene fuerza de fallo plenario</strong>: vincula a todos los jueces de primera instancia y a las Juntas Electorales. Fallos como <em>"Mignone"</em> (2002, sufragio de detenidos sin condena), <em>"Procuración Penitenciaria"</em> (2016, inconstitucionalidad de la privación del voto a condenados) y la doctrina sobre paridad de género han modelado el sistema. El régimen provincial complementa el cuadro: cada provincia tiene su propio tribunal electoral con autonomía propia.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">1971</div>
+        <div class="page-stat-label">Creación de la CNE · Ley 19.108</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">3</div>
+        <div class="page-stat-label">Jueces integran la CNE</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">24</div>
+        <div class="page-stat-label">Juzgados federales con competencia electoral</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">24</div>
+        <div class="page-stat-label">Tribunales electorales provinciales</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#por-que-fuero">01 · Por qué un fuero especializado</a></li>
+      <li><a href="#ley-19108">02 · La Ley 19.108 y la arquitectura</a></li>
+      <li><a href="#cne">03 · La Cámara Nacional Electoral</a></li>
+      <li><a href="#jueces-distrito">04 · Los jueces federales electorales</a></li>
+      <li><a href="#juntas">05 · Las Juntas Electorales Nacionales</a></li>
+      <li><a href="#padrones">06 · Padrones y registros</a></li>
+      <li><a href="#candidaturas">07 · Oficialización y ficha limpia</a></li>
+      <li><a href="#fallos">08 · Fallos paradigmáticos</a></li>
+      <li><a href="#provincial">09 · El régimen provincial</a></li>
+      <li><a href="#tensiones">10 · Tensiones y desafíos</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="por-que-fuero">
+      <div class="seccion-num">01 · Un fuero especializado</div>
+      <h2>Por qué un <em>fuero</em> especializado</h2>
+
+      <p>El proceso electoral involucra cuestiones que no se parecen a ningún otro litigio judicial. Tiene <strong>plazos perentorios</strong> (no se puede demorar la oficialización de candidaturas porque la elección ya tiene fecha), <strong>impacto institucional masivo</strong> (un fallo puede definir quién gobierna), <strong>aspectos técnicos específicos</strong> (auditorías de financiamiento partidario, padrones, sistemas de escrutinio) y <strong>tensión política inevitable</strong> (las partes en pugna son partidos políticos compitiendo por el poder). Por esas razones, la mayoría de las democracias del mundo cuentan con <strong>tribunales o fueros electorales especializados</strong>: jueces dedicados, jurisprudencia consolidada, procedimientos propios.</p>
+
+      <h3>El modelo argentino: fuero federal con competencia atribuida</h3>
+
+      <p>Argentina no creó un <strong>fuero separado</strong> con jueces propios, sino que optó por <strong>atribuir competencia electoral</strong> a jueces que también ejercen otras funciones federales:</p>
+
+      <ul>
+        <li>En <strong>primera instancia</strong>, son los jueces federales de cada distrito quienes asumen además la competencia electoral. Hay uno por cada uno de los 24 distritos del país.</li>
+        <li>En <strong>segunda instancia</strong>, sí hay un tribunal especializado: la <strong>Cámara Nacional Electoral (CNE)</strong>, creada en 1971 con jurisdicción exclusiva en materia electoral nacional.</li>
+        <li>En <strong>instancia extraordinaria</strong>, los fallos de la CNE pueden ser apelados ante la <strong>Corte Suprema de Justicia de la Nación (CSJN)</strong> mediante recurso extraordinario federal.</li>
+      </ul>
+
+      <h3>Independencia institucional</h3>
+
+      <p>La <strong>Justicia Electoral integra el Poder Judicial de la Nación</strong>. No depende del Ministerio del Interior (que opera el escrutinio provisorio) ni del Congreso (que dicta las leyes electorales). Es una <strong>institución autónoma</strong> con la legitimidad democrática propia de un poder constitucional. Esta independencia es la garantía estructural del sistema: quien proclama oficialmente al ganador no es el gobierno saliente, sino una rama del Estado especializada y separada.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La función democrática de un fuero</div>
+        <p>La existencia de un fuero electoral no es un dato burocrático: es una <strong>garantía institucional sustantiva</strong>. Sin tribunales especializados, los litigios electorales caerían en jueces sin experiencia en la materia, con plazos comunes inadecuados para la urgencia comicial. Sin jurisprudencia uniforme, cada distrito podría aplicar criterios distintos a situaciones idénticas (oficialización, financiamiento, sufragio). Sin un tribunal único de alzada nacional, la última palabra quedaría dispersa. La CNE concentra esa autoridad y, por ley, sus fallos vinculan a todos los jueces de primera instancia.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-19108">
+      <div class="seccion-num">02 · La Ley 19.108</div>
+      <h2>La <em>Ley 19.108</em> y la arquitectura del fuero</h2>
+
+      <p>La <strong>Ley 19.108</strong>, sancionada y publicada en el Boletín Oficial el 12 de julio de 1971, es la norma fundacional del fuero electoral argentino. Creó originalmente una "Sala Electoral" en la Cámara Federal en lo Contencioso-Administrativo de la Capital Federal. Pocos meses después, la <strong>Ley 19.277</strong> (octubre de 1971) renombró ese tribunal como <strong>Cámara Nacional Electoral</strong>, dándole identidad institucional propia. El marco se completó con varias modificatorias posteriores que ampliaron sus atribuciones.</p>
+
+      <h3>Las funciones del fuero según la ley</h3>
+
+      <p>La Ley 19.108 estructuró el fuero asignando funciones diferenciadas. La CNE conoce, en grado de apelación, de las resoluciones definitivas dictadas por los jueces nacionales de primera instancia en lo federal con competencia electoral (Art. 5). Pero también ejerce funciones que exceden lo jurisdiccional:</p>
+
+      <ul>
+        <li><strong>Función jurisdiccional</strong>: resolver litigios sobre aplicación del Código Nacional Electoral, la Ley Orgánica de los Partidos Políticos y la Ley de Financiamiento.</li>
+        <li><strong>Función registral</strong>: la CNE administra el Registro Nacional de Electores, el Registro Nacional de Afiliados, el Registro General de Cartas de Ciudadanía, el Registro de Inhabilitados para el ejercicio de derechos electorales, entre otros.</li>
+        <li><strong>Función administrativa</strong>: imprime y exhibe padrones, designa lugares de votación y autoridades de mesa, controla el despliegue y repliegue de urnas.</li>
+        <li><strong>Función reglamentaria</strong>: dicta <em>acordadas</em> que regulan operativamente el funcionamiento del sistema (procedimientos de oficialización, criterios para auditoría de financiamiento, etc.).</li>
+        <li><strong>Función de fiscalización</strong>: supervisa los actos electorales en su conjunto y las rendiciones de cuentas partidarias.</li>
+      </ul>
+
+      <h3>Las leyes complementarias</h3>
+
+      <p>El régimen del fuero electoral se completa con un entramado normativo:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Norma</th>
+              <th>Función</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ley 19.108</strong> · Organización de la Justicia Nacional Electoral (1971)</td>
+              <td>Creación y estructura del fuero. Composición y atribuciones de la CNE.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 19.277</strong> · Reorganización del fuero (1971)</td>
+              <td>Renombra "Sala Electoral" como "Cámara Nacional Electoral".</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 19.945</strong> · Código Electoral Nacional (1972)</td>
+              <td>Regula el proceso electoral (convocatoria, mesas, escrutinio, etc.).</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 23.298</strong> · Orgánica de los Partidos Políticos (1985)</td>
+              <td>Reconocimiento partidario, cartas orgánicas, padrones de afiliados.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 26.215</strong> · Financiamiento de Partidos Políticos (2006)</td>
+              <td>Régimen de financiamiento. Rendiciones de cuentas ante la Justicia Electoral.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 26.571</strong> · Democratización política (2009)</td>
+              <td>Incorpora las PASO y el régimen de publicidad audiovisual.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 27.412</strong> · Paridad de Género (2017)</td>
+              <td>Lista intercalada obligatoria mujer-varón en candidaturas legislativas.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 27.781</strong> · Boleta Única de Papel (2024)</td>
+              <td>Introduce la BUP en elecciones nacionales.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="seccion" id="cne">
+      <div class="seccion-num">03 · La CNE</div>
+      <h2>La <em>Cámara</em> Nacional Electoral</h2>
+
+      <p>La Cámara Nacional Electoral (CNE) es la <strong>autoridad superior</strong> en materia electoral nacional. Tiene asiento en la Ciudad Autónoma de Buenos Aires y competencia en todo el territorio del país. Es el órgano de alzada de los 24 juzgados federales con competencia electoral.</p>
+
+      <h3>Composición</h3>
+
+      <p>La CNE está integrada por <strong>tres jueces</strong> (Art. 2 de la Ley 19.108). Sus integrantes deben reunir las condiciones generales exigidas a los jueces federales de la Nación, con un requisito adicional: <strong>no haber ocupado cargos partidarios hasta cuatro años antes de la fecha de su designación</strong>. La restricción busca preservar la imparcialidad: los jueces electorales no pueden venir de la militancia partidaria reciente.</p>
+
+      <p>La <strong>designación</strong> de los jueces de la CNE sigue el procedimiento ordinario para jueces federales:</p>
+
+      <ol>
+        <li>Concurso de oposición y antecedentes ante el <strong>Consejo de la Magistratura</strong>, del que surge una terna.</li>
+        <li>Elección de un candidato por parte del <strong>Poder Ejecutivo</strong>.</li>
+        <li>Acuerdo del <strong>Senado de la Nación</strong> con mayoría agravada.</li>
+      </ol>
+
+      <p>Una vez designados, los jueces de la CNE gozan de las garantías constitucionales generales del Poder Judicial: <strong>inamovilidad</strong> (mientras dure su buena conducta) e <strong>intangibilidad</strong> de remuneraciones.</p>
+
+      <h3>La fuerza de los fallos plenarios</h3>
+
+      <p>Una característica distintiva del fuero electoral: los fallos de la CNE <strong>tienen fuerza de fallo plenario</strong>. Esto significa que su jurisprudencia es <strong>obligatoria</strong> para todos los jueces de primera instancia con competencia electoral y para las Juntas Electorales Nacionales. La base legal es el Art. 6 de la Ley 19.108, que remite al Art. 303 del Código Procesal Civil y Comercial de la Nación. Como ha explicado el propio tribunal:</p>
+
+      <div class="cita">
+        "La legitimidad del sistema democrático se sustenta en la necesidad de reglas claras e interpretaciones uniformes por parte de los diferentes jueces de grado, en razón de lo cual los fallos de esta Cámara constituyen los antecedentes a ser considerados como principios rectores en el comportamiento electoral. Por ello, y dada la importancia del objeto de la materia es que el legislador atribuyó a sus resoluciones fuerza de fallos plenarios."
+        <span class="cita-fuente">— Fallo CNE 3100/13</span>
+      </div>
+
+      <h3>Las acordadas: regulación operativa</h3>
+
+      <p>Además de su jurisprudencia, la CNE dicta <strong>acordadas</strong>, normas regulatorias propias que estandarizan el funcionamiento del sistema. Sin sustituir a la ley, las acordadas cubren cuestiones operativas: criterios para oficializar candidaturas, formatos de boletas, requisitos para registrar partidos, modalidades de auditoría de financiamiento, procedimientos de simulacro de escrutinio. La fuerza normativa de las acordadas proviene de las "atribuciones especiales" reconocidas por la Ley 19.108 (Art. 4) y leyes complementarias.</p>
+
+      <h3>La presidencia rotativa</h3>
+
+      <p>La CNE adopta el modelo habitual de los tribunales colegiados argentinos: <strong>presidencia rotativa</strong> entre sus tres integrantes. El presidente de la Cámara representa institucionalmente al tribunal y dirige sus audiencias plenarias, pero no tiene atribuciones superiores a los demás miembros en lo jurisdiccional. Como cualquier tribunal colegiado, los fallos se adoptan por mayoría.</p>
+    </div>
+
+    <div class="seccion" id="jueces-distrito">
+      <div class="seccion-num">04 · Jueces de distrito</div>
+      <h2>Los <em>jueces</em> federales con competencia electoral</h2>
+
+      <p>La primera instancia del fuero electoral son los <strong>24 juzgados federales con competencia electoral</strong>, uno por cada distrito del país: las 23 provincias y la Ciudad Autónoma de Buenos Aires. No son juzgados separados con jueces dedicados exclusivamente a lo electoral: son <strong>juzgados federales preexistentes</strong> a los que la ley les atribuyó adicionalmente la competencia electoral.</p>
+
+      <h3>La estructura local</h3>
+
+      <p>En cada distrito, el régimen institucional incluye:</p>
+
+      <ul>
+        <li>Un <strong>Juzgado Federal con competencia electoral</strong>, presidido por un juez federal con jurisdicción ampliada.</li>
+        <li>Una <strong>Secretaría Electoral</strong> dependiente del juzgado, que opera con personal especializado en cuestiones electorales: padrones, financiamiento partidario, oficializaciones, escrutinios.</li>
+        <li>El <strong>Ministerio Público Fiscal</strong>, a través del Fiscal Federal con competencia electoral del distrito, que interviene como parte representando el interés general.</li>
+      </ul>
+
+      <h3>Las funciones del juez electoral</h3>
+
+      <p>El juez federal con competencia electoral cumple tareas múltiples a lo largo del año electoral:</p>
+
+      <ul>
+        <li><strong>Mantenimiento del padrón electoral</strong> en su distrito: altas, bajas, traslados, depuración.</li>
+        <li><strong>Reconocimiento y control de los partidos políticos</strong> de orden distrital: cartas orgánicas, padrones de afiliados, autoridades partidarias.</li>
+        <li><strong>Oficialización de listas de candidatos</strong> a cargos nacionales (diputados, senadores, Parlamentarios del Mercosur) presentadas en el distrito.</li>
+        <li><strong>Aprobación de boletas electorales</strong> (en el sistema previo a la BUP) y supervisión del diseño de la BUP en su distrito.</li>
+        <li><strong>Designación de autoridades de mesa</strong>: los ciudadanos comunes que actúan como presidentes y suplentes.</li>
+        <li><strong>Convocatoria a las Juntas Electorales Nacionales</strong> para cada elección.</li>
+        <li><strong>Conducción del escrutinio definitivo</strong> en el distrito (ver capítulo 11.02).</li>
+        <li><strong>Auditoría de los informes de financiamiento</strong> partidario y de campaña.</li>
+        <li><strong>Resolución de impugnaciones</strong>, recursos, observaciones electorales.</li>
+        <li><strong>Aplicación de sanciones</strong> por faltas electorales.</li>
+      </ul>
+
+      <h3>Una figura conocida: Alejo Ramos Padilla</h3>
+
+      <p>El juez federal con competencia electoral del distrito Buenos Aires <strong>Alejo Ramos Padilla</strong> es un ejemplo del rol y su visibilidad. Ramos Padilla conduce el juzgado electoral más grande del país (la provincia con mayor padrón). Es el juez que dictó en febrero de 2022 la desaprobación de las rendiciones de campaña de Cambiemos por el caso de los "aportantes truchos" (ver capítulo 11.01), confirmada por la CNE en abril de 2023, con procesamientos penales que continuaron en 2024 y 2025. Su trayectoria muestra la magnitud del trabajo de un juzgado electoral: padrón de más de 13 millones de electores, decenas de miles de mesas, miles de candidaturas a oficializar en cada elección.</p>
+    </div>
+
+    <div class="seccion" id="juntas">
+      <div class="seccion-num">05 · Juntas Electorales</div>
+      <h2>Las <em>Juntas</em> Electorales Nacionales</h2>
+
+      <p>Para cada elección, en cada distrito se constituye una <strong>Junta Electoral Nacional</strong>: un órgano colegiado <strong>temporal</strong> que asume funciones específicas durante el proceso comicial. Sus funciones se regulan en el Art. 52 del Código Nacional Electoral (Ley 19.945).</p>
+
+      <h3>Composición</h3>
+
+      <p>La Junta Electoral Nacional de cada distrito está integrada típicamente por:</p>
+
+      <ul>
+        <li>El <strong>juez federal con competencia electoral</strong> del distrito (la preside).</li>
+        <li>Un miembro de la <strong>Cámara Federal del distrito</strong>.</li>
+        <li>Un <strong>vocal designado por sorteo</strong> entre los jueces electorales.</li>
+      </ul>
+
+      <p>La composición exacta varía según el distrito y las normas aplicables, pero el patrón general es esa estructura colegiada con presencia del juez electoral más jueces de la justicia federal del distrito.</p>
+
+      <h3>Funciones de la Junta</h3>
+
+      <p>Las funciones principales son:</p>
+
+      <ul>
+        <li><strong>Aprobar las boletas de sufragio</strong> en el sistema previo a la BUP, y oficializar la Boleta Única de Papel del distrito (post 2025).</li>
+        <li><strong>Designar autoridades de mesa</strong>.</li>
+        <li><strong>Realizar el escrutinio definitivo</strong> de la elección en el distrito.</li>
+        <li><strong>Resolver protestas e impugnaciones</strong> al acto electoral (con plazos perentorios, típicamente 5 días después de la elección).</li>
+        <li><strong>Proclamar a los candidatos electos</strong> en cargos del distrito.</li>
+        <li><strong>Resolver sobre votos recurridos e impugnados</strong>.</li>
+      </ul>
+
+      <h3>Por qué temporales</h3>
+
+      <p>Las Juntas Electorales se conforman específicamente para cada elección y se disuelven después de cumplidas sus funciones. La razón es práctica: el trabajo de escrutinio definitivo, resolución de impugnaciones y proclamación es <strong>intenso pero acotado en el tiempo</strong>. No requiere una estructura permanente, sino la coordinación temporal de magistrados que durante el resto del año cumplen otras funciones jurisdiccionales en sus respectivas cámaras.</p>
+    </div>
+
+    <div class="seccion" id="padrones">
+      <div class="seccion-num">06 · Padrones</div>
+      <h2>Padrones y <em>registros</em></h2>
+
+      <p>El fuero electoral administra una <strong>infraestructura registral</strong> compleja. La CNE y los juzgados de distrito tienen a su cargo varios registros clave:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Registros administrados por el fuero electoral</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Registro Nacional de Electores</div>
+            <div class="ficha-valor">Base del <strong>padrón electoral</strong>. Incluye a todos los ciudadanos argentinos habilitados para votar.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro Nacional de Afiliados</div>
+            <div class="ficha-valor">Afiliación a los <strong>partidos políticos</strong>. Permite controlar elecciones internas y dobles afiliaciones.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro General de Cartas de Ciudadanía</div>
+            <div class="ficha-valor">Naturalizaciones y adquisiciones de la ciudadanía argentina.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro de Inhabilitados</div>
+            <div class="ficha-valor">Personas excluidas del padrón por <strong>inhabilitaciones</strong> legales (Art. 3 del CEN).</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro de Faltas Electorales</div>
+            <div class="ficha-valor">Antecedentes en <strong>faltas electorales</strong> y sanciones aplicadas.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro de Electores en el Exterior</div>
+            <div class="ficha-valor">Ciudadanos argentinos <strong>residentes en el extranjero</strong> registrados en consulados.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro de Privados de Libertad</div>
+            <div class="ficha-valor"><strong>Procesados sin condena firme</strong> habilitados para votar (Mignone, 2002) y, según jurisprudencia reciente, condenados.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Registro de Nombres y Símbolos</div>
+            <div class="ficha-valor">Denominaciones, emblemas y números de identificación de los <strong>partidos políticos</strong>.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>El padrón electoral: depuración permanente</h3>
+
+      <p>El Registro Nacional de Electores es el más visible: produce el <strong>padrón electoral</strong> que se exhibe antes de cada elección. Su elaboración exige una articulación entre la CNE y el <strong>Registro Nacional de las Personas (RENAPER)</strong>, dependiente del Ministerio del Interior. Periódicamente:</p>
+
+      <ul>
+        <li>Se <strong>incorporan</strong> los nuevos electores (jóvenes que cumplen 16 años, naturalizados).</li>
+        <li>Se <strong>retiran</strong> los fallecidos (por cruzamiento de datos con el RENAPER).</li>
+        <li>Se <strong>actualizan</strong> los cambios de domicilio.</li>
+        <li>Se <strong>verifican</strong> dobles afiliaciones partidarias (Art. 10 de la Ley 19.108).</li>
+      </ul>
+
+      <p>El padrón <strong>provisorio</strong> se exhibe antes de cada elección, con plazos para reclamos por exclusiones erróneas o inscripciones indebidas. Los reclamos se resuelven ante el juez electoral del distrito. Una vez resueltos, se elabora el <strong>padrón definitivo</strong> que se utiliza el día del comicio.</p>
+
+      <h3>El padrón en cárceles y en el exterior</h3>
+
+      <p>Dos casos especiales con registros propios:</p>
+
+      <ul>
+        <li><strong>Registro de Electores Privados de Libertad</strong>: incluye procesados sin condena firme (desde Mignone, 2002) y, según la doctrina reciente, también condenados cuya inhabilitación se cuestiona constitucionalmente. Habilita mesas especiales en establecimientos de detención.</li>
+        <li><strong>Registro de Electores Residentes en el Exterior</strong>: ciudadanos argentinos registrados en consulados argentinos. Pueden votar en categorías presidenciales y senadores nacionales. Sus votos se computan en el escrutinio definitivo asignados al último domicilio registrado en el país.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="candidaturas">
+      <div class="seccion-num">07 · Candidaturas</div>
+      <h2>Oficialización de candidaturas y <em>ficha limpia</em></h2>
+
+      <p>La <strong>oficialización de candidaturas</strong> es una de las funciones más delicadas del fuero electoral. Es el proceso por el que la Justicia verifica que los candidatos presentados por los partidos <strong>cumplen los requisitos legales</strong> para los cargos a los que se postulan. Su importancia es estructural: como ha señalado la propia CNE, la oficialización <em>"reviste especial trascendencia (...) puesto que tiene por objeto comprobar que los candidatos reúnen los requisitos para el cargo que pretenden"</em>.</p>
+
+      <h3>El procedimiento</h3>
+
+      <p>El régimen vigente (Art. 60 del Código Nacional Electoral) establece que <strong>desde la proclamación de los candidatos en las PASO y hasta 60 días anteriores a la elección general</strong>, los partidos deben registrar ante el juez federal con competencia electoral las listas de candidatos proclamados. Los partidos deben presentar:</p>
+
+      <ul>
+        <li><strong>Datos de filiación completos</strong> de cada candidato.</li>
+        <li><strong>Último domicilio electoral</strong>.</li>
+        <li><strong>Declaración jurada suscrita individualmente por cada candidato</strong>, donde se manifieste no estar comprendido en alguna de las inhabilidades legales.</li>
+        <li><strong>Avales partidarios</strong> según lo exija la carta orgánica del partido.</li>
+      </ul>
+
+      <p>El juez electoral verifica:</p>
+
+      <ul>
+        <li>Que los candidatos <strong>reúnan los requisitos constitucionales</strong> para el cargo (edad mínima, ciudadanía, residencia).</li>
+        <li>Que <strong>no estén alcanzados por inhabilidades legales</strong>.</li>
+        <li>Que la <strong>lista respete la paridad de género</strong> (Ley 27.412): intercalación obligatoria mujer-varón desde el primer titular hasta el último suplente, en listas de diputados, senadores y Parlamentarios del Mercosur.</li>
+        <li>Que el <strong>partido tenga personería</strong> vigente y haya cumplido con los requisitos internos para postular.</li>
+      </ul>
+
+      <h3>El plenario de la CNE sobre oficialización</h3>
+
+      <p>La CNE ha consolidado en numerosos fallos (entre ellos los Fallos 751/89, 1045/91, 1062/91, 1128/91, 2338/97, 2961/01, 3196/03, 3303/04, 3741/06, entre otros) una doctrina robusta: la oficialización debe verificar de modo <strong>exhaustivo</strong> que los candidatos cumplen los requisitos del cargo. Si la verificación es laxa, ocurre lo que la propia CNE ha advertido:</p>
+
+      <div class="cita">
+        "El ciudadano sufragante no sabría jamás a favor de qué candidato estaría emitiendo su voto pues su decisión se hallaría sometida a un examen no reglado posterior a la elección. Esto originaría la decepción y el desaliento de muchos electores que entienden con razón que su voto decide."
+        <span class="cita-fuente">— Doctrina CNE, Acordada 32/2009</span>
+      </div>
+
+      <h3>El debate por la "ficha limpia"</h3>
+
+      <p>Uno de los debates más sensibles en torno a la oficialización es el de la <strong>"ficha limpia"</strong>: la propuesta de impedir candidaturas a personas con <strong>condenas penales por delitos contra la administración pública confirmadas en segunda instancia</strong>. La discusión es institucional y constitucional:</p>
+
+      <ul>
+        <li><strong>Por la afirmativa</strong>: argumenta que postular a condenados por corrupción debilita la confianza pública, contradice los estándares anticorrupción internacionales y produce una <strong>impunidad de facto</strong> al permitir que ganadores condenados accedan a cargos donde gozan de fueros que demoran las consecuencias penales.</li>
+        <li><strong>Por la negativa</strong>: sostiene que mientras una condena no esté <strong>firme</strong> (con todas las instancias agotadas, incluida la CSJN), no corresponde restringir derechos políticos. La presunción de inocencia exige no anticipar consecuencias antes de la firmeza definitiva.</li>
+      </ul>
+
+      <h3>El recorrido legislativo de la ficha limpia</h3>
+
+      <p>En <strong>febrero de 2025</strong>, la Cámara de Diputados aprobó por mayoría un proyecto de ley de "Ficha Limpia" impulsado por el Poder Ejecutivo, la UCR y el PRO. El proyecto establecía que no podrían ser candidatos a cargos nacionales quienes tuvieran condena <strong>confirmada en segunda instancia</strong> por delitos contra la administración pública, siempre que la confirmación se hubiera producido antes del cierre del padrón electoral del año de la elección.</p>
+
+      <p>En <strong>mayo de 2025</strong>, el Senado <strong>rechazó</strong> el proyecto por 36 votos afirmativos contra 35 negativos (se necesitaban 37 para alcanzar la mayoría absoluta requerida). El debate fue marcadamente político: como Cristina Fernández de Kirchner había sido condenada en diciembre de 2022 a 6 años de prisión en la causa "Vialidad" y la condena había sido confirmada por la Cámara Federal de Casación Penal en noviembre de 2023, la aprobación del proyecto le habría impedido postularse como candidata en las legislativas de octubre de 2025. Para sus defensores, el rechazo configuraba un "pacto de impunidad"; para sus detractores, un intento de "proscripción política".</p>
+
+      <h3>El "doble conforme" como alternativa funcional</h3>
+
+      <p>La discusión post-rechazo legislativo introdujo una alternativa: la doctrina del <strong>"doble conforme"</strong> en materia penal. Cuando una condena de tres o más años de prisión queda firme tras una sentencia ratificatoria de un tribunal superior (típicamente la Cámara Federal de Casación Penal), conlleva por sí misma la <strong>inhabilitación para el ejercicio de cargos públicos</strong>. Esto produce un efecto similar al de la ficha limpia sin necesidad de norma electoral específica, pero solo cuando la condena alcanza esa firmeza intermedia. La CSJN y el Congreso quedaron así con la última palabra sobre el alcance efectivo de esta vía.</p>
+    </div>
+
+    <div class="seccion" id="fallos">
+      <div class="seccion-num">08 · Fallos paradigmáticos</div>
+      <h2>Fallos <em>paradigmáticos</em></h2>
+
+      <p>La jurisprudencia de la CNE y la CSJN ha modelado el sistema electoral argentino a lo largo de cuatro décadas de democracia. Tres líneas jurisprudenciales son especialmente significativas.</p>
+
+      <h3>"Mignone" (2002) · El voto de los procesados</h3>
+
+      <p>El fallo <strong>"Mignone, Emilio F. s/ promueve acción de amparo"</strong>, dictado por la <strong>Corte Suprema de Justicia de la Nación el 9 de abril de 2002</strong>, es uno de los pronunciamientos electorales más relevantes de la historia argentina. Origen del caso: una <strong>acción de amparo</strong> promovida en 1999 por <strong>Emilio Mignone</strong> en representación del CELS (Centro de Estudios Legales y Sociales) contra el Ministerio de Justicia y el Ministerio del Interior, para garantizar el ejercicio del derecho a sufragio de las <strong>personas detenidas sin condena</strong> en establecimientos penitenciarios.</p>
+
+      <p>La CSJN declaró la <strong>inconstitucionalidad de la norma del Código Electoral Nacional</strong> que excluía del padrón a los detenidos sin condena. La fundamentación citó tratados internacionales de derechos humanos con jerarquía constitucional desde la reforma de 1994: los procesados conservan la presunción de inocencia y, por lo tanto, conservan sus derechos políticos. La Corte ordenó al Estado <strong>adoptar las medidas necesarias para garantizar el ejercicio del derecho al voto en un plazo de seis meses</strong>.</p>
+
+      <p>El cumplimiento del fallo se hizo efectivo en <strong>2007</strong>, cuando se realizó por primera vez la elección con voto en cárceles. Desde entonces, los procesados privados de libertad votan en mesas habilitadas en los establecimientos de detención, y sus votos se computan en el escrutinio definitivo en el distrito de su domicilio.</p>
+
+      <h3>"Procuración Penitenciaria" (2016) · El voto de los condenados</h3>
+
+      <p>El segundo paso, dado por la propia CNE, fue extender el mismo razonamiento a los <strong>condenados</strong>. En la causa <strong>"Procuración Penitenciaria"</strong> (Expte. Nº CNE 3451/2014/CA1), fallo del <strong>24 de mayo de 2016</strong>, la Cámara declaró la <strong>inconstitucionalidad del artículo 3, incisos e, f y g, del Código Electoral Nacional</strong> y de los artículos 12 y 19, inciso 2, del Código Penal, en cuanto preveían la privación del derecho electoral de los condenados en sede penal.</p>
+
+      <p>El fallo señaló que la <strong>denegación automática y general del sufragio a todos los condenados</strong> es contraria al artículo 37 de la Constitución Nacional, que garantiza el pleno ejercicio de los derechos políticos. La privación de derechos electorales <strong>debe ser específica, proporcional y justificada</strong>, no automática. La CNE pidió al Congreso que legislara la reglamentación correspondiente.</p>
+
+      <p>En <strong>febrero de 2022</strong>, la CSJN, en el caso "Orazi", <strong>confirmó por unanimidad</strong> esa doctrina, dejando firme la decisión de la CNE. El fallo fue suscrito por los jueces Rosatti, Maqueda, Rosenkrantz y Lorenzetti. Como la reglamentación legislativa nunca llegó, en distintos distritos los jueces electorales han adoptado criterios diversos sobre cómo implementar la doctrina: algunos mantienen condenados en el padrón, otros aguardan reglamentación específica. La CNE, en diciembre de 2022, dictó un nuevo fallo intentando uniformar el criterio, pero la situación permanece en zona gris reglamentaria.</p>
+
+      <h3>La paridad de género</h3>
+
+      <p>Otra línea jurisprudencial relevante es la relativa a <strong>paridad de género</strong>. La <strong>Ley 27.412 de 2017</strong> introdujo el régimen de paridad: las listas de candidatos a senadores nacionales, diputados nacionales y Parlamentarios del Mercosur <strong>deben integrarse intercalando mujeres y varones desde el primer titular hasta el último suplente</strong>. Es una regla estricta: no admite excepciones ni "alternancias parciales".</p>
+
+      <p>La CNE ha consolidado una doctrina de <strong>aplicación rigurosa</strong>: rechaza la oficialización de listas que no cumplan estrictamente la paridad. La regla se aplica a la lista oficial pero también a las <strong>sucesiones</strong>: si un titular cae (renuncia, fallecimiento, inhabilitación), el reemplazante debe respetar la lógica de paridad. Algunas provincias han replicado el régimen para sus elecciones locales.</p>
+
+      <h3>El financiamiento y la doctrina del aporte indirecto</h3>
+
+      <p>En materia de financiamiento, la CNE ha desarrollado la <strong>doctrina del aporte indirecto</strong> (analizada en el capítulo 11.01). Cuando una empresa prohibida de aportar aparece haciéndolo a través de varias personas físicas vinculadas (empleados, gerentes, familiares con domicilios coincidentes), la justicia puede inferir que se trata de un <strong>aporte agregado oculto de la empresa</strong>. Esta doctrina ha sido aplicada en numerosos casos de auditoría de campañas. También ha sido consistente en exigir la <strong>destinación efectiva al 20% del aporte de capacitación</strong> previsto por el Art. 12 de la Ley 26.215 (Fallos CNE 4065/08, 4102/08, 4126/09, 4127/09 y posteriores).</p>
+    </div>
+
+    <div class="seccion" id="provincial">
+      <div class="seccion-num">09 · Régimen provincial</div>
+      <h2>El régimen <em>provincial</em></h2>
+
+      <p>El fuero electoral nacional <strong>solo regula las elecciones nacionales</strong>: presidente, vicepresidente, senadores nacionales, diputados nacionales y Parlamentarios del Mercosur. Las elecciones <strong>provinciales</strong> (gobernador, legisladores provinciales, intendentes, concejales) y <strong>municipales</strong> se rigen por las normas de cada provincia, con organismos propios.</p>
+
+      <h3>Una arquitectura federal</h3>
+
+      <p>El régimen es coherente con el federalismo argentino. Cada provincia tiene autonomía para:</p>
+
+      <ul>
+        <li>Diseñar su <strong>sistema electoral propio</strong> (proporcional, mayoritario, mixto, fecha de elección).</li>
+        <li>Crear su <strong>tribunal electoral provincial</strong> (puede ser permanente, ad hoc, integrado con jueces del Superior Tribunal o con miembros propios).</li>
+        <li>Determinar el <strong>régimen de partidos políticos provinciales</strong>.</li>
+        <li>Establecer su propio <strong>régimen de financiamiento</strong> (que puede ser más estricto o más laxo que el nacional).</li>
+        <li>Adoptar <strong>instrumentos de votación</strong> (Boleta Única, electrónica, sistema tradicional).</li>
+      </ul>
+
+      <h3>Los 24 tribunales electorales locales</h3>
+
+      <p>Cada una de las 23 provincias y CABA tiene su propio tribunal electoral local. Sus denominaciones, composiciones e instituciones varían:</p>
+
+      <ul>
+        <li>Algunos son <strong>tribunales permanentes específicos</strong> (como el Tribunal Electoral Provincial de Córdoba o de Mendoza).</li>
+        <li>Otros son <strong>Juntas Electorales ad hoc</strong> que se constituyen para cada elección (modelo de la provincia de Buenos Aires con su Junta Electoral provincial).</li>
+        <li>Algunos están integrados por <strong>miembros del Superior Tribunal</strong> de Justicia provincial.</li>
+        <li>Otros tienen <strong>composición mixta</strong>: jueces del Superior Tribunal más representantes designados por otros poderes.</li>
+      </ul>
+
+      <h3>La concurrencia con la elección nacional</h3>
+
+      <p>Las provincias pueden optar por <strong>celebrar sus elecciones en simultaneidad</strong> con las elecciones nacionales (mismo día, mismas mesas, urnas separadas) o <strong>desdoblar</strong> (fecha distinta, organización propia). La <strong>Ley 15.262</strong> y el Art. 3 de la Ley 27.781 (BUP) regulan la simultaneidad. En 2025, varias provincias optaron por desdoblar (incluyendo Buenos Aires bajo la gestión de Kicillof) y otras por concurrir con las legislativas nacionales.</p>
+
+      <p>Cuando hay simultaneidad, el juez federal con competencia electoral nacional puede asumir también funciones del proceso provincial, pero el escrutinio definitivo provincial sigue siendo de la Junta Electoral local. CABA es un caso particular: con autonomía constitucional plena desde 1996, tiene su propio Tribunal Superior de Justicia con competencia electoral y su propio régimen electoral local (Ley 268 de financiamiento, propia legislación de partidos).</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Régimen federal sin uniformidad</div>
+        <p>El régimen federal produce una <strong>heterogeneidad considerable</strong>: 24 sistemas electorales provinciales distintos. Para el ciudadano común esto puede resultar desconcertante (boletas distintas, fechas distintas, reglas distintas según provincia). Pero es la consecuencia institucional de un país federal donde cada provincia conserva sus competencias originarias (Art. 121 CN). La <strong>Justicia Electoral nacional no interviene</strong> en los procesos provinciales salvo cuando hay <strong>cuestión federal</strong>: una norma provincial contraria a la Constitución Nacional, una pretensión que invade competencias federales, etc. Esos casos llegan finalmente a la CSJN por vía del recurso extraordinario.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones y <em>desafíos</em></h2>
+
+      <p>El fuero electoral argentino acumula <strong>54 años de funcionamiento</strong> ininterrumpido desde su creación en 1971 (atravesando todos los gobiernos y la transición democrática de 1983). Su solidez institucional es notable. Pero también enfrenta tensiones y desafíos significativos.</p>
+
+      <h3>El cuello de botella de las vacantes</h3>
+
+      <p>El proceso de designación de jueces electorales —Consejo de la Magistratura, Ejecutivo, Senado— es lento. Las <strong>vacantes pueden quedar abiertas por años</strong>, en cuya situación los tribunales operan con jueces subrogantes o con composición reducida. Esto afecta tanto a los juzgados federales con competencia electoral como a la propia CNE. La presión política sobre las designaciones también es alta: los pliegos para la CNE suelen demorar especialmente en el Senado.</p>
+
+      <h3>La reglamentación pendiente del voto de condenados</h3>
+
+      <p>Desde el fallo "Procuración Penitenciaria" (2016), confirmado por la CSJN en 2022, el Congreso tiene <strong>obligación constitucional de reglamentar</strong> el ejercicio del derecho al voto de las personas condenadas. La inacción legislativa ha persistido más de una década. La CNE ha intentado uniformar criterios por vía de acordadas, pero la falta de ley específica genera diferencias entre distritos: en algunos los condenados están en el padrón, en otros no. La omisión del Congreso es el problema institucional más visible del régimen electoral actual.</p>
+
+      <h3>La proliferación de denuncias post-electorales</h3>
+
+      <p>Cada elección genera un volumen creciente de <strong>denuncias en redes sociales</strong> sobre supuestos fraudes, irregularidades de telegramas, manipulación de resultados. La inmensa mayoría no tiene fundamento técnico ni se canaliza por las vías formales. Pero la <strong>presión sobre los jueces electorales</strong> para responder se ha multiplicado, así como las dificultades para sostener la confianza pública con narrativas paralelas. La estrategia comunicacional del fuero ha tenido que adaptarse: mayor presencia pública, comunicados oficiales aclaratorios, publicación de simulacros y de los códigos fuente del software.</p>
+
+      <h3>El financiamiento y la limitada capacidad fiscalizadora</h3>
+
+      <p>La auditoría de las rendiciones de financiamiento partidario y de campaña es <strong>técnicamente compleja</strong>. El cuerpo de auditores contadores de la CNE tiene una <strong>capacidad acotada</strong> frente al volumen de partidos, alianzas y rendiciones. La tendencia a detectar irregularidades <strong>años después</strong> de la elección (como en el caso de los "aportantes truchos" de 2017, procesados penalmente en 2024) muestra los plazos reales del control.</p>
+
+      <h3>La tensión entre régimen nacional y provincial</h3>
+
+      <p>La heterogeneidad de regímenes electorales provinciales —con boletas distintas, sistemas distintos, fechas distintas— complica la comprensión ciudadana y multiplica los costos operativos. Algunos proponen una mayor <strong>armonización</strong> de los regímenes provinciales con el nacional. Otros defienden la <strong>diversidad federal</strong> como expresión legítima de la autonomía provincial. Es una tensión que tiene aristas constitucionales (los límites del Congreso para uniformar regímenes provinciales) y prácticas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un fuero sólido en un sistema en evolución</div>
+        <p>El fuero electoral argentino —la CNE, los 24 juzgados federales con competencia electoral, las Juntas, la coordinación con los tribunales provinciales— es una <strong>infraestructura institucional madura</strong>. Su jurisprudencia consolidada en cuatro décadas, su autonomía operativa, la fuerza de fallo plenario de la CNE y la independencia jurisdiccional son su solidez fundamental. Los desafíos —reglamentación de derechos pendientes, fiscalización de financiamiento, gestión de la confianza pública en tiempos de redes sociales, armonización federal— son los que enfrentaría cualquier sistema democrático maduro. Su capacidad de seguir evolucionando sin perder solidez es lo que está en juego en cada nuevo ciclo electoral.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong> · Artículos 1, 14, 37, 38, 121 y 129. Régimen democrático, derechos políticos, federalismo, autonomía de la CABA.</li>
+        <li><strong>Ley 19.108 de Organización de la Justicia Nacional Electoral</strong> · Sancionada en 1971. Crea la Cámara Nacional Electoral y estructura del fuero. Texto en argentina.gob.ar/normativa/nacional/ley-19108-129715.</li>
+        <li><strong>Ley 19.277</strong> · Reorganización del fuero electoral (octubre de 1971). Renombra "Sala Electoral" como "Cámara Nacional Electoral".</li>
+        <li><strong>Ley 19.945 Código Nacional Electoral</strong> · Sancionada el 14 de noviembre de 1972. Regula el proceso electoral, las Juntas Electorales Nacionales, oficialización de candidaturas. Texto en argentina.gob.ar.</li>
+        <li><strong>Ley 23.298 Orgánica de los Partidos Políticos</strong> · 1985. Marco general del régimen partidario.</li>
+        <li><strong>Ley 27.412 de Paridad de Género</strong> · 2017. Establece la intercalación obligatoria en candidaturas legislativas.</li>
+        <li><strong>Ley 27.781</strong> · Sancionada el 1 de octubre de 2024. Introduce la Boleta Única de Papel.</li>
+        <li><strong>Acordadas de la CNE</strong> · 85/07, 87/11, 32/2009, 47/2012, 3/2017, 138/2025, entre muchas otras. Regulación operativa del sistema electoral. Disponibles en electoral.gob.ar.</li>
+        <li><strong>Fallos CNE consolidados</strong> · Jurisprudencia electoral en cij.gov.ar (Centro de Información Judicial). Compendios temáticos sobre oficialización, financiamiento, sufragio, partidos políticos.</li>
+        <li><strong>CSJN "Mignone, Emilio F. s/ promueve acción de amparo"</strong> · Fallo del 9 de abril de 2002. Voto de los procesados sin condena.</li>
+        <li><strong>CNE "Procuración Penitenciaria"</strong> · Fallo del 24 de mayo de 2016, Expte. CNE 3451/2014/CA1. Inconstitucionalidad de la privación de voto a condenados.</li>
+        <li><strong>CSJN "Orazi"</strong> · Fallo de 2022. Confirma la doctrina del voto de los condenados.</li>
+        <li><strong>"Cuáles son las funciones de la Cámara Nacional Electoral"</strong> · Chequeado (noviembre de 2023). Análisis institucional. Entrevista con Silvana Yazbek (Idemoe).</li>
+        <li><strong>"Justicia Electoral Nacional"</strong> · Argentina.gob.ar/interior/observatorioelectoral/justicia-electoral. Ficha institucional oficial.</li>
+        <li><strong>"La lucha por los derechos políticos de las personas privadas de libertad"</strong> · Procuración Penitenciaria de la Nación (PPN). Documento histórico-jurídico sobre el caso Mignone y sus secuelas.</li>
+        <li><strong>"Ficha Limpia: en qué consistía el proyecto que rechazó el Senado"</strong> · Chequeado (mayo de 2025). Análisis del proyecto, alcance y posiciones políticas.</li>
+        <li><strong>"El Senado rechazó la ley de Ficha Limpia"</strong> · Infobae, Página/12, La Nación (mayo de 2025). Cobertura de la votación 35-36.</li>
+        <li><strong>Cámara Federal de Casación Penal · causa "Vialidad"</strong> · Fallo de noviembre de 2023 confirmando la condena en primera instancia de diciembre de 2022.</li>
+        <li><strong>Centro de Información Judicial (CIJ)</strong> · cij.gov.ar. Jurisprudencia consolidada del Poder Judicial de la Nación.</li>
+        <li><strong>Cobertura periodística</strong> sobre fallos electorales relevantes en Página/12, Infobae, La Nación, Perfil, Clarín, Ámbito (2002-2026).</li>
+        <li><strong>Institutos especializados</strong>: Instituto de la Democracia y Elecciones (Idemoe), CIPPEC, Asociación por los Derechos Civiles (ADC), CELS, Poder Ciudadano. Documentos técnicos sobre derecho electoral.</li>
+      </ul>
+    </div>
+
+    <a href="analisis-transversales.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al hub · Capítulo 11</div>
+        <h3>Análisis <em>transversales</em></h3>
+        <p>Los tres ejes del capítulo 11 leídos en conjunto: <strong>financiamiento de campañas</strong> (cómo se paga la política), <strong>recuento de votos</strong> (cómo se cuentan los sufragios) y <strong>Justicia Electoral</strong> (quién custodia el proceso). Son los tres pilares institucionales que sostienen la legitimidad democrática del régimen argentino actual.</p>
+      </div>
+      <div class="proximo-cap-arrow">VOLVER AL HUB →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>
