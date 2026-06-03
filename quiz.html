@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Quiz cívico · Aprendé jugando — Educación Cívica</title>
+<meta name="description" content="Poné a prueba lo que sabés sobre las instituciones argentinas: un quiz de opción múltiple con preguntas sobre los poderes del Estado, las elecciones, la historia, las provincias, la educación y los derechos. Tres niveles de dificultad, puntaje, rachas y medallas. Si errás, te llevamos al capítulo para seguir estudiando.">
+<link rel="canonical" href="https://educacioncivica.com.ar/quiz.html">
+
+<meta property="og:title" content="Quiz cívico · Aprendé jugando">
+<meta property="og:description" content="Un quiz sobre las instituciones argentinas con tres niveles de dificultad, puntaje, rachas y medallas. Aprendé jugando.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/quiz.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6; --verde-bright: #5BA86F;
+    --rojo: #B8341B; --rojo-soft: #F2D5CE;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; min-height: 100vh; }
+
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+  /* ===== PANTALLA INICIO ===== */
+  .pantalla { display: none; animation: fadeIn 0.4s ease; }
+  .pantalla.activa { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+  .inicio-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .inicio-titulo { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.4rem, 7vw, 3.6rem); line-height: 1.1; margin-bottom: 1.2rem; letter-spacing: -0.01em; }
+  .inicio-titulo em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .inicio-intro { font-size: 1.12rem; color: var(--tinta-soft); margin-bottom: 2.5rem; max-width: 600px; }
+  .inicio-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .record-box { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .record-item { flex: 1; min-width: 120px; background: white; border: 1px solid var(--linea); padding: 1.2rem; text-align: center; }
+  .record-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .record-label { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; }
+
+  .selector-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .niveles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; margin-bottom: 2rem; }
+  @media (max-width: 520px) { .niveles { grid-template-columns: 1fr; } }
+  .nivel-btn { background: white; border: 2px solid var(--linea); padding: 1.3rem 1.4rem; cursor: pointer; text-align: left; transition: all 0.2s; font-family: inherit; }
+  .nivel-btn:hover { border-color: var(--premium); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(107,79,140,0.12); }
+  .nivel-btn.sel { border-color: var(--premium); background: var(--premium-soft); }
+  .nivel-btn-nombre { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; color: var(--tinta); display: flex; align-items: center; gap: 0.5rem; }
+  .nivel-btn-desc { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.4rem; text-transform: uppercase; }
+  .nivel-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-facil { background: var(--verde-bright); }
+  .dot-medio { background: var(--sol); }
+  .dot-dificil { background: var(--rojo); }
+  .dot-mixto { background: linear-gradient(135deg, var(--verde-bright) 0%, var(--sol) 50%, var(--rojo) 100%); }
+
+  .btn-grande { width: 100%; background: var(--sol); color: var(--tinta); border: none; padding: 1.3rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+  .btn-grande:hover { background: var(--sol-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(246,180,14,0.3); }
+  .btn-grande:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-grande.premium { background: var(--premium); color: white; }
+  .btn-grande.premium:hover { background: var(--premium-dark); box-shadow: 0 8px 24px rgba(107,79,140,0.3); }
+  .btn-secundario { width: 100%; background: transparent; color: var(--tinta-soft); border: 1px solid var(--linea); padding: 1.1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 0.8rem; text-decoration: none; display: block; text-align: center; }
+  .btn-secundario:hover { border-color: var(--premium); color: var(--premium-dark); }
+
+  /* ===== PANTALLA JUEGO ===== */
+  .hud { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; }
+  .hud-item { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); }
+  .hud-item strong { color: var(--tinta); font-size: 1.1rem; font-weight: 700; }
+  .hud-puntaje strong { color: var(--premium); }
+  .hud-racha { transition: transform 0.3s; }
+  .hud-racha.fuego strong { color: var(--rojo); }
+  .hud-racha.pop { transform: scale(1.3); }
+
+  .barra { height: 6px; background: var(--linea-soft); margin-bottom: 2rem; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); width: 0%; transition: width 0.4s ease; }
+
+  .q-nivel { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.7rem; border-radius: 2px; }
+  .q-nivel.facil { background: var(--verde-soft); color: var(--verde); }
+  .q-nivel.medio { background: var(--sol-soft); color: var(--sol-dark); }
+  .q-nivel.dificil { background: var(--rojo-soft); color: var(--rojo); }
+  .q-tema { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); }
+
+  .q-pregunta { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1.28; margin: 0.6rem 0 2rem; }
+
+  .opciones { display: flex; flex-direction: column; gap: 0.9rem; }
+  .opcion { background: white; border: 2px solid var(--linea); padding: 1.2rem 1.4rem; cursor: pointer; text-align: left; transition: all 0.18s; font-family: 'Fraunces', serif; font-size: 1.08rem; color: var(--tinta); display: flex; align-items: center; gap: 1rem; line-height: 1.4; }
+  .opcion:hover:not(.bloq) { border-color: var(--premium); transform: translateX(4px); }
+  .opcion.bloq { cursor: default; }
+  .opcion-letra { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 700; width: 30px; height: 30px; min-width: 30px; border: 1px solid var(--linea); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--tinta-soft); transition: all 0.18s; }
+  .opcion:hover:not(.bloq) .opcion-letra { border-color: var(--premium); color: var(--premium); }
+  .opcion.correcta { border-color: var(--verde-bright); background: var(--verde-soft); animation: pulse 0.4s ease; }
+  .opcion.correcta .opcion-letra { background: var(--verde-bright); color: white; border-color: var(--verde-bright); }
+  .opcion.incorrecta { border-color: var(--rojo); background: var(--rojo-soft); animation: shake 0.4s ease; }
+  .opcion.incorrecta .opcion-letra { background: var(--rojo); color: white; border-color: var(--rojo); }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+  @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+  .feedback { margin-top: 1.8rem; padding: 1.5rem 1.6rem; border-left: 4px solid var(--premium); background: white; border-radius: 2px; display: none; animation: fadeIn 0.35s ease; }
+  .feedback.show { display: block; }
+  .feedback.ok { border-left-color: var(--verde-bright); background: var(--verde-soft); }
+  .feedback.no { border-left-color: var(--rojo); background: var(--rojo-soft); }
+  .feedback-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+  .feedback.ok .feedback-titulo { color: var(--verde); }
+  .feedback.no .feedback-titulo { color: var(--rojo); }
+  .feedback-exp { font-size: 0.98rem; color: var(--tinta); line-height: 1.6; }
+  .feedback-exp strong { color: var(--premium-dark); }
+  .feedback-estudiar { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: white; background: var(--premium); padding: 0.8rem 1.2rem; text-decoration: none; transition: all 0.2s; }
+  .feedback-estudiar:hover { background: var(--premium-dark); transform: translateY(-2px); }
+  .feedback-puntos { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--verde); font-weight: 600; margin-top: 0.4rem; }
+
+  .btn-siguiente { width: 100%; background: var(--tinta); color: var(--crema); border: none; padding: 1.2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 1.5rem; display: none; }
+  .btn-siguiente.show { display: block; animation: fadeIn 0.35s ease; }
+  .btn-siguiente:hover { background: var(--premium-dark); }
+
+  /* ===== PANTALLA FINAL ===== */
+  .final { text-align: center; }
+  .medalla { font-size: 5rem; line-height: 1; margin-bottom: 0.5rem; animation: medallaIn 0.6s cubic-bezier(0.34,1.56,0.64,1); }
+  @keyframes medallaIn { from { opacity: 0; transform: scale(0.3) rotate(-20deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+  .final-rango { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium); margin-bottom: 0.6rem; }
+  .final-titulo { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin-bottom: 0.5rem; }
+  .final-titulo em { font-style: italic; color: var(--premium-dark); }
+  .final-sub { font-size: 1.05rem; color: var(--tinta-soft); margin-bottom: 2rem; }
+  .nuevo-record { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sol-dark); background: var(--sol-soft); padding: 0.5rem 1rem; margin-bottom: 1.5rem; animation: pulse 1s ease infinite; }
+  .final-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+  .final-stat { background: white; border: 1px solid var(--linea); padding: 1.4rem 0.8rem; }
+  .final-stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .final-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 2.5rem 2rem; margin-top: 3rem; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .footer-inner p { font-size: 0.85rem; opacity: 0.8; }
+  .footer-inner a { color: var(--sol); text-decoration: none; }
+  .footer-meta { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(251,247,240,0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; opacity: 0.55; letter-spacing: 0.05em; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección lúdica · <strong>Aprendé jugando</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Quiz cívico</span></div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ===== PANTALLA INICIO ===== -->
+  <section class="pantalla activa" id="p-inicio">
+    <div class="inicio-eyebrow">Quiz cívico · Opción múltiple</div>
+    <h1 class="inicio-titulo">Aprendé <em>jugando</em></h1>
+    <p class="inicio-intro">Poné a prueba lo que sabés sobre las <strong>instituciones argentinas</strong>: los poderes del Estado, las elecciones, la historia, las provincias, la educación y los derechos. Cada partida son <strong>10 preguntas al azar</strong>. Si acertás, sumás puntos y armás racha. Si errás, te llevamos directo al capítulo para <strong>seguir estudiando</strong>.</p>
+
+    <div class="record-box" id="record-box">
+      <div class="record-item">
+        <div class="record-num" id="rec-puntaje">0</div>
+        <div class="record-label">Tu récord</div>
+      </div>
+      <div class="record-item">
+        <div class="record-num" id="rec-racha">0</div>
+        <div class="record-label">Mejor racha</div>
+      </div>
+      <div class="record-item">
+        <div class="record-num" id="rec-partidas">0</div>
+        <div class="record-label">Partidas jugadas</div>
+      </div>
+    </div>
+
+    <div class="selector-titulo">— Elegí el nivel de dificultad</div>
+    <div class="niveles" id="niveles">
+      <button class="nivel-btn" data-nivel="facil">
+        <div class="nivel-btn-nombre"><span class="nivel-dot dot-facil"></span>Fácil</div>
+        <div class="nivel-btn-desc">Lo esencial · 10 pts c/u</div>
+      </button>
+      <button class="nivel-btn" data-nivel="medio">
+        <div class="nivel-btn-nombre"><span class="nivel-dot dot-medio"></span>Medio</div>
+        <div class="nivel-btn-desc">Para los que saben · 20 pts</div>
+      </button>
+      <button class="nivel-btn" data-nivel="dificil">
+        <div class="nivel-btn-nombre"><span class="nivel-dot dot-dificil"></span>Difícil</div>
+        <div class="nivel-btn-desc">Nivel experto · 30 pts</div>
+      </button>
+      <button class="nivel-btn" data-nivel="mixto">
+        <div class="nivel-btn-nombre"><span class="nivel-dot dot-mixto"></span>Mixto</div>
+        <div class="nivel-btn-desc">Todo mezclado · al azar</div>
+      </button>
+    </div>
+
+    <button class="btn-grande" id="btn-empezar" disabled>Elegí un nivel para empezar</button>
+    <a href="index.html" class="btn-secundario">← Volver al inicio</a>
+  </section>
+
+  <!-- ===== PANTALLA JUEGO ===== -->
+  <section class="pantalla" id="p-juego">
+    <div class="hud">
+      <div class="hud-item">Pregunta <strong id="hud-num">1</strong>/10</div>
+      <div class="hud-item hud-racha" id="hud-racha-box">Racha <strong id="hud-racha">0</strong></div>
+      <div class="hud-item hud-puntaje">Puntos <strong id="hud-puntaje">0</strong></div>
+    </div>
+    <div class="barra"><div class="barra-fill" id="barra"></div></div>
+
+    <span class="q-nivel" id="q-nivel">Fácil</span>
+    <span class="q-tema" id="q-tema"></span>
+    <h2 class="q-pregunta" id="q-pregunta">—</h2>
+
+    <div class="opciones" id="opciones"></div>
+
+    <div class="feedback" id="feedback">
+      <div class="feedback-titulo" id="fb-titulo"></div>
+      <div class="feedback-puntos" id="fb-puntos"></div>
+      <div class="feedback-exp" id="fb-exp"></div>
+      <a class="feedback-estudiar" id="fb-link" target="_blank" rel="noopener">📖 Seguir estudiando este tema →</a>
+    </div>
+
+    <button class="btn-siguiente" id="btn-siguiente">Siguiente pregunta →</button>
+  </section>
+
+  <!-- ===== PANTALLA FINAL ===== -->
+  <section class="pantalla final" id="p-final">
+    <div class="medalla" id="f-medalla">🏆</div>
+    <div class="final-rango" id="f-rango">—</div>
+    <h2 class="final-titulo" id="f-titulo">—</h2>
+    <p class="final-sub" id="f-sub">—</p>
+    <div class="nuevo-record" id="f-record" style="display:none;">★ ¡Nuevo récord!</div>
+
+    <div class="final-stats">
+      <div class="final-stat">
+        <div class="final-stat-num" id="f-puntaje">0</div>
+        <div class="final-stat-label">Puntos</div>
+      </div>
+      <div class="final-stat">
+        <div class="final-stat-num" id="f-aciertos">0/10</div>
+        <div class="final-stat-label">Aciertos</div>
+      </div>
+      <div class="final-stat">
+        <div class="final-stat-num" id="f-racha">0</div>
+        <div class="final-stat-label">Mejor racha</div>
+      </div>
+    </div>
+
+    <button class="btn-grande premium" id="btn-jugar-otra">Jugar otra vez</button>
+    <a href="index.html" class="btn-secundario">← Volver al inicio</a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>Quiz cívico de <a href="index.html">Educación Cívica</a> · Todas las respuestas salen del contenido del sitio.</p>
+    <div class="footer-meta">educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Aprendé jugando</div>
+  </div>
+</footer>
+
+<script>
+// ===== BANCO DE PREGUNTAS =====
+// c = índice de la opción correcta (0, 1 o 2)
+const BANCO = [
+  // ---------- FÁCIL ----------
+  { n:'facil', tema:'Poderes', p:'¿En cuántos poderes se divide el Estado argentino?', o:['Dos poderes','Tres poderes','Cinco poderes'], c:1, exp:'El Estado se divide en <strong>tres poderes</strong>: Ejecutivo, Legislativo y Judicial. Es el principio de división de poderes.', link:'poderes.html' },
+  { n:'facil', tema:'Elecciones', p:'¿Cada cuántos años se elige al presidente en Argentina?', o:['Cada 4 años','Cada 6 años','Cada 5 años'], c:0, exp:'El presidente se elige <strong>cada 4 años</strong> y puede ser reelecto por un solo período consecutivo.', link:'elecciones.html' },
+  { n:'facil', tema:'Provincias', p:'¿Cuántas provincias tiene la Argentina?', o:['20 provincias','23 provincias','25 provincias'], c:1, exp:'Argentina tiene <strong>23 provincias</strong> más la Ciudad Autónoma de Buenos Aires (CABA), que tiene un régimen especial.', link:'provincias.html' },
+  { n:'facil', tema:'Congreso', p:'¿Cuántas cámaras tiene el Congreso Nacional?', o:['Una sola cámara','Dos cámaras','Tres cámaras'], c:1, exp:'El Congreso es <strong>bicameral</strong>: la Cámara de Diputados y la Cámara de Senadores.', link:'poderes.html' },
+  { n:'facil', tema:'Derechos', p:'¿Cómo se llama la acción para proteger un derecho constitucional vulnerado?', o:['El amparo','La demanda','La apelación'], c:0, exp:'El <strong>amparo</strong> es la acción judicial rápida para proteger derechos constitucionales cuando son vulnerados de forma manifiesta.', link:'amparo.html' },
+  { n:'facil', tema:'Voto', p:'¿A partir de qué edad se puede votar en Argentina?', o:['A los 18 años','A los 16 años','A los 21 años'], c:1, exp:'Desde 2012 se puede votar <strong>a partir de los 16 años</strong> (optativo entre 16 y 17, obligatorio desde los 18).', link:'voto.html' },
+  { n:'facil', tema:'Educación', p:'¿Las universidades nacionales en Argentina son pagas o gratuitas?', o:['Pagas con arancel','Gratuitas','Solo gratis el primer año'], c:1, exp:'Las universidades nacionales son <strong>gratuitas</strong> en el grado desde el decreto de 1949, principio con rango constitucional desde 1994.', link:'educacion-superior.html' },
+  { n:'facil', tema:'Poderes', p:'¿Quién es el jefe de Estado en Argentina?', o:['El presidente de la Corte','El presidente de la Nación','El presidente del Senado'], c:1, exp:'El <strong>presidente de la Nación</strong> es el jefe de Estado y de Gobierno, y encabeza el Poder Ejecutivo.', link:'poderes.html' },
+  { n:'facil', tema:'Educación', p:'¿La escuela primaria es obligatoria en Argentina?', o:['Sí, es obligatoria','No, es optativa','Solo en algunas provincias'], c:0, exp:'La primaria es <strong>obligatoria</strong>. Hoy la obligatoriedad va desde la sala de 4 hasta terminar el secundario: 13 años en total.', link:'educacion-niveles.html' },
+  { n:'facil', tema:'Capital', p:'¿Cuál es la capital de la República Argentina?', o:['La Plata','La Ciudad de Buenos Aires','Córdoba'], c:1, exp:'La <strong>Ciudad Autónoma de Buenos Aires</strong> es la capital federal y sede del gobierno nacional.', link:'caba-en-profundidad.html' },
+  { n:'facil', tema:'Historia', p:'La Ley Sáenz Peña de 1912 estableció el voto…', o:['Secreto, universal y obligatorio','Solo para mayores de 25','Solo para propietarios'], c:0, exp:'La <strong>Ley Sáenz Peña</strong> (1912) instauró el voto secreto, universal (masculino) y obligatorio, terminando con el fraude del voto cantado.', link:'historia.html' },
+  { n:'facil', tema:'Justicia', p:'¿Cuál es el máximo tribunal de justicia del país?', o:['La Cámara de Casación','La Corte Suprema de Justicia','El Consejo de la Magistratura'], c:1, exp:'La <strong>Corte Suprema de Justicia de la Nación</strong> es el tribunal de mayor jerarquía y el último intérprete de la Constitución.', link:'poderes.html' },
+
+  // ---------- MEDIO ----------
+  { n:'medio', tema:'Elecciones', p:'¿Qué sistema se usa para repartir las bancas de diputados?', o:['Sistema D\'Hondt','Mayoría simple','Sorteo proporcional'], c:0, exp:'Se usa el <strong>sistema D\'Hondt</strong>, un método proporcional que reparte las bancas según los votos obtenidos por cada lista.', link:'dhondt.html' },
+  { n:'medio', tema:'Historia', p:'¿En qué año ocurrió la Reforma Universitaria que dio autonomía y cogobierno?', o:['En 1918','En 1949','En 1884'], c:0, exp:'La <strong>Reforma Universitaria de 1918</strong>, iniciada en Córdoba, instauró la autonomía, el cogobierno y la libertad de cátedra. Su Manifiesto Liminar fue redactado por Deodoro Roca.', link:'educacion-historia.html' },
+  { n:'medio', tema:'Senado', p:'¿Cuántos senadores nacionales representan a cada provincia?', o:['Dos por provincia','Tres por provincia','Uno por provincia'], c:1, exp:'Cada provincia (y la CABA) elige <strong>3 senadores</strong>: dos por la mayoría y uno por la primera minoría.', link:'poderes.html' },
+  { n:'medio', tema:'Elecciones', p:'Para ganar la presidencia en primera vuelta hace falta…', o:['Más del 45%, o 40% con 10 puntos de diferencia','Mayoría simple','Más del 50% siempre'], c:0, exp:'Se gana en primera vuelta con <strong>más del 45%</strong> de los votos, o con al menos <strong>40% y una diferencia de 10 puntos</strong> sobre el segundo. Si no, hay balotaje.', link:'paso-balotaje.html' },
+  { n:'medio', tema:'Federalismo', p:'¿Qué es la coparticipación federal?', o:['Un impuesto provincial','El reparto de impuestos nacionales con las provincias','Un préstamo del Estado'], c:1, exp:'La <strong>coparticipación</strong> es el sistema por el cual la Nación recauda ciertos impuestos y los reparte con las provincias según coeficientes acordados.', link:'coparticipacion.html' },
+  { n:'medio', tema:'Congreso', p:'¿Cuántos años dura en su cargo un senador nacional?', o:['4 años','6 años','8 años'], c:1, exp:'Los senadores duran <strong>6 años</strong> en su cargo y se renuevan por tercios cada dos años. Los diputados, en cambio, duran 4 años.', link:'poderes.html' },
+  { n:'medio', tema:'Educación', p:'¿Cuántos años de educación obligatoria hay hoy en Argentina?', o:['10 años','13 años','7 años'], c:1, exp:'Son <strong>13 años</strong> de educación obligatoria: desde la sala de 4 del nivel inicial hasta el final del secundario.', link:'educacion-niveles.html' },
+  { n:'medio', tema:'Derechos', p:'¿Qué protege específicamente el hábeas corpus?', o:['La libertad física de la persona','La propiedad privada','El derecho al voto'], c:0, exp:'El <strong>hábeas corpus</strong> protege la <strong>libertad física</strong>: se usa ante detenciones ilegales o arbitrarias.', link:'habeas.html' },
+  { n:'medio', tema:'Educación', p:'¿Qué ley fijó la meta de invertir el 6% del PBI en educación?', o:['La Ley de Financiamiento Educativo 26.075','La Ley Federal 24.195','La Ley 1420'], c:0, exp:'La <strong>Ley de Financiamiento Educativo 26.075</strong> (2005) fijó la meta de alcanzar el 6% del PBI en inversión educativa para 2010.', link:'educacion-financiamiento.html' },
+  { n:'medio', tema:'Educación', p:'¿Desde qué reforma la autonomía universitaria tiene rango constitucional?', o:['Desde la reforma de 1994','Desde la de 1949','Desde la de 1853'], c:0, exp:'La <strong>reforma constitucional de 1994</strong> incorporó la autonomía y autarquía de las universidades nacionales en el Art. 75 inc. 19.', link:'educacion-superior.html' },
+  { n:'medio', tema:'Justicia', p:'¿Qué órgano se encarga de seleccionar y acusar jueces inferiores?', o:['El Consejo de la Magistratura','El Senado','La Cámara de Diputados'], c:0, exp:'El <strong>Consejo de la Magistratura</strong> selecciona candidatos a jueces (por concurso) y puede acusarlos ante el Jurado de Enjuiciamiento.', link:'poderes.html' },
+  { n:'medio', tema:'Provincias', p:'Tras la transferencia de 1993, ¿quién gestiona las escuelas primarias y secundarias?', o:['Las provincias y la CABA','El Ministerio nacional','Las universidades'], c:0, exp:'Desde la <strong>transferencia de 1993</strong>, las <strong>provincias y la CABA</strong> gestionan las escuelas y pagan los salarios docentes; la Nación fija políticas.', link:'educacion-gobierno.html' },
+
+  // ---------- DIFÍCIL ----------
+  { n:'dificil', tema:'Historia', p:'¿Qué decreto estableció la gratuidad universitaria y en qué año?', o:['Decreto 29.337, en 1949','Ley 1420, en 1884','Decreto 4874, en 1905'], c:0, exp:'El <strong>Decreto 29.337 del 22 de noviembre de 1949</strong> suprimió los aranceles universitarios. Por eso el 22 de noviembre es el Día de la Gratuidad Universitaria.', link:'educacion-historia.html' },
+  { n:'dificil', tema:'Congreso', p:'¿Cuántos miembros tiene la Cámara de Diputados de la Nación?', o:['257 diputados','329 diputados','200 diputados'], c:0, exp:'La Cámara de Diputados tiene <strong>257 miembros</strong>, distribuidos entre las provincias y la CABA según su población.', link:'poderes.html' },
+  { n:'dificil', tema:'Senado', p:'¿Cuántos senadores nacionales hay en total?', o:['72 senadores','48 senadores','100 senadores'], c:0, exp:'Hay <strong>72 senadores</strong>: 3 por cada una de las 23 provincias y 3 por la CABA (24 distritos × 3).', link:'poderes.html' },
+  { n:'dificil', tema:'Educación', p:'¿Qué artículo de la Constitución garantiza la autonomía de las universidades?', o:['El Art. 75 inciso 19','El Art. 14 bis','El Art. 99'], c:0, exp:'El <strong>Art. 75 inc. 19</strong> (reforma de 1994) ordena al Congreso garantizar los principios de gratuidad, equidad y la autonomía y autarquía de las universidades nacionales.', link:'educacion-superior.html' },
+  { n:'dificil', tema:'Educación', p:'¿Cuál fue la primera universidad fundada en el actual territorio argentino?', o:['La Universidad de Córdoba (1613)','La UBA (1821)','La de La Plata (1905)'], c:0, exp:'La <strong>Universidad de Córdoba</strong>, fundada por los jesuitas en <strong>1613</strong>, es la más antigua del país y una de las más antiguas de América.', link:'educacion-historia.html' },
+  { n:'dificil', tema:'Educación', p:'¿Qué organismo evalúa y acredita la calidad de las universidades?', o:['La CONEAU','El CONICET','El INFoD'], c:0, exp:'La <strong>CONEAU</strong> (Comisión Nacional de Evaluación y Acreditación Universitaria), creada por la Ley 24.521 de 1995, evalúa instituciones y acredita carreras.', link:'educacion-superior.html' },
+  { n:'dificil', tema:'Constitución', p:'¿Qué reforma constitucional incorporó el balotaje y redujo el mandato presidencial a 4 años?', o:['La reforma de 1994','La de 1949','La de 1860'], c:0, exp:'La <strong>reforma de 1994</strong> incorporó el balotaje, redujo el mandato a 4 años con reelección, y creó figuras como el Jefe de Gabinete y el Consejo de la Magistratura.', link:'reformas-constitucionales.html' },
+  { n:'dificil', tema:'Educación', p:'¿Qué órgano concerta la política educativa entre la Nación y las provincias?', o:['El Consejo Federal de Educación','El CONICET','La CONEAU'], c:0, exp:'El <strong>Consejo Federal de Educación</strong> es el ámbito donde la Nación y las 24 jurisdicciones acuerdan los lineamientos comunes del sistema educativo.', link:'educacion-gobierno.html' },
+  { n:'dificil', tema:'Educación', p:'En las pruebas PISA 2022 de matemática, Argentina quedó aproximadamente en el puesto…', o:['66 de 81 países','12 de 81','40 de 81'], c:0, exp:'En <strong>matemática quedó en el puesto 66 de 81</strong> (378 puntos), con cerca de 7 de cada 10 estudiantes sin alcanzar el nivel básico.', link:'educacion-calidad.html' },
+  { n:'dificil', tema:'Congreso', p:'¿Qué mayoría necesita el Congreso para insistir en una ley vetada por el Ejecutivo?', o:['Dos tercios de cada cámara','Mayoría simple','La mitad más uno'], c:0, exp:'Para insistir en una ley vetada hace falta <strong>dos tercios</strong> de los votos en ambas cámaras (Art. 83 de la Constitución).', link:'poderes.html' },
+  { n:'dificil', tema:'Historia', p:'¿En qué año se sancionó la Ley 1420 de educación común, gratuita y obligatoria?', o:['En 1884','En 1853','En 1916'], c:0, exp:'La <strong>Ley 1420</strong>, sancionada en <strong>1884</strong>, estableció la educación primaria común, gratuita, obligatoria y laica (en la Capital y los Territorios Nacionales).', link:'educacion-historia.html' },
+  { n:'dificil', tema:'Federalismo', p:'¿Qué establece el Art. 121 de la Constitución sobre las provincias?', o:['Conservan todo el poder no delegado a la Nación','Deben obedecer a la Nación','No pueden dictar leyes'], c:0, exp:'El <strong>Art. 121</strong> establece que las provincias <strong>conservan todo el poder no delegado</strong> al gobierno federal: es la base del federalismo argentino.', link:'historia-federalismo.html' }
+];
+
+// ===== ESTADO =====
+const PREGUNTAS_POR_PARTIDA = 10;
+const PUNTOS = { facil:10, medio:20, dificil:30 };
+const NOMBRE_NIVEL = { facil:'Fácil', medio:'Medio', dificil:'Difícil' };
+let estado = {};
+
+// ===== LOCALSTORAGE (récord) =====
+const LS_KEY = 'quizCivicoRecord';
+function getRecord() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY)) || { puntaje:0, racha:0, partidas:0 }; }
+  catch(e) { return { puntaje:0, racha:0, partidas:0 }; }
+}
+function setRecord(r) {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(r)); } catch(e) {}
+}
+function pintarRecord() {
+  const r = getRecord();
+  document.getElementById('rec-puntaje').textContent = r.puntaje;
+  document.getElementById('rec-racha').textContent = r.racha;
+  document.getElementById('rec-partidas').textContent = r.partidas;
+}
+
+// ===== UTILIDADES =====
+function mezclar(arr) {
+  const a = arr.slice();
+  for (let i=a.length-1; i>0; i--) { const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function mostrarPantalla(id) {
+  document.querySelectorAll('.pantalla').forEach(p => p.classList.remove('activa'));
+  document.getElementById(id).classList.add('activa');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// ===== SELECCIÓN DE NIVEL =====
+let nivelSel = null;
+document.querySelectorAll('.nivel-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nivel-btn').forEach(b => b.classList.remove('sel'));
+    btn.classList.add('sel');
+    nivelSel = btn.dataset.nivel;
+    const b = document.getElementById('btn-empezar');
+    b.disabled = false;
+    b.textContent = 'Empezar el quiz →';
+  });
+});
+
+document.getElementById('btn-empezar').addEventListener('click', () => { if (nivelSel) iniciar(nivelSel); });
+document.getElementById('btn-jugar-otra').addEventListener('click', () => { mostrarPantalla('p-inicio'); pintarRecord(); resetNivel(); });
+document.getElementById('btn-siguiente').addEventListener('click', siguiente);
+
+function resetNivel() {
+  document.querySelectorAll('.nivel-btn').forEach(b => b.classList.remove('sel'));
+  nivelSel = null;
+  const b = document.getElementById('btn-empezar');
+  b.disabled = true;
+  b.textContent = 'Elegí un nivel para empezar';
+}
+
+// ===== INICIAR PARTIDA =====
+function iniciar(nivel) {
+  let pool = (nivel === 'mixto') ? BANCO.slice() : BANCO.filter(q => q.n === nivel);
+  pool = mezclar(pool).slice(0, PREGUNTAS_POR_PARTIDA);
+  estado = { nivel, preguntas: pool, idx:0, puntaje:0, racha:0, mejorRacha:0, aciertos:0, respondida:false };
+  mostrarPantalla('p-juego');
+  cargarPregunta();
+}
+
+// ===== CARGAR PREGUNTA =====
+function cargarPregunta() {
+  const q = estado.preguntas[estado.idx];
+  estado.respondida = false;
+
+  document.getElementById('hud-num').textContent = estado.idx + 1;
+  document.getElementById('hud-puntaje').textContent = estado.puntaje;
+  document.getElementById('hud-racha').textContent = estado.racha;
+  document.getElementById('barra').style.width = ((estado.idx) / estado.preguntas.length * 100) + '%';
+
+  const nivelEl = document.getElementById('q-nivel');
+  nivelEl.className = 'q-nivel ' + q.n;
+  nivelEl.textContent = NOMBRE_NIVEL[q.n] + ' · ' + PUNTOS[q.n] + ' pts';
+  document.getElementById('q-tema').textContent = ' · ' + q.tema;
+  document.getElementById('q-pregunta').textContent = q.p;
+
+  const cont = document.getElementById('opciones');
+  cont.innerHTML = '';
+  const letras = ['A','B','C'];
+  // Mezclamos el orden de las opciones manteniendo cuál es la correcta
+  const orden = mezclar([0,1,2]);
+  orden.forEach((origIdx, vis) => {
+    const div = document.createElement('button');
+    div.className = 'opcion';
+    div.innerHTML = '<span class="opcion-letra">'+letras[vis]+'</span><span>'+q.o[origIdx]+'</span>';
+    div.addEventListener('click', () => responder(origIdx, div));
+    cont.appendChild(div);
+  });
+
+  document.getElementById('feedback').className = 'feedback';
+  document.getElementById('btn-siguiente').className = 'btn-siguiente';
+}
+
+// ===== RESPONDER =====
+const FELICITA = ['¡Correcto!','¡Muy bien!','¡Exacto!','¡Acertaste!','¡Perfecto!'];
+function responder(elegida, divElegido) {
+  if (estado.respondida) return;
+  estado.respondida = true;
+  const q = estado.preguntas[estado.idx];
+  const acerto = (elegida === q.c);
+
+  // bloquear y marcar todas las opciones
+  const botones = document.querySelectorAll('#opciones .opcion');
+  botones.forEach(b => {
+    b.classList.add('bloq');
+    const txt = b.querySelector('span:last-child').textContent;
+    if (txt === q.o[q.c]) b.classList.add('correcta');
+  });
+  if (!acerto) divElegido.classList.add('incorrecta');
+
+  const fb = document.getElementById('feedback');
+  const fbTit = document.getElementById('fb-titulo');
+  const fbPts = document.getElementById('fb-puntos');
+  const fbExp = document.getElementById('fb-exp');
+  const fbLink = document.getElementById('fb-link');
+
+  if (acerto) {
+    estado.racha++;
+    estado.aciertos++;
+    if (estado.racha > estado.mejorRacha) estado.mejorRacha = estado.racha;
+    const base = PUNTOS[q.n];
+    const bonus = (estado.racha >= 2) ? (estado.racha - 1) * 5 : 0;
+    const ganado = base + bonus;
+    estado.puntaje += ganado;
+
+    fb.className = 'feedback ok show';
+    fbTit.innerHTML = '✓ ' + FELICITA[Math.floor(Math.random()*FELICITA.length)] + (estado.racha >= 3 ? ' 🔥 ¡Racha de '+estado.racha+'!' : '');
+    fbPts.textContent = '+' + base + ' pts' + (bonus > 0 ? ' · +' + bonus + ' por racha 🔥' : '');
+    fbPts.style.display = 'block';
+    fbExp.innerHTML = q.exp;
+    fbLink.style.display = 'none'; // si acierta, no forzamos redirección
+  } else {
+    estado.racha = 0;
+    fb.className = 'feedback no show';
+    fbTit.innerHTML = '✗ No era esa…';
+    fbPts.style.display = 'none';
+    fbExp.innerHTML = q.exp;
+    fbLink.href = q.link;
+    fbLink.style.display = 'inline-flex';
+  }
+
+  // animar racha en HUD
+  const rachaBox = document.getElementById('hud-racha-box');
+  document.getElementById('hud-racha').textContent = estado.racha;
+  document.getElementById('hud-puntaje').textContent = estado.puntaje;
+  rachaBox.classList.toggle('fuego', estado.racha >= 3);
+  rachaBox.classList.add('pop');
+  setTimeout(() => rachaBox.classList.remove('pop'), 300);
+
+  document.getElementById('barra').style.width = ((estado.idx + 1) / estado.preguntas.length * 100) + '%';
+
+  // botón siguiente o finalizar
+  const btn = document.getElementById('btn-siguiente');
+  btn.textContent = (estado.idx + 1 >= estado.preguntas.length) ? 'Ver resultado →' : 'Siguiente pregunta →';
+  btn.className = 'btn-siguiente show';
+}
+
+// ===== SIGUIENTE =====
+function siguiente() {
+  estado.idx++;
+  if (estado.idx >= estado.preguntas.length) { finalizar(); return; }
+  cargarPregunta();
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// ===== FINALIZAR =====
+const MEDALLAS = [
+  { min:0.9, emoji:'🏆', rango:'Platino', titulo:'¡Constitucionalista!', sub:'Dominás las instituciones argentinas como pocos.' },
+  { min:0.7, emoji:'🥇', rango:'Oro', titulo:'¡Ciudadano ejemplar!', sub:'Tenés un conocimiento cívico muy sólido.' },
+  { min:0.5, emoji:'🥈', rango:'Plata', titulo:'¡Buen ciudadano!', sub:'Vas muy bien. Un repaso y llegás al oro.' },
+  { min:0,   emoji:'🥉', rango:'Bronce', titulo:'Aprendiz cívico', sub:'Buen comienzo. Seguí explorando el sitio y volvé a intentarlo.' }
+];
+function finalizar() {
+  const total = estado.preguntas.length;
+  const ratio = estado.aciertos / total;
+  const medalla = MEDALLAS.find(m => ratio >= m.min);
+
+  document.getElementById('f-medalla').textContent = medalla.emoji;
+  document.getElementById('f-rango').textContent = 'Medalla de ' + medalla.rango;
+  document.getElementById('f-titulo').innerHTML = medalla.titulo;
+  document.getElementById('f-sub').textContent = medalla.sub;
+  document.getElementById('f-puntaje').textContent = estado.puntaje;
+  document.getElementById('f-aciertos').textContent = estado.aciertos + '/' + total;
+  document.getElementById('f-racha').textContent = estado.mejorRacha;
+
+  // récord
+  const r = getRecord();
+  let nuevoRecord = false;
+  if (estado.puntaje > r.puntaje) { r.puntaje = estado.puntaje; nuevoRecord = true; }
+  if (estado.mejorRacha > r.racha) r.racha = estado.mejorRacha;
+  r.partidas = (r.partidas || 0) + 1;
+  setRecord(r);
+  document.getElementById('f-record').style.display = nuevoRecord ? 'inline-block' : 'none';
+
+  mostrarPantalla('p-final');
+}
+
+// ===== INIT =====
+pintarRecord();
+</script>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
