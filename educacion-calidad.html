@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Calidad y evaluación educativa (12.07) — Educación Cívica</title>
+<meta name="description" content="¿Qué tan bien aprenden los estudiantes argentinos? Las pruebas Aprender (evaluación nacional censal) y PISA (internacional), los resultados en lengua y matemática, la diferencia entre primaria y secundaria, la repitencia y la deserción, las brechas entre provincias y sectores sociales, y los debates sobre cómo mejorar la calidad educativa.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-calidad.html">
+<meta property="og:title" content="Calidad y evaluación de la educación argentina">
+<meta property="og:description" content="Pruebas Aprender y PISA, resultados de aprendizaje, deserción y los debates sobre la calidad educativa argentina.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-calidad.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.07</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Calidad y evaluación</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.07 · Educación</div>
+    <h1 class="page-title">Calidad y <em>evaluación</em></h1>
+    <div class="page-subtitulo">— ¿Qué tan bien aprende la Argentina?</div>
+    <p class="page-intro">El sistema educativo argentino logró una <strong>cobertura amplia</strong>, pero la gran pregunta del siglo XXI es sobre la <strong>calidad</strong>: ¿qué tan bien aprenden los estudiantes? Las respuestas vienen de dos grandes evaluaciones. Las pruebas <strong>Aprender</strong>, censales y nacionales, que el Ministerio de Educación aplica desde 2016 en primaria y secundaria. Y las pruebas <strong>PISA</strong>, internacionales, que la OCDE toma cada tres años a estudiantes de 15 años de más de 80 países. Los resultados son preocupantes: en PISA 2022, <strong>7 de cada 10 estudiantes argentinos no alcanzaron el nivel básico en matemática</strong>, y la mitad no lo logró en lectura y ciencias. Argentina obtuvo 378 puntos en matemática y 401 en lectura, por debajo de varios países de la región. Aparece además una paradoja: mientras los resultados de <strong>primaria mejoraron</strong>, los de <strong>secundaria empeoraron</strong>. Este capítulo analiza cómo se mide la calidad, qué dicen los resultados, las brechas sociales y provinciales, y los grandes debates sobre cómo mejorar.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">2016</div>
+        <div class="page-stat-label">Primera prueba Aprender</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">7/10</div>
+        <div class="page-stat-label">No alcanzan nivel básico en matemática (PISA 2022)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">378</div>
+        <div class="page-stat-label">Puntaje PISA matemática 2022</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">66°</div>
+        <div class="page-stat-label">Puesto entre 81 países (matemática)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es-calidad">01 · Qué es la calidad educativa</a></li>
+      <li><a href="#aprender">02 · Las pruebas Aprender</a></li>
+      <li><a href="#pisa">03 · Las pruebas PISA</a></li>
+      <li><a href="#resultados-pisa">04 · Los resultados de PISA 2022</a></li>
+      <li><a href="#paradoja">05 · La paradoja primaria-secundaria</a></li>
+      <li><a href="#brechas">06 · Las brechas sociales y provinciales</a></li>
+      <li><a href="#desercion">07 · Repitencia y deserción</a></li>
+      <li><a href="#causas">08 · Qué explica los resultados</a></li>
+      <li><a href="#que-hacer">09 · Los debates sobre qué hacer</a></li>
+      <li><a href="#tensiones">10 · Tensiones de la evaluación</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es-calidad">
+      <div class="seccion-num">01 · Qué es la calidad</div>
+      <h2>Qué es la <em>calidad</em> educativa</h2>
+
+      <p>La <strong>calidad educativa</strong> es un concepto más complejo de lo que parece. No se reduce a los puntajes en pruebas estandarizadas, aunque estos son un indicador importante. Una visión integral de la calidad incluye:</p>
+
+      <ul>
+        <li><strong>Los aprendizajes</strong>: qué saben y saben hacer los estudiantes (lo que miden las pruebas).</li>
+        <li><strong>La trayectoria</strong>: si los estudiantes avanzan, completan los niveles, no repiten ni abandonan.</li>
+        <li><strong>La equidad</strong>: si todos aprenden, no solo algunos; si el origen social no determina el destino educativo.</li>
+        <li><strong>La formación integral</strong>: el desarrollo de capacidades, valores, ciudadanía, pensamiento crítico, más allá de lo medible.</li>
+      </ul>
+
+      <p>El <strong>Consejo Nacional de Calidad de la Educación</strong> (creado por la Ley 26.206, ver capítulo 12.05) sostiene una visión amplia: considera los resultados en pruebas estandarizadas como un aspecto <strong>complementario</strong>, dentro de una perspectiva integral que abarca las distintas dimensiones del derecho a la educación.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué medir</div>
+        <p>Medir los aprendizajes es indispensable para mejorar: sin información sobre qué tan bien aprenden los estudiantes, es imposible saber dónde están los problemas ni si las políticas funcionan. Las evaluaciones estandarizadas (Aprender, PISA) no son un fin en sí mismas: son <strong>herramientas de diagnóstico</strong>. El riesgo es reducir toda la calidad a un puntaje, o "enseñar para la prueba". Bien usadas, las evaluaciones permiten identificar problemas, focalizar recursos y evaluar políticas. Mal usadas, distorsionan la enseñanza. El equilibrio es usarlas como un insumo valioso pero parcial.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="aprender">
+      <div class="seccion-num">02 · Pruebas Aprender</div>
+      <h2>Las pruebas <em>Aprender</em></h2>
+
+      <p>Las <strong>pruebas Aprender</strong> son la evaluación nacional de la calidad educativa. Las aplica el <strong>Ministerio de Educación de la Nación desde 2016</strong>, a través de la Secretaría de Evaluación e Información Educativa.</p>
+
+      <h3>Qué evalúan</h3>
+
+      <p>Las características de las pruebas Aprender:</p>
+
+      <ul>
+        <li>Evalúan contenidos curriculares de <strong>matemática y lengua</strong> (a veces también ciencias y sociales).</li>
+        <li>Se aplican a estudiantes de <strong>6° grado de primaria</strong> y de <strong>5° o 6° año de secundaria</strong>.</li>
+        <li>Son <strong>censales</strong> (en general): se toman a todos los estudiantes del grado evaluado, no a una muestra. Esto permite tener información de cada escuela y jurisdicción.</li>
+        <li>No siempre se evalúan ambos niveles cada año: por ejemplo, en 2022 se evaluó primaria y secundaria, pero en 2021 y 2023 solo primaria.</li>
+      </ul>
+
+      <h3>Para qué sirven</h3>
+
+      <p>Al ser censales, las pruebas Aprender permiten:</p>
+
+      <ul>
+        <li>Obtener un <strong>diagnóstico detallado</strong> por escuela, jurisdicción y sector.</li>
+        <li>Identificar <strong>dónde están los problemas</strong> de aprendizaje.</li>
+        <li>Seguir la <strong>evolución</strong> de los aprendizajes a lo largo del tiempo.</li>
+        <li>Informar el <strong>diseño de políticas</strong> focalizadas.</li>
+      </ul>
+
+      <p>Las pruebas Aprender son una herramienta valiosa porque, a diferencia de PISA (muestral e internacional), ofrecen información <strong>de todo el sistema argentino</strong>, escuela por escuela.</p>
+    </div>
+
+    <div class="seccion" id="pisa">
+      <div class="seccion-num">03 · Pruebas PISA</div>
+      <h2>Las pruebas <em>PISA</em></h2>
+
+      <p><strong>PISA</strong> (Programme for International Student Assessment, Programa para la Evaluación Internacional de Estudiantes) es la evaluación educativa internacional más importante del mundo. La organiza la <strong>OCDE</strong> (Organización para la Cooperación y el Desarrollo Económicos) y se toma <strong>cada tres años</strong>.</p>
+
+      <h3>Qué evalúa</h3>
+
+      <ul>
+        <li>Evalúa a estudiantes de <strong>15 años</strong> (la edad teórica de finalización de la educación obligatoria en muchos países).</li>
+        <li>Mide <strong>matemática, lectura y ciencias</strong> (con una de ellas como foco principal en cada edición; en 2022 fue matemática).</li>
+        <li>Es <strong>muestral</strong>: participa un número reducido de estudiantes seleccionados aleatoriamente, que representan al total de los jóvenes de 15 años del país.</li>
+        <li>No mide memorización, sino la <strong>capacidad de aplicar conocimientos</strong> a situaciones de la vida real.</li>
+      </ul>
+
+      <h3>Argentina en PISA</h3>
+
+      <p>Argentina participa en PISA <strong>desde el año 2000</strong>. Permite comparar el desempeño del país con el de más de 80 naciones y seguir su evolución a lo largo de más de dos décadas. En la edición 2022, por primera vez, los estudiantes argentinos resolvieron la prueba en <strong>formato digital</strong>. Participaron 81 países y unos 690.000 estudiantes en todo el mundo.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Aprender vs PISA: complementarias</div>
+        <p>Las dos evaluaciones se complementan. <strong>PISA</strong> es internacional y muestral: permite comparar a Argentina con el mundo y medir capacidades aplicadas, pero no da información escuela por escuela. <strong>Aprender</strong> es nacional y censal: ofrece un diagnóstico detallado de todo el sistema argentino y mide contenidos curriculares, pero no permite comparación internacional. Juntas dan una imagen más completa: PISA ubica a Argentina en el mundo, Aprender muestra el detalle interno. Cuando ambas coinciden en una tendencia (como la caída en secundaria), el diagnóstico es más robusto.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="resultados-pisa">
+      <div class="seccion-num">04 · Resultados PISA 2022</div>
+      <h2>Los <em>resultados</em> de PISA 2022</h2>
+
+      <p>Los resultados de PISA 2022 (difundidos en diciembre de 2023) dieron una radiografía preocupante de los aprendizajes en la Argentina.</p>
+
+      <h3>Los puntajes</h3>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Área</th>
+              <th>Puntaje Argentina 2022</th>
+              <th>No alcanza nivel básico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Matemática</strong></td>
+              <td>378 puntos (puesto 66°/81)</td>
+              <td>72,9% (7 de cada 10)</td>
+            </tr>
+            <tr>
+              <td><strong>Lectura</strong></td>
+              <td>401 puntos (puesto 58°/81)</td>
+              <td>54,4% (más de la mitad)</td>
+            </tr>
+            <tr>
+              <td><strong>Ciencias</strong></td>
+              <td>406 puntos (puesto 60°/81)</td>
+              <td>~50%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La comparación regional</h3>
+
+      <p>En <strong>matemática</strong>, Argentina (378 puntos) quedó por debajo de Chile (412), Uruguay (409), México (395), Perú (391), Costa Rica (385), Colombia (383) y Brasil (379). Solo superó a Panamá, El Salvador, Guatemala, Paraguay y República Dominicana. En <strong>lectura</strong>, el patrón fue similar: por debajo de Chile (448), Uruguay (430) y varios más.</p>
+
+      <h3>La estabilidad (con matices)</h3>
+
+      <p>Un dato relevante: los resultados argentinos se mantuvieron <strong>relativamente estables</strong> respecto de 2018 (caídas de 1-2 puntos en matemática y lectura, no estadísticamente significativas; leve mejora en ciencias). En un contexto donde la mayoría de los países de la OCDE y de la región sufrieron <strong>caídas importantes post-pandemia</strong> (el deterioro en América Latina fue de 15 puntos en matemática), la estabilidad argentina fue interpretada por las autoridades educativas como un resultado no del todo negativo en términos comparados. Pero la estabilidad es en niveles bajos: que no haya empeorado no significa que esté bien.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un dato que duele</div>
+        <p>El dato más contundente de PISA 2022: <strong>apenas el 0,3% de los estudiantes argentinos alcanza los niveles más altos (5 y 6) en matemática</strong>, mientras que en los países de la OCDE el promedio es del 8,7%. En el otro extremo, 7 de cada 10 no llegan al nivel básico. Esto significa que el sistema no solo tiene problemas en la base (muchos que no alcanzan lo mínimo) sino también en la cima (muy pocos que llegan a la excelencia). Es un desafío doble: garantizar pisos y también permitir techos altos.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="paradoja">
+      <div class="seccion-num">05 · La paradoja</div>
+      <h2>La <em>paradoja</em> primaria-secundaria</h2>
+
+      <p>Uno de los hallazgos más interesantes al cruzar las pruebas Aprender y PISA del año 2022 es una <strong>tendencia opuesta entre primaria y secundaria</strong>.</p>
+
+      <h3>Primaria mejora, secundaria empeora</h3>
+
+      <p>Los datos muestran una divergencia:</p>
+
+      <ul>
+        <li>En <strong>primaria</strong>, las pruebas Aprender mostraron una <strong>mejora</strong>: el desempeño en lengua y matemática de los alumnos de 6° grado creció respecto de años anteriores (mejora de unos 2,9 puntos porcentuales en matemática).</li>
+        <li>En <strong>secundaria</strong>, tanto las Aprender como PISA mostraron <strong>caídas</strong>: en las Aprender de secundaria 2022, una caída de 4,7 puntos porcentuales en lengua y 11 en matemática respecto de 2019.</li>
+      </ul>
+
+      <h3>Qué puede explicarlo</h3>
+
+      <p>Esta paradoja —que un nivel mejore mientras el otro empeora— sugiere que los problemas del secundario no se explican solo por factores generales (como la pandemia, que afectó a todos los niveles), sino por <strong>problemas específicos del nivel secundario</strong>:</p>
+
+      <ul>
+        <li>El secundario tiene una <strong>estructura más rígida y fragmentada</strong> (muchas materias, muchos profesores) que dificulta el acompañamiento.</li>
+        <li>La <strong>transición de primaria a secundaria</strong> es un momento crítico de pérdida.</li>
+        <li>Los problemas de <strong>repitencia y abandono</strong> se concentran en el secundario.</li>
+        <li>El <strong>formato pedagógico</strong> del secundario, heredado de un modelo del siglo XX, no logra enganchar a muchos adolescentes.</li>
+      </ul>
+
+      <p>Esta evidencia refuerza la idea de que el <strong>nivel secundario es el gran desafío</strong> del sistema educativo argentino, como ya se señaló en el capítulo de niveles (12.02).</p>
+    </div>
+
+    <div class="seccion" id="brechas">
+      <div class="seccion-num">06 · Las brechas</div>
+      <h2>Las <em>brechas</em> sociales y provinciales</h2>
+
+      <p>Los promedios nacionales esconden <strong>desigualdades profundas</strong>. La calidad educativa argentina varía enormemente según el origen social del estudiante y la provincia donde vive.</p>
+
+      <h3>La brecha social</h3>
+
+      <p>El factor que más se asocia con los resultados de aprendizaje es el <strong>nivel socioeconómico</strong> de las familias. Los estudiantes de hogares de mayores ingresos obtienen sistemáticamente mejores resultados que los de hogares pobres. Esto plantea el desafío central de la <strong>equidad</strong>: el sistema educativo, en lugar de compensar las desigualdades de origen, tiende a reproducirlas. La escuela no logra, por sí sola, romper la correlación entre origen social y resultados educativos.</p>
+
+      <h3>La brecha provincial</h3>
+
+      <p>También hay grandes diferencias <strong>entre jurisdicciones</strong>. En PISA 2022, algunas jurisdicciones participaron con "sobremuestra" (una muestra ampliada para tener resultados propios):</p>
+
+      <ul>
+        <li><strong>CABA</strong> obtuvo resultados marcadamente superiores al promedio nacional: 424 en matemática, 449 en lectura, 451 en ciencias.</li>
+        <li><strong>Córdoba</strong> también superó el promedio nacional: 394 en matemática, 419 en lectura, 422 en ciencias.</li>
+      </ul>
+
+      <p>La diferencia entre CABA (449 en lectura) y el promedio nacional (401) es enorme: equivale a más de un año de escolaridad. Estas brechas reflejan las desigualdades socioeconómicas entre jurisdicciones y las diferencias en inversión y gestión educativa (analizadas en los capítulos 12.05 y 12.06).</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La equidad como desafío central</div>
+        <p>Las brechas sociales y provinciales son, quizás, el problema más profundo de la educación argentina. Un sistema puede tener un promedio aceptable pero esconder realidades opuestas: estudiantes de CABA o de hogares acomodados con resultados comparables a países desarrollados, y estudiantes de provincias pobres o de hogares vulnerables con resultados muy bajos. La <strong>igualdad de oportunidades educativas</strong> —que el lugar de nacimiento o el ingreso familiar no determinen el destino educativo— es el ideal que el sistema, hoy, no logra garantizar. Reducir estas brechas es el corazón de cualquier política de equidad.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="desercion">
+      <div class="seccion-num">07 · Repitencia y deserción</div>
+      <h2>Repitencia y <em>deserción</em></h2>
+
+      <p>Más allá de los aprendizajes medidos en pruebas, la calidad se juega también en las <strong>trayectorias</strong>: si los estudiantes avanzan, completan los niveles, no repiten ni abandonan.</p>
+
+      <h3>La repitencia</h3>
+
+      <p>Como se vio en el capítulo de niveles (12.02), la repitencia tiene un patrón claro:</p>
+
+      <ul>
+        <li>En <strong>primaria</strong> es baja y en descenso (del 4,1% en 2011 al 2,8% en 2019).</li>
+        <li>En <strong>secundaria</strong> es alta (alrededor del 10%), concentrada en los primeros años (12% en el ciclo básico).</li>
+        <li>Es más alta en el <strong>sector estatal</strong> (12%) que en el privado (4%), reflejo de las desigualdades sociales.</li>
+      </ul>
+
+      <h3>La deserción y la terminalidad</h3>
+
+      <p>El problema más grave del secundario es la <strong>baja terminalidad</strong>: la brecha entre los que ingresan y los que egresan. Muchos adolescentes ingresan al secundario pero no lo completan, o lo hacen con sobreedad (más años de los teóricos). Las causas son múltiples: dificultades económicas (necesidad de trabajar), embarazo adolescente, desvinculación con una escuela que no los engancha, repitencia que desmotiva.</p>
+
+      <h3>La inclusión como logro y desafío</h3>
+
+      <p>Un matiz importante: en las últimas décadas, Argentina <strong>incorporó masivamente</strong> al secundario a sectores que históricamente no llegaban (desde 2007 se sumaron, según las autoridades, unos 20 puntos de inclusión en la secundaria). Esto es un logro de equidad. Pero incorporar a estudiantes de contextos más vulnerables, sin transformar el formato del secundario, también explica parte de los desafíos de aprendizaje y terminalidad. La inclusión es un avance que plantea, a su vez, nuevos desafíos de calidad.</p>
+    </div>
+
+    <div class="seccion" id="causas">
+      <div class="seccion-num">08 · Qué explica los resultados</div>
+      <h2>Qué <em>explica</em> los resultados</h2>
+
+      <p>¿Por qué los resultados de aprendizaje son bajos, a pesar de una inversión históricamente significativa (capítulo 12.06)? Las causas son múltiples y se debaten intensamente.</p>
+
+      <h3>Factores dentro del sistema</h3>
+
+      <ul>
+        <li><strong>Días de clase efectivos</strong>: los paros, suspensiones y problemas de infraestructura reducen los días reales de enseñanza.</li>
+        <li><strong>Formación docente</strong>: la calidad de la formación de los docentes (capítulo 12.03) es determinante y tiene margen de mejora.</li>
+        <li><strong>El formato del secundario</strong>: un modelo rígido que no logra enganchar a muchos adolescentes.</li>
+        <li><strong>Composición del gasto</strong>: casi todo va a salarios, con poco margen para materiales, tecnología, capacitación.</li>
+      </ul>
+
+      <h3>Factores fuera del sistema</h3>
+
+      <ul>
+        <li><strong>La pobreza</strong>: un alto porcentaje de niños y adolescentes vive en hogares pobres, lo que afecta directamente las condiciones para aprender.</li>
+        <li><strong>La desigualdad social</strong>: que el sistema no logra compensar.</li>
+        <li><strong>El impacto de la pandemia</strong>: el cierre prolongado de escuelas en 2020-2021 afectó los aprendizajes, especialmente de los más vulnerables.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Inversión no es lo mismo que resultados</div>
+        <p>Como se señaló en el capítulo de financiamiento (12.06), Argentina llegó a invertir un porcentaje del PBI comparativamente alto en educación, pero los resultados no mejoraron en la misma proporción. Esto no significa que la inversión no importe —importa, y mucho— sino que <strong>la inversión es necesaria pero no suficiente</strong>. Importa cuánto se invierte, pero también en qué, cómo, y en qué contexto social. Mejorar la calidad requiere abordar simultáneamente el financiamiento, la formación docente, el formato pedagógico, los días de clase, y las condiciones sociales de los estudiantes. No hay una solución única.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="que-hacer">
+      <div class="seccion-num">09 · Qué hacer</div>
+      <h2>Los <em>debates</em> sobre qué hacer</h2>
+
+      <p>Frente a los resultados, hay un debate intenso —y muchas veces atravesado por la grieta— sobre cómo mejorar la calidad educativa. Algunas líneas de consenso y de disputa:</p>
+
+      <h3>Puntos de relativo consenso</h3>
+
+      <ul>
+        <li><strong>Foco en la alfabetización</strong>: garantizar que todos los niños aprendan a leer y escribir bien en los primeros años es prioritario. Varias jurisdicciones lanzaron planes de alfabetización.</li>
+        <li><strong>Más y mejores días de clase</strong>: extender la jornada y garantizar el calendario escolar.</li>
+        <li><strong>Jerarquizar la formación docente</strong>: mejorar la calidad de la formación de los maestros y profesores.</li>
+        <li><strong>Usar los datos</strong>: que las evaluaciones (Aprender, PISA) sirvan efectivamente para diseñar políticas.</li>
+        <li><strong>Transformar el secundario</strong>: repensar su formato para reducir el abandono.</li>
+      </ul>
+
+      <h3>Puntos de disputa</h3>
+
+      <ul>
+        <li><strong>El rol de la evaluación</strong>: ¿cuánto peso darle a las pruebas estandarizadas? ¿Publicar resultados por escuela genera mejora o estigmatización?</li>
+        <li><strong>Inversión vs gestión</strong>: ¿el problema es de recursos (invertir más) o de gestión (invertir mejor)? El debate suele alinearse con posiciones políticas.</li>
+        <li><strong>Centralización vs autonomía</strong>: ¿más lineamientos nacionales o más autonomía de escuelas y provincias?</li>
+        <li><strong>El lugar de la tecnología</strong>: ¿cuánto puede aportar la tecnología educativa y en qué condiciones?</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones de la <em>evaluación</em></h2>
+
+      <p>La evaluación de la calidad, en sí misma, genera tensiones y debates.</p>
+
+      <h3>Evaluar para mejorar, no para castigar</h3>
+
+      <p>Existe consenso técnico en que las evaluaciones deben servir para <strong>mejorar</strong> (diagnosticar problemas, focalizar recursos) y no para <strong>castigar</strong> (sancionar escuelas o docentes). El riesgo de "enseñar para la prueba" o de estigmatizar a las escuelas con peores resultados es real. El uso correcto de las evaluaciones es como brújula, no como garrote.</p>
+
+      <h3>La continuidad de las evaluaciones</h3>
+
+      <p>Para que las evaluaciones sirvan, deben ser <strong>continuas y consistentes</strong> en el tiempo. La discontinuidad (cambiar qué se evalúa, cuándo, cómo) dificulta seguir la evolución. La estabilidad de los operativos de evaluación es un valor en sí mismo, más allá de la gestión de turno.</p>
+
+      <h3>Medir lo que importa</h3>
+
+      <p>Las pruebas miden bien matemática y lengua, pero la educación es más que eso: incluye ciudadanía, pensamiento crítico, creatividad, valores, capacidades socioemocionales. El desafío es <strong>no reducir la calidad a lo medible</strong>, sin por eso renunciar a medir lo que se puede medir.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El gran desafío del siglo XXI</div>
+        <p>Si el siglo XX argentino fue el de la <strong>expansión</strong> de la educación —de la Ley 1420 a la universidad masiva, de la cobertura primaria casi universal al secundario obligatorio—, el desafío del siglo XXI es la <strong>calidad con equidad</strong>: que todos los que están en el sistema (que son casi todos) efectivamente <strong>aprendan</strong>, y que el origen social no determine el destino educativo. Los resultados actuales muestran que ese desafío está lejos de resolverse: demasiados estudiantes no alcanzan los aprendizajes básicos, y las brechas sociales y provinciales son profundas. Pero el diagnóstico es el primer paso. Argentina tiene un sistema extendido, una tradición educativa potente, datos para diagnosticar y un amplio consenso social sobre la importancia de la educación. Convertir esas fortalezas en mejores aprendizajes para todos es la gran tarea pendiente.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Pruebas Aprender</strong> · Secretaría de Evaluación e Información Educativa, Ministerio de Educación. Evaluación nacional censal desde 2016. argentina.gob.ar/educacion/evaluacion-educativa.</li>
+        <li><strong>PISA 2022</strong> · OCDE. Resultados difundidos en diciembre de 2023. Argentina: 378 en matemática, 401 en lectura, 406 en ciencias.</li>
+        <li><strong>"¿Cómo le fue a Argentina en las pruebas PISA 2022?"</strong> · Observatorio de Argentinos por la Educación (diciembre de 2023). Autores: Martín Nistal, Eugenia Orlicki, Leyre Sáenz Guillén y Víctor Volman.</li>
+        <li><strong>"Resultados PISA 2022"</strong> · Argentina.gob.ar (Ministerio de Educación). Análisis oficial de los resultados.</li>
+        <li><strong>"Prueba PISA: Argentina mantiene bajos resultados"</strong> · Infobae (diciembre de 2023). Datos por jurisdicción (CABA, Córdoba).</li>
+        <li><strong>"Pruebas PISA 2022: 7 de cada 10 no logra niveles básicos en matemática"</strong> · Ámbito, Río Negro, Revista Códigos (2023).</li>
+        <li><strong>"Pruebas PISA y Aprender: una situación opuesta entre primaria y secundaria"</strong> · ETER Digital (2024). Análisis de la paradoja primaria-secundaria.</li>
+        <li><strong>Consejo Nacional de Calidad de la Educación</strong> · Ley 26.206 Art. 98. Visión integral de la calidad educativa.</li>
+        <li><strong>Anuarios Estadísticos Educativos</strong> · Datos de repitencia, sobreedad y terminalidad por nivel y sector.</li>
+        <li><strong>OCDE</strong> · oecd.org/pisa. Marco conceptual y resultados internacionales de PISA.</li>
+        <li><strong>Observatorio de Argentinos por la Educación</strong> · argentinosporlaeducacion.org. Informes sobre calidad, brechas y resultados.</li>
+      </ul>
+    </div>
+
+    <a href="educacion.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Volver al inicio de la sección</div>
+        <h3>Sección <em>Educación</em></h3>
+        <p>Has recorrido los siete capítulos de la sección Educación: la historia, los niveles, la educación superior, los modelos de gestión pública y privada, el gobierno federal del sistema, su financiamiento y su calidad. Volvé al hub de la sección para revisar cualquier capítulo o explorar las conexiones entre ellos.</p>
+      </div>
+      <div class="proximo-cap-arrow">VOLVER AL HUB →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

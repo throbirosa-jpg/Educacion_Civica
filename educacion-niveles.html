@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Los niveles del sistema educativo (12.02) — Educación Cívica</title>
+<meta name="description" content="Cómo está organizada la educación obligatoria en Argentina: los cuatro niveles del sistema (inicial, primario, secundario, superior), las salas del jardín, la estructura primaria-secundaria (6+6 o 7+5), el ciclo básico y orientado del secundario, las 8 modalidades educativas y los 13 años de escolaridad obligatoria que fija la Ley 26.206.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-niveles.html">
+
+<meta property="og:title" content="Los niveles del sistema educativo argentino">
+<meta property="og:description" content="Inicial, primario, secundario y superior: estructura, obligatoriedad y las 8 modalidades del sistema educativo argentino.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-niveles.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.02</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Niveles</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.02 · Educación</div>
+    <h1 class="page-title">Los <em>niveles</em> del sistema educativo</h1>
+    <div class="page-subtitulo">— Inicial, primario, secundario y superior</div>
+    <p class="page-intro">El sistema educativo argentino se organiza en <strong>cuatro niveles</strong> —inicial, primario, secundario y superior— y <strong>ocho modalidades</strong> transversales, según define el Artículo 17 de la Ley de Educación Nacional 26.206. La <strong>escolaridad es obligatoria desde los 4 años</strong> (sala de 4 del nivel inicial) y se extiende, sin interrupción, durante toda la primaria y secundaria: en total, <strong>13 años de educación obligatoria</strong>, uno de los recorridos más extensos de América Latina. La primaria y secundaria suman 12 años, organizados en dos estructuras alternativas que cada provincia elige: <strong>6 años de primaria + 6 de secundaria</strong>, o <strong>7 + 5</strong>. El nivel inicial atiende desde los 45 días de vida; el superior abarca universidades e institutos terciarios. Este capítulo recorre cómo está organizado cada nivel, qué establece la ley, cómo se estructura el secundario en ciclos y orientaciones, qué son las ocho modalidades, y qué dicen los datos sobre matrícula, repitencia y jornada extendida.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">4</div>
+        <div class="page-stat-label">Niveles del sistema</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">13</div>
+        <div class="page-stat-label">Años de escolaridad obligatoria</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">8</div>
+        <div class="page-stat-label">Modalidades transversales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~13M</div>
+        <div class="page-stat-label">Estudiantes en el sistema (no universitario)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#estructura">01 · La estructura general</a></li>
+      <li><a href="#obligatoriedad">02 · La obligatoriedad escolar</a></li>
+      <li><a href="#inicial">03 · El nivel inicial</a></li>
+      <li><a href="#primario">04 · El nivel primario</a></li>
+      <li><a href="#secundario">05 · El nivel secundario</a></li>
+      <li><a href="#orientaciones">06 · Orientaciones y ciclos</a></li>
+      <li><a href="#superior">07 · El nivel superior</a></li>
+      <li><a href="#modalidades">08 · Las 8 modalidades</a></li>
+      <li><a href="#datos">09 · Lo que dicen los datos</a></li>
+      <li><a href="#tensiones">10 · Tensiones del sistema</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="estructura">
+      <div class="seccion-num">01 · Estructura general</div>
+      <h2>La <em>estructura</em> general del sistema</h2>
+
+      <p>El <strong>Artículo 17 de la Ley 26.206</strong> define la arquitectura del sistema educativo argentino con una fórmula precisa: <strong>cuatro niveles y ocho modalidades</strong>. Los niveles son etapas sucesivas que el estudiante recorre según su edad y trayectoria; las modalidades son formas específicas que pueden atravesar uno o varios niveles para atender necesidades particulares.</p>
+
+      <h3>Los cuatro niveles</h3>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Los cuatro niveles del sistema</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Nivel inicial</div>
+            <div class="ficha-valor">Desde los <strong>45 días hasta los 5 años</strong>. Jardín maternal y jardín de infantes. Obligatorio desde sala de 4.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Nivel primario</div>
+            <div class="ficha-valor"><strong>6 o 7 años</strong> según la provincia. Obligatorio en su totalidad. A partir de los 6 años de edad.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Nivel secundario</div>
+            <div class="ficha-valor"><strong>6 o 5 años</strong> según la provincia. Obligatorio. Ciclo básico + ciclo orientado.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Nivel superior</div>
+            <div class="ficha-valor">Universidades, institutos universitarios e institutos de educación superior (terciarios). No obligatorio.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Por qué la estructura no es única</h3>
+
+      <p>Una particularidad del sistema argentino es que <strong>la estructura no es uniforme en todo el país</strong>. La Ley 26.206 permite a cada provincia elegir entre dos organizaciones para la primaria y la secundaria:</p>
+
+      <ul>
+        <li><strong>Estructura 6 + 6</strong>: 6 años de primaria + 6 años de secundaria.</li>
+        <li><strong>Estructura 7 + 5</strong>: 7 años de primaria + 5 años de secundaria.</li>
+      </ul>
+
+      <p>En ambos casos, el total es de <strong>12 años</strong> (más el año obligatorio de sala de 4, suman 13 años de obligatoriedad). Esta flexibilidad es herencia del proceso de federalización del sistema y de las distintas tradiciones provinciales. La provincia de Buenos Aires, por ejemplo, usa la estructura 6+6; otras jurisdicciones mantienen el 7+5 histórico.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Niveles vs modalidades</div>
+        <p>Es clave no confundir <strong>niveles</strong> con <strong>modalidades</strong>. Los <strong>niveles</strong> son las cuatro etapas según la edad (inicial, primaria, secundaria, superior). Las <strong>modalidades</strong> son ocho formas específicas de organizar la enseñanza (técnica, especial, rural, intercultural bilingüe, de adultos, en contextos de encierro, domiciliaria/hospitalaria y artística) que pueden aplicarse dentro de uno o varios niveles. Una escuela secundaria técnica rural, por ejemplo, combina el nivel secundario con dos modalidades (técnica y rural).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="obligatoriedad">
+      <div class="seccion-num">02 · Obligatoriedad</div>
+      <h2>La <em>obligatoriedad</em> escolar</h2>
+
+      <p>La obligatoriedad escolar es uno de los pilares del sistema. Define qué tramos de la educación el Estado garantiza y la familia está obligada a cumplir. En Argentina, la obligatoriedad se fue <strong>extendiendo progresivamente</strong> a lo largo de la historia.</p>
+
+      <h3>La evolución de la obligatoriedad</h3>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Norma</th>
+              <th>Año</th>
+              <th>Obligatoriedad establecida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ley 1420</strong></td>
+              <td>1884</td>
+              <td>Primaria (de 6 a 14 años)</td>
+            </tr>
+            <tr>
+              <td><strong>Ley Federal 24.195</strong></td>
+              <td>1993</td>
+              <td>10 años (último de inicial + EGB)</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 26.206</strong></td>
+              <td>2006</td>
+              <td>Desde sala de 5 hasta fin del secundario</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 27.045</strong></td>
+              <td>2014</td>
+              <td>Extiende obligatoriedad a sala de 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La obligatoriedad hoy</h3>
+
+      <p>Tras la <strong>Ley 27.045 de 2014</strong>, que modificó la Ley 26.206, la <strong>obligatoriedad escolar comienza a los 4 años</strong> de edad (sala de 4 del nivel inicial) y se extiende, sin interrupción, durante toda la educación primaria y secundaria. En total son <strong>13 años de educación obligatoria</strong>.</p>
+
+      <p>La misma Ley 27.045 estableció además el mandato de <strong>universalizar la sala de 3</strong>: aunque no es obligatoria, el Estado nacional, las provincias y la CABA tienen la obligación de extender los servicios educativos para los niños de 3 años, priorizando los sectores menos favorecidos. Es un objetivo de política pública en proceso.</p>
+
+      <h3>El piso de 180 días de clase</h3>
+
+      <p>La obligatoriedad no se mide solo en años, sino también en <strong>días de clase</strong>. La <strong>Ley 25.864 de 2003</strong> estableció un <strong>ciclo lectivo anual mínimo de 180 días efectivos de clase</strong> para los niveles inicial, primario y secundario en todo el país. La norma surgió tras años en que los paros docentes y otras interrupciones reducían fuertemente los días efectivos de enseñanza. Si una jurisdicción no alcanza ese piso, debe adoptar medidas para compensar los días perdidos. En los últimos años, varias provincias avanzaron hacia <strong>ampliar</strong> ese mínimo (algunas a 190 días), bajo la premisa de que <strong>más tiempo de clase</strong> es una condición necesaria —aunque no suficiente— para mejorar los aprendizajes.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Obligatoriedad no es lo mismo que cobertura</div>
+        <p>Que la ley declare obligatorio un tramo educativo <strong>no garantiza automáticamente que todos lo cursen</strong>. La obligatoriedad es un mandato legal; la <strong>cobertura</strong> (cuántos efectivamente asisten) y la <strong>terminalidad</strong> (cuántos completan el nivel) son resultados que dependen de la inversión, las condiciones sociales y la calidad del sistema. Argentina tiene una cobertura casi universal en primaria, alta en los primeros años del secundario, pero con una caída significativa en la <strong>terminalidad del secundario</strong>: muchos ingresan pero no todos egresan en tiempo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="inicial">
+      <div class="seccion-num">03 · Nivel inicial</div>
+      <h2>El nivel <em>inicial</em></h2>
+
+      <p>El <strong>nivel inicial</strong> es la primera etapa del sistema educativo. La Ley 26.206 lo define como una <strong>unidad pedagógica</strong> que comprende a los niños desde los <strong>45 días hasta los 5 años de edad inclusive</strong>.</p>
+
+      <h3>Jardín maternal y jardín de infantes</h3>
+
+      <p>El nivel inicial se organiza en dos tramos:</p>
+
+      <ul>
+        <li><strong>Jardín maternal</strong>: para niños desde los 45 días hasta los 2 años. Atiende la primera infancia con un enfoque de cuidado y estimulación temprana.</li>
+        <li><strong>Jardín de infantes</strong>: para niños de 3 a 5 años. Las <strong>salas de 4 y 5 son obligatorias</strong>; la sala de 3 está en proceso de universalización.</li>
+      </ul>
+
+      <h3>Qué busca el nivel inicial</h3>
+
+      <p>El nivel inicial no es una "guardería": tiene <strong>objetivos pedagógicos propios</strong>. Busca desarrollar en los niños la capacidad de expresión y comunicación (por la palabra, el movimiento, la música, la expresión plástica), la socialización, los hábitos de convivencia, la autonomía progresiva y las bases del pensamiento. Todas las actividades pedagógicas deben estar a cargo de <strong>personal con título docente</strong>.</p>
+
+      <p>Algunas características que fija la ley:</p>
+
+      <ul>
+        <li>El paso de una sala a otra dentro del nivel tiene un solo requisito: <strong>la edad</strong> (no hay "repitencia" en el nivel inicial).</li>
+        <li>Pueden crearse <strong>salas multiedad</strong> (con niños de distintas edades) según las características del lugar, algo común en zonas rurales.</li>
+        <li>La ley regula tanto las instituciones <strong>estatales como las privadas</strong> que dan educación inicial.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="primario">
+      <div class="seccion-num">04 · Nivel primario</div>
+      <h2>El nivel <em>primario</em></h2>
+
+      <p>El <strong>nivel primario</strong> es obligatorio en su totalidad y comienza a los <strong>6 años de edad</strong>. Según la estructura que cada provincia haya adoptado, dura <strong>6 o 7 años</strong>. Es el nivel con cobertura más universal del sistema: prácticamente todos los niños argentinos en edad escolar asisten a la primaria.</p>
+
+      <h3>Qué busca el nivel primario</h3>
+
+      <p>El nivel primario tiene la finalidad de <strong>proporcionar una formación integral, básica y común</strong>. Es donde se consolidan los aprendizajes fundamentales: lectura, escritura, matemática, conocimiento del mundo natural y social, y la formación ética y ciudadana. Es la base sobre la que se construye todo el recorrido educativo posterior.</p>
+
+      <h3>La jornada extendida y completa</h3>
+
+      <p>Un objetivo importante de la Ley 26.206 es la extensión de la jornada escolar. Existen distintos formatos:</p>
+
+      <ul>
+        <li><strong>Jornada simple</strong>: la modalidad tradicional, de aproximadamente 4 horas diarias (turno mañana o tarde).</li>
+        <li><strong>Jornada extendida</strong>: agrega horas al turno simple.</li>
+        <li><strong>Jornada completa</strong>: doble turno, con los estudiantes en la escuela la mayor parte del día.</li>
+      </ul>
+
+      <p>La meta de universalizar la jornada extendida o completa en la primaria avanzó hasta cierto punto y luego se estancó: en 2011 el 13% de las escuelas primarias tenía este formato; creció hasta el 22% en 2015 y desde entonces se mantuvo estable. La ampliación de la jornada es una de las asignaturas pendientes del sistema.</p>
+    </div>
+
+    <div class="seccion" id="secundario">
+      <div class="seccion-num">05 · Nivel secundario</div>
+      <h2>El nivel <em>secundario</em></h2>
+
+      <p>El <strong>nivel secundario</strong> es obligatorio y dura <strong>5 o 6 años</strong> según la estructura provincial. Es el nivel que presenta los mayores desafíos del sistema: alta matrícula de ingreso pero también la mayor repitencia y el mayor abandono.</p>
+
+      <h3>La obligatoriedad del secundario completo</h3>
+
+      <p>Una de las transformaciones más importantes de la Ley 26.206 fue establecer la <strong>obligatoriedad del secundario completo</strong>. Hasta 2006, la educación obligatoria no incluía todo el secundario. La 26.206 lo definió como nivel obligatorio en su totalidad, lo que implicó un cambio de paradigma: el Estado se comprometió a garantizar que todos los adolescentes no solo ingresen sino que <strong>completen</strong> el secundario.</p>
+
+      <h3>La unidad pedagógica</h3>
+
+      <p>La ley define el secundario como un <strong>nivel con unidad pedagógica y organizativa</strong>, destinado a adolescentes y jóvenes que hayan completado la primaria. Su finalidad es habilitar para <strong>el ejercicio pleno de la ciudadanía, el mundo del trabajo y la continuación de estudios superiores</strong>.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El gran desafío del sistema</div>
+        <p>El nivel secundario es donde se concentran las mayores dificultades. La repitencia en el secundario es del orden del <strong>10%</strong> (frente a menos del 3% en primaria), más alta en los primeros años (12% en el ciclo básico) y en el sector estatal (12%) que en el privado (4%). El abandono y la baja terminalidad son problemas persistentes: muchos estudiantes ingresan pero no completan el nivel en el tiempo previsto. Mejorar la terminalidad del secundario es uno de los principales objetivos de política educativa de las últimas dos décadas.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="orientaciones">
+      <div class="seccion-num">06 · Orientaciones y ciclos</div>
+      <h2>Orientaciones y <em>ciclos</em> del secundario</h2>
+
+      <p>El nivel secundario está organizado internamente en <strong>dos ciclos</strong> y ofrece diversas <strong>orientaciones</strong> en su tramo final.</p>
+
+      <h3>Los dos ciclos</h3>
+
+      <ul>
+        <li><strong>Ciclo básico</strong>: comprende los primeros años (típicamente 2-3 años). Es común a todas las orientaciones y entrega una formación general.</li>
+        <li><strong>Ciclo orientado</strong>: comprende los años restantes. Es <strong>diversificado</strong>: el estudiante cursa según la orientación elegida.</li>
+      </ul>
+
+      <h3>Las orientaciones del bachillerato</h3>
+
+      <p>El secundario orientado (el más común) ofrece distintos <strong>bachilleratos</strong> según el área de énfasis:</p>
+
+      <ul>
+        <li><strong>Ciencias Sociales</strong> (o Ciencias Sociales y Humanidades)</li>
+        <li><strong>Ciencias Naturales</strong></li>
+        <li><strong>Economía y Administración</strong></li>
+        <li><strong>Lenguas</strong></li>
+        <li><strong>Agrario / Agro y Ambiente</strong></li>
+        <li><strong>Turismo</strong></li>
+        <li><strong>Comunicación</strong>, <strong>Arte</strong>, <strong>Informática</strong> y <strong>Educación Física</strong>, entre otras</li>
+      </ul>
+
+      <h3>El secundario técnico</h3>
+
+      <p>Además del bachillerato orientado, existe la <strong>educación secundaria técnico profesional</strong>, regida por la <strong>Ley de Educación Técnico Profesional 26.058 (2005)</strong>. Las escuelas técnicas pueden durar <strong>más años</strong> que el secundario común (típicamente 7 años) y otorgan títulos de técnico en distintas especialidades (electrónica, química, construcciones, informática, etc.). Tienen una fuerte tradición en Argentina, ligada a la industrialización y a las antiguas escuelas industriales y la ENET.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— La educación técnica: un activo histórico</div>
+        <p>La educación técnica argentina tiene un prestigio histórico considerable, asociado a la formación de técnicos y a la movilidad social. Las escuelas industriales del siglo XX y la creación de la Universidad Obrera (hoy UTN) en 1948 forjaron una tradición técnica robusta. La Ley 26.058 de 2005 reorganizó el sector y creó el <strong>Fondo Nacional para la Educación Técnico Profesional</strong>, que destina recursos específicos al equipamiento y la mejora de las escuelas técnicas. Es uno de los pocos circuitos del sistema con financiamiento propio garantizado por ley.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="superior">
+      <div class="seccion-num">07 · Nivel superior</div>
+      <h2>El nivel <em>superior</em></h2>
+
+      <p>El <strong>nivel superior</strong> es el último del sistema y no es obligatorio. La Ley 26.206 (Art. 34) establece que comprende dos grandes circuitos:</p>
+
+      <ul>
+        <li><strong>Universidades e institutos universitarios</strong>, estatales o privados autorizados, regidos por la <strong>Ley de Educación Superior 24.521</strong>.</li>
+        <li><strong>Institutos de educación superior</strong> (los "terciarios"), de jurisdicción nacional, provincial o de la CABA, de gestión estatal o privada.</li>
+      </ul>
+
+      <h3>Universitario vs no universitario</h3>
+
+      <p>La distinción es importante:</p>
+
+      <ul>
+        <li>La <strong>educación universitaria</strong> otorga títulos de grado (licenciaturas, ingenierías, etc.) y posgrado (especializaciones, maestrías, doctorados). Las universidades nacionales son <strong>gratuitas y autónomas</strong>.</li>
+        <li>La <strong>educación superior no universitaria</strong> (terciaria) otorga títulos técnicos y, sobre todo, forma a los docentes. Los <strong>institutos de formación docente</strong> son el principal circuito de preparación de maestros y profesores, herederos del normalismo.</li>
+      </ul>
+
+      <p>El nivel superior es un tema lo suficientemente extenso como para tener su propio capítulo: se desarrolla en profundidad en el <strong>capítulo 12.03 · Educación superior</strong>, que aborda el sistema universitario, la gratuidad, la autonomía, el CONICET y la formación docente.</p>
+    </div>
+
+    <div class="seccion" id="modalidades">
+      <div class="seccion-num">08 · Las 8 modalidades</div>
+      <h2>Las <em>ocho modalidades</em></h2>
+
+      <p>Además de los cuatro niveles, la Ley 26.206 define <strong>ocho modalidades</strong>: formas específicas de organizar la enseñanza para atender necesidades particulares de determinadas poblaciones o contextos. Las modalidades pueden atravesar uno o varios niveles.</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Modalidad</th>
+              <th>A quién atiende</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Educación técnico profesional</strong></td>
+              <td>Formación técnica de nivel secundario y superior. Ley 26.058.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación artística</strong></td>
+              <td>Formación en lenguajes artísticos (música, danza, artes visuales, teatro).</td>
+            </tr>
+            <tr>
+              <td><strong>Educación especial</strong></td>
+              <td>Personas con discapacidades, temporales o permanentes, buscando la inclusión.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación permanente de jóvenes y adultos</strong></td>
+              <td>Jóvenes y adultos que no completaron la escolaridad en la edad teórica.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación rural</strong></td>
+              <td>Población que habita en zonas rurales, con formas adaptadas a sus particularidades.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación intercultural bilingüe</strong></td>
+              <td>Pueblos indígenas (Art. 75 inc. 17 CN): preserva lengua, cosmovisión e identidad.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación en contextos de privación de libertad</strong></td>
+              <td>Personas detenidas, garantizando su derecho a la educación.</td>
+            </tr>
+            <tr>
+              <td><strong>Educación domiciliaria y hospitalaria</strong></td>
+              <td>Estudiantes que no pueden asistir por razones de salud.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Las modalidades expresan un principio central de la Ley 26.206: que el derecho a la educación debe garantizarse <strong>para todos</strong>, adaptando las formas a las circunstancias particulares de cada población. La educación intercultural bilingüe, en particular, tiene rango constitucional: deriva del Art. 75 inciso 17 de la Constitución, que reconoce el derecho de los pueblos indígenas a una educación que preserve su identidad.</p>
+    </div>
+
+    <div class="seccion" id="datos">
+      <div class="seccion-num">09 · Los datos</div>
+      <h2>Lo que dicen los <em>datos</em></h2>
+
+      <p>El sistema educativo argentino produce información estadística a través del <strong>Relevamiento Anual</strong>, implementado desde 1996 por la Dirección de Información Educativa del Ministerio de Educación. Cada año, con fecha de captura al 30 de abril, se recogen datos de todos los establecimientos del país. Los <strong>Anuarios Estadísticos Educativos</strong> son la fuente oficial.</p>
+
+      <h3>La magnitud del sistema</h3>
+
+      <p>Algunos datos que dan dimensión del sistema (sobre la base de relevamientos recientes):</p>
+
+      <ul>
+        <li>El sistema educativo no universitario alcanza aproximadamente <strong>13 millones de estudiantes</strong>, contabilizando todos los niveles y modalidades.</li>
+        <li>Hay del orden de <strong>76.000 unidades de servicio educativo</strong> en todo el país.</li>
+        <li>El nivel secundario reúne cerca de <strong>3,9 millones de estudiantes</strong>.</li>
+        <li>El Relevamiento Anual logra una cobertura cercana al <strong>99% de las escuelas</strong>.</li>
+      </ul>
+
+      <h3>Repitencia y terminalidad</h3>
+
+      <p>Los datos confirman dónde están los problemas:</p>
+
+      <ul>
+        <li>La repitencia en <strong>primaria es baja y en descenso</strong>: pasó del 4,1% (2011) al 2,8% (2019).</li>
+        <li>La repitencia en <strong>secundario es alta</strong>: alrededor del 10%, concentrada en el ciclo básico (12%).</li>
+        <li>La repitencia es <strong>más alta en el sector estatal</strong> (12%) que en el privado (4%), reflejo de las desigualdades sociales que la escuela no logra compensar por sí sola.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Dónde mirar los datos oficiales</div>
+        <p>La información educativa argentina es pública y accesible. El Ministerio de Educación publica los <strong>Anuarios Estadísticos Educativos</strong> (serie 1996-2024), las <strong>bases de datos a nivel de departamento</strong> (2016-2024) y el <strong>Sistema de Consulta de Datos Educativos Nacionales</strong>, una plataforma interactiva. Estos datos son la base de cualquier análisis serio del sistema y permiten seguir su evolución a lo largo del tiempo. El análisis de calidad y evaluación (pruebas Aprender, PISA) se desarrolla en el capítulo 12.07.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones del <em>sistema</em> de niveles</h2>
+
+      <p>La organización en niveles enfrenta tensiones estructurales que atraviesan el debate educativo argentino.</p>
+
+      <h3>La heterogeneidad de estructuras</h3>
+
+      <p>La coexistencia de las estructuras <strong>6+6 y 7+5</strong> según la provincia genera complicaciones prácticas: dificulta la <strong>movilidad de los estudiantes</strong> entre provincias (un chico que cambia de jurisdicción puede encontrarse con que su grado no coincide con el nivel), complica la comparación de datos y fragmenta el sistema. Es una herencia del proceso de federalización que no se terminó de unificar.</p>
+
+      <h3>La transición entre niveles</h3>
+
+      <p>Los <strong>pasajes entre niveles</strong> —de inicial a primaria, y sobre todo de primaria a secundaria— son momentos críticos donde se concentra el riesgo de abandono. La transición de primaria a secundaria, con el cambio de un docente único a múltiples profesores por materia, es especialmente desafiante y donde aparece la mayor repitencia.</p>
+
+      <h3>La terminalidad del secundario</h3>
+
+      <p>El gran problema pendiente es la <strong>baja terminalidad del secundario</strong>: la brecha entre los que ingresan y los que egresan en tiempo. Aunque la obligatoriedad es legal desde 2006, garantizar que todos completen el nivel es un objetivo aún no alcanzado, que requiere políticas de acompañamiento, becas, y transformación de los formatos pedagógicos.</p>
+
+      <h3>La universalización del nivel inicial</h3>
+
+      <p>La <strong>universalización de la sala de 3</strong> (mandato de la Ley 27.045) avanza de manera desigual entre provincias. La evidencia internacional muestra que la educación temprana tiene efectos duraderos en las trayectorias educativas, por lo que extender el nivel inicial es una inversión estratégica, especialmente para los sectores más vulnerables.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema amplio con desafíos de calidad y equidad</div>
+        <p>Argentina construyó uno de los sistemas educativos <strong>más amplios y extendidos</strong> de América Latina: 13 años de obligatoriedad, cobertura casi universal en primaria, cuatro niveles y ocho modalidades que buscan no dejar a nadie afuera. El desafío del siglo XXI no es tanto la <strong>cobertura</strong> (en gran medida lograda) sino la <strong>calidad y la equidad</strong>: que todos no solo accedan sino que aprendan, completen sus trayectorias y lo hagan con calidad equivalente sin importar su provincia o condición social. Los capítulos siguientes analizan la educación superior, los modelos de gestión pública y privada, el gobierno federal del sistema, su financiamiento y los debates sobre calidad.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley de Educación Nacional 26.206</strong> · Artículos 17 (estructura), 18-25 (nivel inicial), 26-28 (primaria), 29-33 (secundaria), 34-36 (superior), 49-60 (modalidades). Texto actualizado en argentina.gob.ar/normativa/nacional/ley-26206-123542/actualizacion.</li>
+        <li><strong>Ley 27.045</strong> · 2014. Extiende la obligatoriedad a la sala de 4 y manda universalizar la sala de 3.</li>
+        <li><strong>Ley de Educación Técnico Profesional 26.058</strong> · 2005. Regula la educación técnica y crea el Fondo Nacional para la Educación Técnico Profesional.</li>
+        <li><strong>Ley 25.864</strong> · 2003. Establece el ciclo lectivo anual mínimo de 180 días efectivos de clase.</li>
+        <li><strong>Ley de Educación Superior 24.521</strong> · 1995. Regula universidades e institutos universitarios.</li>
+        <li><strong>"Ley simple: Niveles educativos"</strong> · Argentina.gob.ar / Justicia / Derecho Fácil. Explicación accesible de la estructura del sistema.</li>
+        <li><strong>"Estructura del Sistema Educativo: niveles y modalidades"</strong> · Argentina.gob.ar / Validez de títulos / Glosario.</li>
+        <li><strong>Dirección Nacional de Educación Inicial</strong> · Argentina.gob.ar/nivelesymodalidades. Información sobre el nivel inicial y la obligatoriedad.</li>
+        <li><strong>Anuarios Estadísticos Educativos (1996-2024)</strong> · Dirección de Información Educativa, Ministerio de Educación. Datos de matrícula, repitencia, jornada, establecimientos.</li>
+        <li><strong>Anuario Estadístico Educativo 2019 · Datos destacados</strong> · Datos de matrícula del secundario (3,9 millones), repitencia por nivel y sector, jornada extendida.</li>
+        <li><strong>Anuario Estadístico Educativo 2020</strong> · Cobertura del 99% de escuelas, ~13 millones de estudiantes, ~76 mil unidades de servicio.</li>
+        <li><strong>Relevamiento Anual / Sistema Federal de Información Educativa</strong> · Implementado desde 1996. Fuente censal con captura al 30 de abril de cada año.</li>
+        <li><strong>Sistema de Consulta de Datos Educativos Nacionales</strong> · Plataforma interactiva (Power BI) del Ministerio de Educación.</li>
+        <li><strong>Constitución Nacional</strong> · Art. 75 inc. 17 (derechos de los pueblos indígenas, base de la educación intercultural bilingüe) y Art. 14 (derecho de enseñar y aprender).</li>
+      </ul>
+    </div>
+
+    <a href="educacion-superior.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.03</div>
+        <h3>La <em>educación</em> superior</h3>
+        <p>El sistema universitario argentino: las universidades nacionales <strong>gratuitas y autónomas</strong>, herederas de la Reforma del 18 y la gratuidad del 49; las universidades provinciales y privadas; los institutos terciarios y la formación docente; el CONICET y el sistema científico; la Ley de Educación Superior 24.521 y la CONEAU. Cómo se gobierna, se financia y se evalúa la universidad argentina.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

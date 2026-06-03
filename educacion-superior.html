@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>La educación superior (12.03) — Educación Cívica</title>
+<meta name="description" content="El sistema de educación superior argentino: las universidades nacionales gratuitas y autónomas (más de 55 en todo el país, con más de 2 millones de estudiantes), la autonomía con rango constitucional desde 1994, la Ley de Educación Superior 24.521 y la Ley de Financiamiento Universitario de 2025, la CONEAU, el CONICET, los institutos terciarios y la formación docente.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-superior.html">
+
+<meta property="og:title" content="La educación superior argentina">
+<meta property="og:description" content="Universidades gratuitas y autónomas, CONICET, CONEAU, formación docente: el sistema de educación superior argentino.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-superior.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.03</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Educación superior</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.03 · Educación</div>
+    <h1 class="page-title">La educación <em>superior</em></h1>
+    <div class="page-subtitulo">— Universidades, terciarios y el sistema científico</div>
+    <p class="page-intro">La educación superior argentina tiene un rasgo distintivo en la región: sus <strong>universidades nacionales son gratuitas, autónomas y de ingreso irrestricto</strong>. Funcionan <strong>más de 55 universidades nacionales</strong> en todo el país —al menos una por provincia— donde estudian <strong>más de 2 millones de personas</strong>. (El sistema universitario completo, sumando institutos universitarios y el sector privado, supera las 130 instituciones y los 2,7 millones de estudiantes.) La gratuidad, heredada del decreto de 1949, y la autonomía, conquistada por la Reforma de 1918, tienen desde 1994 <strong>rango constitucional</strong> (Art. 75 inc. 19). El sistema se completa con universidades provinciales y privadas, con los <strong>institutos de educación superior</strong> (terciarios) que forman a la mayoría de los docentes del país, y con un robusto <strong>sistema científico</strong> articulado en torno al CONICET. La <strong>Ley de Educación Superior 24.521</strong> (1995) es el marco regulatorio, y la <strong>CONEAU</strong> el organismo que evalúa y acredita la calidad. Este capítulo recorre cómo se organiza, gobierna, financia y evalúa uno de los sistemas universitarios más extendidos y singulares de América Latina.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">+55</div>
+        <div class="page-stat-label">Universidades nacionales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">+2M</div>
+        <div class="page-stat-label">Estudiantes universitarios</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1994</div>
+        <div class="page-stat-label">Autonomía con rango constitucional</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">24.521</div>
+        <div class="page-stat-label">Ley de Educación Superior</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es la educación superior</a></li>
+      <li><a href="#gratuidad">02 · La gratuidad</a></li>
+      <li><a href="#autonomia">03 · La autonomía universitaria</a></li>
+      <li><a href="#ley-24521">04 · La Ley 24.521</a></li>
+      <li><a href="#tipos">05 · Tipos de universidad</a></li>
+      <li><a href="#gobierno">06 · El gobierno universitario</a></li>
+      <li><a href="#coneau">07 · La CONEAU</a></li>
+      <li><a href="#terciarios">08 · Terciarios y formación docente</a></li>
+      <li><a href="#conicet">09 · El sistema científico</a></li>
+      <li><a href="#financiamiento-uni">10 · El conflicto por el financiamiento</a></li>
+      <li><a href="#tensiones">11 · Tensiones del sistema</a></li>
+      <li><a href="#fuentes">12 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es la educación <em>superior</em></h2>
+
+      <p>La <strong>educación superior</strong> es el último nivel del sistema educativo y el único no obligatorio. La Ley 24.521 la define como integrada por <strong>dos grandes circuitos</strong>: las instituciones de educación superior <strong>no universitaria</strong> (de formación docente, técnica, humanística, social o artística) y las instituciones de educación <strong>universitaria</strong> (universidades e institutos universitarios).</p>
+
+      <h3>Los dos circuitos</h3>
+
+      <ul>
+        <li><strong>Circuito universitario</strong>: universidades e institutos universitarios. Otorgan títulos de grado (licenciaturas, ingenierías, profesorados universitarios) y de posgrado (especializaciones, maestrías, doctorados). Es el circuito con autonomía constitucional.</li>
+        <li><strong>Circuito no universitario (terciario)</strong>: institutos de educación superior, de jurisdicción nacional, provincial o de la CABA. Forman, sobre todo, a los docentes del sistema y a técnicos superiores. Dependen de las jurisdicciones, no tienen autonomía universitaria.</li>
+      </ul>
+
+      <h3>El ingreso</h3>
+
+      <p>Para ingresar a la educación superior se requiere, en general, haber <strong>completado el nivel secundario</strong>. La Ley 24.521 prevé una excepción: los <strong>mayores de 25 años</strong> que no completaron el secundario pueden ingresar si demuestran, mediante evaluaciones, preparación y experiencia suficientes. Las universidades nacionales tienen, mayoritariamente, <strong>ingreso irrestricto</strong> (sin examen eliminatorio), aunque suelen tener un curso de nivelación o ciclo básico común.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un modelo singular en la región</div>
+        <p>La combinación de <strong>gratuidad + autonomía + ingreso irrestricto</strong> hace del modelo universitario argentino un caso distintivo en América Latina. En la mayoría de los países de la región, la universidad pública tiene examen de ingreso selectivo (Brasil, con el vestibular) o conviven sistemas mixtos con fuerte peso privado (Chile). El modelo argentino prioriza el acceso amplio, lo que produce alta matrícula de ingreso pero también desafíos de retención y graduación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="gratuidad">
+      <div class="seccion-num">02 · Gratuidad</div>
+      <h2>La <em>gratuidad</em> universitaria</h2>
+
+      <p>La <strong>gratuidad de la enseñanza universitaria</strong> es uno de los pilares del sistema. Significa que los estudios de grado en las universidades nacionales <strong>no tienen aranceles, tasas ni matrícula</strong>: el costo lo cubre el Estado nacional.</p>
+
+      <h3>El origen: el decreto de 1949</h3>
+
+      <p>Como se vio en el capítulo de historia (12.01), la gratuidad fue establecida por el <strong>Decreto 29.337 del 22 de noviembre de 1949</strong>, firmado por Juan Domingo Perón, que suprimió los aranceles universitarios. Hasta entonces, la universidad pública cobraba aranceles que constituían una barrera para los sectores populares. El 22 de noviembre se conmemora como <strong>Día Nacional de la Gratuidad Universitaria</strong>.</p>
+
+      <h3>La consolidación legal</h3>
+
+      <p>La gratuidad atravesó interrupciones (algunas dictaduras y gobiernos reintrodujeron aranceles o tasas), pero se consolidó definitivamente con la recuperación democrática. Su estatus quedó reforzado en dos momentos:</p>
+
+      <ul>
+        <li><strong>1994</strong>: la reforma constitucional incorporó el Art. 75 inc. 19, que ordena al Congreso garantizar "los principios de gratuidad y equidad de la educación pública estatal".</li>
+        <li><strong>2015</strong>: una reforma de la Ley de Educación Superior estableció expresamente que los estudios de grado en las instituciones de educación superior <strong>de gestión estatal son gratuitos</strong>, prohibiendo todo tipo de tasa, arancel o gravamen.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Gratuidad y matrícula social</div>
+        <p>El efecto histórico de la gratuidad fue transformar la composición social del estudiantado. La universidad dejó de ser un espacio de elite: los hijos de trabajadores y la primera generación de universitarios de cada familia poblaron las aulas. La universidad pública argentina es reconocida como un <strong>"elemento de movilidad social por excelencia"</strong>. La matrícula universitaria total del país, contando universidades estatales y privadas, ronda los <strong>2,7 millones de estudiantes</strong> (dato de 2023), de los cuales cerca del 75% cursa en instituciones de gestión estatal y más de 2 millones están en universidades nacionales gratuitas.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="autonomia">
+      <div class="seccion-num">03 · Autonomía</div>
+      <h2>La <em>autonomía</em> universitaria</h2>
+
+      <p>La <strong>autonomía universitaria</strong> es el principio por el cual las universidades se gobiernan a sí mismas, con independencia del poder político de turno. Es una conquista de la Reforma de 1918 que, tras un largo camino, alcanzó rango constitucional en 1994.</p>
+
+      <h3>Qué implica la autonomía</h3>
+
+      <p>La autonomía universitaria comprende la potestad de las universidades para:</p>
+
+      <ul>
+        <li><strong>Dictar sus propios estatutos</strong> y organizar su gobierno interno.</li>
+        <li><strong>Crear carreras de grado y posgrado</strong> y definir sus planes de estudio.</li>
+        <li><strong>Designar a sus autoridades y docentes</strong> mediante concursos propios.</li>
+        <li><strong>Administrar su patrimonio y sus recursos</strong> (autarquía).</li>
+        <li><strong>Expedir títulos</strong> con validez nacional.</li>
+      </ul>
+
+      <h3>El rango constitucional (1994)</h3>
+
+      <p>La reforma constitucional de 1994 incorporó la autonomía universitaria de manera expresa. El <strong>Art. 75 inc. 19</strong> ordena al Congreso sancionar leyes de organización de la educación que "garanticen los principios de gratuidad y equidad de la educación pública estatal y la <strong>autonomía y autarquía de las universidades nacionales</strong>".</p>
+
+      <p>La interpretación jurisprudencial consolidada sostiene que el objetivo de la autonomía es <strong>desvincular a la universidad de su dependencia del Poder Ejecutivo</strong>, pero no de la potestad regulatoria del Poder Legislativo. Es decir: el Congreso puede legislar sobre las universidades (dictar la Ley de Educación Superior, aprobar el presupuesto), pero el Ejecutivo no puede dirigir ni intervenir su funcionamiento académico.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Autonomía y presupuesto: una tensión estructural</div>
+        <p>La autonomía universitaria convive con una <strong>dependencia financiera</strong>: las universidades nacionales se financian mayoritariamente con fondos del presupuesto nacional que aprueba el Congreso y ejecuta el Ejecutivo. Esto genera una tensión recurrente: el presupuesto puede usarse como herramienta de presión sobre instituciones que son, formalmente, autónomas. El debate sobre el financiamiento universitario —su monto, su actualización, su distribución— es uno de los más sensibles de la política argentina, y se analiza en detalle en el capítulo 12.06.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-24521">
+      <div class="seccion-num">04 · Ley 24.521</div>
+      <h2>La <em>Ley de Educación Superior</em> 24.521</h2>
+
+      <p>La <strong>Ley de Educación Superior N.º 24.521</strong>, sancionada en <strong>1995</strong> durante la presidencia de Carlos Menem, es el marco regulatorio de todo el nivel superior. Fue una ley que marcó un quiebre: por primera vez, reconoció legalmente el concepto de <strong>autonomía universitaria</strong>, que no figuraba en la vieja Ley Avellaneda.</p>
+
+      <h3>Qué estableció</h3>
+
+      <p>Los aspectos centrales de la ley:</p>
+
+      <ul>
+        <li>Reconoció la <strong>autonomía académica e institucional</strong> de las universidades, dejando la habilitación gubernamental como una revisión de requisitos a posteriori.</li>
+        <li>Creó la <strong>CONEAU</strong> (Comisión Nacional de Evaluación y Acreditación Universitaria).</li>
+        <li>Reguló las <strong>universidades privadas</strong>: deben ser autorizadas por decreto del Ejecutivo, con funcionamiento provisorio por seis años, previo informe favorable de la CONEAU.</li>
+        <li>Definió la estructura del posgrado (especialización, maestría, doctorado) y la necesidad de acreditación.</li>
+        <li>Estableció el <strong>Consejo de Universidades</strong> y los Consejos Regionales de Planificación de la Educación Superior (CPRES).</li>
+      </ul>
+
+      <h3>Las reformas posteriores</h3>
+
+      <p>La ley fue modificada en varias oportunidades. La más relevante fue la <strong>reforma de 2015 (Ley 27.204)</strong>, que consagró expresamente la <strong>gratuidad de los estudios de grado</strong> en las instituciones estatales y reforzó el ingreso irrestricto, estableciendo que el ingreso a la educación superior es libre y no debe estar condicionado por exámenes eliminatorios.</p>
+    </div>
+
+    <div class="seccion" id="tipos">
+      <div class="seccion-num">05 · Tipos de universidad</div>
+      <h2>Los <em>tipos</em> de universidad</h2>
+
+      <p>El sistema universitario argentino comprende distintos tipos de instituciones, según su gestión y dependencia:</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Gestión</th>
+              <th>Características</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Universidades nacionales</strong></td>
+              <td>Estatal nacional</td>
+              <td>Gratuitas, autónomas, ingreso irrestricto. Más de 55 en todo el país. La mayor parte de la matrícula.</td>
+            </tr>
+            <tr>
+              <td><strong>Universidades provinciales</strong></td>
+              <td>Estatal provincial</td>
+              <td>Creadas por provincias. Pocas. Régimen según legislación provincial.</td>
+            </tr>
+            <tr>
+              <td><strong>Universidades privadas</strong></td>
+              <td>Privada</td>
+              <td>Aranceladas. Autorizadas por decreto previo informe de la CONEAU. Funcionamiento provisorio inicial de 6 años.</td>
+            </tr>
+            <tr>
+              <td><strong>Institutos universitarios</strong></td>
+              <td>Estatal o privada</td>
+              <td>Se dedican a una sola área disciplinar (ej. institutos de tecnología, de salud).</td>
+            </tr>
+            <tr>
+              <td><strong>Universidades internacionales</strong></td>
+              <td>Privada</td>
+              <td>Sedes de instituciones extranjeras o de organismos internacionales.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La expansión del sistema</h3>
+
+      <p>El sistema universitario argentino creció notablemente en las últimas décadas. Se fundaron muchas universidades nacionales nuevas, particularmente en el conurbano bonaerense y en el interior, con el objetivo de acercar la universidad a poblaciones que históricamente no accedían. Esta expansión —celebrada por su efecto inclusivo y cuestionada por algunos respecto de su planificación y calidad— llevó el número de universidades nacionales a más de 55 (el sistema universitario completo, incluyendo institutos universitarios y el sector privado, supera las 130 instituciones). Cada provincia tiene hoy al menos una universidad pública y gratuita.</p>
+    </div>
+
+    <div class="seccion" id="gobierno">
+      <div class="seccion-num">06 · Gobierno universitario</div>
+      <h2>El <em>gobierno</em> universitario</h2>
+
+      <p>El gobierno de las universidades nacionales sigue el modelo del <strong>cogobierno</strong> heredado de la Reforma de 1918: la conducción se comparte entre los distintos claustros que integran la comunidad universitaria.</p>
+
+      <h3>Los claustros</h3>
+
+      <p>El cogobierno universitario está integrado por representantes de:</p>
+
+      <ul>
+        <li><strong>Docentes/profesores</strong>: el claustro académico, generalmente el de mayor peso.</li>
+        <li><strong>Estudiantes</strong>: representados a través de los centros de estudiantes y agrupaciones.</li>
+        <li><strong>Graduados</strong>: los egresados de la institución.</li>
+        <li><strong>No docentes</strong> (personal administrativo y técnico): incorporados al cogobierno en muchas universidades en las últimas décadas.</li>
+      </ul>
+
+      <h3>Los órganos de gobierno</h3>
+
+      <p>La estructura típica de gobierno de una universidad nacional:</p>
+
+      <ul>
+        <li><strong>Asamblea Universitaria</strong>: el órgano máximo. Reúne a todos los consejeros. Elige al rector, reforma el estatuto.</li>
+        <li><strong>Consejo Superior</strong>: el órgano de gobierno permanente de la universidad, presidido por el rector e integrado por representantes de las facultades y los claustros.</li>
+        <li><strong>Rector/a</strong>: la máxima autoridad ejecutiva de la universidad.</li>
+        <li><strong>Consejo Directivo</strong> (por facultad): gobierna cada facultad, presidido por el decano.</li>
+        <li><strong>Decano/a</strong>: la autoridad ejecutiva de cada facultad.</li>
+      </ul>
+
+      <p>Las autoridades se eligen periódicamente (no son vitalicias, otro legado reformista) por los propios claustros. Esta estructura de autogobierno democrático es una de las señas de identidad de la universidad pública argentina.</p>
+
+      <h3>La coordinación del sistema: CIN y CRUP</h3>
+
+      <p>Por encima de cada universidad, el sistema se coordina a través de dos organismos que reúnen a las máximas autoridades:</p>
+
+      <ul>
+        <li>El <strong>Consejo Interuniversitario Nacional (CIN)</strong>: reúne a los rectores de las <strong>universidades nacionales</strong> (estatales). Es el principal órgano de representación y coordinación del sistema universitario público, e interlocutor del Estado en temas como el presupuesto.</li>
+        <li>El <strong>Consejo de Rectores de Universidades Privadas (CRUP)</strong>: reúne a las autoridades de las universidades <strong>privadas</strong>.</li>
+      </ul>
+
+      <p>Ambos consejos integran el <strong>Consejo de Universidades</strong>, que asesora a la Secretaría de Políticas Universitarias y participa en la coordinación general del sistema (y tiene representación en el Consejo Federal de Educación, ver capítulo 12.05).</p>
+    </div>
+
+    <div class="seccion" id="coneau">
+      <div class="seccion-num">07 · CONEAU</div>
+      <h2>La <em>CONEAU</em> y la evaluación</h2>
+
+      <p>La <strong>Comisión Nacional de Evaluación y Acreditación Universitaria (CONEAU)</strong> es el organismo creado por la Ley 24.521 (1995) para evaluar y acreditar la calidad de la educación universitaria. Es un organismo descentralizado que funciona en jurisdicción del Ministerio de Educación.</p>
+
+      <h3>Qué hace la CONEAU</h3>
+
+      <p>Las funciones principales de la CONEAU son:</p>
+
+      <ul>
+        <li><strong>Evaluación institucional</strong>: evalúa periódicamente a las universidades (estatales y privadas) en su conjunto.</li>
+        <li><strong>Acreditación de carreras de grado</strong>: acredita las carreras cuyos títulos corresponden a profesiones reguladas por el Estado que pueden comprometer el interés público (medicina, ingeniería, abogacía, etc.). Establece estándares de contenidos, carga horaria y formación práctica.</li>
+        <li><strong>Acreditación de posgrados</strong>: todas las carreras de posgrado (especialización, maestría, doctorado) deben ser acreditadas por la CONEAU.</li>
+        <li><strong>Informes sobre nuevas universidades</strong>: emite el informe previo necesario para autorizar nuevas universidades, tanto estatales como privadas.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Evaluación con autonomía</div>
+        <p>La CONEAU encarna una tensión productiva del sistema: cómo <strong>evaluar la calidad sin vulnerar la autonomía</strong>. Su modelo combina la autoevaluación (que hace la propia institución) con la evaluación externa (de pares académicos convocados por la CONEAU). El resultado no es punitivo sino orientado a la mejora: identifica fortalezas y debilidades y formula recomendaciones. El sistema de acreditación de carreras "sensibles" (las que pueden afectar el interés público) garantiza estándares mínimos comunes en todo el país, sea la universidad pública o privada.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="terciarios">
+      <div class="seccion-num">08 · Terciarios</div>
+      <h2>Terciarios y <em>formación docente</em></h2>
+
+      <p>El circuito <strong>no universitario</strong> de la educación superior —los institutos de educación superior, comúnmente llamados "terciarios"— es menos visible que el universitario pero cumple una función crucial: <strong>forma a la mayoría de los docentes</strong> del sistema educativo argentino.</p>
+
+      <h3>Los institutos de formación docente</h3>
+
+      <p>Los <strong>Institutos Superiores de Formación Docente (ISFD)</strong> son los herederos directos del <strong>normalismo</strong> del siglo XIX (las escuelas normales que fundó Sarmiento). Forman a los maestros de nivel inicial y primario, y a los profesores de nivel secundario. Dependen de las jurisdicciones provinciales (o de la CABA), no de las universidades.</p>
+
+      <p>La Ley 26.206 creó el <strong>Instituto Nacional de Formación Docente (INFoD)</strong> para coordinar, planificar y mejorar la formación docente en todo el país, garantizando capacitación gratuita a lo largo de la carrera. El INFoD articula las políticas de formación docente entre la Nación y las provincias.</p>
+
+      <h3>Los terciarios técnicos</h3>
+
+      <p>Además de la formación docente, los institutos de educación superior ofrecen <strong>tecnicaturas superiores</strong> en áreas muy diversas (salud, administración, gastronomía, diseño, tecnología, turismo). Son carreras más cortas que las universitarias (generalmente 2-3 años), con orientación práctica y profesional. Tienen una fuerte presencia territorial y atienden demandas laborales específicas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un circuito subestimado</div>
+        <p>El circuito terciario forma a la inmensa mayoría de los docentes argentinos y a buena parte de los técnicos superiores, pero suele recibir menos atención pública y presupuestaria que el universitario. La <strong>calidad de la formación docente</strong> es uno de los factores más determinantes de la calidad del sistema educativo en su conjunto: ningún sistema educa mejor que la calidad de sus docentes. Por eso la formación docente —su currículum, su exigencia, su jerarquización— es un tema central de cualquier política educativa seria.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="conicet">
+      <div class="seccion-num">09 · Sistema científico</div>
+      <h2>El <em>sistema</em> científico y el CONICET</h2>
+
+      <p>La educación superior se articula estrechamente con el <strong>sistema científico-tecnológico</strong> argentino, en cuyo centro está el <strong>CONICET</strong>.</p>
+
+      <h3>Qué es el CONICET</h3>
+
+      <p>El <strong>Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)</strong>, creado en 1958, es el principal organismo dedicado a la promoción de la ciencia y la tecnología en Argentina. Es un organismo estatal descentralizado. Sus funciones incluyen:</p>
+
+      <ul>
+        <li>Sostener la <strong>Carrera del Investigador Científico</strong>: miles de investigadores con dedicación a la investigación.</li>
+        <li>Otorgar <strong>becas</strong> de posgrado (doctorales y posdoctorales) que forman a los investigadores jóvenes.</li>
+        <li>Sostener la <strong>Carrera del Personal de Apoyo</strong> (técnicos y profesionales).</li>
+        <li>Administrar una red de <strong>institutos y centros de investigación</strong>, muchos de ellos de doble dependencia con universidades nacionales.</li>
+      </ul>
+
+      <h3>La articulación con las universidades</h3>
+
+      <p>El sistema científico argentino está <strong>fuertemente articulado con las universidades</strong>: la mayoría de los investigadores del CONICET trabajan en institutos radicados en universidades nacionales, y muchos son también docentes universitarios. Esta articulación universidad-CONICET es una fortaleza histórica del sistema argentino, que ha producido figuras de relevancia internacional, incluyendo varios premios Nobel en ciencias (Bernardo Houssay, Luis Federico Leloir, César Milstein).</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Ciencia, universidad y desarrollo</div>
+        <p>El vínculo entre educación superior, ciencia y desarrollo es una discusión de política pública de largo plazo. El sistema científico argentino tiene un prestigio histórico notable —tres premios Nobel en ciencias, una tradición de investigación de excelencia— pero también enfrenta desafíos persistentes: financiamiento volátil, "fuga de cerebros" (emigración de científicos formados), y debates sobre la relación entre la investigación básica y las demandas productivas del país. El presupuesto científico, como el universitario, es objeto de tensión recurrente entre los distintos gobiernos.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="financiamiento-uni">
+      <div class="seccion-num">10 · El conflicto por el financiamiento</div>
+      <h2>El conflicto por el <em>financiamiento</em> (2024-2025)</h2>
+
+      <p>Entre 2024 y 2025, el financiamiento universitario se convirtió en uno de los <strong>conflictos públicos más intensos</strong> de la Argentina, con grandes movilizaciones y un pulso institucional entre el Congreso y el Poder Ejecutivo. El episodio es un caso de estudio sobre cómo se tensa, en la práctica, la relación entre la <strong>autonomía universitaria</strong> y la <strong>dependencia presupuestaria</strong> analizada más arriba.</p>
+
+      <h3>El reclamo y las marchas federales</h3>
+
+      <p>En un contexto de fuerte ajuste fiscal y alta inflación, las universidades nacionales reclamaron la <strong>actualización de sus presupuestos de funcionamiento</strong> y la <strong>recomposición de los salarios</strong> docentes y no docentes, que habían perdido poder adquisitivo. El reclamo derivó en sucesivas <strong>Marchas Federales Universitarias</strong> —en abril y octubre de 2024, y nuevamente en 2025— que se cuentan entre las movilizaciones más masivas del período, convocadas por la Federación Universitaria Argentina (FUA), el Consejo Interuniversitario Nacional (CIN) y los gremios docentes y no docentes.</p>
+
+      <h3>El ciclo sanción-veto-insistencia</h3>
+
+      <p>El conflicto se canalizó institucionalmente a través de un mecanismo previsto en la Constitución: el Congreso sanciona una ley, el Poder Ejecutivo puede vetarla, y el Congreso puede insistir con una mayoría agravada de dos tercios. Esto ocurrió dos veces:</p>
+
+      <ul>
+        <li>En <strong>septiembre de 2024</strong>, el Congreso sancionó una primera Ley de Financiamiento Universitario (Ley 27.757). El Poder Ejecutivo la <strong>vetó</strong> y el veto fue sostenido en la Cámara de Diputados, que no alcanzó los dos tercios para insistir.</li>
+        <li>En <strong>2025</strong> el Congreso volvió a sancionar una ley similar (la <strong>Ley 27.795</strong>, sancionada el 2 de octubre de 2025), que establece la <strong>actualización automática</strong> del presupuesto universitario y de los salarios por inflación (IPC). El Ejecutivo también la vetó (Decreto 647/2025), pero esta vez el <strong>Congreso rechazó el veto e insistió</strong>, dejando la ley en vigencia.</li>
+      </ul>
+
+      <h3>Los argumentos en pugna</h3>
+
+      <p>El conflicto expuso una tensión genuina entre dos posiciones legítimas:</p>
+
+      <ul>
+        <li><strong>El argumento del Ejecutivo</strong>: la ley incrementaba el gasto público sin recursos suficientes para solventarlo, comprometiendo el objetivo de equilibrio fiscal. Según la Oficina de Presupuesto del Congreso, el costo fiscal de la norma equivalía a alrededor del 0,23% del PBI.</li>
+        <li><strong>El argumento de la comunidad universitaria</strong>: el deterioro presupuestario y salarial ponía en riesgo el funcionamiento de las universidades y la calidad educativa, afectando un derecho y una política de Estado de amplio consenso histórico.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Autonomía, presupuesto y división de poderes</div>
+        <p>El conflicto 2024-2025 ilustra con claridad la tensión estructural del sistema: las universidades son <strong>autónomas</strong> pero dependen del <strong>presupuesto nacional</strong>, que define el Congreso y ejecuta el Poder Ejecutivo. Cuando esos poderes no coinciden, la universidad queda en el medio. El episodio también mostró el funcionamiento del <strong>mecanismo constitucional de veto e insistencia</strong> (Art. 83 de la Constitución): una ley vetada por el Ejecutivo puede convertirse en ley si ambas cámaras insisten con dos tercios. Más allá de las posiciones, el caso confirma que el financiamiento universitario es uno de los temas más sensibles y movilizadores de la vida pública argentina.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">11 · Tensiones</div>
+      <h2>Tensiones del <em>sistema</em> superior</h2>
+
+      <p>El sistema de educación superior argentino, con sus fortalezas distintivas, enfrenta tensiones estructurales que atraviesan el debate público.</p>
+
+      <h3>El financiamiento</h3>
+
+      <p>La <strong>tensión presupuestaria</strong> es la más visible. Las universidades nacionales dependen del presupuesto nacional, lo que genera conflictos recurrentes sobre el monto, su actualización frente a la inflación, y la relación entre la autonomía formal y la dependencia financiera real. El financiamiento universitario y científico es objeto de debate permanente y de conflictos públicos según la coyuntura económica y la orientación de cada gobierno.</p>
+
+      <h3>Acceso vs graduación</h3>
+
+      <p>El <strong>ingreso irrestricto</strong> garantiza acceso amplio, pero la <strong>tasa de graduación</strong> es un desafío: muchos estudiantes ingresan pero no completan sus carreras, o lo hacen en plazos muy superiores a los teóricos. Mejorar la retención y la graduación, sin renunciar al acceso amplio, es uno de los grandes desafíos del sistema.</p>
+
+      <h3>Planificación de la expansión</h3>
+
+      <p>La <strong>creación de nuevas universidades</strong> generó debates sobre su planificación: si responden a necesidades regionales reales o a lógicas políticas, si garantizan calidad, si están bien distribuidas. El equilibrio entre expandir el acceso y asegurar la calidad es una tensión permanente.</p>
+
+      <h3>Calidad y evaluación</h3>
+
+      <p>El debate sobre la <strong>calidad</strong> de la educación superior —cómo medirla, cómo mejorarla, cómo compararla internacionalmente— es continuo. La CONEAU evalúa, pero el debate sobre los estándares, los rankings internacionales y la relación entre cantidad y calidad sigue abierto.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema valorado y en tensión</div>
+        <p>La educación superior argentina goza de un fuerte <strong>apoyo social</strong>: la universidad pública, gratuita y autónoma es percibida por amplios sectores como una conquista y un instrumento de movilidad social. Al mismo tiempo, enfrenta tensiones reales de financiamiento, calidad, graduación y planificación. El desafío del sistema es preservar sus fortalezas distintivas —acceso amplio, gratuidad, autonomía, articulación con la ciencia— mientras mejora sus debilidades. El financiamiento, eje de muchas de estas tensiones, se analiza en el capítulo 12.06.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">12 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley de Educación Superior 24.521</strong> · Sancionada en 1995. Texto actualizado en argentina.gob.ar/normativa. Reformada por la Ley 27.204 (2015).</li>
+        <li><strong>Ley 27.204</strong> · 2015. Consagra la gratuidad de los estudios de grado y el ingreso irrestricto.</li>
+        <li><strong>Constitución Nacional</strong> · Art. 75 inc. 19 (gratuidad, equidad, autonomía y autarquía de las universidades nacionales, reforma de 1994).</li>
+        <li><strong>Decreto 29.337/1949</strong> · Gratuidad universitaria.</li>
+        <li><strong>CONEAU</strong> · Comisión Nacional de Evaluación y Acreditación Universitaria. coneau.gob.ar. Normativa, evaluaciones y acreditaciones.</li>
+        <li><strong>CONICET</strong> · Consejo Nacional de Investigaciones Científicas y Técnicas. conicet.gov.ar.</li>
+        <li><strong>CIN · Consejo Interuniversitario Nacional</strong> · gratuidaduniversitaria.cin.edu.ar. Historia de la gratuidad universitaria.</li>
+        <li><strong>"75 años de gratuidad universitaria"</strong> · UNTER, UNA (2024). Datos sobre universidades nacionales gratuitas y matrícula.</li>
+        <li><strong>"Universidad gratuita en Argentina: comparación regional"</strong> · Chequeado (octubre de 2024). Comparación con Uruguay, Chile, Brasil, Bolivia, Paraguay.</li>
+        <li><strong>"Financiamiento de las Universidades Públicas Argentinas: Autonomía, Presupuesto y Constitución"</strong> · Scielo. Análisis del Art. 75 inc. 19 y la autonomía.</li>
+        <li><strong>"Ley de Educación Superior"</strong> y <strong>"Conflicto universitario en Argentina de 2024"</strong> · Wikipedia, como referencias de contexto contrastadas con fuentes primarias.</li>
+        <li><strong>Ministerio de Educación · Secretaría de Políticas Universitarias</strong> · Estadísticas universitarias y presupuesto. Síntesis de Información Universitaria (datos del sistema: ~130 instituciones, ~2,7 millones de estudiantes, ~75% en gestión estatal).</li>
+        <li><strong>Ley de Financiamiento Universitario 27.795</strong> · Sancionada el 2 de octubre de 2025. Actualización automática de presupuesto y salarios por inflación. Antecedente: Ley 27.757 (2024), vetada. Texto en Boletín Oficial.</li>
+        <li><strong>Consejo Interuniversitario Nacional (CIN)</strong> · cin.edu.ar. Organismo que reúne a los rectores de las universidades nacionales. Comunicados sobre el financiamiento universitario.</li>
+        <li><strong>Oficina de Presupuesto del Congreso (OPC)</strong> · Estimación del costo fiscal de la Ley de Financiamiento Universitario (~0,23% del PBI).</li>
+        <li><strong>"Radiografía de las universidades argentinas"</strong> · Fundación FIL (2025). Análisis del sistema de universidades nacionales y su presupuesto.</li>
+        <li><strong>Cobertura de las Marchas Federales Universitarias</strong> (2024-2025) · La Nación, Infobae, Chequeado, Página/12. Cobertura del conflicto por el financiamiento, los vetos y las insistencias del Congreso.</li>
+      </ul>
+    </div>
+
+    <a href="educacion-publica-privada.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.04</div>
+        <h3>Educación <em>pública</em> y privada</h3>
+        <p>Los modelos de gestión del sistema educativo argentino: la educación de gestión estatal, la de gestión privada (laica y confesional), la gestión cooperativa y social. El régimen de subvenciones estatales a las escuelas privadas, el peso de cada sector, la distribución social de la matrícula y los debates sobre equidad, libertad de enseñanza y rol del Estado.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El gobierno del sistema educativo (12.05) — Educación Cívica</title>
+<meta name="description" content="Cómo se gobierna la educación en la Argentina federal: el reparto de competencias entre la Nación y las provincias tras la transferencia de 1993, el rol del Ministerio de Educación nacional, el Consejo Federal de Educación como ámbito de concertación, la Ley de Educación Nacional 26.206, y las tensiones de un sistema donde la Nación fija políticas pero las provincias gestionan las escuelas.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-gobierno.html">
+<meta property="og:title" content="El gobierno del sistema educativo argentino">
+<meta property="og:description" content="Nación y provincias, Ministerio de Educación, Consejo Federal: cómo se gobierna la educación en un país federal.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-gobierno.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.05</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Gobierno del sistema</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.05 · Educación</div>
+    <h1 class="page-title">El <em>gobierno</em> del sistema educativo</h1>
+    <div class="page-subtitulo">— Nación, provincias y el Consejo Federal</div>
+    <p class="page-intro">Argentina es un país <strong>federal</strong>, y eso define cómo se gobierna su educación. Tras la <strong>transferencia de 1993</strong>, las escuelas primarias y secundarias quedaron bajo la <strong>gestión de las provincias y la CABA</strong>: ellas administran los establecimientos, designan a los docentes y pagan los salarios. El <strong>Estado nacional</strong>, a través del Ministerio de Educación, conserva un rol de <strong>fijación de políticas, financiamiento complementario y evaluación</strong>, pero no gestiona directamente las escuelas. El órgano clave que articula a ambos niveles es el <strong>Consejo Federal de Educación</strong>: el ámbito de concertación donde la Nación y las 24 jurisdicciones acuerdan los lineamientos comunes del sistema. Este diseño —Nación que fija el rumbo, provincias que ejecutan— busca equilibrar la <strong>unidad nacional</strong> del sistema con la <strong>diversidad federal</strong>, pero genera tensiones permanentes: ¿quién financia?, ¿quién responde por la calidad?, ¿cómo se garantiza equidad entre provincias ricas y pobres? Este capítulo recorre la arquitectura de gobierno del sistema educativo argentino.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">24</div>
+        <div class="page-stat-label">Jurisdicciones que gestionan</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1993</div>
+        <div class="page-stat-label">Transferencia a las provincias</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">CFE</div>
+        <div class="page-stat-label">Consejo Federal de Educación</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2006</div>
+        <div class="page-stat-label">Ley 26.206 reorganiza el gobierno</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#federalismo">01 · Educación y federalismo</a></li>
+      <li><a href="#historia">02 · De la Nación a las provincias</a></li>
+      <li><a href="#transferencia">03 · La transferencia de 1993</a></li>
+      <li><a href="#reparto">04 · El reparto de competencias</a></li>
+      <li><a href="#ministerio">05 · El Ministerio nacional</a></li>
+      <li><a href="#cfe">06 · El Consejo Federal</a></li>
+      <li><a href="#organos">07 · Órganos del Consejo Federal</a></li>
+      <li><a href="#provincias">08 · Los ministerios provinciales</a></li>
+      <li><a href="#otros-organos">09 · Otros órganos del sistema</a></li>
+      <li><a href="#tensiones">10 · Tensiones del federalismo educativo</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="federalismo">
+      <div class="seccion-num">01 · Educación y federalismo</div>
+      <h2>Educación y <em>federalismo</em></h2>
+
+      <p>La forma de gobernar la educación argentina está determinada por su <strong>organización federal</strong>. Según la Constitución Nacional, las provincias <strong>conservan todo el poder no delegado</strong> al gobierno federal (Art. 121) y se reservan expresamente <strong>"asegurar la educación primaria"</strong> (Art. 5, que exige a las provincias dictar constituciones que garanticen la educación primaria). La educación es, por tanto, una competencia <strong>históricamente provincial</strong>, aunque la Nación tiene un rol central en fijar políticas y garantizar derechos.</p>
+
+      <h3>La tensión de origen</h3>
+
+      <p>Esta arquitectura genera una tensión que recorre toda la historia educativa argentina: ¿la educación es un asunto <strong>nacional</strong> (que requiere unidad, estándares comunes, igualdad en todo el país) o <strong>provincial</strong> (que respeta la autonomía y la diversidad de cada jurisdicción)? La respuesta argentina ha oscilado a lo largo del tiempo, pero el modelo actual busca un equilibrio: <strong>la Nación fija el rumbo y garantiza derechos; las provincias gestionan</strong>.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Responsabilidad concurrente</div>
+        <p>La Ley 26.206 (Art. 4) establece que el Estado nacional, las provincias y la CABA tienen la responsabilidad <strong>"principal e indelegable"</strong> de proveer educación. Es una responsabilidad <strong>concurrente</strong>: todos los niveles del Estado son responsables, cada uno en su ámbito. Esto significa que ni la Nación puede desentenderse (alegando que es competencia provincial) ni las provincias pueden hacerlo (alegando que la Nación fija las políticas). La educación es responsabilidad de todos los niveles del Estado a la vez.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="historia">
+      <div class="seccion-num">02 · De la Nación a las provincias</div>
+      <h2>De la <em>Nación</em> a las provincias</h2>
+
+      <p>El reparto de competencias educativas cambió mucho a lo largo de la historia. En líneas generales, el sistema nació con fuerte presencia nacional y se fue <strong>descentralizando</strong> hacia las provincias.</p>
+
+      <h3>El Consejo Nacional de Educación</h3>
+
+      <p>El primer gran órgano de gobierno fue el <strong>Consejo Nacional de Educación</strong>, creado por decreto de Julio Argentino Roca el <strong>28 de enero de 1881</strong> para administrar las escuelas primarias públicas de la ciudad de Buenos Aires. Sarmiento intervino activamente en él. Con la Ley 1420 (1884) y la Ley Láinez (1905), el Estado nacional pasó a administrar muchas escuelas en todo el país.</p>
+
+      <h3>La descentralización progresiva</h3>
+
+      <p>A lo largo del siglo XX, las escuelas nacionales fueron transferidas a las provincias en etapas sucesivas:</p>
+
+      <ul>
+        <li>El Consejo Nacional de Educación fue <strong>disuelto en 1948</strong> por Perón y reemplazado por el Ministerio de Educación; restaurado en 1956 como dependencia.</li>
+        <li>En <strong>1978</strong>, la última dictadura militar transfirió las escuelas primarias nacionales a las provincias (sin los recursos correspondientes), en una primera ola de descentralización.</li>
+        <li>El Consejo Nacional de Educación terminó perdiendo sus facultades en ese proceso.</li>
+      </ul>
+
+      <p>La descentralización tuvo motivaciones diversas: algunas pedagógicas (acercar la gestión al territorio), otras fiscales (trasladar el gasto a las provincias). La transferencia completa llegaría con la Ley Federal de 1993.</p>
+    </div>
+
+    <div class="seccion" id="transferencia">
+      <div class="seccion-num">03 · La transferencia de 1993</div>
+      <h2>La <em>transferencia</em> de 1993</h2>
+
+      <p>La <strong>Ley Federal de Educación 24.195 (1993)</strong> y las leyes de transferencia asociadas completaron el proceso: el Estado nacional <strong>transfirió a las provincias y a la CABA todas las escuelas (primarias y secundarias) que aún administraba</strong>, junto con sus docentes.</p>
+
+      <h3>Qué se transfirió</h3>
+
+      <p>A partir de la transferencia, las provincias y la CABA quedaron a cargo de:</p>
+
+      <ul>
+        <li>La <strong>administración de los establecimientos</strong> educativos de su territorio.</li>
+        <li>La <strong>designación de los docentes</strong> y todo el personal.</li>
+        <li>El <strong>pago de los salarios docentes</strong> (el principal gasto del sistema).</li>
+        <li>El <strong>mantenimiento de la infraestructura</strong> escolar.</li>
+        <li>La <strong>gestión cotidiana</strong> del sistema en su jurisdicción.</li>
+      </ul>
+
+      <h3>El problema del financiamiento</h3>
+
+      <p>El aspecto más criticado de la transferencia fue que las escuelas se traspasaron <strong>sin la correspondiente transferencia plena de recursos</strong>. Las provincias asumieron un gasto enorme (sobre todo los salarios docentes) sin recibir fondos equivalentes de manera automática. Esto:</p>
+
+      <ul>
+        <li>Sobrecargó las <strong>finanzas provinciales</strong>.</li>
+        <li>Profundizó las <strong>desigualdades regionales</strong>: las provincias ricas pudieron sostener mejor sus sistemas que las pobres.</li>
+        <li>Generó tensiones recurrentes Nación-provincias por el financiamiento, que persisten hasta hoy.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El legado de la transferencia</div>
+        <p>La transferencia de 1993 definió el mapa actual: <strong>las provincias gestionan, la Nación fija políticas</strong>. Pero dejó una herida no cerrada: la <strong>brecha entre la responsabilidad (provincial) y los recursos (concentrados en la Nación, vía coparticipación)</strong>. Una provincia pobre, con menos recursos propios, tiene más dificultades para sostener su sistema educativo que una rica. Compensar esa desigualdad es uno de los grandes desafíos del federalismo educativo, y una de las razones de ser de la Ley de Financiamiento Educativo (analizada en el capítulo 12.06).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="reparto">
+      <div class="seccion-num">04 · Reparto de competencias</div>
+      <h2>El <em>reparto</em> de competencias</h2>
+
+      <p>El modelo actual, definido por la Ley 26.206, reparte las competencias entre la Nación y las provincias de manera relativamente clara, aunque con zonas de superposición.</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Función</th>
+              <th>Nación</th>
+              <th>Provincias / CABA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Fijar la política educativa</strong></td>
+              <td>Sí (con el CFE)</td>
+              <td>Adaptan a su territorio</td>
+            </tr>
+            <tr>
+              <td><strong>Gestionar las escuelas</strong></td>
+              <td>No</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <td><strong>Pagar salarios docentes</strong></td>
+              <td>Complementa (FONID)</td>
+              <td>Sí (principal responsable)</td>
+            </tr>
+            <tr>
+              <td><strong>Aprobar planes de estudio</strong></td>
+              <td>Lineamientos comunes</td>
+              <td>Currículo según el CFE</td>
+            </tr>
+            <tr>
+              <td><strong>Evaluar la calidad</strong></td>
+              <td>Sí (operativos nacionales)</td>
+              <td>Participan</td>
+            </tr>
+            <tr>
+              <td><strong>Garantizar el derecho</strong></td>
+              <td>Sí (indelegable)</td>
+              <td>Sí (indelegable)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>La regla general: la <strong>Nación fija el rumbo</strong> (políticas, lineamientos, evaluación, financiamiento complementario) y las <strong>provincias ejecutan</strong> (gestión, salarios, infraestructura, aplicación territorial). El punto de encuentro donde se acuerdan los lineamientos comunes es el Consejo Federal de Educación.</p>
+    </div>
+
+    <div class="seccion" id="ministerio">
+      <div class="seccion-num">05 · El Ministerio nacional</div>
+      <h2>El <em>Ministerio</em> de Educación nacional</h2>
+
+      <p>El <strong>Ministerio de Educación de la Nación</strong> es el órgano del Poder Ejecutivo nacional responsable de la política educativa. Tras la transferencia de 1993, dejó de gestionar escuelas directamente y se concentró en funciones de <strong>conducción estratégica</strong> del sistema.</p>
+
+      <h3>Sus funciones</h3>
+
+      <p>Según la Ley 26.206 (Art. 115), corresponde al Ministerio nacional:</p>
+
+      <ul>
+        <li><strong>Fijar la política educativa nacional</strong> y controlar su cumplimiento, respetando las particularidades provinciales.</li>
+        <li><strong>Dictar normas generales</strong> sobre equivalencias de títulos y estudios.</li>
+        <li><strong>Desarrollar programas nacionales</strong> de equidad, calidad e inclusión.</li>
+        <li><strong>Evaluar el sistema</strong> (operativos nacionales de evaluación, ver capítulo 12.07).</li>
+        <li><strong>Contribuir con financiamiento</strong> a programas y, complementariamente, a salarios (vía FONID).</li>
+        <li><strong>Coordinar con las provincias</strong> a través del Consejo Federal de Educación.</li>
+      </ul>
+
+      <h3>La degradación a Secretaría</h3>
+
+      <p>El rango institucional del área educativa nacional ha variado según las gestiones. Históricamente fue un Ministerio, pero en algunos períodos fue <strong>degradado al rango de Secretaría</strong> dentro de otro ministerio. El rango (Ministerio vs Secretaría) es un indicador de la <strong>jerarquía política</strong> que cada gobierno asigna a la educación dentro de su gabinete. El peronismo, por ejemplo, había creado el Ministerio de Educación en 1949 precisamente para jerarquizar el área.</p>
+    </div>
+
+    <div class="seccion" id="cfe">
+      <div class="seccion-num">06 · El Consejo Federal</div>
+      <h2>El <em>Consejo Federal</em> de Educación</h2>
+
+      <p>El <strong>Consejo Federal de Educación (CFE)</strong> es el órgano clave del gobierno del sistema. La Ley 26.206 (Art. 116) lo define como un <strong>organismo interjurisdiccional de carácter permanente</strong>, "ámbito de concertación, acuerdo y coordinación de la política educativa nacional, debiendo asegurar la unidad y articulación del sistema educativo nacional".</p>
+
+      <h3>Por qué es necesario</h3>
+
+      <p>En un sistema donde la Nación fija políticas pero las provincias gestionan, hace falta un <strong>espacio donde ambos niveles se pongan de acuerdo</strong>. Sin él, la Nación dictaría políticas que las provincias no aplicarían, o cada provincia haría lo que quisiera, fragmentando el sistema. El CFE es ese espacio de <strong>concertación federal</strong>: donde se acuerdan los lineamientos comunes que dan unidad al sistema sin avasallar la autonomía provincial.</p>
+
+      <h3>Qué decide</h3>
+
+      <p>En el CFE se acuerdan, entre otras cosas:</p>
+
+      <ul>
+        <li>Los <strong>lineamientos curriculares comunes</strong> (los núcleos de aprendizaje prioritarios que todo estudiante debe lograr, sin importar la provincia).</li>
+        <li>Los <strong>parámetros de calidad</strong> que orientan los diseños curriculares.</li>
+        <li>Las <strong>políticas nacionales</strong> de formación docente, evaluación, inclusión.</li>
+        <li>El <strong>calendario escolar</strong> y la cantidad mínima de días de clase.</li>
+        <li>La <strong>validez nacional de los títulos</strong>.</li>
+      </ul>
+
+      <p>Sus decisiones se toman por <strong>resoluciones del CFE</strong>, que tienen carácter obligatorio para las jurisdicciones cuando así se acuerda. Como sintetiza un análisis del sistema: el CFE es "el espacio de acuerdo político-educativo a nivel país, mientras que los ministerios provinciales son los brazos ejecutores".</p>
+    </div>
+
+    <div class="seccion" id="organos">
+      <div class="seccion-num">07 · Órganos del CFE</div>
+      <h2>Los <em>órganos</em> del Consejo Federal</h2>
+
+      <p>El Consejo Federal de Educación (Art. 117 de la Ley 26.206) se organiza en tres órganos:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Los tres órganos del CFE</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Asamblea Federal</div>
+            <div class="ficha-valor">El <strong>órgano superior</strong>. La integran el ministro nacional (que la preside), los ministros de educación de las 24 jurisdicciones y 3 representantes del Consejo de Universidades.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Comité Ejecutivo</div>
+            <div class="ficha-valor">Ejecuta las resoluciones de la Asamblea. Presidido por el ministro nacional e integrado por representantes de las regiones.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Secretaría General</div>
+            <div class="ficha-valor">Funciones administrativas de <strong>conducción y coordinación</strong> del organismo.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>La composición de la Asamblea</h3>
+
+      <p>La <strong>Asamblea Federal</strong> es donde están representadas todas las jurisdicciones. La preside el <strong>ministro de Educación de la Nación</strong>, y la integran los <strong>ministros (o responsables del área educativa) de las 23 provincias y la CABA</strong>, más 3 representantes del Consejo de Universidades. Participan, con voz pero sin voto, 2 representantes por cada Comisión de Educación de las Cámaras de Diputados y Senadores (uno por la mayoría y otro por la primera minoría).</p>
+
+      <p>Esta composición refleja el espíritu del organismo: <strong>todas las provincias tienen asiento</strong>, junto con la Nación y el sistema universitario, para acordar las grandes definiciones del sistema. Las asambleas del CFE se numeran correlativamente y son los hitos donde se aprueban las resoluciones que orientan la educación de todo el país.</p>
+    </div>
+
+    <div class="seccion" id="provincias">
+      <div class="seccion-num">08 · Ministerios provinciales</div>
+      <h2>Los <em>ministerios</em> provinciales</h2>
+
+      <p>Los <strong>ministerios (o direcciones generales) de educación de cada provincia y de la CABA</strong> son los <strong>brazos ejecutores</strong> del sistema. Son quienes efectivamente gestionan las escuelas en el territorio.</p>
+
+      <h3>Qué hacen</h3>
+
+      <p>Cada jurisdicción, a través de su ministerio de educación:</p>
+
+      <ul>
+        <li><strong>Administra los establecimientos</strong> educativos de su territorio.</li>
+        <li><strong>Designa y paga a los docentes</strong> (el principal gasto).</li>
+        <li><strong>Aprueba el currículo</strong> de los distintos niveles, según los lineamientos del CFE.</li>
+        <li><strong>Construye y mantiene</strong> la infraestructura escolar.</li>
+        <li><strong>Supervisa</strong> las escuelas estatales y privadas de su jurisdicción.</li>
+        <li><strong>Aplica las políticas nacionales</strong> acordadas en el CFE, adaptándolas a su realidad.</li>
+      </ul>
+
+      <h3>La diversidad de denominaciones</h3>
+
+      <p>La denominación del área varía: en la mayoría de las provincias es un <strong>Ministerio de Educación</strong>; en la provincia de Buenos Aires es la histórica <strong>Dirección General de Cultura y Educación (DGCyE)</strong>, con rango ministerial. Algunas provincias combinan educación con cultura, ciencia o trabajo en un mismo ministerio. Esta diversidad refleja la autonomía organizativa de cada jurisdicción.</p>
+    </div>
+
+    <div class="seccion" id="otros-organos">
+      <div class="seccion-num">09 · Otros órganos</div>
+      <h2>Otros <em>órganos</em> del sistema</h2>
+
+      <p>Además del Ministerio nacional, el CFE y los ministerios provinciales, el gobierno del sistema educativo incluye otros organismos especializados:</p>
+
+      <ul>
+        <li><strong>Consejo Nacional de Calidad de la Educación</strong>: órgano de asesoramiento especializado creado por la Ley 26.206 (Art. 98), integrado por académicos, representantes del Ministerio, del CFE, del Congreso, de los sindicatos y de las organizaciones del trabajo. Asesora sobre la calidad educativa.</li>
+        <li><strong>Instituto Nacional de Formación Docente (INFoD)</strong>: coordina y planifica la formación docente en todo el país.</li>
+        <li><strong>Instituto Nacional de Educación Tecnológica (INET)</strong>: conduce las políticas de educación técnico profesional y administra el Fondo Nacional para la Educación Técnico Profesional.</li>
+        <li><strong>Secretaría de Evaluación e Información Educativa</strong>: produce las estadísticas (Relevamiento Anual) y conduce los operativos de evaluación (pruebas Aprender).</li>
+        <li><strong>Consejo de Universidades</strong>: coordina el sistema universitario y se integra con representantes en el CFE.</li>
+        <li><strong>CONEAU</strong>: evalúa y acredita la educación universitaria (ver capítulo 12.03).</li>
+      </ul>
+
+      <p>Estos organismos especializados permiten que el sistema funcione con conocimiento técnico, articulando las grandes definiciones políticas (que se toman en el CFE) con la implementación experta en cada área.</p>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones del <em>federalismo</em> educativo</h2>
+
+      <p>El gobierno federal de la educación, con su reparto Nación-provincias, enfrenta tensiones estructurales que marcan el debate.</p>
+
+      <h3>Responsabilidad sin recursos</h3>
+
+      <p>La tensión más profunda es la <strong>brecha entre responsabilidad y recursos</strong>. Las provincias son responsables de gestionar y pagar salarios, pero buena parte de los recursos fiscales se concentra en la Nación (vía impuestos coparticipables). Las provincias pobres tienen menos capacidad de sostener su sistema, lo que genera <strong>desigualdades educativas entre jurisdicciones</strong>: la calidad y las condiciones pueden variar enormemente según dónde nazca un chico.</p>
+
+      <h3>Unidad vs diversidad</h3>
+
+      <p>El sistema busca <strong>unidad</strong> (estándares comunes, títulos válidos en todo el país, núcleos de aprendizaje compartidos) sin avasallar la <strong>diversidad</strong> federal (cada provincia adapta a su realidad). El equilibrio es delicado: demasiada unidad avasalla la autonomía; demasiada diversidad fragmenta el sistema y dificulta la movilidad de los estudiantes.</p>
+
+      <h3>¿Quién responde por la calidad?</h3>
+
+      <p>Cuando los resultados educativos son malos, surge la pregunta: ¿es responsabilidad de la Nación (que fijó las políticas) o de las provincias (que las ejecutaron)? La <strong>responsabilidad concurrente</strong> puede diluir la rendición de cuentas: todos son responsables, lo que a veces significa que <strong>nadie responde claramente</strong>.</p>
+
+      <h3>El FONID y los salarios</h3>
+
+      <p>El <strong>Fondo Nacional de Incentivo Docente (FONID)</strong>, creado en 1998, fue un aporte nacional complementario a los salarios docentes (que pagan las provincias). Su continuidad o discontinuidad según las gestiones nacionales es una fuente recurrente de conflicto, porque afecta directamente el ingreso de los docentes y las finanzas provinciales. Es un ejemplo concreto de la tensión Nación-provincias en el financiamiento.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un federalismo en busca de equilibrio</div>
+        <p>El gobierno de la educación argentina refleja las tensiones del federalismo del país: el equilibrio entre la unidad nacional y la autonomía provincial, entre la responsabilidad compartida y la rendición de cuentas clara, entre los recursos concentrados en la Nación y las responsabilidades descentralizadas en las provincias. El <strong>Consejo Federal de Educación</strong> es la pieza institucional que intenta resolver estas tensiones por la vía del acuerdo. Su funcionamiento efectivo —su capacidad de producir consensos que las provincias realmente apliquen— es clave para la unidad del sistema. El financiamiento, eje de muchas de estas tensiones, se analiza en el capítulo 12.06.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Constitución Nacional</strong> · Art. 5 (las provincias aseguran la educación primaria), Art. 121 (poderes no delegados), Art. 75 inc. 19 (cláusula del progreso y educación).</li>
+        <li><strong>Ley de Educación Nacional 26.206</strong> · Art. 4 (responsabilidad concurrente), Art. 115 (funciones del Ministerio nacional), Art. 116-118 (Consejo Federal de Educación), Art. 98 (Consejo Nacional de Calidad).</li>
+        <li><strong>Ley Federal de Educación 24.195</strong> · 1993. Transferencia de servicios educativos a las provincias.</li>
+        <li><strong>Consejo Federal de Educación</strong> · argentina.gob.ar/educacion/consejofederal. Resoluciones, autoridades, asambleas.</li>
+        <li><strong>Resolución CFE Nº 1/2007</strong> y <strong>Nº 362/2020</strong> · Reglamento de funcionamiento del Consejo Federal.</li>
+        <li><strong>"Acerca del Consejo Nacional de Calidad de la Educación"</strong> · Argentina.gob.ar. Resolución 549/2020 sobre composición.</li>
+        <li><strong>Consejo Nacional de Educación (historia)</strong> · Creado por Roca en 1881, disuelto en 1948, perdió facultades en la descentralización de 1976-1983.</li>
+        <li><strong>Fondo Nacional de Incentivo Docente (FONID)</strong> · Ley 25.053 (1998) y sus prórrogas.</li>
+        <li><strong>INET · Instituto Nacional de Educación Tecnológica</strong> · inet.edu.ar.</li>
+        <li><strong>INFoD · Instituto Nacional de Formación Docente</strong> · Creado por la Ley 26.206.</li>
+        <li><strong>Art. 117 Ley 26.206</strong> · Órganos del Consejo Federal (Asamblea Federal, Comité Ejecutivo, Secretaría General).</li>
+      </ul>
+    </div>
+
+    <a href="educacion-financiamiento.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.06</div>
+        <h3>El <em>financiamiento</em> educativo</h3>
+        <p>Cómo se paga la educación argentina: la Ley de Financiamiento Educativo 26.075 y la meta del 6% del PBI, el reparto del gasto entre Nación y provincias, el peso de los salarios docentes, el FONID, el financiamiento universitario y los conflictos presupuestarios. Cuánto se invierte, en qué y con qué resultados.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

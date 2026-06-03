@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El financiamiento educativo (12.06) — Educación Cívica</title>
+<meta name="description" content="Cómo se paga la educación argentina: la Ley de Financiamiento Educativo 26.075 y la meta del 6% del PBI, el reparto del esfuerzo entre Nación (40%) y provincias (60%), el peso de los salarios docentes, el FONID, el financiamiento universitario, la comparación internacional y los conflictos presupuestarios.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-financiamiento.html">
+<meta property="og:title" content="El financiamiento de la educación argentina">
+<meta property="og:description" content="Ley 26.075, la meta del 6% del PBI, salarios docentes, FONID, financiamiento universitario y conflictos presupuestarios.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-financiamiento.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.06</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Financiamiento</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.06 · Educación</div>
+    <h1 class="page-title">El <em>financiamiento</em> educativo</h1>
+    <div class="page-subtitulo">— La Ley 26.075 y la meta del 6% del PBI</div>
+    <p class="page-intro">¿Cómo se paga la educación argentina? La pieza clave es la <strong>Ley de Financiamiento Educativo 26.075</strong>, sancionada en diciembre de 2005, que comprometió a la Nación, las provincias y la CABA a aumentar progresivamente la inversión educativa hasta alcanzar el <strong>6% del PBI en 2010</strong>, partiendo del 4,6% de 2005. El esfuerzo adicional se repartió: <strong>60% a cargo de las provincias y 40% de la Nación</strong>. La meta llegó a cumplirse —en 2009 la inversión alcanzó el 6,4% del PBI—, pero desde 2010 el cumplimiento fue irregular y la ley finalmente venció. El financiamiento educativo es mayoritariamente <strong>gasto en salarios docentes</strong>, que pagan las provincias. La Nación complementa con programas y con el FONID. Este capítulo analiza cómo se financia la educación: de dónde salen los recursos, cómo se reparten entre Nación y provincias, qué pasó con la meta del 6%, cómo se financian las universidades y cuáles son los conflictos presupuestarios recurrentes.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">6%</div>
+        <div class="page-stat-label">Meta de inversión sobre el PBI</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">60/40</div>
+        <div class="page-stat-label">Esfuerzo provincias / Nación</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2005</div>
+        <div class="page-stat-label">Ley 26.075 de Financiamiento</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">6,4%</div>
+        <div class="page-stat-label">Pico de inversión alcanzado (2009)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#como-se-paga">01 · Cómo se paga la educación</a></li>
+      <li><a href="#ley-26075">02 · La Ley 26.075 y el 6%</a></li>
+      <li><a href="#reparto">03 · El reparto Nación-provincias</a></li>
+      <li><a href="#asignacion">04 · La asignación específica</a></li>
+      <li><a href="#salarios">05 · Los salarios docentes</a></li>
+      <li><a href="#fonid">06 · El FONID</a></li>
+      <li><a href="#universidades">07 · El financiamiento universitario</a></li>
+      <li><a href="#comparacion">08 · La comparación internacional</a></li>
+      <li><a href="#cumplimiento">09 · El cumplimiento de la meta</a></li>
+      <li><a href="#tensiones">10 · Tensiones del financiamiento</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="como-se-paga">
+      <div class="seccion-num">01 · Cómo se paga</div>
+      <h2>Cómo se <em>paga</em> la educación</h2>
+
+      <p>El financiamiento educativo argentino tiene una característica que se desprende del federalismo (analizado en el capítulo 12.05): la mayor parte del gasto la realizan <strong>las provincias</strong>, porque son ellas las que gestionan las escuelas y pagan los salarios docentes. La Nación aporta de manera <strong>complementaria</strong>: financia las universidades nacionales, el sistema científico, programas nacionales y refuerzos salariales.</p>
+
+      <h3>Las fuentes del financiamiento</h3>
+
+      <p>Los recursos para la educación provienen, fundamentalmente, de:</p>
+
+      <ul>
+        <li><strong>El presupuesto provincial</strong>: cada provincia destina parte de sus recursos (propios y coparticipados) a su sistema educativo. Es la principal fuente.</li>
+        <li><strong>El presupuesto nacional</strong>: financia universidades, ciencia, programas nacionales y aportes complementarios a salarios.</li>
+        <li><strong>La coparticipación federal</strong>: los impuestos nacionales que se reparten con las provincias, parte de los cuales se destinan a educación.</li>
+      </ul>
+
+      <h3>El gasto consolidado</h3>
+
+      <p>Para medir cuánto invierte el país en educación se usa el concepto de <strong>gasto educativo consolidado</strong>: la suma de lo que gastan la Nación, las provincias y la CABA en educación, ciencia y tecnología. Ese gasto consolidado, medido como porcentaje del PBI, es el indicador central de la inversión educativa de un país y el que la Ley 26.075 buscó elevar al 6%.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué se mide sobre el PBI</div>
+        <p>Medir la inversión educativa como <strong>porcentaje del PBI</strong> (Producto Bruto Interno, el valor de todo lo que produce el país) permite comparar el esfuerzo educativo independientemente del tamaño de la economía y de la inflación. Un país que destina el 6% de su PBI a educación hace un esfuerzo mayor que uno que destina el 4%, sin importar cuántos pesos sean en términos absolutos. Es el estándar internacional para comparar cuánto prioriza cada país su educación. La UNESCO recomienda invertir entre el 4% y el 6% del PBI en educación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-26075">
+      <div class="seccion-num">02 · Ley 26.075</div>
+      <h2>La <em>Ley 26.075</em> y la meta del 6%</h2>
+
+      <p>La <strong>Ley de Financiamiento Educativo N.º 26.075</strong> fue sancionada el <strong>21 de diciembre de 2005</strong> (publicada en el Boletín Oficial el 12 de enero de 2006). Fue una norma fundamental para el fortalecimiento de la educación, porque por primera vez fijó <strong>una meta concreta y obligatoria de inversión</strong>.</p>
+
+      <h3>Qué estableció</h3>
+
+      <p>El corazón de la ley es su <strong>Artículo 3</strong>: el presupuesto consolidado del Gobierno nacional, las provincias y la CABA destinado a la educación, la ciencia y la tecnología <strong>se incrementaría progresivamente hasta alcanzar, en el año 2010, una participación del 6% del PBI</strong>. El punto de partida era el 4,6% alcanzado en 2005.</p>
+
+      <p>Además de la meta del 6%, la ley estableció:</p>
+
+      <ul>
+        <li>Una <strong>tabla de crecimiento anual</strong> del gasto educativo para el período 2006-2010, con metas intermedias para cada año.</li>
+        <li>Una <strong>asignación específica de recursos coparticipables</strong> por el plazo de 5 años (Art. 75 inc. 3 de la Constitución).</li>
+        <li>La <strong>determinación anual del índice de contribución</strong> de cada provincia.</li>
+        <li>La creación del <strong>Programa Nacional de Compensación Salarial Docente</strong>, para ayudar a las provincias que no podían pagar el salario docente mínimo.</li>
+        <li>La <strong>modificación de la Ley 25.919</strong> (Fondo Nacional de Incentivo Docente).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El gran logro de la ley</div>
+        <p>El principal avance de la Ley 26.075 fue <strong>establecer un piso de inversión obligatorio</strong>: el 6% del PBI. Durante la década del 90, el Estado nacional había transferido a las provincias buena parte de las cargas educativas (la transferencia de 1993) sin instrumentar adecuadamente el financiamiento. La ley de 2005 vino a corregir esa deuda: comprometió legalmente a todos los niveles del Estado a aumentar la inversión de forma progresiva y verificable. Fue, en su momento, un consenso político amplio sobre la prioridad de la educación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="reparto">
+      <div class="seccion-num">03 · Reparto Nación-provincias</div>
+      <h2>El <em>reparto</em> del esfuerzo</h2>
+
+      <p>Como la educación se financia entre la Nación y las provincias, la Ley 26.075 definió cómo se repartiría el <strong>esfuerzo adicional</strong> necesario para llegar del 4,6% al 6% del PBI.</p>
+
+      <h3>La fórmula 60/40</h3>
+
+      <p>El esfuerzo de inversión adicional se repartió:</p>
+
+      <ul>
+        <li><strong>60% a cargo de las provincias y la CABA</strong> (Art. 5 de la ley).</li>
+        <li><strong>40% a cargo de la Nación</strong> (Art. 4 de la ley).</li>
+      </ul>
+
+      <p>Esta proporción refleja el hecho de que las provincias son las principales responsables del gasto educativo (gestionan las escuelas y pagan salarios), mientras que la Nación complementa. La ley fijó, para cada año del período 2006-2010, los porcentajes concretos de crecimiento del gasto que correspondían a cada nivel.</p>
+
+      <h3>Cómo se aseguraba el cumplimiento provincial</h3>
+
+      <p>Para garantizar que las provincias cumplieran con su parte, la ley estableció un mecanismo: el gobierno nacional <strong>retenía un porcentaje de la coparticipación</strong> destinado a la función educativa (la "asignación específica"). De ese modo, el financiamiento de la parte provincial era en buena medida <strong>automático</strong>, descontado de los fondos coparticipables antes de que llegaran a las provincias.</p>
+    </div>
+
+    <div class="seccion" id="asignacion">
+      <div class="seccion-num">04 · Asignación específica</div>
+      <h2>La <em>asignación</em> específica de coparticipación</h2>
+
+      <p>Uno de los mecanismos más técnicos —y más importantes— de la ley fue la <strong>asignación específica de recursos coparticipables</strong>, establecida por 5 años con fundamento en el <strong>Art. 75 inc. 3 de la Constitución Nacional</strong>, que permite al Congreso establecer asignaciones específicas de recursos coparticipables por tiempo determinado.</p>
+
+      <h3>Cómo funcionaba</h3>
+
+      <p>El mecanismo operaba así:</p>
+
+      <ul>
+        <li>El gobierno nacional <strong>retenía de la coparticipación</strong> de cada provincia un porcentaje destinado específicamente a educación.</li>
+        <li>Ese porcentaje se calculaba con un <strong>índice de contribución</strong> determinado anualmente para cada jurisdicción.</li>
+        <li>Así se garantizaba que el dinero llegara efectivamente a la educación, en lugar de diluirse en otros gastos provinciales.</li>
+      </ul>
+
+      <h3>La recuperación de la libre disponibilidad</h3>
+
+      <p>El Art. 7 de la ley fijaba un plazo: a partir del <strong>31 de diciembre de 2010</strong>, una vez alcanzada la meta del 6%, las provincias <strong>recuperarían la libre disponibilidad</strong> de esos recursos. Esto efectivamente ocurrió durante 2011: terminado el período de la asignación específica, las provincias volvieron a disponer libremente de esos fondos coparticipables. Este punto es importante: el mecanismo de garantía fuerte (la retención automática) tenía fecha de vencimiento.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una herramienta poderosa pero temporal</div>
+        <p>La asignación específica fue una herramienta potente: aseguró el financiamiento educativo de forma <strong>automática y verificable</strong> durante el período 2006-2010, garantizando que se alcanzara la meta. Pero era <strong>temporal</strong>: una vez vencido el plazo, el mecanismo de garantía desapareció. Esto explica en parte por qué, alcanzada la meta en 2010, el cumplimiento posterior se volvió más irregular: ya no existía el mecanismo automático que forzaba la inversión. La ley misma, en su diseño, tenía fecha de caducidad para su instrumento más eficaz.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="salarios">
+      <div class="seccion-num">05 · Salarios docentes</div>
+      <h2>Los <em>salarios</em> docentes</h2>
+
+      <p>El componente más grande del gasto educativo es, por lejos, el <strong>salario docente</strong>. La educación es una actividad intensiva en trabajo: la mayor parte de su costo son los sueldos de los maestros, profesores, directivos y personal de las escuelas. Esto tiene consecuencias importantes para entender el financiamiento.</p>
+
+      <h3>Por qué el salario es el centro</h3>
+
+      <ul>
+        <li>Los salarios docentes representan la <strong>mayor parte del presupuesto educativo</strong> provincial (típicamente más del 90% del gasto en educación de las provincias).</li>
+        <li>Como las <strong>provincias pagan los salarios</strong>, el grueso del gasto educativo es provincial.</li>
+        <li>Las <strong>negociaciones salariales docentes</strong> (paritarias) son, por eso, el eje del conflicto educativo y un determinante central del presupuesto.</li>
+      </ul>
+
+      <h3>La paritaria docente nacional</h3>
+
+      <p>Existe una <strong>paritaria nacional docente</strong> donde se acuerda un <strong>salario mínimo docente garantizado</strong> para todo el país. Como las provincias tienen capacidades fiscales muy distintas, las provincias más pobres a veces no pueden pagar ese mínimo por sí solas: ahí intervenía el <strong>Programa Nacional de Compensación Salarial Docente</strong> (creado por la Ley 26.075), que aportaba recursos nacionales para que esas provincias alcanzaran el piso salarial.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Salario docente y calidad</div>
+        <p>El salario docente no es solo una cuestión presupuestaria: tiene impacto directo en la <strong>calidad del sistema</strong>. Salarios bajos dificultan atraer y retener a los mejores candidatos a la docencia, afectan la motivación y generan conflictos (paros) que reducen los días de clase. Por eso la cuestión salarial docente está en el centro de cualquier debate serio sobre calidad educativa. Al mismo tiempo, como los salarios consumen casi todo el presupuesto, queda poco margen para inversión en infraestructura, tecnología y otros insumos. Es una tensión estructural del financiamiento.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fonid">
+      <div class="seccion-num">06 · El FONID</div>
+      <h2>El <em>FONID</em></h2>
+
+      <p>El <strong>Fondo Nacional de Incentivo Docente (FONID)</strong> es uno de los instrumentos más conocidos —y más conflictivos— del financiamiento educativo. Fue creado por la <strong>Ley 25.053 en 1998</strong>, tras una larga protesta docente (la histórica "Carpa Blanca" instalada frente al Congreso entre 1997 y 1999).</p>
+
+      <h3>Qué es</h3>
+
+      <p>El FONID es un <strong>aporte nacional complementario al salario docente</strong>. Como los salarios los pagan las provincias, el FONID fue una forma en que la Nación contribuye directamente al ingreso de los docentes de todo el país, con un monto que se suma al salario provincial. Llegó a representar alrededor del <strong>10% del sueldo</strong> de los docentes en algunas jurisdicciones.</p>
+
+      <h3>Por qué es conflictivo</h3>
+
+      <p>El FONID depende de la decisión del gobierno nacional de sostenerlo y de asignarle presupuesto. Esto lo hace <strong>vulnerable a la coyuntura política y fiscal</strong>:</p>
+
+      <ul>
+        <li>Su continuidad debe renovarse periódicamente (no es automático).</li>
+        <li>Si el gobierno nacional decide <strong>no pagarlo</strong>, los docentes pierden esa porción de su salario y las provincias quedan ante el dilema de cubrirlo con fondos propios o no.</li>
+        <li>Es un punto recurrente de <strong>conflicto Nación-provincias</strong> y de conflicto con los gremios docentes.</li>
+      </ul>
+
+      <p>El FONID es un ejemplo concreto de la tensión del federalismo educativo: un aporte nacional a un gasto (salarial) que es responsabilidad provincial, cuya continuidad depende de la voluntad política del gobierno nacional de turno.</p>
+    </div>
+
+    <div class="seccion" id="universidades">
+      <div class="seccion-num">07 · Financiamiento universitario</div>
+      <h2>El <em>financiamiento</em> universitario</h2>
+
+      <p>Las <strong>universidades nacionales</strong> tienen un esquema de financiamiento distinto al de las escuelas: se financian directamente con <strong>fondos del presupuesto nacional</strong> (no provincial), porque son instituciones del Estado nacional.</p>
+
+      <h3>Cómo se financian</h3>
+
+      <ul>
+        <li>El <strong>presupuesto nacional</strong> asigna anualmente una partida para las universidades nacionales, que se distribuye entre las 66 instituciones.</li>
+        <li>Como son <strong>gratuitas</strong>, no se financian con aranceles de los estudiantes (a diferencia de las privadas).</li>
+        <li>Su <strong>autonomía</strong> (analizada en el capítulo 12.03) implica que administran sus recursos, pero dependen del monto que les asigna el presupuesto nacional.</li>
+      </ul>
+
+      <h3>La tensión autonomía-presupuesto</h3>
+
+      <p>Aquí reaparece la tensión señalada en el capítulo de educación superior: las universidades son <strong>autónomas</strong> pero <strong>financieramente dependientes</strong> del presupuesto nacional. Esto genera conflictos recurrentes:</p>
+
+      <ul>
+        <li>El <strong>monto del presupuesto universitario</strong> y su actualización frente a la inflación es objeto de negociación y conflicto.</li>
+        <li>Cuando el presupuesto no se actualiza al ritmo de la inflación, las universidades sufren un <strong>deterioro real</strong> de sus recursos.</li>
+        <li>Los <strong>conflictos universitarios</strong> (marchas, tomas, reclamos presupuestarios) son recurrentes según la coyuntura económica y la orientación del gobierno.</li>
+      </ul>
+
+      <h3>La Ley de Financiamiento Universitario (2024-2025)</h3>
+
+      <p>El caso más reciente y resonante de esta tensión fue el conflicto de 2024-2025. Ante el deterioro presupuestario y salarial en un contexto de ajuste fiscal e inflación, el Congreso sancionó una <strong>Ley de Financiamiento Universitario</strong> que establecía la actualización automática del presupuesto y los salarios por inflación. El proceso siguió el mecanismo constitucional de <strong>sanción, veto e insistencia</strong>: una primera ley (27.757, de 2024) fue vetada por el Ejecutivo y el veto se sostuvo; una segunda ley (la <strong>27.795, sancionada el 2 de octubre de 2025</strong>) también fue vetada, pero esta vez el Congreso <strong>rechazó el veto e insistió</strong>, dejándola vigente. El conflicto motivó sucesivas <strong>Marchas Federales Universitarias</strong> masivas. Se analiza en detalle en el capítulo 12.03. El episodio ilustra cómo el financiamiento —y no la autonomía formal— es el verdadero campo donde se juega la suerte de las universidades.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un debate sensible</div>
+        <p>El financiamiento universitario es uno de los temas más sensibles y movilizadores de la política argentina. La universidad pública goza de un fuerte apoyo social como instrumento de movilidad, y los reclamos por su financiamiento suelen generar amplia adhesión. Al mismo tiempo, hay debates legítimos sobre la <strong>eficiencia del gasto</strong>, las tasas de graduación, la distribución de recursos entre universidades y la relación entre la inversión y los resultados. Como en todo el financiamiento educativo, se cruzan la defensa de un derecho con las restricciones fiscales y los debates sobre eficiencia.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="comparacion">
+      <div class="seccion-num">08 · Comparación internacional</div>
+      <h2>La <em>comparación</em> internacional</h2>
+
+      <p>¿Cómo se ubica Argentina en el contexto regional e internacional en cuanto a inversión educativa?</p>
+
+      <h3>Argentina en la región</h3>
+
+      <p>Cuando alcanzó la meta del 6% del PBI (hacia 2009), Argentina se ubicó, según datos de la UNESCO, como <strong>uno de los países que más invierte en educación en América Latina</strong>. La meta del 6% está en el rango superior de lo que recomiendan los organismos internacionales (UNESCO recomienda entre 4% y 6%).</p>
+
+      <h3>Inversión vs resultados</h3>
+
+      <p>Un punto crucial del debate: <strong>invertir más no garantiza automáticamente mejores resultados</strong>. Argentina llegó a invertir un porcentaje del PBI comparativamente alto, pero los resultados de aprendizaje (medidos por pruebas como PISA y Aprender, que se analizan en el capítulo 12.07) no mejoraron en la misma proporción. Esto plantea preguntas sobre la <strong>eficiencia del gasto</strong>: no solo cuánto se invierte, sino en qué y cómo.</p>
+
+      <p>Algunos factores que explican la brecha entre inversión y resultados:</p>
+
+      <ul>
+        <li>El grueso del gasto va a <strong>salarios</strong>, dejando poco margen para otras inversiones (infraestructura, tecnología, materiales).</li>
+        <li>La <strong>cantidad de días de clase efectivos</strong> se ve afectada por conflictos y paros.</li>
+        <li>Las <strong>desigualdades entre provincias</strong> hacen que el gasto promedio esconda realidades muy distintas.</li>
+        <li>La <strong>eficiencia de la gestión</strong> varía mucho entre jurisdicciones.</li>
+      </ul>
+    </div>
+
+    <div class="seccion" id="cumplimiento">
+      <div class="seccion-num">09 · El cumplimiento</div>
+      <h2>El <em>cumplimiento</em> de la meta</h2>
+
+      <p>¿Se cumplió la meta del 6% del PBI? La respuesta es matizada: <strong>se alcanzó en su momento, pero el cumplimiento posterior fue irregular</strong>.</p>
+
+      <h3>El cumplimiento inicial (2006-2010)</h3>
+
+      <p>Durante el período de vigencia de la asignación específica, la meta se cumplió. Según datos del CIPPEC (Centro de Implementación de Políticas Públicas para la Equidad y el Crecimiento), la inversión educativa <strong>alcanzó en 2009 el 6,4% del PBI</strong>, llegando a unos 74.000 millones de pesos de la época (un crecimiento sobre los 60.000 millones del año anterior). En ese año:</p>
+
+      <ul>
+        <li>El gobierno nacional financió cerca del <strong>32%</strong> de la inversión educativa (unos 21.000 millones de pesos).</li>
+        <li>Las <strong>provincias aportaron el resto</strong> (unos 53.000 millones), cumpliendo la mayoría de las jurisdicciones las metas previstas (aunque cuatro no lo hicieron).</li>
+      </ul>
+
+      <h3>El cumplimiento posterior (2010 en adelante)</h3>
+
+      <p>Desde 2010, una vez alcanzada la meta y vencido el mecanismo de asignación específica, el cumplimiento se volvió <strong>más irregular</strong>. El gasto educativo como porcentaje del PBI <strong>fluctuó</strong> según la coyuntura económica y las prioridades de cada gobierno, sin la garantía automática que había tenido en el período inicial.</p>
+
+      <h3>El vencimiento de la ley</h3>
+
+      <p>La Ley 26.075, en su diseño, apuntaba al período 2006-2010. Una vez cumplido ese ciclo, su instrumento más eficaz (la asignación específica) caducó. Con el tiempo, la ley <strong>perdió vigencia efectiva</strong> como herramienta de garantía. La discusión sobre una <strong>nueva Ley de Financiamiento Educativo</strong> que reestablezca metas y mecanismos de cumplimiento es un reclamo recurrente de los gremios docentes y de las organizaciones educativas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Brecha entre provincias</div>
+        <p>Un dato clave: el cumplimiento de las metas de inversión esconde una <strong>fuerte brecha entre jurisdicciones</strong>. Según un estudio del CIPPEC (para el Grupo de Compromiso con el Financiamiento Educativo y la Fundación Luminis), en la relación inversión por alumno/ingresos fiscales, alrededor de la mitad de las provincias invierte por encima de la media y la otra mitad por debajo. En el extremo de mayor inversión por alumno se ubicaban <strong>Tierra del Fuego y Neuquén</strong>; en el de menor, <strong>Tucumán y Misiones</strong>. La desigualdad de inversión entre provincias se traduce en desigualdad de oportunidades educativas según dónde nazca un chico.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones del <em>financiamiento</em></h2>
+
+      <p>El financiamiento educativo argentino enfrenta tensiones estructurales que están en el centro del debate público.</p>
+
+      <h3>Cuánto invertir</h3>
+
+      <p>El debate sobre el <strong>monto</strong> de la inversión es permanente. ¿Es suficiente el 6%? ¿Debería ser más? ¿En un contexto de restricción fiscal, cómo se sostiene? La inversión educativa compite con otras prioridades del gasto público (salud, seguridad, jubilaciones, infraestructura).</p>
+
+      <h3>En qué invertir</h3>
+
+      <p>Más allá del monto, está el debate sobre la <strong>composición</strong> del gasto: si casi todo va a salarios, ¿cómo se financia la infraestructura, la tecnología, los materiales, la capacitación? La eficiencia del gasto —invertir mejor, no solo más— es tan importante como el monto total.</p>
+
+      <h3>Quién paga</h3>
+
+      <p>La tensión <strong>Nación-provincias</strong> sobre quién financia qué es recurrente. El FONID, los aportes nacionales, la coparticipación y las paritarias docentes son todos puntos de conflicto donde se juega el reparto del esfuerzo financiero entre los niveles del Estado.</p>
+
+      <h3>La desigualdad federal</h3>
+
+      <p>La <strong>brecha entre provincias ricas y pobres</strong> en capacidad de inversión es uno de los problemas más profundos. Sin mecanismos de compensación robustos, la calidad educativa depende en buena medida de la provincia donde se nace, lo que vulnera el principio de igualdad de oportunidades.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Financiar la educación: una decisión de prioridades</div>
+        <p>El financiamiento educativo es, en última instancia, una <strong>decisión política sobre prioridades</strong>. La Ley 26.075 representó un consenso sobre la importancia de invertir en educación, con una meta concreta y mecanismos de cumplimiento. Su éxito inicial y su posterior debilitamiento muestran tanto el potencial de las herramientas legales como sus límites cuando los instrumentos de garantía caducan. Los grandes desafíos pendientes son sostener una inversión adecuada en el tiempo, mejorar la eficiencia del gasto, y compensar las desigualdades entre provincias. El capítulo final de esta sección (12.07) analiza la otra cara de esta moneda: los resultados, la calidad y la evaluación del sistema.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley de Financiamiento Educativo 26.075</strong> · Sancionada el 21 de diciembre de 2005 (B.O. 12/01/2006). Texto en argentina.gob.ar/normativa/nacional/ley-26075-112976. Art. 3 (meta del 6%), Art. 4-5 (reparto 40/60), Art. 7 (libre disponibilidad).</li>
+        <li><strong>Constitución Nacional</strong> · Art. 75 inc. 3 (asignaciones específicas de recursos coparticipables).</li>
+        <li><strong>Ley 25.053</strong> · 1998. Crea el Fondo Nacional de Incentivo Docente (FONID).</li>
+        <li><strong>Ley 25.919</strong> · Prórroga del FONID, modificada por la Ley 26.075.</li>
+        <li><strong>CIPPEC</strong> · Centro de Implementación de Políticas Públicas para la Equidad y el Crecimiento. Datos sobre el cumplimiento de la meta del 6% (6,4% del PBI en 2009, ~74.000 millones de pesos) y la brecha entre provincias.</li>
+        <li><strong>"Ley de Financiamiento Educativo: 3 claves a 15 años de su sanción"</strong> · Aulica (2021). Análisis del cumplimiento y la brecha provincial (Tierra del Fuego y Neuquén vs Tucumán y Misiones).</li>
+        <li><strong>"Ley 26.075 de financiamiento educativo"</strong> · Diario Río Negro. Análisis del mecanismo de asignación específica y la recuperación de libre disponibilidad en 2011.</li>
+        <li><strong>Grupo de Compromiso con el Financiamiento Educativo / Fundación Luminis</strong> · Estudios sobre inversión por alumno e ingresos fiscales provinciales.</li>
+        <li><strong>UNESCO</strong> · Recomendaciones de inversión educativa (4%-6% del PBI) y datos comparativos regionales.</li>
+        <li><strong>Programa Nacional de Compensación Salarial Docente</strong> · Creado por la Ley 26.075 para asistir a provincias que no alcanzan el salario docente mínimo.</li>
+        <li><strong>Ministerio de Economía · Oficina Nacional de Presupuesto</strong> · economia.gob.ar/onp. Presupuesto de universidades nacionales y gasto educativo.</li>
+      </ul>
+    </div>
+
+    <a href="educacion-calidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.07</div>
+        <h3>Calidad y <em>evaluación</em></h3>
+        <p>La otra cara del sistema: ¿qué tan bien aprenden los estudiantes argentinos? Las pruebas Aprender (la evaluación nacional) y PISA (la internacional), los resultados en lengua y matemática, la repitencia y la deserción, la brecha entre provincias y entre sectores sociales, y los grandes debates sobre cómo mejorar la calidad educativa más allá de la cobertura.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

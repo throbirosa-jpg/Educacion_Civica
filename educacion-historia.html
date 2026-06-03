@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Historia de la educación argentina (12.01) — Educación Cívica</title>
+<meta name="description" content="La historia del sistema educativo argentino: de las primeras escuelas coloniales y el pensamiento de Belgrano a la Ley 1420 de 1884 (educación común, laica, gratuita y obligatoria), Sarmiento y el normalismo, la Ley Avellaneda, la Reforma Universitaria de 1918, la gratuidad universitaria de 1949, la Ley Federal de Educación de 1993 y la Ley de Educación Nacional 26.206 de 2006.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-historia.html">
+
+<meta property="og:title" content="Historia de la educación argentina">
+<meta property="og:description" content="De la Ley 1420 a la Ley 26.206: dos siglos de construcción del sistema educativo argentino.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-historia.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.01</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Historia</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.01 · Educación</div>
+    <h1 class="page-title">Historia de la <em>educación</em> argentina</h1>
+    <div class="page-subtitulo">— De la Ley 1420 a la Ley 26.206</div>
+    <p class="page-intro">El sistema educativo argentino se construyó a lo largo de casi dos siglos, en capas sucesivas. De las primeras escuelas coloniales y el pensamiento de <strong>Manuel Belgrano</strong> —que ya en 1796 reclamaba escuelas gratuitas— a la <strong>Ley 1420 de 1884</strong>, pieza fundacional que estableció la educación primaria <strong>común, laica, gratuita y obligatoria</strong>. De <strong>Sarmiento</strong> y las escuelas normales que formaron a los maestros del país, a la <strong>Reforma Universitaria de 1918</strong> nacida en Córdoba que conquistó la autonomía y el cogobierno y se extendió por toda América Latina. De la <strong>gratuidad universitaria</strong> decretada en 1949, a la transferencia de las escuelas a las provincias con la <strong>Ley Federal de 1993</strong>, hasta la actual <strong>Ley de Educación Nacional 26.206 de 2006</strong>, que definió la educación como un derecho y un bien público garantizado por el Estado, con 13 años de escolaridad obligatoria. Esta es la historia de cómo se construyó —entre debates, conflictos y consensos— uno de los sistemas educativos más extendidos de América Latina.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">1884</div>
+        <div class="page-stat-label">Ley 1420 de educación común</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1918</div>
+        <div class="page-stat-label">Reforma Universitaria de Córdoba</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1949</div>
+        <div class="page-stat-label">Gratuidad universitaria</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2006</div>
+        <div class="page-stat-label">Ley de Educación Nacional 26.206</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#por-que-importa">01 · Por qué importa la historia</a></li>
+      <li><a href="#origenes">02 · Orígenes coloniales y Belgrano</a></li>
+      <li><a href="#sarmiento">03 · Sarmiento y el normalismo</a></li>
+      <li><a href="#ley-1420">04 · La Ley 1420 de 1884</a></li>
+      <li><a href="#avellaneda">05 · La universidad y la Ley Avellaneda</a></li>
+      <li><a href="#reforma-1918">06 · La Reforma de 1918</a></li>
+      <li><a href="#peronismo">07 · Peronismo y gratuidad universitaria</a></li>
+      <li><a href="#ley-federal">08 · La Ley Federal de 1993</a></li>
+      <li><a href="#ley-nacional">09 · La Ley 26.206 de 2006</a></li>
+      <li><a href="#legado">10 · Tensiones y legado</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="por-que-importa">
+      <div class="seccion-num">01 · Por qué importa</div>
+      <h2>Por qué importa la <em>historia</em> educativa</h2>
+
+      <p>La educación es, junto con la organización política y la justicia, uno de los <strong>pilares fundacionales del Estado argentino moderno</strong>. La forma en que un país decide educar a sus ciudadanos refleja su proyecto de sociedad: quién accede al conocimiento, qué se enseña, quién paga, quién controla. La historia educativa argentina es, en buena medida, la historia de cómo el país pensó su propio futuro.</p>
+
+      <p>Comprender esa historia permite entender debates actuales que parecen nuevos pero tienen <strong>más de un siglo de antigüedad</strong>:</p>
+
+      <ul>
+        <li>¿La educación debe ser <strong>laica o confesional</strong>? El debate se libró con intensidad en 1884.</li>
+        <li>¿Quién financia y gestiona las escuelas: <strong>la Nación o las provincias</strong>? La tensión federal atraviesa toda la historia, desde la Ley Láinez de 1905 hasta la transferencia de 1993.</li>
+        <li>¿La universidad debe ser <strong>gratuita y autónoma</strong>? Lo conquistaron los estudiantes de Córdoba en 1918 y lo consolidó el decreto de 1949.</li>
+        <li>¿La educación es un <strong>derecho o un servicio</strong>? La Ley 26.206 de 2006 la definió como derecho y bien público.</li>
+      </ul>
+
+      <p>Cada uno de estos debates dejó una <strong>capa normativa</strong> que todavía está vigente. El sistema educativo argentino actual es la suma sedimentada de todas esas decisiones históricas. Por eso conocer su historia no es un ejercicio anticuario: es la clave para entender el presente.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema construido en capas</div>
+        <p>A diferencia de países que reformaron su educación de cuajo en un solo momento, Argentina construyó su sistema <strong>por acumulación</strong>: cada ley importante no borró del todo a la anterior, sino que la modificó dejando capas superpuestas. La Ley 1420 (1884) sigue siendo el mito fundacional; la Ley Avellaneda (1885) inauguró el régimen universitario; la Reforma del 18 instaló principios todavía vigentes; la Ley 26.206 (2006) es el marco actual. Entender el sistema es leer esas capas en orden.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="origenes">
+      <div class="seccion-num">02 · Orígenes</div>
+      <h2>Orígenes coloniales y <em>Belgrano</em></h2>
+
+      <p>Durante el período colonial, la educación en el territorio que sería Argentina estaba en manos casi exclusivas de la <strong>Iglesia Católica</strong> y de instituciones privadas. Las órdenes religiosas —jesuitas, franciscanos, dominicos— sostenían las pocas escuelas existentes, orientadas a formar clérigos y a las elites criollas. El acceso era restringido: la enorme mayoría de la población no recibía instrucción formal.</p>
+
+      <h3>La Universidad de Córdoba: 1613</h3>
+
+      <p>El hito educativo más antiguo del territorio es la <strong>Universidad de Córdoba</strong>, fundada por los jesuitas en <strong>1613</strong> —más de dos siglos antes de la independencia—. Es la universidad más antigua de la Argentina y una de las primeras de América. Durante el período colonial fue el principal centro de formación superior de la región, orientado a la teología, la filosofía y el derecho.</p>
+
+      <h3>El pensamiento de Manuel Belgrano</h3>
+
+      <p>En los años previos a la independencia, <strong>Manuel Belgrano</strong> —abogado, economista y luego prócer militar— fue uno de los primeros en plantear la educación como <strong>responsabilidad pública</strong>. Como secretario del Consulado de Buenos Aires, en su <em>Memoria</em> de 1796 sostuvo una idea que se adelantaba a su época:</p>
+
+      <div class="cita">
+        "La educación es un fin y un medio para obtener la felicidad del pueblo; las escuelas deben ser gratuitas e inspirar el amor al trabajo."
+        <span class="cita-fuente">— Manuel Belgrano, Memoria del Consulado, 1796</span>
+      </div>
+
+      <p>Belgrano impulsó la creación de escuelas de dibujo, de náutica y de comercio, y propuso la educación de las mujeres, algo revolucionario para la época. Cuando recibió el premio por su victoria militar en Salta, donó el dinero para la construcción de <strong>cuatro escuelas públicas</strong>. Su pensamiento anticipó por casi un siglo los principios que la Ley 1420 consagraría en 1884: <strong>educación gratuita y como responsabilidad del Estado</strong>.</p>
+
+      <h3>Las primeras décadas independientes</h3>
+
+      <p>Tras la Revolución de Mayo de 1810 y la independencia de 1816, el país atravesó décadas de <strong>guerras civiles</strong> que impidieron consolidar un sistema educativo nacional. Hubo iniciativas aisladas (la Universidad de Buenos Aires se fundó en 1821), pero recién con la <strong>organización nacional posterior a 1853</strong> —y especialmente con la Constitución y la consolidación del Estado— surgieron las condiciones para pensar la educación como sistema. Ese rol histórico le tocaría, sobre todo, a Domingo Faustino Sarmiento.</p>
+    </div>
+
+    <div class="seccion" id="sarmiento">
+      <div class="seccion-num">03 · Sarmiento</div>
+      <h2>Sarmiento y el <em>normalismo</em></h2>
+
+      <p><strong>Domingo Faustino Sarmiento</strong> (1811-1888) es la figura central de la educación argentina del siglo XIX. Educador, escritor, periodista, gobernador de San Juan y presidente de la Nación entre 1868 y 1874, hizo de la educación pública el eje de su proyecto de país. Su consigna —"educar al soberano"— sintetizaba su convicción de que no había república posible sin ciudadanos instruidos.</p>
+
+      <h3>La influencia del modelo estadounidense</h3>
+
+      <p>Sarmiento estudió de cerca el sistema educativo de Estados Unidos, al que admiraba. Trajo a la Argentina a <strong>maestras estadounidenses</strong> (las llamadas "maestras sarmientinas") para fundar y dirigir escuelas, y adoptó el modelo de las <em>normal schools</em> para formar docentes con método. La técnica pedagógica que se difundió —influida por Pestalozzi— buscaba unificar la enseñanza primaria en toda la Nación.</p>
+
+      <h3>Las escuelas normales</h3>
+
+      <p>El gran instrumento de Sarmiento fue la <strong>escuela normal</strong>: una institución dedicada a <strong>formar maestros</strong>. El término "normal" venía de "norma" o "método". En octubre de 1869, siendo presidente, logró que el Congreso autorizara la creación de la primera, la <strong>Escuela Normal de Paraná</strong>, que abrió en <strong>1870</strong>. Su estructura era integral: incluía el curso normal (nivel medio), un departamento de aplicación (escuela primaria de práctica) y podía tener jardín de infantes.</p>
+
+      <p>El "normalismo" se convirtió en un <strong>movimiento pedagógico y cultural</strong> de enorme alcance. Las escuelas normales se multiplicaron por todo el país y formaron generaciones de maestros con una identidad profesional fuerte y un fuerte sentido de misión cívica. Durante un siglo (aproximadamente 1870-1970), el normalismo fue la columna vertebral de la formación docente argentina.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Sarmiento, una figura compleja</div>
+        <p>Sarmiento es reconocido como el gran impulsor de la educación pública argentina —el "padre del aula", con su muerte recordada cada 11 de septiembre como Día del Maestro—. Al mismo tiempo, la historiografía contemporánea revisa críticamente otras facetas de su pensamiento, marcado por las ideas de su época sobre "civilización y barbarie". Reconocer su aporte fundacional a la educación no implica suscribir la totalidad de sus posiciones: es posible valorar al educador con mirada histórica y crítica a la vez.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-1420">
+      <div class="seccion-num">04 · Ley 1420</div>
+      <h2>La <em>Ley 1420</em> de 1884</h2>
+
+      <p>La <strong>Ley 1420 de Educación Común</strong>, promulgada el <strong>8 de julio de 1884</strong> durante la primera presidencia de <strong>Julio Argentino Roca</strong>, es la pieza fundacional del sistema educativo argentino. Estableció la instrucción primaria <strong>obligatoria, gratuita, gradual y laica</strong> para los niños de 6 a 14 años. Es, sin discusión, una de las leyes más trascendentes de la historia argentina.</p>
+
+      <h3>Qué estableció</h3>
+
+      <p>Los principios centrales de la ley fueron:</p>
+
+      <ul>
+        <li><strong>Obligatoriedad</strong>: los padres, tutores o encargados estaban obligados a dar instrucción primaria a los niños en edad escolar. La obligación podía cumplirse en escuelas públicas, privadas o en el hogar, comprobándose por certificados y exámenes.</li>
+        <li><strong>Gratuidad</strong>: el Estado debía sostener escuelas públicas gratuitas al alcance de los niños. Cada vecindario de cierta cantidad de habitantes tenía derecho a, al menos, una escuela pública.</li>
+        <li><strong>Gradualidad</strong>: la enseñanza iba de lo general a lo específico, organizada por grados.</li>
+        <li><strong>Laicidad</strong>: este fue el punto más conflictivo. La ley no prohibió la enseñanza religiosa, pero la sacó del horario escolar obligatorio, permitiéndola solo fuera del horario regular. Esto enfrentó al Estado con la Iglesia Católica.</li>
+      </ul>
+
+      <p>La ley también definió un <strong>currículum mínimo obligatorio</strong> (lectura, escritura, aritmética, geografía e historia nacional, idioma nacional, moral, nociones de ciencias, dibujo, música, gimnasia y conocimiento de la Constitución Nacional) y creó el <strong>Consejo Nacional de Educación</strong> como organismo de gobierno del sistema.</p>
+
+      <h3>El conflicto con la Iglesia</h3>
+
+      <p>La sanción de la Ley 1420 fue una <strong>norma resistida</strong>. Los sectores conservadores y eclesiásticos se opusieron con fuerza a la laicidad. El ministro <strong>Eduardo Wilde</strong> defendió el proyecto con vehemencia en el Congreso, y Roca debió ejercer una fuerte decisión política. La tensión con la Iglesia escaló al punto de que Roca expulsó al Nuncio Apostólico del país. El laicismo escolar fue, durante décadas, una de las marcas distintivas del modelo educativo argentino.</p>
+
+      <h3>El alcance limitado: la Ley Láinez</h3>
+
+      <p>Es importante una precisión técnica: la Ley 1420 regía solo en la <strong>Capital Federal y los Territorios Nacionales</strong>, porque la educación primaria era competencia de las provincias. Para extender el modelo, en <strong>1905</strong> se sancionó la <strong>Ley Láinez</strong>, que autorizó al Estado nacional a instalar escuelas primarias en las provincias que lo solicitaran. Entre ambas leyes, el sistema de educación primaria se expandió por todo el país.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— El impacto: alfabetización masiva</div>
+        <p>Antes de 1884, más de la mitad de la población argentina no sabía leer ni escribir. La Ley 1420, sumada a la Ley Láinez y a la enorme inmigración europea de fines del siglo XIX y comienzos del XX, produjo una <strong>reducción drástica del analfabetismo</strong>. La escuela pública fue el gran instrumento de integración de los hijos de inmigrantes al idioma y la cultura nacional, y la principal vía de <strong>ascenso social</strong> de las clases populares. Pocas políticas de Estado tuvieron un efecto tan duradero y transversal en la sociedad argentina.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="avellaneda">
+      <div class="seccion-num">05 · Ley Avellaneda</div>
+      <h2>La universidad y la <em>Ley Avellaneda</em></h2>
+
+      <p>Mientras la Ley 1420 organizaba la educación primaria, el nivel universitario recibió su primer marco regulatorio nacional en <strong>1885</strong> con la <strong>Ley 1597</strong>, conocida como <strong>Ley Avellaneda</strong> en honor a su impulsor, Nicolás Avellaneda (expresidente y entonces senador).</p>
+
+      <h3>Qué reguló</h3>
+
+      <p>La Ley Avellaneda fue una ley breve que estableció las <strong>bases mínimas</strong> a las que debían ajustarse los estatutos de las universidades nacionales. Reguló:</p>
+
+      <ul>
+        <li>La organización del <strong>gobierno universitario</strong> (consejos, asambleas, autoridades).</li>
+        <li>La designación de profesores.</li>
+        <li>La administración de los recursos.</li>
+        <li>Las condiciones para la expedición de títulos.</li>
+      </ul>
+
+      <p>En el momento de su sanción existían solo <strong>dos universidades nacionales</strong>: la de Córdoba (1613, nacionalizada) y la de Buenos Aires (1821, nacionalizada en 1881). La <strong>Universidad de La Plata</strong>, de origen provincial (creada hacia 1890), fue <strong>nacionalizada en 1905</strong> por impulso de Joaquín V. González. Las tres juntas reunían, hacia 1918, apenas unos 14.000 estudiantes: la universidad era todavía una <strong>institución de elite</strong>.</p>
+
+      <h3>La universidad de elite</h3>
+
+      <p>Hasta comienzos del siglo XX, la universidad argentina era un espacio reservado casi exclusivamente a los hijos de las clases altas. El gobierno universitario estaba en manos de camarillas de profesores vitalicios, con métodos dogmáticos y escasa renovación. Esa estructura cerrada sería, precisamente, lo que detonaría la <strong>Reforma Universitaria de 1918</strong>.</p>
+    </div>
+
+    <div class="seccion" id="reforma-1918">
+      <div class="seccion-num">06 · Reforma de 1918</div>
+      <h2>La <em>Reforma</em> Universitaria de 1918</h2>
+
+      <p>La <strong>Reforma Universitaria de 1918</strong>, nacida en la <strong>Universidad Nacional de Córdoba</strong>, es uno de los movimientos estudiantiles más influyentes de la historia latinoamericana. Comenzó como una protesta contra las estructuras conservadoras y autoritarias de la universidad y terminó transformando el modelo universitario de toda la región.</p>
+
+      <h3>El contexto</h3>
+
+      <p>En <strong>marzo de 1918</strong>, durante la primera presidencia de <strong>Hipólito Yrigoyen</strong> (el primer presidente electo por sufragio universal masculino tras la Ley Sáenz Peña de 1912), los estudiantes de Córdoba se levantaron contra un régimen académico que consideraban dogmático, clerical y cerrado. Reclamaban la democratización del gobierno universitario, la renovación de las cátedras y la apertura de la universidad a la sociedad.</p>
+
+      <h3>El Manifiesto Liminar</h3>
+
+      <p>El <strong>21 de junio de 1918</strong>, tras días de huelga, el movimiento estudiantil publicó en <em>La Gaceta Universitaria</em> el célebre <strong>Manifiesto Liminar</strong>, redactado por <strong>Deodoro Roca</strong> y dirigido "a los hombres libres de Sud América". Es un documento fundacional del reformismo latinoamericano:</p>
+
+      <div class="cita">
+        "Hombres de una República libre, acabamos de romper la última cadena que, en pleno siglo XX, nos ataba a la antigua dominación monárquica y monástica. (...) La juventud ya no pide. Exige que se le reconozca el derecho a exteriorizar ese pensamiento propio en los cuerpos universitarios por medio de sus representantes."
+        <span class="cita-fuente">— Manifiesto Liminar, Córdoba, 21 de junio de 1918</span>
+      </div>
+
+      <h3>Los principios reformistas</h3>
+
+      <p>El gobierno de Yrigoyen apoyó el movimiento e intervino la universidad para iniciar la reforma. Los principios que la Reforma instaló siguen vigentes en la universidad argentina y se extendieron por toda América Latina:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Principios de la Reforma del 18</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Autonomía universitaria</div>
+            <div class="ficha-valor">La universidad se gobierna a sí misma, <strong>independiente del poder político</strong> de turno.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Cogobierno</div>
+            <div class="ficha-valor">El gobierno universitario se comparte entre <strong>profesores, estudiantes y graduados</strong>.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Periodicidad de la cátedra</div>
+            <div class="ficha-valor">Los cargos docentes <strong>no son vitalicios</strong>: se renuevan por concurso periódico.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Concursos de oposición</div>
+            <div class="ficha-valor">Los profesores acceden por <strong>concurso público</strong>, no por designación discrecional.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Libertad de cátedra</div>
+            <div class="ficha-valor">Cada docente enseña según su criterio académico, <strong>sin imposición dogmática</strong>.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Extensión universitaria</div>
+            <div class="ficha-valor">La universidad se <strong>vincula con la sociedad</strong> y difunde el conocimiento más allá de sus aulas.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>La influencia de la Reforma fue continental: inspiró movimientos estudiantiles en Perú, México, Cuba, Uruguay y otros países. Incluso el Mayo Francés de 1968 reconocía a la Córdoba de 1918 como antecedente. El <strong>Manifiesto Liminar</strong> fue reconocido por la UNESCO como parte del registro de Memoria del Mundo.</p>
+    </div>
+
+    <div class="seccion" id="peronismo">
+      <div class="seccion-num">07 · Peronismo</div>
+      <h2>Peronismo y <em>gratuidad</em> universitaria</h2>
+
+      <p>El período del primer y segundo gobierno de <strong>Juan Domingo Perón</strong> (1946-1955) produjo una expansión sin precedentes del sistema educativo, con un foco particular en la <strong>inclusión de los sectores populares</strong> y la educación técnica.</p>
+
+      <h3>La gratuidad universitaria de 1949</h3>
+
+      <p>El hito más recordado es el <strong>Decreto 29.337 del 22 de noviembre de 1949</strong>, que suprimió los aranceles universitarios y estableció la <strong>gratuidad de la enseñanza universitaria</strong>. Hasta entonces, aunque la universidad pública no era cara, cobraba aranceles que constituían una barrera para los sectores de menores ingresos. El decreto eliminó esa barrera. En 2007, el gobierno declaró el 22 de noviembre como <strong>Día de la Gratuidad Universitaria</strong>.</p>
+
+      <p>El efecto fue inmediato y masivo: la matrícula universitaria <strong>pasó de 40.284 estudiantes en 1945 a 138.871 en 1955</strong>, más que triplicándose en una década. La universidad dejó de ser exclusivamente un espacio de elite.</p>
+
+      <h3>La educación técnica y la Universidad Obrera</h3>
+
+      <p>El peronismo también impulsó fuertemente la <strong>educación técnica</strong>, en consonancia con su proyecto de industrialización:</p>
+
+      <ul>
+        <li>Se expandieron las <strong>escuelas técnicas e industriales</strong> como nunca antes.</li>
+        <li>Se creó la <strong>Universidad Obrera Nacional</strong> en 1948 (hoy Universidad Tecnológica Nacional, UTN), orientada a formar ingenieros de origen obrero.</li>
+        <li>Se suprimieron los aranceles de la enseñanza media en 1952.</li>
+        <li>Se reemplazó el viejo Ministerio de Justicia e Instrucción Pública por un <strong>Ministerio de Educación</strong> con jerarquía propia.</li>
+        <li>Se sancionó el <strong>Estatuto del Docente</strong> en 1954, profesionalizando la carrera.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Dos legados que se sumaron</div>
+        <p>La universidad pública y gratuita argentina es producto de <strong>dos impulsos históricos sucesivos</strong>: la <strong>autonomía y el cogobierno</strong> conquistados por la Reforma de 1918, y la <strong>gratuidad</strong> establecida por el decreto de 1949. Ambos legados —de orígenes políticos distintos— se sedimentaron en el modelo de universidad que Argentina mantiene hasta hoy: autónoma, cogobernada y gratuita. La <strong>Ley de Educación Superior 24.521</strong> (1995) y su reforma de 2015 consolidaron legalmente la gratuidad de los estudios de grado en las instituciones estatales.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-federal">
+      <div class="seccion-num">08 · Ley Federal</div>
+      <h2>La <em>Ley Federal</em> de Educación de 1993</h2>
+
+      <p>Tras décadas de gobiernos democráticos y dictaduras que alternaron políticas educativas, la <strong>recuperación democrática de 1983</strong> abrió un proceso de discusión sobre el rumbo del sistema. El <strong>Congreso Pedagógico Nacional de 1984</strong> reunió a docentes, especialistas y comunidad educativa para repensar la educación. De ese proceso surgió, casi una década después, la primera gran reforma integral.</p>
+
+      <h3>Qué estableció la Ley 24.195</h3>
+
+      <p>La <strong>Ley Federal de Educación N.º 24.195</strong> fue sancionada el <strong>14 de abril de 1993</strong>, durante la primera presidencia de <strong>Carlos Menem</strong>. Fue la primera ley que reguló <strong>todo el sistema educativo</strong> (no solo un nivel, como había hecho la 1420 con la primaria). Sus cambios principales:</p>
+
+      <ul>
+        <li>Reestructuró los niveles creando la <strong>EGB</strong> (Educación General Básica, de 9 años divididos en tres ciclos) y el <strong>Polimodal</strong> (3 años posteriores).</li>
+        <li>Extendió la <strong>obligatoriedad</strong> a 10 años (desde el último año del nivel inicial hasta el fin de la EGB).</li>
+        <li>Creó la <strong>CONEAU</strong> (Comisión Nacional de Evaluación y Acreditación Universitaria) para evaluar la calidad universitaria, en el marco de la Ley de Educación Superior 24.521 de 1995.</li>
+      </ul>
+
+      <h3>La transferencia a las provincias</h3>
+
+      <p>El aspecto más controvertido fue la <strong>transferencia de los servicios educativos a las provincias</strong>. A través del <strong>Pacto Federal Educativo</strong> y leyes de transferencia, el Estado nacional <strong>traspasó las escuelas primarias y secundarias que aún administraba a las provincias y a la Ciudad de Buenos Aires</strong>. La Nación se quedó con el rol de fijar políticas generales; las provincias asumieron la gestión directa, el pago de salarios docentes y el mantenimiento de los establecimientos.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una reforma cuestionada</div>
+        <p>La Ley Federal fue objeto de fuertes críticas. La <strong>transferencia de escuelas a las provincias</strong> —sin la correspondiente transferencia plena de recursos— sobrecargó las finanzas provinciales y profundizó las <strong>desigualdades regionales</strong>: las provincias ricas pudieron sostener mejor sus sistemas que las pobres. Además, la nueva estructura (EGB y Polimodal) <strong>nunca se aplicó de manera uniforme</strong>: cada provincia la implementó de modo distinto o no la implementó, lo que produjo una "atomización" del sistema en subsistemas heterogéneos. Estas críticas motivarían su reemplazo en 2006.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="ley-nacional">
+      <div class="seccion-num">09 · Ley 26.206</div>
+      <h2>La <em>Ley de Educación Nacional</em> de 2006</h2>
+
+      <p>La <strong>Ley de Educación Nacional N.º 26.206</strong> fue sancionada el <strong>14 de diciembre de 2006</strong> durante la presidencia de <strong>Néstor Kirchner</strong>, y derogó la Ley Federal de 1993. Es el <strong>marco legal vigente</strong> del sistema educativo argentino y reformuló su concepción de base.</p>
+
+      <h3>El cambio de concepción</h3>
+
+      <p>La 26.206 estableció que <strong>la educación y el conocimiento son un bien público y un derecho personal y social garantizado por el Estado</strong> (Art. 2). Definió a la educación como una <strong>prioridad nacional y política de Estado</strong> (Art. 3), y consagró la responsabilidad <strong>principal e indelegable</strong> del Estado nacional, las provincias y la CABA de proveer educación integral, permanente y de calidad, garantizando igualdad, gratuidad y equidad (Art. 4).</p>
+
+      <h3>Qué cambió respecto de la Ley Federal</h3>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Ley Federal (1993)</th>
+              <th>Ley 26.206 (2006)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estructura</strong></td>
+              <td>EGB (9 años) + Polimodal (3 años)</td>
+              <td>Primaria + Secundaria (13 años en total, con dos opciones: 6+6 o 7+5)</td>
+            </tr>
+            <tr>
+              <td><strong>Obligatoriedad</strong></td>
+              <td>10 años</td>
+              <td>13 años: desde sala de 4 hasta fin del secundario</td>
+            </tr>
+            <tr>
+              <td><strong>Concepción</strong></td>
+              <td>Educación como servicio</td>
+              <td>Educación como derecho y bien público</td>
+            </tr>
+            <tr>
+              <td><strong>Rol del Estado</strong></td>
+              <td>Fijar políticas, transferir gestión</td>
+              <td>Responsabilidad principal e indelegable</td>
+            </tr>
+            <tr>
+              <td><strong>Formación docente</strong></td>
+              <td>Sin organismo nacional específico</td>
+              <td>Crea el Instituto Nacional de Formación Docente (INFoD)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Las novedades principales</h3>
+
+      <ul>
+        <li>Restauró la estructura de <strong>primaria y secundaria</strong>, dejando atrás la EGB/Polimodal (cada provincia puede optar entre 6+6 o 7+5 años).</li>
+        <li>Extendió la <strong>obligatoriedad a 13 años</strong>: desde la sala de 4 del nivel inicial hasta la finalización del secundario. (Posteriormente, la sala de 3 también avanzó hacia la universalización.)</li>
+        <li>Creó el <strong>Instituto Nacional de Formación Docente (INFoD)</strong> para garantizar capacitación gratuita a lo largo de la carrera docente.</li>
+        <li>Reconoció <strong>ocho modalidades</strong> educativas (técnica, especial, rural, intercultural bilingüe, de adultos, en contextos de encierro, domiciliaria y artística).</li>
+        <li>Fijó la meta de <strong>jornada extendida o completa</strong> en la escuela primaria.</li>
+        <li>Reafirmó la articulación entre Nación y provincias a través del <strong>Consejo Federal de Educación</strong>.</li>
+      </ul>
+
+      <p>La Ley 26.206 se complementa con otras normas que forman el marco actual: la <strong>Ley de Educación Superior 24.521</strong> (1995, que regula universidades), la <strong>Ley de Educación Técnico Profesional 26.058</strong> (2005) y la <strong>Ley de Financiamiento Educativo 26.075</strong> (2005), que se analizan en los capítulos siguientes de esta sección.</p>
+    </div>
+
+    <div class="seccion" id="legado">
+      <div class="seccion-num">10 · Legado</div>
+      <h2>Tensiones históricas y <em>legado</em></h2>
+
+      <p>La historia educativa argentina dejó un sistema con fortalezas notables y tensiones persistentes. Comprenderlas ayuda a leer los debates contemporáneos.</p>
+
+      <h3>Las grandes conquistas</h3>
+
+      <ul>
+        <li><strong>Alfabetización masiva temprana</strong>: Argentina fue, a comienzos del siglo XX, uno de los países más alfabetizados de América Latina, gracias a la Ley 1420 y la Ley Láinez.</li>
+        <li><strong>Universidad autónoma, cogobernada y gratuita</strong>: un modelo distintivo, producto de la Reforma del 18 y el decreto de 1949.</li>
+        <li><strong>La escuela pública como ascensor social</strong>: durante gran parte del siglo XX, la educación fue la principal vía de movilidad social ascendente.</li>
+        <li><strong>Un sistema extendido</strong>: con 13 años de escolaridad obligatoria, Argentina tiene uno de los sistemas más amplios de la región.</li>
+      </ul>
+
+      <h3>Las tensiones persistentes</h3>
+
+      <ul>
+        <li><strong>La tensión federal</strong>: ¿quién financia y gestiona? La transferencia de 1993 dejó a las provincias a cargo de la gestión y el salario docente, generando desigualdades entre provincias ricas y pobres que persisten hasta hoy.</li>
+        <li><strong>Laica vs confesional</strong>: el debate de 1884 reaparece periódicamente, sobre todo en provincias donde rige educación religiosa en escuelas públicas.</li>
+        <li><strong>Cantidad vs calidad</strong>: el sistema logró una enorme cobertura, pero los debates sobre calidad de los aprendizajes (medida por pruebas Aprender y PISA) son recurrentes.</li>
+        <li><strong>Financiamiento</strong>: la meta del 6% del PBI para educación, fijada en 2005, se cumplió de modo irregular.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema que sigue en construcción</div>
+        <p>La historia educativa argentina muestra un patrón: cada generación <strong>amplió el derecho a la educación</strong> —de la primaria de 1884 al secundario obligatorio de 2006, de la universidad de elite a la universidad masiva— pero las tensiones de financiamiento, calidad y equidad federal nunca se resolvieron del todo. El sistema actual es heredero de todas esas capas. Los capítulos siguientes de esta sección analizan cómo funciona hoy: sus niveles, sus instituciones públicas y privadas, su gobierno federal, su financiamiento y los debates sobre su calidad.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley 1420 de Educación Común</strong> · Promulgada el 8 de julio de 1884. Texto original en bnm.me.gov.ar (Biblioteca Nacional de Maestros) y en datos abiertos del GCBA.</li>
+        <li><strong>Ley 1597 (Ley Avellaneda)</strong> · 1885. Primer régimen universitario nacional.</li>
+        <li><strong>Ley Láinez (Ley 4874)</strong> · 1905. Escuelas nacionales en las provincias.</li>
+        <li><strong>Ley Federal de Educación 24.195</strong> · Sancionada el 14 de abril de 1993. Derogada en 2006.</li>
+        <li><strong>Ley de Educación Superior 24.521</strong> · 1995, reformada en 2015 (gratuidad de grado). Regula universidades.</li>
+        <li><strong>Ley de Educación Nacional 26.206</strong> · Sancionada el 14 de diciembre de 2006. Marco vigente. Texto en argentina.gob.ar/normativa/nacional/ley-26206-123542.</li>
+        <li><strong>Decreto 29.337/1949</strong> · Gratuidad universitaria (gobierno de Perón).</li>
+        <li><strong>Manifiesto Liminar de la Reforma Universitaria</strong> · Córdoba, 21 de junio de 1918. Redactado por Deodoro Roca. Reconocido por la UNESCO (Memoria del Mundo). Texto en cultura.gob.ar.</li>
+        <li><strong>"Ley 1420: piedra fundacional de la educación argentina"</strong> · Ministerio de Cultura de la Nación (cultura.gob.ar).</li>
+        <li><strong>"A 140 años de la sanción de la Ley 1420"</strong> · Alfilo, Facultad de Filosofía y Humanidades, UNC (2024). Análisis de Gabriela Lamelas.</li>
+        <li><strong>"Cien años de normalismo en Argentina (1870-1970)"</strong> · Scielo / Redalyc. Estudio sobre la formación docente y la Escuela Normal de Paraná.</li>
+        <li><strong>"La educación universitaria gratuita"</strong> · Noticias UNSAM. Análisis del decreto de 1949 y la expansión de la matrícula.</li>
+        <li><strong>UNESCO · Memoria del Mundo</strong> · Registro del Manifiesto Liminar de la Reforma de Córdoba.</li>
+        <li><strong>Manuel Belgrano · Memoria del Consulado</strong> · 1796. Pensamiento sobre educación pública y gratuita.</li>
+        <li><strong>Wikipedia</strong> (artículos sobre Ley 1420, Ley Federal de Educación, Ley de Educación Nacional, Reforma Universitaria de 1918) como referencias de contexto y cronología, contrastadas con fuentes primarias.</li>
+        <li><strong>Universidad Nacional de Córdoba</strong> · reformadel18.unc.edu.ar. Documentación de la Reforma Universitaria.</li>
+      </ul>
+    </div>
+
+    <a href="educacion-niveles.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.02</div>
+        <h3>Los <em>niveles</em> del sistema educativo</h3>
+        <p>Cómo está organizada hoy la educación obligatoria argentina: el <strong>nivel inicial</strong> (de 45 días a 5 años, con sala de 4 y 5 obligatorias), el <strong>primario</strong> y el <strong>secundario</strong>, las opciones de estructura (6+6 o 7+5), las modalidades especiales y los 13 años de escolaridad obligatoria que establece la Ley 26.206.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

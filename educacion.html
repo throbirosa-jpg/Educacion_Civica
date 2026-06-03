@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Educación · Capítulo 12 — Educación Cívica</title>
+<meta name="description" content="La sección Educación recorre el sistema educativo argentino en siete estudios: su historia (de la Ley 1420 a la Ley 26.206), los niveles del sistema, la educación superior, los modelos de gestión pública y privada, el gobierno federal del sistema, su financiamiento (Ley 26.075) y su calidad (pruebas Aprender y PISA).">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion.html">
+<meta property="og:title" content="Educación · Capítulo 12">
+<meta property="og:description" content="Siete estudios sobre el sistema educativo argentino: historia, niveles, educación superior, gestión, gobierno, financiamiento y calidad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 1100px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; max-width: 900px; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+  .seccion-intro { max-width: 800px; margin-bottom: 3rem; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 0.8rem; }
+  .seccion-titulo { font-family: 'Fraunces', serif; font-weight: 400; font-size: 2rem; color: var(--tinta); line-height: 1.2; margin-bottom: 1.2rem; }
+  .seccion-titulo em { font-style: italic; color: var(--premium-dark); }
+  .seccion-descripcion { font-size: 1.05rem; line-height: 1.75; color: var(--tinta); }
+  .seccion-descripcion strong { color: var(--premium-dark); font-weight: 600; }
+
+  .analisis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; margin: 2rem 0 3rem; }
+  @media (max-width: 800px) { .analisis-grid { grid-template-columns: 1fr; } }
+
+  .analisis-card { background: white; border: 1px solid var(--linea); padding: 2.2rem 2rem; text-decoration: none; color: var(--tinta); display: flex; flex-direction: column; transition: all 0.2s ease; position: relative; overflow: hidden; }
+  .analisis-card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--premium); }
+  .analisis-card:hover { border-color: var(--premium); box-shadow: 0 10px 30px rgba(107, 79, 140, 0.15); transform: translateY(-3px); }
+
+  .ac-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
+  .ac-num { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--premium); font-weight: 600; letter-spacing: 0.05em; }
+  .ac-estado { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.6rem; font-weight: 600; white-space: nowrap; background: var(--verde-soft); border: 1px solid var(--verde); color: var(--verde); }
+
+  .ac-titulo { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.55rem; color: var(--tinta); line-height: 1.2; margin-bottom: 0.5rem; }
+  .ac-titulo em { font-style: italic; color: var(--premium-dark); }
+  .ac-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .ac-desc { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin-bottom: 1.2rem; flex-grow: 1; }
+  .ac-desc strong { color: var(--premium-dark); }
+
+  .ac-keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 1rem 0; margin: 0.5rem 0 1.2rem; border-top: 1px solid var(--linea-soft); border-bottom: 1px solid var(--linea-soft); }
+  .ac-kw { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.04em; color: var(--tinta-soft); background: var(--crema-warm); padding: 0.25rem 0.55rem; font-weight: 500; }
+
+  .ac-link { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--premium-dark); font-weight: 600; margin-top: auto; text-transform: uppercase; }
+
+  .destacado-conexion { background: var(--crema-warm); border: 1px solid var(--linea); padding: 2rem 2.2rem; margin: 2rem 0 3rem; }
+  .destacado-conexion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado-conexion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.4rem; color: var(--tinta); margin-bottom: 0.8rem; }
+  .destacado-conexion h3 em { font-style: italic; color: var(--premium-dark); }
+  .destacado-conexion p { font-size: 1rem; line-height: 1.7; color: var(--tinta); margin-bottom: 0.8rem; }
+  .destacado-conexion p:last-child { margin-bottom: 0; }
+  .destacado-conexion p strong { color: var(--premium-dark); font-weight: 600; }
+
+  .proximos-contenidos { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 2rem 2.2rem; margin: 3rem 0; }
+  .proximos-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 600; }
+  .proximos-contenidos h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--tinta); margin-bottom: 0.8rem; font-weight: 500; }
+  .proximos-contenidos h3 em { font-style: italic; color: var(--premium-dark); }
+  .proximos-contenidos p { font-size: 0.98rem; line-height: 1.7; color: var(--tinta); margin: 0; }
+  .proximos-contenidos p strong { color: var(--premium-dark); }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Educación: el sistema educativo argentino</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Educación</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Educación · Capítulo 12</div>
+    <h1 class="page-title">El sistema <em>educativo</em> argentino, a fondo</h1>
+    <p class="page-intro">La educación es uno de los <strong>pilares del Estado argentino</strong> y, históricamente, su gran instrumento de integración y movilidad social. Esta sección recorre el sistema educativo argentino en <strong>siete estudios</strong>: su <strong>historia</strong> (de la Ley 1420 a la Ley 26.206), la organización en <strong>niveles</strong>, la <strong>educación superior</strong>, los modelos de gestión <strong>pública y privada</strong>, el <strong>gobierno federal</strong> del sistema, su <strong>financiamiento</strong> y su <strong>calidad</strong>. Cada estudio combina la base normativa, los datos verificables, los actores institucionales y los debates actuales, con el mismo criterio del resto del sitio: institucional, atemporal y sin grieta. Una guía completa para entender cómo se educa la Argentina.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">7</div>
+        <div class="page-stat-label">Estudios de la sección</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">★ 7</div>
+        <div class="page-stat-label">Estudios completos</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~290</div>
+        <div class="page-stat-label">KB de contenido premium</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1884</div>
+        <div class="page-stat-label">Desde la Ley 1420 hasta hoy</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="seccion-intro">
+    <div class="seccion-eyebrow">— Los siete estudios</div>
+    <h2 class="seccion-titulo">Siete miradas sobre la <em>educación</em></h2>
+    <p class="seccion-descripcion">La sección recorre el sistema educativo desde su <strong>historia</strong> hasta su <strong>actualidad</strong>, pasando por su estructura, sus instituciones, su gobierno, su financiamiento y su calidad. Los siete estudios pueden leerse de forma independiente, pero están pensados como un recorrido: cada uno se conecta con los demás para dar una imagen integral de cómo se organiza, gobierna, financia y evalúa la educación argentina.</p>
+  </div>
+
+  <div class="analisis-grid">
+
+    <a href="educacion-historia.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.01</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">Historia de la <em>educación</em></h3>
+      <div class="ac-subtitulo">— De la Ley 1420 a la Ley 26.206</div>
+      <p class="ac-desc">Casi dos siglos de construcción del sistema: los orígenes coloniales y <strong>Belgrano</strong>, <strong>Sarmiento</strong> y el normalismo, la <strong>Ley 1420 de 1884</strong> (educación común, laica, gratuita y obligatoria), la <strong>Reforma Universitaria de 1918</strong>, la gratuidad de 1949, la Ley Federal de 1993 y la actual <strong>Ley 26.206</strong>.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Ley 1420</span>
+        <span class="ac-kw">Reforma del 18</span>
+        <span class="ac-kw">Sarmiento</span>
+        <span class="ac-kw">Ley 26.206</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-niveles.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.02</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">Los <em>niveles</em> del sistema</h3>
+      <div class="ac-subtitulo">— Inicial, primario, secundario y superior</div>
+      <p class="ac-desc">Cómo está organizada la educación obligatoria: los <strong>4 niveles</strong>, los <strong>13 años de obligatoriedad</strong> (desde sala de 4), la estructura 6+6 o 7+5, el ciclo básico y orientado del secundario, las <strong>8 modalidades</strong> y los datos de matrícula, repitencia y jornada.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">4 niveles</span>
+        <span class="ac-kw">13 años</span>
+        <span class="ac-kw">8 modalidades</span>
+        <span class="ac-kw">Matrícula</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-superior.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.03</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">La educación <em>superior</em></h3>
+      <div class="ac-subtitulo">— Universidades, terciarios y ciencia</div>
+      <p class="ac-desc">El sistema universitario: <strong>más de 55 universidades nacionales</strong> gratuitas y autónomas, más de 2 millones de estudiantes, la <strong>autonomía constitucional</strong> (1994), la Ley 24.521, la <strong>CONEAU</strong>, los institutos de formación docente y el sistema científico del <strong>CONICET</strong>.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Universidades</span>
+        <span class="ac-kw">Gratuidad</span>
+        <span class="ac-kw">CONEAU</span>
+        <span class="ac-kw">CONICET</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-publica-privada.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.04</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo"><em>Pública</em> y privada</h3>
+      <div class="ac-subtitulo">— Los modelos de gestión</div>
+      <p class="ac-desc">Los <strong>4 tipos de gestión</strong> (estatal, privada, cooperativa, social), la libertad de enseñanza, el régimen de <strong>subvenciones</strong> estatales, el peso de cada sector (<strong>73% estatal</strong>, 22% privada subvencionada, 5% sin subvención) y la distribución social de la matrícula.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Gestión estatal</span>
+        <span class="ac-kw">Subvenciones</span>
+        <span class="ac-kw">73% estatal</span>
+        <span class="ac-kw">Equidad</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-gobierno.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.05</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">El <em>gobierno</em> del sistema</h3>
+      <div class="ac-subtitulo">— Nación, provincias y Consejo Federal</div>
+      <p class="ac-desc">Cómo se gobierna la educación en un país federal: la <strong>transferencia de 1993</strong>, el reparto de competencias Nación-provincias, el rol del Ministerio nacional, el <strong>Consejo Federal de Educación</strong> como ámbito de concertación y las tensiones del federalismo educativo.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Federalismo</span>
+        <span class="ac-kw">Consejo Federal</span>
+        <span class="ac-kw">Provincias</span>
+        <span class="ac-kw">FONID</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-financiamiento.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.06</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">El <em>financiamiento</em> educativo</h3>
+      <div class="ac-subtitulo">— La Ley 26.075 y el 6% del PBI</div>
+      <p class="ac-desc">Cómo se paga la educación: la <strong>Ley 26.075</strong> y la meta del <strong>6% del PBI</strong>, el reparto del esfuerzo (60% provincias, 40% Nación), el peso de los salarios docentes, el <strong>FONID</strong>, el financiamiento universitario y el cumplimiento de la meta.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Ley 26.075</span>
+        <span class="ac-kw">6% del PBI</span>
+        <span class="ac-kw">Salarios</span>
+        <span class="ac-kw">FONID</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+    <a href="educacion-calidad.html" class="analisis-card">
+      <div class="ac-header">
+        <span class="ac-num">12.07</span>
+        <span class="ac-estado">DISPONIBLE</span>
+      </div>
+      <h3 class="ac-titulo">Calidad y <em>evaluación</em></h3>
+      <div class="ac-subtitulo">— ¿Qué tan bien aprende la Argentina?</div>
+      <p class="ac-desc">La calidad de los aprendizajes: las pruebas <strong>Aprender</strong> (nacional) y <strong>PISA</strong> (internacional), los resultados (7 de cada 10 no alcanzan el nivel básico en matemática), la paradoja primaria-secundaria, las brechas sociales y provinciales, y los debates sobre cómo mejorar.</p>
+      <div class="ac-keywords">
+        <span class="ac-kw">Aprender</span>
+        <span class="ac-kw">PISA</span>
+        <span class="ac-kw">Deserción</span>
+        <span class="ac-kw">Brechas</span>
+      </div>
+      <span class="ac-link">Leer estudio completo →</span>
+    </a>
+
+  </div>
+
+  <div class="destacado-conexion">
+    <div class="destacado-conexion-eyebrow">— Cómo leer la sección</div>
+    <h3>Un recorrido <em>de lo histórico a lo actual</em></h3>
+    <p>Los siete estudios siguen una lógica de recorrido. El primero (<strong>12.01 Historia</strong>) da el marco histórico que explica todo lo demás: por qué el sistema es como es. Los siguientes describen su <strong>arquitectura actual</strong>: cómo se organiza en niveles (12.02), cómo funciona la educación superior (12.03), qué modelos de gestión coexisten (12.04). Luego, los estudios institucionales: cómo se <strong>gobierna</strong> el sistema en un país federal (12.05) y cómo se <strong>financia</strong> (12.06). El último (<strong>12.07 Calidad</strong>) cierra con la pregunta decisiva: con todo eso, ¿qué tan bien aprenden los estudiantes argentinos?</p>
+    <p>Leídos en conjunto, los siete estudios muestran un sistema que <strong>resolvió en gran medida la cobertura</strong> —casi todos los chicos están en la escuela— pero que enfrenta el desafío del siglo XXI: lograr <strong>calidad con equidad</strong> para todos, sin importar la provincia o el origen social.</p>
+  </div>
+
+  <div class="seccion-intro" style="margin-top: 4rem;">
+    <div class="seccion-eyebrow">— Conexión con otros capítulos</div>
+    <h2 class="seccion-titulo">La educación en el <em>conjunto</em> del sitio</h2>
+    <p class="seccion-descripcion">La sección Educación se conecta con otros capítulos del sitio. El <strong>federalismo educativo</strong> (12.05) dialoga con los estudios sobre las provincias (Capítulo 10) y los poderes del Estado (Capítulo 01). El <strong>financiamiento</strong> (12.06) se vincula con la coparticipación y el federalismo fiscal. La <strong>Reforma Universitaria de 1918</strong> y la historia educativa (12.01) complementan el Capítulo 07 de Historia. La educación, como derecho y como política de Estado, atraviesa toda la arquitectura institucional argentina.</p>
+  </div>
+
+  <div class="proximos-contenidos">
+    <div class="proximos-titulo">— En desarrollo continuo</div>
+    <h3>La sección <em>Educación</em> puede seguir creciendo</h3>
+    <p>A los siete estudios actuales podrían sumarse, más adelante, análisis complementarios: <strong>la educación técnica en profundidad</strong>, <strong>el sistema científico y el CONICET</strong>, <strong>la educación en cada provincia</strong>, o <strong>la formación y la carrera docente</strong>. Si querés sugerir un tema educativo para desarrollar, escribinos.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>

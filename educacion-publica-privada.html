@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Educación pública y privada (12.04) — Educación Cívica</title>
+<meta name="description" content="Los modelos de gestión del sistema educativo argentino: gestión estatal, gestión privada (laica y confesional), gestión cooperativa y social. El régimen de subvenciones estatales a la educación privada, el peso de cada sector (73% estatal, 22% privada subvencionada, 5% privada sin subvención), la distribución socioeconómica de la matrícula y los debates sobre equidad y libertad de enseñanza.">
+<link rel="canonical" href="https://educacioncivica.com.ar/educacion-publica-privada.html">
+
+<meta property="og:title" content="Educación pública y privada en Argentina">
+<meta property="og:description" content="Modelos de gestión, subvenciones estatales, distribución de la matrícula y los debates sobre equidad y libertad de enseñanza.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/educacion-publica-privada.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>12.04</strong> de la sección Educación</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> ·
+      <a href="educacion.html">Educación</a> ·
+      <span>Pública y privada</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 12.04 · Educación</div>
+    <h1 class="page-title">Educación <em>pública</em> y privada</h1>
+    <div class="page-subtitulo">— Los modelos de gestión del sistema</div>
+    <p class="page-intro">El sistema educativo argentino combina <strong>cuatro tipos de gestión</strong>: estatal, privada, cooperativa y social. La gran mayoría de los estudiantes —cerca del <strong>73%</strong>— asiste a escuelas de <strong>gestión estatal</strong> (públicas y gratuitas). Alrededor del <strong>22%</strong> va a escuelas de <strong>gestión privada con subvención estatal</strong>, y un <strong>5%</strong> a privadas sin subvención. Un rasgo distintivo del modelo argentino es que el Estado <strong>subvenciona a buena parte de las escuelas privadas</strong>, cubriendo total o parcialmente los salarios docentes. Esto genera uno de los debates más sensibles y menos comprendidos de la educación argentina: para qué y para quiénes son esas subvenciones, cómo se distribuyen socialmente, y cómo se concilian la libertad de enseñanza, la equidad y el rol del Estado. Este capítulo analiza los modelos de gestión, el régimen de subvenciones, el peso de cada sector y los debates que atraviesa.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">73%</div>
+        <div class="page-stat-label">Matrícula en gestión estatal</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">22%</div>
+        <div class="page-stat-label">Privada con subvención</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">5%</div>
+        <div class="page-stat-label">Privada sin subvención</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">4</div>
+        <div class="page-stat-label">Tipos de gestión</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#cuatro-gestiones">01 · Los cuatro tipos de gestión</a></li>
+      <li><a href="#libertad-ensenanza">02 · La libertad de enseñanza</a></li>
+      <li><a href="#estatal">03 · La gestión estatal</a></li>
+      <li><a href="#privada">04 · La gestión privada</a></li>
+      <li><a href="#subvenciones">05 · El régimen de subvenciones</a></li>
+      <li><a href="#peso">06 · El peso de cada sector</a></li>
+      <li><a href="#distribucion-social">07 · La distribución social</a></li>
+      <li><a href="#cooperativa">08 · Cooperativa y social</a></li>
+      <li><a href="#debates">09 · Los grandes debates</a></li>
+      <li><a href="#tensiones">10 · Tensiones del sistema</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="cuatro-gestiones">
+      <div class="seccion-num">01 · Cuatro gestiones</div>
+      <h2>Los cuatro tipos de <em>gestión</em></h2>
+
+      <p>La Ley de Educación Nacional 26.206 reconoce que el sistema educativo argentino está integrado por servicios educativos de <strong>cuatro tipos de gestión</strong>, todos los cuales forman parte del sistema y están regulados por el Estado:</p>
+
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Los cuatro tipos de gestión</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <div class="ficha-label">Gestión estatal</div>
+            <div class="ficha-valor">Escuelas <strong>públicas y gratuitas</strong> administradas por el Estado (nacional, provincial o CABA). Reciben la mayoría de la matrícula.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Gestión privada</div>
+            <div class="ficha-valor">Administradas por <strong>particulares</strong> (laicas o confesionales). Pueden recibir subvención estatal o no.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Gestión cooperativa</div>
+            <div class="ficha-valor">Administradas por <strong>cooperativas</strong> educativas, una forma de propiedad colectiva.</div>
+          </div>
+          <div class="ficha-item">
+            <div class="ficha-label">Gestión social</div>
+            <div class="ficha-valor">Administradas por <strong>organizaciones sociales</strong>, fundaciones o entidades sin fines de lucro, frecuentemente en contextos vulnerables.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Todas comparten algo fundamental: <strong>forman parte del sistema educativo nacional</strong>, están sujetas a la supervisión del Estado, deben respetar los contenidos curriculares comunes y otorgan títulos con validez oficial. La diferencia está en <strong>quién administra</strong> el establecimiento, no en si pertenecen o no al sistema educativo.</p>
+    </div>
+
+    <div class="seccion" id="libertad-ensenanza">
+      <div class="seccion-num">02 · Libertad de enseñanza</div>
+      <h2>La <em>libertad</em> de enseñanza</h2>
+
+      <p>La coexistencia de gestión estatal y privada tiene fundamento constitucional. El <strong>Art. 14 de la Constitución Nacional</strong> reconoce el derecho de todos los habitantes de "<strong>enseñar y aprender</strong>". Este derecho tiene dos dimensiones:</p>
+
+      <ul>
+        <li><strong>El derecho a aprender</strong>: que el Estado garantiza proveyendo educación pública gratuita.</li>
+        <li><strong>El derecho a enseñar</strong>: que habilita a particulares (personas, asociaciones, iglesias, cooperativas) a crear y administrar instituciones educativas.</li>
+      </ul>
+
+      <p>La Ley 26.206 lo reformula reconociendo que <strong>"la familia y las organizaciones de la sociedad civil, sean religiosas o no, son agentes naturales y primarios de la educación"</strong>. El Estado no monopoliza la educación: la garantiza, la regula y la supervisa, pero admite la participación de actores privados.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un equilibrio constitucional</div>
+        <p>El modelo argentino busca equilibrar dos principios: por un lado, la <strong>responsabilidad indelegable del Estado</strong> de garantizar educación para todos (Art. 4 de la Ley 26.206); por otro, la <strong>libertad de enseñanza</strong> que permite a las familias elegir y a los particulares ofrecer alternativas educativas (Art. 14 CN). El régimen de subvenciones —que el Estado financie parcialmente a escuelas privadas— surge, en parte, de la tensión y el equilibrio entre estos dos principios.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="estatal">
+      <div class="seccion-num">03 · Gestión estatal</div>
+      <h2>La gestión <em>estatal</em></h2>
+
+      <p>La <strong>educación de gestión estatal</strong> —la "escuela pública"— es el núcleo del sistema. Es <strong>gratuita</strong> en todos sus niveles y la administra el Estado en sus distintas jurisdicciones: la mayoría de las escuelas dependen de las <strong>provincias</strong> y la CABA (tras la transferencia de 1993), algunas instituciones de la Nación, y las universidades nacionales del Estado nacional.</p>
+
+      <h3>Sus características</h3>
+
+      <ul>
+        <li><strong>Gratuidad</strong>: sin aranceles ni matrícula. El financiamiento es íntegramente público.</li>
+        <li><strong>Universalidad</strong>: debe estar disponible para todos, sin selección. Es el sostén del derecho a la educación.</li>
+        <li><strong>Laicidad</strong> (en la mayoría de las jurisdicciones): herencia de la Ley 1420, aunque algunas provincias mantienen educación religiosa en escuelas públicas.</li>
+        <li><strong>Cobertura territorial</strong>: llega donde el sector privado no tiene incentivos para instalarse (zonas rurales, barrios vulnerables, parajes aislados).</li>
+      </ul>
+
+      <p>La escuela estatal cumple una función que el sector privado no puede: <strong>garantizar el derecho a la educación de los sectores que no pueden pagar</strong> y de las poblaciones dispersas. Es, históricamente, el gran instrumento de inclusión e integración social del sistema.</p>
+    </div>
+
+    <div class="seccion" id="privada">
+      <div class="seccion-num">04 · Gestión privada</div>
+      <h2>La gestión <em>privada</em></h2>
+
+      <p>La <strong>educación de gestión privada</strong> está administrada por particulares: pueden ser asociaciones civiles, fundaciones, congregaciones religiosas, empresas o personas. Tiene una larga tradición en Argentina, especialmente la educación confesional católica.</p>
+
+      <h3>Laica y confesional</h3>
+
+      <p>La educación privada se divide, a grandes rasgos, en:</p>
+
+      <ul>
+        <li><strong>Confesional</strong>: vinculada a una religión, mayoritariamente católica (colegios parroquiales, de congregaciones), pero también de otras confesiones (judía, evangélica, etc.).</li>
+        <li><strong>Laica</strong>: sin orientación religiosa, frecuentemente con proyectos pedagógicos específicos (bilingüe, alternativa, etc.).</li>
+      </ul>
+
+      <h3>Con y sin subvención</h3>
+
+      <p>La distinción más relevante en términos de política pública es entre privadas <strong>con</strong> y <strong>sin</strong> subvención estatal:</p>
+
+      <ul>
+        <li><strong>Con subvención</strong>: el Estado cubre total o parcialmente los salarios docentes. A cambio, su cuota está regulada (hay topes de arancel según el porcentaje de subvención). Es el grupo mayoritario dentro del sector privado.</li>
+        <li><strong>Sin subvención</strong>: no reciben aporte estatal. Su cuota es libre. Suelen ser las de mayor arancel y atienden a los sectores de mayores ingresos.</li>
+      </ul>
+
+      <p>Todas las escuelas privadas, subvencionadas o no, deben estar <strong>autorizadas y supervisadas</strong> por la autoridad educativa de su jurisdicción (en CABA, la Dirección General de Educación de Gestión Privada, DGEGP), respetar los contenidos curriculares comunes y emplear personal con título docente.</p>
+    </div>
+
+    <div class="seccion" id="subvenciones">
+      <div class="seccion-num">05 · Subvenciones</div>
+      <h2>El régimen de <em>subvenciones</em></h2>
+
+      <p>El <strong>régimen de subvenciones</strong> a la educación privada es una característica central —y polémica— del sistema argentino. Consiste en que el Estado <strong>aporta fondos a escuelas de gestión privada</strong>, destinados específicamente a cubrir los salarios del personal directivo y docente.</p>
+
+      <h3>Cómo funciona</h3>
+
+      <p>Las características principales del régimen:</p>
+
+      <ul>
+        <li>El aporte estatal se calcula sobre <strong>el total de los sueldos del personal directivo y docente</strong>, incluidas las contribuciones patronales (según el Decreto 2542/1991 y normativa provincial).</li>
+        <li>El porcentaje de subvención puede ir del <strong>40% al 100%</strong> de los salarios, según criterios establecidos por cada jurisdicción.</li>
+        <li>A mayor subvención, <strong>menor arancel permitido</strong>: las escuelas más subvencionadas tienen topes de cuota más bajos.</li>
+        <li>La subvención debe destinarse <strong>exclusivamente a salarios</strong>, no a otros gastos ni a ganancia.</li>
+        <li>La administra cada jurisdicción (en CABA, la DGEGP; en provincias, las direcciones de educación privada).</li>
+      </ul>
+
+      <h3>El criterio de asignación</h3>
+
+      <p>Uno de los problemas señalados por los especialistas es que <strong>los criterios de asignación de las subvenciones no son del todo transparentes</strong>. Como advirtió el especialista Alejandro Morduchowicz, "todavía nos falta mucho para saber a quiénes y por qué se otorga ese financiamiento a los establecimientos privados". Históricamente, el sistema se fue construyendo por decisiones administrativas sucesivas más que por una planificación integral.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Una política poco estudiada</div>
+        <p>El régimen de subvenciones a la educación privada es, según los especialistas, "uno de los temas más espinosos y menos informados de la educación argentina". Mueve recursos públicos cuantiosos —en CABA, por ejemplo, se subvenciona a más de la mitad de los establecimientos privados— pero hay relativamente poca información pública sobre los criterios de asignación y sobre cuánto pagan efectivamente las familias. La transparencia del régimen es una demanda recurrente de las organizaciones que estudian la educación.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="peso">
+      <div class="seccion-num">06 · El peso de cada sector</div>
+      <h2>El <em>peso</em> de cada sector</h2>
+
+      <p>¿Cuántos estudiantes van a cada tipo de gestión? Los datos del Relevamiento Anual, analizados por el Observatorio de Argentinos por la Educación, dan una imagen clara (matrícula desde sala de 3 hasta el final de la secundaria, año 2021):</p>
+
+      <div class="definiciones">
+        <table>
+          <thead>
+            <tr>
+              <th>Sector</th>
+              <th>Proporción de la matrícula</th>
+              <th>Quiénes asisten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gestión estatal</strong></td>
+              <td>~73%</td>
+              <td>La mayoría. Sobrerrepresenta a los sectores de menores ingresos.</td>
+            </tr>
+            <tr>
+              <td><strong>Privada con subvención</strong></td>
+              <td>~22%</td>
+              <td>Sectores medios. Subvención estatal cubre parte de los salarios.</td>
+            </tr>
+            <tr>
+              <td><strong>Privada sin subvención</strong></td>
+              <td>~5%</td>
+              <td>Sectores de mayores ingresos. Sin aporte estatal, arancel libre.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Las diferencias provinciales</h3>
+
+      <p>La proporción de matrícula privada <strong>varía mucho entre jurisdicciones</strong>. Las tres con mayor proporción de alumnos en el sector privado subvencionado son:</p>
+
+      <ul>
+        <li><strong>CABA</strong>: 39%</li>
+        <li><strong>Córdoba</strong>: 29%</li>
+        <li><strong>Buenos Aires</strong>: 26%</li>
+      </ul>
+
+      <p>En el otro extremo, <strong>Jujuy y Chubut</strong> tienen apenas el 9% en el sector privado subvencionado. Estas diferencias reflejan tradiciones históricas, niveles de urbanización, presencia de la Iglesia y capacidad de pago de las familias de cada provincia.</p>
+
+      <h3>La evolución reciente</h3>
+
+      <p>El informe muestra que, desde aproximadamente 2017-2018, hubo una <strong>caída gradual</strong> en la proporción de alumnos en el sector privado (tanto subvencionado como no), con un correlativo aumento en el sector estatal. Esto podría vincularse a la crisis económica: cuando las familias no pueden pagar la cuota privada, migran sus hijos a la escuela estatal.</p>
+    </div>
+
+    <div class="seccion" id="distribucion-social">
+      <div class="seccion-num">07 · Distribución social</div>
+      <h2>La <em>distribución</em> social de la matrícula</h2>
+
+      <p>El dato más revelador del análisis es cómo se distribuye la matrícula <strong>según el nivel socioeconómico</strong> de las familias. Aquí aparece una de las tensiones de equidad más importantes del sistema.</p>
+
+      <h3>Quién va a dónde</h3>
+
+      <p>En el nivel secundario, la distribución por deciles de ingreso es elocuente:</p>
+
+      <ul>
+        <li><strong>Decil 1 (el 10% más pobre)</strong>: el 95,1% asiste a escuelas de gestión estatal; solo el 4,6% a privadas subvencionadas.</li>
+        <li><strong>Decil 10 (el 10% más rico)</strong>: solo el 7% asiste a escuelas estatales; el 74,3% a privadas subvencionadas y el 18,7% a privadas sin subvención.</li>
+      </ul>
+
+      <p>Es decir: <strong>la escuela estatal recibe a los más pobres y la privada subvencionada a los más ricos</strong>. La matrícula está fuertemente segmentada socialmente.</p>
+
+      <h3>La paradoja de la subvención</h3>
+
+      <p>Aquí aparece la tensión central. El Estado <strong>financia con fondos públicos</strong> tanto a la escuela estatal (que recibe a los más pobres) como a la privada subvencionada (que recibe, en promedio, a sectores de mayores ingresos). El análisis del gasto por alumno revela:</p>
+
+      <ul>
+        <li>En el <strong>decil más pobre</strong>, el Estado financia el <strong>98%</strong> del costo de la educación del alumno.</li>
+        <li>En el <strong>decil más rico</strong>, el Estado todavía financia el <strong>48%</strong> (vía subvención a la privada a la que asiste).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— ¿Subvención progresiva o regresiva?</div>
+        <p>Este es el corazón del debate. Quienes critican el régimen señalan que subvencionar escuelas privadas a las que asisten mayoritariamente sectores acomodados es <strong>regresivo</strong>: el Estado destina recursos a familias que podrían pagar, en lugar de concentrarlos en la escuela estatal que atiende a los más vulnerables. Quienes lo defienden argumentan que la subvención <strong>abarata el costo</strong> para las familias de clase media, sostiene empleo docente, garantiza la libertad de elección y, al final, sale más barato que si todos esos alumnos pasaran a la escuela estatal (cuyo costo por alumno es íntegramente público). El debate no está saldado.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="cooperativa">
+      <div class="seccion-num">08 · Cooperativa y social</div>
+      <h2>Gestión <em>cooperativa</em> y social</h2>
+
+      <p>Además de la estatal y la privada tradicional, la Ley 26.206 reconoció explícitamente dos formas de gestión menos numerosas pero significativas: la <strong>cooperativa</strong> y la <strong>social</strong>.</p>
+
+      <h3>Gestión cooperativa</h3>
+
+      <p>Son escuelas administradas por <strong>cooperativas</strong>: una forma de propiedad y gestión colectiva, sin fines de lucro, donde los miembros (que pueden ser docentes, familias o la comunidad) participan en la conducción. Combinan elementos de la gestión privada (no son del Estado) con una lógica no lucrativa y participativa.</p>
+
+      <h3>Gestión social</h3>
+
+      <p>Son escuelas administradas por <strong>organizaciones sociales</strong>, movimientos, fundaciones o entidades comunitarias sin fines de lucro. Surgieron con fuerza en las últimas décadas, frecuentemente en <strong>contextos de vulnerabilidad social</strong>, para atender a poblaciones que el sistema tradicional no alcanzaba: bachilleratos populares, escuelas en barrios populares, experiencias de educación popular.</p>
+
+      <p>El reconocimiento de estas formas de gestión en la Ley 26.206 fue un avance: incorporó al sistema formal experiencias educativas que antes quedaban en los márgenes, garantizándoles validez oficial de títulos y, en algunos casos, acceso a financiamiento.</p>
+    </div>
+
+    <div class="seccion" id="debates">
+      <div class="seccion-num">09 · Los debates</div>
+      <h2>Los grandes <em>debates</em></h2>
+
+      <p>La coexistencia de gestión pública y privada, y especialmente el régimen de subvenciones, alimenta varios debates de fondo en la política educativa argentina.</p>
+
+      <h3>¿Para qué y para quiénes las subvenciones?</h3>
+
+      <p>El debate central: ¿es justo y eficiente que el Estado subvencione escuelas privadas? Los <strong>críticos</strong> sostienen que los recursos públicos deberían concentrarse en la escuela estatal, que atiende a los más vulnerables, y que subvencionar privadas a las que van sectores acomodados es regresivo. Los <strong>defensores</strong> argumentan la libertad de elección, el sostenimiento del empleo docente, y que la subvención resulta más económica que absorber esa matrícula en el sistema estatal.</p>
+
+      <h3>¿Segmentación o elección?</h3>
+
+      <p>La fuerte correlación entre nivel socioeconómico y tipo de gestión plantea la pregunta de si el sistema, en la práctica, <strong>segrega socialmente</strong>: los más ricos en la privada, los más pobres en la estatal. Algunos lo ven como una consecuencia inevitable de la libertad de elección; otros, como una falla de equidad que el Estado debería corregir.</p>
+
+      <h3>Transparencia del régimen</h3>
+
+      <p>Existe consenso entre los especialistas en la necesidad de <strong>mayor transparencia</strong>: criterios claros y públicos de asignación de subvenciones, información sobre cuánto pagan las familias, y evaluación de los resultados. La opacidad actual dificulta el debate informado.</p>
+
+      <h3>Laicidad y educación religiosa</h3>
+
+      <p>El debate de 1884 sobre la laicidad reaparece: en algunas provincias rige <strong>educación religiosa en las escuelas públicas</strong> (el caso de Salta llegó a la Corte Suprema, que en 2017 declaró inconstitucional la enseñanza religiosa dentro del horario escolar en escuelas públicas salteñas). La relación entre Estado, religión y escuela sigue siendo un tema sensible.</p>
+    </div>
+
+    <div class="seccion" id="tensiones">
+      <div class="seccion-num">10 · Tensiones</div>
+      <h2>Tensiones del <em>sistema</em> mixto</h2>
+
+      <p>El sistema mixto argentino —estatal y privado, con subvenciones— enfrenta tensiones estructurales.</p>
+
+      <h3>Equidad vs libertad</h3>
+
+      <p>La tensión de fondo es entre dos valores legítimos: la <strong>equidad</strong> (que el Estado concentre recursos donde más se necesitan) y la <strong>libertad de enseñanza</strong> (que las familias puedan elegir y los particulares ofrecer). El régimen de subvenciones es un intento de equilibrio que no satisface plenamente a ninguna de las dos posiciones.</p>
+
+      <h3>El financiamiento cruzado</h3>
+
+      <p>Que el Estado financie parcialmente a ambos sectores genera una <strong>competencia por recursos públicos finitos</strong>. Cada peso que va a subvención de privadas es un peso que no va a la escuela estatal, y viceversa. La asignación entre ambos es una decisión política recurrente.</p>
+
+      <h3>La calidad comparada</h3>
+
+      <p>El debate sobre si la escuela privada "educa mejor" que la estatal es frecuente, pero los datos lo complejizan: buena parte de la diferencia de resultados se explica por el <strong>nivel socioeconómico</strong> de las familias, no necesariamente por la gestión. Comparar calidad entre sectores requiere controlar por el origen social de los estudiantes, algo que los análisis serios hacen y que matiza las conclusiones simplistas.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">— Un sistema mixto que refleja a la sociedad</div>
+        <p>El sistema educativo argentino, con su combinación de gestión estatal mayoritaria y un sector privado significativo (mucho de él subvencionado), refleja las tensiones de la propia sociedad: entre igualdad y libertad, entre lo público y lo privado, entre la responsabilidad del Estado y la elección de las familias. No hay una respuesta técnica única: son decisiones de valores y de prioridades. Lo que sí muestran los datos es que el sistema está <strong>fuertemente segmentado socialmente</strong>, y que el régimen de subvenciones —cuantioso y poco transparente— merece más estudio y debate público informado. Los capítulos siguientes analizan cómo se gobierna el sistema (12.05) y cómo se financia (12.06).</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+
+      <ul>
+        <li><strong>Ley de Educación Nacional 26.206</strong> · Art. 13-14 (responsabilidad y agentes de la educación), Art. 62-65 (educación de gestión privada), reconocimiento de las cuatro gestiones.</li>
+        <li><strong>Constitución Nacional</strong> · Art. 14 (derecho de enseñar y aprender).</li>
+        <li><strong>"Subvenciones a la educación privada: ¿para qué y para quiénes?"</strong> · Observatorio de Argentinos por la Educación (2023). Autores: Mauro Moschetti (Universitat Autònoma de Barcelona), Martín Nistal y Leyre Sáenz Guillén. Fuente principal de los datos de este capítulo.</li>
+        <li><strong>"Cómo se distribuye la subvención estatal en la educación privada"</strong> · Universidad Torcuato Di Tella (2023). Análisis del informe de Argentinos por la Educación.</li>
+        <li><strong>"Educación privada subvencionada: cuánto aporta el Estado"</strong> · Ámbito, El Litoral, AIEPA (2023). Datos de distribución por sector y por decil socioeconómico.</li>
+        <li><strong>"Subsidios estatales a escuelas de gestión privada en CABA"</strong> · ACIJ (Asociación Civil por la Igualdad y la Justicia). Análisis del régimen porteño y la DGEGP.</li>
+        <li><strong>Decreto 2542/1991</strong> · Régimen de aportes estatales a institutos privados (cálculo sobre sueldos del personal directivo y docente).</li>
+        <li><strong>Relevamiento Anual</strong> · Ministerio de Educación. Fuente de los datos de matrícula por sector de gestión.</li>
+        <li><strong>CSJN "Castillo c/ Provincia de Salta"</strong> · 2017. Inconstitucionalidad de la enseñanza religiosa en horario escolar en escuelas públicas de Salta.</li>
+        <li><strong>Alejandro Morduchowicz</strong> · Especialista en planeamiento y financiamiento educativo. Análisis sobre la opacidad del régimen de subvenciones.</li>
+        <li><strong>Dirección General de Educación de Gestión Privada (DGEGP)</strong> · CABA. Decreto 2075/07.</li>
+      </ul>
+    </div>
+
+    <a href="educacion-gobierno.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Próximo capítulo · 12.05</div>
+        <h3>El <em>gobierno</em> del sistema educativo</h3>
+        <p>Cómo se gobierna la educación en un país federal: el reparto de competencias entre la Nación y las provincias tras la transferencia de 1993, el rol del Ministerio de Educación nacional, el Consejo Federal de Educación como órgano de concertación, y las tensiones de un sistema donde la Nación fija políticas pero las provincias gestionan las escuelas y pagan los salarios docentes.</p>
+      </div>
+      <div class="proximo-cap-arrow">SIGUIENTE →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="glosario.html">Glosario</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+
+</body>
+</html>
