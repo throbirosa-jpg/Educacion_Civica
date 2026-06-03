@@ -822,6 +822,16 @@
     color: rgba(251, 247, 240, 0.6);
   }
 
+  /* Override: la sección del cap 08 usa fondo CLARO (lila→crema),
+     así que el texto debe ir en tonos oscuros para tener contraste */
+  #elecciones-premium .section-title { color: var(--tinta, #1A1A2E); }
+  #elecciones-premium .section-title em { color: var(--premium-dark, #4A3661); }
+  #elecciones-premium .section-eyebrow { color: var(--premium-dark, #4A3661); }
+  #elecciones-premium .historia-intro { color: var(--tinta-soft, #545465); }
+  #elecciones-premium .historia-intro strong { color: var(--premium-dark, #4A3661); }
+  #elecciones-premium .h-stat-label { color: var(--tinta-soft, #545465); }
+  #elecciones-premium .historia-cta-note { color: var(--tinta-soft, #545465); }
+
   /* ========== CALENDARIO ========== */
   .calendario {
     background: var(--tinta);
