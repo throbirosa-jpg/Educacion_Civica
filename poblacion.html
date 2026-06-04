@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Cómo creció la Argentina (Cap. 13) — Educación Cívica</title>
+<meta name="description" content="La evolución demográfica de Argentina a lo largo de su historia: los 11 censos nacionales desde 1869, la curva del crecimiento poblacional hasta los 46 millones de habitantes, la gran ola inmigratoria que llevó a los extranjeros al 30% en 1914, las migraciones internas hacia las ciudades, y cómo se fue poblando el país: del Noroeste colonial al Litoral, la Pampa, el conurbano y la Patagonia.">
+<link rel="canonical" href="https://educacioncivica.com.ar/poblacion.html">
+<meta property="og:title" content="Cómo creció la Argentina · Población y territorio">
+<meta property="og:description" content="La evolución demográfica argentina contada con datos: los censos, la inmigración, las migraciones internas y cómo se fue poblando el país.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/poblacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>13</strong> · Población y territorio</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Cómo creció la Argentina</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 13 · Población y territorio</div>
+    <h1 class="page-title">Cómo <em>creció</em> la Argentina</h1>
+    <div class="page-subtitulo">— Dos siglos de población contados con datos</div>
+    <p class="page-intro">Cuando se hizo el <strong>primer censo nacional en 1869</strong>, la Argentina tenía menos de <strong>2 millones de habitantes</strong>. Hoy, según el <strong>censo de 2022</strong>, somos alrededor de <strong>46 millones</strong>. Pero el dato más interesante no es cuántos somos, sino <strong>cómo y por dónde</strong> fue creciendo el país: empezó concentrado en el Noroeste colonial, se volcó al Litoral y la Pampa con el puerto y el modelo agroexportador, recibió una <strong>ola inmigratoria</strong> que en 1914 llevó a los extranjeros a casi un tercio de la población, y terminó concentrándose en las ciudades, sobre todo alrededor de Buenos Aires. Este capítulo recorre esa transformación con los datos de los <strong>once censos</strong> de la historia argentina, mostrando la curva del crecimiento, la inmigración, las migraciones internas y el mapa demográfico de hoy.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">~46M</div>
+        <div class="page-stat-label">Habitantes (censo 2022)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">11</div>
+        <div class="page-stat-label">Censos desde 1869</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">92%</div>
+        <div class="page-stat-label">Población urbana</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">38%</div>
+        <div class="page-stat-label">Vive en la Prov. de Buenos Aires</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#censos">01 · Los censos: la foto del país</a></li>
+      <li><a href="#curva">02 · La curva del crecimiento</a></li>
+      <li><a href="#norte">03 · El país que empezó en el Norte</a></li>
+      <li><a href="#litoral">04 · El giro al Litoral y la Pampa</a></li>
+      <li><a href="#inmigracion">05 · La gran ola inmigratoria</a></li>
+      <li><a href="#campo-ciudad">06 · Del campo a la ciudad</a></li>
+      <li><a href="#mapa-hoy">07 · El mapa de hoy</a></li>
+      <li><a href="#patagonia">08 · La Patagonia y las fronteras</a></li>
+      <li><a href="#mas-lento">09 · Un país que crece más lento</a></li>
+      <li><a href="#numeros">10 · Qué nos dicen los números</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="censos">
+      <div class="seccion-num">01 · Los censos</div>
+      <h2>Los <em>censos</em>: la foto del país</h2>
+      <p>Un <strong>censo</strong> es el recuento de toda la población de un país en un momento dado. Es la herramienta más completa para saber cuántos somos, cómo somos, cómo vivimos y, sobre todo, <strong>cómo nos distribuimos en el territorio</strong>. La Constitución y la legislación establecen que debe hacerse aproximadamente <strong>cada diez años</strong>.</p>
+      <p>El <strong>primer censo nacional</strong> se realizó en <strong>1869</strong>, durante la presidencia de Domingo F. Sarmiento. En ese momento solo se pudieron censar 14 provincias: buena parte de la Patagonia y el Chaco todavía no estaban bajo control efectivo del Estado nacional. Desde entonces hubo <strong>once censos</strong>: 1869, 1895, 1914, 1947, 1960, 1970, 1980, 1991, 2001, 2010 y 2022.</p>
+      <p>Desde 1968, el organismo encargado es el <strong>INDEC</strong> (Instituto Nacional de Estadística y Censos). Los censos no son un trámite: son la base sobre la que se reparten las bancas de diputados, se distribuye la coparticipación y se planifican las políticas públicas. Por eso cada censo es, además, una foto del país en una época.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué el censo importa cívicamente</div>
+        <p>El censo no solo cuenta personas: <strong>define poder</strong>. La cantidad de habitantes de cada provincia determina cuántos <strong>diputados</strong> le corresponden en el Congreso y pesa en el reparto de la <strong>coparticipación federal</strong>. Por eso los resultados censales tienen consecuencias políticas y fiscales muy concretas, y por eso su rigor e independencia técnica son tan importantes.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="curva">
+      <div class="seccion-num">02 · La curva</div>
+      <h2>La <em>curva</em> del crecimiento</h2>
+      <p>La población argentina pasó de <strong>1,8 millones en 1869 a casi 46 millones en 2022</strong>: se multiplicó por veinticinco en poco más de siglo y medio. Pero el crecimiento no fue parejo. Fue vertiginoso entre 1869 y 1914 (cuando la población se duplicaba cada veinte años), siguió fuerte hasta mediados del siglo XX, y se fue <strong>desacelerando</strong> en las últimas décadas.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Población de Argentina por censo</div>
+        <div class="grafico-sub">Total de habitantes registrado en cada censo nacional, 1869–2022.</div>
+        <div class="barra-row"><span class="barra-lbl">1869</span><span class="barra-track"><span class="barra-fill" style="width:4%"></span></span><span class="barra-val">1.830.214</span></div>
+        <div class="barra-row"><span class="barra-lbl">1895</span><span class="barra-track"><span class="barra-fill" style="width:8.8%"></span></span><span class="barra-val">4.044.911</span></div>
+        <div class="barra-row"><span class="barra-lbl">1914</span><span class="barra-track"><span class="barra-fill" style="width:17.2%"></span></span><span class="barra-val">7.903.662</span></div>
+        <div class="barra-row"><span class="barra-lbl">1947</span><span class="barra-track"><span class="barra-fill" style="width:34.6%"></span></span><span class="barra-val">15.893.827</span></div>
+        <div class="barra-row"><span class="barra-lbl">1960</span><span class="barra-track"><span class="barra-fill" style="width:43.5%"></span></span><span class="barra-val">20.010.539</span></div>
+        <div class="barra-row"><span class="barra-lbl">1970</span><span class="barra-track"><span class="barra-fill" style="width:50.8%"></span></span><span class="barra-val">23.364.431</span></div>
+        <div class="barra-row"><span class="barra-lbl">1980</span><span class="barra-track"><span class="barra-fill" style="width:60.7%"></span></span><span class="barra-val">27.949.480</span></div>
+        <div class="barra-row"><span class="barra-lbl">1991</span><span class="barra-track"><span class="barra-fill" style="width:70.9%"></span></span><span class="barra-val">32.615.528</span></div>
+        <div class="barra-row"><span class="barra-lbl">2001</span><span class="barra-track"><span class="barra-fill" style="width:78.8%"></span></span><span class="barra-val">36.260.130</span></div>
+        <div class="barra-row"><span class="barra-lbl">2010</span><span class="barra-track"><span class="barra-fill" style="width:87.2%"></span></span><span class="barra-val">40.117.096</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">2022</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">46.044.703</span></div>
+        <div class="grafico-nota">Fuente: censos nacionales (INDEC). El dato de 2022 corresponde a los resultados provisorios; los definitivos arrojaron 45.892.285 habitantes.</div>
+      </div>
+
+      <p>El salto entre 1914 y 1947 llama la atención: 33 años sin censo (el período más largo de la historia) durante el cual la población se duplicó. Y algo notable de las últimas décadas: aunque el país sigue creciendo, lo hace cada vez <strong>más lentamente</strong>. Entre 2010 y 2022 la población creció un <strong>14,8%</strong>, un ritmo mucho menor al de comienzos del siglo XX.</p>
+    </div>
+
+    <div class="seccion" id="norte">
+      <div class="seccion-num">03 · El Norte</div>
+      <h2>El país que <em>empezó</em> en el Norte</h2>
+      <p>Para entender por dónde creció la Argentina hay que empezar antes de los censos. Durante la <strong>época colonial</strong>, el centro de gravedad del territorio no era Buenos Aires sino el <strong>Noroeste</strong>. Las ciudades más importantes —Córdoba, Tucumán, Salta, Santiago del Estero— estaban conectadas con el <strong>Alto Perú</strong> y el circuito de la plata de Potosí, el corazón económico del imperio español en Sudamérica.</p>
+      <p>Buenos Aires, en cambio, era un puerto secundario y periférico: durante buena parte del período colonial el comercio estaba prohibido o restringido por el monopolio español, que canalizaba todo por Lima. El interior, ligado a la economía minera y a las rutas hacia el Pacífico, <strong>pesaba más que el litoral</strong>.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un mapa invertido respecto del actual</div>
+        <p>Si pudiéramos ver un mapa de población de fines del siglo XVIII, sería casi el <strong>opuesto</strong> del actual: el Noroeste densamente poblado y articulado con el Alto Perú, y la región pampeana —hoy el corazón demográfico del país— prácticamente vacía, dedicada a la ganadería extensiva. La historia demográfica argentina es, en buena medida, la historia de cómo ese eje se dio vuelta.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="litoral">
+      <div class="seccion-num">04 · El Litoral y la Pampa</div>
+      <h2>El giro al <em>Litoral</em> y la Pampa</h2>
+      <p>El eje empezó a girar con la <strong>apertura del comercio</strong> y la creación del Virreinato del Río de la Plata (1776), que jerarquizó a Buenos Aires como puerto. Tras la independencia y, sobre todo, tras la organización nacional de 1853, el modelo económico se reorientó hacia la <strong>exportación de productos agropecuarios</strong> (cuero, lana, carne y luego cereales) por el puerto de Buenos Aires hacia Europa.</p>
+      <p>Ese <strong>modelo agroexportador</strong> desplazó el centro de gravedad hacia la <strong>Pampa húmeda</strong> y el <strong>Litoral</strong> (Buenos Aires, Santa Fe, Entre Ríos, Córdoba). La fertilidad de la tierra pampeana, la cercanía al puerto y la llegada del ferrocarril convirtieron a esa región en el motor económico y demográfico del país. Para alimentar ese modelo hacía falta una cosa que el país no tenía: <strong>gente que trabajara la tierra</strong>.</p>
+      <p>De ahí la famosa fórmula de Juan Bautista Alberdi, <strong>"gobernar es poblar"</strong>: la dirigencia de la organización nacional veía en la inmigración europea la herramienta para poblar el inmenso territorio vacío y transformar el país. La Constitución de 1853 incluso establece en su preámbulo el objetivo de asegurar los beneficios de la libertad "para todos los hombres del mundo que quieran habitar el suelo argentino".</p>
+    </div>
+
+    <div class="seccion" id="inmigracion">
+      <div class="seccion-num">05 · La ola inmigratoria</div>
+      <h2>La gran <em>ola</em> inmigratoria</h2>
+      <p>Entre aproximadamente <strong>1880 y 1914</strong>, la Argentina recibió una de las mayores olas inmigratorias de la historia mundial en relación con su población. Millones de europeos —sobre todo <strong>italianos y españoles</strong>— llegaron al país atraídos por la promesa de tierra y trabajo. El impacto demográfico fue extraordinario: la población <strong>se duplicaba cada veinte años</strong>.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Porcentaje de población nacida en el extranjero</div>
+        <div class="grafico-sub">Proporción de habitantes no nativos sobre el total, por censo. El pico de 1914 no se repitió nunca más.</div>
+        <div class="barra-row"><span class="barra-lbl">1869</span><span class="barra-track"><span class="barra-fill sol" style="width:40.3%"></span></span><span class="barra-val">12,1%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1895</span><span class="barra-track"><span class="barra-fill sol" style="width:84.7%"></span></span><span class="barra-val">25,4%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">1914</span><span class="barra-track"><span class="barra-fill" style="width:99.7%"></span></span><span class="barra-val">29,9%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1947</span><span class="barra-track"><span class="barra-fill sol" style="width:43.3%"></span></span><span class="barra-val">13,0%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1970</span><span class="barra-track"><span class="barra-fill sol" style="width:31.7%"></span></span><span class="barra-val">9,5%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1980</span><span class="barra-track"><span class="barra-fill sol" style="width:22.7%"></span></span><span class="barra-val">6,8%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1991</span><span class="barra-track"><span class="barra-fill sol" style="width:16.7%"></span></span><span class="barra-val">5,0%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2010</span><span class="barra-track"><span class="barra-fill sol" style="width:15%"></span></span><span class="barra-val">4,5%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2022</span><span class="barra-track"><span class="barra-fill sol" style="width:14%"></span></span><span class="barra-val">4,2%</span></div>
+        <div class="grafico-nota">Fuente: censos nacionales (INDEC). En 1914, 30 de cada 100 habitantes habían nacido en el extranjero, el punto más alto de la historia.</div>
+      </div>
+
+      <p>En <strong>1914</strong>, casi <strong>el 30% de la población</strong> había nacido fuera del país: el punto más alto de toda la historia argentina. En la ciudad de Buenos Aires el fenómeno era aún más intenso: más del <strong>60% de los porteños eran inmigrantes</strong>. Rosario superaba el 40%. La inmigración no solo aumentó la población: transformó la lengua, la cultura, la gastronomía, la política y la identidad del país.</p>
+      <p>A partir de 1914, con la Primera Guerra Mundial y luego las restricciones de los años 30, el flujo se frenó. El porcentaje de extranjeros <strong>cayó sistemáticamente</strong> hasta tocar su mínimo histórico (6,8%) en 1980. La inmigración europea fue siendo reemplazada, en las décadas siguientes, por la <strong>migración de países limítrofes</strong> (Paraguay, Bolivia, Chile) y, más recientemente, de otros países de la región. Hoy los extranjeros vuelven a representar alrededor del 4% de la población.</p>
+    </div>
+
+    <div class="seccion" id="campo-ciudad">
+      <div class="seccion-num">06 · Del campo a la ciudad</div>
+      <h2>Del <em>campo</em> a la ciudad</h2>
+      <p>Si la primera gran transformación fue la inmigración del exterior, la segunda fue interna: el <strong>éxodo del campo a la ciudad</strong> y del interior hacia el Gran Buenos Aires. A partir de la década de 1930 y, sobre todo, durante el proceso de <strong>industrialización</strong> de mediados del siglo XX, millones de personas dejaron las zonas rurales y las provincias del interior para buscar trabajo en las fábricas de los grandes centros urbanos.</p>
+      <p>Este movimiento explica el crecimiento explosivo del <strong>conurbano bonaerense</strong>: el cinturón industrial que rodea a la Ciudad de Buenos Aires se pobló de trabajadores llegados del interior y de países limítrofes. La urbanización se aceleró hasta convertir a la Argentina en uno de los países <strong>más urbanizados del mundo</strong>.</p>
+      <div class="grafico">
+        <div class="grafico-titulo">— Población urbana sobre el total</div>
+        <div class="grafico-sub">Proporción de habitantes que viven en ciudades. Argentina es hoy uno de los países más urbanizados del planeta.</div>
+        <div class="barra-row"><span class="barra-lbl">1991</span><span class="barra-track"><span class="barra-fill alt" style="width:89.4%"></span></span><span class="barra-val">89,4%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2010</span><span class="barra-track"><span class="barra-fill alt" style="width:90.9%"></span></span><span class="barra-val">90,9%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">~2020</span><span class="barra-track"><span class="barra-fill" style="width:92%"></span></span><span class="barra-val">92,0%</span></div>
+        <div class="grafico-nota">Fuente: censos nacionales y RENAPER. El promedio mundial de urbanización ronda el 54%.</div>
+      </div>
+      <p>El resultado es una paradoja territorial: un país <strong>enorme y casi vacío</strong> en términos generales (una densidad de apenas 16,5 habitantes por kilómetro cuadrado, una de las más bajas del mundo), pero con su población <strong>fuertemente concentrada</strong> en unas pocas ciudades, sobre todo en el área metropolitana de Buenos Aires.</p>
+    </div>
+
+    <div class="seccion" id="mapa-hoy">
+      <div class="seccion-num">07 · El mapa de hoy</div>
+      <h2>El <em>mapa</em> demográfico de hoy</h2>
+      <p>El censo 2022 muestra un país profundamente <strong>desequilibrado</strong> en su distribución. La provincia de <strong>Buenos Aires concentra casi el 38%</strong> de toda la población nacional. Si se suma el <strong>área metropolitana de Buenos Aires (AMBA)</strong> —la Ciudad más el conurbano—, allí vive cerca del <strong>35% de los argentinos</strong> en una porción mínima del territorio.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Distribución de la población por jurisdicción (2022)</div>
+        <div class="grafico-sub">Porcentaje de la población nacional en cada distrito. Las seis primeras concentran cerca del 70% del país.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">Bs As</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">38,2%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Córdoba</span><span class="barra-track"><span class="barra-fill" style="width:22.6%"></span></span><span class="barra-val">8,6%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Santa Fe</span><span class="barra-track"><span class="barra-fill" style="width:20.2%"></span></span><span class="barra-val">7,7%</span></div>
+        <div class="barra-row"><span class="barra-lbl">CABA</span><span class="barra-track"><span class="barra-fill" style="width:17.8%"></span></span><span class="barra-val">6,8%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Mendoza</span><span class="barra-track"><span class="barra-fill" style="width:11.5%"></span></span><span class="barra-val">4,4%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Tucumán</span><span class="barra-track"><span class="barra-fill" style="width:9.7%"></span></span><span class="barra-val">3,7%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Resto</span><span class="barra-track"><span class="barra-fill alt" style="width:80%"></span></span><span class="barra-val">~30,6%</span></div>
+        <div class="grafico-nota">Fuente: Censo 2022 (INDEC). "Resto" agrupa a las otras 18 jurisdicciones del país.</div>
+      </div>
+
+      <p>La concentración es notable: <strong>seis jurisdicciones</strong> (Buenos Aires, Córdoba, Santa Fe, CABA, Mendoza y Tucumán) reúnen cerca del <strong>70% de la población</strong>, mientras que las otras 18 provincias se reparten el 30% restante. Las menos pobladas —<strong>Tierra del Fuego, La Pampa, La Rioja y Catamarca</strong>— juntas no llegan al 3% del total.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Población y representación federal</div>
+        <p>Esta distribución desigual está en el corazón del diseño federal argentino. En la <strong>Cámara de Diputados</strong>, las bancas se reparten según la población: por eso Buenos Aires tiene muchísimos más diputados que Tierra del Fuego. Pero en el <strong>Senado</strong>, cada provincia tiene <strong>3 senadores por igual</strong>, sin importar su población. Ese equilibrio —una cámara que representa a la población y otra que representa a las provincias en pie de igualdad— es una respuesta institucional a la enorme concentración demográfica del país.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="patagonia">
+      <div class="seccion-num">08 · La Patagonia</div>
+      <h2>La <em>Patagonia</em> y las nuevas fronteras</h2>
+      <p>Mientras el AMBA concentraba población, otra historia ocurría en el sur. Buena parte del territorio que hoy son provincias eran, hasta bien entrado el siglo XX, <strong>Territorios Nacionales</strong>: zonas administradas directamente por el Estado nacional porque no tenían población suficiente para ser provincias. Recién se fueron <strong>provincializando</strong> a mediados del siglo XX: La Pampa y Chaco en 1951; Misiones en 1953; Formosa, Neuquén, Río Negro, Chubut y Santa Cruz en 1955; y <strong>Tierra del Fuego, la última, en 1990</strong>.</p>
+      <p>La <strong>Patagonia</strong> fue, en las últimas décadas, una de las regiones de mayor crecimiento <strong>relativo</strong> del país, impulsada por la explotación de petróleo y gas, el turismo y las políticas de promoción. Provincias como Santa Cruz, Neuquén o Tierra del Fuego crecieron a tasas muy superiores al promedio nacional, aunque partían de poblaciones muy pequeñas. Es un crecimiento que, en términos absolutos, sigue siendo modesto: la Patagonia entera, con su inmenso territorio, alberga una fracción reducida de la población argentina.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Poblar la frontera</div>
+        <p>La provincialización de los Territorios Nacionales y la promoción del poblamiento patagónico no fueron solo decisiones demográficas: tuvieron una fuerte dimensión <strong>geopolítica</strong>. Ocupar y poblar las zonas de frontera —el sur, la Patagonia, los límites— fue históricamente una preocupación del Estado argentino, ligada a la soberanía sobre un territorio vasto y escasamente habitado.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="mas-lento">
+      <div class="seccion-num">09 · Más lento</div>
+      <h2>Un país que crece <em>más lento</em></h2>
+      <p>La gran novedad demográfica del siglo XXI es que la Argentina <strong>crece cada vez más despacio</strong>. El vértigo de duplicarse cada veinte años quedó en el pasado. El país atraviesa lo que los demógrafos llaman la <strong>transición demográfica</strong>: bajan tanto la natalidad como la mortalidad, la gente vive más años y tiene menos hijos.</p>
+      <p>Las consecuencias son profundas. La población <strong>envejece</strong>: las personas mayores de 60 años ya representan más del 16% del total, una proporción que sigue creciendo. La <strong>esperanza de vida</strong> ronda los 79 años y la <strong>alfabetización</strong> es prácticamente universal (99%). Según las proyecciones de Naciones Unidas, la población argentina alcanzaría su <strong>pico máximo alrededor de 2050</strong>, con unos 48 millones de habitantes, y luego comenzaría a disminuir lentamente.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— El desafío de una población que envejece</div>
+        <p>Una población que envejece plantea desafíos de política pública enormes: más demanda de salud y de cuidados, un sistema <strong>previsional</strong> (jubilaciones) que debe sostenerse con relativamente menos trabajadores activos por cada jubilado, y la necesidad de repensar la educación, el trabajo y las ciudades para una sociedad distinta de la que imaginaron quienes diseñaron las instituciones en el siglo XIX. El "país joven" de la inmigración masiva es hoy un país que madura.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="numeros">
+      <div class="seccion-num">10 · Los números</div>
+      <h2>Qué nos dicen los <em>números</em></h2>
+      <p>La historia demográfica argentina puede resumirse en un gran movimiento: el país <strong>nació mirando al Norte y al Alto Perú</strong>, <strong>se transformó mirando a Europa y al puerto</strong>, y <strong>terminó concentrándose en sus ciudades</strong>, sobre todo alrededor de Buenos Aires. Cada etapa dejó su marca en el mapa, en la cultura y en las instituciones.</p>
+      <p>Los datos también explican muchas de las tensiones actuales del país. La <strong>concentración en el AMBA</strong> está detrás de los debates sobre el centralismo y el federalismo. La <strong>desigualdad de población entre provincias</strong> explica el diseño del Congreso (Diputados por población, Senado por igualdad provincial) y las disputas por la coparticipación. El <strong>envejecimiento</strong> marca la agenda previsional y sanitaria de las próximas décadas.</p>
+      <p>Conocer cómo creció el país no es un dato de archivo: es entender <strong>por qué la Argentina es como es</strong>. El mapa demográfico de hoy es el resultado acumulado de dos siglos de decisiones, migraciones y transformaciones, y seguirá cambiando con cada censo. El próximo, según la periodicidad habitual, debería realizarse alrededor de 2032.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo dialoga con otros del sitio: el <strong>federalismo</strong> y el reparto de poder entre provincias, la <strong>coparticipación</strong> federal de impuestos, la <strong>historia</strong> institucional argentina y los estudios sobre cada <strong>provincia en profundidad</strong>. La población es el sustrato sobre el que se apoya todo el andamiaje institucional: cuántos somos y dónde vivimos define, en buena medida, cómo nos gobernamos.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>INDEC · Censo Nacional de Población, Hogares y Viviendas</strong> · censo.gob.ar e indec.gob.ar. Serie histórica de los censos 1869–2022 y resultados por jurisdicción.</li>
+        <li><strong>Censo 2022</strong> · Resultados provisorios (46.044.703 habitantes) y definitivos (45.892.285). Distribución por provincia, viviendas y población extranjera.</li>
+        <li><strong>INDEC · "Historia de los censos"</strong> · Datos de cada censo: 1869 (1.830.214), 1895 (4.044.911), 1914 (7.903.662), 1947 (15.893.827), 1960 (20.010.539), 1970 (23.364.431), 1980 (27.949.480), 1991 (32.615.528), 2001 (36.260.130), 2010 (40.117.096).</li>
+        <li><strong>"Inmigración en Argentina"</strong> · Serie de población nacida en el extranjero por censo: 12,1% (1869), 25,4% (1895), 29,9% (1914), 13% (1947), 9,5% (1970), 6,8% (1980), y la posterior recuperación parcial.</li>
+        <li><strong>RENAPER y Naciones Unidas</strong> · Datos de urbanización (92%) y proyecciones de población (pico estimado hacia 2050).</li>
+        <li><strong>Juan Bautista Alberdi, "Bases y puntos de partida..."</strong> · Origen de la fórmula "gobernar es poblar" y del proyecto inmigratorio de la organización nacional.</li>
+        <li><strong>Constitución Nacional</strong> · Preámbulo (los "hombres del mundo que quieran habitar el suelo argentino"), Art. 45 (Diputados según población) y Art. 54 (3 senadores por provincia).</li>
+        <li><strong>Leyes de provincialización de los Territorios Nacionales</strong> · 1951 (La Pampa y Chaco), 1953 (Misiones), 1955 (Formosa, Neuquén, Río Negro, Chubut, Santa Cruz), 1990 (Tierra del Fuego).</li>
+      </ul>
+    </div>
+
+    <a href="provincias-en-profundidad.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>Las <em>provincias</em> en profundidad</h3>
+        <p>Ahora que viste cómo se pobló el país, conocé cada provincia por dentro: su historia, su economía, su organización institucional y su lugar en el mapa federal argentino. Los estudios provinciales completan la foto demográfica con el detalle de cada jurisdicción.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER ESTUDIOS →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
