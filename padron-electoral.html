@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El padrón electoral (Cap. 14) — Educación Cívica</title>
+<meta name="description" content="Cómo se amplió el derecho a votar en Argentina, contado con datos: del voto secreto y universal masculino de 1912 al voto femenino de 1951 y el voto joven de 2012. La evolución del padrón electoral de 1,2 millones de electores en 1916 a 36 millones hoy, la participación electoral y su caída reciente, y cómo se arma y controla el padrón.">
+<link rel="canonical" href="https://educacioncivica.com.ar/padron-electoral.html">
+<meta property="og:title" content="El padrón electoral · Cómo se amplió el derecho a votar">
+<meta property="og:description" content="Del voto masculino de 1916 al voto joven: la expansión del electorado argentino y la participación electoral, contadas con datos y gráficos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/padron-electoral.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>14</strong> · Sistema electoral</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>El padrón electoral</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 14 · Sistema electoral</div>
+    <h1 class="page-title">El <em>padrón</em> electoral</h1>
+    <div class="page-subtitulo">— Cómo se amplió el derecho a votar</div>
+    <p class="page-intro">La historia del <strong>padrón electoral</strong> es la historia de cómo la Argentina fue ampliando el derecho a votar. En la primera elección con voto secreto, en <strong>1916</strong>, había poco más de <strong>1,2 millones</strong> de electores habilitados: solo varones. Hoy el padrón supera los <strong>36 millones</strong> e incluye a mujeres y varones, a jóvenes desde los 16 años y a los argentinos en el exterior. Entre esos dos extremos hay tres grandes saltos: el <strong>voto secreto, universal y obligatorio</strong> de la Ley Sáenz Peña (1912), el <strong>voto femenino</strong> (1947, primera votación en 1951) y el <strong>voto joven</strong> (2012). Este capítulo recorre esa expansión con los datos del padrón a lo largo del tiempo, analiza la <strong>participación electoral</strong> —que en 2025 tocó su nivel más bajo desde el retorno de la democracia— y explica cómo se arma y se controla el registro de quienes pueden votar.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">~36M</div>
+        <div class="page-stat-label">Electores en el padrón (2025)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1916</div>
+        <div class="page-stat-label">Primer voto secreto y obligatorio</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1951</div>
+        <div class="page-stat-label">Primer voto femenino</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">16</div>
+        <div class="page-stat-label">Edad desde la que se puede votar</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es el padrón electoral</a></li>
+      <li><a href="#expansion">02 · La expansión del electorado</a></li>
+      <li><a href="#voto-secreto">03 · Del voto cantado al voto secreto</a></li>
+      <li><a href="#voto-femenino">04 · El voto femenino</a></li>
+      <li><a href="#voto-joven">05 · El voto joven</a></li>
+      <li><a href="#participacion">06 · La participación electoral</a></li>
+      <li><a href="#mapa">07 · El mapa del padrón hoy</a></li>
+      <li><a href="#como-se-arma">08 · Cómo se arma y se controla</a></li>
+      <li><a href="#desafios">09 · Los desafíos actuales</a></li>
+      <li><a href="#sintesis">10 · Qué nos dice el padrón</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es el <em>padrón</em> electoral</h2>
+      <p>El <strong>padrón electoral</strong> es el listado oficial de todas las personas habilitadas para votar en una elección. Lo confecciona la <strong>Justicia Nacional Electoral</strong> sobre la base de la información que le envía el <strong>Registro Nacional de las Personas (RENAPER)</strong>, y se organiza por distrito. En él figuran los datos de cada elector, asociados al domicilio declarado en el DNI, que determina en qué escuela y mesa le toca votar.</p>
+      <p>Quién entra en el padrón define, en los hechos, <strong>quiénes son ciudadanos con derechos políticos plenos</strong>. Por eso su historia no es un detalle administrativo: es el termómetro de cuán amplia o restringida fue la democracia argentina en cada época. Cada ampliación del padrón —a los trabajadores, a las mujeres, a los jóvenes— fue una conquista de derechos.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Padrón, población y ciudadanía</div>
+        <p>El padrón no coincide con la población total: incluye solo a quienes tienen <strong>derecho a votar</strong> (argentinos nativos y por opción desde los 16 años, y naturalizados desde los 18) y excluye a quienes tienen una inhabilitación legal. Tampoco coincide con la cantidad de votantes efectivos: una cosa es estar <strong>habilitado</strong> para votar (el padrón) y otra es <strong>concurrir</strong> a hacerlo (la participación). Este capítulo mira las dos cosas.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="expansion">
+      <div class="seccion-num">02 · La expansión</div>
+      <h2>La <em>expansión</em> del electorado</h2>
+      <p>El crecimiento del padrón cuenta dos historias a la vez: el <strong>crecimiento de la población</strong> y la <strong>ampliación de los derechos políticos</strong>. Por eso el padrón no creció de forma pareja: tuvo saltos bruscos cuando se incorporaron grupos enteros que antes no podían votar.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Electores habilitados en el padrón nacional</div>
+        <div class="grafico-sub">Cantidad de personas habilitadas para votar en elecciones nacionales seleccionadas, 1916–2025.</div>
+        <div class="barra-row"><span class="barra-lbl">1916</span><span class="barra-track"><span class="barra-fill" style="width:3.3%"></span></span><span class="barra-val">1.189.254</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">1951</span><span class="barra-track"><span class="barra-fill" style="width:24%"></span></span><span class="barra-val">8.623.646</span></div>
+        <div class="barra-row"><span class="barra-lbl">1983</span><span class="barra-track"><span class="barra-fill" style="width:49.8%"></span></span><span class="barra-val">17.929.951</span></div>
+        <div class="barra-row"><span class="barra-lbl">2019</span><span class="barra-track"><span class="barra-fill" style="width:92.2%"></span></span><span class="barra-val">33.193.686</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:99.6%"></span></span><span class="barra-val">35.854.122</span></div>
+        <div class="barra-row"><span class="barra-lbl">2025</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">35.987.634</span></div>
+        <div class="grafico-nota">Fuente: Cámara Nacional Electoral y Dirección Nacional Electoral. 1916: primera elección con voto secreto (solo varones). 1951: primera con voto femenino. 1983: retorno de la democracia.</div>
+      </div>
+
+      <p>El salto más espectacular es el de <strong>1951</strong>: el padrón pasó de unos 3,4 millones (en 1946) a más de <strong>8,6 millones</strong>, porque por primera vez se incorporaron las mujeres. De un censo a otro, casi <strong>se duplicó la cantidad de ciudadanos con derecho a votar</strong>. Desde el retorno de la democracia en 1983, el padrón creció de manera sostenida acompañando el crecimiento de la población, hasta superar los 36 millones en 2025.</p>
+    </div>
+
+    <div class="seccion" id="voto-secreto">
+      <div class="seccion-num">03 · El voto secreto</div>
+      <h2>Del voto <em>cantado</em> al voto secreto</h2>
+      <p>Durante buena parte del siglo XIX y comienzos del XX, las elecciones argentinas estaban marcadas por el <strong>fraude</strong>. El voto no era secreto —era "cantado", se emitía en voz alta frente a las autoridades— ni obligatorio, y el padrón estaba en manos de quienes controlaban el poder local. El resultado eran comicios manipulados, con baja participación real y representación restringida.</p>
+      <p>Todo cambió con la <strong>Ley Sáenz Peña de 1912</strong>, impulsada por el presidente Roque Sáenz Peña. La ley estableció el <strong>voto secreto, universal (masculino) y obligatorio</strong>, sobre la base del padrón militar. Su primera aplicación en una elección presidencial fue en <strong>1916</strong>, considerada la primera elección libre y competitiva de la historia argentina.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— 745.825 votos que cambiaron el país</div>
+        <p>En 1916, sobre una población de unos 8 millones de habitantes, estaban habilitados <strong>1.189.254 ciudadanos</strong> (solo varones) y votaron <strong>745.825</strong>, un 62% del padrón. Puede parecer poco, pero fue un cambio radical: por primera vez el resultado no estaba digitado de antemano. El voto secreto rompió la maquinaria del fraude y abrió la etapa de la democracia de masas en Argentina.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="voto-femenino">
+      <div class="seccion-num">04 · El voto femenino</div>
+      <h2>El voto <em>femenino</em></h2>
+      <p>Aunque la Ley Sáenz Peña amplió el voto, dejó afuera a la <strong>mitad de la población</strong>: las mujeres. La conquista del voto femenino fue el resultado de más de cuatro décadas de lucha de las sufragistas argentinas, desde pioneras como Julieta Lanteri y Alicia Moreau de Justo.</p>
+      <p>El derecho se consagró con la <strong>Ley 13.010, sancionada en 1947</strong>, que estableció la igualdad política entre varones y mujeres. La primera vez que las mujeres votaron en una elección nacional fue el <strong>11 de noviembre de 1951</strong>.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— El salto del padrón por el voto femenino</div>
+        <div class="grafico-sub">Electores habilitados antes y después de la incorporación de las mujeres.</div>
+        <div class="barra-row"><span class="barra-lbl">1946</span><span class="barra-track"><span class="barra-fill alt" style="width:39.5%"></span></span><span class="barra-val">3.405.173</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">1951</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">8.623.646</span></div>
+        <div class="grafico-nota">Fuente: datos históricos del padrón electoral. En 1951, las mujeres eran 4.225.467 (48,9% del padrón) y votaron en más del 90%.</div>
+      </div>
+
+      <p>El impacto fue inmediato y profundo. En esas elecciones <strong>votaron más mujeres que varones</strong> (50,3% contra 49,7%), con una participación femenina superior al <strong>90%</strong>. Y no solo como electoras: ingresaron al Congreso las primeras <strong>23 diputadas y 6 senadoras</strong>. La incorporación de las mujeres no solo duplicó el padrón: transformó para siempre la representación política argentina.</p>
+    </div>
+
+    <div class="seccion" id="voto-joven">
+      <div class="seccion-num">05 · El voto joven</div>
+      <h2>El voto <em>joven</em></h2>
+      <p>La tercera gran ampliación del electorado llegó casi un siglo después de la Ley Sáenz Peña. La <strong>Ley 26.774 de 2012</strong>, conocida como "Ley de Voto Joven", habilitó a los <strong>adolescentes de 16 y 17 años</strong> a votar. A diferencia del resto, para ellos el voto es <strong>optativo</strong>: pueden votar, pero no están obligados ni quedan registrados como infractores si no concurren.</p>
+      <p>La misma reforma amplió también el ejercicio del voto de los <strong>argentinos residentes en el exterior</strong>, otro grupo históricamente postergado.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Los números del voto joven</div>
+        <p>En las elecciones de 2025, había <strong>1.139.315 jóvenes de 16 y 17 años</strong> habilitados, un <strong>3,16%</strong> del padrón nacional. Su participación viene creciendo: del <strong>58%</strong> en 2015 (la primera elección presidencial en que pudieron votar) al <strong>64%</strong> en 2019. La provincia de Buenos Aires concentra la mayor cantidad de electores jóvenes (más de 435 mil), mientras que provincias del Norte como Misiones, Formosa y Salta tienen la mayor proporción de jóvenes en su padrón, reflejo de su población más joven.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="participacion">
+      <div class="seccion-num">06 · La participación</div>
+      <h2>La <em>participación</em> electoral</h2>
+      <p>Tener derecho a votar es una cosa; ejercerlo es otra. La <strong>participación electoral</strong> —el porcentaje del padrón que efectivamente concurre a votar— es uno de los indicadores más importantes de la salud de una democracia. Y en la Argentina viene mostrando una tendencia preocupante.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Participación electoral (% del padrón que votó)</div>
+        <div class="grafico-sub">Comparación entre la primera elección democrática y las más recientes.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">1983</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">85,6%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:90.1%"></span></span><span class="barra-val">77,1%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2025</span><span class="barra-track"><span class="barra-fill sol" style="width:79.2%"></span></span><span class="barra-val">67,8%</span></div>
+        <div class="grafico-nota">Fuente: Cámara Nacional Electoral. 1983: retorno de la democracia (85,6%). 2025: elección legislativa con la participación más baja desde 1983.</div>
+      </div>
+
+      <p>El retorno de la democracia, en <strong>1983</strong>, trajo una participación altísima: <strong>85,6%</strong>, con picos cercanos al 86% en las elecciones de 1985 y 1989. Era una sociedad que valoraba intensamente el derecho a votar después de la dictadura. Desde entonces, y especialmente <strong>desde 2013</strong>, la participación viene cayendo. En las elecciones legislativas de <strong>2025</strong> votó apenas el <strong>67,8%</strong> del padrón: el nivel más bajo desde el retorno de la democracia.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Una señal de alerta cívica</div>
+        <p>La caída de la participación es un fenómeno que preocupa a los analistas, que lo atribuyen a una creciente <strong>desafección</strong> y desconfianza hacia la política. Las elecciones legislativas (de medio término) siempre convocan menos que las presidenciales, pero el piso de 2025 marca una tendencia. Que casi un tercio de los habilitados no vaya a votar —pese a que el voto es obligatorio— plantea preguntas de fondo sobre la relación entre la ciudadanía y sus instituciones. Es, quizás, el principal desafío del sistema electoral argentino hoy.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="mapa">
+      <div class="seccion-num">07 · El mapa</div>
+      <h2>El <em>mapa</em> del padrón hoy</h2>
+      <p>Como es de esperar, el padrón refleja la distribución de la población (analizada en detalle en el capítulo 13). La provincia de <strong>Buenos Aires</strong> concentra de lejos la mayor cantidad de electores —más de 14 millones, alrededor del 37% del padrón nacional—, lo que la convierte en el distrito decisivo de cualquier elección. La siguen Córdoba, Santa Fe y la Ciudad de Buenos Aires.</p>
+      <p>Un dato llamativo de los últimos años es que la <strong>Ciudad de Buenos Aires viene perdiendo electores</strong>: pasó de unos 2,71 millones en 2019 a unos 2,52 millones en 2025, el registro más bajo de su serie. Se explica por la baja natalidad porteña, el envejecimiento de su población y la migración de jóvenes al conurbano, a otras provincias o al exterior. Mientras tanto, el padrón nacional sigue creciendo: en 2025 sumó unos 634 mil electores respecto de 2023.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué Buenos Aires "define" las elecciones</div>
+        <p>Que un solo distrito reúna casi el 40% del padrón tiene consecuencias políticas enormes: ninguna fuerza puede ganar una elección nacional sin pelear fuerte en la provincia de Buenos Aires. Esta concentración del electorado es la contracara directa de la concentración demográfica que se analiza en el capítulo de población, y explica buena parte de la lógica de las campañas y las estrategias electorales.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="como-se-arma">
+      <div class="seccion-num">08 · Cómo se arma</div>
+      <h2>Cómo se <em>arma</em> y se controla</h2>
+      <p>El padrón no es una lista estática: se actualiza permanentemente y su elaboración involucra a varios organismos del Estado, con la <strong>Justicia Nacional Electoral</strong> como garante de su integridad.</p>
+      <p>El proceso, a grandes rasgos, funciona así:</p>
+      <ul>
+        <li>El <strong>RENAPER</strong> mantiene los datos de identidad de todos los habitantes (a partir del DNI) y los envía a la Justicia Electoral.</li>
+        <li>La <strong>Cámara Nacional Electoral</strong> y los juzgados federales con competencia electoral confeccionan y depuran el padrón, organizándolo por distrito y mesa.</li>
+        <li>El padrón tiene una <strong>fecha de cierre</strong> antes de cada elección, hasta la cual se pueden registrar novedades (cambios de domicilio, actualización del DNI).</li>
+        <li>Se excluye a quienes tienen una <strong>inhabilitación legal</strong> para votar.</li>
+        <li>El padrón provisorio se publica para que cualquier ciudadano pueda <strong>consultar y reclamar</strong> si detecta un error, antes de que se apruebe el padrón definitivo.</li>
+      </ul>
+      <p>Esta arquitectura —con la Justicia, y no el poder político de turno, a cargo del registro— es una garantía clave de transparencia. El control del padrón es parte del trabajo más amplio de la Justicia Electoral, que se analiza en el capítulo sobre la Justicia Nacional Electoral.</p>
+    </div>
+
+    <div class="seccion" id="desafios">
+      <div class="seccion-num">09 · Los desafíos</div>
+      <h2>Los <em>desafíos</em> actuales</h2>
+      <p>El padrón electoral argentino es hoy amplio, inclusivo y técnicamente sólido. Pero enfrenta desafíos importantes.</p>
+      <p>El más urgente es la <strong>caída de la participación</strong>. Un padrón que crece mientras la concurrencia baja revela una paradoja: cada vez más personas tienen derecho a votar, pero una proporción creciente elige no hacerlo. Revertir esa desafección es un desafío que excede al sistema electoral y toca a toda la dirigencia política.</p>
+      <p>Otros desafíos incluyen la <strong>actualización permanente</strong> del registro (domicilios, fallecimientos, nuevos electores), la <strong>logística del voto en el exterior</strong> (cada vez más relevante por la emigración), y la <strong>incorporación de nuevas tecnologías</strong> al proceso electoral, como la Boleta Única de Papel estrenada a nivel nacional en 2025, que cambió la forma de emitir y contar los votos.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un derecho que se sigue ampliando</div>
+        <p>La historia del padrón muestra una dirección clara a lo largo de más de un siglo: la <strong>ampliación constante de la ciudadanía</strong>. Del voto restringido y fraudulento al voto secreto; del voto masculino al femenino; del voto adulto al voto joven; del voto presencial en el país al voto en el exterior. Cada paso amplió el círculo de quienes participan en las decisiones colectivas. El desafío del presente no es ya quién <strong>puede</strong> votar —casi todos pueden—, sino lograr que quienes pueden, efectivamente <strong>quieran</strong> hacerlo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">10 · Síntesis</div>
+      <h2>Qué nos dice el <em>padrón</em></h2>
+      <p>El padrón electoral es mucho más que una lista: es el <strong>mapa de la ciudadanía política</strong> argentina y un registro de sus conquistas. Su evolución —de 1,2 millones de varones en 1916 a 36 millones de personas de todos los géneros y desde los 16 años en 2025— resume un siglo de ampliación de derechos.</p>
+      <p>Pero el padrón también muestra las tensiones del presente. La <strong>caída de la participación</strong> es la contracara incómoda de esa expansión: nunca tantos pudieron votar, y pocas veces tan pocos quisieron hacerlo (en términos relativos a la historia democrática reciente). Y la <strong>concentración del electorado</strong> en Buenos Aires refleja los desequilibrios demográficos del país.</p>
+      <p>Entender el padrón es entender quiénes deciden en una democracia y cómo ese círculo se fue agrandando con el tiempo. Es, en última instancia, una historia sobre la <strong>igualdad política</strong>: el largo y todavía inconcluso camino para que todas las personas tengan, efectivamente, voz y voto en el destino común.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo dialoga con otros del sitio: la <strong>población</strong> y cómo creció el país (capítulo 13), el <strong>sistema electoral</strong> y cómo se vota, la <strong>Justicia Nacional Electoral</strong> que custodia el padrón, el <strong>recuento de votos</strong> y la <strong>historia</strong> de las elecciones argentinas. Y, por supuesto, con el ejercicio más importante: ir a votar.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>Cámara Nacional Electoral (CNE)</strong> y <strong>Dirección Nacional Electoral (DINE)</strong> · Datos del padrón electoral por elección y jurisdicción, y series de participación electoral.</li>
+        <li><strong>Argentina.gob.ar · "Padrón Electoral"</strong> · Definición y funcionamiento del padrón, confeccionado por la Justicia Nacional Electoral sobre datos del RENAPER.</li>
+        <li><strong>Elecciones Legislativas 2025 · Argentina.gob.ar</strong> · Padrón de 35.987.634 electores; 1.139.315 jóvenes de 16-17 años (3,16%); debut de la Boleta Única de Papel.</li>
+        <li><strong>Ley Sáenz Peña (1912)</strong> · Voto secreto, universal masculino y obligatorio. Primera aplicación presidencial en 1916 (1.189.254 habilitados, 745.825 votos).</li>
+        <li><strong>Ley 13.010 (1947)</strong> · Voto femenino. Primera votación el 11 de noviembre de 1951: padrón de 8.623.646, de los cuales 4.225.467 mujeres (48,9%).</li>
+        <li><strong>Ley 26.774 (2012)</strong> · "Ley de Voto Joven": habilita el voto optativo a los 16 y 17 años y amplía el voto en el exterior.</li>
+        <li><strong>Cámara Nacional Electoral y CIPPEC/UNICEF</strong> · Datos de participación del voto joven: 58% (2015) y 64% (2019).</li>
+        <li><strong>Cobertura de la participación electoral 2023-2025</strong> · Ámbito, Infobae, Chequeado, Página/12. Participación de 77,1% (2023) y 67,8% (2025, la más baja desde 1983).</li>
+        <li><strong>Datos del padrón de la Ciudad de Buenos Aires</strong> · Infobae (2025). Descenso de 2,71 millones (2019) a 2,52 millones (2025) de electores.</li>
+        <li><strong>Constitución Nacional</strong> · Art. 37 (sufragio universal, igual, secreto y obligatorio; igualdad real de oportunidades entre varones y mujeres para cargos electivos).</li>
+      </ul>
+    </div>
+
+    <a href="poblacion.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>Cómo <em>creció</em> la Argentina</h3>
+        <p>El padrón refleja la población. Conocé cómo se pobló el país a lo largo de dos siglos: los censos desde 1869, la ola inmigratoria, las migraciones internas y por qué Buenos Aires concentra tanto la población como el electorado. El capítulo de población completa la foto demográfica de este estudio.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER CAPÍTULO →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
