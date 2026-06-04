@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>La deuda externa argentina (Cap. 18) — Educación Cívica</title>
+<meta name="description" content="Un estudio a fondo de la deuda externa argentina, con datos y sin grieta: dos siglos de endeudamiento desde el empréstito Baring de 1824, los seis defaults de la historia, el salto de la deuda en la dictadura, el default de 2001, el desendeudamiento de 2003-2013, el préstamo récord del FMI de 2018, la reestructuración de 2020 y el nuevo acuerdo de 2025. Qué es la deuda, para qué sirve, por qué preocupa, la relación con el FMI y las distintas visiones sobre el endeudamiento.">
+<link rel="canonical" href="https://educacioncivica.com.ar/deuda-externa.html">
+<meta property="og:title" content="La deuda externa argentina · Dos siglos de endeudamiento">
+<meta property="og:description" content="Estudio a fondo de la deuda externa argentina: los seis defaults, el default de 2001, el desendeudamiento, el FMI y el acuerdo de 2025. Con datos y sin grieta.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/deuda-externa.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>18</strong> · Economía y deuda</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>La deuda externa</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 18 · Economía y deuda</div>
+    <h1 class="page-title">La <em>deuda externa</em> argentina</h1>
+    <div class="page-subtitulo">— Dos siglos de endeudamiento, default y renegociación</div>
+    <p class="page-intro">Pocas palabras pesan tanto en la historia económica argentina como "deuda". Desde el primer empréstito de 1824 —el célebre crédito de la banca Baring— hasta los acuerdos con el Fondo Monetario Internacional de hoy, el endeudamiento externo fue un hilo conductor de la economía nacional: financió guerras, ferrocarriles, déficit y crisis, y desembocó en <strong>seis cesaciones de pago (defaults)</strong> a lo largo de dos siglos. Este capítulo es un <strong>estudio a fondo, con datos verificables y sin grieta</strong>: qué es la deuda externa y para qué sirve, cómo evolucionó, por qué la Argentina cayó una y otra vez en crisis de deuda, qué papel juega el FMI, y cuáles son las distintas miradas —todas con argumentos— sobre uno de los temas más sensibles y debatidos del país.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">6</div>
+        <div class="page-stat-label">Defaults en la historia argentina</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~43%</div>
+        <div class="page-stat-label">Deuda/PBI promedio en 74 años</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">2001</div>
+        <div class="page-stat-label">El default más grande hasta entonces</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1956</div>
+        <div class="page-stat-label">Argentina ingresa al FMI</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es la deuda externa</a></li>
+      <li><a href="#para-que">02 · Para qué sirve y por qué preocupa</a></li>
+      <li><a href="#dos-siglos">03 · Dos siglos de deuda</a></li>
+      <li><a href="#dictadura">04 · El salto de la deuda</a></li>
+      <li><a href="#default-2001">05 · El default de 2001</a></li>
+      <li><a href="#desendeudamiento">06 · Canjes y desendeudamiento</a></li>
+      <li><a href="#regreso">07 · El regreso del endeudamiento</a></li>
+      <li><a href="#hoy">08 · La deuda hoy</a></li>
+      <li><a href="#fmi">09 · El FMI y la Argentina</a></li>
+      <li><a href="#debate">10 · El debate sobre la deuda</a></li>
+      <li><a href="#sintesis">11 · Qué nos dice la deuda</a></li>
+      <li><a href="#fuentes">12 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es la <em>deuda externa</em></h2>
+      <p>La <strong>deuda externa</strong> es el dinero que un país —su Estado, sus empresas o sus ciudadanos— le debe a acreedores del exterior: otros gobiernos, organismos internacionales (como el FMI o el Banco Mundial), bancos o inversores extranjeros. Cuando hablamos de la deuda que más preocupa en la Argentina, nos referimos sobre todo a la <strong>deuda pública</strong>: la que toma el Estado para financiarse.</p>
+      <p>Conviene distinguir algunos conceptos que suelen mezclarse:</p>
+      <ul>
+        <li><strong>Deuda pública vs. privada.</strong> La pública la toma el Estado; la privada, las empresas y personas. Este capítulo se centra en la pública.</li>
+        <li><strong>Deuda externa vs. interna.</strong> La externa es con acreedores del exterior y suele estar en <strong>moneda extranjera</strong> (dólares); la interna, con acreedores locales. La que está en dólares es más riesgosa, porque el Estado no puede emitir dólares para pagarla.</li>
+        <li><strong>Stock vs. ratio.</strong> El <strong>stock</strong> es el monto total adeudado (en dólares); el <strong>ratio deuda/PBI</strong> mide ese monto en relación con el tamaño de la economía. Lo segundo es lo que de verdad importa para saber si una deuda es manejable.</li>
+      </ul>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué el ratio importa más que el monto</div>
+        <p>Un país puede deber más dólares que otro y, sin embargo, estar en mejor situación si su economía es más grande. Por eso los economistas miran la <strong>deuda como porcentaje del PBI</strong>: no es lo mismo deber el equivalente a media economía anual que a dos economías enteras. Una misma cifra de deuda puede volverse mucho más pesada de un día para el otro si la moneda se devalúa, porque la deuda en dólares se mantiene pero el PBI medido en dólares cae.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="para-que">
+      <div class="seccion-num">02 · Para qué sirve</div>
+      <h2>Para qué <em>sirve</em> y por qué preocupa</h2>
+      <p>Tomar deuda no es, en sí mismo, algo malo. Como una familia que pide un crédito para comprar una casa o una empresa que se endeuda para invertir, un país puede endeudarse para <strong>financiar obras, inversiones o atravesar una emergencia</strong>. El endeudamiento es una herramienta normal de las finanzas públicas en todo el mundo.</p>
+      <p>El problema aparece cuando la deuda se vuelve <strong>insostenible</strong>: cuando crece más rápido que la capacidad de pago del país, cuando se toma para financiar gasto corriente en lugar de inversión, o cuando se acumula en moneda extranjera sin generar los dólares para devolverla. Ahí la deuda deja de ser una herramienta y se convierte en una <strong>carga</strong> que condiciona la política económica: hay que destinar cada vez más recursos a pagar intereses, en lugar de a educación, salud o infraestructura.</p>
+      <p>La Argentina conoció las dos caras. El endeudamiento financió desde ferrocarriles hasta políticas sociales, pero también derivó, una y otra vez, en crisis profundas. La pregunta cívica de fondo no es "¿deuda sí o no?", sino <strong>para qué se toma, en qué condiciones, y si el país podrá pagarla sin hipotecar su futuro</strong>.</p>
+    </div>
+
+    <div class="seccion" id="dos-siglos">
+      <div class="seccion-num">03 · Dos siglos</div>
+      <h2>Dos <em>siglos</em> de deuda</h2>
+      <p>La historia de la deuda argentina empieza casi con el país mismo. En <strong>1824</strong>, la provincia de Buenos Aires tomó un empréstito con la banca británica <strong>Baring Brothers</strong>: el dinero llegó incompleto y mal, y en <strong>1827</strong> el país cayó en su <strong>primer default</strong>. Esa deuda tardó décadas en saldarse. Desde entonces, el endeudamiento y las cesaciones de pago fueron una constante.</p>
+      <p>A lo largo de su historia, la Argentina entró <strong>seis veces en default</strong> de su deuda:</p>
+
+      <table class="definiciones">
+        <tr><th>Año</th><th>Contexto del default</th></tr>
+        <tr><td><strong>1827</strong></td><td>Incumplimiento del empréstito Baring de 1824, el primero del país.</td></tr>
+        <tr><td><strong>1890</strong></td><td>Crisis Baring: una crisis financiera que casi arrastra a la banca británica.</td></tr>
+        <tr><td><strong>1982</strong></td><td>Crisis de la deuda latinoamericana, que afectó a buena parte de la región.</td></tr>
+        <tr><td><strong>2001</strong></td><td>El default más grande hasta entonces, en medio del colapso de la convertibilidad.</td></tr>
+        <tr><td><strong>2014</strong></td><td>Default selectivo, por el conflicto judicial con un grupo de acreedores ("holdouts").</td></tr>
+        <tr><td><strong>2019–2020</strong></td><td>"Reperfilamiento" y posterior reestructuración de la deuda.</td></tr>
+      </table>
+
+      <p>En términos del monto total adeudado, el stock de deuda pública creció enormemente a lo largo de las décadas, sobre todo en los momentos de crisis:</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Evolución del stock de deuda pública (en USD)</div>
+        <div class="grafico-sub">Monto total de la deuda pública en miles de millones de dólares. Tamaño relativo aproximado.</div>
+        <div class="barra-row"><span class="barra-lbl">1975</span><span class="barra-track"><span class="barra-fill" style="width:1.7%"></span></span><span class="barra-val">~8 mil M</span></div>
+        <div class="barra-row"><span class="barra-lbl">1983</span><span class="barra-track"><span class="barra-fill" style="width:9.7%"></span></span><span class="barra-val">~45 mil M</span></div>
+        <div class="barra-row"><span class="barra-lbl">2003</span><span class="barra-track"><span class="barra-fill" style="width:38.2%"></span></span><span class="barra-val">~178 mil M</span></div>
+        <div class="barra-row"><span class="barra-lbl">2014</span><span class="barra-track"><span class="barra-fill" style="width:53.6%"></span></span><span class="barra-val">~250 mil M</span></div>
+        <div class="barra-row"><span class="barra-lbl">2019</span><span class="barra-track"><span class="barra-fill" style="width:68.7%"></span></span><span class="barra-val">~320 mil M</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:86.7%"></span></span><span class="barra-val">~404 mil M</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">2024</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">~466 mil M</span></div>
+        <div class="grafico-nota">Fuente: Secretaría de Finanzas y estimaciones históricas. El stock en dólares creció de forma casi continua; pero, como se explica más abajo, el dato decisivo es su relación con el PBI, no el monto absoluto.</div>
+      </div>
+    </div>
+
+    <div class="seccion" id="dictadura">
+      <div class="seccion-num">04 · El salto</div>
+      <h2>El <em>salto</em> de la deuda (1976–1983)</h2>
+      <p>Hay un período que marca un antes y un después en la historia de la deuda argentina: el de la <strong>última dictadura militar (1976–1983)</strong>. Durante esos años, la deuda externa pública se <strong>multiplicó varias veces</strong>, pasando de unos pocos miles de millones de dólares a más de 45.000 millones. Fue un endeudamiento acelerado, en un contexto sin controles democráticos.</p>
+      <p>Un episodio especialmente relevante fue la <strong>estatización de deuda privada</strong> sobre el final de ese período: deudas que habían contraído empresas privadas pasaron a ser asumidas por el Estado, es decir, por el conjunto de los ciudadanos. Este proceso fue objeto de investigaciones judiciales y es ampliamente estudiado por los historiadores económicos como uno de los orígenes del peso estructural de la deuda en las décadas siguientes.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Deuda y democracia</div>
+        <p>El caso de la deuda contraída durante la dictadura ilustra una cuestión cívica de fondo: <strong>quién contrae la deuda y con qué controles</strong>. Una deuda tomada sin debate parlamentario, sin transparencia y sin rendición de cuentas plantea problemas distintos a una aprobada por el Congreso a la luz pública. Por eso, en democracia, el endeudamiento del Estado debería pasar por los controles institucionales correspondientes: el Congreso, que aprueba el presupuesto y autoriza el endeudamiento, y los organismos de control.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="default-2001">
+      <div class="seccion-num">05 · El default de 2001</div>
+      <h2>El <em>default</em> de 2001</h2>
+      <p>El episodio más recordado es el <strong>default de diciembre de 2001</strong>, el más grande de la historia argentina hasta ese momento y uno de los mayores del mundo. Llegó como desenlace del agotamiento de la <strong>convertibilidad</strong> (la paridad peso-dólar de los años 90, que vimos en el capítulo de inflación): tras años de recesión, fuga de capitales y un endeudamiento creciente, el país ya no pudo sostener los pagos.</p>
+      <p>La deuda pública externa rondaba entonces los <strong>USD 144.000 millones</strong>. Lo más dramático vino con la salida de la convertibilidad y la devaluación de 2002: el ratio <strong>deuda/PBI saltó de menos del 50% a alrededor del 150%</strong> casi de un día para el otro. No porque se hubiera tomado nueva deuda, sino porque el PBI medido en dólares se desplomó con la devaluación. Es el ejemplo perfecto de por qué una deuda en moneda extranjera es tan peligrosa.</p>
+      <div class="cita">
+        El default de 2001 no fue solo una crisis financiera: fue una crisis social, política e institucional que dejó una marca profunda en la sociedad argentina y en su relación con el endeudamiento.
+      </div>
+    </div>
+
+    <div class="seccion" id="desendeudamiento">
+      <div class="seccion-num">06 · Desendeudamiento</div>
+      <h2>Canjes y <em>desendeudamiento</em></h2>
+      <p>Salir del default de 2001 llevó años. Se realizaron dos grandes <strong>canjes de deuda</strong> (en <strong>2005</strong> y <strong>2010</strong>), en los que se ofreció a los acreedores cambiar sus bonos impagos por bonos nuevos de menor valor: en conjunto, los aceptó cerca del <strong>93%</strong> de los acreedores. En <strong>2006</strong>, además, el país canceló de una vez toda su deuda con el FMI.</p>
+      <p>Medido en relación con el PBI, el período <strong>2003–2013</strong> fue de fuerte <strong>desendeudamiento</strong>: según datos del FMI, la deuda externa respecto del producto se redujo de manera muy marcada, hasta tocar uno de los pisos de las últimas décadas. Aunque el stock en dólares siguió siendo alto, su peso relativo sobre una economía en crecimiento bajó de forma notable.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Los "holdouts" y el default de 2014</div>
+        <p>No todos los acreedores aceptaron los canjes. Un grupo —conocido como <strong>"holdouts"</strong> o, en el debate público, "fondos buitre"— litigó en tribunales de los Estados Unidos para cobrar el 100% de los bonos originales. En <strong>2014</strong>, un fallo judicial que impedía pagarle al 93% que sí había aceptado, sin pagarle también a los holdouts, llevó al país a un <strong>default selectivo</strong>. El conflicto se resolvió recién en 2016, con un acuerdo que reabrió el acceso del país a los mercados de crédito.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="regreso">
+      <div class="seccion-num">07 · El regreso</div>
+      <h2>El <em>regreso</em> del endeudamiento</h2>
+      <p>A partir de <strong>2016</strong>, tras el acuerdo con los holdouts, la Argentina volvió a los mercados internacionales y retomó un fuerte endeudamiento. En <strong>2018</strong>, ante una crisis cambiaria, el país firmó con el FMI el <strong>préstamo más grande de la historia del organismo</strong>: un acuerdo Stand-By por unos USD 57.000 millones, de los cuales se desembolsaron alrededor de USD 44.000 millones.</p>
+      <p>La situación volvió a complicarse rápidamente. En <strong>2019</strong> se "reperfiló" (postergó) el pago de la deuda de corto plazo, y en <strong>2020</strong> se reestructuró la deuda con los acreedores privados, en un canje que tuvo amplia aceptación. En <strong>2022</strong> se acordó con el FMI un nuevo programa para refinanciar el préstamo de 2018, por unos USD 44.000 millones, con vencimientos que se extendían hasta 2034.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un ciclo que se repite</div>
+        <p>Si se mira el conjunto, aparece un <strong>patrón recurrente</strong> en la historia argentina: períodos de fuerte endeudamiento seguidos de crisis, default o reestructuración, y luego desendeudamiento, para volver a empezar. Romper ese ciclo —lograr un endeudamiento sostenible que no termine en crisis— es uno de los grandes desafíos pendientes de la economía argentina, y atraviesa a gobiernos de distinto signo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="hoy">
+      <div class="seccion-num">08 · La deuda hoy</div>
+      <h2>La <em>deuda</em> hoy</h2>
+      <p>La deuda sigue siendo una de las variables centrales de la economía argentina. Medida como porcentaje del PBI, muestra una verdadera <strong>montaña rusa</strong> a lo largo de las últimas décadas, marcada por las crisis y las recuperaciones:</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Deuda pública como % del PBI (momentos clave)</div>
+        <div class="grafico-sub">El ratio deuda/PBI sube con las crisis y devaluaciones, y baja en los períodos de crecimiento y desendeudamiento.</div>
+        <div class="barra-row"><span class="barra-lbl">2001</span><span class="barra-track"><span class="barra-fill" style="width:36%"></span></span><span class="barra-val">~54%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">2002</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">~150%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2011</span><span class="barra-track"><span class="barra-fill sol" style="width:26%"></span></span><span class="barra-val">~39%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2020</span><span class="barra-track"><span class="barra-fill" style="width:68.7%"></span></span><span class="barra-val">~103%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:58.7%"></span></span><span class="barra-val">~88%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2025*</span><span class="barra-track"><span class="barra-fill sol" style="width:48.7%"></span></span><span class="barra-val">~73%</span></div>
+        <div class="grafico-nota">Fuente: FMI y Secretaría de Finanzas. Las mediciones de deuda/PBI varían según la metodología (deuda bruta o neta, tipo de cambio utilizado); las cifras son aproximadas y buscan ilustrar la tendencia. *2025: proyección del FMI. El promedio de los últimos 74 años fue de ~43%.</div>
+      </div>
+
+      <p>En <strong>2025</strong> se firmó un <strong>nuevo acuerdo con el FMI</strong>: un programa de Facilidades Extendidas a cuatro años por <strong>USD 20.000 millones</strong>, con un desembolso inicial de USD 12.000 millones. El acuerdo permitió el <strong>levantamiento del "cepo" cambiario</strong> (los controles para comprar dólares) y la adopción de un esquema de bandas de flotación. Como contrapartida, una parte creciente de los recursos del Estado se destina al pago de intereses, y los mayores vencimientos de deuda se concentran entre <strong>2027 y 2032</strong>, lo que condicionará a los próximos gobiernos.</p>
+    </div>
+
+    <div class="seccion" id="fmi">
+      <div class="seccion-num">09 · El FMI</div>
+      <h2>El <em>FMI</em> y la Argentina</h2>
+      <p>Es imposible hablar de la deuda argentina sin hablar del <strong>Fondo Monetario Internacional</strong>. El FMI es un organismo internacional, creado en 1944, del que forman parte casi todos los países del mundo. Su función es prestar a los países que tienen problemas para pagar sus compromisos externos (problemas de "balanza de pagos"), a cambio de que apliquen determinadas <strong>políticas y reformas</strong> orientadas a equilibrar sus cuentas.</p>
+      <p>La Argentina es miembro del FMI desde <strong>1956</strong> y, a lo largo de su historia, firmó más de veinte acuerdos con el organismo. Desde 2018, además, es el <strong>mayor deudor del FMI del mundo</strong>: ningún país le debe más. Esa relación intensa y conflictiva convirtió al Fondo en un actor central —y muy discutido— de la política económica argentina.</p>
+      <div class="ficha-poder">
+        <div class="ficha-poder-titulo">— Cómo funciona un acuerdo con el FMI</div>
+        <p>En un acuerdo típico, el FMI desembolsa dinero en etapas ("desembolsos"), sujetas a <strong>revisiones periódicas</strong>: cada cierto tiempo, el organismo verifica que el país cumpla determinadas <strong>metas</strong> (de déficit fiscal, reservas, emisión monetaria). Si las cumple, libera el siguiente tramo. Estas condiciones —el ajuste fiscal, la reducción de la emisión, las reformas— son las que generan más debate, porque tienen impacto directo sobre el gasto público, las tarifas y la economía cotidiana.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="debate">
+      <div class="seccion-num">10 · El debate</div>
+      <h2>El <em>debate</em> sobre la deuda</h2>
+      <p>La deuda externa es, quizás, el tema económico más cargado políticamente de la Argentina. Como en los capítulos anteriores, este sitio <strong>no toma partido</strong>: presenta las distintas miradas, que se apoyan en valores y diagnósticos diferentes, todas con argumentos atendibles.</p>
+      <p>Una mirada pone el acento en la <strong>responsabilidad de pagar</strong>: sostiene que honrar la deuda es condición para tener crédito, atraer inversiones y acceder a financiamiento a tasas razonables; que el default tiene costos enormes (aislamiento financiero, caída de la inversión); y que el problema no es endeudarse, sino hacerlo de manera ordenada y sostenible.</p>
+      <p>Otra mirada pone el acento en los <strong>límites del endeudamiento</strong>: sostiene que la deuda puede convertirse en un mecanismo de <strong>condicionamiento de la soberanía</strong>, que obliga a aplicar ajustes con alto costo social; cuestiona el origen y la legitimidad de ciertas deudas (como la de la dictadura); y advierte sobre el peso de los intereses, que detraen recursos de áreas sociales.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Más allá de la grieta</div>
+        <p>Entre estos extremos hay matices y posiciones intermedias. Lo que conviene retener, desde una mirada cívica, es que la deuda involucra <strong>decisiones con consecuencias de largo plazo</strong>: lo que se toma hoy lo pagan los gobiernos —y los ciudadanos— de mañana. Por eso importan tanto los <strong>controles democráticos</strong> sobre el endeudamiento (el rol del Congreso), la <strong>transparencia</strong> sobre para qué se usa, y el debate informado sobre su sostenibilidad. La deuda no es un tema "de economistas": es una decisión profundamente política y ciudadana.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">11 · Síntesis</div>
+      <h2>Qué nos dice la <em>deuda</em></h2>
+      <p>La historia de la deuda externa argentina es, en buena medida, la historia económica del país vista desde un ángulo particular: el de la relación con el dinero ajeno. Desde el empréstito Baring de 1824 hasta los acuerdos actuales, el endeudamiento acompañó cada etapa, financió desde el progreso hasta las crisis, y desembocó repetidamente en defaults y renegociaciones.</p>
+      <p>De ese recorrido surgen algunas lecciones que conviene tener presentes: que lo decisivo no es el monto absoluto sino la <strong>sostenibilidad</strong> (la relación con el PBI y la capacidad de pago); que la deuda en <strong>moneda extranjera</strong> es especialmente riesgosa, porque una devaluación puede multiplicar su peso de un día para el otro; que el país atravesó un <strong>ciclo recurrente</strong> de endeudamiento, crisis y desendeudamiento que aún no logró romper; y que el endeudamiento, lejos de ser un tecnicismo, es una <strong>decisión democrática</strong> que compromete el futuro.</p>
+      <p>Entender la deuda —su lógica, su historia, sus riesgos— es una herramienta de ciudadanía. Permite leer con criterio los anuncios sobre acuerdos y default, evaluar las promesas, y comprender por qué este tema reaparece, una y otra vez, en el centro del debate público argentino. Con este capítulo se completa la serie sobre la <strong>economía y el Estado</strong>: gasto público, inflación, sector privado y deuda, cuatro piezas profundamente entrelazadas de una misma historia.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo cierra el ciclo económico del sitio y se conecta con todos sus integrantes: el <strong>gasto público</strong> y el déficit (que muchas veces se financia con deuda), la <strong>inflación</strong> (ligada a la emisión y a las crisis de deuda), y el <strong>sector privado</strong> (que también se endeuda y que produce los dólares de las exportaciones). Juntos forman un mapa de la economía argentina pensado para la ciudadanía.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">12 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>Ministerio de Economía · Secretaría de Finanzas</strong> · Estadísticas oficiales de la deuda pública: stock, composición y evolución. Datos de stock: ~USD 404.000 millones (2023) y ~USD 466.000 millones (2024).</li>
+        <li><strong>FMI · Perspectivas de la Economía Mundial (WEO)</strong> · Serie de deuda pública sobre PBI. Promedio de los últimos 74 años: ~43,1%; picos superiores al 100% en 1989, 2002-2004, 2020 y 2023. Proyección de ~73% para 2025.</li>
+        <li><strong>Wikipedia · Historia de la deuda externa argentina</strong> · Los seis defaults (1827, 1890, 1982, 2001, 2014, 2019-2020); canjes de 2005 y 2010 con aceptación del ~93%; desendeudamiento 2003-2013.</li>
+        <li><strong>Default de 2001</strong> · Deuda pública externa de ~USD 144.000 millones a diciembre de 2001; salto del ratio deuda/PBI de menos del 50% a alrededor del 150% tras la devaluación de 2002. Fuente: Ministerio de Economía, CEDES.</li>
+        <li><strong>Préstamo del FMI de 2018</strong> · Acuerdo Stand-By por ~USD 57.000 millones (el mayor de la historia del FMI), con desembolsos por ~USD 44.000 millones.</li>
+        <li><strong>Acuerdo con el FMI de 2022</strong> · Programa de Facilidades Extendidas (EFF) por ~USD 44.000 millones para refinanciar el préstamo de 2018; vencimientos hasta 2034.</li>
+        <li><strong>Acuerdo con el FMI de 2025</strong> · Nuevo programa EFF a 48 meses por USD 20.000 millones (desembolso inicial de USD 12.000 millones), que acompañó el levantamiento del cepo cambiario y un régimen de bandas. Fuente: FMI, Secretaría de Finanzas, prensa (Infobae, La Nación, Chequeado).</li>
+        <li><strong>Relación con el FMI</strong> · Argentina, miembro desde 1956; más de veinte acuerdos a lo largo de su historia; desde 2018, el mayor deudor del organismo. Picos de vencimientos concentrados entre 2027 y 2032.</li>
+        <li><strong>Deuda y dictadura (1976-1983)</strong> · Fuerte aumento de la deuda externa y estatización de deuda privada, ampliamente documentados por la historiografía económica.</li>
+      </ul>
+    </div>
+
+    <a href="sector-privado.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>El <em>sector privado</em> argentino</h3>
+        <p>La deuda la toma el Estado, pero los dólares para pagarla los genera, en buena parte, el sector privado exportador. Conocé cómo se organiza la economía privada argentina: las PyMEs, las grandes empresas, los sectores y la relación con el Estado.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER CAPÍTULO →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="gasto-publico.html">Gasto público</a>
+      <a href="inflacion.html">Inflación</a>
+      <a href="sector-privado.html">Sector privado</a>
+      <a href="deuda-externa.html">Deuda externa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
