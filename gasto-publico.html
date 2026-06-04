@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El gasto público argentino (Cap. 15) — Educación Cívica</title>
+<meta name="description" content="Cómo evolucionó el gasto público en Argentina, contado con datos y sin grieta: del 12% del PBI en 1913 a casi el 47% en 2020 y la fuerte caída de 2024. Qué es el gasto público y de dónde sale, en qué se gasta (jubilaciones, salud, educación, intereses), cómo se reparte entre Nación, provincias y municipios, la relación con el déficit y la inflación, y las dos visiones sobre el tamaño del Estado.">
+<link rel="canonical" href="https://educacioncivica.com.ar/gasto-publico.html">
+<meta property="og:title" content="El gasto público argentino · Cómo evolucionó">
+<meta property="og:description" content="La evolución del gasto público argentino contada con datos: del 12% del PBI en 1913 a casi el 47% reciente, en qué se gasta y las visiones sobre el tamaño del Estado.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/gasto-publico.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>15</strong> · Finanzas públicas</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>El gasto público</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 15 · Finanzas públicas</div>
+    <h1 class="page-title">El <em>gasto</em> público</h1>
+    <div class="page-subtitulo">— Cómo evolucionó el tamaño del Estado</div>
+    <p class="page-intro">¿Cuánto gasta el Estado argentino y en qué? La respuesta cambió enormemente a lo largo del tiempo. En <strong>1913</strong>, el gasto público representaba apenas el <strong>12% del PBI</strong>: un Estado chico, dedicado a lo básico. Un siglo después llegó a rondar el <strong>47%</strong> en su punto máximo, antes de caer fuertemente en 2024. Detrás de esos números hay una historia institucional: la del crecimiento del Estado de bienestar, las jubilaciones, la educación y la salud públicas, los subsidios, y también la de los déficit, la deuda y la inflación. Este capítulo recorre esa evolución <strong>con datos verificables y sin grieta</strong>: qué es el gasto público, en qué se gasta, cómo se reparte entre la Nación y las provincias, y cuáles son las distintas miradas —todas legítimas— sobre cuál debería ser el tamaño del Estado.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">~42%</div>
+        <div class="page-stat-label">Del PBI en 2023 (consolidado)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">12%</div>
+        <div class="page-stat-label">Del PBI en 1913</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~45%</div>
+        <div class="page-stat-label">Del gasto va a jubilaciones</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">3</div>
+        <div class="page-stat-label">Niveles que gastan (Nación, prov., mun.)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es el gasto público</a></li>
+      <li><a href="#curva">02 · La curva del gasto</a></li>
+      <li><a href="#etapas">03 · Las etapas del Estado</a></li>
+      <li><a href="#en-que">04 · ¿En qué se gasta?</a></li>
+      <li><a href="#jubilaciones">05 · Las jubilaciones, el corazón</a></li>
+      <li><a href="#federal">06 · El gasto es federal</a></li>
+      <li><a href="#deficit">07 · Gasto, déficit e inflación</a></li>
+      <li><a href="#debate">08 · El debate sobre el tamaño</a></li>
+      <li><a href="#giro">09 · El giro fiscal reciente</a></li>
+      <li><a href="#sintesis">10 · Qué nos dice el gasto</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es el <em>gasto</em> público</h2>
+      <p>El <strong>gasto público</strong> es todo lo que eroga el Estado para cumplir sus funciones: pagar jubilaciones, sueldos de docentes, médicos y empleados públicos, construir rutas y escuelas, sostener las fuerzas de seguridad, financiar universidades, otorgar subsidios y pagar los intereses de la deuda. Es, en concreto, <strong>la dimensión económica de todo lo que hace el Estado</strong>.</p>
+      <p>Para que las cifras sean comparables a lo largo del tiempo, el gasto suele medirse como <strong>porcentaje del PBI</strong> (el valor de todo lo que produce el país en un año). Decir que el gasto es "el 40% del PBI" significa que, de cada 100 pesos que genera la economía, el Estado gasta el equivalente a 40. Esta medida permite comparar épocas y países sin que la inflación distorsione todo.</p>
+      <p>¿De dónde sale ese dinero? De tres fuentes: los <strong>impuestos</strong> (la principal), el <strong>endeudamiento</strong> (pedir prestado) y, en algunos períodos, la <strong>emisión monetaria</strong> (imprimir dinero). Cuando el gasto supera a los ingresos genuinos, aparece el <strong>déficit fiscal</strong>, que hay que cubrir con deuda o emisión. Esa relación, como veremos, está en el centro de buena parte de la historia económica argentina.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Gasto consolidado: las tres patas</div>
+        <p>Cuando se habla del gasto público total de la Argentina se usa el <strong>Gasto Público Consolidado (GPC)</strong>, que suma lo que gastan los tres niveles de gobierno: la <strong>Nación</strong>, las <strong>provincias</strong> y los <strong>municipios</strong>. Es importante no confundirlo con el gasto solo del gobierno nacional, que es una parte del total. Cuando este capítulo habla de "gasto público" como porcentaje del PBI, se refiere al consolidado, salvo que se aclare lo contrario.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="curva">
+      <div class="seccion-num">02 · La curva</div>
+      <h2>La <em>curva</em> del gasto</h2>
+      <p>La fotografía de largo plazo es contundente: el Estado argentino se hizo mucho más grande a lo largo del siglo XX y comienzos del XXI. Pero el camino no fue una línea recta: hubo etapas de fuerte expansión y otras de retracción, muchas veces ligadas a las crisis económicas.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Gasto público consolidado como % del PBI</div>
+        <div class="grafico-sub">Gasto de los tres niveles de gobierno (Nación, provincias y municipios) en relación con el tamaño de la economía.</div>
+        <div class="barra-row"><span class="barra-lbl">1913</span><span class="barra-track"><span class="barra-fill" style="width:25.1%"></span></span><span class="barra-val">11,9%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2001</span><span class="barra-track"><span class="barra-fill" style="width:75.1%"></span></span><span class="barra-val">35,6%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2016</span><span class="barra-track"><span class="barra-fill" style="width:99.8%"></span></span><span class="barra-val">47,3%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">2020</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">47,4%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:88.4%"></span></span><span class="barra-val">41,9%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2024*</span><span class="barra-track"><span class="barra-fill sol" style="width:70.7%"></span></span><span class="barra-val">~33,5%</span></div>
+        <div class="grafico-nota">Fuente: Ministerio de Economía (serie de Gasto Público Consolidado) y Argendata. *2024: estimación, ya que el dato consolidado definitivo aún no está publicado; refleja la fuerte reducción del gasto de ese año. El pico de 2020 se explica en parte por la pandemia.</div>
+      </div>
+
+      <p>El salto histórico es enorme: de <strong>11,9% en 1913 a casi el 47% en su punto máximo</strong>. Es decir, el Estado argentino multiplicó por casi cuatro su peso relativo en la economía en poco más de un siglo. Los picos más altos se dieron en <strong>2016</strong> (47,3%) y <strong>2020</strong> (47,4%, en buena parte por los gastos de la pandemia). Luego, en <strong>2024</strong>, se produjo una de las mayores reducciones interanuales en décadas.</p>
+    </div>
+
+    <div class="seccion" id="etapas">
+      <div class="seccion-num">03 · Las etapas</div>
+      <h2>Las <em>etapas</em> del Estado argentino</h2>
+      <p>Detrás de la curva hay etapas con lógicas muy distintas, que reflejan cómo fue cambiando la idea misma de qué debe hacer el Estado:</p>
+      <ul>
+        <li><strong>1913–1930 · El Estado liviano.</strong> El gasto rondaba el 12% del PBI y se concentraba en educación, seguridad y obras públicas. Un Estado pequeño, propio del modelo agroexportador.</li>
+        <li><strong>1930–1960 · La expansión.</strong> El Estado amplió su rol: primero en infraestructura y servicios, luego —sobre todo a partir de los años 40— con nacionalizaciones, el sistema previsional y políticas redistributivas. Nace el Estado de bienestar argentino.</li>
+        <li><strong>1961–2003 · La volatilidad.</strong> Décadas marcadas por crisis previsionales, inestabilidad, alta inflación y una <strong>descentralización</strong> de funciones hacia las provincias (educación, salud) que no siempre vino con los fondos suficientes.</li>
+        <li><strong>2004–2016 · La gran expansión.</strong> Tras la crisis de 2001-2002, el gasto creció de forma sostenida y rápida, hasta alcanzar algunos de los niveles más altos de la historia (cerca del 47% del PBI). Crecieron los subsidios, la seguridad social y el empleo público.</li>
+        <li><strong>2016–2024 · Los intentos de ajuste.</strong> A partir de 2016 hubo esfuerzos por reducir el déficit, interrumpidos por la pandemia (que disparó el gasto en 2020), y luego una fuerte contracción en 2024.</li>
+      </ul>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un patrón argentino</div>
+        <p>Una característica que señalan los economistas es que, durante buena parte de esta historia, las <strong>expansiones del gasto no estuvieron siempre acompañadas por un aumento equivalente de los ingresos</strong>. Esa brecha recurrente entre lo que el Estado gasta y lo que recauda de manera genuina es una de las claves para entender los problemas crónicos de déficit, deuda e inflación que atravesó el país.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="en-que">
+      <div class="seccion-num">04 · En qué se gasta</div>
+      <h2>¿En qué se <em>gasta</em>?</h2>
+      <p>Si abrimos la "caja" del gasto público, aparece un dato que sorprende a mucha gente: la enorme mayoría <strong>no se va en sueldos de políticos ni en "la casta"</strong>, sino en <strong>prestaciones sociales</strong>, sobre todo jubilaciones. La estructura del gasto está dominada por los compromisos sociales del Estado.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Composición aproximada del gasto público nacional</div>
+        <div class="grafico-sub">Principales destinos del gasto, según el presupuesto nacional reciente.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">Jubil.</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">~45% · Seguridad social</span></div>
+        <div class="barra-row"><span class="barra-lbl">Social</span><span class="barra-track"><span class="barra-fill" style="width:55.6%"></span></span><span class="barra-val">~25% · Educación, salud, vivienda</span></div>
+        <div class="barra-row"><span class="barra-lbl">Deuda</span><span class="barra-track"><span class="barra-fill alt" style="width:37.8%"></span></span><span class="barra-val">~17% · Intereses</span></div>
+        <div class="barra-row"><span class="barra-lbl">Resto</span><span class="barra-track"><span class="barra-fill alt" style="width:28.9%"></span></span><span class="barra-val">~13% · Defensa, seguridad, etc.</span></div>
+        <div class="grafico-nota">Fuente: elaboración sobre datos del Presupuesto Nacional e informes de ejecución. Las proporciones varían año a año; los intereses de la deuda ganaron peso en 2025 (nivel más alto desde 2020).</div>
+      </div>
+
+      <p>Las <strong>prestaciones de la seguridad social</strong> (jubilaciones, pensiones y asignaciones familiares) son, de lejos, el componente más grande: rondan el <strong>45% del gasto total</strong> y más del 60% del gasto primario nacional. Le siguen los <strong>servicios sociales</strong> (educación, salud, vivienda) con alrededor del 25%, y los <strong>intereses de la deuda</strong>, que en los últimos años treparon hasta cerca del 17% del gasto total.</p>
+    </div>
+
+    <div class="seccion" id="jubilaciones">
+      <div class="seccion-num">05 · Las jubilaciones</div>
+      <h2>Las <em>jubilaciones</em>, el corazón del gasto</h2>
+      <p>Si hay un rubro que define la dinámica del gasto público argentino, son las <strong>jubilaciones y pensiones</strong>. Solo las jubilaciones representaron alrededor del <strong>7,6% del PBI</strong> en años recientes, y su peso dentro del gasto viene creciendo: pasaron de explicar el 34% del gasto primario en 2023 a una proyección cercana al 46% para 2026 según el FMI.</p>
+      <p>¿Por qué pesan tanto? Por dos razones. La primera es <strong>demográfica</strong>: como se vio en el capítulo de población, la Argentina tiene una población que envejece, con cada vez más adultos mayores por cada trabajador activo que aporta. La segunda es de <strong>diseño</strong>: el sistema previsional argentino es de <strong>reparto</strong> (los aportes de los trabajadores actuales financian a los jubilados actuales) e incluye moratorias que permitieron jubilarse a personas que no completaron sus aportes, ampliando la cobertura pero también el gasto.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— El gasto "rígido"</div>
+        <p>Las jubilaciones son un gasto difícil de reducir, por varias razones: están protegidas por leyes de <strong>movilidad</strong> que las actualizan automáticamente, afectan a millones de personas mayores y tienen un fuerte componente de <strong>derecho adquirido</strong>. Por eso se las considera un gasto "rígido": cuando hay que ajustar las cuentas, es uno de los rubros más difíciles —y más sensibles— de tocar. Entender esto es clave para cualquier debate serio sobre el gasto público.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="federal">
+      <div class="seccion-num">06 · Federal</div>
+      <h2>El gasto es <em>federal</em></h2>
+      <p>Otra cosa que suele pasarse por alto: el gasto público <strong>no lo ejecuta solo la Nación</strong>. En un país federal, una parte importante la gastan las provincias y los municipios. Y ese reparto fue cambiando con el tiempo, en un proceso de <strong>descentralización</strong>.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Reparto del gasto por nivel de gobierno</div>
+        <div class="grafico-sub">Participación de cada nivel en el gasto público total. Comparación entre 1980 y 2023.</div>
+        <div class="barra-row"><span class="barra-lbl">Nación 80</span><span class="barra-track"><span class="barra-fill alt" style="width:100%"></span></span><span class="barra-val">65%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">Nación 23</span><span class="barra-track"><span class="barra-fill" style="width:81.5%"></span></span><span class="barra-val">53%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Prov. 80</span><span class="barra-track"><span class="barra-fill alt" style="width:43.1%"></span></span><span class="barra-val">28%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">Prov. 23</span><span class="barra-track"><span class="barra-fill" style="width:58.5%"></span></span><span class="barra-val">38%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Mun. 80</span><span class="barra-track"><span class="barra-fill alt" style="width:7.7%"></span></span><span class="barra-val">5%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">Mun. 23</span><span class="barra-track"><span class="barra-fill" style="width:12.3%"></span></span><span class="barra-val">8%</span></div>
+        <div class="grafico-nota">Fuente: Ministerio de Economía. En violeta claro, 1980; en violeta pleno, 2023. La Nación redujo su participación; provincias y municipios la aumentaron.</div>
+      </div>
+
+      <p>En 1980, la Nación concentraba el <strong>65%</strong> del gasto; hacia 2023 había bajado al <strong>53%</strong>, mientras las provincias treparon del 28% al 38%. Esto se debe a que funciones clave como la <strong>educación básica, la salud y la justicia</strong> son competencia provincial: las provincias ejecutan más del 40% del gasto en esas áreas. La Nación, en cambio, financia las jubilaciones, las universidades, el CONICET y los grandes subsidios. Este reparto está íntimamente ligado al sistema de <strong>coparticipación federal</strong> de impuestos.</p>
+    </div>
+
+    <div class="seccion" id="deficit">
+      <div class="seccion-num">07 · Déficit e inflación</div>
+      <h2>Gasto, <em>déficit</em> e inflación</h2>
+      <p>Para entender por qué el gasto público es un tema tan central en la Argentina, hay que entender una cadena de causas y efectos que se repitió muchas veces en la historia económica del país. Es una secuencia que conviene explicar con calma y sin cargar tintas:</p>
+      <ul>
+        <li>Cuando el gasto del Estado <strong>supera a sus ingresos</strong> genuinos (impuestos), aparece el <strong>déficit fiscal</strong>.</li>
+        <li>Ese déficit hay que <strong>financiarlo</strong> de algún modo: con <strong>deuda</strong> (que luego hay que pagar con intereses) o con <strong>emisión monetaria</strong> (imprimir dinero).</li>
+        <li>Cuando el déficit se financia sostenidamente con <strong>emisión</strong>, suele alimentar la <strong>inflación</strong>: hay más dinero circulando sin un aumento equivalente de bienes.</li>
+        <li>La inflación, a su vez, erosiona el valor del dinero, complica la previsión y golpea especialmente a los que menos tienen.</li>
+      </ul>
+      <p>Esta dinámica —déficit financiado con emisión que alimenta la inflación— es señalada por economistas de distintas corrientes como una de las claves de la <strong>inflación crónica</strong> argentina. No es la única causa (la inflación es un fenómeno complejo, con componentes de expectativas, inercia y otros factores), pero la relación entre las cuentas públicas y la estabilidad de la moneda es uno de los grandes temas de la economía argentina, y será objeto de su propio capítulo.</p>
+    </div>
+
+    <div class="seccion" id="debate">
+      <div class="seccion-num">08 · El debate</div>
+      <h2>El <em>debate</em> sobre el tamaño del Estado</h2>
+      <p>Acá llegamos al punto más discutido, y donde es importante ser claros: <strong>no existe una respuesta técnica única</strong> sobre cuál debe ser el tamaño "correcto" del Estado. Es, en buena medida, una decisión política y de valores sobre qué tipo de sociedad se quiere. Existen distintas miradas, todas con argumentos serios:</p>
+      <p>Quienes defienden un <strong>Estado con mayor presencia</strong> sostienen que el gasto público —especialmente el social— es una herramienta fundamental para <strong>reducir la desigualdad</strong> y garantizar derechos: jubilaciones dignas, educación y salud gratuitas, protección a los más vulnerables. Argumentan que el mercado por sí solo no resuelve esas necesidades y que un Estado fuerte iguala oportunidades. Señalan, además, que el gasto social tiene un alto poder redistributivo.</p>
+      <p>Quienes defienden un <strong>Estado más acotado</strong> sostienen que un gasto muy alto exige una <strong>carga impositiva elevada</strong> (que puede desalentar la producción y el empleo) o genera déficit (que lleva a deuda e inflación). Argumentan que un Estado más chico y eficiente deja más recursos en manos de las personas y las empresas, favorece la inversión y el crecimiento, y que el problema no es solo cuánto se gasta sino <strong>cuán bien</strong> se gasta.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Una discusión legítima, no una grieta</div>
+        <p>Ambas posiciones contienen verdades y se apoyan en valores y diagnósticos diferentes, no en datos "verdaderos" contra datos "falsos". El tamaño del Estado, el nivel de impuestos y las prioridades del gasto son <strong>decisiones democráticas legítimas</strong> que se discuten en cada elección y se plasman en el presupuesto que vota el Congreso. El rol de la ciudadanía informada no es elegir un "bando", sino entender los <strong>costos y beneficios</strong> de cada opción para poder participar del debate con criterio propio.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="giro">
+      <div class="seccion-num">09 · El giro reciente</div>
+      <h2>El <em>giro</em> fiscal reciente</h2>
+      <p>Los últimos años trajeron un cambio marcado en la política fiscal argentina. Tras varios años de déficit —que en <strong>2023</strong> llegó al <strong>4,6% del PBI</strong>—, a partir de <strong>2024</strong> se aplicó un fuerte programa de reducción del gasto público, con el objetivo declarado de equilibrar las cuentas.</p>
+      <p>El resultado, en términos de las cifras fiscales, fue notable: en <strong>2024 se registró un superávit financiero del 0,3% del PBI</strong>, el primero desde 2010, y el gasto público consolidado habría caído alrededor de <strong>7 puntos del PBI</strong> en un solo año, una de las mayores contracciones en décadas. Esa reducción se concentró en obra pública, subsidios, transferencias a provincias y, en términos reales, también en jubilaciones y salarios estatales.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un hecho con lecturas distintas</div>
+        <p>Como todo en este terreno, el giro fiscal reciente admite <strong>lecturas diferentes</strong>, y este sitio no toma partido. Quienes lo respaldan destacan el logro del equilibrio fiscal después de años de déficit y su contribución a la desaceleración de la inflación. Quienes lo critican señalan el costo social de los recortes, sobre todo en jubilaciones, obra pública y áreas sensibles. Lo que sí es un <strong>hecho verificable</strong> es la magnitud del cambio: pocas veces en su historia la Argentina redujo su gasto de manera tan rápida. Cómo se evalúe ese proceso depende, otra vez, de los valores y las prioridades de cada quien.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">10 · Síntesis</div>
+      <h2>Qué nos dice el <em>gasto</em> público</h2>
+      <p>La evolución del gasto público es, en el fondo, la historia de <strong>qué le fuimos pidiendo al Estado</strong>. El salto del 12% del PBI en 1913 a cerca del 47% en sus picos refleja la construcción de un Estado de bienestar —con jubilaciones, educación y salud públicas— que transformó la vida de millones de personas. Pero también refleja las tensiones de financiar ese Estado de manera sostenible, sin caer en déficit, deuda e inflación crónicos.</p>
+      <p>Los números muestran algunas verdades que conviene tener presentes en cualquier debate: que la mayor parte del gasto son <strong>jubilaciones y prestaciones sociales</strong>, no "gasto político"; que una parte importante la ejecutan las <strong>provincias</strong>, no solo la Nación; y que las decisiones sobre el gasto son, en última instancia, <strong>decisiones democráticas</strong> que se votan en el presupuesto.</p>
+      <p>Entender el gasto público es entender los límites y las posibilidades de lo que el Estado puede hacer. No se trata de estar "a favor" o "en contra" del gasto en abstracto, sino de comprender de dónde sale el dinero, a dónde va, y qué consecuencias tiene cada opción. Esa es la base para que la discusión sobre las cuentas públicas —una de las más importantes de cualquier democracia— se dé con datos y no con eslóganes.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo se conecta con varios temas del sitio: el <strong>presupuesto nacional</strong> (cómo se decide y aprueba el gasto), la <strong>coparticipación federal</strong> (cómo se reparten los recursos entre Nación y provincias), los <strong>impuestos</strong> (de dónde sale el dinero), y la <strong>población</strong> (el envejecimiento que explica el peso de las jubilaciones). Próximamente, un capítulo sobre la <strong>inflación</strong> completará esta mirada sobre la economía y el Estado.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>Ministerio de Economía · Serie de Gasto Público Consolidado (GPC)</strong> · argentina.gob.ar. Serie 1980-2024 y los informes de evolución del gasto por nivel de gobierno.</li>
+        <li><strong>Argendata (Fundar)</strong> · Serie histórica del gasto público desde 1913 (11,9% del PBI) hasta 2023 (41,9%), sus etapas y composición. Basada en Porto (2020-2021) y datos del Ministerio de Economía.</li>
+        <li><strong>Datos de la serie</strong> · 1913: 11,9% · 2001: 35,6% · 2016: 47,3% · 2020: 47,4% (pico, pandemia) · 2023: 41,9% · 2024: estimación de fuerte caída (~33,5%).</li>
+        <li><strong>Composición del gasto</strong> · Seguridad social cerca del 45% del gasto total (más del 60% del gasto primario nacional); servicios sociales ~25%; intereses de la deuda ~17% en 2025. Fuente: Presupuesto Nacional, informes de ejecución (ASAP) y Fundar.</li>
+        <li><strong>FMI · Staff Report</strong> · Proyección del peso de jubilaciones y pensiones: del 34% del gasto primario en 2023 a cerca del 46% en 2026.</li>
+        <li><strong>Reparto por nivel de gobierno</strong> · 1980: Nación 65%, provincias 28%, municipios 5%. 2023: Nación 53%, provincias 38%, municipios 8%. Fuente: Ministerio de Economía.</li>
+        <li><strong>Datos fiscales 2023-2024</strong> · Déficit de 4,6% del PBI (2023); superávit financiero de 0,3% del PBI (2024), el primero desde 2010. Fuente: Secretaría de Hacienda, informes de ejecución presupuestaria.</li>
+        <li><strong>UCEMA · CEA</strong> · Análisis de la trayectoria del gasto primario consolidado 1980-2016 y su relación con la deuda y los intereses.</li>
+        <li><strong>Chequeado</strong> · Verificaciones sobre la magnitud y evolución del gasto público consolidado.</li>
+      </ul>
+    </div>
+
+    <a href="poblacion.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>Cómo <em>creció</em> la Argentina</h3>
+        <p>El peso de las jubilaciones en el gasto se explica, en buena parte, por la demografía. Conocé cómo creció y envejeció la población argentina a lo largo de dos siglos: los censos, la inmigración y la transición demográfica que hoy condiciona las cuentas públicas.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER CAPÍTULO →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="gasto-publico.html">Gasto público</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
