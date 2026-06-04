@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>La inflación en Argentina (Cap. 16) — Educación Cívica</title>
+<meta name="description" content="La historia de la inflación en Argentina, contada con datos y sin grieta: dos siglos con un promedio del 51% anual, la hiperinflación de 1989 (más de 3000%), la estabilidad de la convertibilidad, la aceleración hasta el 211% en 2023 y la desaceleración al 31,5% en 2025. Qué es la inflación, cómo se mide, por qué Argentina la sufrió de forma crónica y las distintas explicaciones sobre sus causas.">
+<link rel="canonical" href="https://educacioncivica.com.ar/inflacion.html">
+<meta property="og:title" content="La inflación en Argentina · Dos siglos de precios">
+<meta property="og:description" content="La historia de la inflación argentina con datos: la hiperinflación de 1989, la convertibilidad, el 211% de 2023 y la desaceleración reciente. Por qué fue crónica y qué la explica.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/inflacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>16</strong> · Economía y moneda</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>La inflación</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 16 · Economía y moneda</div>
+    <h1 class="page-title">La <em>inflación</em> en Argentina</h1>
+    <div class="page-subtitulo">— Dos siglos de precios que no se quedan quietos</div>
+    <p class="page-intro">Pocos fenómenos marcaron tanto la vida cotidiana de los argentinos como la <strong>inflación</strong>. A lo largo de más de dos siglos, el país tuvo una inflación promedio cercana al <strong>51% anual</strong>, con episodios extremos como la <strong>hiperinflación de 1989</strong>, cuando los precios treparon más de <strong>3000% en un año</strong>. Hubo también períodos de calma —como la convertibilidad de los años 90, con inflación casi nula— y una fuerte aceleración reciente que llevó la suba anual al <strong>211% en 2023</strong>, antes de desacelerar al <strong>31,5% en 2025</strong>. Este capítulo recorre esa montaña rusa <strong>con datos verificables y sin grieta</strong>: qué es la inflación, cómo se mide, por qué la Argentina la sufrió de forma crónica, y cuáles son las distintas explicaciones —todas con argumentos— sobre sus causas.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">~51%</div>
+        <div class="page-stat-label">Promedio anual en 2 siglos</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">3079%</div>
+        <div class="page-stat-label">Pico hiperinflación (1989)</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">211%</div>
+        <div class="page-stat-label">Inflación de 2023</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">31,5%</div>
+        <div class="page-stat-label">Inflación de 2025</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es la inflación</a></li>
+      <li><a href="#dos-siglos">02 · Dos siglos de inflación</a></li>
+      <li><a href="#alta">03 · La era de la alta inflación</a></li>
+      <li><a href="#hiper">04 · La hiperinflación de 1989</a></li>
+      <li><a href="#convertibilidad">05 · La convertibilidad</a></li>
+      <li><a href="#siglo-xxi">06 · La inflación del siglo XXI</a></li>
+      <li><a href="#causas">07 · Por qué Argentina tiene inflación</a></li>
+      <li><a href="#medicion">08 · Quién mide la inflación</a></li>
+      <li><a href="#desaceleracion">09 · La desaceleración reciente</a></li>
+      <li><a href="#sintesis">10 · Qué nos dice la inflación</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es la <em>inflación</em></h2>
+      <p>La <strong>inflación</strong> es el aumento generalizado y sostenido de los precios de los bienes y servicios de una economía. Dicho de otro modo: cuando hay inflación, con la misma cantidad de dinero se compra cada vez menos. No se trata de que suba el precio de un producto puntual, sino de que <strong>suban casi todos los precios a la vez</strong>, de manera persistente.</p>
+      <p>Su efecto más profundo es que <strong>el dinero pierde valor</strong>. Si los precios aumentan 100% en un año, un billete que hoy alcanza para comprar algo, dentro de doce meses alcanzará para la mitad. Por eso la inflación funciona como un "impuesto invisible", que golpea especialmente a quienes tienen ingresos fijos y no pueden protegerse: jubilados, asalariados, los sectores más pobres.</p>
+      <p>Para medirla, se construye un <strong>Índice de Precios al Consumidor (IPC)</strong>: una canasta representativa de los bienes y servicios que consume una familia típica, cuyo precio se releva todos los meses. En Argentina, el organismo encargado de medir el IPC oficial es el <strong>INDEC</strong>.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Inflación, no "los precios están caros"</div>
+        <p>Conviene distinguir la inflación de otros fenómenos. Que un producto sea caro no es inflación; que un precio suba una vez tampoco. La inflación es la <strong>suba continua y generalizada</strong>. Tampoco hay que confundirla con la <strong>devaluación</strong> (la pérdida de valor de la moneda frente al dólar), aunque en Argentina ambas suelen ir de la mano: las devaluaciones tienden a trasladarse a los precios.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="dos-siglos">
+      <div class="seccion-num">02 · Dos siglos</div>
+      <h2>Dos <em>siglos</em> de inflación</h2>
+      <p>La inflación no es un problema nuevo en la Argentina: la acompaña, con altibajos, desde hace generaciones. Un estudio que analizó la evolución de los precios desde la Revolución de Mayo estimó que, a lo largo de más de <strong>210 años</strong>, la inflación promedió cerca del <strong>51% anual</strong>. Si se quitan del cálculo los años de hiperinflación, el promedio baja a alrededor del 9% anual, todavía elevado para los estándares internacionales.</p>
+      <p>Pero ese promedio esconde realidades muy distintas. Hubo largos períodos de relativa estabilidad y otros de descontrol. Como referencia, entre <strong>1935 y 1944</strong> la inflación promedió apenas <strong>3,5% anual</strong>; entre 1945 y 1955 saltó al 20,3%; y a partir de mediados de los años 70 se disparó a niveles de tres dígitos. La historia inflacionaria argentina es, sobre todo, una historia del <strong>siglo XX tardío</strong>.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Cinco monedas en seis décadas</div>
+        <p>Una forma elocuente de medir la inflación argentina es contar las veces que hubo que <strong>cambiar de moneda</strong> porque los números ya no entraban. Desde 1960, la Argentina tuvo <strong>cinco signos monetarios</strong>: el peso moneda nacional, el peso ley 18.188, el peso argentino, el austral y el peso actual. Cada cambio borró ceros que la inflación había agregado. En total, se le quitaron <strong>trece ceros</strong> a la moneda a lo largo de ese proceso.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="alta">
+      <div class="seccion-num">03 · La alta inflación</div>
+      <h2>La era de la <em>alta inflación</em></h2>
+      <p>Entre mediados de la década de 1940 y comienzos de los 90, la Argentina vivió una etapa de inflación cada vez más alta y persistente. Lo que empezó como una inflación moderada de dos dígitos fue escalando, década tras década, hasta volverse <strong>crónica</strong>.</p>
+      <p>A partir de <strong>1975</strong> —año del llamado "Rodrigazo", un brusco salto de precios y devaluación— la inflación se instaló en niveles de tres dígitos anuales. Durante los años 80 se volvió parte de la vida cotidiana: los precios se remarcaban varias veces por semana, la gente corría a gastar el sueldo apenas lo cobraba, y planificar a futuro se volvió casi imposible. Esa inestabilidad crónica fue minando la confianza en la moneda y preparando el terreno para el episodio más extremo.</p>
+    </div>
+
+    <div class="seccion" id="hiper">
+      <div class="seccion-num">04 · La hiperinflación</div>
+      <h2>La <em>hiperinflación</em> de 1989</h2>
+      <p>En <strong>1989</strong>, la Argentina vivió el episodio económico más traumático de su historia reciente: una <strong>hiperinflación</strong>. Los precios aumentaron más de <strong>3000% en el año</strong>. En los peores meses, la inflación mensual superó el 70-80%: los precios literalmente se duplicaban en semanas.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— La hiperinflación en perspectiva</div>
+        <div class="grafico-sub">Inflación anual en momentos clave. La hiperinflación de 1989-1990 fue de un orden de magnitud muy superior incluso al récord reciente.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">1989</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">~3079%</span></div>
+        <div class="barra-row"><span class="barra-lbl">1990</span><span class="barra-track"><span class="barra-fill" style="width:43.6%"></span></span><span class="barra-val">~1344%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill sol" style="width:6.9%"></span></span><span class="barra-val">211,4%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Conv.*</span><span class="barra-track"><span class="barra-fill alt" style="width:0.1%"></span></span><span class="barra-val">~0%</span></div>
+        <div class="grafico-nota">Fuente: estimaciones históricas y BCRA/INDEC. Las cifras de la hiperinflación varían según el método de medición (diciembre-diciembre o promedio anual). *Conv.: inflación anual promedio durante la convertibilidad (1991-2001), cercana a cero.</div>
+      </div>
+
+      <p>El impacto social fue devastador: la pobreza saltó de alrededor del 25% a comienzos de 1989 a un récord del <strong>47,3%</strong> en octubre de ese año. Hubo saqueos, revueltas y un clima de emergencia que precipitó el adelantamiento del traspaso presidencial. Un segundo pico hiperinflacionario se produjo a comienzos de <strong>1990</strong>. La hiperinflación dejó una marca profunda en la memoria colectiva argentina y volvió urgente encontrar una salida.</p>
+    </div>
+
+    <div class="seccion" id="convertibilidad">
+      <div class="seccion-num">05 · La convertibilidad</div>
+      <h2>La <em>convertibilidad</em> y la estabilidad</h2>
+      <p>La salida llegó en <strong>1991</strong> con la <strong>Ley de Convertibilidad</strong>, que estableció por ley una paridad fija: <strong>un peso igual a un dólar</strong>. El Banco Central solo podía emitir pesos respaldados por reservas, lo que frenó de raíz la emisión descontrolada. El efecto sobre la inflación fue inmediato y notable: pasó de miles por ciento a niveles cercanos a <strong>cero</strong>, e incluso hubo años de leve deflación (precios que bajan), como 1999 y 2001.</p>
+      <p>Durante una década, los argentinos vivieron con estabilidad de precios, algo inédito para varias generaciones. Pero el esquema tenía costos y rigideces: ataba la política monetaria, encarecía la producción nacional frente a la importada y dependía de un flujo constante de dólares. Cuando ese flujo se cortó, el modelo se volvió insostenible.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— El precio de la estabilidad</div>
+        <p>La convertibilidad mostró que la inflación argentina <strong>se podía detener</strong>, pero también que la estabilidad lograda con un ancla rígida puede ser frágil si no se acompaña de equilibrio en las cuentas públicas y la economía real. Su <strong>colapso a fines de 2001</strong>, en medio de una de las peores crisis de la historia argentina, devolvió la inflación a la escena: tras la devaluación de 2002, los precios volvieron a subir, aunque sin llegar a los niveles hiperinflacionarios.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="siglo-xxi">
+      <div class="seccion-num">06 · El siglo XXI</div>
+      <h2>La inflación del <em>siglo XXI</em></h2>
+      <p>Tras la salida de la convertibilidad, la inflación volvió a ser una compañía permanente, aunque con una dinámica distinta a la de los 80. Durante los años 2000 se mantuvo en niveles moderados, pero a partir de la década de 2010 fue acelerándose, primero a un ritmo del 20-30% anual, y luego con saltos cada vez mayores.</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Inflación anual reciente (% de aumento de precios)</div>
+        <div class="grafico-sub">Variación anual del IPC. Muestra la aceleración hasta 2023 y la posterior desaceleración.</div>
+        <div class="barra-row"><span class="barra-lbl">2017</span><span class="barra-track"><span class="barra-fill" style="width:11.7%"></span></span><span class="barra-val">24,8%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2018</span><span class="barra-track"><span class="barra-fill" style="width:22.5%"></span></span><span class="barra-val">47,6%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2019</span><span class="barra-track"><span class="barra-fill" style="width:25.5%"></span></span><span class="barra-val">53,8%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2020</span><span class="barra-track"><span class="barra-fill" style="width:17.1%"></span></span><span class="barra-val">36,1%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2021</span><span class="barra-track"><span class="barra-fill" style="width:24.1%"></span></span><span class="barra-val">50,9%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2022</span><span class="barra-track"><span class="barra-fill" style="width:44.8%"></span></span><span class="barra-val">94,8%</span></div>
+        <div class="barra-row destacada"><span class="barra-lbl">2023</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">211,4%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2024</span><span class="barra-track"><span class="barra-fill" style="width:55.7%"></span></span><span class="barra-val">117,8%</span></div>
+        <div class="barra-row"><span class="barra-lbl">2025</span><span class="barra-track"><span class="barra-fill sol" style="width:14.9%"></span></span><span class="barra-val">31,5%</span></div>
+        <div class="grafico-nota">Fuente: INDEC (IPC). En 2023, el 211,4% fue la inflación más alta del mundo ese año. En 2025, el 31,5% fue la más baja desde 2017.</div>
+      </div>
+
+      <p>El año <strong>2023</strong> marcó un récord de las últimas tres décadas: <strong>211,4%</strong>, la inflación anual más alta desde 1990 y la más alta del mundo ese año. A partir de 2024 comenzó una desaceleración sostenida, que llevó la inflación de 2024 al 117,8% y la de 2025 al <strong>31,5%</strong>, el registro más bajo desde 2017.</p>
+    </div>
+
+    <div class="seccion" id="causas">
+      <div class="seccion-num">07 · Las causas</div>
+      <h2>Por qué Argentina tiene <em>inflación crónica</em></h2>
+      <p>¿Por qué la Argentina sufrió inflación de forma tan persistente, cuando la mayoría de los países del mundo la tienen controlada? Es una de las grandes preguntas de la economía argentina, y existen <strong>distintas explicaciones</strong>, que ponen el acento en factores diferentes. Vale la pena conocerlas todas:</p>
+      <p>La <strong>mirada monetaria</strong> sostiene que la inflación es, en esencia, un fenómeno monetario: cuando el Estado gasta más de lo que recauda (déficit fiscal) y financia esa brecha <strong>emitiendo dinero</strong>, hay más pesos circulando sin un aumento equivalente de bienes, y eso empuja los precios. Desde esta óptica, la raíz del problema está en las cuentas públicas y la emisión, y la solución pasa por el equilibrio fiscal y monetario.</p>
+      <p>La <strong>mirada estructural o heterodoxa</strong> sostiene que la inflación tiene causas múltiples: la <strong>puja distributiva</strong> (empresas y trabajadores que compiten por su parte del ingreso subiendo precios y salarios), la <strong>inercia</strong> (contratos, expectativas y la costumbre de indexar), el <strong>tipo de cambio</strong> (las devaluaciones que se trasladan a precios) y rasgos estructurales de la economía. Desde esta óptica, atacar solo lo monetario no alcanza.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un punto de encuentro</div>
+        <p>Más allá de las diferencias, muchos economistas de distintas corrientes coinciden en un punto: el <strong>déficit fiscal persistente financiado con emisión</strong> fue un factor central en la inflación crónica argentina, como se vio en el capítulo sobre el gasto público. Las discrepancias aparecen en cuánto pesan los demás factores y, sobre todo, en las soluciones. Lo importante, desde una mirada cívica, es entender que la inflación es un fenómeno <strong>complejo y multicausal</strong>, y desconfiar tanto de las explicaciones como de las soluciones de una sola línea.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="medicion">
+      <div class="seccion-num">08 · La medición</div>
+      <h2>Quién <em>mide</em> la inflación</h2>
+      <p>Medir bien la inflación no es un tecnicismo: es una cuestión de <strong>transparencia democrática</strong>. De los datos de inflación dependen las paritarias salariales, la actualización de jubilaciones, los contratos, los impuestos y la confianza en las estadísticas públicas. Por eso la independencia y el rigor del organismo que mide —el <strong>INDEC</strong>— son fundamentales.</p>
+      <p>La Argentina vivió un episodio que ilustra la importancia de esto. Entre aproximadamente <strong>2007 y 2015</strong>, las estadísticas oficiales de inflación del INDEC fueron <strong>ampliamente cuestionadas</strong> por subregistrar la suba real de precios. Durante ese período, muchos analistas, universidades y oficinas estadísticas provinciales elaboraron mediciones alternativas, y el propio organismo fue reformulado posteriormente para recuperar su credibilidad. El episodio mostró hasta qué punto las estadísticas confiables son un <strong>bien público</strong>: sin datos creíbles, toda la economía y la vida cívica funcionan a ciegas.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué importa un dato creíble</div>
+        <p>Cuando un jubilado recibe un aumento "por inflación", cuando un sindicato negocia salarios, cuando se ajusta un alquiler o se calcula la pobreza, se usa el dato de inflación del INDEC. Si ese dato no refleja la realidad, millones de personas pierden poder adquisitivo sin saberlo. Por eso la <strong>calidad e independencia de las estadísticas públicas</strong> es un pilar silencioso pero esencial de una democracia que funciona.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="desaceleracion">
+      <div class="seccion-num">09 · La desaceleración</div>
+      <h2>La <em>desaceleración</em> reciente</h2>
+      <p>Desde 2024, la Argentina atraviesa un proceso de marcada desaceleración de la inflación. Tras el pico de 211,4% en 2023, la suba anual de precios bajó a 117,8% en 2024 y a <strong>31,5% en 2025</strong>, el nivel más bajo en casi una década. La inflación mensual, que en algunos meses de 2023 superó el 25%, pasó a ubicarse en torno al 2-3%.</p>
+      <p>Esta desaceleración se dio en el marco de un programa de estabilización basado, según sus impulsores, en tres pilares: el <strong>equilibrio fiscal</strong> (el superávit analizado en el capítulo del gasto público), el <strong>control de la cantidad de dinero</strong> y el ordenamiento del Banco Central. Argentina dejó de estar entre los países con mayor inflación del mundo, un puesto que había ocupado en 2023.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un proceso con costos y debates</div>
+        <p>Como en todo proceso económico, hay <strong>lecturas distintas</strong>, y este sitio no toma partido. Quienes lo respaldan destacan la fuerte y rápida baja de la inflación después de años de aceleración. Quienes lo miran con cautela señalan los costos sociales del ajuste que la acompañó y advierten que la desaceleración podría encontrar un piso difícil de perforar. Lo verificable es el <strong>dato</strong>: la inflación bajó de manera pronunciada entre 2023 y 2025. Su sostenibilidad en el tiempo es una pregunta abierta que solo los próximos años responderán.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">10 · Síntesis</div>
+      <h2>Qué nos dice la <em>inflación</em></h2>
+      <p>La historia de la inflación argentina es, en el fondo, la historia de una <strong>relación rota con la moneda</strong>. Décadas de inestabilidad enseñaron a los argentinos a desconfiar del peso, a refugiarse en el dólar, a gastar rápido y a vivir con un horizonte corto. La inflación no es solo un número: moldeó la cultura económica de un país entero.</p>
+      <p>Sus efectos son profundamente <strong>injustos</strong>: golpea más fuerte a quienes menos tienen y no pueden defenderse —los que cobran ingresos fijos, los que no tienen ahorros en moneda dura—, y dificulta cualquier planificación, tanto de las familias como de las empresas. Por eso la estabilidad de precios no es un objetivo "técnico" abstracto, sino una condición para una sociedad más previsible y equitativa.</p>
+      <p>Entender la inflación —qué es, cómo se mide, qué la causa— es una herramienta de <strong>ciudadanía económica</strong>. Permite leer con criterio los debates públicos, evaluar las promesas y las políticas, y no quedar a merced de explicaciones simplistas. En un país que conoció tanto el descontrol hiperinflacionario como la estabilidad, esa comprensión es, quizás, una de las lecciones más valiosas que dejan dos siglos de precios inquietos.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo se conecta directamente con el del <strong>gasto público</strong> (el déficit fiscal y su relación con la emisión y la inflación), y se completará próximamente con un capítulo sobre la <strong>deuda externa</strong>, la otra gran variable de la historia económica argentina. También dialoga con los temas de <strong>impuestos</strong>, <strong>presupuesto</strong> y <strong>coparticipación</strong>: todas piezas del mismo rompecabezas de las finanzas del Estado.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>INDEC · Índice de Precios al Consumidor (IPC)</strong> · Serie oficial de inflación. Datos anuales recientes: 2017 (24,8%), 2018 (47,6%), 2019 (53,8%), 2020 (36,1%), 2021 (50,9%), 2022 (94,8%), 2023 (211,4%), 2024 (117,8%), 2025 (31,5%).</li>
+        <li><strong>Argendata (Fundar)</strong> · Serie histórica de inflación y sus etapas. Promedios por período: 1935-1944 (3,5%), 1945-1955 (20,3%); episodios de hiperinflación de 1989 y 1990.</li>
+        <li><strong>Bolsa de Comercio de Santa Fe (CESyS)</strong> · Estimación de la inflación promedio de largo plazo: cerca del 51% anual en más de 210 años (y ~9% si se excluyen los años de hiperinflación).</li>
+        <li><strong>Hiperinflación de 1989-1990</strong> · Pico de ~3079% en 1989 (las cifras varían según medición); impacto social (pobreza del 47,3% en octubre de 1989). Fuentes: Wikipedia, Rapoport, prensa histórica.</li>
+        <li><strong>Ley de Convertibilidad (1991)</strong> · Paridad peso-dólar; reducción de la inflación a niveles cercanos a cero durante la década de 1990, con deflación en 1999 y 2001.</li>
+        <li><strong>Datos 2023-2025</strong> · 2023: 211,4% (la más alta del mundo ese año). 2024: 117,8%. 2025: 31,5% (la más baja desde 2017). Fuentes: INDEC, La Nación, Infobae, iProfesional.</li>
+        <li><strong>Cinco signos monetarios desde 1960</strong> · Peso moneda nacional, peso ley 18.188, peso argentino, austral y peso. Fuente: BCRA, Gerchunoff y Llach (1998).</li>
+        <li><strong>Debate sobre las causas</strong> · Síntesis de las miradas monetaria y estructural sobre la inflación argentina, basada en la literatura económica (Rapoport, Gerchunoff-Llach, entre otros).</li>
+      </ul>
+    </div>
+
+    <a href="gasto-publico.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>El <em>gasto</em> público</h3>
+        <p>La inflación argentina está estrechamente ligada a las cuentas públicas. Conocé cómo evolucionó el gasto del Estado, su relación con el déficit y la emisión, y el debate sobre el tamaño del Estado: la otra cara de la misma historia económica.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER CAPÍTULO →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="gasto-publico.html">Gasto público</a>
+      <a href="inflacion.html">Inflación</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
