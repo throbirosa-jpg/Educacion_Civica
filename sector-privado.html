@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El sector privado argentino (Cap. 17) — Educación Cívica</title>
+<meta name="description" content="Cómo se organiza la economía privada en Argentina, con datos y sin grieta: el peso del sector privado en el empleo y el PBI, las PyMEs (que generan el 77% del empleo privado), las grandes empresas y los sectores que dominan, la concentración de mercados, el capital nacional y extranjero, y la relación entre el Estado y los privados (regulación, entes, privatizaciones). Una mirada cívica a la economía donde el ciudadano trabaja y consume.">
+<link rel="canonical" href="https://educacioncivica.com.ar/sector-privado.html">
+<meta property="og:title" content="El sector privado argentino · Cómo se organiza la economía">
+<meta property="og:description" content="El peso del sector privado, las PyMEs y las grandes empresas, la concentración de mercados y la relación entre el Estado y los privados. Una mirada cívica con datos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/sector-privado.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Estudio premium · Capítulo <strong>17</strong> · Economía y Estado</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>El sector privado</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 17 · Economía y Estado</div>
+    <h1 class="page-title">El <em>sector privado</em> argentino</h1>
+    <div class="page-subtitulo">— Cómo se organiza la economía donde trabajamos y consumimos</div>
+    <p class="page-intro">La educación cívica no termina en el Estado. Buena parte de la vida económica de un país —el trabajo, los servicios, los productos que consumimos a diario— ocurre en el <strong>sector privado</strong>: las empresas, desde el kiosco de la esquina hasta las grandes compañías que cotizan en bolsa. Entender cómo está organizada esa economía es parte de entender el país en el que uno vota, trabaja y consume. Este capítulo ofrece una primera radiografía <strong>con datos y sin grieta</strong>: cuánto pesa el sector privado en el empleo, qué papel cumplen las <strong>PyMEs</strong> (que generan más de las tres cuartas partes del empleo privado) frente a las grandes empresas, qué sectores y compañías dominan la economía, qué es la <strong>concentración de mercados</strong>, y cómo se relacionan el Estado y los privados a través de la regulación.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">77%</div>
+        <div class="page-stat-label">Del empleo privado lo generan PyMEs</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~99%</div>
+        <div class="page-stat-label">De las empresas son PyMEs</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~6M</div>
+        <div class="page-stat-label">Asalariados privados registrados</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">500</div>
+        <div class="page-stat-label">Grandes empresas que releva el INDEC</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#que-es">01 · Qué es el sector privado</a></li>
+      <li><a href="#quien-emplea">02 · Quién emplea en Argentina</a></li>
+      <li><a href="#sectores">03 · El mapa de los sectores</a></li>
+      <li><a href="#grandes">04 · Las grandes empresas</a></li>
+      <li><a href="#pymes">05 · Las PyMEs: la columna vertebral</a></li>
+      <li><a href="#capital">06 · Capital nacional y extranjero</a></li>
+      <li><a href="#concentracion">07 · La concentración de mercados</a></li>
+      <li><a href="#estado">08 · El Estado y los privados</a></li>
+      <li><a href="#debate">09 · El debate sobre el rol del Estado</a></li>
+      <li><a href="#sintesis">10 · Qué nos dice el sector privado</a></li>
+      <li><a href="#fuentes">11 · Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="que-es">
+      <div class="seccion-num">01 · Qué es</div>
+      <h2>Qué es el <em>sector privado</em></h2>
+      <p>El <strong>sector privado</strong> es el conjunto de las actividades económicas que están en manos de particulares —personas y empresas— y no del Estado. Abarca desde un trabajador independiente o un comercio familiar hasta las grandes corporaciones que operan en energía, finanzas, alimentos o tecnología. Su motor es, en principio, la <strong>iniciativa privada</strong> y la búsqueda de ganancia, dentro del marco de reglas que fija el Estado.</p>
+      <p>¿Por qué es un tema cívico? Porque la enorme mayoría de los argentinos <strong>trabaja, consume y se relaciona a diario con el sector privado</strong>: el supermercado, el banco, la estación de servicio, la empresa de internet, la fábrica donde se trabaja. Entender cómo se organiza esa economía —quién emplea, qué empresas dominan, cómo se regulan— es tan parte de la ciudadanía como entender los poderes del Estado. Una democracia no se juega solo en las urnas: también en cómo se estructura su economía.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Una economía mixta</div>
+        <p>La Argentina, como casi todos los países, tiene una <strong>economía mixta</strong>: conviven el sector privado y el Estado. El Estado regula, cobra impuestos, presta servicios y, en algunos casos, participa directamente como empresario (YPF, Banco Nación, Aerolíneas y otras empresas con participación estatal). La frontera entre lo público y lo privado —qué debe hacer cada uno— es, justamente, una de las grandes discusiones de la política económica, que retomamos al final del capítulo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="quien-emplea">
+      <div class="seccion-num">02 · Quién emplea</div>
+      <h2>Quién <em>emplea</em> en Argentina</h2>
+      <p>Una buena forma de entrar al sector privado es por el empleo. En Argentina, los trabajadores se reparten, a grandes rasgos, entre el <strong>empleo privado registrado</strong> (unos 6 millones de asalariados), el <strong>empleo público</strong> (nacional, provincial y municipal), el <strong>trabajo independiente</strong> (monotributistas y autónomos), el trabajo en <strong>casas particulares</strong>, y una porción muy grande de <strong>empleo informal</strong> (sin registrar), que en Argentina ronda históricamente entre un tercio y un 40% de los ocupados.</p>
+      <p>Dentro del sector privado, el dato más revelador es el peso de las <strong>PyMEs</strong> (pequeñas y medianas empresas):</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Quién genera el empleo privado</div>
+        <div class="grafico-sub">Participación de PyMEs y grandes empresas en el empleo del sector privado.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">PyMEs</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">~77%</span></div>
+        <div class="barra-row"><span class="barra-lbl">Grandes</span><span class="barra-track"><span class="barra-fill alt" style="width:29.9%"></span></span><span class="barra-val">~23%</span></div>
+        <div class="grafico-nota">Fuente: UCEMA PyMEs sobre datos de SIPA/AFIP. Las PyMEs (incluyendo el sector formal e informal) generan alrededor del 77% del empleo privado del país.</div>
+      </div>
+
+      <p>Aunque las grandes empresas son las que más facturan y más aparecen en las noticias, son las <strong>PyMEs las que sostienen el empleo</strong>: representan cerca del 99% de las empresas del país y generan más de tres de cada cuatro puestos de trabajo privados. Es un dato clave para cualquier debate sobre la economía: cuando se habla de "las empresas", la enorme mayoría no son grandes corporaciones, sino pequeños y medianos emprendimientos.</p>
+    </div>
+
+    <div class="seccion" id="sectores">
+      <div class="seccion-num">03 · Los sectores</div>
+      <h2>El <em>mapa</em> de los sectores</h2>
+      <p>La economía privada argentina se reparte en grandes sectores, cada uno con su lógica, su peso en el empleo y su importancia estratégica:</p>
+      <ul>
+        <li><strong>Comercio.</strong> Es el principal empleador privado: reúne alrededor del <strong>20% del empleo registrado</strong>. Va desde grandes cadenas de supermercados hasta el comercio de barrio.</li>
+        <li><strong>Industria manufacturera.</strong> Históricamente central, abarca alimentos y bebidas, automotriz, siderurgia, química, textil. Sigue siendo uno de los mayores generadores de empleo de calidad.</li>
+        <li><strong>Agro y agroindustria.</strong> El sector más competitivo a nivel mundial y la principal fuente de divisas (dólares) del país: soja, maíz, trigo, carne. Emplea menos gente de forma directa, pero su peso económico y exportador es enorme.</li>
+        <li><strong>Energía y minería.</strong> Petróleo y gas (con <strong>Vaca Muerta</strong> como gran apuesta), electricidad, y minería. Un sector de fuerte inversión y creciente protagonismo exportador.</li>
+        <li><strong>Servicios.</strong> El sector más grande y diverso: finanzas, telecomunicaciones, transporte, salud y educación privadas, turismo, y los <strong>servicios basados en el conocimiento</strong> (software, servicios profesionales), una de las exportaciones que más creció.</li>
+        <li><strong>Construcción.</strong> Alrededor del 6% del empleo privado, muy sensible al ciclo económico y a la obra pública.</li>
+      </ul>
+      <div class="destacado">
+        <div class="destacado-titulo">— El campo, motor de divisas</div>
+        <p>Un rasgo distintivo de la economía argentina es el peso del <strong>complejo agroexportador</strong>. Aunque emplea una fracción relativamente baja de los trabajadores, el agro y la agroindustria (sobre todo el complejo sojero) aportan una porción enorme de los <strong>dólares</strong> que entran al país por exportaciones. Esto le da al sector un peso económico y político muy superior a su participación en el empleo, y lo coloca en el centro de muchos debates sobre impuestos (las retenciones), tipo de cambio y desarrollo.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="grandes">
+      <div class="seccion-num">04 · Las grandes empresas</div>
+      <h2>Las <em>grandes</em> empresas</h2>
+      <p>En la cima de la economía privada están las grandes empresas. El INDEC releva a las <strong>500 más grandes</strong> del país (la Encuesta Nacional de Grandes Empresas). Una forma de ver a las mayores que cotizan en la Bolsa es a través de su <strong>capitalización bursátil</strong> (el valor total de sus acciones), donde dominan la energía y los bancos:</p>
+
+      <div class="grafico">
+        <div class="grafico-titulo">— Mayores empresas por capitalización bursátil</div>
+        <div class="grafico-sub">Empresas líderes del panel del mercado argentino (Merval), por valor de mercado. Tamaño relativo.</div>
+        <div class="barra-row destacada"><span class="barra-lbl">YPF</span><span class="barra-track"><span class="barra-fill" style="width:100%"></span></span><span class="barra-val">Energía</span></div>
+        <div class="barra-row"><span class="barra-lbl">Galicia</span><span class="barra-track"><span class="barra-fill alt" style="width:43.9%"></span></span><span class="barra-val">Banco</span></div>
+        <div class="barra-row"><span class="barra-lbl">Telecom</span><span class="barra-track"><span class="barra-fill alt" style="width:32.6%"></span></span><span class="barra-val">Telecom.</span></div>
+        <div class="barra-row"><span class="barra-lbl">TGS</span><span class="barra-track"><span class="barra-fill alt" style="width:30.8%"></span></span><span class="barra-val">Gas / Energía</span></div>
+        <div class="barra-row"><span class="barra-lbl">Pampa</span><span class="barra-track"><span class="barra-fill alt" style="width:29%"></span></span><span class="barra-val">Energía</span></div>
+        <div class="barra-row"><span class="barra-lbl">B. Macro</span><span class="barra-track"><span class="barra-fill alt" style="width:28.5%"></span></span><span class="barra-val">Banco</span></div>
+        <div class="barra-row"><span class="barra-lbl">Ternium</span><span class="barra-track"><span class="barra-fill alt" style="width:12.7%"></span></span><span class="barra-val">Acero</span></div>
+        <div class="grafico-nota">Fuente: panel líder del Merval por capitalización bursátil (datos de mercado, 2026). El valor de mercado fluctúa a diario; el gráfico muestra tamaños relativos, no cifras fijas.</div>
+      </div>
+
+      <p>Más allá de la bolsa, algunas de las empresas más grandes del país por facturación combinan capitales nacionales, extranjeros y estatales. Estas son algunas de las principales, por sector:</p>
+
+      <table class="definiciones">
+        <tr><th>Sector</th><th>Empresas destacadas</th></tr>
+        <tr><td><strong>Energía y petróleo</strong></td><td>YPF (mayoría estatal), Pan American Energy, Tecpetrol, Pampa Energía, Vista</td></tr>
+        <tr><td><strong>Siderurgia y aluminio</strong></td><td>Techint / Tenaris / Ternium (grupo Rocca), Aluar</td></tr>
+        <tr><td><strong>Alimentos y bebidas</strong></td><td>Arcor, Mastellone (La Serenísima), Molinos, Ledesma</td></tr>
+        <tr><td><strong>Bancos</strong></td><td>Banco Nación (estatal), Galicia, Santander, Macro, BBVA</td></tr>
+        <tr><td><strong>Tecnología</strong></td><td>Mercado Libre, Globant</td></tr>
+        <tr><td><strong>Comercio / consumo</strong></td><td>Cadenas de supermercados, La Anónima, Coto</td></tr>
+      </table>
+
+      <p>Un dato cívicamente relevante: <strong>no todas las grandes empresas son privadas</strong>. El <strong>Banco Nación</strong> es 100% estatal y suele encabezar los rankings por volumen; <strong>YPF</strong> es de mayoría estatal (el Estado controla el 51%). La economía argentina mezcla, en su cúpula, capitales privados nacionales, multinacionales extranjeras y empresas con participación del Estado.</p>
+    </div>
+
+    <div class="seccion" id="pymes">
+      <div class="seccion-num">05 · Las PyMEs</div>
+      <h2>Las <em>PyMEs</em>: la columna vertebral</h2>
+      <p>Si las grandes empresas son la cima, las <strong>PyMEs</strong> son la base sobre la que se apoya casi todo. Como vimos, generan alrededor del <strong>77% del empleo privado</strong> y son cerca del <strong>99% de las empresas</strong> del país. Pero su rol va más allá de los números: son el entramado productivo de cada ciudad y cada pueblo, las que sostienen el empleo local y las que más sufren —y más tardan en recuperarse— en cada crisis.</p>
+      <p>Los estudios muestran que las PyMEs tienen una <strong>alta vulnerabilidad</strong> ante la inestabilidad económica: en la crisis de 2020 se perdieron centenares de miles de puestos privados, y la mayor parte de esa caída se concentró en el mundo PyME. También enfrentan desafíos estructurales: acceso al crédito, presión impositiva, costos, y rezagos de productividad. En 2024, en un contexto de fuerte ajuste, la cantidad de PyMEs registró un descenso neto.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por qué importan cívicamente las PyMEs</div>
+        <p>Cuando se discuten políticas económicas —impuestos, legislación laboral, crédito, tarifas—, las PyMEs suelen ser las más afectadas y las que menos espalda tienen para resistir. Por eso muchos debates de política pública giran en torno a cómo sostener este segmento, que es <strong>el principal generador de empleo</strong>. Entender su peso ayuda a leer con criterio promesas y medidas que dicen defender "a las empresas" o "al trabajo".</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="capital">
+      <div class="seccion-num">06 · Capital nacional y extranjero</div>
+      <h2>Capital <em>nacional</em> y extranjero</h2>
+      <p>Otra dimensión clave es el <strong>origen del capital</strong>. En la economía argentina conviven empresas de capital nacional (de dueños argentinos) y <strong>multinacionales extranjeras</strong> que operan en el país. Las extranjeras suelen concentrarse en sectores de alta inversión —automotriz, energía, bancos, consumo masivo, tecnología— y, según los estudios, tienden a tener mayor rentabilidad y a pagar, en promedio, más impuestos que las nacionales.</p>
+      <p>El flujo de capital extranjero es un tema sensible: para algunos es una fuente necesaria de inversión, tecnología y empleo; para otros, plantea interrogantes sobre la soberanía económica y la remisión de utilidades al exterior. Las grandes operaciones de compra y venta de empresas reflejan este movimiento permanente de capitales.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Un caso ilustrativo: la venta de las estaciones Shell</div>
+        <p>En <strong>junio de 2026</strong>, el grupo energético suizo <strong>Mercuria</strong> compró la red de <strong>894 estaciones de servicio Shell</strong> en Argentina (operadas hasta entonces por Raízen, un joint venture de Shell y la brasileña Cosan) por unos <strong>USD 1.420 millones</strong>. El negocio incluía además una refinería y plantas de combustible. El caso ilustra varios fenómenos a la vez: la <strong>inversión extranjera</strong>, la circulación de activos entre grandes grupos, y la <strong>concentración de mercados</strong>, ya que esa sola red representa cerca del <strong>18% de la venta de combustible</strong> del país.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="concentracion">
+      <div class="seccion-num">07 · La concentración</div>
+      <h2>La <em>concentración</em> de mercados</h2>
+      <p>Un concepto central para mirar críticamente la economía privada es la <strong>concentración de mercados</strong>: cuántas empresas compiten realmente en cada sector. No es lo mismo un mercado con muchos oferentes que uno dominado por unas pocas empresas. Los economistas distinguen, a grandes rasgos:</p>
+      <ul>
+        <li><strong>Competencia.</strong> Muchas empresas ofrecen lo mismo; ninguna puede fijar el precio por su cuenta. Beneficia al consumidor.</li>
+        <li><strong>Oligopolio.</strong> Pocas empresas dominan el mercado (por ejemplo, telefonía, combustibles, algunos alimentos). Pueden tener más poder para influir en los precios.</li>
+        <li><strong>Monopolio.</strong> Una sola empresa controla todo el mercado. Es la situación menos favorable para el consumidor, y por eso suele estar regulada o prohibida.</li>
+      </ul>
+      <p>En la Argentina, varios sectores clave están <strong>relativamente concentrados</strong>: pocas empresas dominan buena parte del mercado de combustibles, de telefonía, de internet, de ciertos alimentos básicos. Que una sola red de estaciones represente el 18% del combustible, como en el ejemplo anterior, da una idea de esa concentración. Por eso existe la <strong>defensa de la competencia</strong>: un conjunto de normas y un organismo estatal encargados de evitar abusos de posición dominante y de revisar las grandes fusiones para que no perjudiquen a los consumidores.</p>
+    </div>
+
+    <div class="seccion" id="estado">
+      <div class="seccion-num">08 · El Estado y los privados</div>
+      <h2>El <em>Estado</em> y los privados</h2>
+      <p>El sector privado no opera en el vacío: lo hace dentro de un marco de <strong>reglas que fija el Estado</strong>. Esa relación toma muchas formas:</p>
+      <ul>
+        <li><strong>Regulación.</strong> El Estado fija normas sobre precios de servicios públicos, calidad, seguridad, condiciones laborales, defensa del consumidor y del medio ambiente.</li>
+        <li><strong>Entes reguladores.</strong> Organismos especializados controlan sectores estratégicos: el <strong>ENRE</strong> (electricidad), el <strong>ENARGAS</strong> (gas), el <strong>ENACOM</strong> (comunicaciones), entre otros. Vigilan que las empresas privatizadas o concesionadas cumplan sus obligaciones.</li>
+        <li><strong>Defensa de la competencia.</strong> Para evitar monopolios y abusos, y revisar las grandes fusiones y adquisiciones.</li>
+        <li><strong>Privatizaciones y estatizaciones.</strong> A lo largo de la historia, el Estado pasó empresas a manos privadas (las grandes privatizaciones de los años 90: teléfonos, energía, agua, aerolíneas) y, en otros momentos, volvió a tomar el control de algunas (como la reestatización parcial de YPF en 2012 o del sistema de jubilaciones en 2008).</li>
+      </ul>
+      <div class="destacado">
+        <div class="destacado-titulo">— Mercado y reglas, no opuestos</div>
+        <p>Un punto importante para el debate: <strong>mercado y Estado no son necesariamente opuestos</strong>. Incluso las economías más liberales necesitan reglas claras, justicia que haga cumplir los contratos, y organismos que eviten abusos. La discusión no suele ser "mercado sí o no", sino <strong>cuántas y cuáles reglas</strong>, qué debe quedar en manos privadas y qué en manos del Estado, y cómo se equilibra la libertad económica con la protección de consumidores y trabajadores.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="debate">
+      <div class="seccion-num">09 · El debate</div>
+      <h2>El <em>debate</em> sobre el rol del Estado en la economía</h2>
+      <p>Aquí llegamos, como en los capítulos de gasto público e inflación, a una de las discusiones más intensas de la Argentina, y conviene presentarla con equilibrio: <strong>no hay una única respuesta correcta</strong>, sino visiones distintas que se apoyan en valores y diagnósticos diferentes.</p>
+      <p>Quienes defienden una <strong>economía más liberal</strong> sostienen que el motor del crecimiento es la iniciativa privada, que el Estado debe limitarse a garantizar reglas y competencia, y que menos regulaciones e impuestos liberan la inversión, la productividad y el empleo. Ven en el sector privado al principal creador de riqueza.</p>
+      <p>Quienes defienden una <strong>mayor presencia del Estado</strong> sostienen que el mercado, librado a sí mismo, tiende a la concentración y a dejar afuera a los más débiles, y que el Estado debe regular, redistribuir y, en sectores estratégicos, participar directamente para garantizar el interés general por encima de la ganancia privada.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Una discusión democrática</div>
+        <p>Como en los demás temas económicos, este sitio <strong>no toma partido</strong>. El equilibrio entre el mercado y el Estado, el grado de regulación, qué privatizar o estatizar, son <strong>decisiones democráticas legítimas</strong> que se debaten en cada elección y se plasman en leyes votadas por el Congreso. Lo que aporta una ciudadanía informada no es elegir un bando de antemano, sino entender cómo funciona la economía privada y cuáles son los costos y beneficios de cada modelo, para participar del debate con criterio propio.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="sintesis">
+      <div class="seccion-num">10 · Síntesis</div>
+      <h2>Qué nos dice el <em>sector privado</em></h2>
+      <p>Mirar el sector privado completa la foto de la educación cívica: el Estado y la economía privada son las <strong>dos grandes estructuras</strong> dentro de las cuales transcurre la vida de los ciudadanos. Conocer cómo se organiza la economía —quién emplea, qué empresas dominan, cómo se concentra cada mercado, cómo lo regula el Estado— es tan importante como conocer los poderes públicos.</p>
+      <p>Los datos dejan algunas ideas fuerza: que las <strong>PyMEs</strong>, no las grandes corporaciones, son el principal sostén del empleo; que algunos mercados están <strong>concentrados</strong> en pocas manos, lo que justifica la defensa de la competencia; que en la cúpula conviven capitales <strong>nacionales, extranjeros y estatales</strong>; y que la relación entre el Estado y los privados se rige por reglas que son, en última instancia, <strong>decisiones democráticas</strong>.</p>
+      <p>Este capítulo es apenas una primera radiografía de un tema enorme. La intención no es agotar la economía privada, sino dar herramientas para mirarla con ojos cívicos: ni con fascinación acrítica por "el mercado", ni con rechazo automático a "las empresas", sino entendiendo cómo funciona el lugar donde la mayoría de nosotros trabaja, produce y consume todos los días.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Para seguir explorando</div>
+        <p>Este capítulo se conecta con los de <strong>gasto público</strong>, <strong>inflación</strong> e <strong>impuestos</strong>: el sector privado es quien produce la riqueza que el Estado grava y redistribuye. También dialoga con la <strong>población</strong> (la fuerza de trabajo) y con los <strong>derechos</strong> (laborales, del consumidor). Es una primera entrada a un área que iremos ampliando con datos más detallados de cada sector.</p>
+      </div>
+    </div>
+
+    <div class="seccion" id="fuentes">
+      <div class="seccion-num">11 · Fuentes</div>
+      <h2>Documentación y <em>referencias</em></h2>
+      <ul>
+        <li><strong>INDEC · Encuesta Nacional de Grandes Empresas (ENGE)</strong> · Releva a las 500 empresas más grandes del país; datos de facturación, empleo y costo laboral.</li>
+        <li><strong>UCEMA PyMEs</strong> · Informes sobre la evolución de las PyMEs y su impacto en el empleo: generan cerca del 77% del empleo privado y son alrededor del 99% de las empresas; descenso neto de PyMEs en 2024.</li>
+        <li><strong>Secretaría de Trabajo (SIPA) y Centro CEPA</strong> · Composición del empleo registrado privado por sector: el comercio es el principal empleador (~20%), la construcción ronda el 6%.</li>
+        <li><strong>Panel líder del Merval (BYMA)</strong> · Mayores empresas por capitalización bursátil (2026): YPF, Banco Galicia, Telecom, TGS, Pampa Energía, Banco Macro, Ternium, entre otras.</li>
+        <li><strong>Rankings empresariales (Mercado, Forbes, Merco)</strong> · Principales empresas por facturación y reputación: Banco Nación, Tenaris/Techint, Pan American Energy, YPF, Mercado Libre, Arcor, Aluar, Mastellone, entre otras.</li>
+        <li><strong>Infobae (4 de junio de 2026)</strong> · Venta de las 894 estaciones de servicio Shell al grupo suizo Mercuria por USD 1.420 millones; la red representa el 18% del mercado de combustible.</li>
+        <li><strong>Centro CEPA · INDEC</strong> · Análisis comparativo de rentabilidad e impuestos de empresas nacionales y extranjeras entre las más grandes del país.</li>
+        <li><strong>Marco regulatorio</strong> · Entes reguladores (ENRE, ENARGAS, ENACOM), régimen de defensa de la competencia, y antecedentes de privatizaciones (años 90) y reestatizaciones (YPF 2012, sistema previsional 2008).</li>
+      </ul>
+    </div>
+
+    <a href="gasto-publico.html" class="proximo-cap">
+      <div>
+        <div class="proximo-cap-eyebrow">— Seguir explorando</div>
+        <h3>El <em>gasto</em> público</h3>
+        <p>El sector privado produce la riqueza; el Estado la grava y la redistribuye. Conocé cómo evolucionó el gasto público, su financiamiento y el debate sobre el tamaño del Estado: la otra mitad de la economía argentina.</p>
+      </div>
+      <div class="proximo-cap-arrow">VER CAPÍTULO →</div>
+    </a>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="gasto-publico.html">Gasto público</a>
+      <a href="inflacion.html">Inflación</a>
+      <a href="sector-privado.html">Sector privado</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a junio de 2026
+    </div>
+  </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
