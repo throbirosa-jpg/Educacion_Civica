@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Aula abierta · Aprendé desde cero — Educación Cívica</title>
+<meta name="description" content="Cuatro lecciones para aprender desde cero cómo funciona el Estado argentino: la división de poderes, el recorrido de una ley del proyecto al Boletín Oficial, el sistema electoral y cómo se cuentan los votos, y el federalismo. Explicaciones simples, sin tecnicismos, con enlaces para profundizar.">
+<link rel="canonical" href="https://educacioncivica.com.ar/aula.html">
+<meta property="og:title" content="Aula abierta · Aprendé desde cero cómo funciona todo">
+<meta property="og:description" content="Cuatro lecciones introductorias sobre el Estado argentino: división de poderes, cómo se hace una ley, el sistema electoral y el federalismo. Explicado simple, desde cero.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/aula.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  .leccion-badge { display:inline-flex; align-items:center; gap:0.6rem; margin-bottom:1rem; font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; }
+  .leccion-badge .lb-nivel { background:var(--sol); color:var(--tinta); padding:0.2rem 0.6rem; border-radius:3px; font-weight:600; }
+  .leccion-badge .lb-tiempo { color:var(--premium-dark); font-weight:600; }
+  .paso-lista { counter-reset: paso; list-style:none; padding:0; margin:1.5rem 0; }
+  .paso-lista li { counter-increment: paso; position:relative; padding:0.9rem 0 0.9rem 3.2rem; border-bottom:1px solid var(--linea); }
+  .paso-lista li:last-child { border-bottom:none; }
+  .paso-lista li::before { content: counter(paso); position:absolute; left:0; top:0.8rem; width:2.2rem; height:2.2rem; background:var(--premium); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:0.95rem; }
+  .recordar { background:linear-gradient(135deg, rgba(246,180,14,0.12), rgba(246,180,14,0.04)); border-left:3px solid var(--sol); border-radius:0 8px 8px 0; padding:1.2rem 1.4rem; margin:1.5rem 0; }
+  .recordar-titulo { font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--sol-dark); font-weight:600; margin-bottom:0.5rem; }
+  .recordar p { margin:0; }
+</style>
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --verde: #4A7C59; --verde-soft: #D5E5D6;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.7; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium-dark); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-subtitulo { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; font-weight: 500; }
+  .page-intro { font-size: 1.15rem; line-height: 1.75; color: var(--tinta); max-width: 780px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.83rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; scroll-margin-top: 100px; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.35rem; color: var(--tinta); margin: 2.2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido p { margin-bottom: 1.2rem; font-size: 1.02rem; color: var(--tinta); }
+  .contenido p strong { color: var(--tinta); font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .contenido li { margin-bottom: 0.6rem; font-size: 1.02rem; line-height: 1.65; }
+  .contenido li strong { color: var(--premium-dark); font-weight: 600; }
+
+  .seccion { margin-bottom: 3.5rem; }
+  .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium); margin-bottom: 1rem; font-weight: 600; }
+
+  .destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.6rem; font-weight: 600; }
+  .destacado p { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+  .destacado p:last-child { margin-bottom: 0; }
+
+  .cita { background: var(--crema-warm); border-left: 4px solid var(--sol-dark); padding: 1.5rem 1.8rem; margin: 2rem 0; font-style: italic; font-size: 1.02rem; line-height: 1.7; }
+  .cita-fuente { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--tinta-soft); margin-top: 0.8rem; display: block; }
+
+  .ficha-poder { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .ficha-poder-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 1.2rem; font-weight: 600; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .ficha-item { }
+  .ficha-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .ficha-valor { font-size: 0.97rem; color: var(--tinta); line-height: 1.4; font-weight: 500; }
+  .ficha-valor strong { color: var(--premium-dark); font-weight: 600; }
+
+  .definiciones { background: white; border: 1px solid var(--linea); margin: 2rem 0; overflow-x: auto; }
+  .definiciones table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .definiciones th { background: var(--premium-soft); padding: 0.8rem 1rem; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--premium-dark); border-bottom: 1px solid var(--linea); font-weight: 600; }
+  .definiciones td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea-soft); color: var(--tinta); vertical-align: top; }
+  .definiciones td strong { color: var(--premium-dark); }
+  .definiciones tr:last-child td { border-bottom: none; }
+
+  .proximo-cap { background: var(--premium); color: var(--crema); padding: 2.5rem; margin: 4rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; text-decoration: none; transition: background 0.2s; }
+  .proximo-cap:hover { background: var(--premium-dark); }
+  @media (max-width: 700px) { .proximo-cap { grid-template-columns: 1fr; } }
+  .proximo-cap-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sol); margin-bottom: 0.6rem; }
+  .proximo-cap h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: var(--crema); margin-bottom: 0.5rem; }
+  .proximo-cap h3 em { font-style: italic; color: var(--sol); }
+  .proximo-cap p { color: rgba(251, 247, 240, 0.92); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .proximo-cap-arrow { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--sol); white-space: nowrap; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ===== GRÁFICOS DE BARRAS ===== */
+  .grafico { background: white; border: 1px solid var(--linea); padding: 1.8rem; margin: 2rem 0; }
+  .grafico-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--premium-dark); margin-bottom: 0.4rem; font-weight: 600; }
+  .grafico-sub { font-size: 0.85rem; color: var(--tinta-soft); margin-bottom: 1.4rem; line-height: 1.5; }
+  .barra-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 0.8rem; margin-bottom: 0.55rem; }
+  .barra-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-align: right; font-weight: 500; }
+  .barra-track { background: var(--linea-soft); height: 22px; position: relative; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--premium); transition: width 0.3s; }
+  .barra-fill.sol { background: var(--sol-dark); }
+  .barra-fill.alt { background: var(--premium-dark); }
+  .barra-val { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta); font-weight: 600; white-space: nowrap; min-width: 78px; }
+  .barra-row.destacada .barra-fill { background: var(--sol-dark); }
+  .barra-row.destacada .barra-val { color: var(--sol-dark); }
+  .grafico-nota { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--tinta-soft); opacity: 0.8; margin-top: 1.2rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Aula abierta · Lecciones introductorias · <strong>Nivel inicial</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Aula abierta</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Aula abierta · Aprendé desde cero</div>
+    <h1 class="page-title">Cómo funciona <em>todo</em></h1>
+    <div class="page-subtitulo">— Cuatro lecciones para empezar de cero</div>
+    <p class="page-intro">El resto del sitio entra en profundidad, con datos y detalle. Esta sección hace lo contrario: <strong>empieza desde cero</strong>. Son cuatro lecciones cortas, en lenguaje simple y sin tecnicismos, para entender las cuatro ideas básicas sobre cómo funciona el Estado argentino: cómo está dividido el poder, cómo nace una ley, cómo se eligen las autoridades y cómo se reparte el poder entre la Nación y las provincias. Si una lección te deja con ganas de más, al final de cada una vas a encontrar un enlace para <strong>profundizar</strong> en la página correspondiente. No hace falta saber nada de antemano: empezamos por lo más importante.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">4</div>
+        <div class="page-stat-label">Lecciones desde cero</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">~40'</div>
+        <div class="page-stat-label">Tiempo total de lectura</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">0</div>
+        <div class="page-stat-label">Conocimientos previos necesarios</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">+</div>
+        <div class="page-stat-label">Enlaces para profundizar</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— Las lecciones</div>
+    <ul>
+      <li><a href="#leccion-1">01 · La división de poderes</a></li>
+      <li><a href="#leccion-2">02 · Cómo se hace una ley</a></li>
+      <li><a href="#leccion-3">03 · Cómo se cuentan los votos</a></li>
+      <li><a href="#leccion-4">04 · Qué es el federalismo</a></li>
+      <li><a href="#seguir">05 · Seguir aprendiendo</a></li>
+    </ul>
+  </aside>
+
+  <article class="contenido">
+
+    <div class="seccion" id="leccion-1">
+      <div class="seccion-num">Lección 01</div>
+      <h2>¿Qué es la <em>división de poderes</em> y por qué existe?</h2>
+      <div class="leccion-badge"><span class="lb-nivel">Nivel inicial</span> <span class="lb-tiempo">8 min de lectura</span></div>
+
+      <p>Imaginá que una sola persona, o un solo grupo, pudiera hacer las leyes, hacerlas cumplir y además juzgar a quien no las cumple. Tendría un poder enorme, sin nadie que lo controle. Para evitar justamente eso, las democracias modernas <strong>reparten el poder del Estado en tres partes</strong> que se controlan entre sí. Es la idea más importante de todas, y se llama <strong>división de poderes</strong>.</p>
+
+      <p>En la Argentina, esos tres poderes son:</p>
+      <ul>
+        <li><strong>El Poder Legislativo</strong> (el Congreso): <strong>hace las leyes</strong>. Está formado por dos cámaras, la de Diputados y la de Senadores, donde se sientan los representantes que elegimos por voto.</li>
+        <li><strong>El Poder Ejecutivo</strong> (el presidente y su gobierno): <strong>administra el país y hace cumplir las leyes</strong>. Conduce el día a día del Estado.</li>
+        <li><strong>El Poder Judicial</strong> (los jueces y tribunales, con la Corte Suprema a la cabeza): <strong>juzga y resuelve los conflictos</strong> aplicando las leyes, y controla que se respete la Constitución.</li>
+      </ul>
+
+      <p>La clave es que ninguno manda sobre los otros: se <strong>equilibran y se controlan mutuamente</strong>. Es lo que se conoce como el sistema de "frenos y contrapesos". Por ejemplo, el Congreso hace una ley, pero el presidente puede vetarla; el presidente gobierna, pero el Congreso controla y puede rechazar sus decisiones; y la Justicia puede declarar que una ley o una medida es inconstitucional. Cada poder tiene una forma de frenar a los otros.</p>
+
+      <div class="recordar">
+        <div class="recordar-titulo">— Para recordar</div>
+        <p>Tres poderes, tres funciones: el Legislativo <strong>hace</strong> las leyes, el Ejecutivo las <strong>aplica</strong>, y el Judicial las <strong>interpreta y juzga</strong>. Existen separados para que nadie acumule todo el poder: se controlan entre sí.</p>
+      </div>
+
+      <p>Esta división no es un capricho: nació de siglos de experiencia histórica que mostraron que el poder concentrado en pocas manos termina en abusos. Por eso la Constitución argentina, desde 1853, la establece como uno de sus pilares.</p>
+
+      <a href="poderes.html" class="proximo-cap">
+        <div>
+          <div class="proximo-cap-eyebrow">— Profundizar</div>
+          <h3>Los tres <em>poderes</em> en detalle</h3>
+          <p>Conocé cómo se compone cada poder, cuántos diputados y senadores hay, cómo se elige la Corte Suprema y cómo funcionan en la práctica los frenos y contrapesos.</p>
+        </div>
+        <div class="proximo-cap-arrow">VER PÁGINA →</div>
+      </a>
+    </div>
+
+    <div class="seccion" id="leccion-2">
+      <div class="seccion-num">Lección 02</div>
+      <h2>El recorrido de una <em>ley</em>: del proyecto al Boletín Oficial</h2>
+      <div class="leccion-badge"><span class="lb-nivel">Nivel inicial</span> <span class="lb-tiempo">12 min de lectura</span></div>
+
+      <p>Una ley no aparece de un día para el otro. Antes de que una norma nos obligue a todos, recorre un camino con varias etapas, pensado para que se discuta, se revise y se vote. Veamos ese recorrido paso a paso.</p>
+
+      <ul class="paso-lista">
+        <li><strong>Nace el proyecto.</strong> Alguien propone la idea de la ley (un "proyecto"). Puede presentarlo un diputado, un senador, el Poder Ejecutivo, o incluso la ciudadanía a través de mecanismos de iniciativa popular.</li>
+        <li><strong>Se discute en comisiones.</strong> El proyecto entra en una de las dos cámaras (Diputados o Senadores) y pasa primero por comisiones temáticas: grupos más chicos de legisladores especializados que lo estudian y emiten un dictamen (una recomendación).</li>
+        <li><strong>Se vota en el recinto.</strong> Luego el proyecto va al "recinto", la sala donde están todos los legisladores de esa cámara, que lo debaten y lo votan. Esta primera cámara se llama "cámara de origen".</li>
+        <li><strong>Pasa a la otra cámara.</strong> Si se aprueba, el proyecto pasa a la otra cámara (la "cámara revisora"), que repite el proceso: comisiones, debate y votación. Las dos cámaras deben aprobar el mismo texto.</li>
+        <li><strong>Promulgación.</strong> Cuando ambas cámaras aprueban el proyecto, este queda "sancionado" y pasa al Poder Ejecutivo. El presidente puede promulgarlo (aceptarlo) o vetarlo (rechazarlo, total o parcialmente).</li>
+        <li><strong>Publicación.</strong> Una vez promulgada, la ley se publica en el <strong>Boletín Oficial</strong>. Recién ahí entra en vigencia y nos obliga a todos.</li>
+      </ul>
+
+      <p>Este ida y vuelta entre las dos cámaras puede parecer lento, pero tiene un sentido: garantizar que las leyes se discutan en serio, desde distintos ángulos, antes de afectar la vida de millones de personas. Es la división de poderes de la lección anterior, funcionando en la práctica: el Congreso hace la ley, pero el Ejecutivo participa al final con la promulgación o el veto.</p>
+
+      <div class="recordar">
+        <div class="recordar-titulo">— Para recordar</div>
+        <p>Un proyecto se convierte en ley así: <strong>comisiones → votación en una cámara → la otra cámara → promulgación del Ejecutivo → publicación en el Boletín Oficial</strong>. Solo entonces tiene fuerza de ley.</p>
+      </div>
+
+      <a href="poderes.html" class="proximo-cap">
+        <div>
+          <div class="proximo-cap-eyebrow">— Profundizar</div>
+          <h3>El <em>Congreso</em> y el proceso legislativo</h3>
+          <p>Conocé en detalle cómo trabaja el Congreso, qué pasa cuando una cámara modifica el proyecto de la otra, cómo se insiste ante un veto y qué son las sesiones ordinarias y extraordinarias.</p>
+        </div>
+        <div class="proximo-cap-arrow">VER PÁGINA →</div>
+      </a>
+    </div>
+
+    <div class="seccion" id="leccion-3">
+      <div class="seccion-num">Lección 03</div>
+      <h2>El sistema <em>electoral</em>: cómo se cuentan los votos</h2>
+      <div class="leccion-badge"><span class="lb-nivel">Nivel intermedio</span> <span class="lb-tiempo">10 min de lectura</span></div>
+
+      <p>Votar es fácil: ponés tu boleta en la urna. Pero, ¿qué pasa después? ¿Cómo se transforman millones de votos en cargos concretos? Acá hay un detalle clave que mucha gente no conoce: <strong>no todos los cargos se reparten de la misma manera</strong>.</p>
+
+      <p>Hay dos grandes formas de contar los votos en la Argentina:</p>
+      <ul>
+        <li><strong>Para cargos ejecutivos</strong> (presidente, gobernadores, intendentes), gana quien obtiene más votos. Es una lógica de "el que gana, gana todo". En el caso del presidente, además, existen reglas especiales: puede haber una segunda vuelta (balotaje) si nadie alcanza los porcentajes necesarios en la primera.</li>
+        <li><strong>Para cargos legislativos</strong> (diputados, senadores, concejales), los cargos se <strong>reparten de manera proporcional</strong> entre las fuerzas políticas, según el porcentaje de votos que sacó cada una. Así, una elección no la "gana" un solo partido: la banca se distribuye para que distintas fuerzas estén representadas.</li>
+      </ul>
+
+      <p>Para repartir las bancas de diputados se usa un método matemático llamado <strong>sistema D'Hondt</strong>, que asegura que el reparto sea proporcional a los votos. La idea de fondo es que el Congreso refleje, lo mejor posible, la diversidad de lo que votó la sociedad: si un partido sacó el 30% de los votos, debería tener aproximadamente el 30% de las bancas en juego.</p>
+
+      <p>También es importante saber que la elección la organiza y controla la <strong>Justicia Electoral</strong>, un conjunto de jueces y organismos independientes que garantizan que todo el proceso —desde el padrón hasta el recuento— sea transparente y confiable. El recuento tiene dos etapas: uno provisorio (los resultados de la misma noche) y uno definitivo (el escrutinio oficial, que es el que vale legalmente).</p>
+
+      <div class="recordar">
+        <div class="recordar-titulo">— Para recordar</div>
+        <p>Los cargos ejecutivos se los lleva <strong>quien gana</strong>; las bancas legislativas se reparten de forma <strong>proporcional</strong> entre las fuerzas, según sus votos. El recuento que vale legalmente es el <strong>escrutinio definitivo</strong>, no el de la noche de la elección.</p>
+      </div>
+
+      <a href="elecciones.html" class="proximo-cap">
+        <div>
+          <div class="proximo-cap-eyebrow">— Profundizar</div>
+          <h3>El sistema <em>electoral</em> argentino</h3>
+          <p>Conocé los sistemas electorales aplicados desde 1853, cómo funciona el balotaje, qué son las PASO, cómo opera el sistema D'Hondt y las innovaciones recientes como la Boleta Única de Papel.</p>
+        </div>
+        <div class="proximo-cap-arrow">VER PÁGINA →</div>
+      </a>
+    </div>
+
+    <div class="seccion" id="leccion-4">
+      <div class="seccion-num">Lección 04</div>
+      <h2>El <em>federalismo</em>: qué decide la Nación y qué tu provincia</h2>
+      <div class="leccion-badge"><span class="lb-nivel">Nivel inicial</span> <span class="lb-tiempo">9 min de lectura</span></div>
+
+      <p>La Argentina no es un solo bloque de poder: es un país <strong>federal</strong>. Esto significa que el poder está repartido en dos niveles principales (más un tercero, los municipios). No todo lo decide el gobierno nacional desde Buenos Aires: cada provincia tiene su propio gobierno, sus propias leyes y un amplio margen para decidir sobre muchos temas.</p>
+
+      <p>La regla de fondo, que está en la Constitución, es sencilla de entender: <strong>las provincias existían antes que la Nación y le delegaron a esta solo algunas facultades</strong>. Todo lo que las provincias no delegaron expresamente, lo conservan. Por eso se dice que la Nación tiene facultades "delegadas" (las que le dieron) y las provincias conservan todo lo demás.</p>
+
+      <p>En la práctica, a grandes rasgos:</p>
+      <ul>
+        <li><strong>Decide la Nación:</strong> la defensa y las fuerzas armadas, las relaciones con otros países, la moneda, el comercio entre provincias y con el exterior, los grandes códigos (civil, penal, etc.).</li>
+        <li><strong>Deciden las provincias:</strong> su propia constitución y sus autoridades, la educación básica, la salud pública provincial, la policía, la justicia ordinaria, y la organización de sus municipios.</li>
+        <li><strong>Se comparte:</strong> muchos temas, como los impuestos, se reparten entre los dos niveles, a través de sistemas como la <strong>coparticipación federal</strong> (cómo se distribuye lo recaudado entre la Nación y las provincias).</li>
+      </ul>
+
+      <p>Esto explica por qué, por ejemplo, una escuela primaria depende de tu provincia y no del gobierno nacional, o por qué la policía de tu ciudad es provincial. El federalismo busca acercar las decisiones a la gente y respetar las diferencias entre regiones de un país tan grande y diverso como la Argentina.</p>
+
+      <div class="recordar">
+        <div class="recordar-titulo">— Para recordar</div>
+        <p>La Nación tiene solo las facultades que las provincias le <strong>delegaron</strong> (defensa, moneda, relaciones exteriores...); las provincias <strong>conservan todo lo demás</strong> (educación, salud, policía, justicia ordinaria). Y muchos recursos se reparten por coparticipación.</p>
+      </div>
+
+      <a href="provincias.html" class="proximo-cap">
+        <div>
+          <div class="proximo-cap-eyebrow">— Profundizar</div>
+          <h3>Las <em>provincias</em> y el federalismo</h3>
+          <p>Explorá las 23 provincias y la CABA, cómo se organiza cada una, qué es la coparticipación federal y cómo se reparten las competencias entre la Nación y las provincias.</p>
+        </div>
+        <div class="proximo-cap-arrow">VER PÁGINA →</div>
+      </a>
+    </div>
+
+    <div class="seccion" id="seguir">
+      <div class="seccion-num">05 · Seguir</div>
+      <h2>Seguir <em>aprendiendo</em></h2>
+      <p>Con estas cuatro lecciones ya tenés las ideas básicas para entender cómo funciona el Estado argentino: <strong>cómo se divide el poder, cómo nacen las leyes, cómo se eligen las autoridades y cómo se reparte el poder por el territorio</strong>. Es la base sobre la que se apoya todo lo demás.</p>
+      <p>A partir de acá, podés avanzar a tu ritmo. El resto del sitio toma cada uno de estos temas y lo desarrolla en profundidad, con datos, historia y casos concretos. Y si querés poner a prueba lo aprendido de una forma más entretenida, el <strong>quiz cívico</strong> te espera con 150 preguntas para jugar.</p>
+      <div class="destacado">
+        <div class="destacado-titulo">— Por dónde seguir</div>
+        <p>Si te interesó la división de poderes, seguí con <strong>Los poderes</strong>. Si te atrapó el sistema electoral, mirá <strong>Elecciones</strong> y el <strong>Padrón electoral</strong>. Si querés entender la economía del país, tenés la serie sobre <strong>gasto público, inflación, sector privado y deuda externa</strong>. Y para repasar conceptos sueltos, está el <strong>Glosario</strong> con casi cien términos explicados.</p>
+      </div>
+
+      <a href="quiz.html" class="proximo-cap">
+        <div>
+          <div class="proximo-cap-eyebrow">— Aprendé jugando</div>
+          <h3>Probá el <em>quiz</em> cívico</h3>
+          <p>150 preguntas sobre el Estado, la Constitución, las elecciones y la historia argentina. Sumá puntos, hacé rachas y batí tu récord. La forma más divertida de fijar lo que aprendiste.</p>
+        </div>
+        <div class="proximo-cap-arrow">JUGAR →</div>
+      </a>
+    </div>
+
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="elecciones.html">Elecciones</a>
+      <a href="provincias-en-profundidad.html">Provincias en profundidad</a>
+      <a href="analisis-transversales.html">Análisis transversales</a>
+      <a href="educacion.html">Educación</a>
+      <a href="poblacion.html">Población y territorio</a>
+      <a href="padron-electoral.html">Padrón electoral</a>
+      <a href="gasto-publico.html">Gasto público</a>
+      <a href="inflacion.html">Inflación</a>
+      <a href="sector-privado.html">Sector privado</a>
+      <a href="deuda-externa.html">Deuda externa</a>
+      <a href="aula.html">Aula abierta</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="quiz.html">Quiz cívico</a>
+    </div>
+  </div>
+  <div class="footer-meta">
+      Contenido educativo · educacioncivica.com.ar · Todos los derechos reservados © 2026
+    </div>
+</footer>
+<script src="buscador-global.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

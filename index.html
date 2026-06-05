@@ -895,11 +895,23 @@
     min-height: 280px;
     transition: all 0.3s;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
   .lesson:hover {
     background: var(--celeste-soft);
     border-color: var(--celeste);
   }
+  .section-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--celeste);
+    text-decoration: none;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .section-link:hover { color: var(--tinta); }
   .lesson-num {
     font-family: 'Instrument Serif', serif;
     font-size: 3rem;
@@ -1803,12 +1815,13 @@
 <section id="aprender">
   <div class="section-head">
     <div>
-      <div class="section-eyebrow">Capítulo 08 · Aula abierta</div>
+      <div class="section-eyebrow">Aula abierta · Lecciones desde cero</div>
       <h2 class="section-title">Aprendé desde cero <em>cómo funciona todo</em></h2>
     </div>
+    <a href="aula.html" class="section-link">Ver todas las lecciones →</a>
   </div>
   <div class="educativo-grid">
-    <div class="lesson">
+    <a href="aula.html#leccion-1" class="lesson">
       <div>
         <div class="lesson-num">i.</div>
         <h3 class="lesson-title">¿Qué es la división de poderes y por qué existe?</h3>
@@ -1817,8 +1830,8 @@
         <span>8 MIN</span>
         <span>NIVEL INICIAL</span>
       </div>
-    </div>
-    <div class="lesson">
+    </a>
+    <a href="aula.html#leccion-2" class="lesson">
       <div>
         <div class="lesson-num">ii.</div>
         <h3 class="lesson-title">El recorrido de una ley: del proyecto al Boletín Oficial.</h3>
@@ -1827,8 +1840,8 @@
         <span>12 MIN</span>
         <span>NIVEL INICIAL</span>
       </div>
-    </div>
-    <div class="lesson">
+    </a>
+    <a href="aula.html#leccion-3" class="lesson">
       <div>
         <div class="lesson-num">iii.</div>
         <h3 class="lesson-title">Sistema electoral argentino: cómo se cuentan los votos.</h3>
@@ -1837,8 +1850,8 @@
         <span>10 MIN</span>
         <span>NIVEL INTERMEDIO</span>
       </div>
-    </div>
-    <div class="lesson">
+    </a>
+    <a href="aula.html#leccion-4" class="lesson">
       <div>
         <div class="lesson-num">iv.</div>
         <h3 class="lesson-title">Federalismo: qué decide la Nación y qué decide tu provincia.</h3>
@@ -1847,7 +1860,7 @@
         <span>9 MIN</span>
         <span>NIVEL INICIAL</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
